@@ -68,7 +68,11 @@ Ketiga bagian tersebut membentuk sebuah **triple** yang menjadi dasar representa
 ### 4. Apa keuntungan hubungan antarentitas?
 
 **Jawaban:**
-Hubungan antarentitas memungkinkan informasi dari berbagai sumber untuk saling terhubung dan membentuk jaringan data. Dengan hubungan tersebut, komputer dapat menemukan keterkaitan antara berbagai entitas, melakukan penelusuran informasi, dan memperoleh konteks yang lebih lengkap.
+- Informasi menjadi lebih terstruktur dan mudah diproses. Entitas dapat disimpan secara terpisah dan dapat direlasikan dengan lebih jelas, sedangkan teks biasa, informasi disimpan secara keseluruhan (gabung) sehingga sulit untuk dijalankan, karena harus dilakukan pemisahan informasi lagi. Dengan adanya entitas tentu lebih memudahkan untuk dapat melakukan pencarian dan penelusuran relasi. Misal, jika ditanyakan "universitas apa saja yang ada di Sumatera Utara?" maka kita bisa langsung menjawab dengan menelusuri relasi tersebut. Namun, apabia dari teks biasa, kita harus membaca dan mencari manual satu per satu, sehingga ini dianggap tidak efisien dikarenakan boros tenaga dan boros Waktu. 
+
+- Menghindari terjadinya duplikasi data dan menjaga konsistensi data, maksudnya ialah dalam sebuah entitas suatu data telah direpresentasikan sebagai satu data (misal, id_mahasiswa), semua relasi yang menyangkut id_mahasiswa maka akan merujuk ke entitas yang sama melalui relasi (foreign key), kita dapat memastikan data yang tehubung memang valid. Kalau ditulis sebagai teks, biasanya akan berulang-ulang di banyak kalimat, informasi yang ada dapat membinggungkan atau menjadi tidak konsisten.
+
+- Memudahkan kita untuk memperbarui data yang ada. Dengan adanya entitas kita cukup mengubahnya di satu tempat, sedangkan apabila dengan teks biasa maka kita harus mengubah secara keseluruhan.
 
 ### 5. Bagaimana Knowledge Graph membantu AI?
 
