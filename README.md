@@ -52,10 +52,10 @@ Kelompok-9/
 
 ## 🚀 Project
 
-**Project:** *[Nama Project]*
+**Project:** *[Loading...]*
 
 **Deskripsi:**
-*[Tuliskan deskripsi singkat mengenai project yang dikerjakan oleh Kelompok 9 di sini.]*
+*[Loading...]*
 
 ---
 
