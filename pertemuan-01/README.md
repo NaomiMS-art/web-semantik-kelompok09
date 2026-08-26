@@ -41,7 +41,7 @@ Entitas yang dipilih adalah **Universitas Sumatera Utara (USU)**.
 ### 1. Apa perbedaan web tradisional dan Web Semantik?
 
 **Jawaban:**
-Web tradisional terutama menyajikan informasi agar dapat dibaca dan dipahami oleh manusia. Sementara itu, Web Semantik menambahkan struktur dan makna pada data sehingga informasi dapat dipahami, diproses, dan dihubungkan oleh mesin. Web Semantik memungkinkan komputer memahami hubungan antar data dan entitas, bukan hanya menampilkan teks atau halaman web.
+Web tradisional berfokus pada penyajian informasi agar dapat dibaca dan dipahami oleh manusia, sedangkan Web Semantik menambahkan struktur dan makna pada data agar dapat dipahami dan diproses oleh mesin. Dengan Web Semantik, komputer tidak hanya menampilkan informasi, tetapi juga dapat memahami hubungan antar data dan entitas sehingga informasi lebih mudah dihubungkan, dicari, dan diproses.
 
 ### 2. Mengapa entitas membutuhkan identifier unik?
 
