@@ -27,14 +27,18 @@ Entitas yang dipilih adalah **Universitas Sumatera Utara (USU)**.
 
 ## 3. Eksplorasi Schema.org
 
-| Property       | Fungsi                                                                     | Contoh Nilai                                                |
-| -------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| `name`         | Menyatakan nama suatu entitas.                                             | Universitas Sumatera Utara                                  |
-| `description`  | Memberikan deskripsi mengenai suatu entitas.                               | Universitas negeri di Kota Medan, Sumatera Utara, Indonesia |
-| `url`          | Menyatakan alamat URL suatu entitas.                                       | https://www.usu.ac.id/                                      |
-| `address`      | Menyatakan alamat atau lokasi suatu entitas.                               | Medan, Sumatera Utara, Indonesia                            |
-| `foundingDate` | Menyatakan tanggal atau tahun pendirian suatu entitas.                     | 1952                                                        |
-| `identifier`   | Menyatakan identifier yang digunakan untuk mengidentifikasi suatu entitas. | Q1377349                                                    |
+| Property | Fungsi | Contoh Nilai |
+| --- | --- | --- |
+| `name` | Menyatakan nama universitas. | Universitas Sumatera Utara |
+| `description` | Memberikan penjelasan/ringkasan profil. | Universitas negeri di Kota Medan, Sumatera Utara, Indonesia |
+| `url` | Menyatakan alamat web resmi. | [https://www.usu.ac.id/](https://www.usu.ac.id/) |
+| `address` | Menyatakan alamat fisik atau lokasi universitas. | Jl. Dr. Mansyur No.9, Medan, Sumatera Utara |
+| `foundingDate` | Menyatakan tanggal atau tahun pendirian. | 1952-06-04 |
+| `logo` | Menautkan URL ke berkas gambar logo resmi entitas. | `[https://upload.wikimedia.org/wikipedia/commons/9/90/Logo_of_North_Sumatra_University.svg](https://upload.wikimedia.org/wikipedia/commons/9/90/Logo_of_North_Sumatra_University.svg)` |
+| `department` | Menyatakan unit/sub-organisasi internal, seperti fakultas. | Fakultas Ilmu Komputer dan Teknologi Informasi |
+| `alumni` | Menyatakan lulusan atau tokoh terkenal dari lembaga pendidikan. | Yasonna Laoly |
+| `award` | Menyatakan penghargaan, sertifikasi, atau akreditasi resmi. | Akreditasi Unggul BAN-PT |
+| `knowsAbout` | Menyatakan bidang riset, keahlian, atau topik keunggulan utama. | Tropical Medicine, Agroindustry, Local Wisdom |
 
 ## 4. Pertanyaan Evaluasi
 
