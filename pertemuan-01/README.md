@@ -34,11 +34,11 @@ Entitas yang dipilih adalah **Universitas Sumatera Utara (USU)**.
 | `url` | Menyatakan alamat web resmi. | [https://www.usu.ac.id/](https://www.usu.ac.id/) |
 | `address` | Menyatakan alamat fisik atau lokasi universitas. | Jl. Dr. Mansyur No.9, Medan, Sumatera Utara |
 | `foundingDate` | Menyatakan tanggal atau tahun pendirian. | 1952-06-04 |
-| `logo` | Menautkan URL ke berkas gambar logo resmi entitas. | [https://upload.wikimedia.org/wikipedia/commons/9/90/Logo_of_North_Sumatra_University.svg](https://upload.wikimedia.org/wikipedia/commons/9/90/Logo_of_North_Sumatra_University.svg) |
+| `logo` | Menautkan URL ke berkas gambar logo resmi entitas. | [Logo USU](https://upload.wikimedia.org/wikipedia/commons/9/90/Logo_of_North_Sumatra_University.svg) |
 | `department` | Menyatakan unit/sub-organisasi internal, seperti fakultas. | Fakultas Ilmu Komputer dan Teknologi Informasi |
 | `alumni` | Menyatakan lulusan atau tokoh terkenal dari lembaga pendidikan. | Yasonna Laoly |
 | `award` | Menyatakan penghargaan, sertifikasi, atau akreditasi resmi. | Akreditasi Unggul BAN-PT |
-| `knowsAbout` | Menyatakan bidang riset, keahlian, atau topik keunggulan utama. | Tropical Medicine, Agroindustry, Local Wisdom |
+| `knowsAbout` | Menyatakan bidang riset, keahlian, atau topik keunggulan utama. | Tropical Science and Medicine, Agroindustry, Local Wisdom |
 
 ## 4. Pertanyaan Evaluasi
 
@@ -81,4 +81,4 @@ Ketiga bagian tersebut membentuk sebuah **triple** yang menjadi dasar representa
 ### 5. Bagaimana Knowledge Graph membantu AI?
 
 **Jawaban:**
-Knowledge Graph membantu AI dengan menyediakan data yang terstruktur serta hubungan antarentitas. AI dapat menggunakan hubungan tersebut untuk memahami konteks, menemukan keterkaitan antar informasi, melakukan pencarian dan penalaran terhadap data, serta menghasilkan jawaban yang lebih relevan dan informatif.
+Knowledge Graph membantu AI dengan memberikan informasi yang saling terhubung dan terstruktur. Jadi ketika pengguna memberikan pertanyaan, AI bisa mengambil sub-graf informasi yang relevan dari Knowledge Graph terlebih dahulu, kemudian LLM menggunakannya untuk menyusun jawaban. Hasilnya jawaban tersebut bisa menjadi lebih akurat, mudah dijelaskan, dan dapat diverifikasi.
