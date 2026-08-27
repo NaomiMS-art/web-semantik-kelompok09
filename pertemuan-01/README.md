@@ -14,16 +14,21 @@ Entitas yang dipilih adalah **Universitas Sumatera Utara (USU)**.
 
 ## 2. Entitas, Atribut, dan Relasi
 
-| Informasi                              | Kategori   | Alasan                                                                                  |
-| -------------------------------------- | ---------- | --------------------------------------------------------------------------------------- |
-| Universitas Sumatera Utara             | Entitas    | Merupakan objek atau individu yang dapat diidentifikasi secara unik dalam Wikidata.     |
-| Q1377349                               | Identifier | Merupakan identifier unik Wikidata untuk Universitas Sumatera Utara.                    |
-| Indonesia                              | Atribut    | Menunjukkan negara tempat Universitas Sumatera Utara berada.                            |
-| Medan                                  | Atribut    | Menunjukkan lokasi Universitas Sumatera Utara.                                          |
-| 1952                                   | Atribut    | Menunjukkan tahun berdirinya Universitas Sumatera Utara.                                |
-| Website resmi USU                      | Atribut    | Menunjukkan alamat situs web resmi yang berkaitan dengan Universitas Sumatera Utara.    |
-| Universitas Sumatera Utara → Indonesia | Relasi     | Menunjukkan hubungan antara entitas Universitas Sumatera Utara dengan negara Indonesia. |
-| Universitas Sumatera Utara → Medan     | Relasi     | Menunjukkan hubungan antara entitas Universitas Sumatera Utara dengan lokasi Medan.     |
+Berdasarkan informasi pada Wikidata mengenai **Universitas Sumatera Utara**, informasi dapat dikelompokkan menjadi entitas, atribut, atau relasi sebagai berikut.
+
+| Informasi | Jenis |
+|---|---|
+| Universitas Sumatera Utara | Entitas |
+| Indonesia | Entitas |
+| Medan Tuntungan | Entitas |
+| ASEAN University Network | Entitas |
+| Nama singkat | Atribut |
+| Kode pos | Atribut |
+| Website resmi | Atribut |
+| Bentuk hukum | Atribut |
+| Universitas Sumatera Utara → country → Indonesia | Relasi |
+| Universitas Sumatera Utara → located in the administrative territorial entity → Medan Tuntungan | Relasi |
+| Universitas Sumatera Utara → member of → ASEAN University Network | Relasi |
 
 ## 3. Eksplorasi Schema.org
 
@@ -50,7 +55,7 @@ Web tradisional berfokus pada penyajian informasi agar dapat dibaca dan dipahami
 ### 2. Mengapa entitas membutuhkan identifier unik?
 
 **Jawaban:**
-Entitas membutuhkan identifier unik agar dapat dibedakan secara jelas dari entitas lain. Nama yang sama dapat digunakan oleh beberapa entitas, sedangkan identifier unik seperti `Q1377349` secara khusus merujuk pada Universitas Sumatera Utara. Hal ini membantu menghindari ambiguitas ketika data dihubungkan dan diproses oleh komputer.
+Suatu entitas membutuhkan identifier unik agar dapat dibedakan secara jelas dari entitas lain, terutama jika terdapat beberapa entitas yang memiliki nama sama atau mirip. Identifier unik juga membantu komputer menghindari ambiguitas ketika menghubungkan dan memproses data. Contohnya, Universitas Sumatera Utara memiliki identifier Wikidata **Q4200341**.
 
 ### 3. Jelaskan subject, predicate, dan object.
 
