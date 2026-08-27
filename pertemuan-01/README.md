@@ -34,7 +34,7 @@ Entitas yang dipilih adalah **Universitas Sumatera Utara (USU)**.
 | `url` | Menyatakan alamat web resmi. | [https://www.usu.ac.id/](https://www.usu.ac.id/) |
 | `address` | Menyatakan alamat fisik atau lokasi universitas. | Jl. Dr. Mansyur No.9, Medan, Sumatera Utara |
 | `foundingDate` | Menyatakan tanggal atau tahun pendirian. | 1952-06-04 |
-| `logo` | Menautkan URL ke berkas gambar logo resmi entitas. | `[https://upload.wikimedia.org/wikipedia/commons/9/90/Logo_of_North_Sumatra_University.svg](https://upload.wikimedia.org/wikipedia/commons/9/90/Logo_of_North_Sumatra_University.svg)` |
+| `logo` | Menautkan URL ke berkas gambar logo resmi entitas. | [https://upload.wikimedia.org/wikipedia/commons/9/90/Logo_of_North_Sumatra_University.svg](https://upload.wikimedia.org/wikipedia/commons/9/90/Logo_of_North_Sumatra_University.svg) |
 | `department` | Menyatakan unit/sub-organisasi internal, seperti fakultas. | Fakultas Ilmu Komputer dan Teknologi Informasi |
 | `alumni` | Menyatakan lulusan atau tokoh terkenal dari lembaga pendidikan. | Yasonna Laoly |
 | `award` | Menyatakan penghargaan, sertifikasi, atau akreditasi resmi. | Akreditasi Unggul BAN-PT |
