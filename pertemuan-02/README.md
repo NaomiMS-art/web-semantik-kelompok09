@@ -18,9 +18,9 @@ Identifikasi kesalahan yang terdapat pada dokumen XML dan jelaskan alasan serta 
 
 | No. | Bagian yang Salah | Alasan | Perbaikan |
 | :-: | ----------------- | ------ | --------- |
-|  1  | '<nama>Budi Santoso</Nama>'  | Tag elemen penutup salah karena menggunkan huruf kapital di awal kata. Hal ini bertentangan dengan aturan well-formed bersifat case-sensitive, dimana Nama != nama |'<nama>Budi Santoso</nama>'|
-|  2  |'<angkatan>202'|Elemen angkatan tidak memiliki tag penutup|'<angkatan>2024</angkatan>'|
-|  3  |'<deskripsi>Saya suka AI & Web Semantik</deskripsi>'|Dalam aturan XML karakter &/ampersand tidak boleh digunakan langsung karena merupakan karakter khusus|'<deskripsi>Saya suka AI &amp; Web Semantik</deskripsi>'|
+| 1 | `&lt;nama&gt;Budi Santoso&lt;/Nama&gt;` | Tag elemen penutup salah karena menggunakan huruf kapital di awal kata. Hal ini bertentangan dengan aturan well-formed yang bersifat case-sensitive, di mana `Nama != nama`. | `&lt;nama&gt;Budi Santoso&lt;/nama&gt;` |
+| 2 | `&lt;angkatan&gt;2024` | Elemen angkatan tidak memiliki tag penutup. | `&lt;angkatan&gt;2024&lt;/angkatan&gt;` |
+| 3 | `&lt;deskripsi&gt;Saya suka AI & Web Semantik&lt;/deskripsi&gt;` | Dalam aturan XML, karakter `&` (ampersand) tidak boleh digunakan langsung karena merupakan karakter khusus. | `&lt;deskripsi&gt;Saya suka AI &amp; Web Semantik&lt;/deskripsi&gt;` |
 
 ---
 
