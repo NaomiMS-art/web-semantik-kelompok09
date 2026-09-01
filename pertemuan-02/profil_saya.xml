@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Profil mahasiswa Web Semantik -->
+
+<profil nim="251402030">
+    <nama>Rodotua Naomi Mutiara Simamora</nama>
+    <angkatan>2025</angkatan>
+    <programStudi>Teknologi Informasi</programStudi>
+
+    <hobi>Membaca dan menulis puisi</hobi>
+    <hobi>Menggambar dan mendesain</hobi>
+    <hobi>Belajar pemrograman</hobi>
+
+    <deskripsi>
+        Saya adalah mahasiswa Program Studi Teknologi Informasi yang memiliki
+        ketertarikan pada teknologi, pemrograman, desain, dan pengembangan web.
+        Saya juga memiliki minat dalam bidang seni, khususnya menulis dan membaca puisi.
+    </deskripsi>
+</profil>

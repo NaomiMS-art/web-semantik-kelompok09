@@ -4,11 +4,11 @@
 
 Jelaskan secara singkat struktur XML yang dibuat, meliputi:
 
-* Elemen root.
-* Elemen-elemen di dalam root.
-* Atribut yang digunakan.
-* Hubungan antar elemen.
-* Struktur data yang disimpan dalam XML.
+* Elemen root: merupakan elemen paling luar dan menjadi induk dari seluruh elemen lainnya.
+* Elemen-elemen di dalam root: berisi data atau informasi yang ingin disimpan, seperti nama, angkatan, deskripsi, dan elemen lainnya sesuai struktur XML.
+* Atribut yang digunakan: atribut digunakan untuk memberikan informasi tambahan pada suatu elemen, misalnya id, ISBN, atau atribut lainnya.
+* Hubungan antar elemen: elemen-elemen XML memiliki hubungan hierarkis, yaitu elemen yang berada di dalam elemen lain disebut sebagai elemen anak (child), sedangkan elemen yang membungkusnya disebut elemen induk (parent).
+* Struktur data: data disimpan secara terstruktur dan hierarkis menggunakan elemen, atribut, serta nilai (text content). Struktur ini membuat data dapat dibaca dan diproses oleh manusia maupun komputer.
 
 ---
 
@@ -41,16 +41,32 @@ Analisis struktur dan tipe data yang digunakan dalam XML Schema.
 Jawab pertanyaan berikut berdasarkan penggunaan namespace pada dokumen XML.
 
 1. **Mengapa kedua elemen `title` tidak dianggap sama?**
-   ...
+   Kedua elemen title tidak dianggap sama karena masing-masing berada dalam namespace yang berbeda. Walaupun memiliki nama lokal (local name) yang sama, namespace memberikan identitas yang berbeda kepada elemen tersebut.
+
+   Dengan demikian, title dari namespace pertama dan title dari namespace kedua merupakan dua elemen yang berbeda karena memiliki URI namespace yang berbeda.
 
 2. **Apa fungsi prefix pada namespace?**
-   ...
+   Prefix berfungsi sebagai nama singkat atau alias untuk sebuah namespace URI. Prefix digunakan agar namespace dapat dituliskan dengan lebih mudah pada elemen atau atribut.
+
+   Contohnya:
+
+   <book:title>XML</book:title>
+
+   Pada contoh tersebut, book merupakan prefix yang mengacu pada namespace tertentu. Prefix membantu membedakan elemen yang memiliki nama sama tetapi berasal dari namespace yang berbeda.
 
 3. **Apa fungsi `xmlns`?**
-   ...
+   xmlns (XML Namespace) digunakan untuk mendeklarasikan namespace pada dokumen XML. Dengan xmlns, sebuah prefix dapat dihubungkan dengan URI namespace tertentu.
+
+   Contoh:
+
+   xmlns:book="http://example.com/book"
+
+   Artinya, prefix book digunakan sebagai identitas untuk namespace http://example.com/book.
 
 4. **Apakah URI namespace harus dapat dibuka di browser?**
-   ...
+   Tidak. URI namespace tidak harus dapat dibuka atau diakses melalui browser. URI tersebut terutama berfungsi sebagai identifier unik untuk membedakan suatu namespace dari namespace lainnya.
+
+   Meskipun URI namespace sering menggunakan bentuk URL, URI tersebut tidak harus menunjuk ke halaman web yang aktif.
 
 ---
 
@@ -59,7 +75,16 @@ Jawab pertanyaan berikut berdasarkan penggunaan namespace pada dokumen XML.
 ### 5.1 Perbedaan XML dan HTML
 
 **Jawaban:**
-...
+XML (eXtensible Markup Language) dan HTML (HyperText Markup Language) sama-sama menggunakan struktur tag, tetapi memiliki tujuan yang berbeda.
+
+XML digunakan untuk menyimpan, menyusun, dan bertukar data secara terstruktur. Nama elemen XML dapat dibuat sesuai kebutuhan data dan aturan XML harus dipatuhi agar dokumen menjadi well-formed.
+
+Sedangkan HTML digunakan untuk menampilkan dan menyusun konten pada halaman web. HTML memiliki elemen-elemen yang sudah ditentukan, seperti <html>, <head>, <body>, <p>, dan <h1>.
+
+Jadi, secara sederhana:
+
+XML: berfokus pada struktur dan penyimpanan data.
+HTML: berfokus pada penyajian atau tampilan data pada halaman web.
 
 ### 5.2 Apa yang Dimaksud dengan Well-Formed?
 
