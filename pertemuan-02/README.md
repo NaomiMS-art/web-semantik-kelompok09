@@ -86,15 +86,15 @@ Jadi, secara sederhana:
 XML: berfokus pada struktur dan penyimpanan data.
 HTML: berfokus pada penyajian atau tampilan data pada halaman web.
 
-### 5.2 Apa yang Dimaksud dengan Well-Formed?
+### 5.2 Apa yang Dimaksud dokumen XML yang Well-Formed?
 
 **Jawaban:**
-...
+Dokumen XML yang terbentuk dengan baik (well-formed) adalah dokumen XML yang mengikuti aturan sintaks XML dengan benar, seperti memiliki tepat satu elemen root, setiap elemen memiliki tag pembuka dan penutup yang sesuai, serta penulisan atribut dan elemen dilakukan dengan benar.
 
 ### 5.3 Perbedaan Well-Formed dan Valid
 
 **Jawaban:**
-...
+Dokumen XML yang terbentuk dengan baik (well-formed) berarti dokumen tersebut mengikuti aturan dasar sintaks XML sehingga dapat dibaca oleh parser XML. Sedangkan dokumen XML yang valid berarti dokumen tersebut tidak hanya terbentuk dengan baik, tetapi juga mengikuti aturan struktur yang ditentukan oleh schema seperti XML Schema (XSD) atau DTD.
 
 ### 5.4 Mengapa XSD Lebih Kuat Dibandingkan DTD?
 
