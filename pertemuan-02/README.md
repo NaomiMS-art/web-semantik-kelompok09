@@ -28,11 +28,11 @@ Identifikasi kesalahan yang terdapat pada dokumen XML dan jelaskan alasan serta 
 
 Analisis struktur dan tipe data yang digunakan dalam XML Schema.
 
-1. **Root Element:** ...
-2. **Tipe Data `judul`:** ...
-3. **Tipe Data `tahun`:** ...
-4. **Tipe Data `harga`:** ...
-5. **Atribut `ISBN`:** ...
+1. **Root Element:** buku
+2. **Tipe Data `judul`:** string
+3. **Tipe Data `tahun`:** gYear
+4. **Tipe Data `harga`:** decimal
+5. **Apakah atribut `ISBN` boleh tidak dituliskan?:** Tidak, karena atribut `ISBN` menggunakan `use="required"` sehingga mutlak harus ada. Jika tidak, maka dokumen XML tidak akan valid karena tidak sesuai dengan skema.
 
 ---
 
@@ -74,7 +74,8 @@ Jawab pertanyaan berikut berdasarkan penggunaan namespace pada dokumen XML.
 ### 5.4 Mengapa XSD Lebih Kuat Dibandingkan DTD?
 
 **Jawaban:**
-...
+Karena XSD mendukung penggunaan namespace (sebagai identifier untuk membedakan elemen atau atribut yang memiliki nama yang sama), serta memiliki banyak tipe data (seperti string, integer, date, gYear, decimal, boolean). Sedangkan DTD tidak mempunyai dua hal tersebut (tidak mendukung namespace dan tidak ada tipe data spesifik).
+
 
 ### 5.5 Mengapa Namespace Penting?
 
