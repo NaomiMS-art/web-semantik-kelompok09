@@ -40,33 +40,17 @@ Analisis struktur dan tipe data yang digunakan dalam XML Schema.
 
 Jawab pertanyaan berikut berdasarkan penggunaan namespace pada dokumen XML.
 
-1. **Mengapa kedua elemen `title` tidak dianggap sama?**
-   Kedua elemen title tidak dianggap sama karena masing-masing berada dalam namespace yang berbeda. Walaupun memiliki nama lokal (local name) yang sama, namespace memberikan identitas yang berbeda kepada elemen tersebut.
+1. **Mengapa judul kedua elemen tidak sama?**
+   Kedua elemen title tidak dianggap sama karena berada dalam namespace yang berbeda. Elemen pertama menggunakan prefix buku, sedangkan elemen kedua menggunakan prefix web. Meskipun nama elemennya sama, namespace yang berbeda membuat keduanya dianggap sebagai elemen yang berbeda.
 
-   Dengan demikian, title dari namespace pertama dan title dari namespace kedua merupakan dua elemen yang berbeda karena memiliki URI namespace yang berbeda.
+2. **Awalan fungsi: Prefix buku: dan web:**
+   berfungsi untuk membedakan elemen yang berasal dari namespace yang berbeda.
 
-2. **Apa fungsi prefix pada namespace?**
-   Prefix berfungsi sebagai nama singkat atau alias untuk sebuah namespace URI. Prefix digunakan agar namespace dapat dituliskan dengan lebih mudah pada elemen atau atribut.
+3. **Fungsi `xmlns`: Atribut `xmlns`**
+   untuk mendeklarasikan namespace dan menghubungkan prefix dengan URI namespace tertentu.
 
-   Contohnya:
-
-   <book:title>XML</book:title>
-
-   Pada contoh tersebut, book merupakan prefix yang mengacu pada namespace tertentu. Prefix membantu membedakan elemen yang memiliki nama sama tetapi berasal dari namespace yang berbeda.
-
-3. **Apa fungsi `xmlns`?**
-   xmlns (XML Namespace) digunakan untuk mendeklarasikan namespace pada dokumen XML. Dengan xmlns, sebuah prefix dapat dihubungkan dengan URI namespace tertentu.
-
-   Contoh:
-
-   xmlns:book="http://example.com/book"
-
-   Artinya, prefix book digunakan sebagai identitas untuk namespace http://example.com/book.
-
-4. **Apakah URI namespace harus dapat dibuka di browser?**
-   Tidak. URI namespace tidak harus dapat dibuka atau diakses melalui browser. URI tersebut terutama berfungsi sebagai identifier unik untuk membedakan suatu namespace dari namespace lainnya.
-
-   Meskipun URI namespace sering menggunakan bentuk URL, URI tersebut tidak harus menunjuk ke halaman web yang aktif.
+4. **Apakah namespace URI harus dapat dibuka?**
+   Tidak. Namespace URI tidak harus dapat dibuka di halaman web karena URI tersebut berfungsi sebagai identitas unik untuk namespace, bukan sebagai alamat halaman web.
 
 ---
 
@@ -75,26 +59,25 @@ Jawab pertanyaan berikut berdasarkan penggunaan namespace pada dokumen XML.
 ### 5.1 Perbedaan XML dan HTML
 
 **Jawaban:**
-XML (eXtensible Markup Language) dan HTML (HyperText Markup Language) sama-sama menggunakan struktur tag, tetapi memiliki tujuan yang berbeda.
+   XML (eXtensible Markup Language) dan HTML (HyperText Markup Language) sama-sama menggunakan struktur tag, tetapi memiliki tujuan yang berbeda.
 
-XML digunakan untuk menyimpan, menyusun, dan bertukar data secara terstruktur. Nama elemen XML dapat dibuat sesuai kebutuhan data dan aturan XML harus dipatuhi agar dokumen menjadi well-formed.
+   XML digunakan untuk menyimpan, menyusun, dan bertukar data secara terstruktur. Nama elemen XML dapat dibuat sesuai kebutuhan data dan aturan XML harus dipatuhi agar dokumen menjadi well-formed.
 
-Sedangkan HTML digunakan untuk menampilkan dan menyusun konten pada halaman web. HTML memiliki elemen-elemen yang sudah ditentukan, seperti <html>, <head>, <body>, <p>, dan <h1>.
+   Sedangkan HTML digunakan untuk menampilkan dan menyusun konten pada halaman web. HTML memiliki elemen-elemen yang sudah ditentukan, seperti  `html`,  `head`,  `body`,  `p`, dan  `h1`.
 
-Jadi, secara sederhana:
-
-XML: berfokus pada struktur dan penyimpanan data.
-HTML: berfokus pada penyajian atau tampilan data pada halaman web.
+   Jadi, secara sederhana:
+   XML: berfokus pada struktur dan penyimpanan data.
+   HTML: berfokus pada penyajian atau tampilan data pada halaman web.
 
 ### 5.2 Apa yang Dimaksud dokumen XML yang Well-Formed?
 
 **Jawaban:**
-Dokumen XML yang terbentuk dengan baik (well-formed) adalah dokumen XML yang mengikuti aturan sintaks XML dengan benar, seperti memiliki tepat satu elemen root, setiap elemen memiliki tag pembuka dan penutup yang sesuai, serta penulisan atribut dan elemen dilakukan dengan benar.
+   Dokumen XML yang terbentuk dengan baik (well-formed) adalah dokumen XML yang mengikuti aturan sintaks XML dengan benar, seperti memiliki tepat satu elemen root, setiap elemen memiliki tag pembuka dan penutup yang sesuai, serta penulisan atribut dan elemen dilakukan dengan benar.
 
 ### 5.3 Perbedaan Well-Formed dan Valid
 
 **Jawaban:**
-Dokumen XML yang terbentuk dengan baik (well-formed) berarti dokumen tersebut mengikuti aturan dasar sintaks XML sehingga dapat dibaca oleh parser XML. Sedangkan dokumen XML yang valid berarti dokumen tersebut tidak hanya terbentuk dengan baik, tetapi juga mengikuti aturan struktur yang ditentukan oleh schema seperti XML Schema (XSD) atau DTD.
+   Dokumen XML yang terbentuk dengan baik (well-formed) berarti dokumen tersebut mengikuti aturan dasar sintaks XML sehingga dapat dibaca oleh parser XML. Sedangkan dokumen XML yang valid berarti dokumen tersebut tidak hanya terbentuk dengan baik, tetapi juga mengikuti aturan struktur yang ditentukan oleh schema seperti XML Schema (XSD) atau DTD.
 
 ### 5.4 Mengapa XSD Lebih Kuat Dibandingkan DTD?
 

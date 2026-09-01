@@ -2,18 +2,86 @@
 
 <!-- Profil mahasiswa Web Semantik -->
 
-<profil nim="251402030">
-    <nama>Rodotua Naomi Mutiara Simamora</nama>
-    <angkatan>2025</angkatan>
-    <programStudi>Teknologi Informasi</programStudi>
+<profiles>
 
-    <hobi>Membaca dan menulis puisi</hobi>
-    <hobi>Mendesain</hobi>
-    <hobi>Menari</hobi>
+    <profil nim="251402030">
+        <nama>Rodotua Naomi Mutiara Simamora</nama>
+        <angkatan>2025</angkatan>
+        <programStudi>Teknologi Informasi</programStudi>
 
-    <deskripsi>
-        Saya adalah mahasiswa Program Studi Teknologi Informasi yang memiliki
-        ketertarikan pada teknologi, pemrograman, desain, dan pengembangan web.
-        Saya juga memiliki minat dalam bidang seni, khususnya menulis dan menari.
-    </deskripsi>
-</profil>
+        <hobi>Membaca dan menulis puisi</hobi>
+        <hobi>Mendesain</hobi>
+        <hobi>Menari</hobi>
+
+        <deskripsi>
+            Saya adalah mahasiswa Program Studi Teknologi Informasi yang memiliki
+            ketertarikan pada teknologi, pemrograman, desain, dan pengembangan web.
+            Saya juga memiliki minat dalam bidang seni, khususnya menulis dan menari.
+        </deskripsi>
+    </profil>
+
+    <profil nim="251402001">
+        <nama>Yessica Jaklin</nama>
+        <angkatan>2025</angkatan>
+        <programStudi>Teknologi Informasi</programStudi>
+
+        <hobi>Mendengarkan musik</hobi>
+        <hobi>Menonton film</hobi>
+        <hobi>Memasak</hobi>
+
+        <deskripsi>
+            Saya adalah mahasiswa Teknologi Informasi yang tertarik pada teknologi
+            dan memiliki beberapa hobi seperti mendengarkan musik, menonton film,
+            dan memasak.
+        </deskripsi>
+    </profil>
+
+    <profil nim="251402026">
+        <nama>Daradira Vonna</nama>
+        <angkatan>2025</angkatan>
+        <programStudi>Teknologi Informasi</programStudi>
+
+        <hobi>Membaca novel</hobi>
+        <hobi>Fotografi</hobi>
+        <hobi>Travelling</hobi>
+
+        <deskripsi>
+            Saya adalah mahasiswa Teknologi Informasi yang memiliki ketertarikan
+            pada teknologi dan kreativitas. Saya senang membaca novel, fotografi,
+            dan mengunjungi tempat-tempat baru.
+        </deskripsi>
+    </profil>
+
+    <profil nim="251402072">
+        <nama>Vedder Timothy Simbolon</nama>
+        <angkatan>2025</angkatan>
+        <programStudi>Teknologi Informasi</programStudi>
+
+        <hobi>Bermain game</hobi>
+        <hobi>Bermain musik</hobi>
+        <hobi>Bersepeda</hobi>
+
+        <deskripsi>
+            Saya adalah mahasiswa Teknologi Informasi yang tertarik mempelajari
+            teknologi dan pemrograman. Di waktu luang, saya senang bermain game,
+            bermain musik, dan bersepeda.
+        </deskripsi>
+    </profil>
+
+    <profil nim="251402107">
+        <nama>M. Rajadinata Nasution</nama>
+        <angkatan>2025</angkatan>
+        <programStudi>Teknologi Informasi</programStudi>
+
+        <hobi>Olahraga</hobi>
+        <hobi>Mendengarkan musik</hobi>
+        <hobi>Bermain game</hobi>
+
+        <deskripsi>
+            Saya adalah mahasiswa Teknologi Informasi yang memiliki ketertarikan
+            pada teknologi, pemrograman, dan pengembangan web. Saya juga senang
+            berolahraga, mendengarkan musik, dan bermain game.
+        </deskripsi>
+    </profil>
+
+</profiles>
