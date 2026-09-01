@@ -32,7 +32,8 @@ Analisis struktur dan tipe data yang digunakan dalam XML Schema.
 2. **Tipe Data `judul`:** string
 3. **Tipe Data `tahun`:** gYear
 4. **Tipe Data `harga`:** decimal
-5. **Apakah atribut `ISBN` boleh tidak dituliskan?:** Tidak, karena atribut `ISBN` menggunakan `use="required"` sehingga mutlak harus ada. Jika tidak, maka dokumen XML tidak akan valid karena tidak sesuai dengan skema.
+5. **Apakah atribut `ISBN` boleh tidak dituliskan?:**
+   Tidak, karena atribut `ISBN` menggunakan `use="required"` sehingga mutlak harus ada. Jika tidak, maka dokumen XML tidak akan valid karena tidak sesuai dengan skema.
 
 ---
 
