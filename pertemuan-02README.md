@@ -88,7 +88,8 @@ Karena XSD mendukung penggunaan namespace (sebagai identifier untuk membedakan e
 ### 5.5 Mengapa Namespace Penting?
 
 **Jawaban:**
-...
+Namespace penting supaya nama elemen yang sama di dalam XML tidak saling tertukar. Misalnya, ada dua elemen bernama title, tetapi yang satu digunakan untuk judul buku dan yang satu lagi untuk judul halaman web. Dengan namespace seperti buku:title dan web:title, sistem bisa mengetahui bahwa kedua elemen tersebut memiliki arti dan sumber yang berbeda. Jadi, namespace membantu membuat struktur XML lebih jelas dan menghindari konflik nama.
+
 
 ### 5.6 Apa Kegunaan XPath?
 
