@@ -40,17 +40,17 @@ Analisis struktur dan tipe data yang digunakan dalam XML Schema.
 
 Jawab pertanyaan berikut berdasarkan penggunaan namespace pada dokumen XML.
 
-1. **Mengapa judul kedua elemen tidak sama?**
-   Kedua elemen title tidak dianggap sama karena berada dalam namespace yang berbeda. Elemen pertama menggunakan prefix buku, sedangkan elemen kedua menggunakan prefix web. Meskipun nama elemennya sama, namespace yang berbeda membuat keduanya dianggap sebagai elemen yang berbeda.
+1. **Mengapa kedua elemen title tersebut tidak dianggap sama?**
+   Karena kedua elemen title tersebut berada pada namespace yang berbeda. Elemen pertama menggunakan namespace buku, sedangkan elemen kedua menggunakan namespace web, sehingga walaupun nama elemennya sama, keduanya tetap dianggap berbeda.
 
-2. **Awalan fungsi: Prefix buku: dan web:**
-   berfungsi untuk membedakan elemen yang berasal dari namespace yang berbeda.
+2. **Apa fungsi prefix buku: dan web:?**
+   Prefix buku: dan web: digunakan untuk membedakan elemen yang berasal dari namespace atau kosakata yang berbeda. Prefix tersebut menjadi penanda agar sistem mengetahui elemen itu berasal dari namespace yang mana.
 
-3. **Fungsi `xmlns`: Atribut `xmlns`**
-   untuk mendeklarasikan namespace dan menghubungkan prefix dengan URI namespace tertentu.
+3. **Apa fungsi atribut xmlns?**
+   Atribut xmlns digunakan untuk mendeklarasikan namespace dan menghubungkan suatu prefix dengan URI tertentu. Contohnya, xmlns:buku menghubungkan prefix buku: dengan URI namespace buku.
 
-4. **Apakah namespace URI harus dapat dibuka?**
-   Tidak. Namespace URI tidak harus dapat dibuka di halaman web karena URI tersebut berfungsi sebagai identitas unik untuk namespace, bukan sebagai alamat halaman web.
+4. **Apakah URI namespace harus dapat dibuka sebagai halaman web? Jelaskan.**
+   Tidak. URI pada namespace hanya berfungsi sebagai identifier atau identitas unik untuk suatu namespace. Jadi, URI tersebut tidak harus dapat dibuka di browser sebagai halaman web.
 
 ---
 
