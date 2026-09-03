@@ -97,14 +97,3 @@ Namespace penting supaya nama elemen yang sama di dalam XML tidak saling tertuka
 XPath merupakan dasar XSLT, XQuery, dan library. XPath ini berfungsi untuk navigasi, memilih, dan mencari bagian elem/atribut tertentu. XPath membantu untuk menentukan lokasi data berdasarkan struktur hierarki XML, sehingga data dapat diakses dengan lebih mudah dan spesifik. Seperti halnya, dalam katalog buku, terdapat hierarki mulau dari semua bukuu, kemudian semua judul, buku pertama (index), atribut isbn-nya, lalu Harga, dan nilai dari text dalam buku tersebut.Dengan XPath, kita dapat memilih elemen, atribut, atau bagian tertentu dari XML katalog tersebut secara lebih terarah.
 
 ---
-
-## 6. Kesimpulan
-
-Tuliskan kesimpulan singkat mengenai pembelajaran pada Pertemuan 2, khususnya mengenai:
-
-* Struktur dokumen XML.
-* Konsep well-formed dan valid.
-* XML Schema (XSD).
-* Namespace.
-* XPath.
-
