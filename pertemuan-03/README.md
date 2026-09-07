@@ -43,15 +43,22 @@
 
 Tuliskan satu baris untuk setiap bentuk:
 
-**Teks**
+**Teks:** Seminar Web Semantik diselenggarakan pada 12 September 2026 pukul 09.00 WIB di Aula FASILKOM-TI USU oleh Prodi TI.
 
-ISI TRIPLE
+**Triple:** Seminar Web Semantik → memiliki tanggal mulai → 12 September 2026 pukul 09.00 WIB.
+
+**Triple:** Seminar Web Semantik → berlokasi di → Aula FASILKOM-TI USU.
+
+**Triple:** Seminar Web Semantik → diselenggarakan oleh → Prodi TI.
+
 
 ## 5. Hasil Validasi
 
-- Validasi Schema: ...
-- Tes Hasil Lengkap: ...
-- Tes Semantik JSON-LD: ...
+- Tes Hasil Lengkap: Data JSON-LD dapat dibaca dengan baik dan tidak ditemukan kesalahan pada struktur data.
+
+- Tes Schema: JSON-LD berhasil divalidasi dan menggunakan tipe `Event` dari schema.org.
+
+- Tes Semantik JSON-LD: Informasi seminar berhasil dikenali sebagai sebuah entitas `Event` dengan data nama, tanggal, lokasi, dan penyelenggara.
 
 ## 6. Refleksi
 
