@@ -10,11 +10,11 @@ Repository ini digunakan sebagai tempat pengelolaan, dokumentasi, dan penyimpana
 
 | No. | Nama                               | NIM       | Peran                    |
 | --- | ---------------------------------- | --------- | ------------------------ |
-| 1   | **Rodotua Naomi Mutiara Simamora** | 251402030 | **Project Manager (PM)** |
-| 2   | **Vedder Timothy Simbolon**        | 251402072 | Anggota                  |
-| 3   | **Yessica Jaklin**                 | 251402001 | Anggota                  |
-| 4   | **M. Rajadinata Nasution**         | 251402107 | Anggota                  |
-| 5   | **Daradira Vonna**                 | 251402026 | Anggota                  |
+| 1   | Yessica Jaklin                     | 251402001 | Anggota                  |
+| 2   | Daradira Vonna                     | 251402026 | Anggota                  |
+| 3   | **Rodotua Naomi Mutiara Simamora**     | 251402030 | **Project Manager (PM)** |
+| 4   | Vedder Timothy Simbolon            | 251402072 | Anggota                  |
+| 5   | M. Rajadinata Nasution             | 251402107 | Anggota                  |
 
 ---
 
