@@ -80,25 +80,25 @@ NIM: `251402030`
 
 Bertanggung jawab dalam mengoordinasikan anggota kelompok, mengatur pembagian tugas, memantau perkembangan project, serta memastikan pekerjaan kelompok berjalan sesuai dengan rencana.
 
-### 👨🏻‍💻 Anggota
-
-**Vedder Timothy Simbolon**
-NIM: `251402072`
-
 ### 👩🏻‍💻 Anggota
 
-**Yessica Jaklin**
+**Yessica Jaklin**  
 NIM: `251402001`
 
-### 👨🏻‍💻 Anggota
-
-**M. Rajadinata Nasution**
-NIM: `251402107`
-
 ### 👩🏻‍💻 Anggota
 
-**Daradira Vonna**
+**Daradira Vonna**  
 NIM: `251402026`
+
+### 👨🏻‍💻 Anggota
+
+**Vedder Timothy Simbolon**  
+NIM: `251402072`
+
+### 👨🏻‍💻 Anggota
+
+**M. Rajadinata Nasution**  
+NIM: `251402107`
 
 ---
 
