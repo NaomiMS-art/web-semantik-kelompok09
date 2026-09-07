@@ -116,4 +116,4 @@ Dokumentasi mengenai proses pengerjaan project, pembagian tugas, desain, dan has
 
 ### 👩🏻‍💻 Kelompok 9
 
-**Rodotua Naomi Mutiara Simamora • Vedder Timothy Simbolon • Yessica Jaklin • M. Rajadinata Nasution • Daradira Vonna**
+**Yessica Jaklin • Daradira Vonna • Rodotua Naomi Mutiara Simamora • Vedder Timothy Simbolon • M. Rajadinata Nasution**
