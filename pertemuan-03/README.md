@@ -54,11 +54,11 @@ Tuliskan satu baris untuk setiap bentuk:
 
 ## 5. Hasil Validasi
 
-- Tes Hasil Lengkap: Data JSON-LD dapat dibaca dengan baik dan tidak ditemukan kesalahan pada struktur data.
+- Tes Hasil Lengkap: Struktur JSON-LD berhasil dibaca dan seluruh informasi profil dapat dikenali.
 
-- Tes Schema: JSON-LD berhasil divalidasi dan menggunakan tipe `Event` dari schema.org.
+- Tes Schema: Data menggunakan `@context` dari schema.org dan tipe `Person` dengan properti yang sesuai.
 
-- Tes Semantik JSON-LD: Informasi seminar berhasil dikenali sebagai sebuah entitas `Event` dengan data nama, tanggal, lokasi, dan penyelenggara.
+- Tes Semantik JSON-LD: Data berhasil merepresentasikan satu entitas `Person` yang memiliki identitas melalui `@id`, hubungan dengan Universitas Sumatera Utara melalui `alumniOf`, serta beberapa bidang pengetahuan melalui `knowsAbout`.
 
 ## 6. Refleksi
 
