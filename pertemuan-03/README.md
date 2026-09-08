@@ -1,4 +1,4 @@
-<img width="589" height="87" alt="image" src="https://github.com/user-attachments/assets/72eb1d36-6e8d-44a7-a608-99a2f18d87d4" /># Latihan Pertemuan 3 - JSON-LD dan Data Terstruktur
+Latihan Pertemuan 3 - JSON-LD dan Data Terstruktur
 
 ## Identitas
 
@@ -34,7 +34,7 @@
 | No | Bagian Salah | Alasan | Perbaikan |
 |----|--------------|--------|-----------|
 | 1 | "person" | Tipe di Schema.org menggunakan huruf kapital | "@type": "**Person**" |
-| 2 | 'name' | JSON-LD harus menggunakan tanda kutip ganda | **"name"**: "Rina Anggraini" |
+| 2 | 'name' | JSON-LD harus menggunakan tanda kutip ganda | **"**name**"**: "Rina Anggraini" |
 | 3 | "12 September 2004" | Penulisan tanggal wajib menggunakan format tanggal ISO 8601 | "birthDate": "**2004-09-12**" |
 | 4 | "nomorInduk" | Properti tersebut tidak terdaftar di Schema.org, harus diganti | "**identifier**": "221401001" |
 | 5 | "221401001", | Koma pada properti terakhir harus dihapus karena tidak valid dalam JSON-LD | "identifier": **"221401001"** |
