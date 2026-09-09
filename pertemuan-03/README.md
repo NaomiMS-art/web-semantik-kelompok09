@@ -19,10 +19,17 @@ Latihan Pertemuan 3 - JSON-LD dan Data Terstruktur
 
 ## 1. JSON Biasa dan JSON-LD
 
-1. Perbedaan fungsi: ...
-2. `@context`, `@type`, dan `@id`: ...
-3. Node tanpa `@id`: ...
-
+1. Perbedaan fungsi kunci `nama` / `pekerjaan` dan `name` / `jobTitle` adalah:
+   Pada JSON biasa, `nama` dan `pekerjaan` hanya merupakan nama kunci yang maknanya ditentukan oleh aplikasi atau pembuat data. Sedangkan pada JSON-LD, `name` dan `jobTitle` merupakan properti yang memiliki makna semantik berdasarkan kosakata seperti Schema.org sehingga dapat dipahami oleh mesin.
+   
+2. Fungsi `@context`, `@type`, dan `@id` adalah:
+   a. `@context` menentukan kosakata yang digunakan dan memberikan konteks terhadap properti dalam JSON-LD.
+   b. `@type` menentukan tipe atau jenis entitas yang dideskripsikan, misalnya `Person`.
+   c. `@id` memberikan identitas unik berupa IRI/URL sehingga suatu entitas dapat dikenali dan dirujuk secara konsisten.
+   
+3. Node tanpa `@id` adalah:
+   Node tanpa `@id` tetap dapat digunakan dan memiliki informasi berdasarkan `@type` dan properti yang dimilikinya. Namun, node tersebut tidak memiliki identitas global yang unik sehingga tidak dapat dirujuk dengan mudah dari bagian lain data.
+   
 ## 2. Peran schema.org
 
 1. Alasan memilih tipe paling spesifik: ...
@@ -46,12 +53,12 @@ satu baris N-Quads yang terbentuk:
 
 ## 5. Hasil Validasi
 
-- Tes Hasil Lengkap: Struktur JSON-LD berhasil dibaca dan seluruh informasi profil dapat dikenali.
-
-- Tes Schema: Data menggunakan `@context` dari schema.org dan tipe `Person` dengan properti yang sesuai.
-
-- Tes Semantik JSON-LD: Data berhasil merepresentasikan satu entitas `Person` yang memiliki identitas melalui `@id`, hubungan dengan Universitas Sumatera Utara melalui `alumniOf`, serta beberapa bidang pengetahuan melalui `knowsAbout`.
-
+- Schema Markup Validator: Valid. `profil_saya.jsonld` berhasil divalidasi dengan 0 error dan 0 warning.
+  
+- Rich Result Test: `seminar.html` berhasil dikenali sebagai **Event**. Terdapat **8 masalah non-kritis** berupa properti opsional yang belum dicantumkan.
+  
+- JSON-LD Playground: `profil_saya.jsonld` berhasil diproses dan menghasilkan struktur JSON-LD pada bagian **Expanded**.
+  
 ## 6. Refleksi
 
 ### 1. Apa perbedaan fungsi Schema Markup Validator dan Rich Results Test?
