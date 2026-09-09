@@ -1,0 +1,72 @@
+[
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://usu.ac.id/mhs/251402001",
+  "name": "Yessica Jaklin",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universitas Sumatera Utara"
+  },
+  "knowsAbout": [
+    "Saya memiliki fun fact, yaitu kalau makan jeruk cuma bulirnya",
+    "Saya bisa berbicara 4 bahasa"
+  ]
+},
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://usu.ac.id/mhs/251402030",
+  "name": "Rodotua Naomi Mutiara Simamora",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universitas Sumatera Utara"
+  },
+  "knowsAbout": [
+    "Saya memiliki fun fact, yaitu ukuran kaki kanan dan kiri berbeda",
+    "Saya menyukai kupu-kupu karena indah atau estetik"
+  ]
+},
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://usu.ac.id/mhs/251402072",
+  "name": "Vedder Timothy Simbolon",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universitas Sumatera Utara"
+  },
+  "knowsAbout": [
+    "Saya memiliki fun fact, yaitu dia mirip Pak Atqa",
+    "Saya menyukai hal-hal yang baru"
+  ]
+},
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://usu.ac.id/mhs/251402026",
+  "name": "Daradira Vonna",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universitas Sumatera Utara"
+  },
+  "knowsAbout": [
+    "Saya memiliki fun fact, yaitu berulang kali melakukan hal yang sama",
+    "Saya menyukai kegiatan organisasi"
+  ]
+},
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://usu.ac.id/mhs/251402107",
+  "name": "Muhammad Rajadinata Nasution",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universitas Sumatera Utara"
+  },
+  "knowsAbout": [
+    "Saya memiliki fun fact, yaitu lama balas chat",
+    "Saya menyukai mengerjakan sesuatu belakangan"
+  ]
+ }
+]
