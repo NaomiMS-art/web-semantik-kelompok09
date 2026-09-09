@@ -32,12 +32,14 @@ Latihan Pertemuan 3 - JSON-LD dan Data Terstruktur
    
 ## 2. Peran schema.org
 
-1. Alasan memilih tipe paling spesifik: ...
-2. Nama properti dan bahasa alami: ...
-3. Apa manfaat array pada knowsAbout?
-   Array berguna untuk menyimpan beberapa nilai sekaligus dalam KnowsAbout. jadi, kalau
-   seseorang memilki pengetahuan di beberapa bidang, semuanya bisa dituliskan dalam satu
-   properti.
+1. **Alasan memilih tipe paling spesifik:**  
+   Tipe yang lebih spesifik dipilih supaya entitas yang dibuat dapat dijelaskan dengan lebih tepat. Dengan begitu, mesin pencari juga lebih mudah memahami data tersebut dibandingkan jika menggunakan tipe yang terlalu umum seperti `Thing`.
+
+2. **Nama properti dan bahasa alami:**  
+   Nama properti tetap mengikuti aturan yang ada di schema.org agar dapat dikenali oleh mesin. Sedangkan isi atau nilai dari properti tersebut bisa menggunakan Bahasa Indonesia karena bagian itu merupakan informasi yang ingin disampaikan.
+
+3. **Manfaat array pada `knowsAbout`:**  
+   Array pada `knowsAbout` digunakan jika seseorang memiliki lebih dari satu pengetahuan atau bidang yang dikuasai. Misalnya, seseorang mengetahui tentang `"Web Semantik"` dan `"Python"` sekaligus.
 
 ## 3. Perbaikan Lima Kesalahan
 
