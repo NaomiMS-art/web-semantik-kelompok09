@@ -34,7 +34,10 @@ Latihan Pertemuan 3 - JSON-LD dan Data Terstruktur
 
 1. Alasan memilih tipe paling spesifik: ...
 2. Nama properti dan bahasa alami: ...
-3. Rangkuman format pada Rich Result: ...
+3. Apa manfaat array pada knowsAbout?
+   Array berguna untuk menyimpan beberapa nilai sekaligus dalam KnowsAbout. jadi, kalau
+   seseorang memilki pengetahuan di beberapa bidang, semuanya bisa dituliskan dalam satu
+   properti.
 
 ## 3. Perbaikan Lima Kesalahan
 
