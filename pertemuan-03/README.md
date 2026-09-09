@@ -39,40 +39,10 @@ Latihan Pertemuan 3 - JSON-LD dan Data Terstruktur
 | 4 | "nomorInduk" | Properti tersebut tidak terdaftar di Schema.org, harus diganti | "**identifier**": "221401001" |
 | 5 | "221401001", | Koma pada properti terakhir harus dihapus karena tidak valid dalam JSON-LD | "identifier": **"221401001"** |
 
-## 4. Tiga Kali Input dan JSON-LD Playground
-
-### Teks
-
-Data JSON-LD berisi lima orang, yaitu Rodotua Naomi Mutiara Simamora, Vedder Timothy Simbolon, Yessica Jaklin, M. Rajadinata Nasution, dan Daradira Vonna. Kelima orang tersebut memiliki hubungan dengan Universitas Sumatera Utara dan memiliki pengetahuan dalam bidang Pemrograman dan Web Semantik.
-
-### Triple
-
-1. Rodotua Naomi Mutiara Simamora → alumniOf → Universitas Sumatera Utara
-2. Rodotua Naomi Mutiara Simamora → knowsAbout → Pemrograman
-3. Rodotua Naomi Mutiara Simamora → knowsAbout → Web Semantik
-
-4. Vedder Timothy Simbolon → alumniOf → Universitas Sumatera Utara
-5. Vedder Timothy Simbolon → knowsAbout → Pemrograman
-6. Vedder Timothy Simbolon → knowsAbout → Web Semantik
-
-7. Yessica Jaklin → alumniOf → Universitas Sumatera Utara
-8. Yessica Jaklin → knowsAbout → Pemrograman
-9. Yessica Jaklin → knowsAbout → Web Semantik
-
-10. M. Rajadinata Nasution → alumniOf → Universitas Sumatera Utara
-11. M. Rajadinata Nasution → knowsAbout → Pemrograman
-12. M. Rajadinata Nasution → knowsAbout → Web Semantik
-
-13. Daradira Vonna → alumniOf → Universitas Sumatera Utara
-14. Daradira Vonna → knowsAbout → Pemrograman
-15. Daradira Vonna → knowsAbout → Web Semantik
-
-### Hasil di JSON-LD Playground
-
-JSON-LD merepresentasikan lima entitas dengan tipe `Person`. Setiap orang memiliki identitas unik menggunakan `@id`, nama menggunakan properti `name`, hubungan dengan Universitas Sumatera Utara menggunakan `alumniOf`, serta bidang pengetahuan menggunakan `knowsAbout`.
-
-Kelima entitas tersebut digabungkan dalam satu dokumen menggunakan `@graph`.
-
+## 4. Triplet dari JSON-LD Playground
+satu baris N-Quads yang terbentuk:
+### Isi Triple
+<https://usu.ac.id/mhs/251402001> <http://schema.org/name> "Yessica Jaklin" .
 
 ## 5. Hasil Validasi
 
