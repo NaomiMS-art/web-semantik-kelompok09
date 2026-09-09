@@ -54,7 +54,11 @@ Latihan Pertemuan 3 - JSON-LD dan Data Terstruktur
 ## 4. Triplet dari JSON-LD Playground
 satu baris N-Quads yang terbentuk:
 ### Isi Triple
+```teks
 <https://usu.ac.id/mhs/251402001> <http://schema.org/name> "Yessica Jaklin" .
+<https://usu.ac.id/mhs/251402107> <http://schema.org/name> "Muhammad Rajadinata Nasution" .
+```
+
 
 ## 5. Hasil Validasi
 
