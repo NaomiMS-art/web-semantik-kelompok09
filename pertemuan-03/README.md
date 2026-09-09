@@ -85,6 +85,6 @@ Dengan demikian, mesin pencari dapat memahami bahwa data JSON-LD benar-benar mer
 
 ![Validator Markup Schema](screenshots/profil-schema-validator.png)
 
-![Teman Seminar](screenshots/profil-peserta.png)
+![JSON-LD Playground](screenshots/profil-playground.png)
 
 ![Tes Hasil Kaya](screenshots/seminar-rich-results.png)
