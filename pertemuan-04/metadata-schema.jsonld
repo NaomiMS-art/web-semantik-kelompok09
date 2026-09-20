@@ -1,0 +1,10 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "@id": "https://contoh.github.io/web-semantik/ISI_NIM/sumber-belajar",
+  "name": "Pengantar Web Semantik: Catatan Belajar",
+  "description": "Catatan belajar tentang RDF, Turtle, dan JSON-LD untuk mata kuliah Web Semantik.",
+  "inLanguage": "id",
+  "dateCreated": "2026-09-20",
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
