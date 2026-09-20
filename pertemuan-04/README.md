@@ -35,8 +35,8 @@ Tautan folder: https://github.com/NaomiMS-art/web-semantik-kelompok09/tree/main/
    - Validator Schema.org : 0 errors
    - Turtle : prefix lengkap, ; dan . benar
    - Triplet : 7 triple, semuanya dengan subjek yang sama
- 
-   ![Hasil validasi JSON-LD di JSON-LD Playground](screenshots/jsonld-playground.png)
+
+![Hasil validasi JSON-LD di JSON-LD Playground](screenshots/jsonld-playground.png)
      
 - Validator Markup Skema:
   - Perbandingan HTML meta, Turtle, dan JSON-LD
