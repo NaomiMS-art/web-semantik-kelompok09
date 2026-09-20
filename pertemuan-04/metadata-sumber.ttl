@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://contoh.github.io/web-semantik/ISI_NIM/sumber-belajar>
+    dcterms:title "Pengantar Web Semantik: Catatan Belajar"@id ;
+    dcterms:creator "Nama Mahasiswa"@id ;
+    dcterms:description "Catatan belajar tentang RDF, Turtle, dan JSON-LD untuk mata kuliah Web Semantik."@id ;
+    dcterms:created "2026-09-20"^^xsd:date ;
+    dcterms:type "Teks" ;
+    dcterms:language "id" ;
+    dcterms:rights "CC BY 4.0" .
