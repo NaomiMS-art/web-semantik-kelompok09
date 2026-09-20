@@ -30,9 +30,29 @@ Tautan folder: https://github.com/NaomiMS-art/web-semantik-kelompok09/tree/main/
 
 
 ## Hasil validasi
-- JSON-LD Playground: [isi setelah menjalankan] — target: tidak ada galat sintaks dan subjek URI yang sama dengan Turtle muncul pada tampilan triple.
-- Validator Markup Skema: [isi setelah menjalankan] — target: tipe LearningResource terdeteksi tanpa galat.
-- Bukti: screenshots/jsonld-playground.png dan screenshots/schema-validator.png
+- JSON-LD Playground:
+   - Tidak menampilkan pesan galat merah, dan tab Expanded berhasil terisi. Artinya JSON valid dan semua istilah pada @context (judul, pembuat, deskripsi, dibuat, tipe, bahasa, hak) berhasil dipetakan ke URI dcterms:
+   - Validator Schema.org : 0 errors
+   - Turtle : prefix lengkap, ; dan . benar
+   - Triplet : 7 triple, semuanya dengan subjek yang sama
+ 
+   ![Hasil validasi JSON-LD di JSON-LD Playground](screenshots/jsonld-playground.png)
+     
+- Validator Markup Skema:
+  - Perbandingan HTML meta, Turtle, dan JSON-LD
+
+| Elemen | HTML meta | Turtle | JSON-LD | Makna |
+|---|---|---|---|---|
+| Judul | `DC.title` | `dcterms:title` | `judul` → `dcterms:title` | Tidak berubah |
+| Pembuat | `DC.creator` | `dcterms:creator` | `pembuat` → `dcterms:creator` | Tidak berubah |
+| Deskripsi | `DC.description` | `dcterms:description` | `deskripsi` → `dcterms:description` | Tidak berubah |
+| Tanggal | `DC.date` | `dcterms:created` | `dibuat` → `dcterms:created` | Nilai sama (2026-09-20), properti HTML sedikit berbeda |
+| Bahasa | `DC.language` | `dcterms:language` | `bahasa` → `dcterms:language` | Tidak berubah (`id`) |
+| Hak | `DC.rights` | `dcterms:rights` | `hak` → `dcterms:rights` | Tidak berubah (CC BY 4.0) |
+| Tipe | `DC.type` | `dcterms:type` | `tipe` → `dcterms:type` | Tidak berubah (Teks) |
+
+![Hasil validasi markup skema](screenshots/schema-validator.png)
+
 
 ## Refleksi
 1. Mengapa URI sama penting untuk Turtle dan JSON-LD?
