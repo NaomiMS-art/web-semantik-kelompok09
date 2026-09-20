@@ -1,9 +1,9 @@
 {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://contoh.github.io/web-semantik/ISI_NIM/sumber-belajar",
-  "name": "Pengantar Web Semantik: Catatan Belajar",
-  "description": "Catatan belajar tentang RDF, Turtle, dan JSON-LD untuk mata kuliah Web Semantik.",
+  "@id": "https://naomims-art.github.io/web-semantik-kelompok09/251402030/sumber-belajar",
+  "name": "Mengenal Metadata Sumber Belajar dengan Dublin Core, Turtle, dan JSON-LD",
+  "description": "Pengantar singkat tentang metadata sumber belajar menggunakan kosakata Dublin Core dan schema.org, serta representasinya dalam Turtle dan JSON-LD.",
   "inLanguage": "id",
   "dateCreated": "2026-09-20",
   "license": "https://creativecommons.org/licenses/by/4.0/"

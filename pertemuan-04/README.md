@@ -1,47 +1,35 @@
 # Pertemuan 4 — Metadata dan Interoperabilitas
 
-## Identitas Sumber 
-- Judul: 2. Semantic HTML5? | Belajar HTML5
-- Pembuat: WPU
-- Deskripsi: Penjelasan mengenai Semantic HTML5
-- Tanggal: 2022-06-18
-- URI sumber: [https://youtu.be/o3m15BWi2HM](https://youtu.be/o3m15BWi2HM)
-- Jenis sumber: Video Pembelajaran
-- Bahasa: id
-- Hak: Standard YouTube License
+Tautan folder: https://github.com/NaomiMS-art/web-semantik-kelompok09/tree/main/pertemuan-04
 
-## Pemetaan Dublin Core Terms
+## Identitas sumber
+- Judul: Mengenal Metadata Sumber Belajar dengan Dublin Core, Turtle, dan JSON-LD
+- Pembuat: Rodotua Naomi Mutiara Simamora
+- URI sumber: https://naomims-art.github.io/web-semantik-kelompok09/251402030/sumber-belajar
+- Jenis sumber: Teks (artikel pengantar)
+
+## Pemetaan Dublin Core
 | Properti | Nilai | Alasan pemilihan |
 | --- | --- | --- |
-| dcterms:title | [nilai] | [alasan] |
-| dcterms:creator | [nilai] | [alasan] |
-| dcterms:description | [nilai] | [alasan] |
-| dcterms:created | [nilai] | [alasan] |
-| dcterms:type | [nilai] | [alasan] |
-| dcterms:language | [nilai] | [alasan] |
-| dcterms:rights | [nilai] | [alasan] |
+| dcterms:title | Mengenal Metadata Sumber Belajar dengan Dublin Core, Turtle, dan JSON-LD | Nama sumber adalah identitas paling dasar yang dicari pengguna. |
+| dcterms:creator | Rodotua Naomi Mutiara Simamora | Menunjukkan pihak yang membuat sumber sehingga bisa dirujuk dan dimintai pertanggungjawaban. |
+| dcterms:description | Pengantar singkat tentang metadata sumber belajar ... Turtle dan JSON-LD. | Ringkasan membantu orang dan mesin menilai relevansi sumber tanpa membuka isinya. |
+| dcterms:created | 2026-09-20 | Tanggal dibuat (ISO 8601) menunjukkan seberapa baru sumber ini. |
+| dcterms:type | Teks | Menjelaskan bentuk sumber sehingga bisa disaring berdasarkan jenis. |
+| dcterms:language | id | Menunjukkan bahasa sumber (Indonesia) agar cocok dengan kebutuhan pembaca. |
+| dcterms:rights | CC BY 4.0 | Menyatakan syarat penggunaan ulang sumber. |
 
-
-## Pemetaan Dublin Core Terms (sesuaikan sama jwban, ini masih acuan aja)
-| Properti | Nilai | Alasan pemilihan |
-| --- | --- | --- |
-| dcterms:title | Pengantar Linked Data dan Web Semantik | Judul diambil langsung dari `<title>` halaman sumber, mewakili isi utama dokumen |
-| dcterms:creator | World Wide Web Consortium (W3C) | Organisasi yang tercantum sebagai penerbit dan pemilik hak cipta konten |
-| dcterms:description | Halaman ini menjelaskan konsep dasar Linked Data, bagaimana data dihubungkan menggunakan URI, dan perannya dalam Web Semantik | Ringkasan diambil dari paragraf pembuka untuk memberi konteks isi tanpa perlu membuka halaman penuh |
-| dcterms:created | 2015-01-20 | Tanggal publikasi/pembaruan terakhir yang tercantum pada halaman |
-| dcterms:type | Text | Sumber berupa dokumen teks penjelasan (bukan gambar, video, atau dataset) |
-| dcterms:language | en | Konten sumber ditulis dalam Bahasa Inggris |
-| dcterms:rights | © World Wide Web Consortium, hak cipta W3C mengacu pada W3C Document License | Keterangan lisensi tercantum di footer halaman W3C |
+Perbedaan dcterms:creator dan dcterms:publisher: creator adalah pihak yang membuat isi sumber, sedangkan publisher adalah pihak yang menerbitkan atau menyediakannya. Pada latihan ini keduanya orang yang sama, sehingga publisher tidak dipakai.
 
 ## Hasil validasi
-- JSON-LD Playground: 
-- Schema Markup Validator:
+- JSON-LD Playground: [isi setelah menjalankan] — target: tidak ada galat sintaks dan subjek URI yang sama dengan Turtle muncul pada tampilan triple.
+- Validator Markup Skema: [isi setelah menjalankan] — target: tipe LearningResource terdeteksi tanpa galat.
+- Bukti: screenshots/jsonld-playground.png dan screenshots/schema-validator.png
 
 ## Refleksi
-1. Mengapa URI yang sama penting untuk Turtle dan JSON-LD?
-  
-2. Apa perbedaan peran DC Terms dan schema.org pada pekerjaan ini?
-  
-3. Sebutkan satu risiko jika metadata HTML, Turtle, dan JSON-LD tidak konsisten.
-   
-## Catatan akhir
+1. Mengapa URI sama penting untuk Turtle dan JSON-LD?
+   URI adalah identitas sumber. Jika URI sama, sistem lain tahu bahwa pernyataan di Turtle dan JSON-LD membicarakan satu sumber yang sama dan dapat menggabungkannya. Jika berbeda, keduanya dianggap dua sumber terpisah.
+2. Apa perbedaan peran DC Terms dan Schema.org pada pekerjaan ini?
+   DC Terms dipakai untuk deskripsi metadata sumber yang bersifat umum dan baku di dunia perpustakaan dan repositori (Turtle dan JSON-LD pertama). Schema.org dipakai agar sumber dikenali mesin pencari dan validator markup, dengan tipe LearningResource yang lebih spesifik untuk materi belajar.
+3. Satu risiko jika metadata HTML, Turtle, dan JSON-LD tidak konsisten:
+   Sistem yang mengumpulkan data bisa menemukan judul, pembuat, atau tanggal yang saling bertentangan, sehingga sulit menentukan mana yang benar. Sumber bisa salah tercatat atau gagal digabungkan dengan data lain.
