@@ -1,10 +1,26 @@
 # Pertemuan 4 — Metadata dan Interoperabilitas
 
 ## Identitas sumber (sesuaikan sama jwban, ini masih acuan aja)
-- Judul: Pengantar Linked Data dan Web Semantik
-- Pembuat: World Wide Web Consortium (W3C)
-- URI sumber: https://www.w3.org/standards/semanticweb/data
-- Jenis sumber: Halaman web / dokumentasi teknis
+- Judul: 2. Semantic HTML5? | Belajar HTML5
+- Pembuat: WPU
+- Deskripsi: Penjelasan mengenai Semantic HTML5
+- Tanggal: 2022-06-18
+- URI sumber: [https://youtu.be/o3m15BWi2HM](https://youtu.be/o3m15BWi2HM)
+- Jenis sumber: Video Pembelajaran
+- Bahasa: id
+- Hak: Standard YouTube License
+
+## Pemetaan Dublin Core Terms
+| Properti | Nilai | Alasan pemilihan |
+| --- | --- | --- |
+| dcterms:title | [nilai] | [alasan] |
+| dcterms:creator | [nilai] | [alasan] |
+| dcterms:description | [nilai] | [alasan] |
+| dcterms:created | [nilai] | [alasan] |
+| dcterms:type | [nilai] | [alasan] |
+| dcterms:language | [nilai] | [alasan] |
+| dcterms:rights | [nilai] | [alasan] |
+
 
 ## Pemetaan Dublin Core Terms (sesuaikan sama jwban, ini masih acuan aja)
 | Properti | Nilai | Alasan pemilihan |
