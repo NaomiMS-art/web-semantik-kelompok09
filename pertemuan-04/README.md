@@ -1,6 +1,6 @@
 # Pertemuan 4 — Metadata dan Interoperabilitas
 
-## Identitas sumber (sesuaikan sama jwban, ini masih acuan aja)
+## Identitas Sumber 
 - Judul: 2. Semantic HTML5? | Belajar HTML5
 - Pembuat: WPU
 - Deskripsi: Penjelasan mengenai Semantic HTML5
