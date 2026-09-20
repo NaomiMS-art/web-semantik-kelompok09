@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "judul": "dcterms:title",
+    "pembuat": "dcterms:creator",
+    "deskripsi": "dcterms:description",
+    "dibuat": { "@id": "dcterms:created", "@type": "http://www.w3.org/2001/XMLSchema#date" },
+    "tipe": "dcterms:type",
+    "bahasa": "dcterms:language",
+    "hak": "dcterms:rights"
+  },
+  "@id": "https://contoh.github.io/web-semantik/ISI_NIM/sumber-belajar",
+  "judul": { "@value": "Pengantar Web Semantik: Catatan Belajar", "@language": "id" },
+  "pembuat": { "@value": "Nama Mahasiswa", "@language": "id" },
+  "deskripsi": { "@value": "Catatan belajar tentang RDF, Turtle, dan JSON-LD untuk mata kuliah Web Semantik.", "@language": "id" },
+  "dibuat": "2026-09-20",
+  "tipe": "Teks",
+  "bahasa": "id",
+  "hak": "CC BY 4.0"
+}
