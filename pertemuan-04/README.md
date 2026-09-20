@@ -7,16 +7,27 @@ Tautan folder: https://github.com/NaomiMS-art/web-semantik-kelompok09/tree/main/
 - Pembuat: Rodotua Naomi Mutiara Simamora
 - Deskripsi: Pengantar singkat tentang metadata sumber belajar menggunakan kosakata Dublin Core dan schema.org, serta representasinya dalam Turtle dan JSON-LD.
 - Tanggal: 2026-09-20
-- URI sumber: [https://naomims-art.github.io/web-semantik-kelompok09/251402030/sumber-belajar](https://naomims-art.github.io/web-semantik-kelompok09/251402030/sumber-belajar)
+- URI sumber: [https://naomims-art.github.io/web-semantik-kelompok09/251402030/sumber-belajar](https://github.com/NaomiMS-art/web-semantik-kelompok09/blob/79b64a54226581c84fb87ddcb32a804e1189752c/pertemuan-04/sumber-belajar.html)
 - Jenis sumber: Teks (artikel pengantar)
 - Bahasa: id
 - Hak: CC BY 4.0
 
 ## Pemetaan Dublin Core
+
 | Properti | Nilai | Alasan pemilihan |
 | --- | --- | --- |
+| `dcterms:title` | Mengenal Metadata Sumber Belajar dengan Dublin Core, Turtle, dan JSON-LD | Properti ini digunakan untuk menunjukkan judul dari sumber belajar. |
+| `dcterms:creator` | Rodotua Naomi Mutiara Simamora | Digunakan untuk mencantumkan nama pihak yang membuat dan bertanggung jawab terhadap isi sumber. |
+| `dcterms:description` | Pengantar singkat tentang metadata sumber belajar menggunakan kosakata Dublin Core dan schema.org, serta representasinya dalam Turtle dan JSON-LD. | Properti ini berfungsi untuk memberikan gambaran singkat mengenai isi sumber. |
+| `dcterms:created` | 2026-09-20 | Digunakan untuk menunjukkan tanggal saat sumber dibuat dengan format `YYYY-MM-DD`. |
+| `dcterms:identifier` | [https://naomims-art.github.io/web-semantik-kelompok09/251402030/sumber-belajar](https://github.com/NaomiMS-art/web-semantik-kelompok09/blob/79b64a54226581c84fb87ddcb32a804e1189752c/pertemuan-04/sumber-belajar.html) | Digunakan sebagai identitas unik dari sumber dalam bentuk URI. |
+| `dcterms:type` | Text | Menunjukkan bahwa sumber yang digunakan berupa teks atau artikel pengantar. |
+| `dcterms:language` | id | Digunakan untuk menunjukkan bahasa yang digunakan pada sumber. Kode `id` menunjukkan Bahasa Indonesia. |
+| `dcterms:rights` | CC BY 4.0 | Digunakan untuk menjelaskan lisensi atau hak penggunaan yang diterapkan pada sumber. |
 
-Perbedaan dcterms:creator dan dcterms:publisher: 
+**Perbedaan `dcterms:creator` dan `dcterms:publisher`:**  
+`dcterms:creator` digunakan untuk menjelaskan siapa yang membuat atau menghasilkan isi sumber, sedangkan `dcterms:publisher` menunjukkan pihak yang menerbitkan atau menyebarkan sumber tersebut kepada publik. Pada sumber ini, Rodotua Naomi Mutiara Simamora berperan sebagai `creator`, sedangkan `publisher` tidak dicantumkan karena tidak terdapat pihak penerbit lain yang secara khusus disebutkan.
+
 
 ## Hasil validasi
 - JSON-LD Playground: [isi setelah menjalankan] — target: tidak ada galat sintaks dan subjek URI yang sama dengan Turtle muncul pada tampilan triple.
