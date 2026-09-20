@@ -5,21 +5,18 @@ Tautan folder: https://github.com/NaomiMS-art/web-semantik-kelompok09/tree/main/
 ## Identitas sumber
 - Judul: Mengenal Metadata Sumber Belajar dengan Dublin Core, Turtle, dan JSON-LD
 - Pembuat: Rodotua Naomi Mutiara Simamora
-- URI sumber: https://naomims-art.github.io/web-semantik-kelompok09/251402030/sumber-belajar
+- Deskripsi: Pengantar singkat tentang metadata sumber belajar menggunakan kosakata Dublin Core dan schema.org, serta representasinya dalam Turtle dan JSON-LD.
+- Tanggal: 2026-09-20
+- URI sumber: [https://naomims-art.github.io/web-semantik-kelompok09/251402030/sumber-belajar](https://naomims-art.github.io/web-semantik-kelompok09/251402030/sumber-belajar)
 - Jenis sumber: Teks (artikel pengantar)
+- Bahasa: id
+- Hak: CC BY 4.0
 
 ## Pemetaan Dublin Core
 | Properti | Nilai | Alasan pemilihan |
 | --- | --- | --- |
-| dcterms:title | Mengenal Metadata Sumber Belajar dengan Dublin Core, Turtle, dan JSON-LD | Nama sumber adalah identitas paling dasar yang dicari pengguna. |
-| dcterms:creator | Rodotua Naomi Mutiara Simamora | Menunjukkan pihak yang membuat sumber sehingga bisa dirujuk dan dimintai pertanggungjawaban. |
-| dcterms:description | Pengantar singkat tentang metadata sumber belajar ... Turtle dan JSON-LD. | Ringkasan membantu orang dan mesin menilai relevansi sumber tanpa membuka isinya. |
-| dcterms:created | 2026-09-20 | Tanggal dibuat (ISO 8601) menunjukkan seberapa baru sumber ini. |
-| dcterms:type | Teks | Menjelaskan bentuk sumber sehingga bisa disaring berdasarkan jenis. |
-| dcterms:language | id | Menunjukkan bahasa sumber (Indonesia) agar cocok dengan kebutuhan pembaca. |
-| dcterms:rights | CC BY 4.0 | Menyatakan syarat penggunaan ulang sumber. |
 
-Perbedaan dcterms:creator dan dcterms:publisher: creator adalah pihak yang membuat isi sumber, sedangkan publisher adalah pihak yang menerbitkan atau menyediakannya. Pada latihan ini keduanya orang yang sama, sehingga publisher tidak dipakai.
+Perbedaan dcterms:creator dan dcterms:publisher: 
 
 ## Hasil validasi
 - JSON-LD Playground: [isi setelah menjalankan] — target: tidak ada galat sintaks dan subjek URI yang sama dengan Turtle muncul pada tampilan triple.
