@@ -7,12 +7,12 @@
 ## Komponen ontology
 | Komponen | Isi yang dibuat |
 | --- | --- |
-| Class | [isi] |
-| Subclass | [isi] |
-| Object property | [isi] |
-| Datatype property | [isi] |
-| Individual | [isi] |
-| Axiom/disjointness | [isi] |
+| Class | Pizza (subclass dari Food, dengan restriksi hasBase some PizzaBase) |
+| Subclass | Capricciosa (subclass dari NamedPizza, dengan restriksi hasTopping some AnchoviesTopping, hasTopping some HamTopping, hasTopping some MozzarellaTopping, hasTopping some OliveTopping, hasTopping some PeperonataTopping, hasTopping some TomatoTopping) |
+| Object property | hasTopping (domain: Pizza, range: PizzaTopping; InverseFunctionalProperty; sub-property dari hasIngredient; inverse: isToppingOf) |
+| Datatype property | Tidak ada di ontologi asli (Data property count = 0). Jika ditambahkan manual: hasCalories (domain: Pizza, range: xsd:integer) |
+| Individual | France (instance dari class Country, dideklarasikan sebagai owl:NamedIndividual) |
+| Axiom/disjointness | AllDisjointClasses pada CheeseTopping, FishTopping, FruitTopping, HerbSpiceTopping, MeatTopping, NutTopping, SauceTopping, VegetableTopping (kategori topping tidak boleh saling tumpang tindih) |
 
 ## Layer Cake
 Jelaskan posisi ontology dalam Semantic Web Layer Cake: [isi jawaban]
