@@ -31,5 +31,7 @@ Jelaskan posisi ontology dalam Semantic Web Layer Cake: [isi jawaban]
 
     -> Dengan kata lain, topologi memberikan struktur dasar, ontology menambahkan aturan main atau logika.
    
-3. Mengapa domain pada OWL bukan constraint database?
+2. Mengapa domain pada OWL bukan constraint database?
+   - **Database Relasional** menggunakan **Closed World Assumption (CWA)** sebagai alat validasi/batasan. Jika kita memasukkan data yang tidak sesuai dengan *constraint* domain, database akan menolak (*error*).
+   - **OWL** menggunakan **Open World Assumption (OWA)**. Penentuan `rdfs:domain` di OWL bukan untuk menolak data, melainkan untuk penalaran logika (*inference*). Jika suatu objek dihubungkan dengan properti tersebut, sistem/reasoner akan otomatis menyimpulkan (*infer*) bahwa objek tersebut bertipe kelas domain itu, bukan menganggap data salah.
 4. Mengapa kosakata yang sudah ada sebaiknya dipakai kembali sebelum membuat yang baru?
