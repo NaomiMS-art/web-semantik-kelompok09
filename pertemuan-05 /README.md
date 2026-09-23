@@ -15,7 +15,7 @@
 | **Axiom** | Aturan yang digunakan untuk memberikan batasan atau hubungan tertentu dalam ontology. | `MahasiswaAktif` disjointWith `MahasiswaAlumni` |
 
 ## Layer Cake
-Jelaskan posisi ontology dalam Semantic Web Layer Cake: [isi jawaban]
+Karena RDF/RDFS menjadi dasar untuk merepresentasikan data dan hubungan, kemudian setelah itu ontology dibutuhkan untuk menambahkan makna yang lebih kaya. Sedangkan SPARQL digunakan untuk melakukan query terhadap data yang sudah memiliki makna tersebut.
 
 ## Perbandingan serialisasi
 - Turtle: [dua pengamatan sintaks]
