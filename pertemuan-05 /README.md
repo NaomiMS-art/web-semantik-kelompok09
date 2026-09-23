@@ -4,15 +4,15 @@
 - IRI dasar: [isi IRI]
 - Domain: Kampus
 
-## Komponen ontology
-| Komponen | Isi yang dibuat |
-| --- | --- |
-| Class | Pizza (subclass dari Food, dengan restriksi hasBase some PizzaBase) |
-| Subclass | Capricciosa (subclass dari NamedPizza, dengan restriksi hasTopping some AnchoviesTopping, hasTopping some HamTopping, hasTopping some MozzarellaTopping, hasTopping some OliveTopping, hasTopping some PeperonataTopping, hasTopping some TomatoTopping) |
-| Object property | hasTopping (domain: Pizza, range: PizzaTopping; InverseFunctionalProperty; sub-property dari hasIngredient; inverse: isToppingOf) |
-| Datatype property | Tidak ada di ontologi asli (Data property count = 0). Jika ditambahkan manual: hasCalories (domain: Pizza, range: xsd:integer) |
-| Individual | France (instance dari class Country, dideklarasikan sebagai owl:NamedIndividual) |
-| Axiom/disjointness | AllDisjointClasses pada CheeseTopping, FishTopping, FruitTopping, HerbSpiceTopping, MeatTopping, NutTopping, SauceTopping, VegetableTopping (kategori topping tidak boleh saling tumpang tindih) |
+## Komponen Ontology
+
+| Komponen | Penjelasan | Contoh |
+|---|---|---|
+| **Class** | Digunakan untuk menggambarkan kelompok atau konsep utama dalam suatu domain. | `Mahasiswa`, `MataKuliah`, `Ruangan` |
+| **Subclass** | Merupakan bagian yang lebih khusus dari sebuah class. | `MahasiswaAktif` subclassOf `Mahasiswa`, `MahasiswaAlumni` subclassOf `Mahasiswa` |
+| **Individual** | Merupakan objek atau anggota tertentu dari sebuah class. | `Raja` bertipe `MahasiswaAlumni`, `Vimo` bertipe `MahasiswaAktif` |
+| **Property** | Digunakan untuk menghubungkan satu entitas dengan entitas lain atau memberikan atribut tertentu. | `mengambilMataKuliah`, `menggunakanRuangan` |
+| **Axiom** | Aturan yang digunakan untuk memberikan batasan atau hubungan tertentu dalam ontology. | `MahasiswaAktif` disjointWith `MahasiswaAlumni` |
 
 ## Layer Cake
 Jelaskan posisi ontology dalam Semantic Web Layer Cake: [isi jawaban]
