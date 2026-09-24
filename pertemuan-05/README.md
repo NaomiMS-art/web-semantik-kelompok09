@@ -36,19 +36,19 @@ Ontologi kampus (IRI dasar: `https://NaomiMS-art.github.io/web-semantik/25140202
 
 1. **Cara menuliskan tipe dan hubungan resource.** Turtle menuliskan triple dalam bentuk `subjek predikat objek` yang ringkas, misalnya:
 
-   ```turtle
+   \`\`\`turtle
    :Dara rdf:type owl:NamedIndividual , :Student ;
        :takesCourse :web_semantik .
-   ```
+   \`\`\`
 
    Sedangkan RDF/XML menuliskan hal yang sama sebagai elemen XML bersarang, di mana predikat menjadi nama tag dan objek menjadi atribut atau elemen anak:
 
-   ```xml
+   \`\`\`xml
    <owl:NamedIndividual rdf:about="#Dara">
        <rdf:type rdf:resource="#Student"/>
        <takesCourse rdf:resource="#web_semantik"/>
    </owl:NamedIndividual>
-   ```
+   \`\`\`
 
 2. **Cara mendeklarasikan prefix/namespace.** Turtle memakai deklarasi `@prefix` yang sederhana di bagian atas file (misalnya `@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .`), sedangkan RDF/XML mendeklarasikan namespace sebagai atribut XML (`xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"`) di dalam tag pembuka `<rdf:RDF>`. Turtle juga jauh lebih ringkas dan mudah dibaca manusia karena tidak memerlukan tag pembuka/penutup seperti XML.
 
@@ -71,4 +71,11 @@ Meskipun sintaksnya berbeda, kedua file merepresentasikan model triple RDF yang 
    - **Database Relasional** menggunakan **Closed World Assumption (CWA)** sebagai alat validasi/batasan. Jika kita memasukkan data yang tidak sesuai dengan *constraint* domain, database akan menolak (*error*).
    - **OWL** menggunakan **Open World Assumption (OWA)**. Penentuan `rdfs:domain` di OWL bukan untuk menolak data, melainkan untuk penalaran logika (*inference*). Jika suatu objek dihubungkan dengan properti tersebut, sistem/reasoner akan otomatis menyimpulkan (*infer*) bahwa objek tersebut bertipe kelas domain itu, bukan menganggap data salah.
 
-4. **Mengapa kosakata yang sudah ada sebaiknya dipakai kembali sebelum membuat yang baru?**
+3. **Mengapa kosakata yang sudah ada sebaiknya dipakai kembali sebelum membuat yang baru?**
+
+   - **Interoperabilitas**: Jika semua orang memakai istilah yang sama (misalnya `foaf:name` untuk nama orang, bukan membuat properti baru sendiri), data dari sumber berbeda bisa langsung saling terhubung dan dipahami oleh sistem lain tanpa perlu pemetaan (mapping) tambahan.
+   - **Menghindari duplikasi makna**: Membuat kosakata baru untuk konsep yang sudah ada (misalnya membuat `punyaNama` padahal sudah ada `foaf:name`) hanya menambah kebingungan dan membuat data menjadi terfragmentasi (tersebar dengan istilah berbeda-beda untuk hal yang sama).
+   - **Standar yang sudah teruji**: Kosakata populer seperti `FOAF`, `Dublin Core`, atau `schema.org` sudah dipakai luas dan dipahami oleh banyak reasoner/aplikasi, sehingga ontologi kita otomatis lebih mudah diintegrasikan dan divalidasi.
+   - **Efisiensi**: Menghemat waktu pengembangan karena tidak perlu mendefinisikan ulang konsep dasar yang sebenarnya sudah dipikirkan matang oleh komunitas sebelumnya.
+
+   Prinsip ini dikenal sebagai *"Don't reinvent the wheel"* dalam pengembangan ontologi — sebaiknya cari dulu apakah kosakata yang dibutuhkan sudah tersedia sebelum membuat istilah baru.
