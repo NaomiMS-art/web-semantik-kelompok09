@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://NaomiMS-art.github.io/web-semantik/251402026/kampus#"
+     xml:base="https://NaomiMS-art.github.io/web-semantik/251402026/kampus"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <owl:Ontology rdf:about="https://NaomiMS-art.github.io/web-semantik/251402026/kampus"/>
+
+    <!-- Kelas -->
+
+    <owl:Class rdf:about="#Course"/>
+
+    <owl:Class rdf:about="#Department"/>
+
+    <owl:Class rdf:about="#Lecturer">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#Person"/>
+
+    <owl:Class rdf:about="#Student">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+
+    <!-- Aksioma: Student dan Lecturer adalah kelas disjoint -->
+    <owl:AllDisjointClasses>
+        <owl:members rdf:parseType="Collection">
+            <owl:Class rdf:about="#Lecturer"/>
+            <owl:Class rdf:about="#Student"/>
+        </owl:members>
+    </owl:AllDisjointClasses>
+
+    <!-- Properti Objek -->
+
+    <owl:ObjectProperty rdf:about="#belongsToDepartment"/>
+
+    <owl:ObjectProperty rdf:about="#takesCourse"/>
+
+    <owl:ObjectProperty rdf:about="#teachesCourse"/>
+
+    <!-- Properti Tipe Data -->
+
+    <owl:DatatypeProperty rdf:about="#hasNIM"/>
+
+    <owl:DatatypeProperty rdf:about="#hasName"/>
+
+    <!-- Individu -->
+
+    <owl:NamedIndividual rdf:about="#Dara">
+        <rdf:type rdf:resource="#Student"/>
+        <takesCourse rdf:resource="#web_semantik"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Naomi">
+        <rdf:type rdf:resource="#Student"/>
+        <takesCourse rdf:resource="#web_semantik"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Raja">
+        <rdf:type rdf:resource="#Student"/>
+        <takesCourse rdf:resource="#web_semantik"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Vedder">
+        <rdf:type rdf:resource="#Student"/>
+        <takesCourse rdf:resource="#web_semantik"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Yessica">
+        <rdf:type rdf:resource="#Student"/>
+        <takesCourse rdf:resource="#web_semantik"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#dosen_1">
+        <rdf:type rdf:resource="#Lecturer"/>
+        <teachesCourse rdf:resource="#web_semantik"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#web_semantik">
+        <rdf:type rdf:resource="#Course"/>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
+
+<!-- Generated from ontology-kampus.owl, converted to RDF/XML syntax -->
