@@ -1,0 +1,71 @@
+@prefix :     <https://NaomiMS-art.github.io/web-semantik/251402026/kampus#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml:  <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://NaomiMS-art.github.io/web-semantik/251402026/kampus> .
+
+<https://NaomiMS-art.github.io/web-semantik/251402026/kampus> rdf:type owl:Ontology .
+
+#################################################################
+#    Classes
+#################################################################
+
+:Course rdf:type owl:Class .
+
+:Department rdf:type owl:Class .
+
+:Lecturer rdf:type owl:Class ;
+    rdfs:subClassOf :Person .
+
+:Person rdf:type owl:Class .
+
+:Student rdf:type owl:Class ;
+    rdfs:subClassOf :Person .
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Lecturer :Student )
+] .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:belongsToDepartment rdf:type owl:ObjectProperty .
+
+:takesCourse rdf:type owl:ObjectProperty .
+
+:teachesCourse rdf:type owl:ObjectProperty .
+
+#################################################################
+#    Data Properties
+#################################################################
+
+:hasNIM rdf:type owl:DatatypeProperty .
+
+:hasName rdf:type owl:DatatypeProperty .
+
+#################################################################
+#    Individuals
+#################################################################
+
+:Dara rdf:type owl:NamedIndividual , :Student ;
+    :takesCourse :web_semantik .
+
+:Naomi rdf:type owl:NamedIndividual , :Student ;
+    :takesCourse :web_semantik .
+
+:Raja rdf:type owl:NamedIndividual , :Student ;
+    :takesCourse :web_semantik .
+
+:Vedder rdf:type owl:NamedIndividual , :Student ;
+    :takesCourse :web_semantik .
+
+:Yessica rdf:type owl:NamedIndividual , :Student ;
+    :takesCourse :web_semantik .
+
+:dosen_1 rdf:type owl:NamedIndividual , :Lecturer ;
+    :teachesCourse :web_semantik .
+
+:web_semantik rdf:type owl:NamedIndividual , :Course .
