@@ -17,10 +17,34 @@
 ## Layer Cake
 Karena RDF/RDFS menjadi dasar untuk merepresentasikan data dan hubungan, kemudian setelah itu ontology dibutuhkan untuk menambahkan makna yang lebih kaya. Sedangkan SPARQL digunakan untuk melakukan query terhadap data yang sudah memiliki makna tersebut.
 
-## Perbandingan serialisasi
-- Turtle: [dua pengamatan sintaks]
-- RDF/XML: [dua pengamatan sintaks]
-- Kesamaan makna: [isi]
+## Ekspor dan Bandingkan Serialisasi
+
+Ontologi kampus (IRI dasar: https://NaomiMS-art.github.io/web-semantik/251402026/kampus) diekspor ke dua format serialisasi RDF/OWL yang berbeda:
+
+ontology-kampus.ttl — format Turtle
+ontology-kampus.rdf — format RDF/XML
+Isi yang tetap sama pada kedua file
+Class: Course, Department, Lecturer, Person, Student
+Property: belongsToDepartment, takesCourse, teachesCourse (object property), hasNIM, hasName (data property)
+Individual: Dara, Naomi, Raja, Vedder, Yessica, dosen_1, web_semantik
+IRI dasar: https://NaomiMS-art.github.io/web-semantik/251402026/kampus
+Dua Perbedaan Bentuk Sintaks
+Cara menuliskan tipe dan hubungan resource. Turtle menuliskan triple dalam bentuk subjek predikat objek yang ringkas, misalnya:
+turtle
+   :Dara rdf:type owl:NamedIndividual , :Student ;
+       :takesCourse :web_semantik .
+
+Sedangkan RDF/XML menuliskan hal yang sama sebagai elemen XML bersarang, di mana predikat menjadi nama tag dan objek menjadi atribut atau elemen anak:
+
+xml
+   <owl:NamedIndividual rdf:about="#Dara">
+       <rdf:type rdf:resource="#Student"/>
+       <takesCourse rdf:resource="#web_semantik"/>
+   </owl:NamedIndividual>
+Cara mendeklarasikan prefix/namespace. Turtle memakai deklarasi @prefix yang sederhana di bagian atas file (misalnya @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .), sedangkan RDF/XML mendeklarasikan namespace sebagai atribut XML (xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#") di dalam tag pembuka <rdf:RDF>. Turtle juga jauh lebih ringkas dan mudah dibaca manusia karena tidak memerlukan tag pembuka/penutup seperti XML.
+Satu Kesamaan Makna
+
+Meskipun sintaksnya berbeda, kedua file merepresentasikan model triple RDF yang sama persis. Contohnya, fakta bahwa Lecturer dan Student adalah subclass dari Person serta bersifat saling lepas (disjoint), dan bahwa setiap mahasiswa (Dara, Naomi, Raja, Vedder, Yessica) mengambil mata kuliah web_semantik sementara dosen_1 mengajarnya — semua fakta ini tetap identik secara semantik di kedua file, hanya berbeda cara penulisannya. Jika dimuat ke reasoner atau triple store, keduanya akan menghasilkan graf RDF yang sama.
 
 ## Refleksi
 1. Apa perbedaan ontology dan taksonomi?
