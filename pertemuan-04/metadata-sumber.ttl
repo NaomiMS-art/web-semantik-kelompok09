@@ -1,7 +1,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://naomims-art.github.io/web-semantik-kelompok09/251402030/sumber-belajar>
+<https://github.com/NaomiMS-art/web-semantik-kelompok09/blob/main/pertemuan-04/sumber-belajar.html>
     dcterms:title "Mengenal Metadata Sumber Belajar dengan Dublin Core, Turtle, dan JSON-LD"@id ;
     dcterms:creator "Rodotua Naomi Mutiara Simamora"@id ;
     dcterms:description "Pengantar singkat tentang metadata sumber belajar menggunakan kosakata Dublin Core dan schema.org, serta representasinya dalam Turtle dan JSON-LD."@id ;
