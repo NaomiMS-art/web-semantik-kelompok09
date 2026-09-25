@@ -7,6 +7,7 @@
 ## Komponen ontology 
 
 - Pizza.owl
+  
 | Komponen | Isi yang dibuat |
 | --- | --- |
 | Class | Pizza (subclass dari Food, dengan restriksi hasBase some PizzaBase) |
@@ -17,6 +18,7 @@
 | Axiom/disjointness | AllDisjointClasses pada CheeseTopping, FishTopping, FruitTopping, HerbSpiceTopping, MeatTopping, NutTopping, SauceTopping, VegetableTopping (kategori topping tidak boleh saling tumpang tindih) |
 
 - Ontology Kampus
+  
 | Komponen | Isi yang dibuat |
 |---|---|
 | **Kelas** | `Course`, `Department`, `Lecturer`, `Person`, `Student` |
