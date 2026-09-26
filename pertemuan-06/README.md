@@ -11,19 +11,21 @@
 
 2. Mengapa literal tidak boleh menjadi subject RDF?
 
--> **Tidak memiliki identitas (identity)** - Literal hanya merepresentasikan nilai data mentah (string, angka, tanggal, dsb.), bukan sebuah *resource* yang dapat dirujuk atau diidentifikasi secara unik.
+   -> **Tidak memiliki identitas (identity)** - Literal hanya merepresentasikan nilai data mentah (string, angka, tanggal, dsb.), bukan sebuah *resource* yang dapat dirujuk atau diidentifikasi secara unik.
 
--> **Tidak dapat dijadikan target rujukan** - Karena literal bukan resource, tidak ada IRI yang menunjuk kepadanya, sehingga triple lain tidak bisa "berbicara tentang" sebuah literal sebagaimana ia berbicara tentang sebuah resource.
+   -> **Tidak dapat dijadikan target rujukan** - Karena literal bukan resource, tidak ada IRI yang menunjuk kepadanya, sehingga triple lain tidak bisa "berbicara tentang" sebuah literal sebagaimana ia berbicara tentang sebuah resource.
 
--> **Sesuai model data RDF** - Model RDF mendefinisikan triple sebagai *(subject, predicate, object)*, di mana subject dan predicate harus berupa IRI atau blank node (entitas yang bisa diberi pernyataan/statement), sedangkan object boleh berupa IRI, blank node, **atau** literal (karena object adalah "nilai akhir" dari suatu pernyataan).
+   -> **Sesuai model data RDF** - Model RDF mendefinisikan triple sebagai *(subject, predicate, object)*, di mana subject dan predicate harus berupa IRI atau blank node (entitas yang bisa diberi pernyataan/statement), sedangkan object boleh berupa IRI, blank node, **atau** literal (karena object adalah "nilai akhir" dari suatu pernyataan).
 
--> **Konsistensi semantik** - Literal berfungsi sebagai "nilai akhir" dari sebuah fakta (contoh: `ex:ida foaf:name "Ida Adi"@id`), sehingga secara logis ia berada di posisi object, bukan sebagai sesuatu yang memiliki properti sendiri.
+   -> **Konsistensi semantik** - Literal berfungsi sebagai "nilai akhir" dari sebuah fakta (contoh: `ex:ida foaf:name "Ida Adi"@id`), sehingga secara logis ia berada di posisi object, bukan sebagai sesuatu yang memiliki properti sendiri.
 
 3. Buat IRI dasar untuk graf Anda dengan pola HTTP, misalnya https://contoh.github.io/web-semantik/ISI_NIM/kampus#.
+
    -> https://contoh.github.io/web-semantik/251402001/kampus#
+
    -> @prefix ex: <https://contoh.github.io/web-semantik/251402001/kampus#> .
    
-5. Tuliskan kepanjangan namespace rdf, rdfs, xsd, dan foaf.
+4. Tuliskan kepanjangan namespace rdf, rdfs, xsd, dan foaf.
 
 | Prefix | Kepanjangan (IRI Lengkap) | Kegunaan |
 |---|---|---|
