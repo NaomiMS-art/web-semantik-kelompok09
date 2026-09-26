@@ -2,6 +2,7 @@
 
 # IRI, Literal, Blank Node, dan Prefix
 1. Identifikasi jenis node untuk ex:ida, "Ida Adi"@id, dan [ ex:kota "Medan" ].
+
 | Elemen | Jenis Node | Penjelasan |
 |---|---|---|
 | `ex:ida` | **IRI (Internationalized Resource Identifier)** | Merupakan singkatan (prefixed name) dari sebuah IRI penuh yang mengidentifikasi suatu resource secara unik dan global. Karena diawali prefix (`ex:`) dan mengacu pada sebuah entitas bernama, ini adalah IRI. |
@@ -23,6 +24,7 @@
    -> @prefix ex: <https://contoh.github.io/web-semantik/251402001/kampus#> .
    
 5. Tuliskan kepanjangan namespace rdf, rdfs, xsd, dan foaf.
+
 | Prefix | Kepanjangan (IRI Lengkap) | Kegunaan |
 |---|---|---|
 | `rdf:` | `http://www.w3.org/1999/02/22-rdf-syntax-ns#` | Menyediakan istilah dasar model RDF (misalnya `rdf:type`, `rdf:Property`). |
