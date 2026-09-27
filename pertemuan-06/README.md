@@ -54,7 +54,7 @@
 
 ## Refleksi
 1. Kapan object harus berupa IRI dan kapan berupa literal?
-2. ## Mengapa Prefix Membantu Keterbacaan Tanpa Mengubah IRI
+## 2. Mengapa Prefix Membantu Keterbacaan Tanpa Mengubah IRI
 
 Prefix (seperti `ex:` atau `foaf:`) hanyalah **singkatan tampilan (syntactic sugar)**, bukan bagian dari identitas data sebenarnya.
 
@@ -88,4 +88,5 @@ ex:ida a ex:Lecturer ;
 ### Kesimpulan
 
 `ex:ida` dan `<https://contoh.github.io/web-semantik/251402030/kampus#ida>` merujuk ke **resource yang persis sama**. Parser RDF akan mengekspansi `ex:ida` kembali menjadi IRI lengkapnya saat membaca file. Prefix hanya memengaruhi *bagaimana IRI ditulis/dibaca oleh manusia*, sama sekali tidak memengaruhi *identitas* resource dalam graf — IRI penuh tetap menjadi kunci sebenarnya.
+
 3. Sebutkan satu kesalahan pemodelan yang Anda hindari pada graf ini.
