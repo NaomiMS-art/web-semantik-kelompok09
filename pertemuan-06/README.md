@@ -54,5 +54,38 @@
 
 ## Refleksi
 1. Kapan object harus berupa IRI dan kapan berupa literal?
-2. Mengapa prefix membantu keterbacaan tanpa mengubah IRI?
+2. ## Mengapa Prefix Membantu Keterbacaan Tanpa Mengubah IRI
+
+Prefix (seperti `ex:` atau `foaf:`) hanyalah **singkatan tampilan (syntactic sugar)**, bukan bagian dari identitas data sebenarnya.
+
+### IRI Sesungguhnya Tetap Utuh
+
+Ketika kita menulis:
+
+```python
+g.bind("ex", EX)
+```
+
+IRI `https://contoh.github.io/web-semantik/251402030/kampus#ida` **tidak berubah** menjadi apa pun yang lain. Fungsi `bind()` hanya memberi tahu *serializer* (misalnya saat memanggil `g.serialize(format="turtle")`) bahwa setiap kali muncul IRI berawalan `https://contoh.github.io/web-semantik/251402030/kampus#`, tampilkan sebagai `ex:` di file `.ttl`.
+
+### Contoh Perbandingan
+
+**Tanpa prefix** (IRI panjang ditulis berulang):
+
+```turtle
+<https://contoh.github.io/web-semantik/251402030/kampus#ida>
+    a <https://contoh.github.io/web-semantik/251402030/kampus#Lecturer> ;
+    <http://xmlns.com/foaf/0.1/name> "Muhammad Isa Dadi Hasibuan, S.Kom., M.Kom" .
+```
+
+**Dengan prefix** (ringkas dan mudah dibaca manusia):
+
+```turtle
+ex:ida a ex:Lecturer ;
+    foaf:name "Muhammad Isa Dadi Hasibuan, S.Kom., M.Kom" .
+```
+
+### Kesimpulan
+
+`ex:ida` dan `<https://contoh.github.io/web-semantik/251402030/kampus#ida>` merujuk ke **resource yang persis sama**. Parser RDF akan mengekspansi `ex:ida` kembali menjadi IRI lengkapnya saat membaca file. Prefix hanya memengaruhi *bagaimana IRI ditulis/dibaca oleh manusia*, sama sekali tidak memengaruhi *identitas* resource dalam graf — IRI penuh tetap menjadi kunci sebenarnya.
 3. Sebutkan satu kesalahan pemodelan yang Anda hindari pada graf ini.
