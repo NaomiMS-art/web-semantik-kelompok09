@@ -17,7 +17,7 @@ g.add((EX.ida, EX.mengajar, EX.web_semantik))
 # Tambahkan triple Anda di bawah ini
 # Mahasiswa dan relasi ke mata kuliah
 g.add((EX.mhs251402030, RDF.type, EX.Student))
-g.add((EX.mhs251402030, FOAF.name, Literal("Nama Mahasiswa", lang="id")))
+g.add((EX.mhs251402030, FOAF.name, Literal("Rodotua Naomi Mutiara Simamora", lang="id")))
 g.add((EX.mhs251402030, EX.mengambil, EX.web_semantik))
 
 # Informasi tambahan tentang mata kuliah dan dosen

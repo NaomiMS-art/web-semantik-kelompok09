@@ -8,7 +8,7 @@ ex:ida a ex:Lecturer ;
     ex:mengajar ex:web_semantik .
 
 ex:mhs251402030 a ex:Student ;
-    foaf:name "Nama Mahasiswa"@id ;
+    foaf:name "Rodotua Naomi Mutiara Simamora"@id ;
     ex:mengambil ex:web_semantik .
 
 ex:usu a ex:University ;
