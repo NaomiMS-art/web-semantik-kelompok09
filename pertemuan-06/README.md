@@ -92,4 +92,4 @@
 
 3. **Sebutkan satu kesalahan pemodelan yang Anda hindari pada graf ini.**
 
-   Kesalahan yang dihindari adalah **tidak menjadikan literal sebagai subject**. Misalnya, nilai `"Web Semantik"` (nama mata kuliah) atau angka `3` (jumlah SKS) tidak pernah dijadikan subject dari triple lain — keduanya selalu diposisikan sebagai object, sementara yang menjadi subject adalah resource ber-IRI seperti `ex:web_semantik`. Selain itu, jumlah SKS dimodelkan dengan tipe data yang benar (`xsd:integer`) alih-alih sebagai string biasa, sehingga makna datanya tetap konsisten dan bisa diproses/divalidasi secara semantik oleh aplikasi lain.
+  Saya menghindari kesalahan dalam membedakan antara entitas dan nilai literal. Entitas seperti Web Semantik dibuat menggunakan EX.web_semantik karena masih dapat memiliki hubungan dan atribut lain, seperti dosen yang mengajar, mahasiswa yang mengambil, jumlah kredit, dan hari kuliah. Dengan begitu, struktur graf menjadi lebih jelas dan setiap entitas dapat dihubungkan dengan informasi yang relevan.
