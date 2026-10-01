@@ -1,0 +1,12 @@
+<https://contoh.github.io/web-semantik/251402030/kampus#web_semantik> <http://xmlns.com/foaf/0.1/name> "Web Semantik"@id .
+<https://contoh.github.io/web-semantik/251402030/kampus#usu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://contoh.github.io/web-semantik/251402030/kampus#University> .
+<https://contoh.github.io/web-semantik/251402030/kampus#mhs251402030> <https://contoh.github.io/web-semantik/251402030/kampus#mengambil> <https://contoh.github.io/web-semantik/251402030/kampus#web_semantik> .
+<https://contoh.github.io/web-semantik/251402030/kampus#web_semantik> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://contoh.github.io/web-semantik/251402030/kampus#Course> .
+<https://contoh.github.io/web-semantik/251402030/kampus#ida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://contoh.github.io/web-semantik/251402030/kampus#Lecturer> .
+<https://contoh.github.io/web-semantik/251402030/kampus#ida> <http://xmlns.com/foaf/0.1/name> "Muhammad Isa Dadi Hasibuan, S.Kom., M.Kom"@id .
+<https://contoh.github.io/web-semantik/251402030/kampus#web_semantik> <https://contoh.github.io/web-semantik/251402030/kampus#sks> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://contoh.github.io/web-semantik/251402030/kampus#mhs251402030> <http://xmlns.com/foaf/0.1/name> "Rodotua Naomi Mutiara Simamora"@id .
+<https://contoh.github.io/web-semantik/251402030/kampus#ida> <https://contoh.github.io/web-semantik/251402030/kampus#bekerjaDi> <https://contoh.github.io/web-semantik/251402030/kampus#usu> .
+<https://contoh.github.io/web-semantik/251402030/kampus#usu> <http://xmlns.com/foaf/0.1/name> "Universitas Sumatera Utara"@id .
+<https://contoh.github.io/web-semantik/251402030/kampus#ida> <https://contoh.github.io/web-semantik/251402030/kampus#mengajar> <https://contoh.github.io/web-semantik/251402030/kampus#web_semantik> .
+<https://contoh.github.io/web-semantik/251402030/kampus#mhs251402030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://contoh.github.io/web-semantik/251402030/kampus#Student> .

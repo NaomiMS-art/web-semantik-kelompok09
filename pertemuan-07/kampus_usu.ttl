@@ -1,0 +1,20 @@
+@prefix ex: <https://contoh.github.io/web-semantik/251402030/kampus#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:ida a ex:Lecturer ;
+    foaf:name "Muhammad Isa Dadi Hasibuan, S.Kom., M.Kom"@id ;
+    ex:bekerjaDi ex:usu ;
+    ex:mengajar ex:web_semantik .
+
+ex:mhs251402030 a ex:Student ;
+    foaf:name "Rodotua Naomi Mutiara Simamora"@id ;
+    ex:mengambil ex:web_semantik .
+
+ex:usu a ex:University ;
+    foaf:name "Universitas Sumatera Utara"@id .
+
+ex:web_semantik a ex:Course ;
+    foaf:name "Web Semantik"@id ;
+    ex:sks 3 .
+
