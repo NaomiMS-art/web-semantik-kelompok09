@@ -34,23 +34,6 @@
     ]
   },
   {
-    "@id": "https://contoh.github.io/web-semantik/251402030/kampus#mhs251402030",
-    "@type": [
-      "https://contoh.github.io/web-semantik/251402030/kampus#Student"
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@language": "id",
-        "@value": "Rodotua Naomi Mutiara Simamora"
-      }
-    ],
-    "https://contoh.github.io/web-semantik/251402030/kampus#mengambil": [
-      {
-        "@id": "https://contoh.github.io/web-semantik/251402030/kampus#web_semantik"
-      }
-    ]
-  },
-  {
     "@id": "https://contoh.github.io/web-semantik/251402030/kampus#web_semantik",
     "@type": [
       "https://contoh.github.io/web-semantik/251402030/kampus#Course"
@@ -65,6 +48,23 @@
       {
         "@type": "http://www.w3.org/2001/XMLSchema#integer",
         "@value": 3
+      }
+    ]
+  },
+  {
+    "@id": "https://contoh.github.io/web-semantik/251402030/kampus#mhs251402030",
+    "@type": [
+      "https://contoh.github.io/web-semantik/251402030/kampus#Student"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "id",
+        "@value": "Rodotua Naomi Mutiara Simamora"
+      }
+    ],
+    "https://contoh.github.io/web-semantik/251402030/kampus#mengambil": [
+      {
+        "@id": "https://contoh.github.io/web-semantik/251402030/kampus#web_semantik"
       }
     ]
   }
