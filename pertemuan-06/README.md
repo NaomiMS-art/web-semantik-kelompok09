@@ -45,8 +45,8 @@
 
 ## Contoh triple
 1. `ex:ida` - `rdf:type` - `ex:Lecturer`
-2. `ex:ida` - `foaf:name` - `"Muhammad Isa Dadi Hasibuan, S.Kom., M.Kom"@id`
-3. `ex:ida` - `ex:mengajar` - `ex:web_semantik`
+2. `ex:ida` - `ex:teaches` - `WebSemantik`
+3. `ex:WebSemantik` - `ex:nama` - `"Web Semantik"`
 
 ## Perbandingan serialisasi
 - Turtle: Lebih ringkas dan mudah dibaca manusia karena memakai prefix, mirip struktur kalimat subject-predicate-object, dan triple dengan subject yang sama bisa digabung dengan tanda `;`.
