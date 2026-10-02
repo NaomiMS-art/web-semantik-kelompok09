@@ -73,3 +73,8 @@ print("Jumlah triple:", len(g))
 print(g.serialize(format="turtle"))
 g.serialize("kampus_usu.ttl", format="turtle")
 g.serialize("kampus_usu.jsonld", format="json-ld", indent=2)
+
+# LANGKAH 5 - MEMBACA DAN MENELUSURI GRAF
+print("Daftar dosen:")
+for subject, predicate, obj in g.triples((None, RDF.type, EX.Lecturer)):
+    print(subject)
