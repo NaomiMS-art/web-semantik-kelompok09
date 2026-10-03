@@ -1,4 +1,5 @@
 from rdflib import Graph, URIRef, Literal, Namespace, Dataset
+#ditambahkan URIRef, Literal, dan Namespace
 from rdflib.namespace import RDF, DCTERMS, XSD
 
 g = Graph()
@@ -15,9 +16,10 @@ print(f"Jumlah triple (N-Triples): {len(g_nt)}")
 print(f"Jumlah triple (JSON-LD)  : {len(g_json)}")
 print(g.serialize(format="turtle"))
 
-EX = Namespace("https://contoh.github.io/web-semantik/ISI_NIM/kampus#")
+#------------------- Potongan Kode Program yang Ditambahkan dari Langkah 3 ----------------------
+EX = Namespace("https://contoh.github.io/web-semantik/251402030/kampus#")
 stmt = URIRef(EX + "stmt-01")
-
+ 
 g.add((stmt, RDF.type, RDF.Statement))
 g.add((stmt, RDF.subject, EX.ida))
 g.add((stmt, RDF.predicate, EX.mengajar))
@@ -26,6 +28,11 @@ g.add((stmt, DCTERMS.creator, EX.ida))
 g.add((stmt, DCTERMS.date, Literal("2026-10-01", datatype=XSD.date)))
 g.add((stmt, DCTERMS.source, Literal("Data akademik kampus")))
 print(f"Jumlah triple setelah reifikasi: {len(g)}")  # awal + 7
+
+g.bind("ex", EX)
+g.bind("dcterms", DCTERMS)
+print(g.serialize(format="turtle"))
+#-----------------------------------------------------------------------------------------------
 
 ds = Dataset()
 ds.parse("kampus_tergabung.trig", format="trig")
