@@ -6,10 +6,10 @@
 - Nama graf: https://contoh.github.io/graph/kampus dan https://contoh.github.io/graph/fakultas
 
 ## Reifikasi dan provenance
-- Triple yang dianotasi: ex:ida ex:mengajar ex:web_semantik
-- Pencipta: ex:ida
-- Tanggal: 2026-10-01
-- Sumber: Data akademik kampus
+- Triple yang dianotasi: ex:ida ex:mengajar ex:web_semantik, direpresentasikan oleh node ex:stmt-01 bertipe rdf:Statement
+- Creator : ex:ida
+- Date    : 2026-10-01 (xsd:date)
+- Source  : "Data akademik kampus"
 
 ## Tabel pemilihan format
 | Format | Kekuatan utama | Skenario tepat |
@@ -21,9 +21,9 @@
 | N-Quads | Menyertakan graf konteks | Dataset dengan banyak named graph dalam format per baris |
 
 ## Perbandingan
-- Format paling mudah dibaca manusia: **Turtle**, karena prefix dan tanda `;` serta `,` menghilangkan pengulangan sehingga struktur datanya terbaca seperti kalimat.
-- Format untuk HTML/API: **JSON-LD**, karena berbasis JSON sehingga langsung bisa diproses JavaScript dan dapat disisipkan di HTML tanpa mengubah tampilan halaman.
-- Perbedaan reifikasi klasik dan RDF-star: reifikasi klasik membuat node pernyataan dan empat triple (`rdf:type rdf:Statement`, `rdf:subject`, `rdf:predicate`, `rdf:object`) sebelum metadata bisa ditambahkan, dan triple aslinya tetap berdiri terpisah. RDF-star menyematkan triple langsung sebagai subjek (`<< ex:ida ex:mengajar ex:web_semantik >> dcterms:creator ex:ida .`), jadi lebih ringkas, tetapi belum didukung semua parser.
+- Format paling mudah dibaca manusia: **Turtle**, karena prefix menyingkat IRI yang panjang dan tanda `;` serta `,` menghilangkan pengulangan sehingga struktur datanya terbaca seperti kalimat dan lebih ringkas.
+- Format untuk HTML/API: **JSON-LD**, karena berbasis JSON sehingga langsung bisa diproses JavaScript dan API web, dan dapat disisipkan ke halaman HTML '<script type="application/ld+json">' tanpa mengubah tampilan halaman.
+- Perbedaan reifikasi klasik dan RDF-star: reifikasi klasik harus membongkar sebuah pernyataan menjadi resource `rdf:type rdf:Statement` dengan `rdf:subject`, `rdf:predicate`, dan `rdf:object` (4 triple) sebelum metadata bisa ditambahkan, dan triple aslinya tetap berdiri terpisah. Pada contoh ini total 7 triple, dan triple aslinya tetap berdiri terpisah dari `stmt-01`. RDF-star menyematkan triple langsung sebagai subjek, misalnya `<< ex:ida ex:mengajar ex:web_semantik >> dct:creator ex:ida .`, sehingga satu anotasi cukup satu baris, tanpa node perantara, dan hubungan ke pernyataan asli eksplisit. Hasilnya lebih ringkas dan mudah dibaca, tetapi dukungan tool-nya belum seluas reifikasi klasik (rdflib yang dipakai di sini belum mendukungnya secara bawaan).
 
 ## Mengapa reifikasi klasik lebih verbose?
 Karena satu pernyataan harus "dipecah" menjadi komponennya (subjek, predikat, objek) pada node baru, baru kemudian diberi anotasi. Satu triple dengan tiga metadata menjadi tujuh triple, sedangkan RDF-star cukup satu triple tertanam ditambah anotasinya.
