@@ -11,14 +11,19 @@
 - Date    : 2026-10-01 (xsd:date)
 - Source  : "Data akademik kampus"
 
-## Tabel pemilihan format
+## Langkah 1 - Membandingkan Serialisasi RDF
+
+RDF dapat disimpan dalam berbagai format serialisasi. Setiap format memiliki karakteristik dan fungsi yang berbeda, sehingga penggunaannya perlu disesuaikan dengan kebutuhan pengolahan, pertukaran, dan pengelolaan data.
+
 | Format | Kekuatan utama | Skenario tepat |
 |---|---|---|
-| Turtle | Ringkas dan mudah dibaca manusia | Menulis dan memeriksa data secara manual, dokumentasi, bahan ajar |
-| JSON-LD | Cocok untuk web/API dan HTML | Endpoint API, data terstruktur di halaman web (`<script type="application/ld+json">`) |
-| RDF/XML | Kompatibilitas data lama | Integrasi dengan tool atau repositori lama yang hanya mendukung XML |
-| N-Triples | Satu triple per baris; stabil untuk diff | Dataset besar, pemrosesan stream, perbandingan versi di git |
-| N-Quads | Menyertakan graf konteks | Dataset dengan banyak named graph dalam format per baris |
+| Turtle | Memiliki struktur penulisan yang ringkas dan mudah dipahami oleh manusia | Cocok digunakan untuk menulis, memeriksa, dan mendokumentasikan data RDF secara manual |
+| JSON-LD | Menggunakan struktur JSON sehingga mudah diterapkan pada aplikasi berbasis web | Sesuai untuk pertukaran data melalui API serta penyisipan data terstruktur pada halaman HTML |
+| RDF/XML | Merepresentasikan data RDF menggunakan sintaks XML | Tepat digunakan ketika harus berintegrasi dengan sistem atau aplikasi lama yang masih menggunakan XML |
+| N-Triples | Menuliskan setiap triple dalam satu baris sehingga formatnya sederhana dan konsisten | Cocok untuk dataset berukuran besar, pemrosesan data per baris, serta membandingkan perubahan data menggunakan Git |
+| N-Quads | Memiliki struktur seperti N-Triples, tetapi dilengkapi informasi konteks graf | Digunakan ketika dataset terdiri atas beberapa named graph atau ketika data perlu dibedakan berdasarkan sumber maupun konteksnya |
+
+> **Catatan:** Setiap format RDF memiliki keunggulan masing-masing. Oleh karena itu, pemilihan format perlu disesuaikan dengan kebutuhan. Turtle lebih mudah dibaca manusia, JSON-LD sesuai untuk web dan API, RDF/XML berguna untuk kompatibilitas dengan sistem lama, N-Triples cocok untuk pemrosesan data per baris, sedangkan N-Quads digunakan ketika data membutuhkan informasi konteks melalui named graph.
 
 ## Perbandingan
 - Format paling mudah dibaca manusia: **Turtle**, karena prefix menyingkat IRI yang panjang dan tanda `;` serta `,` menghilangkan pengulangan sehingga struktur datanya terbaca seperti kalimat dan lebih ringkas.
