@@ -29,9 +29,9 @@
 Karena satu pernyataan harus "dipecah" menjadi komponennya (subjek, predikat, objek) pada node baru, baru kemudian diberi anotasi. Satu triple dengan tiga metadata menjadi tujuh triple, sedangkan RDF-star cukup satu triple tertanam ditambah anotasinya.
 
 ## Refleksi
-1. Graf bernama berguna saat menggabungkan data dari sumber berbeda karena triple dari tiap sumber tetap terpisah dalam konteksnya sendiri. Asal data tetap jelas, data bisa difilter atau diperbarui per sumber, dan konflik antar sumber tidak tercampur menjadi satu graf yang sulit dilacak.
-2. Asal (provenance) penting untuk sebuah triple karena menentukan seberapa data bisa dipercaya: siapa yang menyatakannya, kapan, dan dari mana. Tanpa itu, data yang bertentangan atau sudah usang tidak bisa dinilai atau diaudit.
-3. Untuk git diff saya memilih **N-Triples**, karena satu triple per baris tanpa prefix atau pengelompokan, sehingga perubahan satu triple muncul sebagai satu baris yang berubah dan urutan penulisan tidak membuat diff berantakan.
+1. Named graph berguna saat menggabungkan data dari sumber yang berbeda karena setiap kumpulan triple dapat disimpan dalam graf yang memiliki konteks atau identitas sumbernya masing-masing. Dengan begitu, asal data tetap dapat diketahui, data dari sumber tertentu dapat dikelola atau diperbarui tanpa memengaruhi sumber lain, dan perbedaan maupun konflik antar sumber lebih mudah ditelusuri.
+2. Provenance penting untuk sebuah triple karena memberikan informasi mengenai asal-usul dan konteks data, seperti siapa yang menyatakan data tersebut, dari sumber mana, dan kapan data dibuat atau diperoleh. Informasi ini membantu menilai kepercayaan data, membandingkan data yang berbeda, serta memudahkan proses pengecekan dan audit apabila terdapat kesalahan atau konflik.
+3. Saya memilih format N-Triples untuk git diff karena setiap triple ditulis dalam satu baris secara sederhana dan konsisten. Hal ini membuat perubahan pada data lebih mudah terlihat karena penambahan, penghapusan, atau perubahan triple dapat dibandingkan secara langsung tanpa terganggu oleh prefix, indentasi, atau struktur penulisan seperti pada Turtle.
 
 ## Tangkapan layar
 - ![Output-konversi](screnshots/output-konversi.png)
