@@ -1,0 +1,71 @@
+@prefix ex: <https://contoh.github.io/web-semantik/251402072/kampus#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<https://contoh.github.io/graph/kampus> {
+    ex:ida a ex:Lecturer ;
+        foaf:name "Muhammad Isa Dadi Hasibuan S.Kom., M.Kom" ;
+        ex:mengajar ex:web_semantik .
+
+    ex:stmt_mengajar_ws a rdf:Statement ;
+    rdf:subject ex:ida ;
+    rdf:predicate ex:mengajar ;
+    rdf:object ex:web_semantik ;
+    ex:semester "Ganjil 2026/2027" ;
+    ex:sks "3" .
+
+    << ex:ida ex:mengajar ex:web_semantik >>
+    ex:semester "Ganjil 2026/2027" ;
+    ex:sks "3" .
+}
+
+<https://contoh.github.io/graph/fakultas> {
+    ex:fasilkom a ex:Faculty ;
+        foaf:name "Fakultas Ilmu Komputer dan Teknologi Informasi"@id ;
+        ex:singkatan "FASILKOM-TI" ;
+        ex:memilikiDepartemen ex:ti, ex:ilkom ;
+        ex:lokasi "Universitas Sumatera Utara" ;
+        ex:memilikiWebsite <https://fasilkom.usu.ac.id/> ;
+        ex:berdiriTahun "2010" ;
+        ex:memilikiAkreditasi "Unggul" .
+
+    ex:ti a ex:Department ;
+        foaf:name "Teknologi Informasi"@id ;
+        ex:bagianDari ex:fasilkom ;
+        ex:memilikiJenjang "Sarjana" .
+
+    ex:ilkom a ex:Department ;
+        foaf:name "Ilmu Komputer"@id ;
+        ex:bagianDari ex:fasilkom ;
+        ex:memilikiJenjang "Sarjana" .
+
+    ex:stmt_fasilkom_ti a rdf:Statement ;
+        rdf:subject ex:fasilkom ;
+        rdf:predicate ex:memilikiDepartemen ;
+        rdf:object ex:ti ;
+        ex:keterangan "FASILKOM-TI memiliki Departemen Teknologi Informasi" ;
+        ex:akreditasi "Unggul" ;
+        ex:tahunAkreditasi "2024" ;
+        ex:lembagaAkreditasi "LAM INFOKOM" .
+
+    ex:stmt_fasilkom_ilkom a rdf:Statement ;
+        rdf:subject ex:fasilkom ;
+        rdf:predicate ex:memilikiDepartemen ;
+        rdf:object ex:ilkom ;
+        ex:keterangan "FASILKOM-TI memiliki Departemen Ilmu Komputer" ;
+        ex:akreditasi "Unggul" ;
+        ex:tahunAkreditasi "2024" ;
+        ex:lembagaAkreditasi "LAM INFOKOM" .
+
+    << ex:fasilkom ex:memilikiDepartemen ex:ti >>
+        ex:keterangan "Departemen Teknologi Informasi merupakan bagian dari FASILKOM-TI" ;
+        ex:akreditasi "Unggul" ;
+        ex:tahunAkreditasi "2024" ;
+        ex:lembagaAkreditasi "LAM INFOKOM" .
+
+    << ex:fasilkom ex:memilikiDepartemen ex:ilkom >>
+        ex:keterangan "Departemen Ilmu Komputer merupakan bagian dari FASILKOM-TI" ;
+        ex:akreditasi "Unggul" ;
+        ex:tahunAkreditasi "2024" ;
+        ex:lembagaAkreditasi "LAM INFOKOM" .
+}
