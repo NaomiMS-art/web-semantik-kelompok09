@@ -1,0 +1,21 @@
+@prefix ex: <https://contoh.github.io/web-semantik/251402072/kampus#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+ex:fasilkom a ex:Faculty ;
+    foaf:name "Fakultas Ilmu Komputer dan Teknologi Informasi"@id ;
+    ex:singkatan "FASILKOM-TI" ;
+    ex:memilikiDepartemen ex:ti, ex:ilkom ;
+    ex:lokasi "Universitas Sumatera Utara" ;
+    ex:memilikiWebsite <https://fasilkom.usu.ac.id/> ;
+    ex:berdiriTahun "2010" ;
+    ex:memilikiAkreditasi "Unggul" .
+
+ex:ti a ex:Department ;
+    foaf:name "Teknologi Informasi"@id ;
+    ex:bagianDari ex:fasilkom ;
+    ex:memilikiJenjang "Sarjana" .
+
+ex:ilkom a ex:Department ;
+    foaf:name "Ilmu Komputer"@id ;
+    ex:bagianDari ex:fasilkom ;
+    ex:memilikiJenjang "Sarjana" .
