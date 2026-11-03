@@ -3,9 +3,16 @@
 ## Langkah 1 - Tabel binding
 | Tahap | ?dosen | ?mk | ?namaMK |
 |-------|--------|-----|---------|
-| [isi] | [isi]  | [isi] | [isi] |
-- Jumlah baris hasil akhir: [isi]
-- Peran ?mk: [isi]
+| Pola 1, baris 1 | Budi | tif2305 | – |
+| Pola 1, baris lain | Sari | tif2410 | – |
+| Pola 1, baris lain | Sari | tif2305 | – |
+| Pola 2 | – | tif2305 | "Web Semantik" |
+| Pola 2 | – | tif2410 | "Penambangan Data" |
+| Hasil akhir (gabung ?mk) | Budi | tif2305 | "Web Semantik" |
+| Hasil akhir (gabung ?mk) | Sari | tif2410 | "Penambangan Data" |
+| Hasil akhir (gabung ?mk) | Sari | tif2305 | "Web Semantik" |
+- Jumlah baris hasil akhir: 3
+- Peran ?mk: variabel penghubung antara pola 1 dan pola 2. Variabel yang sama di dua pola berarti harus node yang sama, sehingga hanya binding dengan ?mk identik yang digabung. ?mk tidak tampil karena tidak ada di klausa SELECT (dibuang saat proyeksi), tetapi tanpa ?mk setiap dosen akan dipasangkan dengan semua nama mata kuliah (hasil kali silang).
 
 ## Langkah 2 - ASK dan dunia terbuka
 1. [jawaban]
