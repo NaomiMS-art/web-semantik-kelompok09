@@ -15,9 +15,9 @@
 - Peran ?mk: variabel penghubung antara pola 1 dan pola 2. Variabel yang sama di dua pola berarti harus node yang sama, sehingga hanya binding dengan ?mk identik yang digabung. ?mk tidak tampil karena tidak ada di klausa SELECT (dibuang saat proyeksi), tetapi tanpa ?mk setiap dosen akan dipasangkan dengan semua nama mata kuliah (hasil kali silang).
 
 ## Langkah 2 - ASK dan dunia terbuka
-1. [jawaban]
-2. [jawaban]
-3. [jawaban]
+1. `ASK { ex:budi ex:mengajar ex:tif2410 }` menghasilkan **false**. Menurut asumsi dunia terbuka, false hanya berarti triple itu tidak ada di graf yang diperiksa. Itu tidak berarti Budi pasti tidak mengajar tif2410, karena fakta tersebut mungkin belum tercatat atau ada di sumber lain. Tafsir yang tepat adalah "tidak terbukti benar dari data ini", bukan "terbukti salah".
+2. Hasilnya **5 baris**: untuk tif2305 ada (budi, budi), (budi, sari), (sari, budi), (sari, sari), dan untuk tif2410 ada (sari, sari). Baris dengan ?a sama dengan ?b muncul karena SPARQL tidak mewajibkan dua variabel berbeda berisi node yang berbeda. Satu triple yang sama boleh cocok dengan pola ?a dan pola ?b sekaligus. Untuk membuangnya, tambahkan `FILTER(?a != ?b)`, sehingga tersisa 2 baris: (budi, sari) dan (sari, budi).
+3. Di data, `"Web Semantik"` adalah literal biasa tanpa tag bahasa, sedangkan `"Web Semantik"@id` adalah literal bertag bahasa. Dalam RDF keduanya dianggap nilai yang berbeda, dan pencocokan literal pada pola dasar menuntut kesamaan persis, termasuk tag bahasanya. Karena itu pola `?mk ex:nama "Web Semantik"` menghasilkan nol baris pada graf yang menulis `"Web Semantik"@id`. Solusinya adalah menulis pola sebagai `"Web Semantik"@id`, atau memakai `FILTER(STR(?nama) = "Web Semantik")` agar tag bahasa diabaikan.
 
 ## Langkah 3 - Query lokal
 - IRI dasar graf: https://contoh.github.io/web-semantik/251402001/kampus#
