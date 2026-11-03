@@ -44,5 +44,20 @@ SPARQL dan SQL sebenarnya terlihat mirip dipermukaan, tetapi memiliki banyak per
 - *Lintas Sumber*: Penggabungan data dari sumber berbeda di SQL membutuhkan proses ETL terlebih dahulu, sedangkan SPARQL bisa langsung melakukan kueri terfederasi dengan fungsi SERVICE.
 - *Bentuk Hasil*: Keluaran SQL selalu berbentuk tabel, sementara hasil SPARQL bisa berupa tabel, nilai boolean, maupun graf.
 
-3. Kapan Anda memakai graf lokal (rdflib) dan kapan endpoint publik?
-4. Sebutkan satu hasil query yang mengejutkan dan jelaskan penyebabnya.
+2. Kapan Anda memakai graf lokal (rdflib) dan kapan endpoint publik?
+
+**Graf lokal (rdflib)** saya pakai ketika:
+- Data adalah milik sendiri dan ukurannya kecil, misalnya `kampus_usu_v2.ttl`, sehingga bisa dimuat penuh ke memori.
+- Saya perlu mengubah data, misalnya menambah triple baru lalu mengecek hasilnya (seperti penambahan `ex:ida ex:mengajar ex:kecerdasan_buatan`).
+- Hasilnya harus stabil dan bisa diulang. Data tidak berubah di luar kendali saya, jadi hasil query sama setiap kali dijalankan.
+- Saya bekerja offline, atau data bersifat privat dan tidak boleh dikirim ke server luar.
+- Saya sedang belajar atau menguji query. Prosesnya cepat dan tidak ada batas permintaan (rate limit).
+
+**Endpoint publik (Wikidata)** saya pakai ketika:
+- Data yang dibutuhkan sangat besar dan berasal dari banyak pihak, seperti daftar universitas atau sungai di seluruh dunia, yang tidak mungkin saya unduh dan simpan sendiri.
+- Saya butuh data terkini, karena endpoint selalu diperbarui oleh kontributornya.
+- Saya ingin memanfaatkan pengetahuan lintas domain yang sudah saling terhubung lewat IRI global, termasuk hierarki kelas (misalnya `wdt:P31/wdt:P279*`).
+
+**Trade-off:** graf lokal memberi kontrol penuh dan hasil yang dapat direproduksi, tetapi cakupannya terbatas pada data yang saya muat. Endpoint publik memberi cakupan luas dan data mutakhir, tetapi bergantung pada koneksi internet, tunduk pada batas waktu dan batas permintaan, serta hasilnya bisa berubah antar waktu karena datanya terus diedit. Karena itu pada tugas ini graf lokal dipakai untuk latihan dasar dan modifikasi data, sedangkan endpoint dipakai untuk menjawab pertanyaan yang membutuhkan data dunia nyata.
+
+3. Sebutkan satu hasil query yang mengejutkan dan jelaskan penyebabnya.
