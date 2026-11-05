@@ -1,0 +1,8 @@
+SELECT ?sungai ?sungaiLabel ?panjang WHERE {
+  ?sungai wdt:P31 wd:Q4022 . # P31: instance of (merupakan bagian dari), Q4022: river (sungai)
+  ?sungai wdt:P17 wd:Q252 .  # P17: country (negara), Q252: Indonesia
+  ?sungai wdt:P2043 ?panjang . # P2043: length (panjang)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],id,en". }
+}
+ORDER BY DESC(?panjang)
+LIMIT 5
