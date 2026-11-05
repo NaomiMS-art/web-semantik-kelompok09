@@ -1,0 +1,9 @@
+SELECT ?universitas ?universitasLabel ?kota ?kotaLabel WHERE {
+  ?universitas wdt:P31 wd:Q3918 . # P31: instance of (merupakan bagian dari), Q3918: university (universitas)
+  ?universitas wdt:P17 wd:Q252 .  # P17: country (negara), Q252: Indonesia
+  OPTIONAL { 
+    ?universitas wdt:P131 ?kota . # P131: located in the administrative territorial entity (terletak di wilayah administratif)
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],id,en". }
+}
+LIMIT 20
