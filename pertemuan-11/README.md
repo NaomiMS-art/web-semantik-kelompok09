@@ -40,11 +40,15 @@
 
 ## Langkah 5 - Graf dari Python
 
-- Jumlah tiga kali lipat `universitas.ttl`: [isi]
-- Jumlah baris `universitas_per_kota.csv`: [isi]
-- `setReturnFormat(TURTLE)`: [isi]
-- `Graph().parse(data=...)`: [isi]
-- Mengapa `q_kota` tidak memanggil endpoint: [isi]
+- Jumlah triple universitas.ttl: 1115 (based on Wikidata)
+- Jumlah baris universitas_per_kota.csv: 136 (based on CSV)
+  
+- setReturnFormat(TURTLE): Memberi tahu SPARQLWrapper bahwa hasil query CONSTRUCT diminta dalam format RDF Turtle, bukan JSON. CONSTRUCT menghasilkan graf (kumpulan triple), bukan tabel, sehingga formatnya harus format RDF. Bersama setOnlyConneg(True), format ini diminta lewat header Accept saja.
+  
+- Graph().parse(data=...): Membuat graf rdflib kosong di memori lalu mengisinya dengan teks Turtle yang dikembalikan endpoint (data= berarti sumbernya string, bukan file atau URL). Setelah itu data Wikidata menjadi graf lokal yang bisa di-query dengan g.query(...) dan disimpan ke universitas.ttl.
+  
+- Mengapa q_kota tidak memanggil endpoint?
+Karena Query ini dijalankan lewat g.query(q_kota) pada graf lokal di memori (hasil dari universitas.ttl), bukan lewat SPARQLWrapper. Endpoint Wikidata hanya dipanggil satu kali, sehingga lebih hemat beban server publik, lebih cepat, dan bisa diulang tanpa terkena batas permintaan.
 
 ## Refleksi
 
@@ -56,6 +60,10 @@
 
    [isi]
 
-3. Kapan Anda menyimpan hasil query sebagai tabel (CSV), dan kapan sebagai graf (Turtle)?
+3. **Kapan Anda menyimpan hasil query sebagai tabel (CSV), dan kapan sebagai graf (Turtle)?**
 
-   [isi]
+   Saya menyimpan hasil sebagai tabel (CSV) ketika hasilnya berupa angka atau daftar ringkas yang akan dibaca manusia atau diolah di spreadsheet/pandas, misalnya jumlah universitas per kota dari query SELECT dengan COUNT dan GROUP BY. Formatnya datar (baris dan kolom), mudah dibuka, dan cocok untuk laporan, grafik, atau statistik, tetapi hubungan antar-entitas dan URI-nya hilang.
+
+   Saya menyimpan hasil sebagai graf (Turtle) ketika hasilnya berupa data itu sendiri yang akan dipakai ulang: query CONSTRUCT yang menghasilkan triple lengkap dengan URI, label, dan relasi (misalnya universitas.ttl). Format ini mempertahankan struktur graf, bisa dimuat kembali ke rdflib, di-query berulang dengan SPARQL, digabung dengan graf lain, atau dipublikasikan sebagai Linked Data.
+
+   Dalam program ini, keduanya dipakai berurutan: data mentah dari Wikidata disimpan sebagai graf (universitas.ttl) agar bisa di-query ulang tanpa mengakses endpoint, lalu hasil agregasinya disimpan sebagai tabel (universitas_per_kota.csv) untuk dibaca dan dilaporkan.
