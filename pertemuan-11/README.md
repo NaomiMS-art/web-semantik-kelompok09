@@ -1,119 +1,61 @@
-# 👩🏻‍💻 Kelompok 9
+# Pertemuan 11 - KONSTRUKSI dan Hierarki Data
 
-Selamat datang di repository **Kelompok 9**.
+## Langkah 1 - Solusi menjadi triple
 
-Repository ini digunakan sebagai tempat pengelolaan, dokumentasi, dan penyimpanan seluruh hasil pekerjaan serta proyek yang dikerjakan oleh anggota **Kelompok 9**.
+| Solusi | ?d | ?mk | Tiga yang dicetak |
+|--------|----|-----|-------------------|
+| 1 | budi | tif2108 | `ex:tif2108 a ex:MatakuliahAktif`<br>`ex:tif2108 ex:diampuOleh ex:budi` |
+| 2 | sari | tif2108 | `ex:tif2108 a ex:MatakuliahAktif`<br>`ex:tif2108 ex:diampuOleh ex:sari` |
+| 3 | ida | tif2104 | `ex:tif2104 a ex:MatakuliahAktif`<br>`ex:tif2104 ex:diampuOleh ex:ida` |
 
----
+- Jumlah solusi: **3**
+- Jumlah cetakan tiga kali lipat: **6 triple** (3 solusi × 2 pola template).
+- Jumlah tiga kali lipat dari hasil grafik: **5 triple unik**.
+- Triple yang tercetak lebih dari sekali: **`ex:tif2108 a ex:MatakuliahAktif`**, karena muncul pada solusi 1 dan solusi 2. Di dalam graf hasil, triple identik tersebut hanya disimpan satu kali.
 
-## 👥 Anggota Kelompok
+## Langkah 2 - Tebak lalu cek
 
-| No. | Nama                               | NIM       | Peran                    |
-| --- | ---------------------------------- | --------- | ------------------------ |
-| 1   | Yessica Jaklin                     | 251402001 | Anggota                  |
-| 2   | Daradira Vonna                     | 251402026 | Anggota                  |
-| 3   | **Rodotua Naomi Mutiara Simamora**     | 251402030 | **Project Manager (PM)** |
-| 4   | Vedder Timothy Simbolon            | 251402072 | Anggota                  |
-| 5   | M. Rajadinata Nasution             | 251402107 | Anggota                  |
+| Garam | Tebakan | Hasil mesin | Penjelasan bila meleset |
+|------|---------|-------------|-------------------------|
+| A | [isi] | [isi] | [isi] |
+| B | [isi] | [isi] | [isi] |
+| C | [isi] | [isi] | [isi] |
 
----
+## Langkah 3 - Graf kampus lokal
 
-## 🎯 Tentang Kelompok
+- Berkas sumber dan IRI dasar grafik: [isi]
+- Nama kelas dosen dan properti: [isi]
+- Tiga kali lipat hasil pemetaan: [isi]
+- `foaf:Organization` sebelum / sesudah: [isi] / [isi]
+- Triple asli vs triple turunan: [jawaban]
+- Dosen baru setelah program selesai: [isi]
 
-**Kelompok 9** terdiri dari lima mahasiswa yang bekerja sama dalam menyelesaikan proyek dan tugas perkuliahan.
+## Langkah 4 - Wikidata
 
-Sebagai sebuah tim, kami mengutamakan:
+- Jumlah triple Q6: [isi]
+- Jumlah baris Q6 versi PILIH: [isi]
+- Penjelasan perbedaan: [isi]
+- Q7 dengan `+` vs `*`: [isi]
+- Kelas yang mengejutkan dan mengejutkan: [isi]
 
-* 🤝 Kerja sama dan komunikasi
-* 💡 Kreativitas dalam menyelesaikan masalah
-* 💻 Pengembangan kemampuan teknologi
-* 📚 Tanggung jawab terhadap tugas
-* ⏱️ Ketepatan waktu dalam menyelesaikan pekerjaan
+## Langkah 5 - Graf dari Python
 
----
+- Jumlah tiga kali lipat `universitas.ttl`: [isi]
+- Jumlah baris `universitas_per_kota.csv`: [isi]
+- `setReturnFormat(TURTLE)`: [isi]
+- `Graph().parse(data=...)`: [isi]
+- Mengapa `q_kota` tidak memanggil endpoint: [isi]
 
-## 📁 Struktur Repository
+## Refleksi
 
-Repository ini akan berisi berbagai file yang berkaitan dengan proses dan hasil pengerjaan proyek, seperti:
+1. **Mengapa jumlah triple hasil CONSTRUCT bisa lebih kecil dari jumlah baris SELECT dengan WHERE yang sama?**
 
-```text
-Kelompok-9/
-│
-├── README.md
-├── docs/
-├── src/
-├── assets/
-└── ...
-```
+   Karena `SELECT` menghasilkan baris untuk setiap solusi atau kombinasi variabel yang cocok dengan pola `WHERE`. Jika dua solusi menghasilkan triple yang sama dari template `CONSTRUCT`, graf RDF hanya menyimpan satu salinan triple tersebut. Jadi, jumlah baris `SELECT` atau jumlah triple yang dicetak dari semua solusi bisa lebih banyak daripada jumlah triple unik pada graf hasil `CONSTRUCT`.
 
-> Struktur folder dapat disesuaikan dengan kebutuhan proyek yang sedang dikerjakan.
+2. Bila taksonomi di grafik kampus Anda berubah bulan depan, apa yang terjadi pada triple turunan di `kampus_usu_v4.ttl`?
 
----
+   [isi]
 
-## 🚀 Project
+3. Kapan Anda menyimpan hasil query sebagai tabel (CSV), dan kapan sebagai graf (Turtle)?
 
-**Project:** *[Loading...]*
-
-**Deskripsi:**
-*[Loading...]*
-
----
-
-## 🛠️ Teknologi yang Digunakan
-
-Teknologi dan tools yang digunakan dalam pengerjaan project antara lain:
-
-* 💻 *[Programming Language]*
-* 🗄️ *[Database]*
-* ⚙️ *[Framework/Library]*
-* 🔧 Git & GitHub
-* 📝 *[Tools lainnya]*
-
----
-
-## 📌 Pembagian Peran
-
-### 👩🏻‍💼 Project Manager
-
-**Rodotua Naomi Mutiara Simamora**
-NIM: `251402030`
-
-Bertanggung jawab dalam mengoordinasikan anggota kelompok, mengatur pembagian tugas, memantau perkembangan project, serta memastikan pekerjaan kelompok berjalan sesuai dengan rencana.
-
-### 👩🏻‍💻 Anggota
-
-**Yessica Jaklin**  
-NIM: `251402001`
-
-### 👩🏻‍💻 Anggota
-
-**Daradira Vonna**  
-NIM: `251402026`
-
-### 👨🏻‍💻 Anggota
-
-**Vedder Timothy Simbolon**  
-NIM: `251402072`
-
-### 👨🏻‍💻 Anggota
-
-**M. Rajadinata Nasution**  
-NIM: `251402107`
-
----
-
-## 📖 Dokumentasi
-
-Dokumentasi mengenai proses pengerjaan project, pembagian tugas, desain, dan hasil implementasi akan ditempatkan di dalam repository ini.
-
----
-
-## 📬 Kelompok 9
-
-> **"Bersama, berproses, dan berkembang menjadi tim yang lebih baik."** 🚀
-
----
-
-### 👩🏻‍💻 Kelompok 9
-
-**Yessica Jaklin • Daradira Vonna • Rodotua Naomi Mutiara Simamora • Vedder Timothy Simbolon • M. Rajadinata Nasution**
+   [isi]
