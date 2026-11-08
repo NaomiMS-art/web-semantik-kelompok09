@@ -1,0 +1,1498 @@
+@prefix ex: <https://contoh.github.io/web-semantik/251402001/kampus#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+wd:Q104631456 a ex:Universitas ;
+    rdfs:label "Universitas PGRI Adi Buana"@en,
+        "Universitas PGRI Adi Buana"@id ;
+    ex:lokasi wd:Q3298309 .
+
+wd:Q10829079 a ex:Universitas ;
+    rdfs:label "Universitas Klabat"@en,
+        "Universitas Klabat"@id ;
+    ex:lokasi wd:Q408827 .
+
+wd:Q108739769 a ex:Universitas ;
+    rdfs:label "Telkom Institute of Technology Jakarta"@en,
+        "Universitas Telkom Jakarta"@id ;
+    ex:lokasi wd:Q192714 .
+
+wd:Q109430622 a ex:Universitas ;
+    rdfs:label "Universitas Muhammadiyah Kudus"@en,
+        "Universitas Muhammadiyah Kudus"@id ;
+    ex:lokasi wd:Q4119449 .
+
+wd:Q109430938 a ex:Universitas ;
+    rdfs:label "Universitas Nahdlatul Ulama Sumatera Barat"@en,
+        "Universitas Nahdlatul Ulama Sumatera Barat"@id ;
+    ex:lokasi wd:Q12501874 .
+
+wd:Q109435755 a ex:Universitas ;
+    rdfs:label "Politeknik Negeri Subang"@en,
+        "Politeknik Negeri Subang"@id ;
+    ex:lokasi wd:Q1078326 .
+
+wd:Q109436710 a ex:Universitas ;
+    rdfs:label "Universitas Muhammadiyah Berau"@en,
+        "Universitas Muhammadiyah Berau"@id ;
+    ex:lokasi wd:Q4197433 .
+
+wd:Q109439180 a ex:Universitas ;
+    rdfs:label "Universitas KH. A. Wahab Hasbullah"@en,
+        "Universitas Wahab Hasbullah"@id ;
+    ex:lokasi wd:Q7780218 .
+
+wd:Q10980312 a ex:Universitas ;
+    rdfs:label "Kuningan University"@en,
+        "Universitas Kuningan"@id ;
+    ex:lokasi wd:Q879867 .
+
+wd:Q109910742 a ex:Universitas ;
+    rdfs:label "Universitas Bina Sarana Informatika"@en,
+        "Universitas Bina Sarana Informatika"@id ;
+    ex:lokasi wd:Q192871 .
+
+wd:Q109910758 a ex:Universitas ;
+    rdfs:label "Universitas Sembilanbelas November Kolaka"@en,
+        "Universitas Sembilanbelas November Kolaka"@id ;
+    ex:lokasi wd:Q4196713 .
+
+wd:Q109910765 a ex:Universitas ;
+    rdfs:label "Universitas LIA"@en,
+        "Universitas LIA"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q109911458 a ex:Universitas ;
+    rdfs:label "Universitas Pembangunan Indonesia"@en,
+        "Universitas Pembangunan Indonesia"@id ;
+    ex:lokasi wd:Q12496300 .
+
+wd:Q109911494 a ex:Universitas ;
+    rdfs:label "Universitas Oso"@en,
+        "Universitas Oso"@id ;
+    ex:lokasi wd:Q3700890 .
+
+wd:Q109911526 a ex:Universitas ;
+    rdfs:label "Universitas Kartini"@en,
+        "Universitas Kartini"@id ;
+    ex:lokasi wd:Q3298287 .
+
+wd:Q109911622 a ex:Universitas ;
+    rdfs:label "Universitas Sains Cut Nyak Dhien"@en,
+        "Universitas Sains Cut Nyak Dhien"@id ;
+    ex:lokasi wd:Q9633593 .
+
+wd:Q109911642 a ex:Universitas ;
+    rdfs:label "Universitas PGRI Argopuro Jember"@en,
+        "Universitas PGRI Argopuro Jember"@id ;
+    ex:lokasi wd:Q7776390 .
+
+wd:Q109911731 a ex:Universitas ;
+    rdfs:label "Universitas Muhammadiyah Tasikmalaya"@en,
+        "Universitas Muhammadiyah Tasikmalaya"@id ;
+    ex:lokasi wd:Q3968283 .
+
+wd:Q109911781 a ex:Universitas ;
+    rdfs:label "Universitas Sains Alqur an"@en,
+        "Universitas Sains Alqur an"@id ;
+    ex:lokasi wd:Q4989755 .
+
+wd:Q109911931 a ex:Universitas ;
+    rdfs:label "Universitas Muhammadiyah Sidenreng Rappang"@en,
+        "Universitas Muhammadiyah Sidenreng Rappang"@id ;
+    ex:lokasi wd:Q12502434 .
+
+wd:Q109911964 a ex:Universitas ;
+    rdfs:label "Universitas Widya Dharma Pontianak"@en,
+        "Universitas Widya Dharma Pontianak"@id ;
+    ex:lokasi wd:Q3700918 .
+
+wd:Q109912034 a ex:Universitas ;
+    rdfs:label "Universitas Aryasatya Deo Muri"@en,
+        "Universitas Aryasatya Deo Muri"@id ;
+    ex:lokasi wd:Q12501155 .
+
+wd:Q109912037 a ex:Universitas ;
+    rdfs:label "Tompotika Luwuk Banggai University"@en,
+        "Universitas Tompotika Luwuk Banggai"@id ;
+    ex:lokasi wd:Q4196549 .
+
+wd:Q109912048 a ex:Universitas ;
+    rdfs:label "Adzkia University"@en,
+        "Universitas Adzkia"@id ;
+    ex:lokasi wd:Q12492996 .
+
+wd:Q109912122 a ex:Universitas ;
+    rdfs:label "Universitas Perjuangan Tasikmalaya"@en,
+        "Universitas Perjuangan Tasikmalaya"@id ;
+    ex:lokasi wd:Q3968283 .
+
+wd:Q109912130 a ex:Universitas ;
+    rdfs:label "Universitas Nusa Putra"@en,
+        "Universitas Nusa Putra"@id ;
+    ex:lokasi wd:Q1087438 .
+
+wd:Q109912181 a ex:Universitas ;
+    rdfs:label "Universitas Siber Asia"@en,
+        "Universitas Siber Asia"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q109912185 a ex:Universitas ;
+    rdfs:label "Universitas Teknologi Nusantara"@en,
+        "Universitas Teknologi Nusantara Cilegon"@id ;
+    ex:lokasi wd:Q401881 .
+
+wd:Q109912222 a ex:Universitas ;
+    rdfs:label "Universitas Ma'soem"@en,
+        "Universitas Ma'soem"@id ;
+    ex:lokasi wd:Q1022907 .
+
+wd:Q109912626 a ex:Universitas ;
+    rdfs:label "Faletehan University"@en,
+        "Universitas Faletehan"@id ;
+    ex:lokasi wd:Q3436598 .
+
+wd:Q109912702 a ex:Universitas ;
+    rdfs:label "Universitas Citra Bangsa"@en,
+        "Universitas Citra Bangsa"@id ;
+    ex:lokasi wd:Q12501155 .
+
+wd:Q109912740 a ex:Universitas ;
+    rdfs:label "Aisyah University"@en,
+        "Universitas Aisyah Pringsewu"@id ;
+    ex:lokasi wd:Q4187643 .
+
+wd:Q109912820 a ex:Universitas ;
+    rdfs:label "Universitas Billfath"@en,
+        "Universitas Billfath"@id ;
+    ex:lokasi wd:Q8002440 .
+
+wd:Q109912831 a ex:Universitas ;
+    rdfs:label "Kaltara University"@en,
+        "Universitas Kaltara"@id ;
+    ex:lokasi wd:Q976062 .
+
+wd:Q109912920 a ex:Universitas ;
+    rdfs:label "Universitas Binawan"@en,
+        "Universitas Binawan"@id ;
+    ex:lokasi wd:Q193356 .
+
+wd:Q109912961 a ex:Universitas ;
+    rdfs:label "Universitas Pohuwato"@en,
+        "Universitas Pohuwato"@id ;
+    ex:lokasi wd:Q12506231 .
+
+wd:Q109913301 a ex:Universitas ;
+    rdfs:label "Universitas Gunung Leuser Aceh"@en,
+        "Universitas Gunung Leuser Aceh"@id ;
+    ex:lokasi wd:Q9633565 .
+
+wd:Q109913428 a ex:Universitas ;
+    rdfs:label "Universitas Nusa Mandiri"@en,
+        "Universitas Nusa Mandiri"@id ;
+    ex:lokasi wd:Q193362 .
+
+wd:Q109913432 a ex:Universitas ;
+    rdfs:label "Universitas Persatuan Guru 1945 NTT"@en,
+        "Universitas Persatuan Guru 1945 NTT"@id ;
+    ex:lokasi wd:Q12501155 .
+
+wd:Q109913647 a ex:Universitas ;
+    rdfs:label "Universitas Trinita"@en,
+        "Universitas Trinita"@id ;
+    ex:lokasi wd:Q12496300 .
+
+wd:Q109913937 a ex:Universitas ;
+    rdfs:label "Universitas Jakarta"@en,
+        "Universitas Jakarta"@id ;
+    ex:lokasi wd:Q193374 .
+
+wd:Q109920425 a ex:Universitas ;
+    rdfs:label "Tanah Laut State Polytechnic"@en,
+        "Politeknik Negeri Tanah Laut"@id ;
+    ex:lokasi wd:Q4198171 .
+
+wd:Q109921163 a ex:Universitas ;
+    rdfs:label "Universitas Dumoga Kotamobagu"@en,
+        "Universitas Dumoga Kotamobagu"@id ;
+    ex:lokasi wd:Q12492395 .
+
+wd:Q109921435 a ex:Universitas ;
+    rdfs:label "Universitas Islam Negeri Profesor Kiai Haji Saifuddin Zuhri"@en,
+        "Universitas Islam Negeri Profesor Kiai Haji Saifuddin Zuhri Purwokerto"@id ;
+    ex:lokasi wd:Q3669636 .
+
+wd:Q119465096 a ex:Universitas ;
+    rdfs:label "Universitas Mandiri"@en,
+        "Universitas Mandiri"@id ;
+    ex:lokasi wd:Q1078326 .
+
+wd:Q119465212 a ex:Universitas ;
+    rdfs:label "Universitas Indonesia Maju"@en,
+        "Universitas Indonesia Maju"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q119465853 a ex:Universitas ;
+    rdfs:label "Universitas Insan Cita Indonesia"@en,
+        "Universitas Insan Cita Indonesia"@id ;
+    ex:lokasi wd:Q192876 .
+
+wd:Q122761946 a ex:Universitas ;
+    rdfs:label "Institut Sains dan Teknologi Terpadu Surabaya"@en,
+        "Institut Sains dan Teknologi Terpadu Surabaya"@id ;
+    ex:lokasi wd:Q3298277 .
+
+wd:Q12486647 a ex:Universitas ;
+    rdfs:label "Institute of Social and Political Science Jakarta"@en,
+        "Institut Ilmu Sosial dan Ilmu Politik Jakarta"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q12486654 a ex:Universitas ;
+    rdfs:label "Institut Seni Indonesia Padang Panjang"@en,
+        "Institut Seni Indonesia Padang Panjang"@id ;
+    ex:lokasi wd:Q12501877 .
+
+wd:Q12506027 a ex:Universitas ;
+    rdfs:label "Politeknik Negeri Jember"@en,
+        "Politeknik Negeri Jember"@id ;
+    ex:lokasi wd:Q7776390 .
+
+wd:Q12506031 a ex:Universitas ;
+    rdfs:label "State Polytechnic of Medan"@en,
+        "Politeknik Negeri Medan"@id ;
+    ex:lokasi wd:Q4201416 .
+
+wd:Q12506032 a ex:Universitas ;
+    rdfs:label "State Polytechnic of Creative Media"@en,
+        "Politeknik Negeri Media Kreatif"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q12511273 a ex:Universitas ;
+    rdfs:label "State Islamic Institute Palangka Raya"@en,
+        "STAIN Palangka Raya"@id ;
+    ex:lokasi wd:Q12502026 .
+
+wd:Q12511309 a ex:Universitas ;
+    rdfs:label "STIE Widya Dharma Pontianak"@en,
+        "STIE Widya Dharma"@id ;
+    ex:lokasi wd:Q3700890 .
+
+wd:Q12511316 a ex:Universitas ;
+    rdfs:label "STIS Syarif Abdurrahman Pontianak"@en,
+        "Sekolah Tinggi Ilmu Syari’ah Syarif Abdurrahman"@id ;
+    ex:lokasi wd:Q3700921 .
+
+wd:Q12511345 a ex:Universitas ;
+    rdfs:label "STMIK Pontianak"@en,
+        "STMIK Pontianak"@id ;
+    ex:lokasi wd:Q3700890 .
+
+wd:Q12511352 a ex:Universitas ;
+    rdfs:label "Dharma Andalas University"@en,
+        "Universitas Dharma Andalas"@id ;
+    ex:lokasi wd:Q12501869 .
+
+wd:Q12513084 a ex:Universitas ;
+    rdfs:label "Universitas  Harapan Bangsa"@en,
+        "Universitas  Harapan Bangsa"@id ;
+    ex:lokasi wd:Q3669585 .
+
+wd:Q12513085 a ex:Universitas ;
+    rdfs:label "Universitas Muhammadiyah Gombong"@en,
+        "Universitas Muhammadiyah Gombong"@id ;
+    ex:lokasi wd:Q4079332 .
+
+wd:Q12513100 a ex:Universitas ;
+    rdfs:label "STMIK Banjarbaru"@en,
+        "Sekolah Tinggi Manajemen Informatika dan Komputer Banjarbaru"@id ;
+    ex:lokasi wd:Q4197525 .
+
+wd:Q12513102 a ex:Universitas ;
+    rdfs:label "Institut Transportasi dan Logistik Trisakti"@en,
+        "Institut Transportasi dan Logistik Trisakti"@id ;
+    ex:lokasi wd:Q193314 .
+
+wd:Q12522876 a ex:Universitas ;
+    rdfs:label "Universitas Pesantren Tinggi Darul 'Ulum"@en,
+        "Universitas Pesantren Darul Ulum"@id ;
+    ex:lokasi wd:Q7780218,
+        wd:Q7780354 .
+
+wd:Q12523282 a ex:Universitas ;
+    rdfs:label "Universitas 17 Agustus 1945 Jakarta"@en,
+        "Universitas 17 Agustus 1945 Jakarta"@id ;
+    ex:lokasi wd:Q193552 .
+
+wd:Q12523283 a ex:Universitas ;
+    rdfs:label "University of 19 November Kolaka"@en,
+        "Universitas 19 November Kolaka"@id ;
+    ex:lokasi wd:Q4196713 .
+
+wd:Q12523284 a ex:Universitas ;
+    rdfs:label "Universitas 17 Agustus 1945 Surabaya"@en,
+        "Universitas 17 Agustus 1945 Surabaya"@id ;
+    ex:lokasi wd:Q3298287 .
+
+wd:Q12523285 a ex:Universitas ;
+    rdfs:label "Bosowa University"@en,
+        "Universitas Bosowa"@id ;
+    ex:lokasi wd:Q12502400 .
+
+wd:Q12523290 a ex:Universitas ;
+    rdfs:label "Al Azhar University of Indonesia"@en,
+        "Universitas Al Azhar Indonesia"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q12523291 a ex:Universitas ;
+    rdfs:label "Al Azhar University Medan"@en,
+        "Universitas Al Azhar Medan"@id ;
+    ex:lokasi wd:Q4201416 .
+
+wd:Q12523295 a ex:Universitas ;
+    rdfs:label "Bakrie University"@en,
+        "Universitas Bakrie"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q12523302 a ex:Universitas ;
+    rdfs:label "Bhayangkara University"@en,
+        "Universitas Bhayangkara"@id ;
+    ex:lokasi wd:Q3298339 .
+
+wd:Q12523306 a ex:Universitas ;
+    rdfs:label "Bojonegoro University"@en,
+        "Universitas Bojonegoro"@id ;
+    ex:lokasi wd:Q3955907 .
+
+wd:Q12523307 a ex:Universitas ;
+    rdfs:label "Borobudur University"@en,
+        "Universitas Borobudur"@id ;
+    ex:lokasi wd:Q193374 .
+
+wd:Q12523309 a ex:Universitas ;
+    rdfs:label "Bung Karno University"@en,
+        "Universitas Bung Karno"@id ;
+    ex:lokasi wd:Q192857 .
+
+wd:Q12523310 a ex:Universitas ;
+    rdfs:label "Universitas Ciputra"@en,
+        "Universitas Ciputra"@id ;
+    ex:lokasi wd:Q3298348 .
+
+wd:Q12523314 a ex:Universitas ;
+    rdfs:label "Darma Persada University"@en,
+        "Universitas Darma Persada"@id ;
+    ex:lokasi wd:Q193374 .
+
+wd:Q12523315 a ex:Universitas ;
+    rdfs:label "Universitas Darul Ulum Jombang"@en,
+        "Universitas Darul 'Ulum"@id ;
+    ex:lokasi wd:Q7780218 .
+
+wd:Q12523317 a ex:Universitas ;
+    rdfs:label "Universitas Dian Nusantara"@en,
+        "Universitas Dian Nusantara"@id ;
+    ex:lokasi wd:Q192723 .
+
+wd:Q12523318 a ex:Universitas ;
+    rdfs:label "Universitas Dr. Soetomo"@en,
+        "Universitas Dr. Soetomo"@id ;
+    ex:lokasi wd:Q3298287 .
+
+wd:Q12523323 a ex:Universitas ;
+    rdfs:label "Esa Unggul University"@en,
+        "Universitas Esa Unggul"@id ;
+    ex:lokasi wd:Q192737 .
+
+wd:Q12523330 a ex:Universitas ;
+    rdfs:label "Hang Tuah University"@en,
+        "Universitas Hang Tuah"@id ;
+    ex:lokasi wd:Q3298287 .
+
+wd:Q12523331 a ex:Universitas ;
+    rdfs:label "Ibn Chaldun University"@en,
+        "Universitas Ibnu Chaldun"@id ;
+    ex:lokasi wd:Q193314 .
+
+wd:Q12523332 a ex:Universitas ;
+    rdfs:label "Indraprasta PGRI University"@en,
+        "Universitas Indraprasta PGRI"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q12523355 a ex:Universitas ;
+    rdfs:label "Jayabaya University"@en,
+        "Universitas Jayabaya"@id ;
+    ex:lokasi wd:Q193374 .
+
+wd:Q12523361 a ex:Universitas ;
+    rdfs:label "Catholic University of Darma Cendika"@en,
+        "Universitas Katolik Darma Cendika"@id ;
+    ex:lokasi wd:Q3298287 .
+
+wd:Q12523365 a ex:Universitas ;
+    rdfs:label "Widya Mandala Catholic University"@en,
+        "Universitas Katolik Widya Mandala Surabaya"@id ;
+    ex:lokasi wd:Q3298269 .
+
+wd:Q12523366 a ex:Universitas ;
+    rdfs:label "Krisnadwipayana University"@en,
+        "Universitas Krisnadwipayana"@id ;
+    ex:lokasi wd:Q193374 .
+
+wd:Q12523373 a ex:Universitas ;
+    rdfs:label "Malahayati University"@en,
+        "Universitas Malahayati"@id ;
+    ex:lokasi wd:Q4188201 .
+
+wd:Q12523374 a ex:Universitas ;
+    rdfs:label "Malikussaleh University"@en,
+        "Universitas Malikussaleh"@id ;
+    ex:lokasi wd:Q9635747 .
+
+wd:Q12523376 a ex:Universitas ;
+    rdfs:label "Medan Area University"@en,
+        "Universitas Medan Area"@id ;
+    ex:lokasi wd:Q4899605 .
+
+wd:Q12523377 a ex:Universitas ;
+    rdfs:label "Megou Pak Tulang Bawang University"@en,
+        "Universitas Megow Pak Tulang Bawang"@id ;
+    ex:lokasi wd:Q4187494 .
+
+wd:Q12523379 a ex:Universitas ;
+    rdfs:label "Muhadi Setiabudi University"@en,
+        "Universitas Muhadi Setiabudi"@id ;
+    ex:lokasi wd:Q3818435 .
+
+wd:Q12523381 a ex:Universitas ;
+    rdfs:label "Universitas Muhammadiyah Bengkulu"@en,
+        "Universitas Muhammadiyah Bengkulu"@id ;
+    ex:lokasi wd:Q9633541 .
+
+wd:Q12523386 a ex:Universitas ;
+    rdfs:label "Universitas Muhammadiyah Jember"@en,
+        "Universitas Muhammadiyah Jember"@id ;
+    ex:lokasi wd:Q7777272 .
+
+wd:Q12523388 a ex:Universitas ;
+    rdfs:label "Universitas Muhammadiyah Kupang"@en,
+        "Universitas Muhammadiyah Kupang"@id ;
+    ex:lokasi wd:Q12501155 .
+
+wd:Q12523391 a ex:Universitas ;
+    rdfs:label "Universitas Muhammadiyah Luwuk Banggai"@en,
+        "Universitas Muhammadiyah Luwuk Banggai"@id ;
+    ex:lokasi wd:Q4196549 .
+
+wd:Q12523394 a ex:Universitas ;
+    rdfs:label "Muhammadiyah University of Palangkaraya"@en,
+        "Universitas Muhammadiyah Palangkaraya"@id ;
+    ex:lokasi wd:Q12502026 .
+
+wd:Q12523399 a ex:Universitas ;
+    rdfs:label "Universitas Muhammadiyah Pontianak"@en,
+        "Universitas Muhammadiyah Pontianak"@id ;
+    ex:lokasi wd:Q3700921 .
+
+wd:Q12523400 a ex:Universitas ;
+    rdfs:label "Universitas Muhammadiyah Prof Dr Hamka"@en,
+        "Universitas Muhammadiyah Prof Dr Hamka"@id ;
+    ex:lokasi wd:Q192999 .
+
+wd:Q12523405 a ex:Universitas ;
+    rdfs:label "Universitas Muhammadiyah Tangerang"@en,
+        "Universitas Muhammadiyah Tangerang"@id ;
+    ex:lokasi wd:Q3659306 .
+
+wd:Q12523408 a ex:Universitas ;
+    rdfs:label "Universitas Muslim Indonesia"@en,
+        "Universitas Muslim Indonesia"@id ;
+    ex:lokasi wd:Q12502400 .
+
+wd:Q12523409 a ex:Universitas ;
+    rdfs:label "Muria Kudus University"@en,
+        "Universitas Muria Kudus"@id ;
+    ex:lokasi wd:Q4119449 .
+
+wd:Q12523413 a ex:Universitas ;
+    rdfs:label "Narotama University"@en,
+        "Universitas Narotama"@id ;
+    ex:lokasi wd:Q3298287 .
+
+wd:Q12523416 a ex:Universitas ;
+    rdfs:label "Universitas Nusantara Manado"@en,
+        "Universitas Nusantara Manado"@id ;
+    ex:lokasi wd:Q12496300 .
+
+wd:Q12523420 a ex:Universitas ;
+    rdfs:label "PGRI University Palangka Raya"@en,
+        "Universitas PGRI Palangka Raya"@id ;
+    ex:lokasi wd:Q12502026 .
+
+wd:Q12523423 a ex:Universitas ;
+    rdfs:label "Paramadina University"@en,
+        "Universitas Paramadina"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q12523427 a ex:Universitas ;
+    rdfs:label "Universitas Pelita Harapan Surabaya"@en,
+        "Universitas Pelita Harapan Surabaya"@id ;
+    ex:lokasi wd:Q3298309 .
+
+wd:Q12523428 a ex:Universitas ;
+    rdfs:label "National Development University \"Veteran\" Jakarta"@en,
+        "Universitas Pembangunan Nasional \"Veteran\" Jakarta"@id ;
+    ex:lokasi wd:Q192987 .
+
+wd:Q12523431 a ex:Universitas ;
+    rdfs:label "University of Pembangunan Panca Budi"@en,
+        "Universitas Pembangunan Panca Budi"@id ;
+    ex:lokasi wd:Q4907777 .
+
+wd:Q12523435 a ex:Universitas ;
+    rdfs:label "Universitas Persada Indonesia YAI"@en,
+        "Universitas Persada Indonesia YAI"@id ;
+    ex:lokasi wd:Q192876 .
+
+wd:Q12523440 a ex:Universitas ;
+    rdfs:label "Prof. Dr. Moestopo University"@en,
+        "Universitas Prof. Dr. Moestopo"@id ;
+    ex:lokasi wd:Q192999 .
+
+wd:Q12523447 a ex:Universitas ;
+    rdfs:label "Sahid University"@en,
+        "Universitas Sahid"@id ;
+    ex:lokasi wd:Q193037 .
+
+wd:Q12523449 a ex:Universitas ;
+    rdfs:label "Samudra University"@en,
+        "Universitas Samudra"@id ;
+    ex:lokasi wd:Q9633593 .
+
+wd:Q12523454 a ex:Universitas ;
+    rdfs:label "Universitas Satya Negara Indonesia"@en,
+        "Universitas Satya Negara Indonesia"@id ;
+    ex:lokasi wd:Q193004 .
+
+wd:Q12523455 a ex:Universitas ;
+    rdfs:label "Satyagama University"@en,
+        "Universitas Satyagama"@id ;
+    ex:lokasi wd:Q192737 .
+
+wd:Q12523456 a ex:Universitas ;
+    rdfs:label "Universitas Sebelas April"@en,
+        "Universitas Sebelas April"@id ;
+    ex:lokasi wd:Q1022907 .
+
+wd:Q12523465 a ex:Universitas ;
+    rdfs:label "Universitas Sisingamangaraja XII Tapanuli Utara"@en,
+        "Universitas Sisingamangaraja XII Tapanuli Utara"@id ;
+    ex:lokasi wd:Q129232 .
+
+wd:Q12523469 a ex:Universitas ;
+    rdfs:label "Universitas Suryadarma"@en,
+        "Universitas Suryadarma"@id ;
+    ex:lokasi wd:Q193374 .
+
+wd:Q12523472 a ex:Universitas ;
+    rdfs:label "Tamansiswa University"@en,
+        "Universitas Tamansiswa Padang"@id ;
+    ex:lokasi wd:Q12501874 .
+
+wd:Q12523484 a ex:Universitas ;
+    rdfs:label "Wijaya Putra University"@en,
+        "Universitas Wijaya Putra"@id ;
+    ex:lokasi wd:Q3298373 .
+
+wd:Q12523487 a ex:Universitas ;
+    rdfs:label "Universitas Wiraswasta Indonesia"@en,
+        "Universitas Wiraswasta Indonesia"@id ;
+    ex:lokasi wd:Q193374 .
+
+wd:Q12523488 a ex:Universitas ;
+    rdfs:label "Universitas Wijayakusuma Purwokerto"@en,
+        "Universitas Wijayakusuma Purwokerto"@id ;
+    ex:lokasi wd:Q3669636 .
+
+wd:Q12712165 a ex:Universitas ;
+    rdfs:label "State University of Jakarta"@en,
+        "Universitas Negeri Jakarta"@id ;
+    ex:lokasi wd:Q193314 .
+
+wd:Q129342770 a ex:Universitas ;
+    rdfs:label "Universitas Al-Falah As-Sunniyah"@en,
+        "Universitas Al-Falah As-Sunniyah"@id ;
+    ex:lokasi wd:Q7776390 .
+
+wd:Q129342775 a ex:Universitas ;
+    rdfs:label "Universitas dr. Soebandi"@en,
+        "Universitas dr. Soebandi"@id ;
+    ex:lokasi wd:Q7776390 .
+
+wd:Q129342834 a ex:Universitas ;
+    rdfs:label "Universitas Al-Irsyad Cilacap"@en,
+        "Universitas Al-Irsyad Cilacap"@id ;
+    ex:lokasi wd:Q3860780 .
+
+wd:Q129343069 a ex:Universitas ;
+    rdfs:label "Universitas Al Hikmah Jepara"@en,
+        "Universitas Al Hikmah Jepara"@id ;
+    ex:lokasi wd:Q3936601 .
+
+wd:Q129343278 a ex:Universitas ;
+    rdfs:label "Universitas Ma'arif Lampung"@en,
+        "Universitas Ma'arif Lampung"@id ;
+    ex:lokasi wd:Q4187510 .
+
+wd:Q129343554 a ex:Universitas ;
+    rdfs:label "Universitas Parna Raya"@en,
+        "Universitas Parna Raya"@id ;
+    ex:lokasi wd:Q12496300 .
+
+wd:Q13096076 a ex:Universitas ;
+    rdfs:label "Politeknik Negeri Bali"@en,
+        "Politeknik Negeri Bali"@id ;
+    ex:lokasi wd:Q4201291 .
+
+wd:Q13098258 a ex:Universitas ;
+    rdfs:label "Universitas Jember"@en,
+        "Universitas Jember"@id ;
+    ex:lokasi wd:Q7777272 .
+
+wd:Q13098263 a ex:Universitas ;
+    rdfs:label "Muhammadiyah University Purwokerto"@en,
+        "Universitas Muhammadiyah Purwokerto"@id ;
+    ex:lokasi wd:Q3669636 .
+
+wd:Q13098264 a ex:Universitas ;
+    rdfs:label "Universitas Muhammadiyah Purworejo"@en,
+        "Universitas Muhammadiyah Purworejo"@id ;
+    ex:lokasi wd:Q3504647 .
+
+wd:Q13098271 a ex:Universitas ;
+    rdfs:label "Tidar University"@en,
+        "Universitas Tidar"@id ;
+    ex:lokasi wd:Q4989816 .
+
+wd:Q138777363 a ex:Universitas ;
+    rdfs:label "Universitas Tarakanita"@en,
+        "Universitas Tarakanita"@id ;
+    ex:lokasi wd:Q12506111 .
+
+wd:Q14917447 a ex:Universitas ;
+    rdfs:label "Universitas Islam Negeri Kiai Haji Achmad Siddiq Jember"@en,
+        "Universitas Islam Negeri Kiai Haji Achmad Siddiq Jember"@id ;
+    ex:lokasi wd:Q7776390 .
+
+wd:Q14933725 a ex:Universitas ;
+    rdfs:label "Universitas Islam Jakarta"@en,
+        "Universitas Islam Jakarta"@id ;
+    ex:lokasi wd:Q193374 .
+
+wd:Q1573634 a ex:Universitas ;
+    rdfs:label "Udayana University"@en,
+        "Universitas Udayana"@id ;
+    ex:lokasi wd:Q4201291 .
+
+wd:Q1579397 a ex:Universitas ;
+    rdfs:label "Bandung Institute of Technology"@en,
+        "Institut Teknologi Bandung"@id ;
+    ex:lokasi wd:Q1022907 .
+
+wd:Q16182620 a ex:Universitas ;
+    rdfs:label "Imam Bonjol State Islamic University"@en,
+        "Universitas Islam Negeri Imam Bonjol"@id ;
+    ex:lokasi wd:Q12492996 .
+
+wd:Q16183302 a ex:Universitas ;
+    rdfs:label "Institut Ilmu Al-Qur'an"@en,
+        "Institut Ilmu Al-Qur'an"@id ;
+    ex:lokasi wd:Q3663154 .
+
+wd:Q17998207 a ex:Universitas ;
+    rdfs:label "Antakusuma University"@en,
+        "Universitas Antakusuma"@id ;
+    ex:lokasi wd:Q12492407,
+        wd:Q4197736 .
+
+wd:Q18627429 a ex:Universitas ;
+    rdfs:label "Politeknik Negeri Pontianak"@en,
+        "Politeknik Negeri Pontianak"@id ;
+    ex:lokasi wd:Q3700921 .
+
+wd:Q19729007 a ex:Universitas ;
+    rdfs:label "Matana University"@en,
+        "Universitas Matana"@id ;
+    ex:lokasi wd:Q3659036 .
+
+wd:Q19730729 a ex:Universitas ;
+    rdfs:label "Buddhi Dharma University"@en,
+        "Perguruan Tinggi Buddhi"@id ;
+    ex:lokasi wd:Q3659143,
+        wd:Q3659306 .
+
+wd:Q19731003 a ex:Universitas ;
+    rdfs:label "Lhokseumawe State Polytechnic"@en,
+        "Politeknik Negeri Lhokseumawe"@id ;
+    ex:lokasi wd:Q9633489 .
+
+wd:Q19731004 a ex:Universitas ;
+    rdfs:label "Manado State Polytechnics"@en,
+        "Politeknik Negeri Manado"@id ;
+    ex:lokasi wd:Q12496300 .
+
+wd:Q19731007 a ex:Universitas ;
+    rdfs:label "Politeknik Pertanian Negeri Pangkajene Kepulauan"@en,
+        "Politeknik Pertanian Negeri Pangkajene Kepulauan"@id ;
+    ex:lokasi wd:Q12496557 .
+
+wd:Q19744766 a ex:Universitas ;
+    rdfs:label "Dehasen University"@en,
+        "Universitas Dehasen"@id ;
+    ex:lokasi wd:Q9633646 .
+
+wd:Q19744770 a ex:Universitas ;
+    rdfs:label "Galuh University"@en,
+        "Universitas Galuh"@id ;
+    ex:lokasi wd:Q422498 .
+
+wd:Q19744780 a ex:Universitas ;
+    rdfs:label "Universitas Islam Attahiriyah"@en,
+        "Universitas Islam Attahiriyah"@id ;
+    ex:lokasi wd:Q193037 .
+
+wd:Q19744816 a ex:Universitas ;
+    rdfs:label "North Sumatra Muhammadiyah University"@en,
+        "Universitas Muhammadiyah Sumatera Utara"@id ;
+    ex:lokasi wd:Q4201342 .
+
+wd:Q19744827 a ex:Universitas ;
+    rdfs:label "Panca Bhakti University"@en,
+        "Universitas Panca Bhakti"@id ;
+    ex:lokasi wd:Q3700890 .
+
+wd:Q19744834 a ex:Universitas ;
+    rdfs:label "Podomoro University"@en,
+        "Universitas Podomoro"@id ;
+    ex:lokasi wd:Q192737 .
+
+wd:Q19744836 a ex:Universitas ;
+    rdfs:label "Universitas Respati Indonesia"@en,
+        "Universitas Respati Indonesia"@id ;
+    ex:lokasi wd:Q193374 .
+
+wd:Q19744837 a ex:Universitas ;
+    rdfs:label "Siliwangi University"@en,
+        "Universitas Siliwangi"@id ;
+    ex:lokasi wd:Q3968430 .
+
+wd:Q19744843 a ex:Universitas ;
+    rdfs:label "Tanri Abeng University"@en,
+        "Universitas Tanri Abeng"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q19744847 a ex:Universitas ;
+    rdfs:label "North Sulawesi University of Technology"@en,
+        "Universitas Teknologi Sulawesi Utara"@id ;
+    ex:lokasi wd:Q12496300 .
+
+wd:Q19744849 a ex:Universitas ;
+    rdfs:label "Teuku Umar University"@en,
+        "Universitas Teuku Umar"@id ;
+    ex:lokasi wd:Q1026402 .
+
+wd:Q19745593 a ex:Universitas ;
+    rdfs:label "Budi Luhur University"@en,
+        "Universitas Budi Luhur"@id ;
+    ex:lokasi wd:Q193029 .
+
+wd:Q19748502 a ex:Universitas ;
+    rdfs:label "Universitas Bina Bangsa Getsempena"@en,
+        "Universitas Bina Bangsa Getsempena"@id ;
+    ex:lokasi wd:Q9633065 .
+
+wd:Q19749140 a ex:Universitas ;
+    rdfs:label "Universitas Mathla'ul Anwar"@en,
+        "Universitas Mathla'ul Anwar"@id ;
+    ex:lokasi wd:Q3321688,
+        wd:Q3321840 .
+
+wd:Q19749142 a ex:Universitas ;
+    rdfs:label "Pancasila University"@en,
+        "Universitas Pancasila"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q19749144 a ex:Universitas ;
+    rdfs:label "Peradaban University"@en,
+        "Universitas Peradaban Bumiayu"@id ;
+    ex:lokasi wd:Q3818402 .
+
+wd:Q19749151 a ex:Universitas ;
+    rdfs:label "Universitas Tjut Nyak Dhien"@en,
+        "Universitas Tjut Nyak Dhien"@id ;
+    ex:lokasi wd:Q4907777 .
+
+wd:Q20427183 a ex:Universitas ;
+    rdfs:label "Politeknik Negeri Cilacap"@en,
+        "Politeknik Negeri Cilacap"@id ;
+    ex:lokasi wd:Q3860560,
+        wd:Q3860780 .
+
+wd:Q20427378 a ex:Universitas ;
+    rdfs:label "Sekolah Tinggi Manajemen Informatika dan Komputer Palangka Raya"@en,
+        "Sekolah Tinggi Manajemen Informatika dan Komputer Palangka Raya"@id ;
+    ex:lokasi wd:Q12502026 .
+
+wd:Q20427714 a ex:Universitas ;
+    rdfs:label "Al Asyariah Mandar University"@en,
+        "Universitas Al Asyariah Mandar"@id ;
+    ex:lokasi wd:Q3504630 .
+
+wd:Q20427726 a ex:Universitas ;
+    rdfs:label "Universitas Widya Dharma"@en,
+        "Universitas Widya Dharma"@id ;
+    ex:lokasi wd:Q4089482 .
+
+wd:Q2308020 a ex:Universitas ;
+    rdfs:label "Atma Jaya Catholic University of Indonesia"@en,
+        "Universitas Katolik Indonesia Atma Jaya"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q23807190 a ex:Universitas ;
+    rdfs:label "University of Fajar"@en,
+        "Universitas Fajar"@id ;
+    ex:lokasi wd:Q12502400 .
+
+wd:Q23807236 a ex:Universitas ;
+    rdfs:label "Universitas Putra Indonesia Cianjur"@en,
+        "Universitas Putra Indonesia Cianjur"@id ;
+    ex:lokasi wd:Q565721 .
+
+wd:Q23807281 a ex:Universitas ;
+    rdfs:label "Prasetiya Mulya University"@en,
+        "Universitas Prasetiya Mulya"@id ;
+    ex:lokasi wd:Q192987 .
+
+wd:Q25455792 a ex:Universitas ;
+    rdfs:label "Telkom Purwokerto Institute of Technology"@en,
+        "Sekolah Tinggi Teknologi Telematika Telkom"@id ;
+    ex:lokasi wd:Q3669785 .
+
+wd:Q25465577 a ex:Universitas ;
+    rdfs:label "Sari Mutiara Indonesia University"@en,
+        "Universitas Sari Mutiara Indonesia"@id ;
+    ex:lokasi wd:Q4201281 .
+
+wd:Q25468023 a ex:Universitas ;
+    rdfs:label "Pertamina University"@en,
+        "Universitas Pertamina"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q25470003 a ex:Universitas ;
+    rdfs:label "University Nahdlatul Ulama Al Ghazali Cilacap"@en,
+        "Universitas Nahdlatul Ulama Al Ghazali Cilacap"@id ;
+    ex:lokasi wd:Q3861186 .
+
+wd:Q25471072 a ex:Universitas ;
+    rdfs:label "Universitas Mitra Indonesia"@en,
+        "Universitas Mitra Indonesia"@id ;
+    ex:lokasi wd:Q4188209 .
+
+wd:Q25630027 a ex:Universitas ;
+    rdfs:label "Majalengka University"@en,
+        "Universitas Majalengka"@id ;
+    ex:lokasi wd:Q887388,
+        wd:Q887467 .
+
+wd:Q28725046 a ex:Universitas ;
+    rdfs:label "Universitas Putra Bangsa Kebumen"@en,
+        "Universitas Putra Bangsa Kebumen"@id ;
+    ex:lokasi wd:Q4079332 .
+
+wd:Q28949964 a ex:Universitas ;
+    rdfs:label "Universitas Boyolali"@en,
+        "Universitas Boyolali"@id ;
+    ex:lokasi wd:Q3691368 .
+
+wd:Q28949965 a ex:Universitas ;
+    rdfs:label "Suryakancana University"@en,
+        "Universitas Suryakancana Cianjur"@id ;
+    ex:lokasi wd:Q565721 .
+
+wd:Q28950058 a ex:Universitas ;
+    rdfs:label "Universitas Timbul Nusantara"@en,
+        "Universitas Timbul Nusantara"@id ;
+    ex:lokasi wd:Q192737 .
+
+wd:Q28950077 a ex:Universitas ;
+    rdfs:label "Universitas Azzahra"@en,
+        "Universitas Azzahra"@id ;
+    ex:lokasi wd:Q193323 .
+
+wd:Q28950092 a ex:Universitas ;
+    rdfs:label "Universitas Tama Jagakarsa"@en,
+        "Universitas Tama Jagakarsa"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q28950103 a ex:Universitas ;
+    rdfs:label "Universitas Mpu Tantular"@en,
+        "Universitas Mpu Tantular"@id ;
+    ex:lokasi wd:Q193374 .
+
+wd:Q28950106 a ex:Universitas ;
+    rdfs:label "Universitas Surapati"@en,
+        "Universitas Surapati"@id ;
+    ex:lokasi wd:Q193356 .
+
+wd:Q28950168 a ex:Universitas ;
+    rdfs:label "Universitas Satria Makassar"@en,
+        "Universitas Satria Makassar"@id ;
+    ex:lokasi wd:Q12496220 .
+
+wd:Q30265686 a ex:Universitas ;
+    rdfs:label "Universitas Merdeka Surabaya"@en,
+        "Universitas Merdeka Surabaya"@id ;
+    ex:lokasi wd:Q3298247 .
+
+wd:Q30266547 a ex:Universitas ;
+    rdfs:label "Trilogi University"@en,
+        "Universitas Trilogi"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q30294460 a ex:Universitas ;
+    rdfs:label "Universitas Sultan Fatah"@en,
+        "Universitas Sultan Fatah"@id ;
+    ex:lokasi wd:Q3874044,
+        wd:Q3874564 .
+
+wd:Q30294490 a ex:Universitas ;
+    rdfs:label "Universitas Bhayangkara Jakarta Raya"@en,
+        "Universitas Bhayangkara Jakarta Raya"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q30294501 a ex:Universitas ;
+    rdfs:label "Universitas Mochammad Sroedji Jember"@en,
+        "Universitas Mochammad Sroedji"@id ;
+    ex:lokasi wd:Q7777272 .
+
+wd:Q30294511 a ex:Universitas ;
+    rdfs:label "Universitas Pawyatan Daha Kediri"@en,
+        "Universitas Pawyatan Daha"@id ;
+    ex:lokasi wd:Q7886839 .
+
+wd:Q30294711 a ex:Universitas ;
+    rdfs:label "Universitas Purwakarta"@en,
+        "Universitas Purwakarta"@id ;
+    ex:lokasi wd:Q930854 .
+
+wd:Q30294718 a ex:Universitas ;
+    rdfs:label "Universitas Darwan Ali"@en,
+        "Universitas Darwan Ali"@id ;
+    ex:lokasi wd:Q3470926 .
+
+wd:Q30294742 a ex:Universitas ;
+    rdfs:label "Universitas Subang"@en,
+        "Universitas Subang"@id ;
+    ex:lokasi wd:Q1078326 .
+
+wd:Q31173892 a ex:Universitas ;
+    rdfs:label "Universitas Ma'arif Nahdlatul Ulama Kebumen"@en,
+        "Universitas Ma'arif Nahdlatul Ulama Kebumen"@id ;
+    ex:lokasi wd:Q4079521 .
+
+wd:Q3181122 a ex:Universitas ;
+    rdfs:label "Padjadjaran University"@en,
+        "Universitas Padjadjaran"@id ;
+    ex:lokasi wd:Q1022907 .
+
+wd:Q3267815 a ex:Universitas ;
+    rdfs:label "Bina Nusantara University"@en,
+        "Universitas Bina Nusantara"@id ;
+    ex:lokasi wd:Q192737 .
+
+wd:Q3958218 a ex:Universitas ;
+    rdfs:label "Syiah Kuala University"@en,
+        "Universitas Syiah Kuala"@id ;
+    ex:lokasi wd:Q9633065 .
+
+wd:Q4200297 a ex:Universitas ;
+    rdfs:label "Sriwijaya University"@en,
+        "Universitas Sriwijaya"@id ;
+    ex:lokasi wd:Q4198110 .
+
+wd:Q4250926 a ex:Universitas ;
+    rdfs:label "Trisakti University"@en,
+        "Universitas Trisakti"@id ;
+    ex:lokasi wd:Q192737 .
+
+wd:Q4263077 a ex:Universitas ;
+    rdfs:label "Muhammadiyah University of Magelang"@en,
+        "Universitas Muhammadiyah Magelang"@id ;
+    ex:lokasi wd:Q4119682 .
+
+wd:Q48971537 a ex:Universitas ;
+    rdfs:label "Nahdlatul Ulama Islamic University"@en,
+        "Universitas Islam Nahdlatul Ulama Jepara"@id ;
+    ex:lokasi wd:Q3937265 .
+
+wd:Q50804994 a ex:Universitas ;
+    rdfs:label "Universitas 45 Surabaya"@en,
+        "Universitas 45 Surabaya"@id ;
+    ex:lokasi wd:Q3298302 .
+
+wd:Q52637707 a ex:Universitas ;
+    rdfs:label "Universitas Nahdlatul Ulama Surabaya"@en,
+        "Universitas Nahdlatul Ulama Surabaya"@id ;
+    ex:lokasi wd:Q3298334 .
+
+wd:Q534515 a ex:Universitas ;
+    rdfs:label "University of Indonesia"@en,
+        "Universitas Indonesia"@id ;
+    ex:lokasi wd:Q192876 .
+
+wd:Q5358247 a ex:Universitas ;
+    rdfs:label "Electronic Engineering Polytechnic Institute of Surabaya"@en,
+        "Politeknik Elektronika Negeri Surabaya"@id ;
+    ex:lokasi wd:Q3298287 .
+
+wd:Q56393971 a ex:Universitas ;
+    rdfs:label "Nahdlatul Ulama University of Indonesia"@en,
+        "Universitas Nahdlatul Ulama Indonesia"@id ;
+    ex:lokasi wd:Q192876 .
+
+wd:Q56394021 a ex:Universitas ;
+    rdfs:label "Hasyim Asy'ari University"@en,
+        "Universitas Hasyim Asy'ari"@id ;
+    ex:lokasi wd:Q7780154 .
+
+wd:Q56394043 a ex:Universitas ;
+    rdfs:label "Universitas Nahdlatul Ulama Sunan Giri"@en,
+        "Universitas Nahdlatul Ulama Sunan Giri Bojonegoro"@id ;
+    ex:lokasi wd:Q3955907 .
+
+wd:Q56394052 a ex:Universitas ;
+    rdfs:label "Universitas Nahdlatul Ulama Lampung"@en,
+        "Universitas Nahdlatul Ulama Lampung"@id ;
+    ex:lokasi wd:Q4187584 .
+
+wd:Q56394060 a ex:Universitas ;
+    rdfs:label "Universitas Nahdlatul Ulama Kalimantan Barat"@en,
+        "Universitas Nahdlatul Ulama Kalimantan Barat"@id ;
+    ex:lokasi wd:Q3700890 .
+
+wd:Q56394061 a ex:Universitas ;
+    rdfs:label "Nahdlatul Ulama University Of East Kalimantan"@en,
+        "Universitas Nahdlatul Ulama Kalimantan Timur"@id ;
+    ex:lokasi wd:Q12495040 .
+
+wd:Q56394064 a ex:Universitas ;
+    rdfs:label "Southeast Sulawesi Nahdlatul Ulama University"@en,
+        "Universitas Nahdlatul Ulama Sulawesi Tenggara"@id ;
+    ex:lokasi wd:Q4196439 .
+
+wd:Q6177417 a ex:Universitas ;
+    rdfs:label "Jenderal Soedirman University"@en,
+        "Universitas Jenderal Soedirman"@id ;
+    ex:lokasi wd:Q3669866 .
+
+wd:Q6482697 a ex:Universitas ;
+    rdfs:label "Lampung University"@en,
+        "Universitas Lampung"@id ;
+    ex:lokasi wd:Q4188209 .
+
+wd:Q6818526 a ex:Universitas ;
+    rdfs:label "Mercu Buana University"@en,
+        "Universitas Mercu Buana Jakarta"@id ;
+    ex:lokasi wd:Q192737 .
+
+wd:Q71525224 a ex:Universitas ;
+    rdfs:label "Universitas Fort De Kock"@en,
+        "Sekolah Tinggi Ilmu Kesehatan Fort De Kock"@id ;
+    ex:lokasi wd:Q12496573 .
+
+wd:Q7178629 a ex:Universitas ;
+    rdfs:label "Petra Christian University"@en,
+        "Universitas Kristen Petra"@id ;
+    ex:lokasi wd:Q3298339 .
+
+wd:Q7408055 a ex:Universitas ;
+    rdfs:label "Sam Ratulangi University"@en,
+        "Universitas Sam Ratulangi"@id ;
+    ex:lokasi wd:Q12496300 .
+
+wd:Q7442749 a ex:Universitas ;
+    rdfs:label "Sebelas Maret University"@en,
+        "Universitas Sebelas Maret"@id ;
+    ex:lokasi wd:Q3700824 .
+
+wd:Q7452397 a ex:Universitas ;
+    rdfs:label "Sepuluh Nopember Institute of Technology"@en,
+        "Institut Teknologi Sepuluh Nopember"@id ;
+    ex:lokasi wd:Q3298287 .
+
+wd:Q7636602 a ex:Universitas ;
+    rdfs:label "Sultan Ageng Tirtayasa University"@en,
+        "Universitas Sultan Ageng Tirtayasa"@id ;
+    ex:lokasi wd:Q3658736 .
+
+wd:Q7683446 a ex:Universitas ;
+    rdfs:label "Tanjungpura University"@en,
+        "Universitas Tanjungpura"@id ;
+    ex:lokasi wd:Q3700921 .
+
+wd:Q7686915 a ex:Universitas ;
+    rdfs:label "Tarumanagara University"@en,
+        "Universitas Tarumanagara"@id ;
+    ex:lokasi wd:Q192737 .
+
+wd:Q7894412 a ex:Universitas ;
+    rdfs:label "Christian University of Indonesia"@en,
+        "Universitas Kristen Indonesia"@id ;
+    ex:lokasi wd:Q193356 .
+
+wd:Q7894414 a ex:Universitas ;
+    rdfs:label "Krida Wacana Christian University"@en,
+        "Universitas Kristen Krida Wacana"@id ;
+    ex:lokasi wd:Q192737 .
+
+wd:Q7894416 a ex:Universitas ;
+    rdfs:label "Universitas Methodist Indonesia"@en,
+        "Universitas Methodist Indonesia"@id ;
+    ex:lokasi wd:Q4201269 .
+
+wd:Q7894417 a ex:Universitas ;
+    rdfs:label "Sampoerna University"@en,
+        "Sampoerna University"@id ;
+    ex:lokasi wd:Q193022 .
+
+wd:Q7894418 a ex:Universitas ;
+    rdfs:label "National University"@en,
+        "Universitas Nasional"@id ;
+    ex:lokasi wd:Q192994 .
+
+wd:Q7896055 a ex:Universitas ;
+    rdfs:label "University of Palangka Raya"@en,
+        "Universitas Palangka Raya"@id ;
+    ex:lokasi wd:Q12502026 .
+
+wd:Q7896370 a ex:Universitas ;
+    rdfs:label "Universitas Respublica"@en,
+        "Universitas Surabaya"@id ;
+    ex:lokasi wd:Q3298277 .
+
+wd:Q8045825 a ex:Universitas ;
+    rdfs:label "YARSI University"@en,
+        "Universitas YARSI"@id ;
+    ex:lokasi wd:Q192876 .
+
+wd:Q81665993 a ex:Universitas ;
+    rdfs:label "Christian University of Palangka Raya"@en,
+        "Universitas Kristen Palangkaraya"@id ;
+    ex:lokasi wd:Q12502026 .
+
+wd:Q85995029 a ex:Universitas ;
+    rdfs:label "Universitas Nahdlatul Ulama Purwokerto"@en,
+        "Universitas Nahdlatul Ulama Purwokerto"@id ;
+    ex:lokasi wd:Q3669785 .
+
+wd:Q97211062 a ex:Universitas ;
+    rdfs:label "Universitas Kartamulia Purwakarta"@en,
+        "Universitas Kartamulia"@id ;
+    ex:lokasi wd:Q930854 .
+
+wd:Q97228165 a ex:Universitas ;
+    rdfs:label "University of Amikom Purwokerto"@en,
+        "Universitas Amikom Purwokerto"@id ;
+    ex:lokasi wd:Q3669636 .
+
+wd:Q97232620 a ex:Universitas ;
+    rdfs:label "Universitas Bina Insan"@en,
+        "Universitas Bina Insan"@id ;
+    ex:lokasi wd:Q12495484 .
+
+wd:Q97307913 a ex:Universitas ;
+    rdfs:label "MH Thamrin University"@en,
+        "Universitas MH Thamrin"@id ;
+    ex:lokasi wd:Q193356 .
+
+wd:Q97455399 a ex:Universitas ;
+    rdfs:label "Universitas Selamat Sri"@en,
+        "Universitas Selamat Sri"@id ;
+    ex:lokasi wd:Q3550540 .
+
+wd:Q97570483 a ex:Universitas ;
+    rdfs:label "W R Supratman University"@en,
+        "Universitas W.R. Supratman"@id ;
+    ex:lokasi wd:Q3298287 .
+
+wd:Q1026402 rdfs:label "Meulaboh"@id .
+
+wd:Q1087438 rdfs:label "Cisaat"@id .
+
+wd:Q12492395 rdfs:label "Kotamobagu Barat"@id .
+
+wd:Q12492407 rdfs:label "Kotawaringin Lama"@id .
+
+wd:Q12495040 rdfs:label "Loa Janan Ilir"@id .
+
+wd:Q12495484 rdfs:label "Lubuk Linggau Selatan I"@id .
+
+wd:Q12496220 rdfs:label "Makassar"@id .
+
+wd:Q12496557 rdfs:label "Mandalle"@id .
+
+wd:Q12496573 rdfs:label "Mandiangin Koto Selayan"@id .
+
+wd:Q12501869 rdfs:label "Padang Timur"@id .
+
+wd:Q12501877 rdfs:label "Padang Panjang Barat"@id .
+
+wd:Q12502434 rdfs:label "Panca Lautang"@id .
+
+wd:Q12506111 rdfs:label "Pondok Kelapa"@id .
+
+wd:Q12506231 rdfs:label "Popayato"@id .
+
+wd:Q129232 rdfs:label "Siborongborong"@id .
+
+wd:Q192714 rdfs:label "Cengkareng"@id .
+
+wd:Q192723 rdfs:label "Grogol Petamburan"@id .
+
+wd:Q192857 rdfs:label "Menteng"@id .
+
+wd:Q192871 rdfs:label "Senen"@id .
+
+wd:Q193004 rdfs:label "Kebayoran Lama"@id .
+
+wd:Q193022 rdfs:label "Pasar Minggu"@id .
+
+wd:Q193029 rdfs:label "Pesanggrahan"@id .
+
+wd:Q193323 rdfs:label "Jatinegara"@id .
+
+wd:Q193362 rdfs:label "Makasar"@id .
+
+wd:Q193552 rdfs:label "Tanjung Priok"@id .
+
+wd:Q3298247 rdfs:label "Jambangan"@id .
+
+wd:Q3298269 rdfs:label "Tegalsari"@id .
+
+wd:Q3298302 rdfs:label "Sawahan"@id .
+
+wd:Q3298334 rdfs:label "Wonokromo"@id .
+
+wd:Q3298348 rdfs:label "Sambikerep"@id .
+
+wd:Q3298373 rdfs:label "Benowo"@id .
+
+wd:Q3321688 rdfs:label "Pandeglang"@id .
+
+wd:Q3321840 rdfs:label "Saketi"@id .
+
+wd:Q3436598 rdfs:label "Kramatwatu"@id .
+
+wd:Q3470926 rdfs:label "Sampit"@id .
+
+wd:Q3504630 rdfs:label "Polewali"@id .
+
+wd:Q3504647 rdfs:label "Purworejo"@id .
+
+wd:Q3550540 rdfs:label "Patebon"@id .
+
+wd:Q3658736 rdfs:label "Cipocok Jaya"@id .
+
+wd:Q3659036 rdfs:label "Ciledug"@id .
+
+wd:Q3659143 rdfs:label "Karawaci"@id .
+
+wd:Q3663154 rdfs:label "Ciputat Timur"@id .
+
+wd:Q3669585 rdfs:label "Kembaran"@id .
+
+wd:Q3669866 rdfs:label "Purwokerto Utara"@id .
+
+wd:Q3691368 rdfs:label "Selo"@id .
+
+wd:Q3700824 rdfs:label "Jebres"@id .
+
+wd:Q3700918 rdfs:label "Pontianak Kota"@id .
+
+wd:Q3818402 rdfs:label "Paguyangan"@id .
+
+wd:Q3818435 rdfs:label "Salem"@id .
+
+wd:Q3860560 rdfs:label "Cilacap Selatan"@id .
+
+wd:Q3861186 rdfs:label "Kesugihan"@id .
+
+wd:Q3874044 rdfs:label "Demak"@id .
+
+wd:Q3874564 rdfs:label "Mranggen"@id .
+
+wd:Q3936601 rdfs:label "Kedung"@id .
+
+wd:Q3937265 rdfs:label "Tahunan"@id .
+
+wd:Q3968430 rdfs:label "Tawang"@id .
+
+wd:Q401881 rdfs:label "Sukaraja"@id .
+
+wd:Q4079521 rdfs:label "Kebumen"@id .
+
+wd:Q408827 rdfs:label "Airmadidi"@id .
+
+wd:Q4089482 rdfs:label "Prambanan"@id .
+
+wd:Q4119682 rdfs:label "Mertoyudan"@id .
+
+wd:Q4187494 rdfs:label "Banjar Agung"@id .
+
+wd:Q4187510 rdfs:label "Metro Utara"@id .
+
+wd:Q4187584 rdfs:label "Purbolinggo"@id .
+
+wd:Q4187643 rdfs:label "Gading Rejo"@id .
+
+wd:Q4188201 rdfs:label "Kemiling"@id .
+
+wd:Q4196439 rdfs:label "Baruga"@id .
+
+wd:Q4197433 rdfs:label "Kelay"@id .
+
+wd:Q4197525 rdfs:label "Landasan Ulin"@id .
+
+wd:Q4197736 rdfs:label "Arut Selatan"@id .
+
+wd:Q4198110 rdfs:label "Tanjung Raja"@id .
+
+wd:Q4198171 rdfs:label "Pelaihari"@id .
+
+wd:Q4201269 rdfs:label "Medan Polonia"@id .
+
+wd:Q4201281 rdfs:label "Medan Helvetia"@id .
+
+wd:Q4201342 rdfs:label "Medan Timur"@id .
+
+wd:Q422498 rdfs:label "Banjarsari"@id .
+
+wd:Q4899605 rdfs:label "Percut Sei Tuan"@id .
+
+wd:Q4989755 rdfs:label "Mojotengah"@id .
+
+wd:Q4989816 rdfs:label "Magelang Utara"@id .
+
+wd:Q7780154 rdfs:label "Diwek"@id .
+
+wd:Q7780354 rdfs:label "Peterongan"@id .
+
+wd:Q7886839 rdfs:label "Ngasem"@id .
+
+wd:Q8002440 rdfs:label "Sekaran"@id .
+
+wd:Q879867 rdfs:label "Kuningan"@id .
+
+wd:Q887388 rdfs:label "Lemahsugih"@id .
+
+wd:Q887467 rdfs:label "Majalengka"@id .
+
+wd:Q9633489 rdfs:label "Blang Mangat"@id .
+
+wd:Q9633541 rdfs:label "Teluk Segara"@id .
+
+wd:Q9633565 rdfs:label "Bambel"@id .
+
+wd:Q9633646 rdfs:label "Ratu Agung"@id .
+
+wd:Q9635747 rdfs:label "Muara Batu"@id .
+
+wd:Q976062 rdfs:label "Tanjung Selor"@id .
+
+wd:Q12492996 rdfs:label "Kuranji"@id .
+
+wd:Q12501874 rdfs:label "Padang Utara"@id .
+
+wd:Q192987 rdfs:label "Cilandak"@id .
+
+wd:Q192999 rdfs:label "Kebayoran Baru"@id .
+
+wd:Q193037 rdfs:label "Tebet"@id .
+
+wd:Q3298277 rdfs:label "Gubeng"@id .
+
+wd:Q3298309 rdfs:label "Gayungan"@id .
+
+wd:Q3298339 rdfs:label "Wonocolo"@id .
+
+wd:Q3659306 rdfs:label "Tangerang"@id .
+
+wd:Q3669785 rdfs:label "Purwokerto Selatan"@id .
+
+wd:Q3860780 rdfs:label "Dayeuhluhur"@id .
+
+wd:Q3955907 rdfs:label "Bojonegoro"@id .
+
+wd:Q3968283 rdfs:label "Cibeureum"@id .
+
+wd:Q4079332 rdfs:label "Ayah"@id .
+
+wd:Q4119449 rdfs:label "Kaliwungu"@id .
+
+wd:Q4188209 rdfs:label "Rajabasa"@id .
+
+wd:Q4196549 rdfs:label "Toili"@id .
+
+wd:Q4196713 rdfs:label "Kolaka"@id .
+
+wd:Q4201291 rdfs:label "Kuta Selatan"@id .
+
+wd:Q4201416 rdfs:label "Medan Baru"@id .
+
+wd:Q4907777 rdfs:label "Medan Sunggal"@id .
+
+wd:Q565721 rdfs:label "Agrabinta"@id .
+
+wd:Q930854 rdfs:label "Jatiluhur"@id .
+
+wd:Q9633065 rdfs:label "Syiah Kuala"@id .
+
+wd:Q9633593 rdfs:label "Langsa Timur"@id .
+
+wd:Q1078326 rdfs:label "Sagalaherang"@id .
+
+wd:Q12502400 rdfs:label "Panakkukang"@id .
+
+wd:Q193314 rdfs:label "Pulogadung"@id .
+
+wd:Q7777272 rdfs:label "Sumbersari"@id .
+
+wd:Q7780218 rdfs:label "Jombang"@id .
+
+wd:Q1022907 rdfs:label "Jatinangor"@id .
+
+wd:Q12501155 rdfs:label "Oebobo"@id .
+
+wd:Q193356 rdfs:label "Kramatjati"@id .
+
+wd:Q3669636 rdfs:label "Lumbir"@id .
+
+wd:Q3700921 rdfs:label "Pontianak Tenggara"@id .
+
+wd:Q192876 rdfs:label "Tanah Abang"@id .
+
+wd:Q3700890 rdfs:label "Pontianak Selatan"@id .
+
+wd:Q7776390 rdfs:label "Kencong"@id .
+
+wd:Q12502026 rdfs:label "Pahandut"@id .
+
+wd:Q12496300 rdfs:label "Malalayang"@id .
+
+wd:Q192737 rdfs:label "Kembangan"@id .
+
+wd:Q3298287 rdfs:label "Sukolilo"@id .
+
+wd:Q193374 rdfs:label "Pasar Rebo"@id .
+
+wd:Q192994 rdfs:label "Jagakarsa"@id .
+

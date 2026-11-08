@@ -1,0 +1,23 @@
+PREFIX wd:   <http://www.wikidata.org/entity/>
+PREFIX wdt:  <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ex:   <https://contoh.github.io/web-semantik/251402001/kampus#>
+
+CONSTRUCT {
+  ?u a ex:Universitas ;
+     rdfs:label ?nama ;
+     ex:lokasi ?kota .
+  ?kota rdfs:label ?namaKota .
+}
+WHERE {
+  ?u wdt:P31 wd:Q3918 ;
+     wdt:P17 wd:Q252 ;
+     wdt:P131 ?kota ;
+     rdfs:label ?nama .
+  FILTER(LANG(?nama) = "id" || LANG(?nama) = "en")
+  OPTIONAL {
+    ?kota rdfs:label ?namaKota .
+    FILTER(LANG(?namaKota) = "id")
+  }
+}
+LIMIT 500
