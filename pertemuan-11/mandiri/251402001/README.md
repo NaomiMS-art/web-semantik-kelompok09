@@ -9,16 +9,24 @@
 ## Bagian B - DBpedia ke Turtle
 - Output demo_c.py: 48 triple, film tanpa tanggal: 16
 - Sumber data: DBpedia 
-- Triple yang tetap tercetak untuk film tanpa tanggal: 
+- Triple yang tetap tercetak untuk film tanpa tanggal:
+
 **?film a schema:Movie**
 **schema:name ?judul** 
 **schema:director dbr:Christopher_Nolan**
 - Dan triple mana yang tidak? Mengapa tidak ada pesan error?
+
 tanggal rilisnya (schema:datePublished). Tidak eror, karena ada bagian OPTIONAL artinya “kalau ada tanggalnya, ambil; kalau tidak ada, lewati saja”.
-- Query lokal tanpa internet: Q_TANPA_TANGGAL dalam film_nolan.tll (isinya hasil CONSTRUCT yang sudah diunduh dan disimpan sebelumnya). Di mana dissini kita juga mengguankan parse, berfungsi untuk membaca berkas dari disk ke memori awalaupun tidak ada koneksi jaringan.
+
+- Query lokal tanpa internet:
+Q_TANPA_TANGGAL dalam film_nolan.tll (isinya hasil CONSTRUCT yang sudah diunduh dan disimpan sebelumnya). Di mana dissini kita juga mengguankan parse, berfungsi untuk membaca berkas dari disk ke memori awalaupun tidak ada koneksi jaringan.
+
 - Mengapa ini berhasil, dan apa yang terjadi bila Anda menjalankan ulang seluruh demo_c.py tanpa internet?
+
 Seluruh demo_c.py: gagal. Baris sp.queryAndConvert() harus mengirim query ke DBpedia. Tetapi, baris sesudahnya tidak jalan, dan film_nolan.ttl yang lama tetap utuh karena belum sempat tertimpa.
+
 - Mengapa dbo:Film memberi 0 pada film_nolan.ttl?
+
 Karena berkas itu adalah hasil CONSTRUCT, yang hanya berisi triple schema:Movie. dbo:Film hanya dipakai di WHERE untuk mencocokkan data sumber dan tidak ikut ditulis, sehingga COUNT mengembalikan 0.
 
 ## Bagian C - Materialisasi
@@ -26,15 +34,23 @@ Karena berkas itu adalah hasil CONSTRUCT, yang hanya berisi triple schema:Movie.
 Sebelum: 0           
 Sesudah: 3
 Ada Rina: 3
-- Mengapa Ada Rina bernilai 3: karena materialisasi dijalankan sekali sebelum Rina masuk. ex:rina a ex:DosenTetap adalah fakta baru, dan tidak ada triple ex:rina a foaf:Person karena kesimpulan itu tidak dihitung otomatis. Hasil materialisasi adalah salinan statis, bukan inferensi hidup.
+
+- Mengapa Ada Rina bernilai 3: karena materialisasi dijalankan sekali sebelum Rina masuk. ex:rina a ex:DosenTetap adalah fakta baru, dan tidak ada triple ex:rina a foaf:
+Person karena kesimpulan itu tidak dihitung otomatis. Hasil materialisasi adalah salinan statis, bukan inferensi hidup.
+  
 - Output materialisasi_ulang.py: 
   Putaran 1: 4 triple baru | Person: 3
   Rina masuk | Person: 3
   Putaran 2 | Person: 4
   Triple turunan disimpan terpisah: 6
-- Tiga triple yang bukan baru: pada Putaran 1, a/rdfs:subClassOf* (nol langkah atau lebih) juga menghasilkan tipe yang sudah tertulis di kampus.ttl, yaitu ex:budi a ex:DosenTetap, ex:sari a ex:Dosen, dan ex:andi a ex:Mahasiswa. Fungsi materialisasi membuangnya lewat if t not in g, sehingga hanya 4 triple baru yang tersisa: andi a foaf:Person, budi a ex:Dosen, budi a foaf:Person, dan sari a foaf:Person.
+  
+- Tiga triple yang bukan baru:
 
-- Kegunaan kampus_turunan.ttl dan langkah manual yang tersisa: berisi kesimpulan saja (6 triple), terpisah dari fakta asli. Hal ini membuat kesimpulan bisa dihapus atau dihitung ulang tanpa menyentuh fakta. Dengan menjalankan ulang materialisasi kemudian membandingkan hasil baru dengan kampus_turunan.ttl
+Pada Putaran 1, a/rdfs:subClassOf* (nol langkah atau lebih) juga menghasilkan tipe yang sudah tertulis di kampus.ttl, yaitu ex:budi a ex:DosenTetap, ex:sari a ex:Dosen, dan ex:andi a ex:Mahasiswa. Fungsi materialisasi membuangnya lewat if t not in g, sehingga hanya 4 triple baru yang tersisa: andi a foaf:Person, budi a ex:Dosen, budi a foaf:Person, dan sari a foaf:Person.
+
+- Kegunaan kampus_turunan.ttl dan langkah manual yang tersisa:
+
+berisi kesimpulan saja (6 triple), terpisah dari fakta asli. Hal ini membuat kesimpulan bisa dihapus atau dihitung ulang tanpa menyentuh fakta. Dengan menjalankan ulang materialisasi kemudian membandingkan hasil baru dengan kampus_turunan.ttl
 
 ## Bagian D - Diagnosis
 | Query | Hasil mesin | Gejala | Penyebab (baris yang salah) | Hasil setelah diperbaiki |
@@ -51,13 +67,14 @@ Ada Rina: 3
 | 2 LIMIT | Baris terakhir `LIMIT 10` membatasi solution saat eksplorasi | Tidak ada LIMIT, dan tidak perlu: pola dibatasi `dbo:director dbr:Christopher_Nolan` sehingga hasilnya hanya 16 film |
 | 3 Simpan, jangan ulangi | Tidak relevan: dijalankan sekali untuk eksplorasi dan tidak diolah ulang | `queryAndConvert()` dipanggil sekali, lalu `g.serialize("film_nolan.ttl")` dan query kedua berjalan pada `Graph().parse("film_nolan.ttl")` |
 | 4 Jangkar jalur | `wdt:P31/wdt:P279* wd:Q515`: jalur `*` berjangkar pada IRI `wd:Q515` (kota) | Tidak relevan: tidak ada jalur `*` atau `+`; pola sudah berjangkar pada `dbr:Christopher_Nolan` |
+
 - Versi yang melanggar aturan 4 (tidak dijalankan) dan alasannya: 
 
   SELECT ?kota ?kelas
   WHERE { ?kota wdt:P31/wdt:P279* ?kelas . }
   LIMIT 10
 
-  wd:Q515 diganti ?kelas. Artinya jadi “carikan semua benda, beserta semua jenis induknya”. Endpoint tidak punya titik awal lagi, jadi harus memeriksa jutaan item Wikidata satu per satu, dan tiap item ditelusuri naik ke semua jenis induknya.
+wd:Q515 diganti ?kelas. Artinya jadi “carikan semua benda, beserta semua jenis induknya”. Endpoint tidak punya titik awal lagi, jadi harus memeriksa jutaan item Wikidata satu per satu, dan tiap item ditelusuri naik ke semua jenis induknya.
 
 ### Diskusi 1 - Taksonomi berubah
 Dalam pengembangan knowledge graph, aturan taksonomi bisa berevolusi. Misalnya, awalnya sistem secara otomatis menyimpulkan bahwa kelas ex:Dosen adalah subkelas dari foaf:Person. Namun, bagaimana jika di masa depan aturan ini diubah dan relasi tersebut tidak lagi berlaku?
