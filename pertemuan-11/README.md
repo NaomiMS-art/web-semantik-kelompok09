@@ -32,11 +32,12 @@
 
 ## Langkah 4 - Wikidata
 
-- Jumlah triple Q6: [isi]
-- Jumlah baris Q6 versi PILIH: [isi]
-- Penjelasan perbedaan: [isi]
-- Q7 dengan `+` vs `*`: [isi]
-- Kelas yang mengejutkan dan mengejutkan: [isi]
+- Jumlah triple Q6: 112
+- Jumlah baris Q6 versi SELECT: 50
+- Penjelasan perbedaan: Jika tiap baris menghasilkan 3 triple, totalnya 3 × 50 = 150, tetapi hasil CONSTRUCT hanya 112. Penyebabnya, satu universitas bisa memiliki lebih dari satu nilai P131 (contoh: Politeknik Negeri Padang, wd:Q4027436, muncul di dua baris dengan kota berbeda). Hasil CONSTRUCT berupa himpunan triple, sehingga triple `a ex:Universitas` dan `ex:nama` yang identik hanya dihitung sekali. Hanya `ex:lokasi`yang berbeda per baris, sehingga total triple lebih sedikit dari 150.
+- Q7 dengan `+` vs `*`: Keduanya menampilkan 30 hasil karena dibatasi LIMIT 30, tetapi isinya berbeda. `+` berarti satu atau lebih langkah subclass of, sehingga
+ hanya subkelas sejati yang muncul. `*` berarti nol atau lebih langkah, sehingga Q3918 (universitas) itu sendiri ikut menjadi hasil. Tanpa LIMIT, `*` memiliki tepat satu hasil lebih banyak daripada `+`.
+- Kelas yang mengejutkan: Jezuit seminary (wd:Q129844515). Seminari adalah lembaga pendidikan calon imam, bukan universitas dalam arti sehari-hari. Namun di Wikidata ia tetap muncul sebagai hasil `wdt:P279*` terhadap Q3918, artinya ada rantai `subclass of` yang menghubungkannya ke universitas. Karena P279 bersifat transitif, query dengan `*` (dan `+`) menelusuri seluruh rantai itu, jadi kelas yang hanya terhubung lewat beberapa tingkat perantara pun ikut tertangkap.
 
 ## Langkah 5 - Graf dari Python
 
