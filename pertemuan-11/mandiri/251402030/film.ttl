@@ -1,0 +1,51 @@
+@prefix dbo:    <http://dbpedia.org/ontology/> .
+@prefix dbr:    <http://dbpedia.org/resource/> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# --- Film Christopher Nolan (3 film; Inception punya 2 tanggal rilis; Following tanpa tanggal)
+dbr:Inception a dbo:Film ;
+    rdfs:label "Inception"@en ;
+    dbo:director dbr:Christopher_Nolan ;
+    dbo:releaseDate "2010-07-08"^^xsd:date , "2010-07-16"^^xsd:date .
+
+dbr:Interstellar_film a dbo:Film ;
+    rdfs:label "Interstellar"@en ;
+    dbo:director dbr:Christopher_Nolan ;
+    dbo:releaseDate "2014-11-05"^^xsd:date .
+
+dbr:Following_film a dbo:Film ;
+    rdfs:label "Following"@en ;
+    dbo:director dbr:Christopher_Nolan .
+
+# --- Film sutradara lain (pengecoh)
+dbr:Pengabdi_Setan a dbo:Film ;
+    rdfs:label "Satan's Slaves"@en , "Pengabdi Setan"@id ;
+    dbo:director dbr:Joko_Anwar ;
+    dbo:releaseDate "2017-09-28"^^xsd:date .
+
+dbr:Gundala_film a dbo:Film ;
+    rdfs:label "Gundala"@en ;
+    dbo:director dbr:Joko_Anwar ;
+    dbo:releaseDate "2019-08-29"^^xsd:date .
+
+dbr:Laskar_Pelangi_film a dbo:Film ;
+    rdfs:label "The Rainbow Troops"@en ;
+    dbo:director dbr:Riri_Riza ;
+    dbo:producer dbr:Mira_Lesmana ;
+    dbo:releaseDate "2008-09-25"^^xsd:date .
+
+# --- Orang: nama dengan tag bahasa / tipe berbeda (dipakai rusak_b)
+dbr:Christopher_Nolan
+    foaf:name   "Christopher Nolan"@en ;
+    rdfs:label  "Christopher Nolan"@en ;
+    schema:name "Christopher Nolan" .
+
+dbr:Joko_Anwar
+    rdfs:label  "Joko Anwar"@id ;
+    schema:name "Joko Anwar"@en .
+
+dbr:Mira_Lesmana
+    foaf:name "Mira Lesmana" .

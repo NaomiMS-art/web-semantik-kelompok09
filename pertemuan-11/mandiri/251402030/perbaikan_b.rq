@@ -1,0 +1,7 @@
+# Perbaikan: seragamkan nilai dengan STR() agar tag bahasa/tipe tidak membuat triple kembar
+CONSTRUCT { ?o ex:nama ?n . }
+WHERE {
+  VALUES ?o { dbr:Christopher_Nolan dbr:Joko_Anwar dbr:Mira_Lesmana }
+  ?o foaf:name|rdfs:label|schema:name ?n0 .
+  BIND ( STR(?n0) AS ?n )
+}

@@ -1,0 +1,6 @@
+# Perbaikan: ?film di template -> ?f (variabel harus sama dengan WHERE)
+CONSTRUCT { ?f ex:judul ?j . }
+WHERE {
+  ?f dbo:director dbr:Christopher_Nolan ;
+     rdfs:label ?j
+}
