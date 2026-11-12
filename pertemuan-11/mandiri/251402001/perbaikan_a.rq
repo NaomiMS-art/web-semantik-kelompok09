@@ -1,0 +1,7 @@
+# Tujuan (film.ttl): judul film Nolan sebagai ex:judul
+CONSTRUCT { ?film ex:judul ?j . }
+WHERE {
+  ?film dbo:director dbr:Christopher_Nolan ; 
+#variabel film yang salah, pada awalnya variabel f
+        rdfs:label ?j .
+}
