@@ -1,8 +1,12 @@
-@prefix ex:   <http://contoh.id/kampus/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-# 6 triple turunan (4 putaran 1 + 2 putaran 2)
-ex:budi a ex:Dosen , foaf:Person .
-ex:sari a foaf:Person .
-ex:andi a foaf:Person .
-ex:rina a ex:Dosen , foaf:Person .
+<http://contoh.id/kampus/andi> a foaf:Person .
+
+<http://contoh.id/kampus/budi> a <http://contoh.id/kampus/Dosen>,
+        foaf:Person .
+
+<http://contoh.id/kampus/rina> a <http://contoh.id/kampus/Dosen>,
+        foaf:Person .
+
+<http://contoh.id/kampus/sari> a foaf:Person .
+
