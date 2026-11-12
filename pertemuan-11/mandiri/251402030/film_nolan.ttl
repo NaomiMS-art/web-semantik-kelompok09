@@ -1,0 +1,19 @@
+@prefix dbr:    <http://dbpedia.org/resource/> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# DATA CONTOH (diturunkan dari film.ttl lewat q_demo_b.rq), bukan dari DBpedia langsung.
+# Jalankan demo_c.py dengan internet untuk menimpa berkas ini dengan data DBpedia asli.
+dbr:Inception a schema:Movie ;
+    schema:name "Inception"@en ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:datePublished "2010-07-08"^^xsd:date , "2010-07-16"^^xsd:date .
+
+dbr:Interstellar_film a schema:Movie ;
+    schema:name "Interstellar"@en ;
+    schema:director dbr:Christopher_Nolan ;
+    schema:datePublished "2014-11-05"^^xsd:date .
+
+dbr:Following_film a schema:Movie ;
+    schema:name "Following"@en ;
+    schema:director dbr:Christopher_Nolan .

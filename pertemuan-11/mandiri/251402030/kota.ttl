@@ -1,0 +1,12 @@
+@prefix ex:   <http://contoh.id/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Taksonomi
+ex:Kota  rdfs:subClassOf ex:Permukiman .
+ex:Desa  rdfs:subClassOf ex:Permukiman .
+
+# Data
+ex:medan     a ex:Kota  ; rdfs:label "Medan"@id .
+ex:surabaya  a ex:Kota  ; rdfs:label "Surabaya"@id .
+ex:tomok     a ex:Desa  ; rdfs:label "Tomok"@id .
+ex:danau_toba a ex:Danau ; rdfs:label "Danau Toba"@id .   # bukan permukiman

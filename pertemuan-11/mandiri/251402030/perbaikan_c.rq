@@ -1,0 +1,5 @@
+# Perbaikan: tambah jalur a/rdfs:subClassOf* agar subkelas (Kota, Desa) ikut terambil
+CONSTRUCT { ?x a ex:Permukiman . }
+WHERE {
+  ?x a/rdfs:subClassOf* ex:Permukiman .
+}
