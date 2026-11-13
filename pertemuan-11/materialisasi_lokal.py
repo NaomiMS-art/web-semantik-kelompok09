@@ -1,17 +1,17 @@
 from pathlib import Path
 from rdflib import Graph
 
-SUMBER = Path("../pertemuan-10/kampus_usu_v3.ttl")
+SUMBER = Path("kampus_usu_v3.ttl")
 if not SUMBER.exists():                       # belum punya v3? pakai v2
-    SUMBER = Path("../pertemuan-09/kampus_usu_v2.ttl")
+    SUMBER = Path("kampus_usu_v2.ttl")
 g = Graph().parse(SUMBER, format="turtle")
 print("Sumber:", SUMBER, "| triple awal:", len(g))
 
 PREFIX = """
-PREFIX ex:     <https://contoh.github.io/web-semantik/251402107/kampus#>;
-PREFIX foaf:   <http://xmlns.com/foaf/0.1/>;
-PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>;
-PREFIX schema: <https://schema.org/>;
+PREFIX ex:     <https://contoh.github.io/web-semantik/251402107/kampus#>
+PREFIX foaf:   <http://xmlns.com/foaf/0.1/>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
 """
 
 # A. Pemetaan ke schema.org: graf baru, IRI tetap
