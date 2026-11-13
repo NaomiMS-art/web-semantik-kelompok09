@@ -1,0 +1,11 @@
+@prefix schema: <https://schema.org/> .
+
+<https://contoh.github.io/web-semantik/251402107/kampus#budi> a schema:Person ;
+    schema:name "Budi"@id .
+
+<https://contoh.github.io/web-semantik/251402107/kampus#ida> a schema:Person ;
+    schema:name "Muhammad Isa Dadi Hasibuan, S.Kom., M.Kom"@id .
+
+<https://contoh.github.io/web-semantik/251402107/kampus#siti> a schema:Person ;
+    schema:name "Siti"@id .
+
