@@ -1,0 +1,69 @@
+@prefix ex: <https://contoh.github.io/web-semantik/251402107/kampus#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:budi a foaf:Person,
+        ex:Lecturer,
+        ex:Pegawai ;
+    foaf:name "Budi"@id ;
+    ex:mengajar ex:basis_data .
+
+ex:ida a foaf:Person,
+        ex:Lecturer,
+        ex:Pegawai ;
+    foaf:name "Muhammad Isa Dadi Hasibuan, S.Kom., M.Kom"@id ;
+    ex:bekerjaDi ex:usu ;
+    ex:mengajar ex:kecerdasan_buatan,
+        ex:web_semantik .
+
+ex:mhs251402001 a ex:Student ;
+    foaf:name "Yessica Jaklin"@id ;
+    ex:mengambil ex:basis_data .
+
+ex:mhs251402026 a ex:Student ;
+    foaf:name "Daradira Vonna"@id ;
+    ex:mengambil ex:pemrograman_web .
+
+ex:mhs251402030 a ex:Student ;
+    foaf:name "Rodotua Naomi Mutiara Simamora"@id ;
+    ex:mengambil ex:web_semantik .
+
+ex:mhs251402072 a ex:Student ;
+    foaf:name "Vedder Timothy Simbolon"@id ;
+    ex:mengambil ex:web_semantik .
+
+ex:mhs251402107 a ex:Student ;
+    foaf:name "M. Rajadinata Nasution"@id ;
+    ex:mengambil ex:basis_data .
+
+ex:siti a foaf:Person,
+        ex:Lecturer,
+        ex:Pegawai ;
+    foaf:name "Siti"@id ;
+    ex:mengajar ex:pemrograman_web .
+
+ex:kecerdasan_buatan foaf:name "Kecerdasan_Buatan"@id .
+
+ex:usu a ex:University ;
+    foaf:name "Universitas Sumatera Utara"@id .
+
+ex:pemrograman_web a ex:Course ;
+    foaf:name "Pemrograman Web"@id ;
+    ex:hariKuliah "Kamis"@id ;
+    ex:jumlahKredit 3 .
+
+ex:Lecturer rdfs:subClassOf ex:Pegawai .
+
+ex:basis_data a ex:Course ;
+    foaf:name "Basis Data"@id ;
+    ex:hariKuliah "Rabu"@id ;
+    ex:jumlahKredit 3 .
+
+ex:web_semantik a ex:Course ;
+    foaf:name "Web Semantik"@id ;
+    ex:hariKuliah "Jumat"@id ;
+    ex:jumlahKredit 3 .
+
+ex:Pegawai rdfs:subClassOf foaf:Person .
+
