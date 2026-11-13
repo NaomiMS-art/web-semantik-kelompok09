@@ -1,0 +1,6 @@
+
+SELECT ?f ?j
+WHERE {
+    ?f dbo:director dbr:Christopher_Nolan ;
+       rdfs:label ?j .
+}

@@ -19,8 +19,9 @@ g = Graph().parse("kampus.ttl")
 turunan = materialisasi(g)
 print("Putaran 1:", len(turunan), "triple baru | Person:", len(g.query(Q_ORANG)))
 
-RINA = "@prefix ex: <http://contoh.id/kampus/>; . ex:rina a ex:DosenTetap ."
+RINA = "@prefix ex: <http://contoh.id/kampus/> . ex:rina a ex:DosenTetap ."
 g.parse(data=RINA, format="turtle")
+
 print("Rina masuk | Person:", len(g.query(Q_ORANG)))
 
 turunan += materialisasi(g)     # jalankan ulang aturan
