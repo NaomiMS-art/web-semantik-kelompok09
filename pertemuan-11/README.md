@@ -15,11 +15,12 @@
 
 ## Langkah 2 - Tebak lalu cek
 
-| Garam | Tebakan | Hasil mesin | Penjelasan bila meleset |
+| Soal | Tebakan | Hasil mesin | Penjelasan bila meleset |
 |------|---------|-------------|-------------------------|
-| A | [isi] | [isi] | [isi] |
-| B | [isi] | [isi] | [isi] |
-| C | [isi] | [isi] | [isi] |
+| A    | 3 baris | 3 baris | Tebakan tepat |
+| B    | 3 baris | 4 baris | Sari muncul dua kali karena ia memiliki dua tipe (`ex:DosenTetap` dan `ex:DosenTamu`) yang keduanya merupakan jalur valid ke `ex:Pegawai`. `SELECT` tidak meleburkan baris ganda. |
+| C    | 4 triple | 3 triple | Walaupun klausa `WHERE` menghasilkan 4 solusi (Sari ganda), keluaran `CONSTRUCT` adalah graf RDF. Graf secara otomatis meleburkan (deduplikasi) triple yang persis sama, sehingga Sari hanya dicetak sekali. |
+| D    | Error | 0 triple | Program tidak error sama sekali. Pada `CONSTRUCT`, jika variabel di dalam template kosong (seperti `?n` milik Rudi), pembentukan triple tersebut dibatalkan secara otomatis tanpa melempar pesan error, sehingga hasilnya graf kosong (0). |
 
 ## Langkah 3 - Graf kampus lokal
 
