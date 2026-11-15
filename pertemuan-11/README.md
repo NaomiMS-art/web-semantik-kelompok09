@@ -24,12 +24,12 @@
 
 ## Langkah 3 - Graf kampus lokal
 
-- Berkas sumber dan IRI dasar grafik: [isi]
-- Nama kelas dosen dan properti: [isi]
-- Tiga kali lipat hasil pemetaan: [isi]
-- `foaf:Organization` sebelum / sesudah: [isi] / [isi]
-- Triple asli vs triple turunan: [jawaban]
-- Dosen baru setelah program selesai: [isi]
+- Berkas sumber dan IRI dasar grafik: `kampus_usu_v2.ttl`, dengan IRI `https://contoh.github.io/web-semantik/251402107/kampus#`.
+- Nama kelas dosen dan properti: `ex:Lecturer` dan `foaf:name`.
+- Tiga kali lipat hasil pemetaan: **6 triple** (3 dosen dengan masing-masing 2 triple, yaitu `schema:Person` dan `schema:name`).
+- `foaf:Person` sebelum / sesudah: **0 / 3**.
+- Triple asli vs triple turunan: Triple asli berasal dari data dosen yang sudah tersedia dalam `kampus_usu_v2.ttl`. Triple turunan diperoleh setelah menambahkan hierarki `ex:Lecturer` sebagai subclass dari `ex:Pegawai`, kemudian `ex:Pegawai` sebagai subclass dari `foaf:Person`. Proses materialisasi menghasilkan 6 triple baru.
+- Dosen baru setelah program selesai: Dosen yang ditambahkan setelah program selesai tidak langsung memperoleh hasil pemetaan dan materialisasi. Program perlu dijalankan kembali agar data dosen terbaru ikut diproses dan menghasilkan triple berdasarkan hierarki kelas yang sudah dibuat.
 
 ## Langkah 4 - Wikidata
 
