@@ -1,9 +1,5 @@
 # Pertemuan 11 - Tugas Mandiri: Dari Endpoint ke Graf Lokal
 
-> Nama / NIM: [isi]
->
-> **Catatan kejujuran data:** angka Bagian A dan B1 berasal dari endpoint publik (Wikidata / DBpedia) dan harus diambil dari tangkapan layar Anda sendiri (ditandai **[ISI]**). Bagian B2, C, D, dan E memakai data contoh lokal (`film.ttl`, `kota.ttl`, `kampus.ttl`); angkanya sudah dihitung dari data tersebut, tetapi jalankan sekali di laptop untuk memastikan cocok sebelum dikumpulkan.
-
 ## Bagian A - LIMIT dan tiga kali lipat
 - Triple dengan LIMIT 10: [ISI dari `a-limit10.png`; batas atas 3 x 10 = 30]
 - Triple dengan LIMIT 30: [ISI; batas atas 3 x 30 = 90]
