@@ -110,16 +110,18 @@ Properti `wdt:P279` pada Wikidata menunjukkan hubungan *subclass of*. Operator `
 
 | Keterangan | Hasil |
 |---|---|
-| Jumlah hasil query Q8 | `[Isi jumlah Q8]` |
-| Jumlah hasil query Q9 | `[Isi jumlah Q9]` |
-| Jumlah selisih | `[Isi selisih Q8 dan Q9]` |
-| Salah satu subkelas yang menyumbang selisih | `[Isi nama subkelas]` |
+| Jumlah hasil query Q8 | `877` |
+| Jumlah hasil query Q9 | `1343` |
+| Jumlah selisih | `466` |
+| Salah satu subkelas yang menyumbang selisih | `public university (wd:Q875538)` atau `private university (wd:Q902104)` |
 
 ### Analisis WDQS
 
 WDQS (*Wikidata Query Service*) digunakan untuk menjalankan query SPARQL terhadap data Wikidata. Penelusuran hierarki dengan `wdt:P279*` dilakukan melalui property path pada saat query dijalankan.
 
-**Kesimpulan:** `[Pilih dan jelaskan apakah hasil diperoleh melalui materialisasi, saat query dijalankan, atau keduanya berdasarkan mekanisme yang digunakan pada praktikum.]`
+**Kesimpulan:** `WDQS pada Q9 melakukan penalaran saat query (query-time reasoning), bukan materialisasi. Q8 hanya memeriksa hubungan P31 secara langsung dengan Q3918, sedangkan Q9 menggunakan property path P31/P279* untuk menelusuri hubungan subclass secara bertingkat. Dengan demikian, sistem dapat menemukan entitas yang merupakan instance dari subkelas universitas tanpa harus menyimpan semua hubungan instance tersebut secara eksplisit.`
+
+`Lalu, aturan RDFS9 dijalankan oleh mesin query WDQS (Blazegraph) ketika query dieksekusi melalui evaluasi property path. Jadi, hasil inferensi diperoleh dari penelusuran hubungan yang sudah ada di Wikidata, bukan dari penyimpanan seluruh hasil inferensi sebelumnya.`
 
 ## Langkah 5 – Konsistensi
 
