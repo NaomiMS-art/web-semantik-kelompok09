@@ -4,27 +4,26 @@
 
 Praktikum ini bertujuan untuk memahami proses inferensi dan penalaran pada graf pengetahuan (*knowledge graph*) menggunakan aturan RDFS dan OWL RL. Melalui praktikum ini, mahasiswa mempelajari cara memperoleh fakta baru dari fakta yang sudah tersedia, membandingkan hasil beberapa profil penalaran, menggunakan Reasoner pada graf kampus, memanfaatkan hierarki kelas Wikidata, serta memeriksa konsistensi data.
 
-## Langkah 1 – Penutupan dengan Tangan
+## Langkah 1 - Closure dengan tangan
 
-Pada langkah ini, proses inferensi dilakukan secara manual dengan menerapkan aturan RDFS/OWL terhadap triple yang tersedia. Setiap triple baru harus memiliki dasar berupa aturan dan premis yang mendukung kesimpulan tersebut.
+| # | Triple turunan | Aturan | Premis |
+|---|----------------|--------|--------|
+| 1 | `ex:budi a ex:Dosen` | rdfs2 | domain `ex:membimbing` + `ex:budi ex:membimbing ex:andi` |
+| 2 | `ex:andi a ex:Mahasiswa` | rdfs3 | range `ex:membimbing` + `ex:budi ex:membimbing ex:andi` |
+| 3 | `ex:budi ex:mengenal ex:andi` | rdfs7 | `ex:membimbing rdfs:subPropertyOf ex:mengenal` + `ex:budi ex:membimbing ex:andi` |
+| 4 | `ex:sari a ex:Dosen` | rdfs9 | `ex:DosenTamu rdfs:subClassOf ex:Dosen` + `ex:sari a ex:DosenTamu` |
+| 5 | `ex:DosenTamu rdfs:subClassOf ex:Pegawai` | rdfs11 | `ex:DosenTamu rdfs:subClassOf ex:Dosen` + `ex:Dosen rdfs:subClassOf ex:Pegawai` |
+| 6 | `ex:Dosen rdfs:subClassOf ex:Orang` | rdfs11 | `ex:Dosen rdfs:subClassOf ex:Pegawai` + `ex:Pegawai rdfs:subClassOf ex:Orang` |
+| 7 | `ex:budi a ex:Pegawai` | rdfs9 | `ex:Dosen rdfs:subClassOf ex:Pegawai` + `ex:budi a ex:Dosen` (#1) |
+| 8 | `ex:sari a ex:Pegawai` | rdfs9 | `ex:Dosen rdfs:subClassOf ex:Pegawai` + `ex:sari a ex:Dosen` (#4) |
+| 9 | `ex:andi a ex:Orang` | rdfs9 | `ex:Mahasiswa rdfs:subClassOf ex:Orang` + `ex:andi a ex:Mahasiswa` (#2) |
+| 10 | `ex:DosenTamu rdfs:subClassOf ex:Orang` | rdfs11 | `ex:DosenTamu rdfs:subClassOf ex:Pegawai` (#5) + `ex:Pegawai rdfs:subClassOf ex:Orang` |
+| 11 | `ex:budi a ex:Orang` | rdfs9 | `ex:Dosen rdfs:subClassOf ex:Orang` (#6) + `ex:budi a ex:Dosen` (#1) |
+| 12 | `ex:sari a ex:Orang` | rdfs9 | `ex:Dosen rdfs:subClassOf ex:Orang` (#6) + `ex:sari a ex:Dosen` (#4) |
 
-### Tabel Turunan Triple
-
-| No. | Turunan triple | Aturan | Premis |
-|---|---|---|---|
-| 1 | `[Isi triple hasil inferensi pertama]` | `[Aturan yang digunakan]` | `[Triple premis]` |
-| 2 | `[Isi triple hasil inferensi kedua]` | `[Aturan yang digunakan]` | `[Triple premis]` |
-| 3 | `[Isi triple hasil inferensi ketiga]` | `[Aturan yang digunakan]` | `[Triple premis]` |
-
-### Hasil Pengamatan
-
-- **Jumlah tiga turunan bermakna:** `[Isi jumlah]`.
-- **Triple baru yang ditemukan pada putaran kedua:** `[Isi triple]`.
-- **Triple yang ditegaskan tetapi tidak menghasilkan turunan baru:** `[Isi triple]`.
-
-**Penjelasan:**
-
-Tidak semua triple yang ditegaskan akan menghasilkan triple baru. Suatu triple hanya dapat menghasilkan kesimpulan tambahan apabila memenuhi kondisi dari aturan inferensi yang berlaku dan terdapat premis lain yang mendukung penerapan aturan tersebut. Jika tidak ada aturan yang cocok atau kesimpulannya sudah tersedia, proses tersebut tidak menghasilkan pengetahuan baru.
+- Jumlah triple turunan bermakna: **12** (6 di putaran 1, 6 di putaran 2). Triple umum seperti `x a rdfs:Resource` dan `p a rdf:Property` serta triple refleksif tidak dihitung.
+- Triple yang baru ditemukan di putaran kedua: **7 sampai 12** (`ex:budi a ex:Pegawai`, `ex:sari a ex:Pegawai`, `ex:andi a ex:Orang`, `ex:DosenTamu rdfs:subClassOf ex:Orang`, `ex:budi a ex:Orang`, `ex:sari a ex:Orang`), karena masing-masing membutuhkan minimal satu premis hasil putaran 1.
+- Triple asserted yang tidak menurunkan apa pun, dan alasannya: `ex:andi a ex:MahasiswaBerprestasi`. Kelas `ex:MahasiswaBerprestasi` tidak punya `rdfs:subClassOf`, `rdfs:domain`, maupun `rdfs:range` di data, sehingga tidak ada aturan RDFS yang cocok dengan triple ini. Hubungan `ex:MahasiswaBerprestasi rdfs:subClassOf ex:Mahasiswa` tidak ada, dan RDFS tidak menyimpulkan keanggotaan ke arah sebaliknya.
 
 ## Langkah 2 – Tebak lalu Cek
 
@@ -187,7 +186,3 @@ Penggunaan `wdt:P279*` lebih praktis untuk kebutuhan pencarian tertentu, sedangk
 Berdasarkan praktikum Inferensi dan Penalaran, dapat dipahami bahwa Reasoner membantu memperoleh pengetahuan baru dari fakta dan aturan yang telah didefinisikan dalam graf pengetahuan. RDFS dan OWL RL memiliki kemampuan inferensi yang berbeda sehingga pemilihan profil harus disesuaikan dengan kebutuhan dan struktur ontologi.
 
 Pemisahan graf yang ditegaskan dan graf hasil inferensi juga penting untuk menjaga keterlacakan data. Selain itu, penggunaan domain, range, hierarki subclass, serta pemeriksaan konsistensi membantu memastikan bahwa hasil inferensi sesuai dengan maksud model pengetahuan yang dibuat.
-
----
-
-**Catatan pengerjaan:** Ganti semua bagian bertanda `[ ... ]` dengan hasil aktual dari file dan eksekusi praktikum. Pastikan jumlah triple, pesan galat, dan hasil query sesuai dengan keluaran Reasoner/WDQS.
