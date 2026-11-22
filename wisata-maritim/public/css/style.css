@@ -783,66 +783,160 @@ header.app-header {
 }
 
 /* ==============================================================================
-   MAIN EXPLORER LAYOUT (SIDEBAR FILTER + CARDS)
+   MAIN EXPLORER LAYOUT: FACETED FILTER DI ATAS, DAFTAR DESTINASI DI BAWAH
    ============================================================================== */
 .explorer-layout-wrapper {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 1.5rem 4rem;
-  display: grid;
-  grid-template-columns: 310px 1fr;
-  gap: 2rem;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
 }
 
-/* MOBILE FILTER TOGGLE BAR (UNTUK TAMPILAN HP) */
-.mobile-filter-trigger-bar {
-  display: none;
-  align-items: center;
-  justify-content: space-between;
+/* TOP FACETED FILTER CARD (DI ATAS DAFTAR DESTINASI) */
+.top-faceted-filter-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 0.75rem 1rem;
-  margin-bottom: 1.25rem;
-  box-shadow: var(--shadow-xs);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: var(--transition-normal);
 }
 
-.btn-toggle-mobile-filter {
+.top-filter-header {
+  padding: 1.15rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-subtle);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.top-filter-title {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.filter-header-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
   background: var(--sea-blue-subtle);
   color: var(--sea-blue);
-  border: 1px solid #bae6fd;
-  padding: 0.55rem 1rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.top-filter-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn-toggle-filter-collapse {
+  background: white;
+  border: 1.5px solid var(--border-subtle);
+  color: var(--navy-900);
+  padding: 0.5rem 0.95rem;
   border-radius: var(--radius-md);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-xs);
 }
 
-/* SIDEBAR FILTER PANEL */
-.filter-panel-card {
-  background: var(--bg-surface);
+.btn-toggle-filter-collapse:hover {
+  background: var(--sea-blue-subtle);
+  border-color: var(--sea-blue);
+  color: var(--sea-blue);
+}
+
+.top-filter-body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  transition: all 0.3s ease;
+}
+
+.top-filter-body.collapsed {
+  display: none;
+}
+
+/* BARIS 1: RANGE HARGA HORIZONTAL FULL WIDTH */
+.top-filter-row-price {
+  background: var(--bg-page);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-sm);
-  position: sticky;
-  top: 85px;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
 }
 
-.filter-panel-card::-webkit-scrollbar {
-  width: 5px;
-}
-.filter-panel-card::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 5px;
+.price-header-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
+.filter-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.price-pill-stack.horizontal-stack {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.65rem;
+}
+
+.price-pill-stack.horizontal-stack .price-pill-row {
+  margin-bottom: 0;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-md);
+  justify-content: space-between;
+}
+
+/* BARIS 2: GRID 5 KOLOM SEMANTIK (TINGKAT, ALAT, AKTIVITAS, JENIS, LOKASI) */
+.top-filter-grid-dimensions {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+.filter-col-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.filter-col-label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* Legacy & Shared Filter Elements */
 .filter-title-bar {
   display: flex;
   align-items: center;
@@ -1726,14 +1820,42 @@ footer.app-footer {
   .stat-box:nth-child(2) {
     border-right: none;
   }
-  .explorer-layout-wrapper {
-    grid-template-columns: 280px 1fr;
-    gap: 1.5rem;
+  .top-filter-grid-dimensions {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .price-pill-stack.horizontal-stack {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* SMARTPHONE & TABLET PORTRAIT (<= 900px) */
 @media (max-width: 900px) {
+  .top-filter-header {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
+
+  .top-filter-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .top-filter-body {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .top-filter-grid-dimensions {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .price-pill-stack.horizontal-stack {
+    grid-template-columns: 1fr;
+  }
+
   header.app-header {
     padding: 0.6rem 1rem;
   }

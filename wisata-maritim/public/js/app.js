@@ -395,6 +395,31 @@ function initFacetedFilterEvents() {
     });
   }
 
+  // Peralatan Select (Top Layout)
+  const eqSelect = document.getElementById('filter-equipment-select');
+  if (eqSelect) {
+    eqSelect.addEventListener('change', (e) => {
+      APP_STATE.filters.alat = e.target.value;
+      APP_STATE.currentPage = 1;
+      executeSearch();
+    });
+  }
+
+  // Toggle Collapse Panel Filter di Atas
+  const toggleCollapseBtn = document.getElementById('btn-toggle-filter-collapse');
+  const topFilterBody = document.getElementById('top-filter-body');
+  const collapseBtnText = document.getElementById('collapse-btn-text');
+
+  if (toggleCollapseBtn && topFilterBody) {
+    toggleCollapseBtn.addEventListener('click', () => {
+      const isCollapsed = topFilterBody.classList.toggle('collapsed');
+      toggleCollapseBtn.setAttribute('aria-expanded', !isCollapsed);
+      if (collapseBtnText) {
+        collapseBtnText.textContent = isCollapsed ? 'Buka Panel Filter' : 'Sembunyikan Filter';
+      }
+    });
+  }
+
   // Reset Button
   const resetBtn = document.getElementById('btn-reset-filter');
   if (resetBtn) {
