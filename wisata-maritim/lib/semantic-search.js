@@ -2,7 +2,8 @@ const STOP_WORDS = new Set([
   'untuk', 'dengan', 'dan', 'di', 'yang', 'ke', 'dari', 'tersedia', 'wisata', 'tempat',
   'cari', 'saya', 'mau', 'ada', 'atau', 'dgn', 'buat', 'yg', 'lokasi', 'destinasi',
   'rekomendasi', 'tolong', 'carikan', 'butuh', 'ingin', 'dong', 'apakah', 'spot',
-  'menyediakan', 'harga', 'budget', 'bujet', 'maksimal', 'maks', 'minimal', 'min'
+  'menyediakan', 'harga', 'budget', 'bujet', 'maksimal', 'maks', 'minimal', 'min',
+  'apa', 'saja', 'aja', 'laut', 'pantai', 'air', 'bahari', 'pesisir', 'pulau'
 ]);
 
 class SemanticSearch {
@@ -60,15 +61,18 @@ class SemanticSearch {
     }
 
     // 2. Ekstraksi Tingkat Keahlian
-    if (/pemula|beginner|baru belajar/i.test(q)) {
-      parsed.tingkatKeahlian = 'Pemula';
-      q = q.replace(/pemula|beginner|baru belajar/ig, ' ');
+    if (/di ?atas pemula|bukan pemula|setelah pemula/i.test(q)) {
+      parsed.tingkatKeahlian = 'Menengah';
+      q = q.replace(/di ?atas pemula|bukan pemula|setelah pemula/ig, ' ');
+    } else if (/mahir|expert|advanced|profesional|ahli|tingkat ahli|level ahli/i.test(q)) {
+      parsed.tingkatKeahlian = 'Mahir';
+      q = q.replace(/mahir|expert|advanced|profesional|ahli|tingkat ahli|level ahli/ig, ' ');
     } else if (/menengah|intermediate/i.test(q)) {
       parsed.tingkatKeahlian = 'Menengah';
       q = q.replace(/menengah|intermediate/ig, ' ');
-    } else if (/mahir|expert|advanced|profesional/i.test(q)) {
-      parsed.tingkatKeahlian = 'Mahir';
-      q = q.replace(/mahir|expert|advanced|profesional/ig, ' ');
+    } else if (/pemula|beginner|baru belajar/i.test(q)) {
+      parsed.tingkatKeahlian = 'Pemula';
+      q = q.replace(/pemula|beginner|baru belajar/ig, ' ');
     }
 
     // 3. Deteksi Permintaan Sewa / Ketersediaan Alat
@@ -79,22 +83,26 @@ class SemanticSearch {
 
     // 4. Deteksi Aktivitas Bahari (diproses sebelum peralatan agar snorkel/diving terdeteksi aktivitasnya)
     const actDict = [
-      { name: 'Snorkeling', terms: ['snorkeling', 'snorkel'] },
-      { name: 'Diving', terms: ['diving', 'selam', 'menyelam', 'scuba', 'freedive'] },
-      { name: 'Surfing', terms: ['surfing', 'selancar', 'berselancar'] },
-      { name: 'Berenang', terms: ['berenang', 'renang', 'mandi laut'] },
-      { name: 'Island Hopping', terms: ['island hopping', 'jelajah pulau', 'keliling pulau'] },
-      { name: 'Kano & Kayak', terms: ['kayak', 'kano'] },
-      { name: 'Wahana Air', terms: ['banana boat', 'jet ski', 'parasailing', 'water sports'] },
-      { name: 'Satwa Laut', terms: ['penyu', 'lumba-lumba', 'dolphin', 'manta', 'hiu paus', 'hiu'] },
-      { name: 'Trekking & Panjat', terms: ['trekking', 'hiking', 'panjat tebing', 'panjat'] },
-      { name: 'Sejarah & Budaya Bahari', terms: ['sejarah', 'benteng', 'budaya', 'museum', 'tugu', 'pura'] },
-      { name: 'Kuliner Laut', terms: ['kuliner', 'seafood', 'ikan bakar'] }
+      { name: 'Snorkeling', terms: ['snorkeling', 'snorkel', 'snorkling'] },
+      { name: 'Diving', terms: ['diving', 'selam', 'menyelam', 'scuba', 'freedive', 'freediving'] },
+      { name: 'Surfing', terms: ['surfing', 'selancar', 'berselancar', 'surf'] },
+      { name: 'Berenang', terms: ['berenang & berjemur', 'berenang dan berjemur', 'berenang', 'berjemur', 'renang', 'mandi laut'] },
+      { name: 'Island Hopping', terms: ['island hopping', 'jelajah pulau', 'keliling pulau', 'antar pulau'] },
+      { name: 'Kano & Kayak', terms: ['kano & kayak', 'kano dan kayak', 'kayak', 'kano', 'mendayung'] },
+      { name: 'Wahana Air', terms: ['wahana air', 'water sports', 'watersport', 'banana boat', 'jet ski', 'jetski', 'parasailing', 'wahana'] },
+      { name: 'Satwa Laut', terms: ['satwa laut', 'satwa', 'penyu', 'lumba-lumba', 'lumba', 'dolphin', 'manta', 'hiu paus', 'hiu'] },
+      { name: 'Trekking & Panjat', terms: ['trekking & panjat', 'trekking dan panjat', 'panjat tebing', 'trekking', 'hiking', 'panjat'] },
+      { name: 'Sejarah & Budaya Bahari', terms: ['sejarah & budaya bahari', 'sejarah dan budaya bahari', 'sejarah bahari', 'budaya bahari', 'sejarah', 'benteng', 'budaya', 'museum', 'tugu', 'pura', 'kapal karam'] },
+      { name: 'Kuliner Laut', terms: ['kuliner laut', 'makanan laut', 'kuliner', 'seafood', 'ikan bakar', 'kepiting', 'cumi', 'udang'] },
+      { name: 'Fotografi & Sunset', terms: ['fotografi & sunset', 'fotografi dan sunset', 'fotografi', 'sunset', 'sunrise', 'senja', 'foto'] },
+      { name: 'Camping Pantai', terms: ['camping pantai', 'berkemah pantai', 'camping', 'kemah', 'tenda', 'berkemah'] },
+      { name: 'Memancing', terms: ['memancing', 'mancing', 'fishing'] }
     ];
 
     actDict.forEach(act => {
       const match = act.terms.some(t => {
-        const re = new RegExp('\\b' + t + '\\b', 'i');
+        const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const re = new RegExp('(^|[^a-zA-Z0-9])' + escaped + '([^a-zA-Z0-9]|$)', 'i');
         return re.test(q);
       });
       if (match && !parsed.aktivitas.includes(act.name)) {
@@ -112,133 +120,138 @@ class SemanticSearch {
       { id: 'wetsuit-diving', terms: ['wetsuit', 'baju selam', 'pakaian selam'] },
       { id: 'papan-selancar', terms: ['papan selancar', 'surfboard', 'papan surfing', 'papan'] },
       { id: 'kano-kayak', terms: ['kayak', 'kano', 'dayung'] },
-      { id: 'sewa-perahu', terms: ['perahu', 'kapal', 'boat', 'jukung'] }
+      { id: 'sewa-perahu', terms: ['sewa perahu', 'sewa kapal', 'sewa boat', 'perahu jukung', 'jukung', 'perahu', 'kapal'] }
     ];
 
     eqDict.forEach(eq => {
-      const match = eq.terms.some(t => q.includes(t));
+      const match = eq.terms.some(t => {
+        const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const re = new RegExp('(^|[^a-zA-Z0-9])' + escaped + '([^a-zA-Z0-9]|$)', 'i');
+        return re.test(q);
+      });
       if (match && !parsed.peralatan.includes(eq.id)) {
         parsed.peralatan.push(eq.id);
       }
     });
 
     // Bersihkan terms aktivitas & peralatan yang sudah terdeteksi dari string sisa keywords
-    actDict.forEach(act => {
-      act.terms.forEach(t => {
-        q = q.replace(new RegExp('\\b' + t + '\\b', 'ig'), ' ');
+      // Diurutkan dari yang terpanjang ke terpendek agar frasa majemuk terhapus bersih
+      const allActTerms = actDict.flatMap(a => a.terms).sort((a, b) => b.length - a.length);
+      allActTerms.forEach(t => {
+        const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        q = q.replace(new RegExp('(^|[^a-zA-Z0-9])' + escaped + '(?=[^a-zA-Z0-9]|$)', 'ig'), ' ');
       });
-    });
 
-    eqDict.forEach(eq => {
-      eq.terms.forEach(t => {
-        q = q.replace(new RegExp('\\b' + t + '\\b', 'ig'), ' ');
-      });
-    });
-
-    // 6. Ekstraksi Fasilitas
-    const facDict = [
-      { name: 'Dive center', terms: ['dive center', 'dive shop', 'operator selam'] },
-      { name: 'Homestay', terms: ['homestay', 'penginapan', 'resort', 'hotel'] },
-      { name: 'Dermaga', terms: ['dermaga', 'pelabuhan'] },
-      { name: 'Warung', terms: ['warung', 'restoran', 'kafe'] }
-    ];
-
-    facDict.forEach(fac => {
-      const match = fac.terms.some(t => q.includes(t));
-      if (match) {
-        parsed.fasilitas.push(fac.name);
-        fac.terms.forEach(t => {
-          q = q.replace(new RegExp(t, 'ig'), ' ');
+        const allEqTerms = eqDict.flatMap(eq => eq.terms).sort((a, b) => b.length - a.length);
+        allEqTerms.forEach(t => {
+          const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          q = q.replace(new RegExp('(^|[^a-zA-Z0-9])' + escaped + '(?=[^a-zA-Z0-9]|$)', 'ig'), ' ');
         });
+
+        // 6. Ekstraksi Fasilitas
+        const facDict = [
+          { name: 'Dive center', terms: ['dive center', 'dive shop', 'operator selam'] },
+          { name: 'Homestay', terms: ['homestay', 'penginapan', 'resort', 'hotel'] },
+          { name: 'Dermaga', terms: ['dermaga', 'pelabuhan'] },
+          { name: 'Warung', terms: ['warung', 'restoran', 'kafe'] }
+        ];
+
+        facDict.forEach(fac => {
+          const match = fac.terms.some(t => q.includes(t));
+          if (match) {
+            parsed.fasilitas.push(fac.name);
+            fac.terms.forEach(t => {
+              q = q.replace(new RegExp(t, 'ig'), ' ');
+            });
+          }
+        });
+
+        // 7. Ekstraksi Wilayah
+        const wilList = ['sumatra', 'jawa', 'kalimantan', 'bali', 'nusa tenggara', 'ntb', 'ntt', 'sulawesi', 'maluku', 'papua'];
+        wilList.forEach(w => {
+          if (q.includes(w)) {
+            parsed.wilayah = w.toUpperCase();
+            q = q.replace(new RegExp(w, 'ig'), ' ');
+          }
+        });
+
+        // Sisa kata kunci bebas
+        parsed.keywords = q.split(/[^a-zA-Z0-9]+/)
+          .map(k => k.trim())
+          .filter(k => k.length > 2 && !STOP_WORDS.has(k));
+
+        return parsed;
       }
-    });
-
-    // 7. Ekstraksi Wilayah
-    const wilList = ['sumatra', 'jawa', 'kalimantan', 'bali', 'nusa tenggara', 'ntb', 'ntt', 'sulawesi', 'maluku', 'papua'];
-    wilList.forEach(w => {
-      if (q.includes(w)) {
-        parsed.wilayah = w.toUpperCase();
-        q = q.replace(new RegExp(w, 'ig'), ' ');
-      }
-    });
-
-    // Sisa kata kunci bebas
-    parsed.keywords = q.split(/[^a-zA-Z0-9]+/)
-      .map(k => k.trim())
-      .filter(k => k.length > 2 && !STOP_WORDS.has(k));
-
-    return parsed;
-  }
 
   // Generate representasi SPARQL otomatis dari parameter semantik
   generateSparqlQuery(parsed, filters = {}) {
-    let whereClauses = [
-      "?dest a maritim:DestinasiWisata .",
-      "?dest maritim:namaDestinasi ?nama .",
-      "?dest maritim:beradaDiProvinsi ?provUri .",
-      "?provUri rdfs:label ?provinsi .",
-      "?dest maritim:cocokUntukTingkat ?tingkatUri .",
-      "?tingkatUri rdfs:label ?level .",
-      "?dest maritim:hargaTiketMasuk ?hargaTiket .",
-      "?dest maritim:estimasiTotalBiaya ?totalBiaya ."
-    ];
+        let whereClauses =[
+          "?dest a maritim:DestinasiWisata .",
+          "?dest maritim:namaDestinasi ?nama .",
+          "?dest maritim:beradaDiProvinsi ?provUri .",
+          "?provUri rdfs:label ?provinsi .",
+          "?dest maritim:cocokUntukTingkat ?tingkatUri .",
+          "?tingkatUri rdfs:label ?level .",
+          "?dest maritim:hargaTiketMasuk ?hargaTiket .",
+          "?dest maritim:estimasiTotalBiaya ?totalBiaya ."
+        ];
 
-    let filterClauses = [];
+        let filterClauses =[];
 
-    const activeAktivitas = filters.aktivitas || (parsed.aktivitas && parsed.aktivitas[0]);
-    if (activeAktivitas) {
-      whereClauses.push(`?dest maritim:memilikiAktivitas data:aktivitas_${activeAktivitas.replace(/\s+/g, '_')} .`);
-    }
+        const activeAktivitas = filters.aktivitas || (parsed.aktivitas && parsed.aktivitas[0]);
+        if(activeAktivitas) {
+          whereClauses.push(`?dest maritim:memilikiAktivitas data:aktivitas_${activeAktivitas.replace(/\s+/g, '_')} .`);
+        }
 
     const activeLevel = filters.level || parsed.tingkatKeahlian;
-    if (activeLevel) {
-      whereClauses.push(`?dest maritim:cocokUntukTingkat data:Tingkat_${activeLevel} .`);
-    }
+        if(activeLevel) {
+          whereClauses.push(`?dest maritim:cocokUntukTingkat data:Tingkat_${activeLevel} .`);
+        }
 
     const activeBudget = filters.maxBudget !== undefined ? filters.maxBudget : parsed.maxBudget;
-    if (activeBudget !== null && activeBudget !== undefined) {
-      filterClauses.push(`?totalBiaya <= ${activeBudget}`);
-    }
-
-    const activeRange = filters.rangeHarga || parsed.rangeHarga;
-    if (activeRange) {
-      const rangeMap = {
-        'di-bawah-100k': 'data:Range_Under100k',
-        '100k-250k': 'data:Range_100k_250k',
-        '250k-500k': 'data:Range_250k_500k',
-        '500k-1jt': 'data:Range_500k_1M',
-        'di-atas-1jt': 'data:Range_Above1M'
-      };
-      if (rangeMap[activeRange]) {
-        whereClauses.push(`?dest maritim:kategoriHargaTotal ${rangeMap[activeRange]} .`);
+        if(activeBudget !== null && activeBudget !== undefined) {
+        filterClauses.push(`?totalBiaya <= ${activeBudget}`);
       }
-    }
 
-    const activeAlat = filters.alat || (parsed.peralatan && parsed.peralatan[0]);
-    if (activeAlat) {
-      whereClauses.push(`?dest maritim:memilikiPenawaranAlat ?penawaran .`);
-      whereClauses.push(`?penawaran maritim:alatTerkait data:alat_${activeAlat} .`);
-      if (filters.statusSewa || parsed.wajibSewa) {
-        whereClauses.push(`?penawaran maritim:statusSewa "Tersedia Disewa" .`);
+      const activeRange = filters.rangeHarga || parsed.rangeHarga;
+      if (activeRange) {
+        const rangeMap = {
+          'di-bawah-100k': 'data:Range_Under100k',
+          '100k-250k': 'data:Range_100k_250k',
+          '250k-500k': 'data:Range_250k_500k',
+          '500k-1jt': 'data:Range_500k_1M',
+          'di-atas-1jt': 'data:Range_Above1M'
+        };
+        if (rangeMap[activeRange]) {
+          whereClauses.push(`?dest maritim:kategoriHargaTotal ${rangeMap[activeRange]} .`);
+        }
       }
-    }
 
-    let sparql = `PREFIX maritim: <http://wisatamaritim.id/ontology#>\nPREFIX data: <http://wisatamaritim.id/resource/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?dest ?nama ?provinsi ?level ?hargaTiket ?totalBiaya\nWHERE {\n  ${whereClauses.join('\n  ')}`;
-    if (filterClauses.length) {
-      sparql += `\n  FILTER(${filterClauses.join(' && ')})`;
-    }
-    sparql += `\n}\nORDER BY ASC(?totalBiaya)\nLIMIT 25`;
+      const activeAlat = filters.alat || (parsed.peralatan && parsed.peralatan[0]);
+      if (activeAlat) {
+        whereClauses.push(`?dest maritim:memilikiPenawaranAlat ?penawaran .`);
+        whereClauses.push(`?penawaran maritim:alatTerkait data:alat_${activeAlat} .`);
+        if (filters.statusSewa || parsed.wajibSewa) {
+          whereClauses.push(`?penawaran maritim:statusSewa "Tersedia Disewa" .`);
+        }
+      }
 
-    return sparql;
-  }
+      let sparql = `PREFIX maritim: <http://wisatamaritim.id/ontology#>\nPREFIX data: <http://wisatamaritim.id/resource/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?dest ?nama ?provinsi ?level ?hargaTiket ?totalBiaya\nWHERE {\n  ${whereClauses.join('\n  ')}`;
+      if (filterClauses.length) {
+        sparql += `\n  FILTER(${filterClauses.join(' && ')})`;
+      }
+      sparql += `\n}\nORDER BY ASC(?totalBiaya)\nLIMIT 25`;
+
+      return sparql;
+    }
 
   // Buat Rantai Penalaran Semantik (Semantic Reasoning Chain) untuk UI
   buildReasoningSteps(parsed, filters = {}) {
-    const steps = [];
+      const steps = [];
 
-    // Step 1: Aktivitas
-    const acts = filters.aktivitas ? [filters.aktivitas] : (parsed.aktivitas || []);
-    if (acts && acts.length) {
+      // Step 1: Aktivitas
+      const acts = filters.aktivitas ? [filters.aktivitas] : (parsed.aktivitas || []);
+      if(acts && acts.length) {
       steps.push({
         type: 'aktivitas',
         icon: '🤿',
@@ -358,7 +371,7 @@ class SemanticSearch {
       // 2. Aktivitas Bahari (dari faceted atau natural language)
       const targetActs = filters.aktivitas ? [filters.aktivitas] : (parsed.aktivitas || []);
       if (targetActs && targetActs.length > 0) {
-        const hasAct = targetActs.some(a => 
+        const hasAct = targetActs.some(a =>
           d.aktivitas.some(da => da.toLowerCase().includes(a.toLowerCase())) ||
           (d.aktivitasStr || '').toLowerCase().includes(a.toLowerCase())
         );
@@ -398,8 +411,8 @@ class SemanticSearch {
       // 6. Peralatan
       const targetAlat = filters.alat || (parsed.peralatan && parsed.peralatan[0]);
       if (targetAlat) {
-        const hasEq = d.peralatan.some(eq => 
-          eq.id === targetAlat || 
+        const hasEq = d.peralatan.some(eq =>
+          eq.id === targetAlat ||
           eq.nama.toLowerCase().includes(targetAlat.toLowerCase()) ||
           eq.kategoriAktivitas.toLowerCase().includes(targetAlat.toLowerCase())
         );
@@ -416,7 +429,7 @@ class SemanticSearch {
       const targetFac = filters.fasilitas || (parsed.fasilitas && parsed.fasilitas[0]);
       if (targetFac) {
         const hasFac = d.fasilitas.some(f => f.toLowerCase().includes(targetFac.toLowerCase())) ||
-                       (d.fasilitasStr || '').toLowerCase().includes(targetFac.toLowerCase());
+          (d.fasilitasStr || '').toLowerCase().includes(targetFac.toLowerCase());
         if (!hasFac) return false;
       }
 
