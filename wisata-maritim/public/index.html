@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5">
-  <title>Indonesia Maritime Journey · Mesin Pencari Wisata Bahari Semantik</title>
+  <title>Ombak Nusantara · Mesin Pencari Wisata Bahari Semantik</title>
   <meta name="description" content="Mesin pencari wisata maritim Indonesia berbasis Web Semantik. Filter berdasarkan range harga Google, aktivitas, tingkat keahlian, persewaan alat, dan fasilitas pendukung.">
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -65,12 +66,12 @@
   <header class="app-header">
     <div class="header-container">
       <a href="#" class="brand-wrapper" onclick="switchTab('home')">
-        <div class="brand-logo-icon">
-          <svg class="svg-icon svg-icon-lg"><use href="#icon-compass"/></svg>
+        <div class="brand-logo-img-wrap">
+          <img src="images/logo.jpg" alt="Logo Ombak Nusantara" class="brand-logo-img">
         </div>
         <div class="brand-info">
-          <h1>Indonesia Maritime Journey</h1>
-          <span>Mesin Pencari Wisata Bahari Semantik · Kelompok 09</span>
+          <h1>Ombak Nusantara</h1>
+          <span>Wisata Maritim Semantik · Kelompok 09</span>
         </div>
       </a>
 
@@ -343,17 +344,17 @@
   <div class="tab-view-section" id="view-explorer" style="display:none">
     
     <!-- TOP SEARCH CONTROLS -->
-    <div style="background:var(--navy-900);padding:1.75rem 1.25rem;color:white;margin-bottom:1.5rem">
-      <div style="max-width:1400px;margin:0 auto">
-        <h2 style="font-family:var(--font-display);font-size:clamp(1.35rem, 3.2vw, 1.75rem);font-weight:800;margin-bottom:0.35rem">
+    <div style="background:var(--navy-900);padding:2.25rem 1.25rem 2rem;color:white;margin-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,0.08)">
+      <div style="max-width:920px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center">
+        <h2 style="font-family:var(--font-display);font-size:clamp(1.4rem, 3.2vw, 1.85rem);font-weight:800;margin-bottom:0.4rem;text-align:center">
           Mesin Pencari &amp; Faceted Filter Wisata Maritim
         </h2>
-        <p style="color:#94a3b8;font-size:0.85rem;max-width:700px;margin-bottom:1.15rem">
+        <p style="color:#94a3b8;font-size:0.88rem;max-width:720px;margin:0 auto 1.35rem;line-height:1.5;text-align:center">
           Sistem inferensi ontologi W3C menyaring destinasi berdasarkan ketersediaan alat, rentang budget, dan kapabilitas keahlian.
         </p>
 
-        <form id="explorer-search-form" style="display:flex;gap:0.5rem;max-width:900px;flex-wrap:wrap" role="search">
-          <div class="search-field-main" style="flex:1;background:white;min-width:240px">
+        <form id="explorer-search-form" style="display:flex;gap:0.5rem;width:100%;max-width:760px;margin:0 auto;justify-content:center;flex-wrap:wrap" role="search">
+          <div class="search-field-main" style="flex:1;background:white;min-width:240px;text-align:left">
             <svg class="svg-icon"><use href="#icon-search"/></svg>
             <input 
               type="search" 
@@ -787,11 +788,14 @@
   <footer class="app-footer">
     <div class="footer-container">
       <div class="footer-col">
-        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.75rem">
-          <div class="brand-logo-icon" style="width:32px;height:32px">
-            <svg class="svg-icon"><use href="#icon-compass"/></svg>
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
+          <div class="brand-logo-img-wrap" style="width:42px;height:42px">
+            <img src="images/logo.jpg" alt="Logo Ombak Nusantara" class="brand-logo-img">
           </div>
-          <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800">Indonesia Maritime Journey</h3>
+          <div>
+            <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:white;margin:0">Ombak Nusantara</h3>
+            <span style="font-size:0.75rem;color:#38bdf8;font-weight:600">Wisata Maritim Indonesia · Kelompok 09</span>
+          </div>
         </div>
         <p style="color:#94a3b8;font-size:0.85rem;line-height:1.6;max-width:440px">
           Sistem mesin pencari dan penjelajah pengetahuan maritim Indonesia berbasis Web Semantik. Mengintegrasikan ontologi W3C RDF Turtle, pemetaan harga Google-style, dan SPARQL triplestore engine.
@@ -820,7 +824,7 @@
     </div>
 
     <div class="footer-bottom-copy">
-      &copy; 2026 Indonesia Maritime Journey · Web Semantik Kelompok 09. All rights reserved.
+      &copy; 2026 Ombak Nusantara · Web Semantik Kelompok 09. All rights reserved.
     </div>
   </footer>
 

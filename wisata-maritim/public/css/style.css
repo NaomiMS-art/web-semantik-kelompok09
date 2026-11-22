@@ -152,6 +152,33 @@ header.app-header {
   flex-shrink: 0;
 }
 
+.brand-logo-img-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+  border: 2px solid rgba(56, 189, 248, 0.6);
+  background: var(--navy-900);
+  flex-shrink: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.brand-wrapper:hover .brand-logo-img-wrap {
+  transform: scale(1.06);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.55);
+}
+
+.brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .brand-info {
   min-width: 0;
 }
@@ -1935,6 +1962,11 @@ footer.app-footer {
 
   body {
     padding-bottom: 60px; /* Space untuk bottom navigation */
+  }
+
+  .brand-logo-img-wrap {
+    width: 36px;
+    height: 36px;
   }
 
   .brand-info h1 {
