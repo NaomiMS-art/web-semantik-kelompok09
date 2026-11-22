@@ -220,7 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initNavigation() {
-  document.querySelectorAll('.nav-link-btn[data-tab]').forEach(btn => {
+  const allNavBtns = document.querySelectorAll('.nav-link-btn[data-tab], .bottom-bar-btn[data-tab]');
+  allNavBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       switchTab(btn.dataset.tab);
@@ -239,6 +240,9 @@ function initNavigation() {
 function switchTab(tabName) {
   APP_STATE.currentTab = tabName;
   document.querySelectorAll('.nav-link-btn[data-tab]').forEach(b => {
+    b.classList.toggle('active', b.dataset.tab === tabName);
+  });
+  document.querySelectorAll('.bottom-bar-btn[data-tab]').forEach(b => {
     b.classList.toggle('active', b.dataset.tab === tabName);
   });
 
@@ -398,6 +402,41 @@ function initFacetedFilterEvents() {
       resetAllFilters();
     });
   }
+
+  // Mobile Filter Drawer Toggle, Close & Apply
+  const toggleMobileBtn = document.getElementById('btn-toggle-mobile-filter');
+  const filterPanel = document.getElementById('filter-sidebar-panel');
+  const filterBtnText = document.getElementById('mobile-filter-btn-text');
+  const closeFilterBtn = document.getElementById('btn-close-filter-mobile');
+  const applyFilterBtn = document.getElementById('btn-apply-mobile-filter');
+
+  const closeMobileDrawer = () => {
+    if (filterPanel) filterPanel.classList.remove('mobile-expanded');
+    if (filterBtnText) filterBtnText.textContent = 'Buka Filter & Kategori (6 Dimensi)';
+    document.body.style.overflow = '';
+  };
+
+  if (toggleMobileBtn && filterPanel) {
+    toggleMobileBtn.addEventListener('click', () => {
+      const isExpanded = filterPanel.classList.toggle('mobile-expanded');
+      if (filterBtnText) {
+        filterBtnText.textContent = isExpanded ? 'Tutup Filter & Kategori' : 'Buka Filter & Kategori (6 Dimensi)';
+      }
+      document.body.style.overflow = isExpanded ? 'hidden' : '';
+    });
+  }
+
+  if (closeFilterBtn) {
+    closeFilterBtn.addEventListener('click', closeMobileDrawer);
+  }
+
+  if (applyFilterBtn) {
+    applyFilterBtn.addEventListener('click', () => {
+      closeMobileDrawer();
+      const grid = document.getElementById('destinations-grid');
+      if (grid) grid.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
 }
 
 function initSortingEvents() {
@@ -483,6 +522,11 @@ async function executeSearch() {
 
     if (countLabel) {
       countLabel.textContent = `Ditemukan ${APP_STATE.totalResults} destinasi maritim`;
+    }
+
+    const mobileQuickCount = document.getElementById('mobile-results-quick-count');
+    if (mobileQuickCount) {
+      mobileQuickCount.textContent = `${APP_STATE.totalResults} spot`;
     }
 
     sortAndRenderResults();

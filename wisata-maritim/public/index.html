@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5">
   <title>Indonesia Maritime Journey · Mesin Pencari Wisata Bahari Semantik</title>
   <meta name="description" content="Mesin pencari wisata maritim Indonesia berbasis Web Semantik. Filter berdasarkan range harga Google, aktivitas, tingkat keahlian, persewaan alat, dan fasilitas pendukung.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +61,7 @@
     </symbol>
   </svg>
 
-  <!-- NAVIGATION HEADER -->
+  <!-- NAVIGATION HEADER (DESKTOP & TABLET) -->
   <header class="app-header">
     <div class="header-container">
       <a href="#" class="brand-wrapper" onclick="switchTab('home')">
@@ -105,6 +105,30 @@
     </div>
   </header>
 
+  <!-- MOBILE BOTTOM APP BAR (SEPERTI APLIKASI NATIVE TRAVELOKA / AIRBNB) -->
+  <nav class="mobile-bottom-bar" aria-label="Navigasi Mobile">
+    <button class="bottom-bar-btn active" data-tab="home">
+      <svg class="svg-icon"><use href="#icon-compass"/></svg>
+      <span>Beranda</span>
+    </button>
+    <button class="bottom-bar-btn" data-tab="explorer">
+      <svg class="svg-icon"><use href="#icon-search"/></svg>
+      <span>Jelajah</span>
+    </button>
+    <button class="bottom-bar-btn" data-tab="sparql">
+      <svg class="svg-icon"><use href="#icon-terminal"/></svg>
+      <span>SPARQL</span>
+    </button>
+    <button class="bottom-bar-btn" data-tab="ontology">
+      <svg class="svg-icon"><use href="#icon-book"/></svg>
+      <span>Ontologi</span>
+    </button>
+    <button class="bottom-bar-btn" data-tab="favorites">
+      <svg class="svg-icon"><use href="#icon-heart"/></svg>
+      <span>Favorit</span>
+    </button>
+  </nav>
+
   <!-- ==============================================================================
        HALAMAN 1: BERANDA (HOMEPAGE)
        ============================================================================== -->
@@ -130,7 +154,7 @@
               <input 
                 type="search" 
                 id="hero-search-input" 
-                placeholder="Cari aktivitas, lokasi, atau budget (cth: snorkeling pemula budget 250rb ada alat)..." 
+                placeholder="Cari aktivitas, lokasi, atau budget..." 
                 autocomplete="off"
               >
             </div>
@@ -168,7 +192,7 @@
         <div class="trending-bar">
           <span class="trending-label">
             <svg class="svg-icon svg-icon-sm"><use href="#icon-network"/></svg>
-            Rekomendasi Pencarian:
+            Rekomendasi:
           </span>
           <button type="button" class="trending-tag" data-q="tempat snorkeling untuk pemula dengan budget maksimal Rp250.000 dan menyediakan alat snorkeling">
             Snorkeling Pemula Budget &le; 250rb + Alat
@@ -186,7 +210,7 @@
       </div>
     </section>
 
-    <!-- STATS STRIP (CLEAN ENTERPRISE) -->
+    <!-- STATS STRIP -->
     <div class="stats-section-wrap">
       <div class="stats-card-container">
         <div class="stat-box">
@@ -295,7 +319,7 @@
       </div>
     </section>
 
-    <!-- HIGHLIGHT BANNER CTA KE EXPLORER -->
+    <!-- HIGHLIGHT BANNER CTA -->
     <div class="home-section-container">
       <div class="featured-strip-box">
         <div class="featured-text">
@@ -319,22 +343,22 @@
   <div class="tab-view-section" id="view-explorer" style="display:none">
     
     <!-- TOP SEARCH CONTROLS -->
-    <div style="background:var(--navy-900);padding:2rem 1.5rem;color:white;margin-bottom:2rem">
+    <div style="background:var(--navy-900);padding:1.75rem 1.25rem;color:white;margin-bottom:1.5rem">
       <div style="max-width:1400px;margin:0 auto">
-        <h2 style="font-family:var(--font-display);font-size:1.75rem;font-weight:800;margin-bottom:0.4rem">
+        <h2 style="font-family:var(--font-display);font-size:clamp(1.35rem, 3.2vw, 1.75rem);font-weight:800;margin-bottom:0.35rem">
           Mesin Pencari &amp; Faceted Filter Wisata Maritim
         </h2>
-        <p style="color:#94a3b8;font-size:0.88rem;max-width:700px;margin-bottom:1.25rem">
+        <p style="color:#94a3b8;font-size:0.85rem;max-width:700px;margin-bottom:1.15rem">
           Sistem inferensi ontologi W3C menyaring destinasi berdasarkan ketersediaan alat, rentang budget, dan kapabilitas keahlian.
         </p>
 
-        <form id="explorer-search-form" style="display:flex;gap:0.6rem;max-width:900px" role="search">
-          <div class="search-field-main" style="flex:1;background:white">
+        <form id="explorer-search-form" style="display:flex;gap:0.5rem;max-width:900px;flex-wrap:wrap" role="search">
+          <div class="search-field-main" style="flex:1;background:white;min-width:240px">
             <svg class="svg-icon"><use href="#icon-search"/></svg>
             <input 
               type="search" 
               id="explorer-search-input" 
-              placeholder="Ketik pencarian semantik (contoh: snorkeling pemula budget 250rb ada sewa alat)..." 
+              placeholder="Ketik pencarian semantik (contoh: snorkeling pemula budget 250rb ada alat)..." 
               autocomplete="off"
             >
           </div>
@@ -345,7 +369,7 @@
       </div>
     </div>
 
-    <!-- SEMANTIC REASONING PIPELINE (DYNAMIC STRIP) -->
+    <!-- SEMANTIC REASONING PIPELINE -->
     <div class="semantic-pipeline-wrap" id="semantic-reasoning-container" style="display:none">
       <div class="semantic-pipeline-card">
         <div class="pipeline-header">
@@ -355,7 +379,7 @@
           </div>
           <button type="button" class="btn-open-sparql-badge" id="btn-show-query">
             <svg class="svg-icon svg-icon-sm"><use href="#icon-terminal"/></svg>
-            <span>Lihat Query SPARQL Otomatis</span>
+            <span>Lihat Query SPARQL</span>
           </button>
         </div>
         <div class="pipeline-flow" id="reasoning-chain">
@@ -364,19 +388,30 @@
       </div>
     </div>
 
-    <!-- MAIN EXPLORER: SIDEBAR FILTER + PAGINATED CARDS -->
-    <div class="explorer-layout-wrapper" id="destinasi-explorer">
-      
-      <!-- SIDEBAR FILTER -->
-      <aside class="filter-panel-card">
+    <!-- MOBILE FILTER TRIGGER (TAMPIL DI HP) -->
+    <div class="explorer-layout-wrapper" id="destinasi-explorer" style="padding-bottom:1rem">
+      <div class="mobile-filter-trigger-bar" style="grid-column: 1 / -1;">
+        <button type="button" class="btn-toggle-mobile-filter" id="btn-toggle-mobile-filter">
+          <svg class="svg-icon"><use href="#icon-sliders"/></svg>
+          <span id="mobile-filter-btn-text">Buka Filter &amp; Kategori (6 Dimensi)</span>
+        </button>
+        <span style="font-size:0.78rem;color:var(--text-muted)" id="mobile-results-quick-count">200 spot</span>
+      </div>
+
+      <!-- SIDEBAR FILTER (ACCORDION / DRAWER COLLAPSIBLE DI MOBILE) -->
+      <aside class="filter-panel-card" id="filter-sidebar-panel">
         <div class="filter-title-bar">
           <h3>
             <svg class="svg-icon"><use href="#icon-sliders"/></svg>
             <span>Faceted Filter</span>
           </h3>
-          <button type="button" class="btn-clear-filters" id="btn-reset-filter">Reset Filter</button>
+          <div class="filter-title-actions">
+            <button type="button" class="btn-clear-filters" id="btn-reset-filter">Reset Filter</button>
+            <button type="button" class="btn-close-filter-mobile" id="btn-close-filter-mobile" aria-label="Tutup Filter">&times;</button>
+          </div>
         </div>
 
+        <div class="filter-scroll-body">
         <!-- Filter 1: Range Harga Google Style -->
         <div class="filter-block">
           <div class="filter-block-title">
@@ -498,6 +533,14 @@
             <!-- Populated by JS -->
           </select>
         </div>
+        </div>
+
+        <!-- Footer Filter Mobile (Terapkan) -->
+        <div class="filter-mobile-footer">
+          <button type="button" class="btn-search-exec" id="btn-apply-mobile-filter" style="width:100%">
+            <span>Terapkan Filter &amp; Lihat Hasil</span>
+          </button>
+        </div>
 
       </aside>
 
@@ -525,7 +568,7 @@
           <!-- Populated by JS -->
         </div>
 
-        <!-- PAGINATION BAR (TIDAK SCROLL PANJANG, GANTI SLIDE) -->
+        <!-- PAGINATION BAR -->
         <div class="pagination-controls-bar" id="pagination-controls-bar">
           <div class="pagination-info-text" id="pagination-info-text">
             Menampilkan 1 - 12 dari 200 destinasi
@@ -543,25 +586,25 @@
        HALAMAN 3: KONSOL SPARQL STUDIO
        ============================================================================== -->
   <div class="tab-view-section" id="view-sparql" style="display:none">
-    <div style="max-width:1400px;margin:2.5rem auto;padding:0 1.5rem">
+    <div style="max-width:1400px;margin:2rem auto;padding:0 1.25rem">
       <div class="filter-panel-card" style="position:static;max-height:none;margin-bottom:1.5rem">
         <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem">
           <div class="brand-logo-icon" style="width:36px;height:36px">
             <svg class="svg-icon"><use href="#icon-terminal"/></svg>
           </div>
           <div>
-            <h2 style="font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--text-main)">
+            <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--text-main)">
               Konsol Query SPARQL (W3C Endpoint)
             </h2>
             <p style="font-size:0.85rem;color:var(--text-muted)">
-              Jalankan query SPARQL langsung terhadap Triplestore Wisata Maritim. Pilih Competency Question atau ketik query kustom Anda.
+              Jalankan query SPARQL langsung terhadap Triplestore Wisata Maritim.
             </p>
           </div>
         </div>
 
         <div style="display:flex;gap:1rem;align-items:center;margin:1.25rem 0 1rem;flex-wrap:wrap">
           <label style="font-size:0.85rem;font-weight:700">Preset Competency Questions Dosen:</label>
-          <select id="sparql-preset-select" class="custom-select" style="max-width:550px">
+          <select id="sparql-preset-select" class="custom-select" style="max-width:100%">
             <!-- Populated by JS -->
           </select>
         </div>
@@ -590,15 +633,15 @@
        HALAMAN 4: ONTOLOGI RDF TURTLE (.TTL)
        ============================================================================== -->
   <div class="tab-view-section" id="view-ontology" style="display:none">
-    <div style="max-width:1400px;margin:2.5rem auto;padding:0 1.5rem">
+    <div style="max-width:1400px;margin:2rem auto;padding:0 1.25rem">
       <div class="filter-panel-card" style="position:static;max-height:none">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;flex-wrap:wrap;gap:1rem">
           <div>
-            <h2 style="font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--text-main)">
+            <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--text-main)">
               Ontologi Wisata Maritim Indonesia (maritim.ttl)
             </h2>
             <p style="font-size:0.85rem;color:var(--text-muted)">
-              Standar W3C RDF Turtle · Memuat definisi Kelas, Properti, dan Relasi Destinasi.
+              Standar W3C RDF Turtle · Definisi Kelas, Properti, dan Relasi Destinasi.
             </p>
           </div>
           <a href="/api/ontology" download="maritim.ttl" class="btn-search-exec" style="text-decoration:none">
@@ -615,7 +658,7 @@
        HALAMAN 5: FAVORIT
        ============================================================================== -->
   <div class="tab-view-section" id="view-favorites" style="display:none">
-    <div style="max-width:1400px;margin:2.5rem auto;padding:0 1.5rem">
+    <div style="max-width:1400px;margin:2rem auto;padding:0 1.25rem">
       <div class="results-control-bar" style="margin-bottom:1.5rem">
         <div class="results-stat-text">
           <h3>Koleksi Destinasi Tersimpan</h3>
@@ -646,15 +689,15 @@
     <div class="modal-tabs-header">
       <button type="button" class="modal-tab-link active" data-modaltab="info">
         <svg class="svg-icon svg-icon-sm"><use href="#icon-compass"/></svg>
-        <span>Rincian &amp; Kalkulator Budget</span>
+        <span>Rincian &amp; Budget</span>
       </button>
       <button type="button" class="modal-tab-link" data-modaltab="graph">
         <svg class="svg-icon svg-icon-sm"><use href="#icon-network"/></svg>
-        <span>Graf Pengetahuan (Knowledge Graph)</span>
+        <span>Knowledge Graph</span>
       </button>
       <button type="button" class="modal-tab-link" data-modaltab="turtle">
         <svg class="svg-icon svg-icon-sm"><use href="#icon-database"/></svg>
-        <span>RDF Triples (Turtle)</span>
+        <span>RDF Turtle</span>
       </button>
     </div>
 
