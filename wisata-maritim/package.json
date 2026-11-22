@@ -1,0 +1,24 @@
+{
+  "name": "wisata-maritim-semantik",
+  "version": "1.0.0",
+  "description": "Mesin Pencari Wisata Maritim Indonesia Berbasis Web Semantik & Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "semantic-web",
+    "wisata-maritim",
+    "sparql",
+    "rdf",
+    "faceted-search",
+    "nodejs"
+  ],
+  "author": "Kelompok 09 Web Semantik",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
