@@ -1,10 +1,10 @@
 // ==============================================================================
-// INDONESIA MARITIME JOURNEY - CLIENT CONTROLLER
-// Mesin Pencari Wisata Maritim Semantik & Knowledge Graph
+// INDONESIA MARITIME JOURNEY - CLIENT CONTROLLER (CLEAN ENTERPRISE)
+// Mesin Pencari Wisata Maritim Semantik & Knowledge Graph W3C
 // ==============================================================================
 
 const APP_STATE = {
-  currentTab: 'search', // 'search' | 'sparql' | 'ontology' | 'favorites'
+  currentTab: 'home', // 'home' | 'explorer' | 'sparql' | 'ontology' | 'favorites'
   query: '',
   filters: {
     rangeHarga: '',
@@ -18,23 +18,25 @@ const APP_STATE = {
     provinsi: '',
     wilayah: ''
   },
+  sortBy: 'rekomendasi', // 'rekomendasi' | 'termurah' | 'termahal' | 'nama'
+  currentPage: 1,
+  pageSize: 12, // 12 item per slide/halaman (tidak scroll panjang)
   results: [],
   totalResults: 0,
   reasoningSteps: [],
   sparqlQuery: '',
   facets: null,
   activeDestDetail: null,
-  calcCount: 2,
   favorites: JSON.parse(localStorage.getItem('imj_fav') || '[]'),
   history: JSON.parse(localStorage.getItem('imj_his') || '[]')
 };
 
-// Koleksi Foto Realistis Wisata Maritim Nusantara (Unsplash Curated)
+// Koleksi Foto Realistis Wisata Bahari Indonesia
 const DEST_PHOTO_MAP = [
   { match: /rubiah|iboih|sabang/i, url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80' },
-  { match: /raja ampat|piaynemo|wayag|misool|kri/i, url: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80' },
+  { match: /raja ampat|piaynemo|wayag|misool|kri|kabui/i, url: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80' },
   { match: /bunaken|siladen|lembeh/i, url: 'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=800&q=80' },
-  { match: /komodo|padar|rinca|manta point|pink beach/i, url: 'https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80' },
+  { match: /komodo|padar|rinca|manta point|pink beach|kanawa/i, url: 'https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80' },
   { match: /derawan|maratua|kakaban|sangalaki/i, url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80' },
   { match: /wakatobi|hoga|tomia/i, url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80' },
   { match: /gili trawangan|gili meno|gili air|lombok/i, url: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80' },
@@ -56,8 +58,6 @@ function getPhotoForDestination(dest) {
       return item.url;
     }
   }
-
-  // Fallback berdasarkan jenis / aktivitas
   if (dest.aktivitas.includes('Diving')) {
     return 'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=800&q=80';
   }
@@ -70,16 +70,13 @@ function getPhotoForDestination(dest) {
   if (dest.aktivitas.includes('Satwa Laut')) {
     return 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80';
   }
-  if (dest.jenisWisata.includes('Pulau') || dest.jenisWisata.includes('Kepulauan')) {
-    return 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80';
-  }
   return 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80';
 }
 
 // Preset Competency Questions untuk Konsol SPARQL
 const SPARQL_PRESETS = [
   {
-    title: "1. Snorkeling pemula budget ≤ Rp250.000 dengan alat tersedia",
+    title: "1. Snorkeling pemula budget <= Rp250.000 dengan alat tersedia",
     query: `PREFIX maritim: <http://wisatamaritim.id/ontology#>
 PREFIX data: <http://wisatamaritim.id/resource/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -193,7 +190,6 @@ LIMIT 15`
   }
 ];
 
-// Utility Helpers
 const formatRupiah = (num) => {
   if (num === null || num === undefined) return '-';
   if (num === 0) return 'Gratis';
@@ -214,8 +210,9 @@ const escapeHtml = (str) => {
 // ==============================================================================
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
-  initSearchForm();
+  initSearchForms();
   initFacetedFilterEvents();
+  initSortingEvents();
   initModalEvents();
   initSparqlConsole();
   loadFacets();
@@ -223,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initNavigation() {
-  document.querySelectorAll('.nav-btn[data-tab]').forEach(btn => {
+  document.querySelectorAll('.nav-link-btn[data-tab]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       switchTab(btn.dataset.tab);
@@ -235,14 +232,13 @@ function initNavigation() {
     themeBtn.addEventListener('click', () => {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
       document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
-      themeBtn.textContent = isDark ? '🌙' : '☀️';
     });
   }
 }
 
 function switchTab(tabName) {
   APP_STATE.currentTab = tabName;
-  document.querySelectorAll('.nav-btn[data-tab]').forEach(b => {
+  document.querySelectorAll('.nav-link-btn[data-tab]').forEach(b => {
     b.classList.toggle('active', b.dataset.tab === tabName);
   });
 
@@ -258,43 +254,65 @@ function switchTab(tabName) {
 // Quick Category Filtering from Category Cards
 window.filterByCategory = function(categoryKeyword) {
   APP_STATE.filters.jenis = categoryKeyword;
+  APP_STATE.currentPage = 1;
   const sel = document.getElementById('filter-jenis');
   if (sel) sel.value = categoryKeyword;
-  switchTab('search');
+  switchTab('explorer');
   executeSearch();
-  const explorerEl = document.getElementById('destinasi-explorer');
-  if (explorerEl) explorerEl.scrollIntoView({ behavior: 'smooth' });
 };
 
-// Search Form
-function initSearchForm() {
-  const form = document.getElementById('search-form');
-  const input = document.getElementById('search-input');
-  const heroLevel = document.getElementById('hero-quick-level');
-  const heroRange = document.getElementById('hero-quick-range');
+// Search Forms (Hero Search & Explorer Search)
+function initSearchForms() {
+  // 1. Hero Search Form
+  const heroForm = document.getElementById('hero-search-form');
+  const heroInput = document.getElementById('hero-search-input');
+  const heroLevel = document.getElementById('hero-level-select');
+  const heroRange = document.getElementById('hero-range-select');
 
-  if (form) {
-    form.addEventListener('submit', (e) => {
+  if (heroForm) {
+    heroForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      APP_STATE.query = input.value.trim();
+      APP_STATE.query = heroInput.value.trim();
       if (heroLevel && heroLevel.value) APP_STATE.filters.level = heroLevel.value;
       if (heroRange && heroRange.value) APP_STATE.filters.rangeHarga = heroRange.value;
+      APP_STATE.currentPage = 1;
+
+      // Sync to Explorer input
+      const explorerInput = document.getElementById('explorer-search-input');
+      if (explorerInput) explorerInput.value = APP_STATE.query;
+
+      switchTab('explorer');
       executeSearch();
-      document.getElementById('destinasi-explorer').scrollIntoView({ behavior: 'smooth' });
     });
   }
 
-  // Quick Chips
-  document.querySelectorAll('.chip-tag[data-q]').forEach(chip => {
-    chip.addEventListener('click', () => {
-      const q = chip.dataset.q;
-      if (input) input.value = q;
-      APP_STATE.query = q;
+  // 2. Explorer Search Form
+  const explorerForm = document.getElementById('explorer-search-form');
+  const explorerInput = document.getElementById('explorer-search-input');
+
+  if (explorerForm) {
+    explorerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      APP_STATE.query = explorerInput.value.trim();
+      APP_STATE.currentPage = 1;
       executeSearch();
-      document.getElementById('destinasi-explorer').scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  // 3. Trending Chips
+  document.querySelectorAll('.trending-tag[data-q]').forEach(tag => {
+    tag.addEventListener('click', () => {
+      const q = tag.dataset.q;
+      APP_STATE.query = q;
+      APP_STATE.currentPage = 1;
+      if (heroInput) heroInput.value = q;
+      if (explorerInput) explorerInput.value = q;
+      switchTab('explorer');
+      executeSearch();
     });
   });
 
+  // 4. Modal SPARQL Inspector
   const btnSparql = document.getElementById('btn-show-query');
   if (btnSparql) {
     btnSparql.addEventListener('click', () => {
@@ -306,54 +324,58 @@ function initSearchForm() {
 // Faceted Filter Events
 function initFacetedFilterEvents() {
   // Price Pills
-  document.querySelectorAll('.price-pill-item').forEach(pill => {
-    pill.addEventListener('click', () => {
-      const val = pill.dataset.val;
+  document.querySelectorAll('.price-pill-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const val = row.dataset.val;
       if (APP_STATE.filters.rangeHarga === val) {
         APP_STATE.filters.rangeHarga = '';
-        pill.classList.remove('active');
+        row.classList.remove('active');
       } else {
         APP_STATE.filters.rangeHarga = val;
-        document.querySelectorAll('.price-pill-item').forEach(p => p.classList.remove('active'));
-        pill.classList.add('active');
+        document.querySelectorAll('.price-pill-row').forEach(p => p.classList.remove('active'));
+        row.classList.add('active');
       }
+      APP_STATE.currentPage = 1;
       executeSearch();
     });
   });
 
-  // Price Mode Pill
-  document.querySelectorAll('.mode-pill[data-mode]').forEach(btn => {
+  // Price Mode Pill (Total vs Tiket vs Aktivitas)
+  document.querySelectorAll('.mode-tab-btn[data-mode]').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.mode-pill[data-mode]').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.mode-tab-btn[data-mode]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       APP_STATE.filters.priceType = btn.dataset.mode;
+      APP_STATE.currentPage = 1;
       executeSearch();
     });
   });
 
   // Skill Level Chips
-  document.querySelectorAll('.skill-chip').forEach(chip => {
-    chip.addEventListener('click', () => {
-      const val = chip.dataset.val;
+  document.querySelectorAll('.skill-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const val = btn.dataset.val;
       if (APP_STATE.filters.level === val) {
         APP_STATE.filters.level = '';
-        chip.classList.remove('active');
+        btn.classList.remove('active');
       } else {
         APP_STATE.filters.level = val;
-        document.querySelectorAll('.skill-chip').forEach(c => c.classList.remove('active'));
-        chip.classList.add('active');
+        document.querySelectorAll('.skill-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
       }
+      APP_STATE.currentPage = 1;
       executeSearch();
     });
   });
 
-  // Select Filters
+  // Select Inputs
   ['filter-aktivitas', 'filter-jenis', 'filter-wilayah', 'filter-provinsi'].forEach(id => {
     const el = document.getElementById(id);
     if (el) {
       el.addEventListener('change', (e) => {
         const key = id.replace('filter-', '');
         APP_STATE.filters[key] = e.target.value;
+        APP_STATE.currentPage = 1;
         executeSearch();
       });
     }
@@ -364,6 +386,7 @@ function initFacetedFilterEvents() {
   if (sewaCb) {
     sewaCb.addEventListener('change', (e) => {
       APP_STATE.filters.statusSewa = e.target.checked;
+      APP_STATE.currentPage = 1;
       executeSearch();
     });
   }
@@ -373,6 +396,17 @@ function initFacetedFilterEvents() {
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
       resetAllFilters();
+    });
+  }
+}
+
+function initSortingEvents() {
+  const sortSelect = document.getElementById('sort-select');
+  if (sortSelect) {
+    sortSelect.addEventListener('change', (e) => {
+      APP_STATE.sortBy = e.target.value;
+      APP_STATE.currentPage = 1;
+      sortAndRenderResults();
     });
   }
 }
@@ -391,17 +425,21 @@ function resetAllFilters() {
     wilayah: ''
   };
   APP_STATE.query = '';
-  const searchInput = document.getElementById('search-input');
-  if (searchInput) searchInput.value = '';
+  APP_STATE.currentPage = 1;
 
-  document.querySelectorAll('.price-pill-item').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.skill-chip').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.facet-select').forEach(sel => sel.value = '');
+  const heroInput = document.getElementById('hero-search-input');
+  if (heroInput) heroInput.value = '';
+  const explorerInput = document.getElementById('explorer-search-input');
+  if (explorerInput) explorerInput.value = '';
+
+  document.querySelectorAll('.price-pill-row').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.skill-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.custom-select').forEach(sel => sel.value = '');
   const sewaCb = document.getElementById('filter-sewa');
   if (sewaCb) sewaCb.checked = false;
 
-  const heroLevel = document.getElementById('hero-quick-level');
-  const heroRange = document.getElementById('hero-quick-range');
+  const heroLevel = document.getElementById('hero-level-select');
+  const heroRange = document.getElementById('hero-range-select');
   if (heroLevel) heroLevel.value = '';
   if (heroRange) heroRange.value = '';
 
@@ -409,14 +447,14 @@ function resetAllFilters() {
 }
 
 // ==============================================================================
-// SEARCH CLIENT & RENDERING
+// SEARCH CLIENT & PAGINATION ENGINE (SLIDE SELANJUTNYA)
 // ==============================================================================
 async function executeSearch() {
   const grid = document.getElementById('destinations-grid');
   const countLabel = document.getElementById('results-count-label');
 
   if (grid) {
-    grid.innerHTML = '<div style="grid-column:1/-1;padding:3rem 1rem;text-align:center;color:var(--text-muted)">Sedang menelusuri destinasi secara semantik...</div>';
+    grid.innerHTML = '<div style="grid-column:1/-1;padding:3rem 1rem;text-align:center;color:var(--text-muted)">Menelusuri relasi semantik...</div>';
   }
 
   const params = new URLSearchParams();
@@ -444,10 +482,10 @@ async function executeSearch() {
     renderSemanticReasoning(data.reasoningSteps);
 
     if (countLabel) {
-      countLabel.textContent = `Menampilkan ${APP_STATE.totalResults} destinasi maritim Indonesia`;
+      countLabel.textContent = `Ditemukan ${APP_STATE.totalResults} destinasi maritim`;
     }
 
-    renderDestinationCards(APP_STATE.results);
+    sortAndRenderResults();
   } catch (err) {
     console.error("Search error:", err);
     if (grid) {
@@ -456,6 +494,94 @@ async function executeSearch() {
   }
 }
 
+function sortAndRenderResults() {
+  const sorted = [...APP_STATE.results];
+
+  if (APP_STATE.sortBy === 'termurah') {
+    sorted.sort((a, b) => a.estimasiTotalPerOrang - b.estimasiTotalPerOrang);
+  } else if (APP_STATE.sortBy === 'termahal') {
+    sorted.sort((a, b) => b.estimasiTotalPerOrang - a.estimasiTotalPerOrang);
+  } else if (APP_STATE.sortBy === 'nama') {
+    sorted.sort((a, b) => a.nama.localeCompare(b.nama, 'id'));
+  }
+
+  // Hitung slide pagination (12 item per halaman)
+  const totalItems = sorted.length;
+  const totalPages = Math.ceil(totalItems / APP_STATE.pageSize) || 1;
+  if (APP_STATE.currentPage > totalPages) APP_STATE.currentPage = 1;
+
+  const startIndex = (APP_STATE.currentPage - 1) * APP_STATE.pageSize;
+  const endIndex = Math.min(startIndex + APP_STATE.pageSize, totalItems);
+  const pagedItems = sorted.slice(startIndex, endIndex);
+
+  // Update pagination info label
+  const pagedLabel = document.getElementById('results-paged-label');
+  if (pagedLabel) {
+    pagedLabel.textContent = `Halaman ${APP_STATE.currentPage} dari ${totalPages}`;
+  }
+
+  const paginationInfo = document.getElementById('pagination-info-text');
+  if (paginationInfo) {
+    paginationInfo.textContent = totalItems === 0 
+      ? 'Tidak ada destinasi yang cocok' 
+      : `Menampilkan ${startIndex + 1} - ${endIndex} dari ${totalItems} destinasi`;
+  }
+
+  renderDestinationCards(pagedItems);
+  renderPaginationControls(totalPages);
+}
+
+// Render Tombol Pagination (Previous, Next, Numbered Pages)
+function renderPaginationControls(totalPages) {
+  const container = document.getElementById('pagination-pages-list');
+  if (!container) return;
+
+  if (totalPages <= 1) {
+    container.innerHTML = '';
+    return;
+  }
+
+  let html = `
+    <button type="button" class="page-nav-btn" ${APP_STATE.currentPage === 1 ? 'disabled' : ''} onclick="changePage(${APP_STATE.currentPage - 1})">
+      <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-left"/></svg>
+      <span>Sebelumnya</span>
+    </button>
+  `;
+
+  // Window pagination [1, 2, 3...]
+  const maxButtons = 5;
+  let startPage = Math.max(1, APP_STATE.currentPage - Math.floor(maxButtons / 2));
+  let endPage = Math.min(totalPages, startPage + maxButtons - 1);
+  if (endPage - startPage < maxButtons - 1) {
+    startPage = Math.max(1, endPage - maxButtons + 1);
+  }
+
+  for (let p = startPage; p <= endPage; p++) {
+    html += `
+      <button type="button" class="page-num-btn ${p === APP_STATE.currentPage ? 'active' : ''}" onclick="changePage(${p})">
+        ${p}
+      </button>
+    `;
+  }
+
+  html += `
+    <button type="button" class="page-nav-btn" ${APP_STATE.currentPage === totalPages ? 'disabled' : ''} onclick="changePage(${APP_STATE.currentPage + 1})">
+      <span>Selanjutnya</span>
+      <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-right"/></svg>
+    </button>
+  `;
+
+  container.innerHTML = html;
+}
+
+window.changePage = function(newPage) {
+  APP_STATE.currentPage = newPage;
+  sortAndRenderResults();
+  const explorerEl = document.getElementById('destinasi-explorer');
+  if (explorerEl) explorerEl.scrollIntoView({ behavior: 'smooth' });
+};
+
+// Render Semantic Reasoning
 function renderSemanticReasoning(steps) {
   const container = document.getElementById('semantic-reasoning-container');
   const chainEl = document.getElementById('reasoning-chain');
@@ -469,30 +595,34 @@ function renderSemanticReasoning(steps) {
   container.style.display = 'block';
   chainEl.innerHTML = steps.map((step, idx) => {
     return `
-      <div class="chain-step" title="Relasi Ontologi: ${step.relation}">
-        <span style="font-size:1.15rem">${step.icon}</span>
+      <div class="pipeline-step" title="Relasi Ontologi: ${step.relation}">
         <div>
           <small>${step.title}</small>
           <strong>${escapeHtml(step.value)}</strong>
         </div>
       </div>
-      ${idx < steps.length - 1 ? '<span class="chain-arrow">➔</span>' : ''}
+      ${idx < steps.length - 1 ? '<span class="pipeline-separator"><svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-right"/></svg></span>' : ''}
     `;
   }).join('');
 }
 
+// Render Destination Cards (Bersih, Realistis, Bebas Emoji)
 function renderDestinationCards(destList) {
   const grid = document.getElementById('destinations-grid');
   if (!grid) return;
 
   if (!destList || destList.length === 0) {
     grid.innerHTML = `
-      <div style="grid-column: 1 / -1; background:var(--bg-surface); border:1px dashed var(--border-color); border-radius:var(--radius-lg); padding:3.5rem 1.5rem; text-align:center;">
-        <h4 style="font-size:1.2rem;font-weight:700;color:var(--text-title);margin-bottom:0.5rem">Tidak ada destinasi yang cocok</h4>
+      <div style="grid-column: 1 / -1; background:var(--bg-surface); border:1px dashed var(--border-subtle); border-radius:var(--radius-lg); padding:3.5rem 1.5rem; text-align:center;">
+        <h4 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:var(--text-main);margin-bottom:0.5rem">
+          Tidak ada destinasi yang cocok
+        </h4>
         <p style="color:var(--text-muted);font-size:0.88rem;max-width:500px;margin:0 auto 1.5rem">
-          Coba ubah pilihan range harga, hilangkan filter alat spesifik, atau klik tombol reset filter berikut.
+          Coba sesuaikan range harga, hilangkan pilihan peralatan tertentu, atau reset filter Anda.
         </p>
-        <button type="button" class="btn-primary-search" style="margin:0 auto" onclick="resetAllFilters()">Reset Semua Filter</button>
+        <button type="button" class="btn-search-exec" style="margin:0 auto" onclick="resetAllFilters()">
+          <span>Reset Semua Filter</span>
+        </button>
       </div>
     `;
     return;
@@ -506,51 +636,59 @@ function renderDestinationCards(destList) {
     // Tag peralatan
     const eqChips = d.peralatan.slice(0, 3).map(eq => {
       const priceText = eq.hargaSewa ? formatRupiah(eq.hargaSewa) : 'Include';
-      return `<span class="eq-chip-mini">${escapeHtml(eq.nama.split(' ')[0])} (${priceText})</span>`;
+      return `<span class="mini-gear-tag">${escapeHtml(eq.nama.split(' ')[0])} (${priceText})</span>`;
     }).join('');
 
     return `
-      <article class="dest-real-card" data-id="${d.id}">
-        <div class="card-img-banner">
+      <article class="card-destination-pro" data-id="${d.id}">
+        <div class="card-photo-banner">
           <img src="${photoUrl}" alt="${escapeHtml(d.nama)}" loading="lazy">
-          <div class="card-img-overlay">
-            <div class="card-top-badges">
-              <span class="badge-tag-pill">${escapeHtml(d.jenisWisata)}</span>
-              <button type="button" class="btn-card-heart ${isFav ? 'active' : ''}" data-fav="${d.id}" title="Favorit">
-                ${isFav ? '♥' : '♡'}
+          <div class="card-photo-overlay">
+            <div class="card-badge-row">
+              <span class="badge-tag-clean">${escapeHtml(d.jenisWisata)}</span>
+              <button type="button" class="btn-card-bookmark ${isFav ? 'active' : ''}" data-fav="${d.id}" title="Simpan Destinasi">
+                <svg class="svg-icon svg-icon-sm"><use href="#icon-heart"/></svg>
               </button>
             </div>
-            <div class="card-bottom-title">
-              <span class="dest-code-pill">${d.id} · ${escapeHtml(d.wilayah)}</span>
-              <h3 class="dest-card-name">${escapeHtml(d.nama)}</h3>
-              <span class="dest-card-location">📍 ${escapeHtml(d.lokasi)}</span>
+            <div class="card-header-titles">
+              <span class="card-code-tag">${d.id} · ${escapeHtml(d.wilayah)}</span>
+              <h3 class="card-dest-name">${escapeHtml(d.nama)}</h3>
+              <span class="card-dest-location">
+                <svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg>
+                ${escapeHtml(d.lokasi)}
+              </span>
             </div>
           </div>
         </div>
 
-        <div class="card-details-body">
-          <div class="specs-strip">
-            <span class="chip-spec ${skillClass}">🎯 Level: ${escapeHtml(d.level)}</span>
-            <span class="chip-spec price-range-badge">💰 ${escapeHtml(d.rangeHargaTotalLabel)}</span>
+        <div class="card-body-pro">
+          <div class="card-pills-row">
+            <span class="pill-info-chip ${skillClass}">
+              Level: ${escapeHtml(d.level)}
+            </span>
+            <span class="pill-info-chip price-badge">
+              Range: ${escapeHtml(d.rangeHargaTotalLabel)}
+            </span>
           </div>
 
-          <div class="equipment-box">
-            <div class="equipment-box-head">
-              <span>⚙️ Peralatan & Persewaan</span>
+          <div class="equipment-section-preview">
+            <div class="equipment-preview-head">
+              <span>Peralatan &amp; Persewaan</span>
               <small>${d.peralatan.length} Macam Alat</small>
             </div>
-            <div class="equipment-tag-cloud">
-              ${eqChips || '<span class="eq-chip-mini">Tersedia di lokasi</span>'}
+            <div class="equipment-chips-wrap">
+              ${eqChips || '<span class="mini-gear-tag">Tersedia di lokasi</span>'}
             </div>
           </div>
 
-          <div class="card-price-foot">
-            <div class="price-calc-block">
+          <div class="card-action-footer">
+            <div class="price-display-unit">
               <span>Estimasi Total / Orang</span>
               <strong>${formatRupiah(d.estimasiTotalPerOrang)}</strong>
             </div>
-            <button type="button" class="btn-open-semantic-modal" data-open="${d.id}">
-              Detail & Budget ➔
+            <button type="button" class="btn-open-detail-pro" data-open="${d.id}">
+              <span>Detail &amp; Budget</span>
+              <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-right"/></svg>
             </button>
           </div>
         </div>
@@ -558,13 +696,13 @@ function renderDestinationCards(destList) {
     `;
   }).join('');
 
-  grid.querySelectorAll('.btn-open-semantic-modal').forEach(btn => {
+  grid.querySelectorAll('.btn-open-detail-pro').forEach(btn => {
     btn.addEventListener('click', () => {
       openDestinationModal(btn.dataset.open);
     });
   });
 
-  grid.querySelectorAll('.btn-card-heart').forEach(btn => {
+  grid.querySelectorAll('.btn-card-bookmark').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       toggleFavorite(btn.dataset.fav);
@@ -582,7 +720,7 @@ async function loadFacets() {
     // Update pill counts
     const pillKeys = ['di-bawah-100k', '100k-250k', '250k-500k', '500k-1jt', 'di-atas-1jt'];
     pillKeys.forEach(k => {
-      const el = document.querySelector(`.price-pill-item[data-val="${k}"] .badge-pill-count`);
+      const el = document.querySelector(`.price-pill-row[data-val="${k}"] .pill-counter`);
       if (el && facets.rangeTotal[k] !== undefined) {
         el.textContent = facets.rangeTotal[k];
       }
@@ -637,7 +775,7 @@ async function loadFacets() {
       ];
 
       eqList.innerHTML = topEquipments.map(eq => `
-        <label class="filter-radio-item">
+        <label class="custom-radio-item">
           <input type="radio" name="filter_eq" value="${eq.id}">
           <span>${eq.name}</span>
         </label>
@@ -646,6 +784,7 @@ async function loadFacets() {
       eqList.querySelectorAll('input[name="filter_eq"]').forEach(radio => {
         radio.addEventListener('change', () => {
           APP_STATE.filters.alat = radio.checked ? radio.value : '';
+          APP_STATE.currentPage = 1;
           executeSearch();
         });
       });
@@ -669,14 +808,14 @@ function initModalEvents() {
     });
   }
 
-  document.querySelectorAll('.tab-nav-btn[data-modaltab]').forEach(btn => {
+  document.querySelectorAll('.modal-tab-link[data-modaltab]').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.tab-nav-btn[data-modaltab]').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.modal-tab-link[data-modaltab]').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('#dest-detail-modal .tab-panel').forEach(p => p.style.display = 'none');
 
       btn.classList.add('active');
       const targetPanel = document.getElementById(`panel-${btn.dataset.modaltab}`);
-      if (targetPanel) targetPanel.classList.add('active');
+      if (targetPanel) targetPanel.style.display = 'block';
 
       if (btn.dataset.modaltab === 'graph' && APP_STATE.activeDestDetail) {
         renderKnowledgeGraph(APP_STATE.activeDestDetail.knowledgeGraph);
@@ -704,37 +843,37 @@ async function openDestinationModal(destId) {
     document.getElementById('modal-header-img').src = photo;
     document.getElementById('modal-dest-code').textContent = `${d.id} · ${d.wilayah}`;
     document.getElementById('modal-dest-title').textContent = d.nama;
-    document.getElementById('modal-dest-loc').textContent = `📍 ${d.lokasi}`;
+    document.getElementById('modal-dest-loc').textContent = d.lokasi;
 
     body.innerHTML = `
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
         <div>
-          <h4 style="font-weight:700;color:var(--ocean-deep);margin-bottom:0.6rem">📌 Informasi Umum Destinasi</h4>
+          <h4 style="font-weight:700;color:var(--text-main);margin-bottom:0.6rem">Informasi Umum Destinasi</h4>
           <table class="data-table">
             <tr><th>Kabupaten / Kota</th><td>${escapeHtml(d.kabKota)}</td></tr>
             <tr><th>Provinsi / Wilayah</th><td>${escapeHtml(d.provinsi)} (${escapeHtml(d.wilayah)})</td></tr>
             <tr><th>Jenis Wisata</th><td>${escapeHtml(d.jenisWisata)}</td></tr>
-            <tr><th>Tingkat Keahlian</th><td><strong style="color:var(--ocean-blue)">${escapeHtml(d.level)}</strong></td></tr>
+            <tr><th>Tingkat Keahlian</th><td><strong style="color:var(--sea-blue)">${escapeHtml(d.level)}</strong></td></tr>
             <tr><th>Atraksi Unggulan</th><td>${escapeHtml(d.atraksi)}</td></tr>
             <tr><th>Fasilitas Pendukung</th><td>${escapeHtml(d.fasilitasStr)}</td></tr>
           </table>
         </div>
         <div>
-          <h4 style="font-weight:700;color:var(--ocean-deep);margin-bottom:0.6rem">💰 Rincian Harga & Budget</h4>
+          <h4 style="font-weight:700;color:var(--text-main);margin-bottom:0.6rem">Rincian Harga &amp; Budget</h4>
           <table class="data-table">
             <tr><th>Harga Tiket Masuk</th><td><strong style="color:#059669">${formatRupiah(d.hargaTiketMasuk)}</strong></td></tr>
             <tr><th>Kategori Range Tiket</th><td>${escapeHtml(d.rangeHargaTiketLabel)}</td></tr>
             <tr><th>Biaya Aktivitas Mulai</th><td>${d.hargaAktivitasMulai ? formatRupiah(d.hargaAktivitasMulai) : 'Sesuai sewa alat'}</td></tr>
             <tr><th>Paket Wisata / Kapal</th><td>${d.hargaPaketWisata ? formatRupiah(d.hargaPaketWisata) : '-'}</td></tr>
-            <tr><th>Estimasi Total / Orang</th><td><strong style="color:var(--ocean-blue);font-size:1.1rem">${formatRupiah(d.estimasiTotalPerOrang)}</strong></td></tr>
-            <tr><th>Kategori Range Total</th><td><span class="badge-tag-pill" style="background:#e0f2fe;color:var(--ocean-blue)">${escapeHtml(d.rangeHargaTotalLabel)}</span></td></tr>
+            <tr><th>Estimasi Total / Orang</th><td><strong style="color:var(--sea-blue);font-size:1.1rem">${formatRupiah(d.estimasiTotalPerOrang)}</strong></td></tr>
+            <tr><th>Kategori Range Total</th><td><span class="badge-tag-clean">${escapeHtml(d.rangeHargaTotalLabel)}</span></td></tr>
           </table>
         </div>
       </div>
 
       <!-- Equipment Table -->
       <div style="margin-top:1.75rem">
-        <h4 style="font-weight:700;color:var(--ocean-deep);margin-bottom:0.6rem">⚙️ Daftar Peralatan & Ketentuan Sewa</h4>
+        <h4 style="font-weight:700;color:var(--text-main);margin-bottom:0.6rem">Daftar Peralatan &amp; Ketentuan Sewa</h4>
         <div style="overflow-x:auto">
           <table class="data-table">
             <thead>
@@ -752,7 +891,7 @@ async function openDestinationModal(destId) {
                 <tr>
                   <td><strong>${escapeHtml(eq.nama)}</strong></td>
                   <td>${escapeHtml(eq.kategoriAktivitas)}</td>
-                  <td><span class="badge-tag-pill" style="background:#ecfdf5;color:#065f46">${escapeHtml(eq.dapatDisewa ? 'Tersedia Disewa' : 'Termasuk Tiket')}</span></td>
+                  <td><span class="pill-info-chip" style="background:#ecfdf5;color:#065f46">${escapeHtml(eq.dapatDisewa ? 'Tersedia Disewa' : 'Termasuk Tiket')}</span></td>
                   <td><strong>${eq.hargaSewa ? formatRupiah(eq.hargaSewa) : 'Include'}</strong></td>
                   <td>${escapeHtml(eq.tingkatKeahlian)}</td>
                   <td style="font-size:0.75rem;color:var(--text-muted)">${escapeHtml(eq.keterangan)}</td>
@@ -764,10 +903,10 @@ async function openDestinationModal(destId) {
       </div>
 
       <!-- Interactive Calculator -->
-      <div class="calc-interactive-card">
+      <div class="calc-widget-box">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:1rem">
           <div>
-            <h4 style="font-weight:800;color:var(--ocean-dark)">🧮 Simulasi Budget Rombongan & Sewa Alat</h4>
+            <h4 style="font-weight:800;color:var(--text-main)">Simulasi Budget Rombongan &amp; Sewa Alat</h4>
             <p style="font-size:0.8rem;color:var(--text-muted)">Hitung estimasi pengeluaran secara real-time berdasarkan jumlah orang dan alat yang dipilih.</p>
           </div>
           <div style="display:flex;align-items:center;gap:0.5rem">
@@ -781,7 +920,7 @@ async function openDestinationModal(destId) {
             <strong style="font-size:0.82rem;display:block;margin-bottom:0.6rem">Centang Alat yang Ingin Disewa:</strong>
             <div id="calc-eq-checkboxes" style="display:flex;flex-direction:column;gap:0.45rem;max-height:160px;overflow-y:auto">
               ${d.peralatan.filter(eq => eq.hargaSewa > 0).map(eq => `
-                <label class="filter-radio-item" style="font-size:0.8rem">
+                <label class="custom-radio-item" style="font-size:0.8rem">
                   <input type="checkbox" class="calc-cb-item" data-price="${eq.hargaSewa}" checked>
                   <span>${escapeHtml(eq.nama)} (+${formatRupiah(eq.hargaSewa)})</span>
                 </label>
@@ -791,7 +930,7 @@ async function openDestinationModal(destId) {
 
           <div style="background:white;padding:1rem;border-radius:var(--radius-md);border:1px solid #bae6fd;display:flex;flex-direction:column;justify-content:center">
             <span style="font-size:0.75rem;color:var(--text-muted)">Total Estimasi Pengeluaran:</span>
-            <strong id="calc-total-amount" style="font-size:1.6rem;color:var(--ocean-blue);font-weight:800">Rp 0</strong>
+            <strong id="calc-total-amount" style="font-family:var(--font-display);font-size:1.6rem;color:var(--sea-blue);font-weight:800">Rp 0</strong>
             <span id="calc-per-person-text" style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem">Rp 0 / orang</span>
             <div id="calc-range-result" style="margin-top:0.6rem"></div>
           </div>
@@ -801,7 +940,7 @@ async function openDestinationModal(destId) {
 
     initModalCalculator(d);
     document.getElementById('tab-dest-turtle').textContent = generateTurtleForDest(d);
-    document.querySelector('.tab-nav-btn[data-modaltab="info"]').click();
+    document.querySelector('.modal-tab-link[data-modaltab="info"]').click();
   } catch (err) {
     console.error("Gagal open modal:", err);
   }
@@ -836,7 +975,7 @@ function initModalCalculator(d) {
     else if (perPerson <= 1000000) rangeLabel = 'Rp500.000 – Rp1.000.000';
     else rangeLabel = '> Rp1.000.000';
 
-    rangeResult.innerHTML = `<span class="badge-tag-pill" style="background:#0284c7;color:white">Kategori Range: ${rangeLabel}</span>`;
+    rangeResult.innerHTML = `<span class="badge-tag-clean" style="background:#0284c7;color:white">Kategori Range: ${rangeLabel}</span>`;
   }
 
   peopleInput.addEventListener('input', calculate);
@@ -926,7 +1065,7 @@ function renderKnowledgeGraph(graphData) {
 
       const midX = (link.source.x + link.target.x) / 2;
       const midY = (link.source.y + link.target.y) / 2;
-      ctx.fillStyle = '#64748b';
+      ctx.fillStyle = '#94a3b8';
       ctx.font = '9px "Plus Jakarta Sans", sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText(link.label, midX, midY - 2);
@@ -1020,7 +1159,7 @@ async function executeSparqlQuery(queryString) {
       meta.innerHTML = `
         <span>Waktu: <strong>${data.meta.executionTimeMs} ms</strong></span> |
         <span>Hasil: <strong>${data.meta.resultCount} baris</strong></span> |
-        <span>Triples: <strong>${data.meta.totalTriples}</strong></span>
+        <span>Triples Terakses: <strong>${data.meta.totalTriples}</strong></span>
       `;
     }
 
@@ -1046,7 +1185,7 @@ async function executeSparqlQuery(queryString) {
                   if (!cell) return '<td>-</td>';
                   const val = cell.value;
                   const isUri = cell.type === 'uri';
-                  return `<td>${isUri ? `<span style="color:var(--ocean-blue)">${val.split('/').pop()}</span>` : escapeHtml(val)}</td>`;
+                  return `<td>${isUri ? `<span style="color:var(--sea-blue)">${val.split('/').pop()}</span>` : escapeHtml(val)}</td>`;
                 }).join('')}
               </tr>
             `).join('')}
@@ -1091,10 +1230,9 @@ function toggleFavorite(id) {
   }
   localStorage.setItem('imj_fav', JSON.stringify(APP_STATE.favorites));
 
-  document.querySelectorAll(`.btn-card-heart[data-fav="${id}"]`).forEach(btn => {
+  document.querySelectorAll(`.btn-card-bookmark[data-fav="${id}"]`).forEach(btn => {
     const isFav = APP_STATE.favorites.includes(id);
     btn.classList.toggle('active', isFav);
-    btn.textContent = isFav ? '♥' : '♡';
   });
 
   if (APP_STATE.currentTab === 'favorites') renderFavoritesView();
@@ -1105,7 +1243,7 @@ function renderFavoritesView() {
   if (!grid) return;
   const favItems = APP_STATE.results.filter(d => APP_STATE.favorites.includes(d.id));
   if (favItems.length === 0) {
-    grid.innerHTML = '<div style="grid-column:1/-1;padding:3rem;text-align:center;color:var(--text-muted)">Belum ada destinasi favorit. Klik tanda ♥ pada kartu destinasi.</div>';
+    grid.innerHTML = '<div style="grid-column:1/-1;padding:3rem;text-align:center;color:var(--text-muted)">Belum ada destinasi tersimpan. Klik tombol simpan pada kartu destinasi.</div>';
     return;
   }
   renderDestinationCards(favItems);

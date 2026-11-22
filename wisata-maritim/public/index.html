@@ -7,397 +7,493 @@
   <meta name="description" content="Mesin pencari wisata maritim Indonesia berbasis Web Semantik. Filter berdasarkan range harga Google, aktivitas, tingkat keahlian, persewaan alat, dan fasilitas pendukung.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- APP NAVIGATION HEADER -->
+  <!-- SVG SPRITE DEFS (SEMUA ICON BERSIH & BEBAS EMOJI) -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="icon-search" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    </symbol>
+    <symbol id="icon-terminal" viewBox="0 0 24 24">
+      <polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>
+    </symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24">
+      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/>
+    </symbol>
+    <symbol id="icon-heart" viewBox="0 0 24 24">
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+    </symbol>
+    <symbol id="icon-compass" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+    </symbol>
+    <symbol id="icon-wallet" viewBox="0 0 24 24">
+      <rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><circle cx="16" cy="15" r="1"/>
+    </symbol>
+    <symbol id="icon-target" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+    </symbol>
+    <symbol id="icon-tool" viewBox="0 0 24 24">
+      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+    </symbol>
+    <symbol id="icon-network" viewBox="0 0 24 24">
+      <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+    </symbol>
+    <symbol id="icon-sliders" viewBox="0 0 24 24">
+      <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+      <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+    </symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+      <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24">
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+    </symbol>
+    <symbol id="icon-database" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/>
+    </symbol>
+  </svg>
+
+  <!-- NAVIGATION HEADER -->
   <header class="app-header">
-    <div class="header-inner">
-      <a href="#" class="brand-logo" onclick="switchTab('search')">
-        <div class="brand-icon-wrap">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 12h20M2 17h20M2 7h20"/>
-            <circle cx="12" cy="12" r="3" fill="#f59e0b" stroke="none"/>
-          </svg>
+    <div class="header-container">
+      <a href="#" class="brand-wrapper" onclick="switchTab('home')">
+        <div class="brand-logo-icon">
+          <svg class="svg-icon svg-icon-lg"><use href="#icon-compass"/></svg>
         </div>
-        <div class="brand-text">
+        <div class="brand-info">
           <h1>Indonesia Maritime Journey</h1>
-          <span>Mesin Pencari Wisata Bahari & Web Semantik · Kelompok 09</span>
+          <span>Mesin Pencari Wisata Bahari Semantik · Kelompok 09</span>
         </div>
       </a>
 
-      <nav class="nav-links">
-        <button class="nav-btn active" data-tab="search">
-          <span>🔍</span> Mesin Pencari
+      <nav class="nav-menu">
+        <button class="nav-link-btn active" data-tab="home">
+          <svg class="svg-icon"><use href="#icon-compass"/></svg>
+          <span>Beranda</span>
         </button>
-        <button class="nav-btn" data-tab="sparql">
-          <span>⚡</span> Konsol SPARQL
+        <button class="nav-link-btn" data-tab="explorer">
+          <svg class="svg-icon"><use href="#icon-search"/></svg>
+          <span>Jelajah Destinasi</span>
         </button>
-        <button class="nav-btn" data-tab="ontology">
-          <span>📜</span> Ontologi RDF
+        <button class="nav-link-btn" data-tab="sparql">
+          <svg class="svg-icon"><use href="#icon-terminal"/></svg>
+          <span>Konsol SPARQL</span>
         </button>
-        <button class="nav-btn" data-tab="favorites">
-          <span>♥</span> Favorit
+        <button class="nav-link-btn" data-tab="ontology">
+          <svg class="svg-icon"><use href="#icon-book"/></svg>
+          <span>Ontologi RDF</span>
         </button>
-        <button class="theme-toggle-btn" id="btn-theme-toggle" title="Ganti Mode Gelap / Terang">
-          🌙
+        <button class="nav-link-btn" data-tab="favorites">
+          <svg class="svg-icon"><use href="#icon-heart"/></svg>
+          <span>Favorit</span>
         </button>
       </nav>
+
+      <div class="header-actions">
+        <button class="theme-btn" id="btn-theme-toggle" title="Ganti Mode Tampilan">
+          <svg class="svg-icon"><use href="#icon-moon"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- TAB VIEW 1: HOMEPAGE & MESIN PENCARI UTAMA -->
-  <section class="tab-view-section" id="view-search">
+  <!-- ==============================================================================
+       HALAMAN 1: BERANDA (HOMEPAGE)
+       ============================================================================== -->
+  <div class="tab-view-section" id="view-home">
     
-    <!-- REALISTIC HERO SECTION WITH CINEMATIC SEARCH -->
-    <div class="hero-real">
-      <div class="hero-container">
-        <div class="hero-pill-badge">
-          <span class="pulse-dot"></span>
-          <span>Sistem Mesin Pencari Semantik Berbasis Ontologi W3C</span>
+    <!-- HERO SECTION WITH PRO SEARCH -->
+    <section class="hero-pro">
+      <div class="hero-content-pro">
+        <div class="hero-badge-pill">
+          <span class="pulse-indicator"></span>
+          <span>Knowledge Graph &amp; In-Memory SPARQL Engine</span>
         </div>
-        <h2 class="hero-headline">Jelajahi Surga Laut Indonesia Sesuai Budget & Kemampuanmu</h2>
-        <p class="hero-subhead">
-          Temukan 200 destinasi maritim dari Sabang sampai Merauke yang terhubung cerdas berdasarkan <strong>aktivitas bahari</strong>, <strong>range harga Google</strong>, <strong>tingkat keahlian pengguna</strong>, serta <strong>ketersediaan & persewaan peralatan</strong>.
+        <h2 class="hero-title-pro">Jelajahi Wisata Bahari Nusantara Berdasarkan Budget &amp; Kemampuan</h2>
+        <p class="hero-subtitle-pro">
+          Mesin pencari semantik cerdas menghubungkan 200 destinasi maritim Indonesia dengan <strong>5 kategori range harga Google</strong>, <strong>tingkat keahlian pengguna</strong>, serta <strong>katalog peralatan &amp; persewaan</strong> lengkap.
         </p>
 
-        <!-- FLOATING HYBRID SEARCH BOX -->
-        <div class="semantic-search-card">
-          <form id="search-form" class="search-input-row" role="search">
-            <div class="search-input-field">
-              <span style="font-size:1.15rem;color:#0284c7">🔍</span>
+        <!-- PRO SEARCH BAR (PROPORSIONAL & TIDAK TERPOTONG) -->
+        <div class="search-card-pro">
+          <form id="hero-search-form" class="search-form-row" role="search">
+            <div class="search-field-main">
+              <svg class="svg-icon"><use href="#icon-search"/></svg>
               <input 
                 type="search" 
-                id="search-input" 
-                placeholder="Ketik kebutuhanmu (contoh: tempat snorkeling untuk pemula budget ≤ 250rb ada alat)..." 
+                id="hero-search-input" 
+                placeholder="Cari aktivitas, lokasi, atau budget (cth: snorkeling pemula budget 250rb ada alat)..." 
                 autocomplete="off"
               >
             </div>
 
-            <div>
-              <select id="hero-quick-level" class="search-select-field">
-                <option value="">🎯 Semua Level</option>
-                <option value="Pemula">🟢 Pemula</option>
-                <option value="Menengah">🟡 Menengah</option>
-                <option value="Mahir">🔴 Mahir</option>
+            <div class="search-field-select">
+              <svg class="svg-icon"><use href="#icon-target"/></svg>
+              <select id="hero-level-select" aria-label="Tingkat Keahlian">
+                <option value="">Semua Tingkat</option>
+                <option value="Pemula">Tingkat Pemula</option>
+                <option value="Menengah">Tingkat Menengah</option>
+                <option value="Mahir">Tingkat Mahir</option>
               </select>
             </div>
 
-            <div>
-              <select id="hero-quick-range" class="search-select-field">
-                <option value="">💰 Semua Range Harga</option>
+            <div class="search-field-select">
+              <svg class="svg-icon"><use href="#icon-wallet"/></svg>
+              <select id="hero-range-select" aria-label="Range Harga">
+                <option value="">Semua Range Harga</option>
                 <option value="di-bawah-100k">&lt; Rp100.000</option>
-                <option value="100k-250k">Rp100.000–Rp250.000</option>
-                <option value="250k-500k">Rp250.000–Rp500.000</option>
-                <option value="500k-1jt">Rp500.000–Rp1.000.000</option>
+                <option value="100k-250k">Rp100.000 – Rp250.000</option>
+                <option value="250k-500k">Rp250.000 – Rp500.000</option>
+                <option value="500k-1jt">Rp500.000 – Rp1.000.000</option>
                 <option value="di-atas-1jt">&gt; Rp1.000.000</option>
               </select>
             </div>
 
-            <button type="submit" class="btn-primary-search">
+            <button type="submit" class="btn-search-exec">
               <span>Cari Semantik</span>
-              <span>➔</span>
+              <svg class="svg-icon"><use href="#icon-arrow-right"/></svg>
             </button>
           </form>
         </div>
 
-        <!-- QUICK TRENDING QUERIES -->
-        <div class="trending-chips">
-          <span class="label">Pencarian Populer:</span>
-          <button type="button" class="chip-tag" data-q="tempat snorkeling untuk pemula dengan budget maksimal Rp250.000 dan menyediakan alat snorkeling">
-            🤿 Snorkeling Pemula budget ≤ 250rb + alat
+        <!-- TRENDING PILLS -->
+        <div class="trending-bar">
+          <span class="trending-label">
+            <svg class="svg-icon svg-icon-sm"><use href="#icon-network"/></svg>
+            Rekomendasi Pencarian:
+          </span>
+          <button type="button" class="trending-tag" data-q="tempat snorkeling untuk pemula dengan budget maksimal Rp250.000 dan menyediakan alat snorkeling">
+            Snorkeling Pemula Budget &le; 250rb + Alat
           </button>
-          <button type="button" class="chip-tag" data-q="spot diving mahir dengan sewa BCD dan tabung scuba">
-            🤿 Diving Mahir sewa BCD & Tabung
+          <button type="button" class="trending-tag" data-q="spot diving mahir dengan sewa BCD dan tabung scuba">
+            Diving Mahir Sewa BCD &amp; Tabung
           </button>
-          <button type="button" class="chip-tag" data-q="pantai surfing pemula dengan sewa papan di bawah 100rb">
-            🏄 Surfing Pemula sewa papan &lt; 100rb
+          <button type="button" class="trending-tag" data-q="pantai surfing pemula dengan sewa papan di bawah 100rb">
+            Surfing Pemula Sewa Papan &lt; 100rb
           </button>
-          <button type="button" class="chip-tag" data-q="destinasi wisata gratis di Maluku">
-            🏝️ Wisata Gratis di Maluku
+          <button type="button" class="trending-tag" data-q="destinasi wisata gratis di Maluku">
+            Wisata Gratis di Maluku
           </button>
         </div>
       </div>
-      <div class="hero-overlay-waves"></div>
-    </div>
+    </section>
 
-    <!-- STATS COUNTER STRIP -->
-    <div class="stats-banner">
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-icon" style="background:#e0f2fe;color:#0284c7">🏝️</div>
-          <div class="stat-info">
-            <strong id="stat-dest-count">200</strong>
+    <!-- STATS STRIP (CLEAN ENTERPRISE) -->
+    <div class="stats-section-wrap">
+      <div class="stats-card-container">
+        <div class="stat-box">
+          <div class="stat-icon-wrap">
+            <svg class="svg-icon svg-icon-lg"><use href="#icon-compass"/></svg>
+          </div>
+          <div class="stat-data">
+            <strong>200</strong>
             <span>Destinasi Bahari (7 Wilayah)</span>
           </div>
         </div>
-        <div class="stat-item">
-          <div class="stat-icon" style="background:#fef3c7;color:#d97706">💰</div>
-          <div class="stat-info">
-            <strong>5 Kategori</strong>
-            <span>Range Harga Google-Style</span>
+
+        <div class="stat-box">
+          <div class="stat-icon-wrap" style="color:var(--amber-accent);background:#fef3c7">
+            <svg class="svg-icon svg-icon-lg"><use href="#icon-wallet"/></svg>
+          </div>
+          <div class="stat-data">
+            <strong>5 Range</strong>
+            <span>Filter Harga Google-Style</span>
           </div>
         </div>
-        <div class="stat-item">
-          <div class="stat-icon" style="background:#d1fae5;color:#059669">⚙️</div>
-          <div class="stat-info">
-            <strong>Katalog Lengkap</strong>
-            <span>Peralatan & Status Persewaan</span>
+
+        <div class="stat-box">
+          <div class="stat-icon-wrap" style="color:var(--emerald-accent);background:#d1fae5">
+            <svg class="svg-icon svg-icon-lg"><use href="#icon-tool"/></svg>
+          </div>
+          <div class="stat-data">
+            <strong>Katalog Alat</strong>
+            <span>Status Ketersediaan &amp; Sewa</span>
           </div>
         </div>
-        <div class="stat-item">
-          <div class="stat-icon" style="background:#f3e8ff;color:#7e22ce">🕸️</div>
-          <div class="stat-info">
-            <strong id="stat-triple-count">3.950+</strong>
+
+        <div class="stat-box">
+          <div class="stat-icon-wrap" style="color:#8b5cf6;background:#f3e8ff">
+            <svg class="svg-icon svg-icon-lg"><use href="#icon-database"/></svg>
+          </div>
+          <div class="stat-data">
+            <strong>3.950+</strong>
             <span>Triples RDF Terstruktur W3C</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- SEMANTIC REASONING STRIP (DYNAMIC) -->
-    <div class="reasoning-wrapper" id="semantic-reasoning-container" style="display:none">
-      <div class="reasoning-box">
-        <div class="reasoning-top">
-          <div class="reasoning-title">
-            <span>🧠 Rantai Inferensi Web Semantik (Semantic Reasoning Chain)</span>
+    <!-- KATEGORI WISATA BAHARI -->
+    <section class="home-section-container">
+      <div class="section-title-row">
+        <div>
+          <h2>Kategori Wisata Bahari</h2>
+          <p>Eksplorasi destinasi maritim Indonesia berdasarkan fokus aktivitas.</p>
+        </div>
+        <button type="button" class="btn-open-sparql-badge" onclick="switchTab('explorer')">
+          <span>Lihat Semua Destinasi</span>
+          <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-right"/></svg>
+        </button>
+      </div>
+
+      <div class="category-cards-grid">
+        <div class="category-tile" onclick="filterByCategory('Snorkeling')">
+          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="Snorkeling" loading="lazy">
+          <div class="category-tile-content">
+            <div class="category-tile-title">Bawah Laut &amp; Snorkeling</div>
+            <div class="category-tile-subtitle">Terumbu karang dangkal</div>
           </div>
-          <button type="button" class="btn-open-semantic-modal" id="btn-show-query" style="padding:0.35rem 0.85rem;font-size:0.75rem">
-            ⚡ Lihat Syntax W3C SPARQL
+        </div>
+
+        <div class="category-tile" onclick="filterByCategory('Selam')">
+          <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80" alt="Diving Scuba" loading="lazy">
+          <div class="category-tile-content">
+            <div class="category-tile-title">Diving &amp; Scuba</div>
+            <div class="category-tile-subtitle">Bangkai kapal &amp; wall dive</div>
+          </div>
+        </div>
+
+        <div class="category-tile" onclick="filterByCategory('Selancar')">
+          <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80" alt="Surfing" loading="lazy">
+          <div class="category-tile-content">
+            <div class="category-tile-title">Surfing &amp; Selancar</div>
+            <div class="category-tile-subtitle">Ombak samudra kelas dunia</div>
+          </div>
+        </div>
+
+        <div class="category-tile" onclick="filterByCategory('Pulau')">
+          <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=600&q=80" alt="Kepulauan" loading="lazy">
+          <div class="category-tile-content">
+            <div class="category-tile-title">Kepulauan &amp; Hopping</div>
+            <div class="category-tile-subtitle">Gugusan pulau &amp; laguna</div>
+          </div>
+        </div>
+
+        <div class="category-tile" onclick="filterByCategory('Satwa Laut')">
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Satwa Laut" loading="lazy">
+          <div class="category-tile-content">
+            <div class="category-tile-title">Konservasi Satwa Laut</div>
+            <div class="category-tile-subtitle">Penyu, manta &amp; hiu paus</div>
+          </div>
+        </div>
+
+        <div class="category-tile" onclick="filterByCategory('Sejarah')">
+          <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=600&q=80" alt="Budaya Bahari" loading="lazy">
+          <div class="category-tile-content">
+            <div class="category-tile-title">Sejarah &amp; Budaya Bahari</div>
+            <div class="category-tile-subtitle">Benteng &amp; tradisi pesisir</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHT BANNER CTA KE EXPLORER -->
+    <div class="home-section-container">
+      <div class="featured-strip-box">
+        <div class="featured-text">
+          <h3>Eksplorasi dengan Sistem Faceted Filter 6 Dimensi</h3>
+          <p>
+            Gunakan filter kombinasi: <strong>Jenis Wisata + Aktivitas + Tingkat Keahlian + Range Harga + Peralatan + Fasilitas</strong> secara bersamaan untuk menemukan spot terbaik sesuai budget.
+          </p>
+        </div>
+        <button type="button" class="btn-open-explorer-cta" onclick="switchTab('explorer')">
+          <span>Buka Mesin Pencari</span>
+          <svg class="svg-icon"><use href="#icon-arrow-right"/></svg>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==============================================================================
+       HALAMAN 2: JELAJAH DESTINASI & FACETED FILTER (SEARCH ENGINE WITH SLIDES/PAGINATION)
+       ============================================================================== -->
+  <div class="tab-view-section" id="view-explorer" style="display:none">
+    
+    <!-- TOP SEARCH CONTROLS -->
+    <div style="background:var(--navy-900);padding:2rem 1.5rem;color:white;margin-bottom:2rem">
+      <div style="max-width:1400px;margin:0 auto">
+        <h2 style="font-family:var(--font-display);font-size:1.75rem;font-weight:800;margin-bottom:0.4rem">
+          Mesin Pencari &amp; Faceted Filter Wisata Maritim
+        </h2>
+        <p style="color:#94a3b8;font-size:0.88rem;max-width:700px;margin-bottom:1.25rem">
+          Sistem inferensi ontologi W3C menyaring destinasi berdasarkan ketersediaan alat, rentang budget, dan kapabilitas keahlian.
+        </p>
+
+        <form id="explorer-search-form" style="display:flex;gap:0.6rem;max-width:900px" role="search">
+          <div class="search-field-main" style="flex:1;background:white">
+            <svg class="svg-icon"><use href="#icon-search"/></svg>
+            <input 
+              type="search" 
+              id="explorer-search-input" 
+              placeholder="Ketik pencarian semantik (contoh: snorkeling pemula budget 250rb ada sewa alat)..." 
+              autocomplete="off"
+            >
+          </div>
+          <button type="submit" class="btn-search-exec">
+            <span>Cari</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- SEMANTIC REASONING PIPELINE (DYNAMIC STRIP) -->
+    <div class="semantic-pipeline-wrap" id="semantic-reasoning-container" style="display:none">
+      <div class="semantic-pipeline-card">
+        <div class="pipeline-header">
+          <div class="pipeline-title">
+            <svg class="svg-icon" style="color:var(--sea-blue)"><use href="#icon-network"/></svg>
+            <span>Inferensi Relasi Web Semantik (Semantic Reasoning Chain)</span>
+          </div>
+          <button type="button" class="btn-open-sparql-badge" id="btn-show-query">
+            <svg class="svg-icon svg-icon-sm"><use href="#icon-terminal"/></svg>
+            <span>Lihat Query SPARQL Otomatis</span>
           </button>
         </div>
-        <div class="chain-flow" id="reasoning-chain">
-          <!-- Diisi dinamis oleh JavaScript -->
+        <div class="pipeline-flow" id="reasoning-chain">
+          <!-- Populated by JavaScript -->
         </div>
       </div>
     </div>
 
-    <!-- JELAJAHI BERDASARKAN KATEGORI WISATA (CATEGORY CARDS) -->
-    <section class="categories-section">
-      <div class="section-head">
-        <div>
-          <h2>Jelajahi Berdasarkan Kategori Bahari</h2>
-          <p>Kombinasi jenis wisata dan aktivitas favorit di perairan nusantara.</p>
-        </div>
-      </div>
-
-      <div class="categories-grid">
-        <div class="cat-card" onclick="filterByCategory('Snorkeling')">
-          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="Snorkeling" loading="lazy">
-          <div class="cat-content">
-            <div class="cat-icon">🤿</div>
-            <div class="cat-title">Bawah Laut & Snorkeling</div>
-            <div class="cat-count">Karang & Biota Dangkal</div>
-          </div>
-        </div>
-
-        <div class="cat-card" onclick="filterByCategory('Selam')">
-          <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80" alt="Diving Scuba" loading="lazy">
-          <div class="cat-content">
-            <div class="cat-icon">🫧</div>
-            <div class="cat-title">Diving & Scuba</div>
-            <div class="cat-count">Bangkai Kapal & Palung</div>
-          </div>
-        </div>
-
-        <div class="cat-card" onclick="filterByCategory('Selancar')">
-          <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80" alt="Surfing" loading="lazy">
-          <div class="cat-content">
-            <div class="cat-icon">🏄</div>
-            <div class="cat-title">Surfing & Selancar</div>
-            <div class="cat-count">Ombak Samudra Kelas Dunia</div>
-          </div>
-        </div>
-
-        <div class="cat-card" onclick="filterByCategory('Pulau')">
-          <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=600&q=80" alt="Kepulauan" loading="lazy">
-          <div class="cat-content">
-            <div class="cat-icon">🏝️</div>
-            <div class="cat-title">Kepulauan & Hopping</div>
-            <div class="cat-count">Raja Ampat & Derawan</div>
-          </div>
-        </div>
-
-        <div class="cat-card" onclick="filterByCategory('Satwa Laut')">
-          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Satwa Laut" loading="lazy">
-          <div class="cat-content">
-            <div class="cat-icon">🐢</div>
-            <div class="cat-title">Konservasi Satwa Laut</div>
-            <div class="cat-count">Penyu, Manta & Hiu Paus</div>
-          </div>
-        </div>
-
-        <div class="cat-card" onclick="filterByCategory('Sejarah')">
-          <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=600&q=80" alt="Budaya Bahari" loading="lazy">
-          <div class="cat-content">
-            <div class="cat-icon">🏰</div>
-            <div class="cat-title">Sejarah & Budaya Bahari</div>
-            <div class="cat-count">Benteng & Kapal Pinisi</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION CARA KERJA WEB SEMANTIK (EDUKATIF & MENARIK) -->
-    <section class="workflow-section">
-      <div class="workflow-container">
-        <div style="text-align:center;max-width:700px;margin:0 auto">
-          <h2 style="font-family:var(--font-serif);font-size:2rem;color:var(--text-title);margin-bottom:0.5rem">
-            Bagaimana Web Semantik Memahami Kebutuhan Anda?
-          </h2>
-          <p style="color:var(--text-muted);font-size:0.92rem">
-            Bukan sekadar pencocokan teks kata biasa, sistem menghubungkan relasi antar-entitas ontologi untuk hasil yang akurat.
-          </p>
-        </div>
-
-        <div class="workflow-steps-grid">
-          <div class="workflow-card">
-            <div class="step-num-badge">1</div>
-            <h4>Pengenalan Konteks</h4>
-            <p>Sistem memproses input teks Anda untuk mengidentifikasi aktivitas bahari, tingkat kemampuan, batasan budget, dan alat yang dibutuhkan.</p>
-          </div>
-
-          <div class="workflow-card">
-            <div class="step-num-badge">2</div>
-            <h4>Pemetaan Ontologi RDF</h4>
-            <p>Parameter dihubungkan ke kelas ontologi: <code>maritim:DestinasiWisata</code>, <code>maritim:Aktivitas</code>, <code>maritim:PenawaranAlat</code>, dan <code>maritim:KategoriRangeHarga</code>.</p>
-          </div>
-
-          <div class="workflow-card">
-            <div class="step-num-badge">3</div>
-            <h4>Eksekusi Query SPARQL</h4>
-            <p>Mesin semantik mengeksekusi query SPARQL pada triplestore W3C untuk menelusuri destinasi yang memenuhi seluruh relasi secara bersamaan.</p>
-          </div>
-
-          <div class="workflow-card">
-            <div class="step-num-badge">4</div>
-            <h4>Hasil Presisi & Graf</h4>
-            <p>Menampilkan destinasi yang sesuai, rincian biaya sewa peralatan, kalkulator rombongan, serta visualisasi graf simpul interaktif.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MAIN APP CONTAINER (FACETED FILTER + CARDS GRID) -->
-    <div class="app-container" id="destinasi-explorer">
+    <!-- MAIN EXPLORER: SIDEBAR FILTER + PAGINATED CARDS -->
+    <div class="explorer-layout-wrapper" id="destinasi-explorer">
       
-      <!-- FACETED FILTER SIDEBAR -->
-      <aside class="filter-sidebar">
-        <div class="filter-top-bar">
-          <h3><span>🎛️</span> Faceted Filter</h3>
-          <button type="button" class="btn-reset-text" id="btn-reset-filter">↻ Reset Semua</button>
+      <!-- SIDEBAR FILTER -->
+      <aside class="filter-panel-card">
+        <div class="filter-title-bar">
+          <h3>
+            <svg class="svg-icon"><use href="#icon-sliders"/></svg>
+            <span>Faceted Filter</span>
+          </h3>
+          <button type="button" class="btn-clear-filters" id="btn-reset-filter">Reset Filter</button>
         </div>
 
-        <!-- Group 1: Range Harga Google Style -->
-        <div class="facet-group">
-          <div class="facet-label">
-            <span>💰 Range Harga (Google Style)</span>
+        <!-- Filter 1: Range Harga Google Style -->
+        <div class="filter-block">
+          <div class="filter-block-title">
+            <span>Range Harga (Google-Style)</span>
           </div>
 
-          <div class="price-mode-toggle">
-            <button type="button" class="mode-pill active" data-mode="total">Total Estimasi</button>
-            <button type="button" class="mode-pill" data-mode="tiket">Tiket Masuk</button>
-            <button type="button" class="mode-pill" data-mode="aktivitas">Aktivitas</button>
+          <div class="price-mode-nav">
+            <button type="button" class="mode-tab-btn active" data-mode="total">Total Biaya</button>
+            <button type="button" class="mode-tab-btn" data-mode="tiket">Tiket Masuk</button>
+            <button type="button" class="mode-tab-btn" data-mode="aktivitas">Aktivitas</button>
           </div>
 
-          <div class="price-pill-list">
-            <div class="price-pill-item" data-val="di-bawah-100k">
+          <div class="price-pill-stack">
+            <div class="price-pill-row" data-val="di-bawah-100k">
               <span>&lt; Rp100.000</span>
-              <span class="badge-pill-count">0</span>
+              <span class="pill-counter">0</span>
             </div>
-            <div class="price-pill-item" data-val="100k-250k">
+            <div class="price-pill-row" data-val="100k-250k">
               <span>Rp100.000 – Rp250.000</span>
-              <span class="badge-pill-count">0</span>
+              <span class="pill-counter">0</span>
             </div>
-            <div class="price-pill-item" data-val="250k-500k">
+            <div class="price-pill-row" data-val="250k-500k">
               <span>Rp250.000 – Rp500.000</span>
-              <span class="badge-pill-count">0</span>
+              <span class="pill-counter">0</span>
             </div>
-            <div class="price-pill-item" data-val="500k-1jt">
+            <div class="price-pill-row" data-val="500k-1jt">
               <span>Rp500.000 – Rp1.000.000</span>
-              <span class="badge-pill-count">0</span>
+              <span class="pill-counter">0</span>
             </div>
-            <div class="price-pill-item" data-val="di-atas-1jt">
+            <div class="price-pill-row" data-val="di-atas-1jt">
               <span>&gt; Rp1.000.000</span>
-              <span class="badge-pill-count">0</span>
+              <span class="pill-counter">0</span>
             </div>
           </div>
         </div>
 
-        <!-- Group 2: Tingkat Keahlian Pengguna -->
-        <div class="facet-group">
-          <div class="facet-label">
-            <span>🎯 Tingkat Keahlian</span>
+        <!-- Filter 2: Tingkat Keahlian Pengguna -->
+        <div class="filter-block">
+          <div class="filter-block-title">
+            <span>Tingkat Keahlian</span>
           </div>
-          <div class="skill-level-grid">
-            <div class="skill-chip" data-val="Pemula">🟢 Pemula</div>
-            <div class="skill-chip" data-val="Menengah">🟡 Menengah</div>
-            <div class="skill-chip" data-val="Mahir">🔴 Mahir</div>
+          <div class="skill-grid-row">
+            <div class="skill-btn" data-val="Pemula">
+              <span class="status-dot" style="background:#10b981"></span>
+              <span>Pemula</span>
+            </div>
+            <div class="skill-btn" data-val="Menengah">
+              <span class="status-dot" style="background:#f59e0b"></span>
+              <span>Menengah</span>
+            </div>
+            <div class="skill-btn" data-val="Mahir">
+              <span class="status-dot" style="background:#ef4444"></span>
+              <span>Mahir</span>
+            </div>
           </div>
         </div>
 
-        <!-- Group 3: Peralatan & Ketersediaan Sewa -->
-        <div class="facet-group">
-          <div class="facet-label">
-            <span>⚙️ Peralatan Tersedia / Disewa</span>
+        <!-- Filter 3: Peralatan & Ketersediaan Sewa -->
+        <div class="filter-block">
+          <div class="filter-block-title">
+            <span>Peralatan Bahari</span>
           </div>
-          <div class="equipment-list-scroll" id="filter-equipment-list">
+          <div class="filter-eq-scroll" id="filter-equipment-list">
             <!-- Populated by JS -->
           </div>
-          <div style="margin-top:0.75rem;padding-top:0.6rem;border-top:1px dashed var(--border-color)">
-            <label class="filter-radio-item" style="font-weight:700">
+          <div style="margin-top:0.75rem;padding-top:0.6rem;border-top:1px dashed var(--border-subtle)">
+            <label class="custom-radio-item" style="font-weight:700">
               <input type="checkbox" id="filter-sewa">
               <span>Wajib Ada Persewaan Alat</span>
             </label>
           </div>
         </div>
 
-        <!-- Group 4: Aktivitas Bahari -->
-        <div class="facet-group">
-          <div class="facet-label">
-            <span>🤿 Aktivitas Bahari</span>
+        <!-- Filter 4: Aktivitas Bahari -->
+        <div class="filter-block">
+          <div class="filter-block-title">
+            <span>Aktivitas Bahari</span>
           </div>
-          <select class="facet-select" id="filter-aktivitas">
+          <select class="custom-select" id="filter-aktivitas">
             <option value="">Semua Aktivitas</option>
             <!-- Populated by JS -->
           </select>
         </div>
 
-        <!-- Group 5: Jenis Wisata -->
-        <div class="facet-group">
-          <div class="facet-label">
-            <span>🏖️ Jenis Wisata</span>
+        <!-- Filter 5: Jenis Wisata -->
+        <div class="filter-block">
+          <div class="filter-block-title">
+            <span>Jenis Wisata</span>
           </div>
-          <select class="facet-select" id="filter-jenis">
+          <select class="custom-select" id="filter-jenis">
             <option value="">Semua Jenis Wisata</option>
             <option value="Snorkeling">Wisata Bawah Laut / Snorkeling</option>
             <option value="Selam">Wisata Selam (Diving)</option>
-            <option value="Pantai">Wisata Pantai & Pesisir</option>
-            <option value="Pulau">Kepulauan & Island Hopping</option>
+            <option value="Pantai">Wisata Pantai &amp; Pesisir</option>
+            <option value="Pulau">Kepulauan &amp; Island Hopping</option>
             <option value="Selancar">Selancar (Surfing)</option>
-            <option value="Sejarah">Sejarah & Budaya Bahari</option>
-            <option value="Konservasi">Konservasi & Satwa Laut</option>
+            <option value="Sejarah">Sejarah &amp; Budaya Bahari</option>
+            <option value="Konservasi">Konservasi &amp; Satwa Laut</option>
           </select>
         </div>
 
-        <!-- Group 6: Wilayah & Lokasi -->
-        <div class="facet-group">
-          <div class="facet-label">
-            <span>🗺️ Wilayah Indonesia</span>
+        <!-- Filter 6: Wilayah & Lokasi -->
+        <div class="filter-block">
+          <div class="filter-block-title">
+            <span>Wilayah Indonesia</span>
           </div>
-          <select class="facet-select" id="filter-wilayah">
+          <select class="custom-select" id="filter-wilayah">
             <option value="">Semua Wilayah</option>
             <!-- Populated by JS -->
           </select>
         </div>
 
-        <div class="facet-group">
-          <div class="facet-label">
-            <span>📍 Provinsi</span>
+        <div class="filter-block">
+          <div class="filter-block-title">
+            <span>Provinsi</span>
           </div>
-          <select class="facet-select" id="filter-provinsi">
+          <select class="custom-select" id="filter-provinsi">
             <option value="">Semua Provinsi</option>
             <!-- Populated by JS -->
           </select>
@@ -405,174 +501,219 @@
 
       </aside>
 
-      <!-- RESULTS AREA -->
-      <main class="main-results-area">
-        <div class="results-header-box">
-          <div class="results-header-info">
+      <!-- RESULTS AREA WITH SLIDE / PAGINATION -->
+      <main class="results-main-column">
+        <div class="results-control-bar">
+          <div class="results-stat-text">
             <h3 id="results-count-label">Menampilkan destinasi maritim</h3>
-            <p>Setiap destinasi terhubung dengan ontologi RDF/OWL dan dapat dianalisis secara semantik.</p>
+            <p id="results-paged-label">Halaman 1</p>
           </div>
-          <div>
-            <a href="/api/ontology" target="_blank" class="btn-open-semantic-modal" style="text-decoration:none">
-              📥 Unduh Ontologi maritim.ttl
-            </a>
+
+          <div class="results-sorting-wrap">
+            <label for="sort-select">Urutkan:</label>
+            <select class="custom-select" id="sort-select" style="width:auto;padding:0.45rem 0.85rem">
+              <option value="rekomendasi">Relevansi / Rekomendasi</option>
+              <option value="termurah">Biaya Termurah</option>
+              <option value="termahal">Biaya Tertinggi</option>
+              <option value="nama">Nama (A-Z)</option>
+            </select>
           </div>
         </div>
 
-        <!-- DESTINATIONS GRID -->
-        <div class="destinations-grid" id="destinations-grid">
+        <!-- CARDS GRID -->
+        <div class="destinations-card-grid" id="destinations-grid">
           <!-- Populated by JS -->
+        </div>
+
+        <!-- PAGINATION BAR (TIDAK SCROLL PANJANG, GANTI SLIDE) -->
+        <div class="pagination-controls-bar" id="pagination-controls-bar">
+          <div class="pagination-info-text" id="pagination-info-text">
+            Menampilkan 1 - 12 dari 200 destinasi
+          </div>
+          <div class="pagination-pages-list" id="pagination-pages-list">
+            <!-- Populated by JS -->
+          </div>
         </div>
       </main>
 
     </div>
-  </section>
+  </div>
 
-  <!-- TAB VIEW 2: SPARQL CONSOLE -->
-  <section class="tab-view-section" id="view-sparql" style="display:none">
-    <div style="max-width:1300px;margin:2rem auto;padding:0 1.5rem">
-      <div class="filter-sidebar" style="position:static;max-height:none;margin-bottom:1.5rem">
-        <h2 style="font-family:var(--font-serif);font-size:1.6rem;color:var(--text-title);margin-bottom:0.5rem">
-          ⚡ Konsol Query SPARQL (W3C Endpoint)
-        </h2>
-        <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:1.2rem">
-          Jalankan query SPARQL langsung terhadap Triplestore Wisata Maritim. Pilih Competency Question atau ketik query kustom.
-        </p>
+  <!-- ==============================================================================
+       HALAMAN 3: KONSOL SPARQL STUDIO
+       ============================================================================== -->
+  <div class="tab-view-section" id="view-sparql" style="display:none">
+    <div style="max-width:1400px;margin:2.5rem auto;padding:0 1.5rem">
+      <div class="filter-panel-card" style="position:static;max-height:none;margin-bottom:1.5rem">
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem">
+          <div class="brand-logo-icon" style="width:36px;height:36px">
+            <svg class="svg-icon"><use href="#icon-terminal"/></svg>
+          </div>
+          <div>
+            <h2 style="font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--text-main)">
+              Konsol Query SPARQL (W3C Endpoint)
+            </h2>
+            <p style="font-size:0.85rem;color:var(--text-muted)">
+              Jalankan query SPARQL langsung terhadap Triplestore Wisata Maritim. Pilih Competency Question atau ketik query kustom Anda.
+            </p>
+          </div>
+        </div>
 
-        <div style="display:flex;gap:1rem;align-items:center;margin-bottom:1rem;flex-wrap:wrap">
-          <label style="font-size:0.85rem;font-weight:700">Preset Query Tugas Dosen:</label>
-          <select id="sparql-preset-select" class="facet-select" style="max-width:550px">
+        <div style="display:flex;gap:1rem;align-items:center;margin:1.25rem 0 1rem;flex-wrap:wrap">
+          <label style="font-size:0.85rem;font-weight:700">Preset Competency Questions Dosen:</label>
+          <select id="sparql-preset-select" class="custom-select" style="max-width:550px">
             <!-- Populated by JS -->
           </select>
         </div>
 
-        <textarea id="sparql-query-input" class="code-block" style="width:100%;height:220px;resize:vertical;font-size:0.85rem;border:none;outline:none" spellcheck="false"></textarea>
+        <textarea id="sparql-query-input" class="code-editor-look" style="width:100%;height:220px;resize:vertical" spellcheck="false"></textarea>
 
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;flex-wrap:wrap;gap:1rem">
           <div id="sparql-meta-info" style="font-size:0.82rem;color:var(--text-muted)"></div>
-          <button type="button" id="btn-run-sparql" class="btn-primary-search">
-            <span>▶ Jalankan SPARQL</span>
+          <button type="button" id="btn-run-sparql" class="btn-search-exec">
+            <svg class="svg-icon"><use href="#icon-terminal"/></svg>
+            <span>Jalankan Query SPARQL</span>
           </button>
         </div>
       </div>
 
-      <div class="filter-sidebar" style="position:static;max-height:none">
-        <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:0.85rem">Hasil Query SPARQL (Tabel Data)</h3>
+      <div class="filter-panel-card" style="position:static;max-height:none">
+        <h3 style="font-size:1.05rem;font-weight:800;margin-bottom:0.85rem">Hasil Eksekusi SPARQL</h3>
         <div id="sparql-results-container">
-          <p style="color:var(--text-muted);font-size:0.85rem">Pilih preset dan klik "Jalankan SPARQL" untuk mengeksekusi.</p>
+          <p style="color:var(--text-muted);font-size:0.85rem">Pilih preset dan klik tombol "Jalankan Query SPARQL" untuk mengeksekusi.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- TAB VIEW 3: ONTOLOGY VIEWER -->
-  <section class="tab-view-section" id="view-ontology" style="display:none">
-    <div style="max-width:1300px;margin:2rem auto;padding:0 1.5rem">
-      <div class="filter-sidebar" style="position:static;max-height:none">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:1rem">
+  <!-- ==============================================================================
+       HALAMAN 4: ONTOLOGI RDF TURTLE (.TTL)
+       ============================================================================== -->
+  <div class="tab-view-section" id="view-ontology" style="display:none">
+    <div style="max-width:1400px;margin:2.5rem auto;padding:0 1.5rem">
+      <div class="filter-panel-card" style="position:static;max-height:none">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;flex-wrap:wrap;gap:1rem">
           <div>
-            <h2 style="font-family:var(--font-serif);font-size:1.6rem;color:var(--text-title);margin-bottom:0.3rem">
-              📜 Ontologi Wisata Maritim Indonesia (maritim.ttl)
+            <h2 style="font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--text-main)">
+              Ontologi Wisata Maritim Indonesia (maritim.ttl)
             </h2>
             <p style="font-size:0.85rem;color:var(--text-muted)">
-              Standar W3C RDF Turtle (Memuat definisi Kelas, Properti, dan Relasi Destinasi).
+              Standar W3C RDF Turtle · Memuat definisi Kelas, Properti, dan Relasi Destinasi.
             </p>
           </div>
-          <a href="/api/ontology" download="maritim.ttl" class="btn-primary-search" style="text-decoration:none">
-            📥 Unduh File maritim.ttl
+          <a href="/api/ontology" download="maritim.ttl" class="btn-search-exec" style="text-decoration:none">
+            <svg class="svg-icon"><use href="#icon-book"/></svg>
+            <span>Unduh File maritim.ttl</span>
           </a>
         </div>
-        <pre class="code-block" id="ontology-code-viewer">Memuat ontologi...</pre>
+        <pre class="code-editor-look" id="ontology-code-viewer">Memuat ontologi RDF...</pre>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- TAB VIEW 4: FAVORITES -->
-  <section class="tab-view-section" id="view-favorites" style="display:none">
-    <div style="max-width:1300px;margin:2rem auto;padding:0 1.5rem">
-      <div class="results-header-box" style="margin-bottom:1.5rem">
-        <div class="results-header-info">
-          <h3>Destinasi Favorit Tersimpan</h3>
-          <p>Daftar destinasi yang Anda tandai dengan hati tersimpan secara lokal di browser.</p>
+  <!-- ==============================================================================
+       HALAMAN 5: FAVORIT
+       ============================================================================== -->
+  <div class="tab-view-section" id="view-favorites" style="display:none">
+    <div style="max-width:1400px;margin:2.5rem auto;padding:0 1.5rem">
+      <div class="results-control-bar" style="margin-bottom:1.5rem">
+        <div class="results-stat-text">
+          <h3>Koleksi Destinasi Tersimpan</h3>
+          <p>Destinasi yang Anda tandai dengan tombol simpan tersimpan pada browser Anda.</p>
         </div>
       </div>
-      <div class="destinations-grid" id="favorites-cards-grid">
+      <div class="destinations-card-grid" id="favorites-cards-grid">
         <!-- Populated by JS -->
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- MODAL DETAIL DESTINASI, KALKULATOR & GRAF SEMANTIK -->
+  <!-- ==============================================================================
+       MODAL DETAIL DESTINASI, KALKULATOR & GRAF SEMANTIK
+       ============================================================================== -->
   <dialog class="custom-modal" id="dest-detail-modal">
-    <button type="button" class="modal-close-x" id="modal-close-btn" title="Tutup">✕</button>
-    <div class="modal-header-hero">
+    <button type="button" class="modal-close-trigger" id="modal-close-btn" title="Tutup Modal">&times;</button>
+    <div class="modal-hero-cover">
       <img id="modal-header-img" src="" alt="Hero Destination">
-      <div class="modal-header-info">
-        <span class="dest-code-pill" id="modal-dest-code">SMT-01</span>
+      <div class="modal-hero-text">
+        <span class="card-code-tag" id="modal-dest-code">SMT-01</span>
         <h2 id="modal-dest-title">Nama Destinasi</h2>
         <span style="font-size:0.85rem;opacity:0.9" id="modal-dest-loc">Lokasi, Provinsi</span>
       </div>
     </div>
 
     <!-- Modal Tabs -->
-    <div class="modal-tab-nav">
-      <button type="button" class="tab-nav-btn active" data-modaltab="info">📋 Rincian & Kalkulator Budget</button>
-      <button type="button" class="tab-nav-btn" data-modaltab="graph">🕸️ Graf Pengetahuan (Knowledge Graph)</button>
-      <button type="button" class="tab-nav-btn" data-modaltab="turtle">📄 RDF Triples (Turtle)</button>
+    <div class="modal-tabs-header">
+      <button type="button" class="modal-tab-link active" data-modaltab="info">
+        <svg class="svg-icon svg-icon-sm"><use href="#icon-compass"/></svg>
+        <span>Rincian &amp; Kalkulator Budget</span>
+      </button>
+      <button type="button" class="modal-tab-link" data-modaltab="graph">
+        <svg class="svg-icon svg-icon-sm"><use href="#icon-network"/></svg>
+        <span>Graf Pengetahuan (Knowledge Graph)</span>
+      </button>
+      <button type="button" class="modal-tab-link" data-modaltab="turtle">
+        <svg class="svg-icon svg-icon-sm"><use href="#icon-database"/></svg>
+        <span>RDF Triples (Turtle)</span>
+      </button>
     </div>
 
-    <div class="modal-scroll-body" id="modal-detail-body">
+    <div class="modal-content-scroll" id="modal-detail-body">
       <!-- Panel 1: Info & Kalkulator -->
       <div class="tab-panel active" id="panel-info">
         <div id="tab-dest-info"></div>
       </div>
 
       <!-- Panel 2: Knowledge Graph Canvas -->
-      <div class="tab-panel" id="panel-graph">
+      <div class="tab-panel" id="panel-graph" style="display:none">
         <div style="margin-bottom:0.75rem">
-          <h4 style="font-weight:700;color:var(--ocean-deep)">Visualisasi Relasi Web Semantik</h4>
+          <h4 style="font-weight:700;color:var(--text-main)">Visualisasi Relasi Web Semantik</h4>
           <p style="font-size:0.8rem;color:var(--text-muted)">
             Graf interaktif ini menunjukkan keterhubungan entitas destinasi dengan aktivitas, tingkat keahlian, range harga, peralatan sewa, fasilitas, dan provinsi. Klik dan geser simpul untuk eksplorasi.
           </p>
         </div>
         <div class="kg-canvas-container">
           <canvas id="kg-canvas"></canvas>
-          <div class="kg-legend-strip">
-            <span><i class="legend-color-dot" style="background:#0284c7"></i> Destinasi</span>
-            <span><i class="legend-color-dot" style="background:#10b981"></i> Tingkat Keahlian</span>
-            <span><i class="legend-color-dot" style="background:#f59e0b"></i> Range Harga</span>
-            <span><i class="legend-color-dot" style="background:#3b82f6"></i> Aktivitas</span>
-            <span><i class="legend-color-dot" style="background:#ec4899"></i> Peralatan Sewa</span>
-            <span><i class="legend-color-dot" style="background:#8b5cf6"></i> Fasilitas</span>
-            <span><i class="legend-color-dot" style="background:#14b8a6"></i> Lokasi</span>
+          <div class="kg-legend-bar">
+            <span><i class="color-dot" style="background:#0284c7"></i> Destinasi</span>
+            <span><i class="color-dot" style="background:#10b981"></i> Tingkat Keahlian</span>
+            <span><i class="color-dot" style="background:#f59e0b"></i> Range Harga</span>
+            <span><i class="color-dot" style="background:#3b82f6"></i> Aktivitas</span>
+            <span><i class="color-dot" style="background:#ec4899"></i> Peralatan Sewa</span>
+            <span><i class="color-dot" style="background:#8b5cf6"></i> Fasilitas</span>
+            <span><i class="color-dot" style="background:#14b8a6"></i> Lokasi</span>
           </div>
         </div>
       </div>
 
       <!-- Panel 3: Turtle RDF Viewer -->
-      <div class="tab-panel" id="panel-turtle">
-        <pre class="code-block" id="tab-dest-turtle"></pre>
+      <div class="tab-panel" id="panel-turtle" style="display:none">
+        <pre class="code-editor-look" id="tab-dest-turtle"></pre>
       </div>
     </div>
   </dialog>
 
   <!-- MODAL PREVIEW SPARQL QUERY OTOMATIS -->
   <dialog class="custom-modal" id="sparql-preview-modal" style="max-width:680px">
-    <div style="padding:1.5rem;background:var(--ocean-deep);color:white;display:flex;justify-content:space-between;align-items:center">
-      <h3 style="font-size:1.2rem;font-weight:700">⚡ Query SPARQL Otomatis</h3>
-      <button type="button" class="modal-close-x" style="position:static" onclick="document.getElementById('sparql-preview-modal').close()">✕</button>
+    <div style="padding:1.5rem;background:var(--navy-900);color:white;display:flex;justify-content:space-between;align-items:center">
+      <div style="display:flex;align-items:center;gap:0.5rem">
+        <svg class="svg-icon" style="color:#38bdf8"><use href="#icon-terminal"/></svg>
+        <h3 style="font-size:1.15rem;font-weight:800">Query SPARQL Otomatis</h3>
+      </div>
+      <button type="button" class="modal-close-trigger" style="position:static" onclick="document.getElementById('sparql-preview-modal').close()">&times;</button>
     </div>
     <div style="padding:1.5rem">
       <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1rem">
         Query W3C SPARQL ini dihasilkan secara dinamis oleh mesin inferensi semantik berdasarkan kombinasi pencarian Anda:
       </p>
-      <pre class="code-block" id="sparql-preview-code"></pre>
+      <pre class="code-editor-look" id="sparql-preview-code"></pre>
       <div style="display:flex;justify-content:flex-end;gap:0.75rem;margin-top:1.25rem">
-        <button type="button" class="btn-open-semantic-modal" onclick="navigator.clipboard.writeText(document.getElementById('sparql-preview-code').textContent); alert('Query SPARQL berhasil disalin!')">
-          📋 Salin SPARQL
+        <button type="button" class="page-nav-btn" onclick="navigator.clipboard.writeText(document.getElementById('sparql-preview-code').textContent); alert('Query SPARQL berhasil disalin!')">
+          <span>Salin SPARQL</span>
         </button>
-        <button type="button" class="btn-primary-search" onclick="document.getElementById('sparql-preview-modal').close(); switchTab('sparql'); document.getElementById('sparql-query-input').value = document.getElementById('sparql-preview-code').textContent; executeSparqlQuery(document.getElementById('sparql-preview-code').textContent);">
-          ▶ Buka di Konsol SPARQL
+        <button type="button" class="btn-search-exec" onclick="document.getElementById('sparql-preview-modal').close(); switchTab('sparql'); document.getElementById('sparql-query-input').value = document.getElementById('sparql-preview-code').textContent; executeSparqlQuery(document.getElementById('sparql-preview-code').textContent);">
+          <span>Buka di Konsol SPARQL</span>
+          <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-right"/></svg>
         </button>
       </div>
     </div>
@@ -580,37 +721,42 @@
 
   <!-- APP FOOTER -->
   <footer class="app-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <h3>Indonesia Maritime Journey</h3>
-        <p>
-          Platform mesin pencari dan penjelajah pengetahuan maritim Indonesia berbasis Web Semantik. Mengintegrasikan ontologi RDF, pemetaan harga Google-style, peralatan bahari, dan penalaran semantik berbasis W3C SPARQL.
+    <div class="footer-container">
+      <div class="footer-col">
+        <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.75rem">
+          <div class="brand-logo-icon" style="width:32px;height:32px">
+            <svg class="svg-icon"><use href="#icon-compass"/></svg>
+          </div>
+          <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800">Indonesia Maritime Journey</h3>
+        </div>
+        <p style="color:#94a3b8;font-size:0.85rem;line-height:1.6;max-width:440px">
+          Sistem mesin pencari dan penjelajah pengetahuan maritim Indonesia berbasis Web Semantik. Mengintegrasikan ontologi W3C RDF Turtle, pemetaan harga Google-style, dan SPARQL triplestore engine.
         </p>
       </div>
 
       <div class="footer-col">
-        <h4>Fitur Semantik</h4>
+        <h4>Navigasi Semantik</h4>
         <ul>
-          <li><a href="#" onclick="switchTab('search')">Faceted Search 6 Dimensi</a></li>
+          <li><a href="#" onclick="switchTab('home')">Beranda</a></li>
+          <li><a href="#" onclick="switchTab('explorer')">Jelajah &amp; Faceted Filter</a></li>
           <li><a href="#" onclick="switchTab('sparql')">Konsol Query SPARQL</a></li>
           <li><a href="#" onclick="switchTab('ontology')">Ontologi RDF Turtle (.ttl)</a></li>
-          <li><a href="#destinasi-explorer">Filter Range Harga Google</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Mata Kuliah</h4>
+        <h4>Tugas Akademik</h4>
         <ul>
-          <li>Web Semantik (Kelompok 09)</li>
-          <li>Universitas Sumatera Utara</li>
-          <li>200 Destinasi Bahari</li>
-          <li>3.950+ Triples Ontologi</li>
+          <li>Mata Kuliah Web Semantik</li>
+          <li>Kelompok 09 · Semester 3</li>
+          <li>Universitas Sumatera Utara (USU)</li>
+          <li>200 Destinasi · 3.950+ Triples RDF</li>
         </ul>
       </div>
     </div>
 
-    <div class="footer-copyright">
-      &copy; 2026 Indonesia Maritime Journey · Tugas Besar Web Semantik Kelompok 09. All rights reserved.
+    <div class="footer-bottom-copy">
+      &copy; 2026 Indonesia Maritime Journey · Web Semantik Kelompok 09. All rights reserved.
     </div>
   </footer>
 
