@@ -55,7 +55,7 @@ const DBpedia = (() => {
       nama: 'Taman Nasional Bunaken',
       resource: 'http://dbpedia.org/resource/Bunaken_National_Park',
       abstract: 'Taman Nasional Bunaken adalah taman laut di Sulawesi Utara, Indonesia. Terletak di pusat Segitiga Terumbu Karang Dunia, menyediakan habitat bagi 390 spesies karang serta ribuan spesies ikan, moluska, reptil, dan mamalia laut. Terkenal dengan dinding karang vertikal spektakuler sedalam 25–50 meter yang menjadi surga penyelaman internasional.',
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Bunaken_Beach_North_Sulawesi.jpg/320px-Bunaken_Beach_North_Sulawesi.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=700&auto=format&fit=crop&q=80',
       wikiPage: 'https://en.wikipedia.org/wiki/Bunaken_National_Park',
       coordinates: { lat: 1.6247, long: 124.7644 }
     },
@@ -63,7 +63,7 @@ const DBpedia = (() => {
       nama: 'Taman Nasional Komodo',
       resource: 'http://dbpedia.org/resource/Komodo_National_Park',
       abstract: 'Taman Nasional Komodo terletak di Kepulauan Sunda Kecil antara Nusa Tenggara Timur dan Nusa Tenggara Barat. Meliputi tiga pulau utama (Komodo, Padar, Rinca), taman ini melindungi kadal terbesar di dunia (Varanus komodoensis), pantai pasir merah muda (Pink Beach), dan keanekaragaman biota laut spektakuler seperti pari manta.',
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Komodo_dragon_with_tongue.jpg/320px-Komodo_dragon_with_tongue.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=700&auto=format&fit=crop&q=80',
       wikiPage: 'https://en.wikipedia.org/wiki/Komodo_National_Park',
       coordinates: { lat: -8.5444, long: 119.4897 }
     },
@@ -71,7 +71,7 @@ const DBpedia = (() => {
       nama: 'Kepulauan Raja Ampat',
       resource: 'http://dbpedia.org/resource/Raja_Ampat_Islands',
       abstract: 'Kepulauan Raja Ampat berada di ujung barat laut Semenanjung Kepala Burung di Papua Barat Daya. Terdiri dari 1.500 pulau karang kecil mengelilingi empat pulau utama (Misool, Salawati, Batanta, Waigeo). Memiliki 75% spesies karang dunia, menjadikannya episentrum keanekaragaman hayati laut terkaya di muka bumi.',
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Wayag_Islands_Raja_Ampat.jpg/320px-Wayag_Islands_Raja_Ampat.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?w=700&auto=format&fit=crop&q=80',
       wikiPage: 'https://en.wikipedia.org/wiki/Raja_Ampat_Islands',
       coordinates: { lat: -0.2333, long: 130.5167 }
     },
@@ -79,7 +79,7 @@ const DBpedia = (() => {
       nama: 'Taman Nasional Wakatobi',
       resource: 'http://dbpedia.org/resource/Wakatobi_National_Park',
       abstract: 'Taman Nasional Wakatobi terletak di Sulawesi Tenggara. Nama Wakatobi merupakan akronim dari empat pulau utamanya: Wangi-Wangi, Kaledupa, Tomia, dan Binongko. Menjadi cagar biosfer dunia UNESCO dengan gugusan terumbu karang penghalang kedua terbesar di dunia.',
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Hoga_Island_Wakatobi.jpg/320px-Hoga_Island_Wakatobi.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=700&auto=format&fit=crop&q=80',
       wikiPage: 'https://en.wikipedia.org/wiki/Wakatobi_National_Park',
       coordinates: { lat: -5.3167, long: 123.5833 }
     },
@@ -87,7 +87,7 @@ const DBpedia = (() => {
       nama: 'Kepulauan Banda',
       resource: 'http://dbpedia.org/resource/Banda_Islands',
       abstract: 'Kepulauan Banda di Laut Banda, Provinsi Maluku, merupakan kepulauan vulkanik legendaris yang dahulunya menjadi satu-satunya penghasil rempah pala di dunia. Selain situs bersejarah Benteng Belgica, perairannya memiliki dinding karang luar biasa dan spot mengamati hiu martil.',
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Fort_Belgica_Banda_Neira.jpg/320px-Fort_Belgica_Banda_Neira.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&auto=format&fit=crop&q=80',
       wikiPage: 'https://en.wikipedia.org/wiki/Banda_Islands',
       coordinates: { lat: -4.5247, long: 129.9042 }
     },
@@ -95,7 +95,7 @@ const DBpedia = (() => {
       nama: 'Kepulauan Derawan',
       resource: 'http://dbpedia.org/resource/Derawan_Islands',
       abstract: 'Kepulauan Derawan di Kabupaten Berau, Kalimantan Timur, mencakup Pulau Derawan, Maratua, Sangalaki, dan Kakaban. Dikenal dengan danau ubur-ubur tanpa sengat di Kakaban, habitat penyu hijau terbesar di Indonesia, serta perairan jernih dengan kawanan pari manta raksasa.',
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Derawan_Island_Beach.jpg/320px-Derawan_Island_Beach.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=700&auto=format&fit=crop&q=80',
       wikiPage: 'https://en.wikipedia.org/wiki/Derawan_Islands',
       coordinates: { lat: 2.2858, long: 118.2436 }
     },
@@ -103,7 +103,7 @@ const DBpedia = (() => {
       nama: 'Taman Nasional Karimunjawa',
       resource: 'http://dbpedia.org/resource/Karimunjawa',
       abstract: 'Kepulauan Karimunjawa adalah kepulauan di Laut Jawa yang termasuk Kabupaten Jepara, Jawa Tengah. Kawasan konservasi laut ini menawarkan pulau pasir putih, terumbu karang dangkal untuk snorkeling pemula, dan penangkaran hiu serta penyu sisik.',
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Karimunjawa_Island.jpg/320px-Karimunjawa_Island.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=700&auto=format&fit=crop&q=80',
       wikiPage: 'https://en.wikipedia.org/wiki/Karimunjawa',
       coordinates: { lat: -5.8500, long: 110.4333 }
     },
@@ -111,7 +111,7 @@ const DBpedia = (() => {
       nama: 'Gili Trawangan',
       resource: 'http://dbpedia.org/resource/Gili_Trawangan',
       abstract: 'Gili Trawangan adalah pulau terbesar di antara tiga gili di Lombok Utara, Nusa Tenggara Barat. Terkenal bebas kendaraan bermotor, memiliki patung bawah laut Nest karya Jason deCaires Taylor, pantai pasir putih, dan habitat penyu liar yang ramah perenang.',
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Gili_Trawangan_beach.jpg/320px-Gili_Trawangan_beach.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=700&auto=format&fit=crop&q=80',
       wikiPage: 'https://en.wikipedia.org/wiki/Gili_Trawangan',
       coordinates: { lat: -8.3500, long: 116.0333 }
     },
@@ -119,7 +119,7 @@ const DBpedia = (() => {
       nama: 'Nusa Penida',
       resource: 'http://dbpedia.org/resource/Nusa_Penida',
       abstract: 'Nusa Penida adalah pulau di tenggara Bali. Terkenal dengan tebing ikonik Pantai Kelingking berbentuk T-Rex, Broken Beach, Angel Billabong, serta spot penyelaman Manta Point tempat penyelam dapat berenang bersama pari manta dan ikan mola-mola.',
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Kelingking_Beach_Nusa_Penida.jpg/320px-Kelingking_Beach_Nusa_Penida.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=700&auto=format&fit=crop&q=80',
       wikiPage: 'https://en.wikipedia.org/wiki/Nusa_Penida',
       coordinates: { lat: -8.7278, long: 115.5444 }
     },
@@ -127,7 +127,7 @@ const DBpedia = (() => {
       nama: 'Kota Sabang & Pulau Weh',
       resource: 'http://dbpedia.org/resource/Sabang,_Aceh',
       abstract: 'Kota Sabang terletak di Pulau Weh dan merupakan titik paling barat kepulauan Indonesia di Provinsi Aceh. Terkenal dengan Monumen Nol Kilometer, Pantai Iboih, dan Pulau Rubiah yang memiliki taman laut terumbu karang dangkal alami.',
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Iboih_Beach_Sabang.jpg/320px-Iboih_Beach_Sabang.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&auto=format&fit=crop&q=80',
       wikiPage: 'https://en.wikipedia.org/wiki/Sabang,_Aceh',
       coordinates: { lat: 5.8900, long: 95.3190 }
     },
@@ -135,19 +135,27 @@ const DBpedia = (() => {
       nama: 'Pulau Bali',
       resource: 'http://dbpedia.org/resource/Bali',
       abstract: 'Bali adalah sebuah pulau dan provinsi di Indonesia yang terletak di antara Pulau Jawa dan Lombok. Terkenal di seluruh dunia sebagai destinasi bahari dengan pantai selancar legendaris (Kuta, Uluwatu, Padang Padang), keindahan tebing kapur Nusa Penida, wisata pura bahari Tanah Lot, serta spot diving terumbu karang kelas dunia di Tulamben dan Pulau Menjangan.',
-      thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Kelingking_Beach_Nusa_Penida.jpg/320px-Kelingking_Beach_Nusa_Penida.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=700&auto=format&fit=crop&q=80',
       wikiPage: 'https://en.wikipedia.org/wiki/Bali',
       coordinates: { lat: -8.3405, long: 115.0920 }
     }
   };
 
   /* ------------------------------------------------------------------ */
-  /* 4. Pencarian Destinasi Maritim di DBpedia via SPARQL               */
+  /* 4. Pencarian Destinasi Maritim di DBpedia via SPARQL & Fallback    */
   /* ------------------------------------------------------------------ */
   async function searchDestination(name) {
     if (!name || typeof name !== 'string') return null;
     const clean = name.trim().replace(/^(pantai|pulau|taman nasional|wisata)\s+/i, '').trim();
     const queryTerm = (clean.length >= 3 ? clean : name.trim()).replace(/"/g, '\\"');
+    const lc = name.toLowerCase();
+
+    // 1) Cek basis data pengetahuan lokal terlebih dahulu untuk kecepatan & kualitas gambar maksimal
+    for (const [key, data] of Object.entries(LOCAL_KB)) {
+      if (lc.includes(key) || key.includes(clean.toLowerCase())) {
+        return Object.assign({}, data);
+      }
+    }
 
     const sparql = `
 PREFIX dbo:  <http://dbpedia.org/ontology/>
@@ -177,11 +185,17 @@ LIMIT 3`;
         const best = idRow || bindings[0];
         const row = formatSparqlResult(best);
 
+        // Pastikan thumbnail tidak menggunakan hash thumbnail wikimedia yang rentan 400
+        let thumbUrl = row.thumbnail ? row.thumbnail.replace('http://', 'https://') : null;
+        if (!thumbUrl || thumbUrl.includes('wikimedia.org/wikipedia/commons/thumb/')) {
+          thumbUrl = 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=700&auto=format&fit=crop&q=80';
+        }
+
         return {
           nama: name,
           resource: row.resource || null,
           abstract: row.abstract || null,
-          thumbnail: row.thumbnail ? row.thumbnail.replace('http://', 'https://') : null,
+          thumbnail: thumbUrl,
           wikiPage: row.wikiPage || row.resource || null,
           coordinates: (row.lat && row.long) ? { lat: parseFloat(row.lat), long: parseFloat(row.long) } : null
         };
@@ -190,26 +204,33 @@ LIMIT 3`;
       console.warn('[DBpedia SPARQL] Live query terkendala, menggunakan semantic fallback:', e.message);
     }
 
-    // Fallback: periksa basis data pengetahuan lokal
-    const lc = name.toLowerCase();
-    for (const [key, data] of Object.entries(LOCAL_KB)) {
-      if (lc.includes(key) || key.includes(clean.toLowerCase())) {
-        return Object.assign({}, data);
-      }
-    }
-
     return null;
   }
 
   /* ------------------------------------------------------------------ */
   /* 5. Natural Language Understanding & Asisten Chatbot Hybrid         */
   /* ------------------------------------------------------------------ */
+  function normalizeTypoLeetspeak(str) {
+    if (!str) return '';
+    return str
+      .toLowerCase()
+      .replace(/3/g, 'e')
+      .replace(/4|@/g, 'a')
+      .replace(/1|!|\|/g, 'i')
+      .replace(/0/g, 'o')
+      .replace(/5|\$/g, 's')
+      .replace(/8/g, 'b')
+      .replace(/7/g, 't');
+  }
+
   async function askChatbot(userMessage) {
     const rawMsg = userMessage.trim();
-    const lc = rawMsg.toLowerCase();
+    const normMsg = normalizeTypoLeetspeak(rawMsg);
+    const lc = normMsg;
 
     let text = '';
     let dbpediaData = null;
+    let recommendations = [];
     let suggestions = [];
 
     // Helper untuk kueri API lokal jika server aktif
@@ -310,7 +331,8 @@ LIMIT 3`;
         'Peralatan apa saja yang disewakan?',
         'Harga tiket masuk dan sewa alat'
       ];
-      return { text, dbpediaData, suggestions };
+      recommendations = (filtered.length ? filtered : localHits).slice(0, 4);
+      return { text, dbpediaData, recommendations, suggestions };
     }
 
     // F. Tanya Tingkat Ahli / Mahir
@@ -338,7 +360,8 @@ LIMIT 3`;
         'Peralatan selam teknis (BCD & Regulator)',
         'Spot surfing kelas dunia (Mahir)'
       ];
-      return { text, dbpediaData, suggestions };
+      recommendations = (filtered.length ? filtered : localHits).slice(0, 4);
+      return { text, dbpediaData, recommendations, suggestions };
     }
 
     // G. Tanya Persewaan Alat & Peralatan Bahari
@@ -416,7 +439,8 @@ LIMIT 3`;
         `Berapa biaya tiket ke ${matchedPlace}?`,
         'Rekomendasi destinasi lainnya'
       ];
-      return { text, dbpediaData, suggestions };
+      recommendations = localHits.slice(0, 4);
+      return { text, dbpediaData, recommendations, suggestions };
     }
 
     // J. Tanya Aktivitas Bahari Spesifik (14 Aktivitas Terdata Lengkap)
@@ -636,20 +660,22 @@ LIMIT 3`;
         `Spot snorkeling di ${matchedWil.name}`,
         `Spot surfing di ${matchedWil.name}`
       ];
-      return { text, dbpediaData, suggestions };
+      recommendations = localHits.slice(0, 4);
+      return { text, dbpediaData, recommendations, suggestions };
     }
 
     // M. Fallback: Cari dengan API Lokal & DBpedia
-    const searchHits = await queryLocalApi(rawMsg);
+    const searchHits = await queryLocalApi(normMsg || rawMsg);
     if (searchHits.length > 0) {
       const listText = searchHits.slice(0, 4).map(d => `• **${d.nama}** (${d.provinsi})\n  Aktivitas: ${d.aktivitas?.join(', ')}\n  Estimasi Biaya: ${d.rangeHargaTotalLabel}`).join('\n\n');
-      text = `🔍 **Hasil Pencarian Semantik untuk "${rawMsg}":**\n\n${listText}`;
+      text = `🔍 **Ditemukan ${searchHits.length} Destinasi Terkait "${rawMsg}":**\n\n${listText}`;
+      recommendations = searchHits.slice(0, 4);
       suggestions = [
         'Tingkat level diatas pemula',
         'Tingkat ahli',
         'Peralatan apa saja yang disewakan?'
       ];
-      return { text, dbpediaData, suggestions };
+      return { text, dbpediaData, recommendations, suggestions };
     }
 
     // Default Fallback

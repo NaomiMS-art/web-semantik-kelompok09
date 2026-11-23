@@ -336,7 +336,6 @@ function switchTab(tabName) {
     view.style.display = view.id === `view-${tabName}` ? 'block' : 'none';
   });
 
-  if (tabName === 'ontology') loadOntologyContent();
   if (tabName === 'favorites') renderFavoritesView();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -962,21 +961,6 @@ function initModalEvents() {
       if (e.target === modal) modal.close();
     });
   }
-
-  document.querySelectorAll('.modal-tab-link[data-modaltab]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.modal-tab-link[data-modaltab]').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('#dest-detail-modal .tab-panel').forEach(p => p.style.display = 'none');
-
-      btn.classList.add('active');
-      const targetPanel = document.getElementById(`panel-${btn.dataset.modaltab}`);
-      if (targetPanel) targetPanel.style.display = 'block';
-
-      if (btn.dataset.modaltab === 'graph' && APP_STATE.activeDestDetail) {
-        renderKnowledgeGraph(APP_STATE.activeDestDetail.knowledgeGraph);
-      }
-    });
-  });
 }
 
 async function openDestinationModal(destId) {
@@ -1133,8 +1117,6 @@ async function openDestinationModal(destId) {
     `;
 
     initModalCalculator(d);
-    document.getElementById('tab-dest-turtle').textContent = generateTurtleForDest(d);
-    document.querySelector('.modal-tab-link[data-modaltab="info"]').click();
   } catch (err) {
     console.error("Gagal open modal:", err);
   }

@@ -89,10 +89,6 @@
           <svg class="svg-icon"><use href="#icon-terminal"/></svg>
           <span>Konsol SPARQL</span>
         </button>
-        <button class="nav-link-btn" data-tab="ontology">
-          <svg class="svg-icon"><use href="#icon-book"/></svg>
-          <span>Ontologi RDF</span>
-        </button>
         <button class="nav-link-btn" data-tab="favorites">
           <svg class="svg-icon"><use href="#icon-heart"/></svg>
           <span>Favorit</span>
@@ -121,10 +117,6 @@
       <svg class="svg-icon"><use href="#icon-terminal"/></svg>
       <span>SPARQL</span>
     </button>
-    <button class="bottom-bar-btn" data-tab="ontology">
-      <svg class="svg-icon"><use href="#icon-book"/></svg>
-      <span>Ontologi</span>
-    </button>
     <button class="bottom-bar-btn" data-tab="favorites">
       <svg class="svg-icon"><use href="#icon-heart"/></svg>
       <span>Favorit</span>
@@ -145,7 +137,7 @@
         </div>
         <h2 class="hero-title-pro">Jelajahi Wisata Bahari Nusantara Berdasarkan Budget &amp; Kemampuan</h2>
         <p class="hero-subtitle-pro">
-          Mesin pencari semantik cerdas menghubungkan 200 destinasi maritim Indonesia dengan <strong>5 kategori range harga Google</strong>, <strong>tingkat keahlian pengguna</strong>, serta <strong>katalog peralatan &amp; persewaan</strong> lengkap.
+          Mesin pencari semantik cerdas menghubungkan 300+ destinasi maritim Indonesia dengan <strong>5 kategori range harga Google</strong>, <strong>tingkat keahlian pengguna</strong>, serta <strong>katalog peralatan &amp; persewaan</strong> lengkap.
         </p>
 
         <!-- PRO SEARCH BAR (PROPORSIONAL & TIDAK TERPOTONG) -->
@@ -220,7 +212,7 @@
             <svg class="svg-icon svg-icon-lg"><use href="#icon-compass"/></svg>
           </div>
           <div class="stat-data">
-            <strong>200</strong>
+            <strong>300+</strong>
             <span>Destinasi Bahari (7 Wilayah)</span>
           </div>
         </div>
@@ -409,7 +401,7 @@
                 <span class="badge-tag-clean">6 Dimensi Ontologi W3C</span>
               </div>
               <p style="font-size:0.8rem;color:var(--text-muted);margin:0.2rem 0 0 0">
-                Pilih kombinasi range harga Google, keahlian, persewaan alat, aktivitas, dan wilayah untuk memfilter 200 destinasi di bawah.
+                Pilih kombinasi range harga Google, keahlian, persewaan alat, aktivitas, dan wilayah untuk memfilter 300+ destinasi di bawah.
               </p>
             </div>
           </div>
@@ -653,32 +645,7 @@
   </div>
 
   <!-- ==============================================================================
-       HALAMAN 4: ONTOLOGI RDF TURTLE (.TTL)
-       ============================================================================== -->
-  <div class="tab-view-section" id="view-ontology" style="display:none">
-    <div style="max-width:1400px;margin:2rem auto;padding:0 1.25rem">
-      <div class="filter-panel-card" style="position:static;max-height:none">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem;flex-wrap:wrap;gap:1rem">
-          <div>
-            <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--text-main)">
-              Ontologi Wisata Maritim Indonesia (maritim.ttl)
-            </h2>
-            <p style="font-size:0.85rem;color:var(--text-muted)">
-              Standar W3C RDF Turtle · Definisi Kelas, Properti, dan Relasi Destinasi.
-            </p>
-          </div>
-          <a href="/api/ontology" download="maritim.ttl" class="btn-search-exec" style="text-decoration:none">
-            <svg class="svg-icon"><use href="#icon-book"/></svg>
-            <span>Unduh File maritim.ttl</span>
-          </a>
-        </div>
-        <pre class="code-editor-look" id="ontology-code-viewer">Memuat ontologi RDF...</pre>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==============================================================================
-       HALAMAN 5: FAVORIT
+       HALAMAN 4: FAVORIT
        ============================================================================== -->
   <div class="tab-view-section" id="view-favorites" style="display:none">
     <div style="max-width:1400px;margin:2rem auto;padding:0 1.25rem">
@@ -695,7 +662,7 @@
   </div>
 
   <!-- ==============================================================================
-       MODAL DETAIL DESTINASI, KALKULATOR & GRAF SEMANTIK
+       MODAL DETAIL DESTINASI, BIAYA & KALKULATOR BUDGET
        ============================================================================== -->
   <dialog class="custom-modal" id="dest-detail-modal">
     <button type="button" class="modal-close-trigger" id="modal-close-btn" title="Tutup Modal">&times;</button>
@@ -708,53 +675,10 @@
       </div>
     </div>
 
-    <!-- Modal Tabs -->
-    <div class="modal-tabs-header">
-      <button type="button" class="modal-tab-link active" data-modaltab="info">
-        <svg class="svg-icon svg-icon-sm"><use href="#icon-compass"/></svg>
-        <span>Rincian &amp; Budget</span>
-      </button>
-      <button type="button" class="modal-tab-link" data-modaltab="graph">
-        <svg class="svg-icon svg-icon-sm"><use href="#icon-network"/></svg>
-        <span>Knowledge Graph</span>
-      </button>
-      <button type="button" class="modal-tab-link" data-modaltab="turtle">
-        <svg class="svg-icon svg-icon-sm"><use href="#icon-database"/></svg>
-        <span>RDF Turtle</span>
-      </button>
-    </div>
-
     <div class="modal-content-scroll" id="modal-detail-body">
-      <!-- Panel 1: Info & Kalkulator -->
+      <!-- Panel Info, Rincian Tiket, Sewa Alat & Kalkulator -->
       <div class="tab-panel active" id="panel-info">
         <div id="tab-dest-info"></div>
-      </div>
-
-      <!-- Panel 2: Knowledge Graph Canvas -->
-      <div class="tab-panel" id="panel-graph" style="display:none">
-        <div style="margin-bottom:0.75rem">
-          <h4 style="font-weight:700;color:var(--text-main)">Visualisasi Relasi Web Semantik</h4>
-          <p style="font-size:0.8rem;color:var(--text-muted)">
-            Graf interaktif ini menunjukkan keterhubungan entitas destinasi dengan aktivitas, tingkat keahlian, range harga, peralatan sewa, fasilitas, dan provinsi. Klik dan geser simpul untuk eksplorasi.
-          </p>
-        </div>
-        <div class="kg-canvas-container">
-          <canvas id="kg-canvas"></canvas>
-          <div class="kg-legend-bar">
-            <span><i class="color-dot" style="background:#0284c7"></i> Destinasi</span>
-            <span><i class="color-dot" style="background:#10b981"></i> Tingkat Keahlian</span>
-            <span><i class="color-dot" style="background:#f59e0b"></i> Range Harga</span>
-            <span><i class="color-dot" style="background:#3b82f6"></i> Aktivitas</span>
-            <span><i class="color-dot" style="background:#ec4899"></i> Peralatan Sewa</span>
-            <span><i class="color-dot" style="background:#8b5cf6"></i> Fasilitas</span>
-            <span><i class="color-dot" style="background:#14b8a6"></i> Lokasi</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Panel 3: Turtle RDF Viewer -->
-      <div class="tab-panel" id="panel-turtle" style="display:none">
-        <pre class="code-editor-look" id="tab-dest-turtle"></pre>
       </div>
     </div>
   </dialog>
@@ -809,7 +733,7 @@
           <li><a href="#" onclick="switchTab('home')">Beranda</a></li>
           <li><a href="#" onclick="switchTab('explorer')">Jelajah &amp; Faceted Filter</a></li>
           <li><a href="#" onclick="switchTab('sparql')">Konsol Query SPARQL</a></li>
-          <li><a href="#" onclick="switchTab('ontology')">Ontologi RDF Turtle (.ttl)</a></li>
+          <li><a href="#" onclick="switchTab('favorites')">Koleksi Favorit</a></li>
         </ul>
       </div>
 
@@ -819,7 +743,7 @@
           <li>Mata Kuliah Web Semantik</li>
           <li>Kelompok 09 · Semester 3</li>
           <li>Universitas Sumatera Utara (USU)</li>
-          <li>200 Destinasi · 3.950+ Triples RDF</li>
+          <li>300+ Destinasi Bahari (7 Wilayah)</li>
         </ul>
       </div>
     </div>

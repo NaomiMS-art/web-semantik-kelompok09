@@ -2265,3 +2265,165 @@ footer.app-footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==============================================================================
+   POLISHED DARK MODE & LIGHT MODE ADJUSTMENTS
+   ============================================================================== */
+[data-theme="dark"] {
+  --bg-page: #050b14;
+  --bg-surface: #0b1526;
+  --bg-subtle: #111e33;
+  --border-subtle: #1e304d;
+  --border-strong: #2d456d;
+  --text-main: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+  --sea-blue-light: #0d2847;
+  --sea-blue-subtle: #081a2f;
+}
+
+[data-theme="dark"] .app-header {
+  background: rgba(5, 11, 20, 0.94);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+[data-theme="dark"] .mobile-bottom-bar {
+  background: rgba(5, 11, 20, 0.96);
+  border-top: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+[data-theme="dark"] .top-faceted-filter-card,
+[data-theme="dark"] .destination-card,
+[data-theme="dark"] .filter-panel-card,
+[data-theme="dark"] .quick-stat-bar-pro,
+[data-theme="dark"] .section-category-pro,
+[data-theme="dark"] .section-skills-guide,
+[data-theme="dark"] .results-control-bar,
+[data-theme="dark"] .pagination-controls-bar {
+  background: var(--bg-surface);
+  border-color: var(--border-subtle);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .search-field-main,
+[data-theme="dark"] .search-field-select {
+  background: var(--bg-subtle);
+  border-color: var(--border-subtle);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .search-field-main input,
+[data-theme="dark"] .search-field-select select {
+  color: var(--text-main);
+  background: transparent;
+}
+
+[data-theme="dark"] .search-field-select select option {
+  background: #0b1526;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .filter-pill-opt {
+  background: var(--bg-subtle);
+  border-color: var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .filter-pill-opt:hover {
+  background: #172844;
+  color: #38bdf8;
+  border-color: #38bdf8;
+}
+
+[data-theme="dark"] .filter-pill-opt.active {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: white;
+  border-color: #0284c7;
+}
+
+[data-theme="dark"] .price-type-tab-btn {
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .price-type-tab-btn.active {
+  background: var(--bg-surface);
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .price-radio-pill {
+  background: var(--bg-subtle);
+  border-color: var(--border-subtle);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .price-radio-pill:hover {
+  border-color: #38bdf8;
+  background: #172844;
+}
+
+[data-theme="dark"] .data-table {
+  background: var(--bg-surface);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .data-table th {
+  background: var(--bg-subtle);
+  color: var(--text-secondary);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="dark"] .data-table td {
+  border-color: var(--border-subtle);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .data-table tr:hover td {
+  background: rgba(56, 189, 248, 0.06);
+}
+
+[data-theme="dark"] .modal-budget-kpi-card {
+  background: var(--bg-subtle);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="dark"] .calc-widget-box {
+  background: #081324;
+  border-color: #1e3557;
+}
+
+[data-theme="dark"] .calc-widget-box input[type="number"] {
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="dark"] .badge-tag-clean {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+[data-theme="dark"] .destination-card-footer {
+  background: var(--bg-subtle);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="dark"] .code-editor-look {
+  background: #040912;
+  border-color: var(--border-subtle);
+  color: #7dd3fc;
+}
+
+[data-theme="dark"] .page-nav-btn {
+  background: var(--bg-subtle);
+  border-color: var(--border-subtle);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .page-nav-btn:hover:not(:disabled) {
+  border-color: #38bdf8;
+  color: #38bdf8;
+  background: #172844;
+}
