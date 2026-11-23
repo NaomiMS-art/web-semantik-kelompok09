@@ -6,6 +6,74 @@ const STOP_WORDS = new Set([
   'apa', 'saja', 'aja', 'laut', 'pantai', 'air', 'bahari', 'pesisir', 'pulau'
 ]);
 
+// Normalisasi leetspeak & angka yang mewakili huruf (misal: 3->e, 4/@->a, 1/!->i, 0->o, 5/$->s, 8->b, 7->t)
+function normalizeTypoLeetspeak(str) {
+  if (!str) return '';
+  return str
+    .toLowerCase()
+    .replace(/3/g, 'e')
+    .replace(/4|@/g, 'a')
+    .replace(/1|!|\|/g, 'i')
+    .replace(/0/g, 'o')
+    .replace(/5|\$/g, 's')
+    .replace(/8/g, 'b')
+    .replace(/7/g, 't');
+}
+
+// Levenshtein distance sederhana untuk typo tolerance kata tunggal
+function levenshtein(a, b) {
+  if (a === b) return 0;
+  if (!a.length) return b.length;
+  if (!b.length) return a.length;
+  const matrix = [];
+  for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+  for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      if (b.charAt(i - 1) === a.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + 1,
+          Math.min(matrix[i][j - 1] + 1, matrix[i - 1][j] + 1)
+        );
+      }
+    }
+  }
+  return matrix[b.length][a.length];
+}
+
+// Cek apakah keyword cocok dengan text haystack (dengan leetspeak + typo tolerance)
+function matchKeywordFuzzy(kw, haystack) {
+  if (!kw || !haystack) return false;
+  const kwRaw = kw.toLowerCase().trim();
+  const kwNorm = normalizeTypoLeetspeak(kwRaw);
+  const hayRaw = haystack.toLowerCase();
+  const hayNorm = normalizeTypoLeetspeak(hayRaw);
+
+  // 1. Direct substring match (raw or leetspeak normalized)
+  if (hayRaw.includes(kwRaw) || hayRaw.includes(kwNorm) || hayNorm.includes(kwNorm)) {
+    return true;
+  }
+
+  // 2. Token-level fuzzy match
+  const hayWords = hayNorm.split(/[^a-z0-9]+/).filter(w => w.length >= 2);
+  for (const hw of hayWords) {
+    if (hw === kwNorm || hw.startsWith(kwNorm) || hw.includes(kwNorm)) {
+      return true;
+    }
+    // Typo tolerance Levenshtein jika panjang kata >= 4
+    if (kwNorm.length >= 4 && hw.length >= 4) {
+      const maxDist = kwNorm.length > 5 ? 2 : 1;
+      if (levenshtein(hw, kwNorm) <= maxDist) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
+
 class SemanticSearch {
   constructor(destinasiList) {
     this.destinasiList = destinasiList;
@@ -59,6 +127,9 @@ class SemanticSearch {
       else if (parsed.maxBudget <= 1000000) parsed.rangeHarga = '500k-1jt';
       else parsed.rangeHarga = 'di-atas-1jt';
     }
+
+    // Normalisasikan leetspeak pada teks query yang tersisa (misal: b3l -> bel, sn0rkeling -> snorkeling, p4nt4i -> pantai)
+    q = normalizeTypoLeetspeak(q);
 
     // 2. Ekstraksi Tingkat Keahlian
     if (/di ?atas pemula|bukan pemula|setelah pemula/i.test(q)) {
@@ -175,10 +246,10 @@ class SemanticSearch {
           }
         });
 
-        // Sisa kata kunci bebas
+        // Sisa kata kunci bebas (dengan normalisasi leetspeak & typo tolerance)
         parsed.keywords = q.split(/[^a-zA-Z0-9]+/)
           .map(k => k.trim())
-          .filter(k => k.length > 2 && !STOP_WORDS.has(k));
+          .filter(k => k.length >= 2 && !STOP_WORDS.has(k) && !STOP_WORDS.has(normalizeTypoLeetspeak(k)));
 
         return parsed;
       }
@@ -449,10 +520,10 @@ class SemanticSearch {
         if (!filters.favIds.includes(d.id)) return false;
       }
 
-      // 11. Sisa kata kunci bebas
+      // 11. Sisa kata kunci bebas (mendukung leetspeak b3l -> bel dan typo tolerance)
       if (parsed.keywords && parsed.keywords.length > 0) {
-        const searchHaystack = (d.nama + ' ' + d.lokasi + ' ' + d.jenisWisata + ' ' + d.aktivitasStr + ' ' + d.atraksi + ' ' + d.fasilitasStr).toLowerCase();
-        const matchesAll = parsed.keywords.every(kw => searchHaystack.includes(kw));
+        const searchHaystack = (d.nama + ' ' + d.lokasi + ' ' + (d.kabKota || '') + ' ' + d.provinsi + ' ' + d.wilayah + ' ' + d.jenisWisata + ' ' + d.aktivitasStr + ' ' + d.atraksi + ' ' + d.fasilitasStr).toLowerCase();
+        const matchesAll = parsed.keywords.every(kw => matchKeywordFuzzy(kw, searchHaystack));
         if (!matchesAll) return false;
       }
 

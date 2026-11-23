@@ -6,7 +6,10 @@ const dataJsPath = path.join(__dirname, '..', 'js', 'data.js');
 const rawCode = fs.readFileSync(dataJsPath, 'utf8');
 const { RAW, WIL } = new Function(rawCode + '; return {RAW, WIL};')();
 
-console.log(`Memproses ${RAW.length} destinasi wisata maritim...`);
+const ADDITIONAL_RAW = require('./additional-destinations');
+const COMBINED_RAW = [...RAW, ...ADDITIONAL_RAW];
+
+console.log(`Memproses total ${COMBINED_RAW.length} destinasi wisata maritim (200 data awal + ${ADDITIONAL_RAW.length} data eksplorasi tambahan)...`);
 
 function parsePriceRange(price) {
   if (price === null || price === undefined) return "di-bawah-100k";
@@ -389,8 +392,8 @@ function getPhotoForDestination(dest) {
   return 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80';
 }
 
-// Transform RAW
-const destinasiList = RAW.map(r => {
+// Transform COMBINED_RAW
+const destinasiList = COMBINED_RAW.map(r => {
   const k = r[0];
   const nama = r[1];
   const lokasi = r[2];

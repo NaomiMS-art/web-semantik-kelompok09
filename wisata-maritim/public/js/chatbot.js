@@ -91,7 +91,7 @@
   }
 
   // Tambah Pesan ke History
-  function appendMessage({ sender, textHtml, dbpediaData, suggestions, time }) {
+  function appendMessage({ sender, textHtml, dbpediaData, recommendations, suggestions, time }) {
     const box = document.getElementById('maritim-chat-messages');
     if (!box) return;
 
@@ -100,10 +100,30 @@
 
     let contentHtml = `<div class="maritim-msg-bubble">${textHtml}</div>`;
 
+    // Jika ada rekomendasi destinasi terstruktur, tampilkan kartu mini interaktif
+    if (recommendations && recommendations.length > 0) {
+      const recsHtml = recommendations.slice(0, 4).map(d => `
+        <div class="maritim-bot-card">
+          <img class="maritim-bot-thumb" src="${esc(d.foto || 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=200&auto=format&fit=crop&q=80')}" alt="${esc(d.nama)}" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=200&auto=format&fit=crop&q=80';">
+          <div class="maritim-bot-card-info">
+            <div class="maritim-bot-card-title">${esc(d.nama)}</div>
+            <div class="maritim-bot-card-sub">${esc(d.lokasi)}</div>
+            <div class="maritim-bot-card-meta">
+              <span class="maritim-bot-card-badge">${esc(d.rangeHargaTotalLabel || d.rangeHarga || 'Hemat')}</span>
+              <span class="maritim-bot-card-badge" style="background:#ecfdf5;color:#065f46">${esc(d.level)}</span>
+            </div>
+          </div>
+          <button type="button" class="maritim-bot-btn-action" onclick="openDestinationModal('${esc(d.id)}')">Detail</button>
+        </div>
+      `).join('');
+
+      contentHtml += `<div class="maritim-bot-dest-grid">${recsHtml}</div>`;
+    }
+
     // Jika ada data DBpedia, tampilkan kartu visual
     if (dbpediaData) {
       const imgTag = dbpediaData.thumbnail
-        ? `<img class="maritim-dbpedia-img" src="${esc(dbpediaData.thumbnail)}" alt="Gambar ${esc(dbpediaData.nama)}" loading="lazy">`
+        ? `<img class="maritim-dbpedia-img" src="${esc(dbpediaData.thumbnail)}" alt="Gambar ${esc(dbpediaData.nama)}" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&auto=format&fit=crop&q=80';">`
         : '';
       const linkTag = dbpediaData.wikiPage || dbpediaData.resource
         ? `<a class="maritim-dbpedia-link" href="${esc(dbpediaData.wikiPage || dbpediaData.resource)}" target="_blank" rel="noopener">
@@ -216,6 +236,7 @@
       sender: 'bot',
       textHtml: renderMarkdown(botReply.text),
       dbpediaData: botReply.dbpediaData,
+      recommendations: botReply.recommendations,
       suggestions: botReply.suggestions,
       time: formatTime()
     });

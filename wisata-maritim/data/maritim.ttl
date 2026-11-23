@@ -9420,3 +9420,3940 @@ data:offer_PPA-13_0 a maritim:PenawaranAlat ;
     maritim:hargaSewa 20000 ;
     maritim:statusSewa "Tersedia Disewa" ;
     maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-44 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-44" ;
+    maritim:namaDestinasi "Pantai Sorake" ;
+    maritim:lokasiLengkap "Nias Selatan, Sumut" ;
+    maritim:beradaDiProvinsi data:provinsi_Sumut ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Mahir ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 100000 ;
+    maritim:kategoriHargaTotal data:Range_100k_250k ;
+    maritim:hargaAktivitasMulai 100000 ;
+    maritim:kategoriHargaAktivitas data:Range_100k_250k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiAktivitas data:aktivitas_Sejarah___Budaya_Bahari ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay ;
+    maritim:memilikiFasilitas data:fasilitas_surf_shop ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-44_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-44_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-44_2 .
+data:offer_SMT-44_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Mahir .
+data:offer_SMT-44_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SMT-44_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-45 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-45" ;
+    maritim:namaDestinasi "Pulau Pagang" ;
+    maritim:lokasiLengkap "Pesisir Selatan, Sumbar" ;
+    maritim:beradaDiProvinsi data:provinsi_Sumbar ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 60000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Wahana_Air ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay ;
+    maritim:memilikiFasilitas data:fasilitas_dermaga ;
+    maritim:memilikiFasilitas data:fasilitas_sewa_alat ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-45_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-45_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-45_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-45_3 .
+data:offer_SMT-45_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-45_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-45_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-45_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-46 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-46" ;
+    maritim:namaDestinasi "Kawasan Wisata Mandeh" ;
+    maritim:lokasiLengkap "Pesisir Selatan, Sumbar" ;
+    maritim:beradaDiProvinsi data:provinsi_Sumbar ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 60000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Island_Hopping ;
+    maritim:memilikiAktivitas data:aktivitas_Kano___Kayak ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay ;
+    maritim:memilikiFasilitas data:fasilitas_kapal_wisata ;
+    maritim:memilikiFasilitas data:fasilitas_dive_operator ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-46_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-46_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-46_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-46_3 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-46_4 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-46_5 .
+data:offer_SMT-46_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-46_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-46_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-46_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-46_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_kano-kayak ;
+    rdfs:label "Perahu Kano / Kayak & Dayung" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-46_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-47 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-47" ;
+    maritim:namaDestinasi "Pantai Pasir Putih Lhoknga" ;
+    maritim:lokasiLengkap "Aceh Besar, Aceh" ;
+    maritim:beradaDiProvinsi data:provinsi_Aceh ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 55000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Warung_kopi ;
+    maritim:memilikiFasilitas data:fasilitas_sewa_papan ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-47_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-47_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-47_2 .
+data:offer_SMT-47_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_SMT-47_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SMT-47_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-48 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-48" ;
+    maritim:namaDestinasi "Pantai Sasak" ;
+    maritim:lokasiLengkap "Pasaman Barat, Sumbar" ;
+    maritim:beradaDiProvinsi data:provinsi_Sumbar ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 0 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Warung_makan ;
+    maritim:memilikiFasilitas data:fasilitas_gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-48_0 .
+data:offer_SMT-48_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-49 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-49" ;
+    maritim:namaDestinasi "Pantai Tiram" ;
+    maritim:lokasiLengkap "Padang Pariaman, Sumbar" ;
+    maritim:beradaDiProvinsi data:provinsi_Sumbar ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Warung_kuliner ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-49_0 .
+data:offer_SMT-49_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-50 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-50" ;
+    maritim:namaDestinasi "Pantai Gandoriah" ;
+    maritim:lokasiLengkap "Pariaman, Sumbar" ;
+    maritim:beradaDiProvinsi data:provinsi_Sumbar ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 30000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 30000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Sejarah___Budaya_Bahari ;
+    maritim:memilikiFasilitas data:fasilitas_Anjungan ;
+    maritim:memilikiFasilitas data:fasilitas_stasiun_kereta ;
+    maritim:memilikiFasilitas data:fasilitas_perahu ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-50_0 .
+data:offer_SMT-50_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-51 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-51" ;
+    maritim:namaDestinasi "Pulau Asu Hinako" ;
+    maritim:lokasiLengkap "Nias Barat, Sumut" ;
+    maritim:beradaDiProvinsi data:provinsi_Sumut ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Mahir ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 3000000 ;
+    maritim:kategoriHargaTotal data:Range_Above1M ;
+    maritim:hargaAktivitasMulai 3000000 ;
+    maritim:kategoriHargaAktivitas data:Range_Above1M ;
+    maritim:memilikiAktivitas data:aktivitas_Diving ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiFasilitas data:fasilitas_Surf_camp ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_charter ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-51_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-51_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-51_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-51_3 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-51_4 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-51_5 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-51_6 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-51_7 .
+data:offer_SMT-51_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-fins-diving ;
+    rdfs:label "Masker & Fins Diving" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SMT-51_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_wetsuit-diving ;
+    rdfs:label "Wetsuit Selam" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SMT-51_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_tabung-scuba ;
+    rdfs:label "Tabung Scuba (Oksigen)" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Mahir .
+data:offer_SMT-51_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_bcd-regulator ;
+    rdfs:label "BCD & Regulator Selam" ;
+    maritim:hargaSewa 200000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Mahir .
+data:offer_SMT-51_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_paket-fun-dive ;
+    rdfs:label "Paket Fun Dive Lengkap (Alat + Guide + Kapal)" ;
+    maritim:hargaSewa 750000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_SMT-51_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 3000000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Mahir .
+data:offer_SMT-51_6 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SMT-51_7 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-52 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-52" ;
+    maritim:namaDestinasi "Pantai Krui" ;
+    maritim:lokasiLengkap "Pesisir Barat, Lampung" ;
+    maritim:beradaDiProvinsi data:provinsi_Lampung ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Mahir ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 100000 ;
+    maritim:kategoriHargaTotal data:Range_100k_250k ;
+    maritim:hargaAktivitasMulai 100000 ;
+    maritim:kategoriHargaAktivitas data:Range_100k_250k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Surf_camp ;
+    maritim:memilikiFasilitas data:fasilitas_homestay ;
+    maritim:memilikiFasilitas data:fasilitas_kafe ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-52_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-52_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-52_2 .
+data:offer_SMT-52_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Mahir .
+data:offer_SMT-52_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SMT-52_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-53 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-53" ;
+    maritim:namaDestinasi "Pantai Labuhan Jukung" ;
+    maritim:lokasiLengkap "Pesisir Barat, Lampung" ;
+    maritim:beradaDiProvinsi data:provinsi_Lampung ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 55000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Warung_makan ;
+    maritim:memilikiFasilitas data:fasilitas_parkir_luas ;
+    maritim:memilikiFasilitas data:fasilitas_sewa_papan ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-53_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-53_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-53_2 .
+data:offer_SMT-53_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Soft-top (Pemula)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-53_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SMT-53_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-54 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-54" ;
+    maritim:namaDestinasi "Pulau Kubur" ;
+    maritim:lokasiLengkap "Pesawaran, Lampung" ;
+    maritim:beradaDiProvinsi data:provinsi_Lampung ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 310000 ;
+    maritim:kategoriHargaTotal data:Range_250k_500k ;
+    maritim:hargaAktivitasMulai 300000 ;
+    maritim:kategoriHargaAktivitas data:Range_250k_500k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Memancing ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_nelayan ;
+    maritim:memilikiFasilitas data:fasilitas_pemandu ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-54_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-54_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-54_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-54_3 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-54_4 .
+data:offer_SMT-54_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-54_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-54_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-54_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 300000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-54_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-55 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-55" ;
+    maritim:namaDestinasi "Pulau Mahitam" ;
+    maritim:lokasiLengkap "Pesawaran, Lampung" ;
+    maritim:beradaDiProvinsi data:provinsi_Lampung ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 45000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 35000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Trekking___Panjat ;
+    maritim:memilikiFasilitas data:fasilitas_Warung ;
+    maritim:memilikiFasilitas data:fasilitas_persewaan_alat_snorkel ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-55_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-55_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-55_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-55_3 .
+data:offer_SMT-55_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-55_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-55_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-55_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-56 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-56" ;
+    maritim:namaDestinasi "Pantai Marina Kalianda" ;
+    maritim:lokasiLengkap "Lampung Selatan, Lampung" ;
+    maritim:beradaDiProvinsi data:provinsi_Lampung ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 30000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 30000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_kafe ;
+    maritim:memilikiFasilitas data:fasilitas_resort ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-56_0 .
+data:offer_SMT-56_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-57 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-57" ;
+    maritim:namaDestinasi "Pantai Gigi Hiu (Pegadungan)" ;
+    maritim:lokasiLengkap "Tanggamus, Lampung" ;
+    maritim:beradaDiProvinsi data:provinsi_Lampung ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 15000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 15000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Trekking___Panjat ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Parkir ;
+    maritim:memilikiFasilitas data:fasilitas_pos_pemandu_lokal ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-57_0 .
+data:offer_SMT-57_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-58 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-58" ;
+    maritim:namaDestinasi "Pulau Cemara Kecil" ;
+    maritim:lokasiLengkap "Kep. Anambas, Kepulauan Riau" ;
+    maritim:beradaDiProvinsi data:provinsi_Kepulauan_Riau ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 50000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Diving ;
+    maritim:memilikiAktivitas data:aktivitas_Camping_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_kayu ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-58_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-58_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-58_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-58_3 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-58_4 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-58_5 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-58_6 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-58_7 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-58_8 .
+data:offer_SMT-58_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-58_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-58_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-58_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-58_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-fins-diving ;
+    rdfs:label "Masker & Fins Diving" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SMT-58_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_wetsuit-diving ;
+    rdfs:label "Wetsuit Selam" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SMT-58_6 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_tabung-scuba ;
+    rdfs:label "Tabung Scuba (Oksigen)" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_SMT-58_7 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_bcd-regulator ;
+    rdfs:label "BCD & Regulator Selam" ;
+    maritim:hargaSewa 200000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_SMT-58_8 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_paket-fun-dive ;
+    rdfs:label "Paket Fun Dive Lengkap (Alat + Guide + Kapal)" ;
+    maritim:hargaSewa 750000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-59 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-59" ;
+    maritim:namaDestinasi "Pantai Batu Kasah" ;
+    maritim:lokasiLengkap "Natuna, Kepulauan Riau" ;
+    maritim:beradaDiProvinsi data:provinsi_Kepulauan_Riau ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-59_0 .
+data:offer_SMT-59_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SMT-60 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-60" ;
+    maritim:namaDestinasi "Pulau Senua" ;
+    maritim:lokasiLengkap "Natuna, Kepulauan Riau" ;
+    maritim:beradaDiProvinsi data:provinsi_Kepulauan_Riau ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 500000 ;
+    maritim:kategoriHargaTotal data:Range_250k_500k ;
+    maritim:hargaAktivitasMulai 500000 ;
+    maritim:kategoriHargaAktivitas data:Range_250k_500k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_nelayan ;
+    maritim:memilikiFasilitas data:fasilitas_pos_konservasi ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-60_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-60_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-60_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-60_3 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-60_4 .
+data:offer_SMT-60_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-60_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-60_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-60_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 500000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-60_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-29 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-29" ;
+    maritim:namaDestinasi "Pantai Menganti" ;
+    maritim:lokasiLengkap "Kebumen, Jawa Tengah" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Tengah ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 15000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 15000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Trekking___Panjat ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Jembatan_merah ;
+    maritim:memilikiFasilitas data:fasilitas_gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_TPI ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-29_0 .
+data:offer_JWA-29_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-30 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-30" ;
+    maritim:namaDestinasi "Pantai Timang" ;
+    maritim:lokasiLengkap "Gunungkidul, DI Yogyakarta" ;
+    maritim:beradaDiProvinsi data:provinsi_DI_Yogyakarta ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 110000 ;
+    maritim:kategoriHargaTotal data:Range_100k_250k ;
+    maritim:hargaAktivitasMulai 100000 ;
+    maritim:kategoriHargaAktivitas data:Range_100k_250k ;
+    maritim:memilikiAktivitas data:aktivitas_Wisata_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Gondola_kayu ;
+    maritim:memilikiFasilitas data:fasilitas_jembatan_gantung ;
+    maritim:memilikiFasilitas data:fasilitas_jeep ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-30_0 .
+data:offer_JWA-30_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-31 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-31" ;
+    maritim:namaDestinasi "Pantai Baron" ;
+    maritim:lokasiLengkap "Gunungkidul, DI Yogyakarta" ;
+    maritim:beradaDiProvinsi data:provinsi_DI_Yogyakarta ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 35000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 25000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_TPI_nelayan ;
+    maritim:memilikiFasilitas data:fasilitas_warung_seafood ;
+    maritim:memilikiFasilitas data:fasilitas_mercusuar ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-31_0 .
+data:offer_JWA-31_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-32 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-32" ;
+    maritim:namaDestinasi "Pantai Krakal" ;
+    maritim:lokasiLengkap "Gunungkidul, DI Yogyakarta" ;
+    maritim:beradaDiProvinsi data:provinsi_DI_Yogyakarta ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 85000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 75000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiFasilitas data:fasilitas_Warung ;
+    maritim:memilikiFasilitas data:fasilitas_persewaan_papan_surfing ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-32_0 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-32_1 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-32_2 .
+data:offer_JWA-32_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 75000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_JWA-32_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_JWA-32_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-33 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-33" ;
+    maritim:namaDestinasi "Pantai Drini" ;
+    maritim:lokasiLengkap "Gunungkidul, DI Yogyakarta" ;
+    maritim:beradaDiProvinsi data:provinsi_DI_Yogyakarta ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 60000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Kano___Kayak ;
+    maritim:memilikiFasilitas data:fasilitas_Penyewaan_kano ;
+    maritim:memilikiFasilitas data:fasilitas_pelampung ;
+    maritim:memilikiFasilitas data:fasilitas_gazebo ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-33_0 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-33_1 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-33_2 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-33_3 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-33_4 .
+data:offer_JWA-33_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_JWA-33_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_JWA-33_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_JWA-33_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_JWA-33_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_kano-kayak ;
+    rdfs:label "Perahu Kano / Kayak & Dayung" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-34 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-34" ;
+    maritim:namaDestinasi "Pantai Ngobaran" ;
+    maritim:lokasiLengkap "Gunungkidul, DI Yogyakarta" ;
+    maritim:beradaDiProvinsi data:provinsi_DI_Yogyakarta ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 10000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiAktivitas data:aktivitas_Sejarah___Budaya_Bahari ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Kios_pakaian_adat ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-34_0 .
+data:offer_JWA-34_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-35 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-35" ;
+    maritim:namaDestinasi "Pantai Wediombo" ;
+    maritim:lokasiLengkap "Gunungkidul, DI Yogyakarta" ;
+    maritim:beradaDiProvinsi data:provinsi_DI_Yogyakarta ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 45000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 35000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiFasilitas data:fasilitas_Sewa_alat_snorkeling ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiFasilitas data:fasilitas_mushola ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-35_0 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-35_1 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-35_2 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-35_3 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-35_4 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-35_5 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-35_6 .
+data:offer_JWA-35_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_JWA-35_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_JWA-35_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_JWA-35_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_JWA-35_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Soft-top (Pemula)" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_JWA-35_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_JWA-35_6 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-36 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-36" ;
+    maritim:namaDestinasi "Pantai Pok Tunggal" ;
+    maritim:lokasiLengkap "Gunungkidul, DI Yogyakarta" ;
+    maritim:beradaDiProvinsi data:provinsi_DI_Yogyakarta ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 70000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 60000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Trekking___Panjat ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiAktivitas data:aktivitas_Camping_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Penyewaan_tenda ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiFasilitas data:fasilitas_toilet ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-36_0 .
+data:offer_JWA-36_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_alat-panjat ;
+    rdfs:label "Harness, Tali & Helm Panjat Tebing" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+
+data:destinasi_JWA-37 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-37" ;
+    maritim:namaDestinasi "Pantai Glagah" ;
+    maritim:lokasiLengkap "Kulon Progo, DI Yogyakarta" ;
+    maritim:beradaDiProvinsi data:provinsi_DI_Yogyakarta ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 6000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 21000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 15000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_kayuh ;
+    maritim:memilikiFasilitas data:fasilitas_pasar_ikan ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-37_0 .
+data:offer_JWA-37_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-38 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-38" ;
+    maritim:namaDestinasi "Pantai Karang Bolong" ;
+    maritim:lokasiLengkap "Kebumen, Jawa Tengah" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Tengah ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 10000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Wisata_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Warung ;
+    maritim:memilikiFasilitas data:fasilitas_toilet ;
+    maritim:memilikiFasilitas data:fasilitas_tangga_beton ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-38_0 .
+data:offer_JWA-38_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-39 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-39" ;
+    maritim:namaDestinasi "Pantai Kartini" ;
+    maritim:lokasiLengkap "Jepara, Jawa Tengah" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Tengah ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 8000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 8000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Wisata_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Dermaga_feri ;
+    maritim:memilikiFasilitas data:fasilitas_wahana_anak ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-39_0 .
+data:offer_JWA-39_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-40 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-40" ;
+    maritim:namaDestinasi "Pantai Marina" ;
+    maritim:lokasiLengkap "Semarang, Jawa Tengah" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Tengah ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 20000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 15000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_keliling ;
+    maritim:memilikiFasilitas data:fasilitas_gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-40_0 .
+data:offer_JWA-40_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-41 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-41" ;
+    maritim:namaDestinasi "Pantai Boom Marina" ;
+    maritim:lokasiLengkap "Banyuwangi, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 7500 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 7500 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Amfiteater_terbuka ;
+    maritim:memilikiFasilitas data:fasilitas_kafe ;
+    maritim:memilikiFasilitas data:fasilitas_jogging_track ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-41_0 .
+data:offer_JWA-41_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-42 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-42" ;
+    maritim:namaDestinasi "Pantai Watu Dodol" ;
+    maritim:lokasiLengkap "Banyuwangi, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Rest_area ;
+    maritim:memilikiFasilitas data:fasilitas_warung_makan ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-42_0 .
+data:offer_JWA-42_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-43 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-43" ;
+    maritim:namaDestinasi "Pantai Plengkung (G-Land)" ;
+    maritim:lokasiLengkap "Banyuwangi, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Mahir ;
+    maritim:hargaTiketMasuk 20000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 1520000 ;
+    maritim:kategoriHargaTotal data:Range_Above1M ;
+    maritim:hargaAktivitasMulai 1500000 ;
+    maritim:kategoriHargaAktivitas data:Range_Above1M ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiFasilitas data:fasilitas_Surf_camp_internasional ;
+    maritim:memilikiFasilitas data:fasilitas_pos_TN_Alas_Purwo ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-43_0 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-43_1 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-43_2 .
+data:offer_JWA-43_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 1500000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Mahir .
+data:offer_JWA-43_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_JWA-43_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-44 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-44" ;
+    maritim:namaDestinasi "Pantai Sukamade" ;
+    maritim:lokasiLengkap "Banyuwangi, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 25000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 175000 ;
+    maritim:kategoriHargaTotal data:Range_100k_250k ;
+    maritim:hargaAktivitasMulai 150000 ;
+    maritim:kategoriHargaAktivitas data:Range_100k_250k ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Pos_ranger ;
+    maritim:memilikiFasilitas data:fasilitas_homestay_sederhana ;
+    maritim:memilikiFasilitas data:fasilitas_pemandu ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-44_0 .
+data:offer_JWA-44_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-45 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-45" ;
+    maritim:namaDestinasi "Pantai Balekambang" ;
+    maritim:lokasiLengkap "Malang, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 15000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 40000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 25000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiAktivitas data:aktivitas_Sejarah___Budaya_Bahari ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Pura ;
+    maritim:memilikiFasilitas data:fasilitas_penginapan ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiFasilitas data:fasilitas_flying_fox ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-45_0 .
+data:offer_JWA-45_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-46 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-46" ;
+    maritim:namaDestinasi "Pantai Goa Cina" ;
+    maritim:lokasiLengkap "Malang, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 60000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiAktivitas data:aktivitas_Camping_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Warung_makan ;
+    maritim:memilikiFasilitas data:fasilitas_toilet ;
+    maritim:memilikiFasilitas data:fasilitas_persewaan_tenda ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-46_0 .
+data:offer_JWA-46_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-47 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-47" ;
+    maritim:namaDestinasi "Pantai Sendang Biru" ;
+    maritim:lokasiLengkap "Malang, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 12000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 162000 ;
+    maritim:kategoriHargaTotal data:Range_100k_250k ;
+    maritim:hargaAktivitasMulai 150000 ;
+    maritim:kategoriHargaAktivitas data:Range_100k_250k ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_TPI_nelayan ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_sewa ;
+    maritim:memilikiFasilitas data:fasilitas_warung_ikan_bakar ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-47_0 .
+data:offer_JWA-47_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-48 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-48" ;
+    maritim:namaDestinasi "Pantai Clungup (CMC Tiga Warna)" ;
+    maritim:lokasiLengkap "Malang, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 35000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 25000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Kano___Kayak ;
+    maritim:memilikiFasilitas data:fasilitas_Penyewaan_kano ;
+    maritim:memilikiFasilitas data:fasilitas_pos_pendaftaran ;
+    maritim:memilikiFasilitas data:fasilitas_pemandu ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-48_0 .
+data:offer_JWA-48_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_kano-kayak ;
+    rdfs:label "Perahu Kano / Kayak & Dayung" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-49 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-49" ;
+    maritim:namaDestinasi "Pantai Tambakrejo" ;
+    maritim:lokasiLengkap "Blitar, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 6000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 21000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 15000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Pasar_ikan_asap ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_wisata ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-49_0 .
+data:offer_JWA-49_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-50 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-50" ;
+    maritim:namaDestinasi "Pantai Pasir Putih Karanggongso" ;
+    maritim:lokasiLengkap "Trenggalek, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 45000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 35000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Wahana_Air ;
+    maritim:memilikiFasilitas data:fasilitas_Banana_boat ;
+    maritim:memilikiFasilitas data:fasilitas_penginapan ;
+    maritim:memilikiFasilitas data:fasilitas_warung_seafood ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-50_0 .
+data:offer_JWA-50_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-51 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-51" ;
+    maritim:namaDestinasi "Pantai Watu Karung" ;
+    maritim:lokasiLengkap "Pacitan, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Mahir ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 85000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 75000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_peselancar ;
+    maritim:memilikiFasilitas data:fasilitas_sewa_papan ;
+    maritim:memilikiFasilitas data:fasilitas_kafe ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-51_0 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-51_1 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-51_2 .
+data:offer_JWA-51_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 75000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Mahir .
+data:offer_JWA-51_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_JWA-51_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-52 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-52" ;
+    maritim:namaDestinasi "Pantai Kasap" ;
+    maritim:lokasiLengkap "Pacitan, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 10000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Trekking___Panjat ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Gardu_pandang_bukit ;
+    maritim:memilikiFasilitas data:fasilitas_warung_kelapa_muda ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-52_0 .
+data:offer_JWA-52_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-53 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-53" ;
+    maritim:namaDestinasi "Pantai Banyu Tibo" ;
+    maritim:lokasiLengkap "Pacitan, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 10000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Tangga_turun ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiFasilitas data:fasilitas_spot_foto ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-53_0 .
+data:offer_JWA-53_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_JWA-54 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-54" ;
+    maritim:namaDestinasi "Pantai Teleng Ria" ;
+    maritim:lokasiLengkap "Pacitan, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 60000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiFasilitas data:fasilitas_Surf_camp_pemula ;
+    maritim:memilikiFasilitas data:fasilitas_resort ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-54_0 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-54_1 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-54_2 .
+data:offer_JWA-54_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Soft-top (Pemula)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_JWA-54_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_JWA-54_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_KLM-19 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-19" ;
+    maritim:namaDestinasi "Pantai Samudra Indah" ;
+    maritim:lokasiLengkap "Bengkayang, Kalbar" ;
+    maritim:beradaDiProvinsi data:provinsi_Kalbar ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 10000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiFasilitas data:fasilitas_toilet ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-19_0 .
+data:offer_KLM-19_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_KLM-20 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-20" ;
+    maritim:namaDestinasi "Pantai Kijing" ;
+    maritim:lokasiLengkap "Mempawah, Kalbar" ;
+    maritim:beradaDiProvinsi data:provinsi_Kalbar ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo_panggung ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-20_0 .
+data:offer_KLM-20_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_KLM-21 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-21" ;
+    maritim:namaDestinasi "Pantai Kubu" ;
+    maritim:lokasiLengkap "Kotawaringin Barat, Kalteng" ;
+    maritim:beradaDiProvinsi data:provinsi_Kalteng ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Dermaga_kayu ;
+    maritim:memilikiFasilitas data:fasilitas_pondok_wisata ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-21_0 .
+data:offer_KLM-21_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_KLM-22 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-22" ;
+    maritim:namaDestinasi "Pantai Sungai Bakau" ;
+    maritim:lokasiLengkap "Seruyan, Kalteng" ;
+    maritim:beradaDiProvinsi data:provinsi_Kalteng ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Wisata_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_warung_kuliner ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-22_0 .
+data:offer_KLM-22_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_KLM-23 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-23" ;
+    maritim:namaDestinasi "Pantai Takisung" ;
+    maritim:lokasiLengkap "Tanah Laut, Kalsel" ;
+    maritim:beradaDiProvinsi data:provinsi_Kalsel ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 40000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 30000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Wahana_Air ;
+    maritim:memilikiFasilitas data:fasilitas_Pasar_ikan_asin ;
+    maritim:memilikiFasilitas data:fasilitas_banana_boat ;
+    maritim:memilikiFasilitas data:fasilitas_ATV ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-23_0 .
+data:offer_KLM-23_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_KLM-24 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-24" ;
+    maritim:namaDestinasi "Pantai Batakan Baru" ;
+    maritim:lokasiLengkap "Tanah Laut, Kalsel" ;
+    maritim:beradaDiProvinsi data:provinsi_Kalsel ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 60000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiAktivitas data:aktivitas_Camping_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Tenda_camping ;
+    maritim:memilikiFasilitas data:fasilitas_glamping ;
+    maritim:memilikiFasilitas data:fasilitas_penyewaan_kuda ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-24_0 .
+data:offer_KLM-24_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_KLM-25 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-25" ;
+    maritim:namaDestinasi "Pantai Teluk Tamiang" ;
+    maritim:lokasiLengkap "Kotabaru, Kalsel" ;
+    maritim:beradaDiProvinsi data:provinsi_Kalsel ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 45000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 35000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_nelayan ;
+    maritim:memilikiFasilitas data:fasilitas_persewaan_alat_snorkel ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-25_0 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-25_1 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-25_2 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-25_3 .
+data:offer_KLM-25_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-25_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-25_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-25_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_KLM-26 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-26" ;
+    maritim:namaDestinasi "Pantai Gedambaan" ;
+    maritim:lokasiLengkap "Kotabaru, Kalsel" ;
+    maritim:beradaDiProvinsi data:provinsi_Kalsel ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 10000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Cottage_terapung ;
+    maritim:memilikiFasilitas data:fasilitas_kolam_renang_air_tawar ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-26_0 .
+data:offer_KLM-26_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_KLM-27 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-27" ;
+    maritim:namaDestinasi "Pantai Lamaru" ;
+    maritim:lokasiLengkap "Balikpapan, Kaltim" ;
+    maritim:beradaDiProvinsi data:provinsi_Kaltim ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 15000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 35000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 20000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Penyewaan_sepeda ;
+    maritim:memilikiFasilitas data:fasilitas_gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-27_0 .
+data:offer_KLM-27_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_KLM-28 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-28" ;
+    maritim:namaDestinasi "Pantai Kemala" ;
+    maritim:lokasiLengkap "Balikpapan, Kaltim" ;
+    maritim:beradaDiProvinsi data:provinsi_Kaltim ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 45000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 40000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Wahana_Air ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Restoran_seafood ;
+    maritim:memilikiFasilitas data:fasilitas_operator_watersport ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-28_0 .
+data:offer_KLM-28_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_KLM-29 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-29" ;
+    maritim:namaDestinasi "Pantai Tanah Merah Samboja" ;
+    maritim:lokasiLengkap "Kutai Kartanegara, Kaltim" ;
+    maritim:beradaDiProvinsi data:provinsi_Kaltim ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 10000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiAktivitas data:aktivitas_Camping_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Pondok_wisata ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiFasilitas data:fasilitas_toilet ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-29_0 .
+data:offer_KLM-29_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_KLM-30 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-30" ;
+    maritim:namaDestinasi "Pulau Kaniungan" ;
+    maritim:lokasiLengkap "Berau, Kaltim" ;
+    maritim:beradaDiProvinsi data:provinsi_Kaltim ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 15000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 65000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_kayu ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_nelayan ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-30_0 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-30_1 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-30_2 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-30_3 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-30_4 .
+data:offer_KLM-30_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-30_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-30_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-30_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-30_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-57 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-57" ;
+    maritim:namaDestinasi "Pantai Seminyak & Petitenget" ;
+    maritim:lokasiLengkap "Badung, Bali" ;
+    maritim:beradaDiProvinsi data:provinsi_Bali ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 50000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Payung_pantai ;
+    maritim:memilikiFasilitas data:fasilitas_kafe ;
+    maritim:memilikiFasilitas data:fasilitas_lifeguard ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-57_0 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-57_1 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-57_2 .
+data:offer_BNT-57_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Soft-top (Pemula)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-57_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_BNT-57_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-58 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-58" ;
+    maritim:namaDestinasi "Pantai Canggu (Batu Bolong & Echo)" ;
+    maritim:lokasiLengkap "Badung, Bali" ;
+    maritim:beradaDiProvinsi data:provinsi_Bali ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 70000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 70000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Rental_papan ;
+    maritim:memilikiFasilitas data:fasilitas_sekolah_surfing ;
+    maritim:memilikiFasilitas data:fasilitas_beach_club ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-58_0 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-58_1 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-58_2 .
+data:offer_BNT-58_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 70000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_BNT-58_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_BNT-58_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-59 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-59" ;
+    maritim:namaDestinasi "Pantai Bingin" ;
+    maritim:lokasiLengkap "Badung, Bali" ;
+    maritim:beradaDiProvinsi data:provinsi_Bali ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Mahir ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 100000 ;
+    maritim:kategoriHargaTotal data:Range_100k_250k ;
+    maritim:hargaAktivitasMulai 100000 ;
+    maritim:kategoriHargaAktivitas data:Range_100k_250k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_tebing ;
+    maritim:memilikiFasilitas data:fasilitas_surf_shop ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-59_0 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-59_1 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-59_2 .
+data:offer_BNT-59_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Mahir .
+data:offer_BNT-59_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_BNT-59_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-60 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-60" ;
+    maritim:namaDestinasi "Pantai Balangan" ;
+    maritim:lokasiLengkap "Badung, Bali" ;
+    maritim:beradaDiProvinsi data:provinsi_Bali ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 255000 ;
+    maritim:kategoriHargaTotal data:Range_250k_500k ;
+    maritim:hargaAktivitasMulai 250000 ;
+    maritim:kategoriHargaAktivitas data:Range_100k_250k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Sekolah_selancar ;
+    maritim:memilikiFasilitas data:fasilitas_warung_pantai ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-60_0 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-60_1 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-60_2 .
+data:offer_BNT-60_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Soft-top (Pemula)" ;
+    maritim:hargaSewa 250000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-60_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_BNT-60_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-61 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-61" ;
+    maritim:namaDestinasi "Pantai Dreamland (New Kuta)" ;
+    maritim:lokasiLengkap "Badung, Bali" ;
+    maritim:beradaDiProvinsi data:provinsi_Bali ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 110000 ;
+    maritim:kategoriHargaTotal data:Range_100k_250k ;
+    maritim:hargaAktivitasMulai 100000 ;
+    maritim:kategoriHargaAktivitas data:Range_100k_250k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiFasilitas data:fasilitas_Kursi_pantai_payung ;
+    maritim:memilikiFasilitas data:fasilitas_kafe ;
+    maritim:memilikiFasilitas data:fasilitas_toilet ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-61_0 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-61_1 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-61_2 .
+data:offer_BNT-61_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_BNT-61_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_BNT-61_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-62 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-62" ;
+    maritim:namaDestinasi "Pantai Nusa Dua (Geger & Mengiat)" ;
+    maritim:lokasiLengkap "Badung, Bali" ;
+    maritim:beradaDiProvinsi data:provinsi_Bali ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 50000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Kano___Kayak ;
+    maritim:memilikiFasilitas data:fasilitas_Jalur_pedestrian ;
+    maritim:memilikiFasilitas data:fasilitas_persewaan_kano ;
+    maritim:memilikiFasilitas data:fasilitas_loker ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-62_0 .
+data:offer_BNT-62_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_kano-kayak ;
+    rdfs:label "Perahu Kano / Kayak & Dayung" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-63 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-63" ;
+    maritim:namaDestinasi "Pantai Bias Tugel Padangbai" ;
+    maritim:lokasiLengkap "Karangasem, Bali" ;
+    maritim:beradaDiProvinsi data:provinsi_Bali ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 50000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 40000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiFasilitas data:fasilitas_Warung_lokal ;
+    maritim:memilikiFasilitas data:fasilitas_persewaan_alat_snorkeling ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-63_0 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-63_1 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-63_2 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-63_3 .
+data:offer_BNT-63_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-63_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-63_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-63_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 40000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-64 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-64" ;
+    maritim:namaDestinasi "Virgin Beach (Pantai Perasi)" ;
+    maritim:lokasiLengkap "Karangasem, Bali" ;
+    maritim:beradaDiProvinsi data:provinsi_Bali ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 60000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Payung_pantai ;
+    maritim:memilikiFasilitas data:fasilitas_warung_ikan_bakar ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-64_0 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-64_1 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-64_2 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-64_3 .
+data:offer_BNT-64_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-64_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-64_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-64_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-65 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-65" ;
+    maritim:namaDestinasi "Pantai Keramas" ;
+    maritim:lokasiLengkap "Gianyar, Bali" ;
+    maritim:beradaDiProvinsi data:provinsi_Bali ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Mahir ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 100000 ;
+    maritim:kategoriHargaTotal data:Range_100k_250k ;
+    maritim:hargaAktivitasMulai 100000 ;
+    maritim:kategoriHargaAktivitas data:Range_100k_250k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiFasilitas data:fasilitas_Beach_club ;
+    maritim:memilikiFasilitas data:fasilitas_persewaan_papan ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-65_0 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-65_1 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-65_2 .
+data:offer_BNT-65_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Mahir .
+data:offer_BNT-65_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_BNT-65_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-66 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-66" ;
+    maritim:namaDestinasi "Gili Asahan Sekotong" ;
+    maritim:lokasiLengkap "Lombok Barat, NTB" ;
+    maritim:beradaDiProvinsi data:provinsi_NTB ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 60000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Kano___Kayak ;
+    maritim:memilikiFasilitas data:fasilitas_Eco_resort ;
+    maritim:memilikiFasilitas data:fasilitas_dive_center ;
+    maritim:memilikiFasilitas data:fasilitas_persewaan_kayak ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-66_0 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-66_1 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-66_2 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-66_3 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-66_4 .
+data:offer_BNT-66_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-66_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-66_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-66_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-66_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_kano-kayak ;
+    rdfs:label "Perahu Kano / Kayak & Dayung" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-67 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-67" ;
+    maritim:namaDestinasi "Pantai Senggigi Mangsit" ;
+    maritim:lokasiLengkap "Lombok Barat, NTB" ;
+    maritim:beradaDiProvinsi data:provinsi_NTB ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 40000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 40000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Hotel_resor ;
+    maritim:memilikiFasilitas data:fasilitas_dive_operator ;
+    maritim:memilikiFasilitas data:fasilitas_kafe ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-67_0 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-67_1 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-67_2 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-67_3 .
+data:offer_BNT-67_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-67_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-67_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-67_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 40000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-68 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-68" ;
+    maritim:namaDestinasi "Pantai Tanjung Bloam" ;
+    maritim:lokasiLengkap "Lombok Timur, NTB" ;
+    maritim:beradaDiProvinsi data:provinsi_NTB ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 15000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 15000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Pos_konservasi_penyu ;
+    maritim:memilikiFasilitas data:fasilitas_pemandu_lokal ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-68_0 .
+data:offer_BNT-68_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-69 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-69" ;
+    maritim:namaDestinasi "Pulau Pasir (Sand Island)" ;
+    maritim:lokasiLengkap "Manggarai Barat, NTT" ;
+    maritim:beradaDiProvinsi data:provinsi_NTT ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 50000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 1550000 ;
+    maritim:kategoriHargaTotal data:Range_Above1M ;
+    maritim:hargaAktivitasMulai 1500000 ;
+    maritim:kategoriHargaAktivitas data:Range_Above1M ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Kapal_wisata_Labuan_Bajo ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-69_0 .
+data:offer_BNT-69_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-70 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-70" ;
+    maritim:namaDestinasi "Pantai Oetune" ;
+    maritim:lokasiLengkap "Timor Tengah Selatan, NTT" ;
+    maritim:beradaDiProvinsi data:provinsi_NTT ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 25000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 20000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Lopo-lopo_khas_Timor ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-70_0 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-70_1 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-70_2 .
+data:offer_BNT-70_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Soft-top (Pemula)" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-70_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_BNT-70_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-71 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-71" ;
+    maritim:namaDestinasi "Pantai Kolbano" ;
+    maritim:lokasiLengkap "Timor Tengah Selatan, NTT" ;
+    maritim:beradaDiProvinsi data:provinsi_NTT ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Tugu_batu_raksasa_Fatu_Un ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-71_0 .
+data:offer_BNT-71_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_BNT-72 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-72" ;
+    maritim:namaDestinasi "Teluk Kabola Alor" ;
+    maritim:lokasiLengkap "Alor, NTT" ;
+    maritim:beradaDiProvinsi data:provinsi_NTT ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 20000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 170000 ;
+    maritim:kategoriHargaTotal data:Range_100k_250k ;
+    maritim:hargaAktivitasMulai 150000 ;
+    maritim:kategoriHargaAktivitas data:Range_100k_250k ;
+    maritim:memilikiAktivitas data:aktivitas_Wisata_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_kayu_tradisional ;
+    maritim:memilikiFasilitas data:fasilitas_pemandu ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-72_0 .
+data:offer_BNT-72_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SLW-29 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-29" ;
+    maritim:namaDestinasi "Pantai Dato" ;
+    maritim:lokasiLengkap "Majene, Sulawesi Barat" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Barat ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 40000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 35000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_tangga_batu ;
+    maritim:memilikiFasilitas data:fasilitas_toilet ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-29_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-29_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-29_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-29_3 .
+data:offer_SLW-29_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-29_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-29_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-29_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SLW-30 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-30" ;
+    maritim:namaDestinasi "Pantai Tanjung Karang Donggala" ;
+    maritim:lokasiLengkap "Donggala, Sulawesi Tengah" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Tengah ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 45000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 650000 ;
+    maritim:kategoriHargaAktivitas data:Range_500k_1M ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Diving ;
+    maritim:memilikiFasilitas data:fasilitas_Dive_resort ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_kaca ;
+    maritim:memilikiFasilitas data:fasilitas_homestay ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-30_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-30_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-30_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-30_3 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-30_4 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-30_5 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-30_6 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-30_7 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-30_8 .
+data:offer_SLW-30_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-30_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-30_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-30_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 40000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-30_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-fins-diving ;
+    rdfs:label "Masker & Fins Diving" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SLW-30_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_wetsuit-diving ;
+    rdfs:label "Wetsuit Selam" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SLW-30_6 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_tabung-scuba ;
+    rdfs:label "Tabung Scuba (Oksigen)" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_SLW-30_7 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_bcd-regulator ;
+    rdfs:label "BCD & Regulator Selam" ;
+    maritim:hargaSewa 200000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_SLW-30_8 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_paket-fun-dive ;
+    rdfs:label "Paket Fun Dive Lengkap (Alat + Guide + Kapal)" ;
+    maritim:hargaSewa 750000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SLW-31 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-31" ;
+    maritim:namaDestinasi "Pusat Laut Donggala (Pusentasi)" ;
+    maritim:lokasiLengkap "Donggala, Sulawesi Tengah" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Tengah ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiFasilitas data:fasilitas_Tangga_bilas ;
+    maritim:memilikiFasilitas data:fasilitas_pondok_santai ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-31_0 .
+data:offer_SLW-31_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SLW-32 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-32" ;
+    maritim:namaDestinasi "Danau Paisupok" ;
+    maritim:lokasiLengkap "Banggai Kepulauan, Sulawesi Tengah" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Tengah ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 40000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 30000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Kano___Kayak ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_kaca ;
+    maritim:memilikiFasilitas data:fasilitas_kano ;
+    maritim:memilikiFasilitas data:fasilitas_dermaga_kayu ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-32_0 .
+data:offer_SLW-32_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_kano-kayak ;
+    rdfs:label "Perahu Kano / Kayak & Dayung" ;
+    maritim:hargaSewa 30000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SLW-33 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-33" ;
+    maritim:namaDestinasi "Pantai Kilo 5" ;
+    maritim:lokasiLengkap "Luwuk Banggai, Sulawesi Tengah" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Tengah ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 30000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 30000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Warung_pisang_goreng ;
+    maritim:memilikiFasilitas data:fasilitas_sewa_snorkel ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-33_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-33_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-33_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-33_3 .
+data:offer_SLW-33_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-33_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-33_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-33_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 30000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SLW-34 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-34" ;
+    maritim:namaDestinasi "Pantai Nirwana" ;
+    maritim:lokasiLengkap "Baubau, Sulawesi Tenggara" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Tenggara ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 20000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 15000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo_panggung ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiFasilitas data:fasilitas_ban_pelampung ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-34_0 .
+data:offer_SLW-34_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SLW-35 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-35" ;
+    maritim:namaDestinasi "Pantai Meleura" ;
+    maritim:lokasiLengkap "Muna, Sulawesi Tenggara" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Tenggara ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 30000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 25000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Kano___Kayak ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo_terapung ;
+    maritim:memilikiFasilitas data:fasilitas_persewaan_kano ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-35_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-35_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-35_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-35_3 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-35_4 .
+data:offer_SLW-35_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-35_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-35_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-35_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-35_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_kano-kayak ;
+    rdfs:label "Perahu Kano / Kayak & Dayung" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SLW-36 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-36" ;
+    maritim:namaDestinasi "Danau Ubur-Ubur Mariona Togean" ;
+    maritim:lokasiLengkap "Tojo Una-Una, Sulawesi Tengah" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Tengah ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 20000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 70000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiFasilitas data:fasilitas_Dermaga_kayu ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_nelayan ;
+    maritim:memilikiFasilitas data:fasilitas_pemandu ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-36_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-36_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-36_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-36_3 .
+data:offer_SLW-36_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-36_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-36_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-36_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SLW-37 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-37" ;
+    maritim:namaDestinasi "Pulau Labengki" ;
+    maritim:lokasiLengkap "Konawe Utara, Sulawesi Tenggara" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Tenggara ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 25000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 1025000 ;
+    maritim:kategoriHargaTotal data:Range_Above1M ;
+    maritim:hargaAktivitasMulai 1000000 ;
+    maritim:kategoriHargaAktivitas data:Range_500k_1M ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Trekking___Panjat ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_terapung ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_trip ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-37_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-37_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-37_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-37_3 .
+data:offer_SLW-37_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-37_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-37_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-37_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 1000000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SLW-38 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-38" ;
+    maritim:namaDestinasi "Pulau Sombori" ;
+    maritim:lokasiLengkap "Morowali, Sulawesi Tengah" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Tengah ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 25000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 1225000 ;
+    maritim:kategoriHargaTotal data:Range_Above1M ;
+    maritim:hargaAktivitasMulai 1200000 ;
+    maritim:kategoriHargaAktivitas data:Range_Above1M ;
+    maritim:memilikiAktivitas data:aktivitas_Kano___Kayak ;
+    maritim:memilikiAktivitas data:aktivitas_Trekking___Panjat ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_trip ;
+    maritim:memilikiFasilitas data:fasilitas_pemandu_lokal ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-38_0 .
+data:offer_SLW-38_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_kano-kayak ;
+    rdfs:label "Perahu Kano / Kayak & Dayung" ;
+    maritim:hargaSewa 1200000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SLW-39 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-39" ;
+    maritim:namaDestinasi "Pulau Nain" ;
+    maritim:lokasiLengkap "Minahasa Utara, Sulawesi Utara" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Utara ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 510000 ;
+    maritim:kategoriHargaTotal data:Range_500k_1M ;
+    maritim:hargaAktivitasMulai 500000 ;
+    maritim:kategoriHargaAktivitas data:Range_250k_500k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_charter_dari_Manado_Bunaken ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-39_0 .
+data:offer_SLW-39_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_SLW-40 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-40" ;
+    maritim:namaDestinasi "Pulau Lihaga Likupang" ;
+    maritim:lokasiLengkap "Minahasa Utara, Sulawesi Utara" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Utara ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 25000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 75000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiFasilitas data:fasilitas_Dermaga_apung ;
+    maritim:memilikiFasilitas data:fasilitas_gazebo_kayu ;
+    maritim:memilikiFasilitas data:fasilitas_toilet ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-40_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-40_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-40_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-40_3 .
+data:offer_SLW-40_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-40_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-40_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-40_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_MLK-15 a maritim:DestinasiWisata ;
+    maritim:kode "MLK-15" ;
+    maritim:namaDestinasi "Pantai Liang (Hunimua)" ;
+    maritim:lokasiLengkap "Maluku Tengah, Maluku" ;
+    maritim:beradaDiProvinsi data:provinsi_Maluku ;
+    maritim:beradaDiWilayah data:wilayah_Maluku ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 20000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 15000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiFasilitas data:fasilitas_Dermaga_kayu_ikonik ;
+    maritim:memilikiFasilitas data:fasilitas_warung_rujak ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-15_0 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-15_1 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-15_2 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-15_3 .
+data:offer_MLK-15_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-15_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-15_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-15_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 15000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_MLK-16 a maritim:DestinasiWisata ;
+    maritim:kode "MLK-16" ;
+    maritim:namaDestinasi "Pantai Natsepa" ;
+    maritim:lokasiLengkap "Maluku Tengah, Maluku" ;
+    maritim:beradaDiProvinsi data:provinsi_Maluku ;
+    maritim:beradaDiWilayah data:wilayah_Maluku ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 20000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 15000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Deretan_kios_rujak ;
+    maritim:memilikiFasilitas data:fasilitas_sewa_ban ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-16_0 .
+data:offer_MLK-16_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_MLK-17 a maritim:DestinasiWisata ;
+    maritim:kode "MLK-17" ;
+    maritim:namaDestinasi "Pantai Pintu Kota" ;
+    maritim:lokasiLengkap "Kota Ambon, Maluku" ;
+    maritim:beradaDiProvinsi data:provinsi_Maluku ;
+    maritim:beradaDiWilayah data:wilayah_Maluku ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Spot_foto ;
+    maritim:memilikiFasilitas data:fasilitas_warung_kelapa ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-17_0 .
+data:offer_MLK-17_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_MLK-18 a maritim:DestinasiWisata ;
+    maritim:kode "MLK-18" ;
+    maritim:namaDestinasi "Pantai Ora" ;
+    maritim:lokasiLengkap "Maluku Tengah, Maluku" ;
+    maritim:beradaDiProvinsi data:provinsi_Maluku ;
+    maritim:beradaDiWilayah data:wilayah_Maluku ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 25000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 75000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiFasilitas data:fasilitas_Eco_resort_terapung ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_sewa ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-18_0 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-18_1 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-18_2 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-18_3 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-18_4 .
+data:offer_MLK-18_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-18_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-18_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-18_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-18_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_MLK-19 a maritim:DestinasiWisata ;
+    maritim:kode "MLK-19" ;
+    maritim:namaDestinasi "Tebing Hatupia Sawai" ;
+    maritim:lokasiLengkap "Maluku Tengah, Maluku" ;
+    maritim:beradaDiProvinsi data:provinsi_Maluku ;
+    maritim:beradaDiWilayah data:wilayah_Maluku ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 50000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 40000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Kano___Kayak ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_kano ;
+    maritim:memilikiFasilitas data:fasilitas_homestay_desa_Sawai ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-19_0 .
+data:offer_MLK-19_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_kano-kayak ;
+    rdfs:label "Perahu Kano / Kayak & Dayung" ;
+    maritim:hargaSewa 40000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_MLK-20 a maritim:DestinasiWisata ;
+    maritim:kode "MLK-20" ;
+    maritim:namaDestinasi "Pantai Ngurbloat (Pasir Panjang)" ;
+    maritim:lokasiLengkap "Maluku Tenggara, Maluku" ;
+    maritim:beradaDiProvinsi data:provinsi_Maluku ;
+    maritim:beradaDiWilayah data:wilayah_Maluku ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Warung_kelapa ;
+    maritim:memilikiFasilitas data:fasilitas_homestay ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-20_0 .
+data:offer_MLK-20_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_MLK-21 a maritim:DestinasiWisata ;
+    maritim:kode "MLK-21" ;
+    maritim:namaDestinasi "Pulau Bair (Raja Ampat Mini Kei)" ;
+    maritim:lokasiLengkap "Maluku Tenggara, Maluku" ;
+    maritim:beradaDiProvinsi data:provinsi_Maluku ;
+    maritim:beradaDiWilayah data:wilayah_Maluku ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 25000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 375000 ;
+    maritim:kategoriHargaTotal data:Range_250k_500k ;
+    maritim:hargaAktivitasMulai 350000 ;
+    maritim:kategoriHargaAktivitas data:Range_250k_500k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_jukung_nelayan ;
+    maritim:memilikiFasilitas data:fasilitas_pemandu ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-21_0 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-21_1 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-21_2 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-21_3 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-21_4 .
+data:offer_MLK-21_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-21_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-21_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-21_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-21_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_MLK-22 a maritim:DestinasiWisata ;
+    maritim:kode "MLK-22" ;
+    maritim:namaDestinasi "Pantai Ohoidertawun" ;
+    maritim:lokasiLengkap "Maluku Tenggara, Maluku" ;
+    maritim:beradaDiProvinsi data:provinsi_Maluku ;
+    maritim:beradaDiWilayah data:wilayah_Maluku ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Wisata_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_tepi_pantai ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-22_0 .
+data:offer_MLK-22_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_MLK-23 a maritim:DestinasiWisata ;
+    maritim:kode "MLK-23" ;
+    maritim:namaDestinasi "Pulau Pombo" ;
+    maritim:lokasiLengkap "Maluku Tengah, Maluku" ;
+    maritim:beradaDiProvinsi data:provinsi_Maluku ;
+    maritim:beradaDiWilayah data:wilayah_Maluku ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 15000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 315000 ;
+    maritim:kategoriHargaTotal data:Range_250k_500k ;
+    maritim:hargaAktivitasMulai 300000 ;
+    maritim:kategoriHargaAktivitas data:Range_250k_500k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiFasilitas data:fasilitas_Pos_konservasi_cagar_alam ;
+    maritim:memilikiFasilitas data:fasilitas_perahu ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-23_0 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-23_1 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-23_2 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-23_3 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-23_4 .
+data:offer_MLK-23_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-23_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-23_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-23_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 300000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-23_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_MLK-24 a maritim:DestinasiWisata ;
+    maritim:kode "MLK-24" ;
+    maritim:namaDestinasi "Pulau Hatta Banda" ;
+    maritim:lokasiLengkap "Maluku Tengah, Maluku" ;
+    maritim:beradaDiProvinsi data:provinsi_Maluku ;
+    maritim:beradaDiWilayah data:wilayah_Maluku ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 25000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 825000 ;
+    maritim:kategoriHargaTotal data:Range_500k_1M ;
+    maritim:hargaAktivitasMulai 800000 ;
+    maritim:kategoriHargaAktivitas data:Range_500k_1M ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Diving ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_pulau ;
+    maritim:memilikiFasilitas data:fasilitas_dive_center_Banda ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-24_0 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-24_1 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-24_2 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-24_3 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-24_4 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-24_5 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-24_6 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-24_7 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-24_8 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-24_9 .
+data:offer_MLK-24_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-24_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-24_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-24_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 800000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-24_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-fins-diving ;
+    rdfs:label "Masker & Fins Diving" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_MLK-24_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_wetsuit-diving ;
+    rdfs:label "Wetsuit Selam" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_MLK-24_6 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_tabung-scuba ;
+    rdfs:label "Tabung Scuba (Oksigen)" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_MLK-24_7 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_bcd-regulator ;
+    rdfs:label "BCD & Regulator Selam" ;
+    maritim:hargaSewa 200000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_MLK-24_8 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_paket-fun-dive ;
+    rdfs:label "Paket Fun Dive Lengkap (Alat + Guide + Kapal)" ;
+    maritim:hargaSewa 750000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_MLK-24_9 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_PPA-14 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-14" ;
+    maritim:namaDestinasi "Pantai Base G" ;
+    maritim:lokasiLengkap "Kota Jayapura, Papua" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 10000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiAktivitas data:aktivitas_Sejarah___Budaya_Bahari ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo_piara ;
+    maritim:memilikiFasilitas data:fasilitas_warung_kelapa ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-14_0 .
+data:offer_PPA-14_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_PPA-15 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-15" ;
+    maritim:namaDestinasi "Pantai Hamadi" ;
+    maritim:lokasiLengkap "Kota Jayapura, Papua" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Sejarah___Budaya_Bahari ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Warung_makan ;
+    maritim:memilikiFasilitas data:fasilitas_akses_jembatan_Youtefa ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-15_0 .
+data:offer_PPA-15_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_PPA-16 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-16" ;
+    maritim:namaDestinasi "Pantai Holtekamp" ;
+    maritim:lokasiLengkap "Kota Jayapura, Papua" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 80000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 75000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Kafe_pesisir ;
+    maritim:memilikiFasilitas data:fasilitas_parkir_luas ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-16_0 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-16_1 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-16_2 .
+data:offer_PPA-16_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 75000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_PPA-16_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_PPA-16_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_PPA-17 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-17" ;
+    maritim:namaDestinasi "Pantai Harlem" ;
+    maritim:lokasiLengkap "Jayapura, Papua" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 15000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 55000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 40000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_nelayan_dari_Depapre ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-17_0 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-17_1 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-17_2 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-17_3 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-17_4 .
+data:offer_PPA-17_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-17_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-17_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-17_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 40000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-17_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_PPA-18 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-18" ;
+    maritim:namaDestinasi "Pantai Tablanusu" ;
+    maritim:lokasiLengkap "Jayapura, Papua" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 45000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 35000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_desa_wisata ;
+    maritim:memilikiFasilitas data:fasilitas_dermaga_perahu ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-18_0 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-18_1 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-18_2 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-18_3 .
+data:offer_PPA-18_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-18_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-18_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-18_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_PPA-19 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-19" ;
+    maritim:namaDestinasi "Kepulauan Padaido" ;
+    maritim:lokasiLengkap "Biak Numfor, Papua" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 25000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 825000 ;
+    maritim:kategoriHargaTotal data:Range_500k_1M ;
+    maritim:hargaAktivitasMulai 800000 ;
+    maritim:kategoriHargaAktivitas data:Range_500k_1M ;
+    maritim:memilikiAktivitas data:aktivitas_Diving ;
+    maritim:memilikiAktivitas data:aktivitas_Island_Hopping ;
+    maritim:memilikiAktivitas data:aktivitas_Memancing ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_nelayan_charter ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-19_0 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-19_1 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-19_2 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-19_3 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-19_4 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-19_5 .
+data:offer_PPA-19_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-fins-diving ;
+    rdfs:label "Masker & Fins Diving" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_PPA-19_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_wetsuit-diving ;
+    rdfs:label "Wetsuit Selam" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_PPA-19_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_tabung-scuba ;
+    rdfs:label "Tabung Scuba (Oksigen)" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_PPA-19_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_bcd-regulator ;
+    rdfs:label "BCD & Regulator Selam" ;
+    maritim:hargaSewa 200000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_PPA-19_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_paket-fun-dive ;
+    rdfs:label "Paket Fun Dive Lengkap (Alat + Guide + Kapal)" ;
+    maritim:hargaSewa 750000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_PPA-19_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_PPA-20 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-20" ;
+    maritim:namaDestinasi "Pantai Bosnik (Segara Indah)" ;
+    maritim:lokasiLengkap "Biak Timur, Papua" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 45000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:hargaAktivitasMulai 35000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Kuliner_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo_panggung ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-20_0 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-20_1 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-20_2 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-20_3 .
+data:offer_PPA-20_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-20_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-20_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-20_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_PPA-21 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-21" ;
+    maritim:namaDestinasi "Teluk Triton" ;
+    maritim:lokasiLengkap "Kaimana, Papua Barat" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua_Barat ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 50000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 1550000 ;
+    maritim:kategoriHargaTotal data:Range_Above1M ;
+    maritim:hargaAktivitasMulai 1500000 ;
+    maritim:kategoriHargaAktivitas data:Range_Above1M ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Bagan_nelayan ;
+    maritim:memilikiFasilitas data:fasilitas_kapal_cepat_wisata ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-21_0 .
+data:offer_PPA-21_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_PPA-22 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-22" ;
+    maritim:namaDestinasi "Pulau Arborek" ;
+    maritim:lokasiLengkap "Raja Ampat, Papua Barat Daya" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua_Barat_Daya ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 50000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 100000 ;
+    maritim:kategoriHargaTotal data:Range_100k_250k ;
+    maritim:hargaAktivitasMulai 800000 ;
+    maritim:kategoriHargaAktivitas data:Range_500k_1M ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_desa_wisata ;
+    maritim:memilikiFasilitas data:fasilitas_dive_shop ;
+    maritim:memilikiFasilitas data:fasilitas_kerajinan_topi ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-22_0 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-22_1 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-22_2 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-22_3 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-22_4 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-22_5 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-22_6 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-22_7 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-22_8 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-22_9 .
+data:offer_PPA-22_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-22_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-22_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-22_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-22_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-fins-diving ;
+    rdfs:label "Masker & Fins Diving" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_PPA-22_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_wetsuit-diving ;
+    rdfs:label "Wetsuit Selam" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_PPA-22_6 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_tabung-scuba ;
+    rdfs:label "Tabung Scuba (Oksigen)" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_PPA-22_7 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_bcd-regulator ;
+    rdfs:label "BCD & Regulator Selam" ;
+    maritim:hargaSewa 200000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_PPA-22_8 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_paket-fun-dive ;
+    rdfs:label "Paket Fun Dive Lengkap (Alat + Guide + Kapal)" ;
+    maritim:hargaSewa 750000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-22_9 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_PPA-23 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-23" ;
+    maritim:namaDestinasi "Kepulauan Fam (Piaynemo)" ;
+    maritim:lokasiLengkap "Raja Ampat, Papua Barat Daya" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua_Barat_Daya ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 100000 ;
+    maritim:kategoriHargaTiket data:Range_100k_250k ;
+    maritim:estimasiTotalBiaya 2100000 ;
+    maritim:kategoriHargaTotal data:Range_Above1M ;
+    maritim:hargaAktivitasMulai 2000000 ;
+    maritim:kategoriHargaAktivitas data:Range_Above1M ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Tangga_kayu ;
+    maritim:memilikiFasilitas data:fasilitas_pos_tiket ;
+    maritim:memilikiFasilitas data:fasilitas_kios_kelapa_muda ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-23_0 .
+data:offer_PPA-23_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+
+data:destinasi_PPA-24 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-24" ;
+    maritim:namaDestinasi "Danau Lenmakana Misool" ;
+    maritim:lokasiLengkap "Raja Ampat, Papua Barat Daya" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua_Barat_Daya ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 100000 ;
+    maritim:kategoriHargaTiket data:Range_100k_250k ;
+    maritim:estimasiTotalBiaya 3100000 ;
+    maritim:kategoriHargaTotal data:Range_Above1M ;
+    maritim:hargaAktivitasMulai 3000000 ;
+    maritim:kategoriHargaAktivitas data:Range_Above1M ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Diving ;
+    maritim:memilikiFasilitas data:fasilitas_Kapal_liveaboard ;
+    maritim:memilikiFasilitas data:fasilitas_pemandu_lokal_Misool ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-24_0 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-24_1 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-24_2 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-24_3 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-24_4 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-24_5 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-24_6 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-24_7 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-24_8 .
+data:offer_PPA-24_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-24_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-24_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-24_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 3000000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-24_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-fins-diving ;
+    rdfs:label "Masker & Fins Diving" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_PPA-24_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_wetsuit-diving ;
+    rdfs:label "Wetsuit Selam" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_PPA-24_6 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_tabung-scuba ;
+    rdfs:label "Tabung Scuba (Oksigen)" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_PPA-24_7 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_bcd-regulator ;
+    rdfs:label "BCD & Regulator Selam" ;
+    maritim:hargaSewa 200000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_PPA-24_8 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_paket-fun-dive ;
+    rdfs:label "Paket Fun Dive Lengkap (Alat + Guide + Kapal)" ;
+    maritim:hargaSewa 750000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+
+data:destinasi_PPA-25 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-25" ;
+    maritim:namaDestinasi "Selat Dampier (Kri & Mansuar)" ;
+    maritim:lokasiLengkap "Raja Ampat, Papua Barat Daya" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua_Barat_Daya ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 100000 ;
+    maritim:kategoriHargaTiket data:Range_100k_250k ;
+    maritim:estimasiTotalBiaya 175000 ;
+    maritim:kategoriHargaTotal data:Range_100k_250k ;
+    maritim:hargaAktivitasMulai 900000 ;
+    maritim:kategoriHargaAktivitas data:Range_500k_1M ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Diving ;
+    maritim:memilikiFasilitas data:fasilitas_Dive_resort_internasional ;
+    maritim:memilikiFasilitas data:fasilitas_homestay_Kri ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-25_0 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-25_1 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-25_2 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-25_3 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-25_4 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-25_5 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-25_6 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-25_7 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-25_8 .
+data:offer_PPA-25_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-25_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-25_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-25_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 75000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-25_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-fins-diving ;
+    rdfs:label "Masker & Fins Diving" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_PPA-25_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_wetsuit-diving ;
+    rdfs:label "Wetsuit Selam" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_PPA-25_6 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_tabung-scuba ;
+    rdfs:label "Tabung Scuba (Oksigen)" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_PPA-25_7 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_bcd-regulator ;
+    rdfs:label "BCD & Regulator Selam" ;
+    maritim:hargaSewa 200000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_PPA-25_8 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_paket-fun-dive ;
+    rdfs:label "Paket Fun Dive Lengkap (Alat + Guide + Kapal)" ;
+    maritim:hargaSewa 750000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
