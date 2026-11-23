@@ -4,7 +4,7 @@
 // ==============================================================================
 
 const APP_STATE = {
-  currentTab: 'home', // 'home' | 'explorer' | 'sparql' | 'ontology' | 'favorites'
+  currentTab: 'home', // 'home' | 'explorer' | 'map' | 'favorites'
   query: '',
   filters: {
     rangeHarga: '',
@@ -27,6 +27,7 @@ const APP_STATE = {
   sparqlQuery: '',
   facets: null,
   activeDestDetail: null,
+  allDestinations: [],
   favorites: JSON.parse(localStorage.getItem('imj_fav') || '[]'),
   history: JSON.parse(localStorage.getItem('imj_his') || '[]')
 };
@@ -159,123 +160,6 @@ function getPhotoForDestination(dest) {
   return 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80';
 }
 
-// Preset Competency Questions untuk Konsol SPARQL
-const SPARQL_PRESETS = [
-  {
-    title: "1. Snorkeling pemula budget <= Rp250.000 dengan alat tersedia",
-    query: `PREFIX maritim: <http://wisatamaritim.id/ontology#>
-PREFIX data: <http://wisatamaritim.id/resource/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT DISTINCT ?nama ?provinsi ?level ?hargaTiket ?totalBiaya
-WHERE {
-  ?dest a maritim:DestinasiWisata ;
-        maritim:namaDestinasi ?nama ;
-        maritim:provinsi ?provinsi ;
-        maritim:tingkatKeahlian ?level ;
-        maritim:hargaTiketMasuk ?hargaTiket ;
-        maritim:estimasiTotalBiaya ?totalBiaya ;
-        maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
-        maritim:cocokUntukTingkat data:Tingkat_Pemula ;
-        maritim:memilikiPenawaranAlat ?penawaran .
-  ?penawaran maritim:alatTerkait data:alat_masker-snorkel ;
-             maritim:statusSewa "Tersedia Disewa" .
-  FILTER(?totalBiaya <= 250000)
-}
-ORDER BY ASC(?totalBiaya)
-LIMIT 15`
-  },
-  {
-    title: "2. Spot Diving di Sulawesi dengan Fasilitas Dive Center",
-    query: `PREFIX maritim: <http://wisatamaritim.id/ontology#>
-PREFIX data: <http://wisatamaritim.id/resource/>
-
-SELECT DISTINCT ?nama ?provinsi ?level ?totalBiaya
-WHERE {
-  ?dest a maritim:DestinasiWisata ;
-        maritim:namaDestinasi ?nama ;
-        maritim:provinsi ?provinsi ;
-        maritim:wilayah "Sulawesi" ;
-        maritim:tingkatKeahlian ?level ;
-        maritim:estimasiTotalBiaya ?totalBiaya ;
-        maritim:memilikiAktivitas data:aktivitas_Diving .
-}
-ORDER BY ASC(?totalBiaya)
-LIMIT 15`
-  },
-  {
-    title: "3. Surfing level Mahir beserta rental papan selancar",
-    query: `PREFIX maritim: <http://wisatamaritim.id/ontology#>
-PREFIX data: <http://wisatamaritim.id/resource/>
-
-SELECT DISTINCT ?nama ?provinsi ?level ?totalBiaya
-WHERE {
-  ?dest a maritim:DestinasiWisata ;
-        maritim:namaDestinasi ?nama ;
-        maritim:provinsi ?provinsi ;
-        maritim:tingkatKeahlian "Mahir" ;
-        maritim:estimasiTotalBiaya ?totalBiaya ;
-        maritim:memilikiAktivitas data:aktivitas_Surfing ;
-        maritim:memilikiPenawaranAlat ?penawaran .
-  ?penawaran maritim:alatTerkait data:alat_papan-selancar .
-}
-ORDER BY ASC(?totalBiaya)
-LIMIT 15`
-  },
-  {
-    title: "4. Destinasi Maritim Gratis (Tiket Rp 0) di Maluku",
-    query: `PREFIX maritim: <http://wisatamaritim.id/ontology#>
-PREFIX data: <http://wisatamaritim.id/resource/>
-
-SELECT ?nama ?lokasi ?level ?hargaTiket
-WHERE {
-  ?dest a maritim:DestinasiWisata ;
-        maritim:namaDestinasi ?nama ;
-        maritim:lokasiLengkap ?lokasi ;
-        maritim:wilayah "Maluku" ;
-        maritim:tingkatKeahlian ?level ;
-        maritim:hargaTiketMasuk ?hargaTiket .
-  FILTER(?hargaTiket == 0)
-}
-LIMIT 20`
-  },
-  {
-    title: "5. Destinasi Konservasi Satwa Laut (Penyu, Manta, Hiu Paus)",
-    query: `PREFIX maritim: <http://wisatamaritim.id/ontology#>
-PREFIX data: <http://wisatamaritim.id/resource/>
-
-SELECT DISTINCT ?nama ?provinsi ?wilayah ?level ?totalBiaya
-WHERE {
-  ?dest a maritim:DestinasiWisata ;
-        maritim:namaDestinasi ?nama ;
-        maritim:provinsi ?provinsi ;
-        maritim:wilayah ?wilayah ;
-        maritim:tingkatKeahlian ?level ;
-        maritim:estimasiTotalBiaya ?totalBiaya ;
-        maritim:memilikiAktivitas data:aktivitas_Satwa_Laut .
-}
-LIMIT 15`
-  },
-  {
-    title: "6. Destinasi Bali & Nusa Tenggara pada Range Rp250.000–Rp500.000",
-    query: `PREFIX maritim: <http://wisatamaritim.id/ontology#>
-PREFIX data: <http://wisatamaritim.id/resource/>
-
-SELECT DISTINCT ?nama ?provinsi ?level ?totalBiaya
-WHERE {
-  ?dest a maritim:DestinasiWisata ;
-        maritim:namaDestinasi ?nama ;
-        maritim:provinsi ?provinsi ;
-        maritim:wilayah "Bali & Nusa Tenggara" ;
-        maritim:tingkatKeahlian ?level ;
-        maritim:kategoriHargaTotal data:Range_250k_500k ;
-        maritim:estimasiTotalBiaya ?totalBiaya .
-}
-ORDER BY ASC(?totalBiaya)
-LIMIT 15`
-  }
-];
-
 const formatRupiah = (num) => {
   if (num === null || num === undefined) return '-';
   if (num === 0) return 'Gratis';
@@ -296,12 +180,16 @@ const escapeHtml = (str) => {
 // ==============================================================================
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
+  initThemeToggle();
   initSearchForms();
   initFacetedFilterEvents();
   initSortingEvents();
   initModalEvents();
-  initSparqlConsole();
+  updateFavoriteBadge();
   loadFacets();
+  loadAllDestinations().then(() => {
+    initNearbyRecommendations();
+  });
   executeSearch();
 });
 
@@ -313,13 +201,34 @@ function initNavigation() {
       switchTab(btn.dataset.tab);
     });
   });
+}
+
+function initThemeToggle() {
+  const savedTheme = localStorage.getItem('imj_theme') || 
+    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    
+  applyTheme(savedTheme);
 
   const themeBtn = document.getElementById('btn-theme-toggle');
   if (themeBtn) {
     themeBtn.addEventListener('click', () => {
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
+      localStorage.setItem('imj_theme', newTheme);
     });
+  }
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  const themeBtn = document.getElementById('btn-theme-toggle');
+  if (themeBtn) {
+    const isDark = theme === 'dark';
+    themeBtn.innerHTML = isDark
+      ? '<svg class="svg-icon"><use href="#icon-sun"/></svg>'
+      : '<svg class="svg-icon"><use href="#icon-moon"/></svg>';
+    themeBtn.title = isDark ? 'Beralih ke Mode Terang' : 'Beralih ke Mode Gelap';
   }
 }
 
@@ -337,6 +246,7 @@ function switchTab(tabName) {
   });
 
   if (tabName === 'favorites') renderFavoritesView();
+  if (tabName === 'map') renderIndonesiaMapView();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -346,6 +256,33 @@ window.filterByCategory = function(categoryKeyword) {
   APP_STATE.currentPage = 1;
   const sel = document.getElementById('filter-jenis');
   if (sel) sel.value = categoryKeyword;
+  switchTab('explorer');
+  executeSearch();
+};
+
+// Quick Region Filtering from Region Cards & Pills
+window.filterByRegion = function(regionName) {
+  APP_STATE.filters.wilayah = regionName;
+  APP_STATE.filters.provinsi = '';
+  APP_STATE.currentPage = 1;
+  const sel = document.getElementById('filter-wilayah');
+  if (sel) sel.value = regionName;
+  const provSel = document.getElementById('filter-provinsi');
+  if (provSel) provSel.value = '';
+
+  document.querySelectorAll('#explorer-wilayah-pills .filter-pill-opt').forEach(btn => {
+    const isMatch = (btn.dataset.wil === regionName && !btn.dataset.prov);
+    btn.classList.toggle('active', isMatch);
+    if (isMatch) {
+      const islandActiveCount = document.getElementById('island-active-count');
+      if (islandActiveCount) {
+        const name = btn.querySelector('.island-pill-name')?.textContent || regionName;
+        const count = btn.querySelector('.island-pill-count')?.textContent || '';
+        islandActiveCount.textContent = `${name} (${count} Wisata)`;
+      }
+      btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }
+  });
   switchTab('explorer');
   executeSearch();
 };
@@ -400,14 +337,6 @@ function initSearchForms() {
       executeSearch();
     });
   });
-
-  // 4. Modal SPARQL Inspector
-  const btnSparql = document.getElementById('btn-show-query');
-  if (btnSparql) {
-    btnSparql.addEventListener('click', () => {
-      openSparqlModal(APP_STATE.sparqlQuery);
-    });
-  }
 }
 
 // Faceted Filter Events
@@ -464,10 +393,92 @@ function initFacetedFilterEvents() {
       el.addEventListener('change', (e) => {
         const key = id.replace('filter-', '');
         APP_STATE.filters[key] = e.target.value;
+        if (key === 'wilayah') {
+          document.querySelectorAll('#explorer-wilayah-pills .filter-pill-opt').forEach(btn => {
+            const isMatch = btn.dataset.wil === e.target.value && !btn.dataset.prov;
+            btn.classList.toggle('active', isMatch);
+            if (isMatch) {
+              const islandActiveCount = document.getElementById('island-active-count');
+              if (islandActiveCount) {
+                const name = btn.querySelector('.island-pill-name')?.textContent || 'Semua';
+                const count = btn.querySelector('.island-pill-count')?.textContent || '';
+                islandActiveCount.textContent = `${name} (${count} Wisata)`;
+              }
+              btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            }
+          });
+        }
         APP_STATE.currentPage = 1;
         executeSearch();
       });
     }
+  });
+
+  // Quick Wilayah & Island Horizontal Scroll Bar in Explorer
+  const islandTrack = document.getElementById('explorer-wilayah-pills');
+  const islandActiveCount = document.getElementById('island-active-count');
+
+  if (islandTrack) {
+    // 1. Mouse Wheel Horizontal Scroll Support
+    islandTrack.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        islandTrack.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+
+    // 2. Drag / Grab to Scroll for Desktop Mouse
+    let isDown = false;
+    let startX, scrollLeftVal;
+
+    islandTrack.addEventListener('mousedown', (e) => {
+      isDown = true;
+      islandTrack.classList.add('grabbing');
+      startX = e.pageX - islandTrack.offsetLeft;
+      scrollLeftVal = islandTrack.scrollLeft;
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDown = false;
+      if (islandTrack) islandTrack.classList.remove('grabbing');
+    });
+
+    islandTrack.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - islandTrack.offsetLeft;
+      const walk = (x - startX) * 1.4;
+      islandTrack.scrollLeft = scrollLeftVal - walk;
+    });
+  }
+
+  document.querySelectorAll('#explorer-wilayah-pills .filter-pill-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const wil = btn.dataset.wil || '';
+      const prov = btn.dataset.prov || '';
+      APP_STATE.filters.wilayah = wil;
+      APP_STATE.filters.provinsi = prov;
+      APP_STATE.currentPage = 1;
+
+      const sel = document.getElementById('filter-wilayah');
+      if (sel) sel.value = wil;
+      const provSel = document.getElementById('filter-provinsi');
+      if (provSel) provSel.value = prov;
+
+      document.querySelectorAll('#explorer-wilayah-pills .filter-pill-opt').forEach(b => {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+
+      if (islandActiveCount) {
+        const name = btn.querySelector('.island-pill-name')?.textContent || 'Semua';
+        const count = btn.querySelector('.island-pill-count')?.textContent || '';
+        islandActiveCount.textContent = `${name} (${count} Wisata)`;
+      }
+
+      btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      executeSearch();
+    });
   });
 
   // Checkbox Sewa
@@ -583,6 +594,12 @@ function resetAllFilters() {
 
   document.querySelectorAll('.price-pill-row').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.skill-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('#explorer-wilayah-pills .filter-pill-opt').forEach(b => {
+    const isAll = (b.dataset.wil === '' && !b.dataset.prov);
+    b.classList.toggle('active', isAll);
+  });
+  const islandActiveCount = document.getElementById('island-active-count');
+  if (islandActiveCount) islandActiveCount.textContent = 'Semua (305 Wisata)';
   document.querySelectorAll('.custom-select').forEach(sel => sel.value = '');
   const sewaCb = document.getElementById('filter-sewa');
   if (sewaCb) sewaCb.checked = false;
@@ -761,24 +778,41 @@ function renderSemanticReasoning(steps) {
 }
 
 // Render Destination Cards (Bersih, Realistis, Bebas Emoji)
-function renderDestinationCards(destList) {
-  const grid = document.getElementById('destinations-grid');
+function renderDestinationCards(destList, targetGridId = 'destinations-grid') {
+  const grid = document.getElementById(targetGridId);
   if (!grid) return;
 
   if (!destList || destList.length === 0) {
-    grid.innerHTML = `
-      <div style="grid-column: 1 / -1; background:var(--bg-surface); border:1px dashed var(--border-subtle); border-radius:var(--radius-lg); padding:3.5rem 1.5rem; text-align:center;">
-        <h4 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:var(--text-main);margin-bottom:0.5rem">
-          Tidak ada destinasi yang cocok
-        </h4>
-        <p style="color:var(--text-muted);font-size:0.88rem;max-width:500px;margin:0 auto 1.5rem">
-          Coba sesuaikan range harga, hilangkan pilihan peralatan tertentu, atau reset filter Anda.
-        </p>
-        <button type="button" class="btn-search-exec" style="margin:0 auto" onclick="resetAllFilters()">
-          <span>Reset Semua Filter</span>
-        </button>
-      </div>
-    `;
+    if (targetGridId === 'favorites-cards-grid') {
+      grid.innerHTML = `
+        <div style="grid-column: 1 / -1; background:var(--bg-surface); border:1px dashed var(--border-subtle); border-radius:var(--radius-lg); padding:3.5rem 1.5rem; text-align:center;">
+          <svg class="svg-icon" style="width:48px;height:48px;color:var(--text-muted);margin-bottom:1rem;stroke-width:1.5"><use href="#icon-heart"/></svg>
+          <h4 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:var(--text-main);margin-bottom:0.5rem">
+            Belum ada destinasi favorit tersimpan
+          </h4>
+          <p style="color:var(--text-muted);font-size:0.88rem;max-width:480px;margin:0 auto 1.5rem">
+            Tandai destinasi bahari favorit Anda dengan menekan ikon hati pada kartu wisata untuk menyimpannya di sini.
+          </p>
+          <button type="button" class="btn-search-exec" style="margin:0 auto" onclick="switchTab('explorer')">
+            <span>Jelajahi Destinasi</span>
+          </button>
+        </div>
+      `;
+    } else {
+      grid.innerHTML = `
+        <div style="grid-column: 1 / -1; background:var(--bg-surface); border:1px dashed var(--border-subtle); border-radius:var(--radius-lg); padding:3.5rem 1.5rem; text-align:center;">
+          <h4 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:var(--text-main);margin-bottom:0.5rem">
+            Tidak ada destinasi yang cocok
+          </h4>
+          <p style="color:var(--text-muted);font-size:0.88rem;max-width:500px;margin:0 auto 1.5rem">
+            Coba sesuaikan range harga, hilangkan pilihan peralatan tertentu, atau reset filter Anda.
+          </p>
+          <button type="button" class="btn-search-exec" style="margin:0 auto" onclick="resetAllFilters()">
+            <span>Reset Semua Filter</span>
+          </button>
+        </div>
+      `;
+    }
     return;
   }
 
@@ -984,6 +1018,16 @@ async function openDestinationModal(destId) {
     document.getElementById('modal-dest-title').textContent = d.nama;
     document.getElementById('modal-dest-loc').textContent = d.lokasi;
 
+    const modalFavBtn = document.getElementById('modal-dest-fav-btn');
+    if (modalFavBtn) {
+      modalFavBtn.dataset.fav = d.id;
+      modalFavBtn.classList.toggle('active', APP_STATE.favorites.includes(d.id));
+      modalFavBtn.onclick = (e) => {
+        e.stopPropagation();
+        toggleFavorite(d.id);
+      };
+    }
+
     body.innerHTML = `
       <!-- 4 HIGHLIGHT BUDGET KPI CARDS (PILIHAN DOKUMEN BUDGETING CEPAT) -->
       <div class="modal-budget-kpi-grid">
@@ -1114,12 +1158,126 @@ async function openDestinationModal(destId) {
           </div>
         </div>
       </div>
+
+      <!-- SEKSI KULINER TERDEKAT & PETA LOKASI -->
+      <div style="margin-top:1.75rem">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem">
+          <div>
+            <h4 style="font-weight:800;color:var(--text-main);font-size:1.05rem">
+              Kuliner &amp; Tempat Makan Terdekat
+            </h4>
+            <p style="font-size:0.8rem;color:var(--text-muted)">
+              Rekomendasi warung seafood, kuliner khas pesisir, dan kafe santai di sekitar destinasi beserta jaraknya.
+            </p>
+          </div>
+          <span class="badge-tag-clean" style="font-size:0.72rem">
+            ${d.kuliner ? d.kuliner.length : 0} Titik Kuliner Sekitar
+          </span>
+        </div>
+
+        <!-- PETA LEAFLET INTERAKTIF DESTINASI & TITIK KULINER -->
+        <div id="modal-map-${d.id}" style="width:100%;height:280px;border-radius:var(--radius-md);border:1px solid var(--border-subtle);margin-bottom:1rem;background:var(--bg-subtle)"></div>
+
+        <!-- DAFTAR KARTU KULINER -->
+        <div class="culinary-cards-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:0.85rem">
+          ${(d.kuliner || []).map(cul => `
+            <div class="culinary-card-item" style="background:var(--bg-subtle);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:0.95rem;display:flex;flex-direction:column;gap:0.35rem">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:0.5rem">
+                <strong style="color:var(--text-main);font-size:0.92rem">${escapeHtml(cul.nama)}</strong>
+                <span class="badge-tag-clean" style="font-size:0.7rem;white-space:nowrap;background:rgba(245, 158, 11, 0.15);color:#d97706;border-color:rgba(245, 158, 11, 0.3)">
+                  ⭐ ${cul.rating}
+                </span>
+              </div>
+              <span style="font-size:0.75rem;color:var(--sea-blue);font-weight:600">${escapeHtml(cul.kategori)}</span>
+              <div style="font-size:0.78rem;color:var(--text-secondary);line-height:1.4">
+                <strong>Menu:</strong> ${escapeHtml(cul.menuAndalan)}
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:0.35rem;font-size:0.75rem;padding-top:0.35rem;border-top:1px dashed var(--border-subtle)">
+                <span style="color:var(--text-muted)">Estimasi: <strong>${escapeHtml(cul.estimasiHarga)}</strong></span>
+                <span class="badge-tag-clean" style="font-size:0.7rem;background:rgba(2, 132, 199, 0.1);color:var(--sea-blue)">
+                  📍 ${cul.jarakKm} km
+                </span>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
     `;
 
     initModalCalculator(d);
+    initModalMap(d);
   } catch (err) {
     console.error("Gagal open modal:", err);
   }
+}
+
+function initModalMap(dest) {
+  const mapDivId = `modal-map-${dest.id}`;
+  const mapEl = document.getElementById(mapDivId);
+  if (!mapEl || typeof L === 'undefined') return;
+
+  if (window._modalMapInstance) {
+    window._modalMapInstance.remove();
+    window._modalMapInstance = null;
+  }
+
+  const lat = dest.latitude || -2.5;
+  const lon = dest.longitude || 118.0;
+
+  const map = L.map(mapDivId, {
+    zoomControl: true,
+    scrollWheelZoom: false
+  }).setView([lat, lon], 13);
+
+  window._modalMapInstance = map;
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Marker Destinasi Utama
+  const destMarker = L.marker([lat, lon], {
+    title: dest.nama
+  }).addTo(map);
+
+  destMarker.bindPopup(`
+    <div style="font-size:0.85rem;min-width:180px">
+      <strong style="color:#0284c7;font-size:0.95rem">${escapeHtml(dest.nama)}</strong><br>
+      <span style="color:#64748b;font-size:0.75rem">${escapeHtml(dest.lokasi)}</span><br>
+      <div style="margin-top:0.35rem;font-size:0.75rem;font-weight:700;color:#059669">📍 Lokasi Destinasi Wisata</div>
+    </div>
+  `).openPopup();
+
+  // Marker Tempat Kuliner
+  if (dest.kuliner && dest.kuliner.length) {
+    const culinaryIcon = L.divIcon({
+      className: 'culinary-map-marker',
+      html: '<div style="background:#f59e0b;color:white;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,0.3);border:2px solid white">🍽️</div>',
+      iconSize: [26, 26],
+      iconAnchor: [13, 13]
+    });
+
+    const bounds = L.latLngBounds([[lat, lon]]);
+
+    dest.kuliner.forEach(cul => {
+      bounds.extend([cul.latitude, cul.longitude]);
+      const culMarker = L.marker([cul.latitude, cul.longitude], { icon: culinaryIcon }).addTo(map);
+      culMarker.bindPopup(`
+        <div style="font-size:0.82rem;min-width:200px">
+          <strong style="color:#d97706;font-size:0.9rem">${escapeHtml(cul.nama)}</strong><br>
+          <span style="color:#64748b;font-size:0.72rem">${escapeHtml(cul.kategori)} · ⭐ ${cul.rating}</span><br>
+          <div style="margin:0.25rem 0;font-size:0.75rem"><strong>Jarak:</strong> ${cul.jarakKm} km dari tempat wisata</div>
+          <div style="font-size:0.72rem;color:#475569"><em>${escapeHtml(cul.menuAndalan)}</em></div>
+        </div>
+      `);
+    });
+
+    map.fitBounds(bounds, { padding: [30, 30] });
+  }
+
+  setTimeout(() => {
+    map.invalidateSize();
+  }, 250);
 }
 
 function initModalCalculator(d) {
@@ -1283,122 +1441,40 @@ function renderKnowledgeGraph(graphData) {
 }
 
 // ==============================================================================
-// SPARQL CONSOLE CONTROLLER
+// ALL DESTINATIONS LOADER & FAVORITES CONTROLLER
 // ==============================================================================
-function initSparqlConsole() {
-  const presetSel = document.getElementById('sparql-preset-select');
-  const textarea = document.getElementById('sparql-query-input');
-  const runBtn = document.getElementById('btn-run-sparql');
-
-  if (presetSel && textarea) {
-    presetSel.innerHTML = '<option value="">-- Pilih Competency Question / Contoh Query --</option>' +
-      SPARQL_PRESETS.map((p, i) => `<option value="${i}">${p.title}</option>`).join('');
-
-    presetSel.addEventListener('change', (e) => {
-      const idx = e.target.value;
-      if (idx !== '') textarea.value = SPARQL_PRESETS[idx].query;
-    });
+async function loadAllDestinations() {
+  if (APP_STATE.allDestinations && APP_STATE.allDestinations.length > 0) {
+    return APP_STATE.allDestinations;
   }
-
-  if (runBtn && textarea) {
-    runBtn.addEventListener('click', () => {
-      executeSparqlQuery(textarea.value.trim());
-    });
-  }
-
-  if (textarea && !textarea.value) {
-    textarea.value = SPARQL_PRESETS[0].query;
-  }
-}
-
-async function executeSparqlQuery(queryString) {
-  const container = document.getElementById('sparql-results-container');
-  const meta = document.getElementById('sparql-meta-info');
-  if (!container) return;
-
-  container.innerHTML = '<div style="padding:1.5rem;text-align:center">Mengeksekusi Query SPARQL ke Triplestore...</div>';
-
   try {
-    const res = await fetch('/api/sparql', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: queryString })
-    });
+    const res = await fetch('/api/search');
     const data = await res.json();
-
-    if (data.error) {
-      container.innerHTML = `<div style="padding:1rem;color:red;background:#fef2f2;border-radius:var(--radius-md)">Error: ${data.message}</div>`;
-      return;
-    }
-
-    if (meta && data.meta) {
-      meta.innerHTML = `
-        <span>Waktu: <strong>${data.meta.executionTimeMs} ms</strong></span> |
-        <span>Hasil: <strong>${data.meta.resultCount} baris</strong></span> |
-        <span>Triples Terakses: <strong>${data.meta.totalTriples}</strong></span>
-      `;
-    }
-
-    const vars = data.head ? data.head.vars : [];
-    const bindings = data.results ? data.results.bindings : [];
-
-    if (bindings.length === 0) {
-      container.innerHTML = '<div style="padding:1.5rem;text-align:center;color:var(--text-muted)">Query valid, namun tidak ada triple yang cocok.</div>';
-      return;
-    }
-
-    container.innerHTML = `
-      <div style="overflow-x:auto">
-        <table class="data-table">
-          <thead>
-            <tr>${vars.map(v => `<th>?${v}</th>`).join('')}</tr>
-          </thead>
-          <tbody>
-            ${bindings.map(row => `
-              <tr>
-                ${vars.map(v => {
-                  const cell = row[v];
-                  if (!cell) return '<td>-</td>';
-                  const val = cell.value;
-                  const isUri = cell.type === 'uri';
-                  return `<td>${isUri ? `<span style="color:var(--sea-blue)">${val.split('/').pop()}</span>` : escapeHtml(val)}</td>`;
-                }).join('')}
-              </tr>
-            `).join('')}
-          </tbody>
-        </table>
-      </div>
-    `;
+    APP_STATE.allDestinations = data.results || [];
+    return APP_STATE.allDestinations;
   } catch (err) {
-    container.innerHTML = `<div style="padding:1rem;color:red">Gagal mengeksekusi SPARQL: ${err.message}</div>`;
+    console.error('Gagal memuat seluruh destinasi:', err);
+    return [];
   }
 }
 
-function openSparqlModal(queryStr) {
-  const modal = document.getElementById('sparql-preview-modal');
-  const codeEl = document.getElementById('sparql-preview-code');
-  if (modal && codeEl) {
-    codeEl.textContent = queryStr || '# Tidak ada query aktif';
-    modal.showModal();
-  }
-}
+function updateFavoriteBadge() {
+  const count = (APP_STATE.favorites || []).length;
+  const deskBadge = document.getElementById('desktop-fav-count');
+  const mobBadge = document.getElementById('mobile-fav-count');
 
-// ==============================================================================
-// ONTOLOGY & FAVORITES
-// ==============================================================================
-async function loadOntologyContent() {
-  const code = document.getElementById('ontology-code-viewer');
-  if (!code) return;
-  code.textContent = 'Mengunduh ontologi RDF maritim.ttl...';
-  try {
-    const res = await fetch('/api/ontology');
-    code.textContent = await res.text();
-  } catch (err) {
-    code.textContent = 'Gagal memuat ontologi: ' + err.message;
+  if (deskBadge) {
+    deskBadge.textContent = count;
+    deskBadge.style.display = count > 0 ? 'inline-flex' : 'none';
+  }
+  if (mobBadge) {
+    mobBadge.textContent = count;
+    mobBadge.style.display = count > 0 ? 'inline-flex' : 'none';
   }
 }
 
 function toggleFavorite(id) {
+  if (!id) return;
   if (APP_STATE.favorites.includes(id)) {
     APP_STATE.favorites = APP_STATE.favorites.filter(x => x !== id);
   } else {
@@ -1406,21 +1482,360 @@ function toggleFavorite(id) {
   }
   localStorage.setItem('imj_fav', JSON.stringify(APP_STATE.favorites));
 
+  // Sinkronkan seluruh tombol bookmark di kartu
   document.querySelectorAll(`.btn-card-bookmark[data-fav="${id}"]`).forEach(btn => {
     const isFav = APP_STATE.favorites.includes(id);
     btn.classList.toggle('active', isFav);
   });
 
-  if (APP_STATE.currentTab === 'favorites') renderFavoritesView();
+  // Sinkronkan bookmark di modal jika sedang terbuka
+  const modalFavBtn = document.getElementById('modal-dest-fav-btn');
+  if (modalFavBtn && modalFavBtn.dataset.fav === id) {
+    modalFavBtn.classList.toggle('active', APP_STATE.favorites.includes(id));
+  }
+
+  updateFavoriteBadge();
+
+  // Jika sedang berada di tab favorit, render ulang daftarnya
+  if (APP_STATE.currentTab === 'favorites') {
+    renderFavoritesView();
+  }
 }
 
-function renderFavoritesView() {
+async function renderFavoritesView() {
   const grid = document.getElementById('favorites-cards-grid');
   if (!grid) return;
-  const favItems = APP_STATE.results.filter(d => APP_STATE.favorites.includes(d.id));
-  if (favItems.length === 0) {
-    grid.innerHTML = '<div style="grid-column:1/-1;padding:3rem;text-align:center;color:var(--text-muted)">Belum ada destinasi tersimpan. Klik tombol simpan pada kartu destinasi.</div>';
+
+  updateFavoriteBadge();
+
+  if (!APP_STATE.favorites || APP_STATE.favorites.length === 0) {
+    renderDestinationCards([], 'favorites-cards-grid');
     return;
   }
-  renderDestinationCards(favItems);
+
+  // Muat semua destinasi jika belum ada
+  const all = await loadAllDestinations();
+  const favItems = all.filter(d => APP_STATE.favorites.includes(d.id));
+  renderDestinationCards(favItems, 'favorites-cards-grid');
+}
+
+// ==============================================================================
+// REKOMENDASI TERDEKAT (GEOLOCATION API & FALLBACK KOTA)
+// ==============================================================================
+const CITY_PRESETS = {
+  jakarta: { name: 'Jakarta / Jabodetabek', lat: -6.2088, lon: 106.8456 },
+  medan: { name: 'Medan (Sumut)', lat: 3.5952, lon: 98.6722 },
+  padang: { name: 'Padang (Sumbar)', lat: -0.9471, lon: 100.4172 },
+  semarang: { name: 'Semarang (Jateng)', lat: -6.9667, lon: 110.4167 },
+  surabaya: { name: 'Surabaya (Jatim)', lat: -7.2575, lon: 112.7521 },
+  denpasar: { name: 'Denpasar (Bali)', lat: -8.6705, lon: 115.2126 },
+  mataram: { name: 'Mataram (Lombok)', lat: -8.5833, lon: 116.1167 },
+  balikpapan: { name: 'Balikpapan (Kaltim)', lat: -1.2379, lon: 116.8289 },
+  makassar: { name: 'Makassar (Sulsel)', lat: -5.1477, lon: 119.4069 },
+  manado: { name: 'Manado (Sulut)', lat: 1.4748, lon: 124.8428 },
+  ambon: { name: 'Ambon (Maluku)', lat: -3.6547, lon: 128.1906 },
+  jayapura: { name: 'Jayapura (Papua)', lat: -2.5337, lon: 140.7181 }
+};
+
+let userLocationCoords = null;
+
+function haversineDistKm(lat1, lon1, lat2, lon2) {
+  const R = 6371;
+  const toRad = d => (d * Math.PI) / 180;
+  const dLat = toRad(lat2 - lat1);
+  const dLon = toRad(lon2 - lon1);
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return Math.round(R * c * 10) / 10;
+}
+
+async function renderNearbyDestinations(refLat, refLon, sourceLabel) {
+  const grid = document.getElementById('nearby-destinations-grid');
+  const statusEl = document.getElementById('nearby-status-text');
+  if (!grid) return;
+
+  if (statusEl) {
+    statusEl.innerHTML = `📍 Menampilkan rekomendasi wisata bahari terdekat dari: <strong style="color:var(--sea-blue)">${escapeHtml(sourceLabel)}</strong>`;
+  }
+
+  const all = await loadAllDestinations();
+  if (!all || all.length === 0) return;
+
+  const withDist = all.map(d => {
+    const lat = d.latitude || -2.5;
+    const lon = d.longitude || 118.0;
+    const dist = haversineDistKm(refLat, refLon, lat, lon);
+    return { ...d, distanceKm: dist };
+  });
+
+  withDist.sort((a, b) => a.distanceKm - b.distanceKm);
+  const top6 = withDist.slice(0, 6);
+
+  grid.innerHTML = top6.map(d => {
+    const photoUrl = d.foto || getPhotoForDestination(d);
+    const isFav = APP_STATE.favorites.includes(d.id);
+    const skillClass = `skill-${(d.level || 'pemula').toLowerCase().split(' ')[0]}`;
+
+    return `
+      <article class="card-destination-pro" data-id="${d.id}">
+        <div class="card-photo-banner">
+          <img src="${photoUrl}" alt="${escapeHtml(d.nama)}" loading="lazy">
+          <div class="card-photo-overlay">
+            <div class="card-badge-row">
+              <span class="badge-tag-clean" style="background:#0284c7;color:white;font-weight:700">⚡ ${d.distanceKm} km dari posisimu</span>
+              <button type="button" class="btn-card-bookmark ${isFav ? 'active' : ''}" data-fav="${d.id}" title="Simpan Destinasi">
+                <svg class="svg-icon svg-icon-sm"><use href="#icon-heart"/></svg>
+              </button>
+            </div>
+            <div class="card-header-titles">
+              <span class="card-code-tag">${d.id} · ${escapeHtml(d.wilayah)}</span>
+              <h3 class="card-dest-name">${escapeHtml(d.nama)}</h3>
+              <span class="card-dest-location">
+                <svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg>
+                ${escapeHtml(d.lokasi)}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body-pro">
+          <div class="card-pills-row">
+            <span class="pill-info-chip ${skillClass}">Level: ${escapeHtml(d.level)}</span>
+            <span class="pill-info-chip price-badge">${escapeHtml(d.rangeHargaTotalLabel)}</span>
+          </div>
+
+          <div class="equipment-section-preview">
+            <div class="equipment-preview-head">
+              <span>Kuliner Terdekat</span>
+              <small>${d.kuliner ? d.kuliner.length : 0} Titik</small>
+            </div>
+            <div class="equipment-chips-wrap">
+              ${(d.kuliner || []).slice(0, 2).map(c => `<span class="mini-gear-tag">🍽️ ${escapeHtml(c.nama.split(' ')[0])} (${c.jarakKm} km)</span>`).join('') || '<span class="mini-gear-tag">Kuliner tersedia</span>'}
+            </div>
+          </div>
+
+          <div class="card-action-footer">
+            <div class="price-display-unit">
+              <span>Estimasi Biaya</span>
+              <strong>${formatRupiah(d.estimasiTotalPerOrang)}</strong>
+            </div>
+            <button type="button" class="btn-open-detail-pro" data-open="${d.id}">
+              <span>Detail &amp; Kuliner</span>
+              <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-right"/></svg>
+            </button>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+
+  grid.querySelectorAll('.btn-open-detail-pro').forEach(btn => {
+    btn.addEventListener('click', () => {
+      openDestinationModal(btn.dataset.open);
+    });
+  });
+
+  grid.querySelectorAll('.btn-card-bookmark').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleFavorite(btn.dataset.fav);
+    });
+  });
+}
+
+function initNearbyRecommendations() {
+  const detectBtn = document.getElementById('btn-detect-gps');
+  const citySelect = document.getElementById('select-city-fallback');
+
+  // Default awal gunakan kota Jakarta
+  renderNearbyDestinations(CITY_PRESETS.jakarta.lat, CITY_PRESETS.jakarta.lon, CITY_PRESETS.jakarta.name);
+
+  if (citySelect) {
+    citySelect.addEventListener('change', (e) => {
+      const cityKey = e.target.value;
+      if (cityKey && CITY_PRESETS[cityKey]) {
+        userLocationCoords = { ...CITY_PRESETS[cityKey], isGps: false };
+        renderNearbyDestinations(userLocationCoords.lat, userLocationCoords.lon, `${userLocationCoords.name} (Pilihan Manual)`);
+      }
+    });
+  }
+
+  if (detectBtn) {
+    detectBtn.addEventListener('click', () => {
+      if (!navigator.geolocation) {
+        alert('Browser Anda tidak mendukung Geolocation API. Silakan pilih kota acuan manual.');
+        return;
+      }
+
+      detectBtn.disabled = true;
+      detectBtn.innerHTML = '<span>Mendeteksi GPS...</span>';
+
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          detectBtn.disabled = false;
+          detectBtn.innerHTML = '<svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg><span>Lokasi GPS Terhubung</span>';
+          userLocationCoords = {
+            lat: pos.coords.latitude,
+            lon: pos.coords.longitude,
+            name: `Koordinat GPS (${pos.coords.latitude.toFixed(3)}, ${pos.coords.longitude.toFixed(3)})`,
+            isGps: true
+          };
+          renderNearbyDestinations(userLocationCoords.lat, userLocationCoords.lon, userLocationCoords.name);
+        },
+        (err) => {
+          detectBtn.disabled = false;
+          detectBtn.innerHTML = '<svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg><span>Deteksi Lokasi GPS</span>';
+          console.warn('Geolocation denied or failed:', err);
+          alert('Izin lokasi ditolak atau tidak tersedia. Sistem menggunakan kota acuan dari dropdown.');
+        },
+        { timeout: 10000, enableHighAccuracy: true }
+      );
+    });
+  }
+}
+
+// ==============================================================================
+// EKSPLORASI PETA NUSANTARA (LEAFLET INTERAKTIF)
+// ==============================================================================
+let indonesiaMapInstance = null;
+let mapMarkerLayer = null;
+
+const REGION_MAP_VIEWS = {
+  '': { center: [-2.5, 118.0], zoom: 5 },
+  'Sumatra': { center: [0.5, 101.5], zoom: 6 },
+  'Jawa': { center: [-7.5, 110.5], zoom: 7 },
+  'Bali & Nusa Tenggara': { center: [-8.6, 117.5], zoom: 7 },
+  'Kalimantan': { center: [0.5, 114.5], zoom: 6 },
+  'Sulawesi': { center: [-2.5, 121.5], zoom: 6 },
+  'Maluku': { center: [-3.2, 129.5], zoom: 6 },
+  'Papua': { center: [-4.0, 136.5], zoom: 6 }
+};
+
+async function renderIndonesiaMapView() {
+  const container = document.getElementById('indonesia-map-container');
+  if (!container || typeof L === 'undefined') return;
+
+  await loadAllDestinations();
+
+  if (!indonesiaMapInstance) {
+    indonesiaMapInstance = L.map('indonesia-map-container', {
+      center: [-2.5, 118.0],
+      zoom: 5,
+      minZoom: 4,
+      maxZoom: 18,
+      scrollWheelZoom: true
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(indonesiaMapInstance);
+
+    mapMarkerLayer = L.layerGroup().addTo(indonesiaMapInstance);
+
+    // Event listener untuk filter wilayah di peta
+    const regionSelect = document.getElementById('map-region-filter');
+    if (regionSelect) {
+      regionSelect.addEventListener('change', (e) => {
+        const reg = e.target.value;
+        updateMapMarkers(reg);
+        const cfg = REGION_MAP_VIEWS[reg] || REGION_MAP_VIEWS[''];
+        indonesiaMapInstance.flyTo(cfg.center, cfg.zoom, { duration: 1.2 });
+      });
+    }
+
+    // Event listener untuk tombol lokasi saya di peta
+    const myLocBtn = document.getElementById('btn-map-my-location');
+    if (myLocBtn) {
+      myLocBtn.addEventListener('click', () => {
+        if (!navigator.geolocation) {
+          alert('Browser Anda tidak mendukung deteksi lokasi.');
+          return;
+        }
+        myLocBtn.textContent = 'Mencari...';
+        navigator.geolocation.getCurrentPosition(
+          pos => {
+            myLocBtn.innerHTML = '<svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg><span>Lokasi Saya</span>';
+            const userLat = pos.coords.latitude;
+            const userLon = pos.coords.longitude;
+            indonesiaMapInstance.flyTo([userLat, userLon], 9, { duration: 1.5 });
+
+            const userIcon = L.divIcon({
+              className: 'user-pulse-marker',
+              html: '<div style="background:#ef4444;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 0 12px rgba(239,68,68,0.9)"></div>',
+              iconSize: [20, 20],
+              iconAnchor: [10, 10]
+            });
+            L.marker([userLat, userLon], { icon: userIcon })
+              .addTo(indonesiaMapInstance)
+              .bindPopup('<strong>📍 Posisi Anda Saat Ini</strong>')
+              .openPopup();
+          },
+          err => {
+            myLocBtn.innerHTML = '<svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg><span>Lokasi Saya</span>';
+            alert('Izin lokasi tidak diberikan.');
+          }
+        );
+      });
+    }
+  }
+
+  const currentReg = document.getElementById('map-region-filter')?.value || '';
+  updateMapMarkers(currentReg);
+
+  setTimeout(() => {
+    if (indonesiaMapInstance) indonesiaMapInstance.invalidateSize();
+  }, 250);
+}
+
+function updateMapMarkers(regionFilter = '') {
+  if (!mapMarkerLayer || !APP_STATE.allDestinations) return;
+  mapMarkerLayer.clearLayers();
+
+  const filtered = regionFilter
+    ? APP_STATE.allDestinations.filter(d => d.wilayah === regionFilter)
+    : APP_STATE.allDestinations;
+
+  const countEl = document.getElementById('map-results-count');
+  if (countEl) {
+    countEl.textContent = regionFilter
+      ? `Destinasi di Wilayah ${regionFilter} (${filtered.length} Destinasi)`
+      : `Seluruh Destinasi Bahari Nusantara (${filtered.length} Destinasi)`;
+  }
+
+  const maritimeIcon = L.divIcon({
+    className: 'maritime-map-pin',
+    html: '<div style="background:#0284c7;color:white;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:12px;box-shadow:0 2px 8px rgba(0,0,0,0.3);border:2px solid white">🌊</div>',
+    iconSize: [24, 24],
+    iconAnchor: [12, 12]
+  });
+
+  filtered.forEach(d => {
+    const lat = d.latitude || -2.5;
+    const lon = d.longitude || 118.0;
+    const photoUrl = d.foto || getPhotoForDestination(d);
+
+    const marker = L.marker([lat, lon], { icon: maritimeIcon });
+    marker.bindPopup(`
+      <div style="font-size:0.85rem;min-width:220px;max-width:260px">
+        <img src="${photoUrl}" style="width:100%;height:110px;object-fit:cover;border-radius:8px;margin-bottom:8px">
+        <strong style="color:var(--text-main);font-size:0.95rem;display:block;margin-bottom:2px">${escapeHtml(d.nama)}</strong>
+        <span style="color:#64748b;font-size:0.75rem;display:block;margin-bottom:6px">📍 ${escapeHtml(d.lokasi)}</span>
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">
+          <span style="background:#e0f2fe;color:#0284c7;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">Level: ${escapeHtml(d.level)}</span>
+          <span style="background:#ecfdf5;color:#059669;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">${formatRupiah(d.estimasiTotalPerOrang)}</span>
+          <span style="background:#fef3c7;color:#d97706;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">🍽️ ${d.kuliner ? d.kuliner.length : 0} Kuliner</span>
+        </div>
+        <button type="button" class="btn-search-exec" style="width:100%;height:32px;font-size:0.75rem;padding:0" onclick="openDestinationModal('${d.id}')">
+          Buka Detail &amp; Kuliner Sekitar
+        </button>
+      </div>
+    `);
+    mapMarkerLayer.addLayer(marker);
+  });
+
+  // Render kartu destinasi di bawah peta (slice 12 item)
+  renderDestinationCards(filtered.slice(0, 12), 'map-destinations-grid');
 }
