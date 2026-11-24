@@ -13,22 +13,47 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Load Data Destinasi
+// Load Data Destinasi (Mendukung Dynamic Reload dari file terbaru)
 const dataFile = path.join(__dirname, 'data', 'destinasi.json');
 let destinasiList = [];
-if (fs.existsSync(dataFile)) {
-  destinasiList = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
-} else {
-  // Jika belum di-generate, panggil script build-data
-  require('./scripts/build-data');
-  destinasiList = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+let semanticSearch = null;
+let sparqlEngine = null;
+let lastDataMtime = 0;
+
+function reloadDataIfNeeded() {
+  try {
+    if (!fs.existsSync(dataFile)) {
+      require('./scripts/build-data');
+    }
+    const stat = fs.statSync(dataFile);
+    if (stat.mtimeMs !== lastDataMtime || !semanticSearch) {
+      destinasiList = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+      lastDataMtime = stat.mtimeMs;
+      semanticSearch = new SemanticSearch(destinasiList);
+      sparqlEngine = new MaritimeSparqlEngine(destinasiList);
+    }
+  } catch (err) {
+    console.error('[DATA ERROR] Gagal reload destinasi:', err);
+  }
 }
 
-const semanticSearch = new SemanticSearch(destinasiList);
-const sparqlEngine = new MaritimeSparqlEngine(destinasiList);
+// Initial load
+reloadDataIfNeeded();
+
+// Middleware: Cegah caching browser pada API
+app.use('/api', (req, res, next) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Pragma', 'no-cache');
+  res.set('Expires', '0');
+  reloadDataIfNeeded();
+  next();
+});
 
 // Serve static frontend files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), {
+  etag: false,
+  maxAge: 0
+}));
 
 // ==============================================================================
 // REST API ENDPOINTS
