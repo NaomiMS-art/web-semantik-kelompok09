@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
 
@@ -58,6 +59,9 @@
     <symbol id="icon-moon" viewBox="0 0 24 24">
       <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
     </symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+    </symbol>
     <symbol id="icon-database" viewBox="0 0 24 24">
       <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/>
     </symbol>
@@ -85,13 +89,14 @@
           <svg class="svg-icon"><use href="#icon-search"/></svg>
           <span>Jelajah Destinasi</span>
         </button>
-        <button class="nav-link-btn" data-tab="sparql">
-          <svg class="svg-icon"><use href="#icon-terminal"/></svg>
-          <span>Konsol SPARQL</span>
+        <button class="nav-link-btn" data-tab="map">
+          <svg class="svg-icon"><use href="#icon-compass"/></svg>
+          <span>Peta Nusantara</span>
         </button>
         <button class="nav-link-btn" data-tab="favorites">
           <svg class="svg-icon"><use href="#icon-heart"/></svg>
           <span>Favorit</span>
+          <span class="fav-badge-counter" id="desktop-fav-count" style="display:none">0</span>
         </button>
       </nav>
 
@@ -113,13 +118,14 @@
       <svg class="svg-icon"><use href="#icon-search"/></svg>
       <span>Jelajah</span>
     </button>
-    <button class="bottom-bar-btn" data-tab="sparql">
-      <svg class="svg-icon"><use href="#icon-terminal"/></svg>
-      <span>SPARQL</span>
+    <button class="bottom-bar-btn" data-tab="map">
+      <svg class="svg-icon"><use href="#icon-compass"/></svg>
+      <span>Peta</span>
     </button>
     <button class="bottom-bar-btn" data-tab="favorites">
       <svg class="svg-icon"><use href="#icon-heart"/></svg>
       <span>Favorit</span>
+      <span class="fav-badge-counter-mob" id="mobile-fav-count" style="display:none">0</span>
     </button>
   </nav>
 
@@ -133,7 +139,7 @@
       <div class="hero-content-pro">
         <div class="hero-badge-pill">
           <span class="pulse-indicator"></span>
-          <span>Knowledge Graph &amp; In-Memory SPARQL Engine</span>
+          <span>Knowledge Graph &amp; Rekomendasi Bahari Nusantara</span>
         </div>
         <h2 class="hero-title-pro">Jelajahi Wisata Bahari Nusantara Berdasarkan Budget &amp; Kemampuan</h2>
         <p class="hero-subtitle-pro">
@@ -313,13 +319,120 @@
       </div>
     </section>
 
+    <!-- JELAJAHI 7 WILAYAH MARITIM NUSANTARA -->
+    <section class="home-section-container">
+      <div class="section-title-row">
+        <div>
+          <h2>Kategori Wilayah Nusantara</h2>
+          <p>Eksplorasi kekayaan bahari dari 7 kepulauan besar Indonesia dari Sabang sampai Merauke.</p>
+        </div>
+        <button type="button" class="btn-hero-action-pill" onclick="switchTab('map')">
+          <span>Lihat di Peta Interaktif</span>
+          <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-right"/></svg>
+        </button>
+      </div>
+
+      <div class="category-cards-grid" style="grid-template-columns:repeat(auto-fit, minmax(180px, 1fr))">
+        <div class="category-tile" onclick="filterByRegion('Sumatra')">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Sumatra" loading="lazy">
+          <div class="category-tile-content">
+            <div class="category-tile-title">Sumatra</div>
+            <div class="category-tile-subtitle">Sabang, Belitung &amp; Nias</div>
+          </div>
+        </div>
+
+        <div class="category-tile" onclick="filterByRegion('Jawa')">
+          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="Jawa" loading="lazy">
+          <div class="category-tile-content">
+            <div class="category-tile-title">Jawa</div>
+            <div class="category-tile-subtitle">Karimunjawa &amp; Kep. Seribu</div>
+          </div>
+        </div>
+
+        <div class="category-tile" onclick="filterByRegion('Bali & Nusa Tenggara')">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Bali & Nusa Tenggara" loading="lazy">
+          <div class="category-tile-content">
+            <div class="category-tile-title">Bali &amp; Nusa Tenggara</div>
+            <div class="category-tile-subtitle">Komodo, Penida &amp; Gili</div>
+          </div>
+        </div>
+
+        <div class="category-tile" onclick="filterByRegion('Kalimantan')">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Kalimantan" loading="lazy">
+          <div class="category-tile-content">
+            <div class="category-tile-title">Kalimantan</div>
+            <div class="category-tile-subtitle">Derawan &amp; Maratua</div>
+          </div>
+        </div>
+
+        <div class="category-tile" onclick="filterByRegion('Sulawesi')">
+          <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80" alt="Sulawesi" loading="lazy">
+          <div class="category-tile-content">
+            <div class="category-tile-title">Sulawesi</div>
+            <div class="category-tile-subtitle">Bunaken &amp; Wakatobi</div>
+          </div>
+        </div>
+
+        <div class="category-tile" onclick="filterByRegion('Maluku')">
+          <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=600&q=80" alt="Maluku" loading="lazy">
+          <div class="category-tile-content">
+            <div class="category-tile-title">Maluku</div>
+            <div class="category-tile-subtitle">Banda Neira &amp; Pantai Ora</div>
+          </div>
+        </div>
+
+        <div class="category-tile" onclick="filterByRegion('Papua')">
+          <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=600&q=80" alt="Papua" loading="lazy">
+          <div class="category-tile-content">
+            <div class="category-tile-title">Papua</div>
+            <div class="category-tile-subtitle">Raja Ampat &amp; Cenderawasih</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REKOMENDASI WISATA MARITIM TERDEKAT (GEOLOCATION API & FALLBACK KOTA) -->
+    <section class="home-section-container">
+      <div class="section-title-row" style="flex-wrap:wrap;gap:1rem;align-items:flex-end">
+        <div>
+          <h2>Wisata Bahari Terdekat dari Lokasimu</h2>
+          <p id="nearby-status-text">Deteksi posisi otomatis dengan GPS atau pilih kota acuan manual.</p>
+        </div>
+        <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap">
+          <button type="button" class="btn-search-exec" id="btn-detect-gps" style="height:38px;padding:0 0.9rem;font-size:0.8rem">
+            <svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg>
+            <span>Deteksi Lokasi GPS</span>
+          </button>
+          <select id="select-city-fallback" class="custom-select" style="height:38px;font-size:0.82rem;min-width:180px">
+            <option value="">-- Pilih Kota Acuan --</option>
+            <option value="jakarta" selected>Jakarta / Jabodetabek</option>
+            <option value="medan">Medan (Sumut)</option>
+            <option value="padang">Padang (Sumbar)</option>
+            <option value="semarang">Semarang (Jateng)</option>
+            <option value="surabaya">Surabaya (Jatim)</option>
+            <option value="denpasar">Denpasar (Bali)</option>
+            <option value="mataram">Mataram (Lombok)</option>
+            <option value="balikpapan">Balikpapan (Kaltim)</option>
+            <option value="makassar">Makassar (Sulsel)</option>
+            <option value="manado">Manado (Sulut)</option>
+            <option value="ambon">Ambon (Maluku)</option>
+            <option value="jayapura">Jayapura (Papua)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="destinations-card-grid" id="nearby-destinations-grid">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
     <!-- HIGHLIGHT BANNER CTA -->
     <div class="home-section-container">
       <div class="featured-strip-box">
         <div class="featured-text">
-          <h3>Eksplorasi dengan Sistem Faceted Filter 6 Dimensi</h3>
+          <h3>Eksplorasi dengan Sistem Faceted Filter Kombinasi</h3>
           <p>
-            Gunakan filter kombinasi: <strong>Jenis Wisata + Aktivitas + Tingkat Keahlian + Range Harga + Peralatan + Fasilitas</strong> secara bersamaan untuk menemukan spot terbaik sesuai budget.
+            Gunakan filter kombinasi: <strong>Wilayah + Jenis Wisata + Tingkat Keahlian + Range Harga + Peralatan + Fasilitas</strong> secara bersamaan untuk menemukan spot terbaik sesuai kebutuhan Anda.
           </p>
         </div>
         <button type="button" class="btn-open-explorer-cta" onclick="switchTab('explorer')">
@@ -347,7 +460,7 @@
         </p>
 
         <form id="explorer-search-form" style="display:flex;gap:0.5rem;width:100%;max-width:760px;margin:0 auto;justify-content:center;flex-wrap:wrap" role="search">
-          <div class="search-field-main" style="flex:1;background:white;min-width:240px;text-align:left">
+          <div class="search-field-main" style="flex:1;min-width:240px;text-align:left">
             <svg class="svg-icon"><use href="#icon-search"/></svg>
             <input 
               type="search" 
@@ -371,10 +484,6 @@
             <svg class="svg-icon" style="color:var(--sea-blue)"><use href="#icon-network"/></svg>
             <span>Inferensi Relasi Web Semantik (Semantic Reasoning Chain)</span>
           </div>
-          <button type="button" class="btn-open-sparql-badge" id="btn-show-query">
-            <svg class="svg-icon svg-icon-sm"><use href="#icon-terminal"/></svg>
-            <span>Lihat Query SPARQL</span>
-          </button>
         </div>
         <div class="pipeline-flow" id="reasoning-chain">
           <!-- Populated by JavaScript -->
@@ -384,6 +493,103 @@
 
     <!-- LAYOUT EXPLORER: FACETED FILTER DI ATAS, DAFTAR DESTINASI DI BAWAH -->
     <div class="explorer-layout-wrapper" id="destinasi-explorer">
+
+      <!-- QUICK WILAYAH & ISLAND SELECTION (HORIZONTAL SCROLL) -->
+      <div class="island-slider-wrapper">
+        <div class="island-slider-header">
+          <div class="island-slider-title">
+            <svg class="svg-icon svg-icon-sm" style="color:var(--primary-color)"><use href="#icon-compass"/></svg>
+            <span>Jelajah Pulau &amp; Kepulauan Bahari</span>
+            <span class="island-active-badge" id="island-active-count">Semua (305 Wisata)</span>
+          </div>
+          <span style="font-size:0.75rem;color:var(--text-muted);font-weight:600;display:flex;align-items:center;gap:0.3rem">
+            <svg class="svg-icon svg-icon-xs" style="color:var(--sea-blue)"><use href="#icon-arrow-right"/></svg>
+            Geser untuk pulau lainnya
+          </span>
+        </div>
+
+        <div class="island-slider-track-wrap">
+          <div class="island-slider-track" id="explorer-wilayah-pills">
+            <button type="button" class="island-slide-card filter-pill-opt active" data-wil="" data-prov="" title="Semua Destinasi Bahari Indonesia">
+              <span class="island-badge-code">ALL</span>
+              <div class="island-pill-info">
+                <span class="island-pill-name">Semua Wilayah</span>
+                <span class="island-pill-count">305</span>
+              </div>
+            </button>
+            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sumatra" data-prov="" title="Pulau Sumatra">
+              <span class="island-badge-code">SM</span>
+              <div class="island-pill-info">
+                <span class="island-pill-name">Sumatra</span>
+                <span class="island-pill-count">60</span>
+              </div>
+            </button>
+            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Jawa" data-prov="" title="Pulau Jawa">
+              <span class="island-badge-code">JW</span>
+              <div class="island-pill-info">
+                <span class="island-pill-name">Jawa</span>
+                <span class="island-pill-count">54</span>
+              </div>
+            </button>
+            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Bali & Nusa Tenggara" data-prov="Bali" title="Pulau Dewata Bali">
+              <span class="island-badge-code">BL</span>
+              <div class="island-pill-info">
+                <span class="island-pill-name">Bali</span>
+                <span class="island-pill-count">29</span>
+              </div>
+            </button>
+            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Bali & Nusa Tenggara" data-prov="NTB,NTT" title="Kepulauan Nusa Tenggara (Lombok, Komodo &amp; Flores)">
+              <span class="island-badge-code">NT</span>
+              <div class="island-pill-info">
+                <span class="island-pill-name">Nusa Tenggara</span>
+                <span class="island-pill-count">43</span>
+              </div>
+            </button>
+            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Kalimantan" data-prov="" title="Pulau Kalimantan (Borneo)">
+              <span class="island-badge-code">KL</span>
+              <div class="island-pill-info">
+                <span class="island-pill-name">Kalimantan</span>
+                <span class="island-pill-count">30</span>
+              </div>
+            </button>
+            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sulawesi" data-prov="" title="Pulau Sulawesi (Bunaken &amp; Wakatobi)">
+              <span class="island-badge-code">SL</span>
+              <div class="island-pill-info">
+                <span class="island-pill-name">Sulawesi</span>
+                <span class="island-pill-count">40</span>
+              </div>
+            </button>
+            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Maluku" data-prov="" title="Kepulauan Maluku (Banda Neira &amp; Kei)">
+              <span class="island-badge-code">ML</span>
+              <div class="island-pill-info">
+                <span class="island-pill-name">Maluku</span>
+                <span class="island-pill-count">24</span>
+              </div>
+            </button>
+            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Papua" data-prov="" title="Tanah Papua &amp; Raja Ampat">
+              <span class="island-badge-code">PP</span>
+              <div class="island-pill-info">
+                <span class="island-pill-name">Papua</span>
+                <span class="island-pill-count">25</span>
+              </div>
+            </button>
+            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sumatra" data-prov="Kepulauan Riau" title="Kepulauan Riau (Bintan, Batam, Anambas)">
+              <span class="island-badge-code">KR</span>
+              <div class="island-pill-info">
+                <span class="island-pill-name">Kepulauan Riau</span>
+                <span class="island-pill-count">10</span>
+              </div>
+            </button>
+            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sumatra" data-prov="Bangka Belitung" title="Kepulauan Bangka Belitung">
+              <span class="island-badge-code">BB</span>
+              <div class="island-pill-info">
+                <span class="island-pill-name">Bangka Belitung</span>
+                <span class="island-pill-count">7</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
 
       <!-- ==============================================================================
            1. FACETED FILTER 6 DIMENSI (DI ATAS DAFTAR DESTINASI)
@@ -598,47 +804,50 @@
   </div>
 
   <!-- ==============================================================================
-       HALAMAN 3: KONSOL SPARQL STUDIO
+       HALAMAN 3: EKSPLORASI PETA NUSANTARA
        ============================================================================== -->
-  <div class="tab-view-section" id="view-sparql" style="display:none">
-    <div style="max-width:1400px;margin:2rem auto;padding:0 1.25rem">
-      <div class="filter-panel-card" style="position:static;max-height:none;margin-bottom:1.5rem">
-        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem">
-          <div class="brand-logo-icon" style="width:36px;height:36px">
-            <svg class="svg-icon"><use href="#icon-terminal"/></svg>
-          </div>
-          <div>
-            <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--text-main)">
-              Konsol Query SPARQL (W3C Endpoint)
-            </h2>
-            <p style="font-size:0.85rem;color:var(--text-muted)">
-              Jalankan query SPARQL langsung terhadap Triplestore Wisata Maritim.
-            </p>
-          </div>
+  <div class="tab-view-section" id="view-map" style="display:none">
+    <div style="max-width:1400px;margin:1.5rem auto;padding:0 1.25rem">
+      <div class="results-control-bar" style="margin-bottom:1rem;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between">
+        <div class="results-stat-text">
+          <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--text-main);margin-bottom:0.25rem">
+            Peta Eksplorasi Wisata Bahari Nusantara
+          </h2>
+          <p style="color:var(--text-muted);font-size:0.85rem">
+            Klik marker di peta atau pilih filter wilayah untuk menjelajahi 300+ surga bahari Indonesia dari Sabang sampai Merauke.
+          </p>
         </div>
-
-        <div style="display:flex;gap:1rem;align-items:center;margin:1.25rem 0 1rem;flex-wrap:wrap">
-          <label style="font-size:0.85rem;font-weight:700">Preset Competency Questions Dosen:</label>
-          <select id="sparql-preset-select" class="custom-select" style="max-width:100%">
-            <!-- Populated by JS -->
+        <div style="display:flex;gap:0.5rem;align-items:center;flex-wrap:wrap">
+          <select id="map-region-filter" class="custom-select" style="min-width:180px;height:40px;font-size:0.85rem">
+            <option value="">Semua Wilayah (7 Wilayah)</option>
+            <option value="Sumatra">Sumatra</option>
+            <option value="Jawa">Jawa</option>
+            <option value="Bali & Nusa Tenggara">Bali &amp; Nusa Tenggara</option>
+            <option value="Kalimantan">Kalimantan</option>
+            <option value="Sulawesi">Sulawesi</option>
+            <option value="Maluku">Maluku</option>
+            <option value="Papua">Papua</option>
           </select>
-        </div>
-
-        <textarea id="sparql-query-input" class="code-editor-look" style="width:100%;height:220px;resize:vertical" spellcheck="false"></textarea>
-
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;flex-wrap:wrap;gap:1rem">
-          <div id="sparql-meta-info" style="font-size:0.82rem;color:var(--text-muted)"></div>
-          <button type="button" id="btn-run-sparql" class="btn-search-exec">
-            <svg class="svg-icon"><use href="#icon-terminal"/></svg>
-            <span>Jalankan Query SPARQL</span>
+          <button type="button" class="btn-search-exec" id="btn-map-my-location" style="height:40px;padding:0 1rem;font-size:0.82rem">
+            <svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg>
+            <span>Lokasi Saya</span>
           </button>
         </div>
       </div>
 
-      <div class="filter-panel-card" style="position:static;max-height:none">
-        <h3 style="font-size:1.05rem;font-weight:800;margin-bottom:0.85rem">Hasil Eksekusi SPARQL</h3>
-        <div id="sparql-results-container">
-          <p style="color:var(--text-muted);font-size:0.85rem">Pilih preset dan klik tombol "Jalankan Query SPARQL" untuk mengeksekusi.</p>
+      <!-- MAP CONTAINER -->
+      <div id="indonesia-map-container" style="width:100%;height:560px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-subtle);box-shadow:var(--shadow-md);position:relative;background:var(--bg-subtle)">
+        <!-- Leaflet Map rendered by JS -->
+      </div>
+
+      <!-- MAP DESTINATIONS LIST (DYNAMIC BY REGION OR BOUNDS) -->
+      <div style="margin-top:1.5rem">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+          <h3 style="font-size:1.1rem;font-weight:800;color:var(--text-main)" id="map-results-count">Destinasi di Wilayah Terpilih</h3>
+          <span style="font-size:0.8rem;color:var(--text-muted)" id="map-results-sub">Klik salah satu kartu untuk info lengkap &amp; kuliner sekitar</span>
+        </div>
+        <div class="destinations-card-grid" id="map-destinations-grid">
+          <!-- Populated by JS -->
         </div>
       </div>
     </div>
@@ -669,7 +878,12 @@
     <div class="modal-hero-cover">
       <img id="modal-header-img" src="" alt="Hero Destination">
       <div class="modal-hero-text">
-        <span class="card-code-tag" id="modal-dest-code">SMT-01</span>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:0.25rem">
+          <span class="card-code-tag" id="modal-dest-code">SMT-01</span>
+          <button type="button" class="btn-card-bookmark" id="modal-dest-fav-btn" title="Simpan ke Favorit" style="position:static;width:36px;height:36px">
+            <svg class="svg-icon svg-icon-sm"><use href="#icon-heart"/></svg>
+          </button>
+        </div>
         <h2 id="modal-dest-title">Nama Destinasi</h2>
         <span style="font-size:0.85rem;opacity:0.9" id="modal-dest-loc">Lokasi, Provinsi</span>
       </div>
@@ -679,32 +893,6 @@
       <!-- Panel Info, Rincian Tiket, Sewa Alat & Kalkulator -->
       <div class="tab-panel active" id="panel-info">
         <div id="tab-dest-info"></div>
-      </div>
-    </div>
-  </dialog>
-
-  <!-- MODAL PREVIEW SPARQL QUERY OTOMATIS -->
-  <dialog class="custom-modal" id="sparql-preview-modal" style="max-width:680px">
-    <div style="padding:1.5rem;background:var(--navy-900);color:white;display:flex;justify-content:space-between;align-items:center">
-      <div style="display:flex;align-items:center;gap:0.5rem">
-        <svg class="svg-icon" style="color:#38bdf8"><use href="#icon-terminal"/></svg>
-        <h3 style="font-size:1.15rem;font-weight:800">Query SPARQL Otomatis</h3>
-      </div>
-      <button type="button" class="modal-close-trigger" style="position:static" onclick="document.getElementById('sparql-preview-modal').close()">&times;</button>
-    </div>
-    <div style="padding:1.5rem">
-      <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1rem">
-        Query W3C SPARQL ini dihasilkan secara dinamis oleh mesin inferensi semantik berdasarkan kombinasi pencarian Anda:
-      </p>
-      <pre class="code-editor-look" id="sparql-preview-code"></pre>
-      <div style="display:flex;justify-content:flex-end;gap:0.75rem;margin-top:1.25rem">
-        <button type="button" class="page-nav-btn" onclick="navigator.clipboard.writeText(document.getElementById('sparql-preview-code').textContent); alert('Query SPARQL berhasil disalin!')">
-          <span>Salin SPARQL</span>
-        </button>
-        <button type="button" class="btn-search-exec" onclick="document.getElementById('sparql-preview-modal').close(); switchTab('sparql'); document.getElementById('sparql-query-input').value = document.getElementById('sparql-preview-code').textContent; executeSparqlQuery(document.getElementById('sparql-preview-code').textContent);">
-          <span>Buka di Konsol SPARQL</span>
-          <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-right"/></svg>
-        </button>
       </div>
     </div>
   </dialog>
@@ -723,7 +911,7 @@
           </div>
         </div>
         <p style="color:#94a3b8;font-size:0.85rem;line-height:1.6;max-width:440px">
-          Sistem mesin pencari dan penjelajah pengetahuan maritim Indonesia berbasis Web Semantik. Mengintegrasikan ontologi W3C RDF Turtle, pemetaan harga Google-style, dan SPARQL triplestore engine.
+          Sistem mesin pencari dan penjelajah pengetahuan maritim Indonesia berbasis Web Semantik. Mengintegrasikan ontologi W3C RDF Turtle, pemetaan harga Google-style, dan eksplorasi peta interaktif Nusantara.
         </p>
       </div>
 
@@ -732,7 +920,7 @@
         <ul>
           <li><a href="#" onclick="switchTab('home')">Beranda</a></li>
           <li><a href="#" onclick="switchTab('explorer')">Jelajah &amp; Faceted Filter</a></li>
-          <li><a href="#" onclick="switchTab('sparql')">Konsol Query SPARQL</a></li>
+          <li><a href="#" onclick="switchTab('map')">Peta Eksplorasi Nusantara</a></li>
           <li><a href="#" onclick="switchTab('favorites')">Koleksi Favorit</a></li>
         </ul>
       </div>
@@ -753,6 +941,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="js/app.js"></script>
   <script src="js/dbpedia.js"></script>
   <script src="js/chatbot.js"></script>

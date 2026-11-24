@@ -2337,9 +2337,9 @@ footer.app-footer {
 }
 
 [data-theme="dark"] .filter-pill-opt.active {
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-  color: white;
-  border-color: #0284c7;
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: white !important;
+  border-color: transparent !important;
 }
 
 [data-theme="dark"] .price-type-tab-btn {
@@ -2426,4 +2426,469 @@ footer.app-footer {
   border-color: #38bdf8;
   color: #38bdf8;
   background: #172844;
+}
+
+/* AUDITED COMPREHENSIVE DARK MODE REFINEMENTS */
+[data-theme="dark"] .stat-icon-wrap {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .quick-stat-item-pro {
+  border-color: var(--border-subtle);
+}
+
+[data-theme="dark"] select.custom-select,
+[data-theme="dark"] .custom-select {
+  background-color: var(--bg-subtle);
+  color: var(--text-main);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="dark"] select option {
+  background-color: #0b1526;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .facet-checkbox-label {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .facet-checkbox-label:hover {
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .facet-item-count {
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="dark"] .destination-card {
+  background: var(--bg-surface);
+  border-color: var(--border-subtle);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .destination-card:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 8px 30px rgba(2, 132, 199, 0.25);
+}
+
+[data-theme="dark"] .card-title {
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .card-loc-text {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .card-equipment-preview {
+  background: var(--bg-subtle);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="dark"] .equipment-item-badge {
+  background: #0e1b2f;
+  border-color: #1e3557;
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .card-price-value {
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .btn-card-detail-outline {
+  background: var(--bg-subtle);
+  border-color: var(--border-subtle);
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .btn-card-detail-outline:hover {
+  background: #38bdf8;
+  color: #040d1a;
+}
+
+[data-theme="dark"] .btn-card-bookmark {
+  background: rgba(5, 11, 20, 0.75);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .btn-card-bookmark:hover {
+  color: #f43f5e;
+}
+
+[data-theme="dark"] .btn-card-bookmark.active {
+  background: #f43f5e;
+  color: white;
+  border-color: #f43f5e;
+}
+
+[data-theme="dark"] dialog.custom-modal {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] .modal-content-scroll {
+  background: var(--bg-surface);
+}
+
+[data-theme="dark"] .modal-tabs-header {
+  background: var(--bg-subtle);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="dark"] .info-badge-item {
+  background: var(--bg-subtle);
+  border-color: var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .section-category-card {
+  background: var(--bg-surface);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="dark"] .section-category-card:hover {
+  border-color: #38bdf8;
+}
+
+[data-theme="dark"] .skill-guide-card {
+  background: var(--bg-surface);
+  border-color: var(--border-subtle);
+}
+
+/* LEAFLET MAP IN DARK MODE */
+[data-theme="dark"] .leaflet-popup-content-wrapper {
+  background: #0b1526;
+  color: #f8fafc;
+  border: 1px solid #1e304d;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  border-radius: var(--radius-md);
+}
+
+[data-theme="dark"] .leaflet-popup-tip {
+  background: #0b1526;
+}
+
+[data-theme="dark"] .leaflet-bar a {
+  background-color: #0b1526;
+  color: #f8fafc;
+  border-color: #1e304d;
+}
+
+[data-theme="dark"] .leaflet-bar a:hover {
+  background-color: #172844;
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .leaflet-container {
+  background: #050b14;
+}
+
+/* FAVORITE COUNTER BADGES */
+.fav-badge-counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f43f5e;
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 800;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: var(--radius-full);
+  margin-left: 0.25rem;
+  line-height: 1;
+}
+
+.fav-badge-counter-mob {
+  position: absolute;
+  top: 6px;
+  right: calc(50% - 16px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f43f5e;
+  color: white;
+  font-size: 0.62rem;
+  font-weight: 800;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 3px;
+  border-radius: var(--radius-full);
+  line-height: 1;
+}
+
+/* CULINARY & MAP STYLES */
+.culinary-card-item {
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.culinary-card-item:hover {
+  transform: translateY(-2px);
+  border-color: #38bdf8;
+}
+
+.maritime-map-pin, .culinary-map-marker {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.maritime-map-pin:hover, .culinary-map-marker:hover {
+  transform: scale(1.2);
+  z-index: 9999 !important;
+}
+
+@keyframes pulseUserMarker {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.user-pulse-marker div {
+  animation: pulseUserMarker 2s infinite;
+}
+
+.btn-hero-action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  color: var(--sea-blue);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-hero-action-pill:hover {
+  background: var(--sea-blue);
+  color: white;
+  border-color: var(--sea-blue);
+  transform: translateX(2px);
+}
+
+[data-theme="dark"] .btn-hero-action-pill {
+  background: var(--bg-subtle);
+  border-color: var(--border-subtle);
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .btn-hero-action-pill:hover {
+  background: #0284c7;
+  color: white;
+}
+
+/* ==============================================================================
+   ISLAND & REGION SLIDER CAROUSEL (RESPONSIVE & TOUCH FRIENDLY)
+   ============================================================================== */
+.island-slider-wrapper {
+  margin-bottom: 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg, 16px);
+  padding: 0.95rem 1.15rem;
+  box-shadow: 0 4px 18px rgba(10, 37, 64, 0.04);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.island-slider-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.island-slider-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.island-active-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--sea-blue);
+  background: rgba(14, 165, 233, 0.1);
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.island-slider-track-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.island-slider-track {
+  display: flex;
+  gap: 0.65rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0.35rem 0.2rem 0.65rem 0.2rem;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(14, 165, 233, 0.25) transparent;
+}
+
+.island-slider-track.grabbing {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.island-slider-track::-webkit-scrollbar {
+  height: 5px;
+}
+
+.island-slider-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.island-slider-track::-webkit-scrollbar-thumb {
+  background: rgba(14, 165, 233, 0.25);
+  border-radius: 9999px;
+}
+
+.island-slider-track::-webkit-scrollbar-thumb:hover {
+  background: var(--sea-blue);
+}
+
+/* Island Pill Card */
+.island-slide-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 1rem;
+  background: var(--bg-canvas);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: 9999px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.island-slide-card:hover {
+  border-color: var(--sea-blue);
+  background: var(--bg-surface);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(14, 165, 233, 0.16);
+}
+
+.island-badge-code {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(14, 165, 233, 0.12);
+  color: var(--sea-blue);
+  font-size: 0.68rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.2px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.island-pill-info {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.island-pill-name {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.island-pill-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--bg-subtle);
+  padding: 0.1rem 0.45rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.2s ease;
+}
+
+/* Active State */
+.island-slide-card.active {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.38) !important;
+  transform: translateY(-1px);
+}
+
+.island-slide-card.active .island-badge-code {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+}
+
+.island-slide-card.active .island-pill-name {
+  color: #ffffff !important;
+}
+
+.island-slide-card.active .island-pill-count {
+  background: rgba(255, 255, 255, 0.22) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+
+/* Dark mode adjustments for Island Carousel */
+[data-theme="dark"] .island-slider-wrapper {
+  background: #152238;
+  border-color: #1e3352;
+}
+
+[data-theme="dark"] .island-slide-card {
+  background: #0d1726;
+  border-color: #1e3352;
+}
+
+[data-theme="dark"] .island-slide-card:hover {
+  background: #172844;
+  border-color: #38bdf8;
+}
+
+[data-theme="dark"] .island-badge-code {
+  background: rgba(56, 189, 248, 0.18);
+  color: #38bdf8;
+}
+
+[data-theme="dark"] .island-pill-count {
+  background: #172844;
+  border-color: #1e3352;
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .island-nav-btn {
+  background: #0d1726;
+  border-color: #1e3352;
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .island-active-badge {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.25);
+  color: #38bdf8;
 }

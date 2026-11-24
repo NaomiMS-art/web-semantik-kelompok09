@@ -7,6 +7,7 @@ const rawCode = fs.readFileSync(dataJsPath, 'utf8');
 const { RAW, WIL } = new Function(rawCode + '; return {RAW, WIL};')();
 
 const ADDITIONAL_RAW = require('./additional-destinations');
+const { enrichWithGeoAndCulinary } = require('./geo-culinary');
 const COMBINED_RAW = [...RAW, ...ADDITIONAL_RAW];
 
 console.log(`Memproses total ${COMBINED_RAW.length} destinasi wisata maritim (200 data awal + ${ADDITIONAL_RAW.length} data eksplorasi tambahan)...`);
@@ -393,7 +394,7 @@ function getPhotoForDestination(dest) {
 }
 
 // Transform COMBINED_RAW
-const destinasiList = COMBINED_RAW.map(r => {
+const destinasiListRaw = COMBINED_RAW.map(r => {
   const k = r[0];
   const nama = r[1];
   const lokasi = r[2];
@@ -480,12 +481,15 @@ const destinasiList = COMBINED_RAW.map(r => {
   return itemObj;
 });
 
+// Enrich dengan koordinat presisi dan kuliner sekitar
+const destinasiList = enrichWithGeoAndCulinary(destinasiListRaw);
+
 // Simpan JSON
 const dataDir = path.join(__dirname, '..', 'data');
 if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 
 fs.writeFileSync(path.join(dataDir, 'destinasi.json'), JSON.stringify(destinasiList, null, 2), 'utf8');
-console.log(`Berhasil menyimpan ${destinasiList.length} destinasi ke data/destinasi.json`);
+console.log(`Berhasil menyimpan ${destinasiList.length} destinasi (lengkap koordinat & kuliner) ke data/destinasi.json`);
 
 // Generate Ontologi Turtle RDF (W3C Standard)
 function generateTurtle(destinasiList) {
@@ -617,6 +621,22 @@ maritim:beradaDiWilayah a owl:ObjectProperty ;
     rdfs:domain maritim:DestinasiWisata ;
     rdfs:range maritim:Wilayah .
 
+maritim:latitude a owl:DatatypeProperty ;
+    rdfs:domain maritim:DestinasiWisata ;
+    rdfs:range xsd:decimal .
+
+maritim:longitude a owl:DatatypeProperty ;
+    rdfs:domain maritim:DestinasiWisata ;
+    rdfs:range xsd:decimal .
+
+maritim:memilikiKulinerSekitar a owl:ObjectProperty ;
+    rdfs:domain maritim:DestinasiWisata ;
+    rdfs:range maritim:KulinerSekitar .
+
+maritim:KulinerSekitar a owl:Class ;
+    rdfs:subClassOf schema:FoodEstablishment ;
+    rdfs:label "Kuliner Sekitar Destinasi"@id .
+
 # ------------------------------------------------------------------------------
 # INDIVIDU TINGKAT KEAHLIAN
 # ------------------------------------------------------------------------------
@@ -703,6 +723,8 @@ data:Range_Above1M a maritim:KategoriRangeHarga ;
     ttl += `    maritim:kategoriHargaTiket ${rangeUri(d.rangeHargaTiket)} ;\n`;
     ttl += `    maritim:estimasiTotalBiaya ${d.estimasiTotalPerOrang} ;\n`;
     ttl += `    maritim:kategoriHargaTotal ${rangeUri(d.rangeHargaTotal)} ;\n`;
+    ttl += `    maritim:latitude ${d.latitude} ;\n`;
+    ttl += `    maritim:longitude ${d.longitude} ;\n`;
 
     if (d.hargaAktivitasMulai) {
       ttl += `    maritim:hargaAktivitasMulai ${d.hargaAktivitasMulai} ;\n`;
@@ -725,6 +747,14 @@ data:Range_Above1M a maritim:KategoriRangeHarga ;
       ttl += `    maritim:memilikiPenawaranAlat ${offerUri} ;\n`;
     });
 
+    // Kuliner Sekitar
+    if (d.kuliner && d.kuliner.length) {
+      d.kuliner.forEach((cul, cIdx) => {
+        const culUri = `data:kuliner_${cleanUri(d.id)}_${cIdx}`;
+        ttl += `    maritim:memilikiKulinerSekitar ${culUri} ;\n`;
+      });
+    }
+
     ttl = ttl.replace(/ ;\n$/, ' .\n');
 
     // Tulis individu penawaran alat
@@ -737,6 +767,22 @@ data:Range_Above1M a maritim:KategoriRangeHarga ;
       ttl += `    maritim:statusSewa "${eq.dapatDisewa ? 'Tersedia Disewa' : 'Termasuk Tiket'}" ;\n`;
       ttl += `    maritim:tingkatAlat ${levelUri(eq.tingkatKeahlian)} .\n`;
     });
+
+    // Tulis individu kuliner sekitar
+    if (d.kuliner && d.kuliner.length) {
+      d.kuliner.forEach((cul, cIdx) => {
+        const culUri = `data:kuliner_${cleanUri(d.id)}_${cIdx}`;
+        ttl += `${culUri} a maritim:KulinerSekitar ;\n`;
+        ttl += `    rdfs:label "${cul.nama.replace(/"/g, '\\"')}" ;\n`;
+        ttl += `    maritim:kategoriKuliner "${cul.kategori.replace(/"/g, '\\"')}" ;\n`;
+        ttl += `    maritim:menuAndalan "${cul.menuAndalan.replace(/"/g, '\\"')}" ;\n`;
+        ttl += `    maritim:estimasiHarga "${cul.estimasiHarga.replace(/"/g, '\\"')}" ;\n`;
+        ttl += `    maritim:rating ${cul.rating} ;\n`;
+        ttl += `    maritim:jarakKm ${cul.jarakKm} ;\n`;
+        ttl += `    maritim:latitude ${cul.latitude} ;\n`;
+        ttl += `    maritim:longitude ${cul.longitude} .\n`;
+      });
+    }
   });
 
   return ttl;

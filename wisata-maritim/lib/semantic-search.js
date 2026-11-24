@@ -507,7 +507,9 @@ class SemanticSearch {
       // 9. Provinsi & Wilayah
       const targetProv = filters.provinsi || parsed.provinsi;
       if (targetProv && targetProv !== '') {
-        if (!d.provinsi.toLowerCase().includes(targetProv.toLowerCase())) return false;
+        const provParts = targetProv.split(',').map(s => s.trim().toLowerCase());
+        const match = provParts.some(p => d.provinsi.toLowerCase() === p || d.provinsi.toLowerCase().includes(p));
+        if (!match) return false;
       }
 
       const targetWil = filters.wilayah || parsed.wilayah;
