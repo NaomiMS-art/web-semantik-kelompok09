@@ -637,6 +637,7 @@ async function executeSearch() {
   if (APP_STATE.filters.provinsi) params.set('provinsi', APP_STATE.filters.provinsi);
 
   try {
+    params.set('_v', Date.now());
     const res = await fetch(`/api/search?${params.toString()}`);
     const data = await res.json();
 
@@ -1448,7 +1449,7 @@ async function loadAllDestinations() {
     return APP_STATE.allDestinations;
   }
   try {
-    const res = await fetch('/api/search');
+    const res = await fetch(`/api/search?_v=${Date.now()}`);
     const data = await res.json();
     APP_STATE.allDestinations = data.results || [];
     return APP_STATE.allDestinations;

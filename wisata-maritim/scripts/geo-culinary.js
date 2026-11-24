@@ -5,6 +5,8 @@
 // 2. Daftar kuliner lokal terdekat dengan menu andalan, harga, rating, dan jarak (Haversine)
 // ==============================================================================
 
+const { EXACT_COORDINATES } = require('./exact-coordinates-data');
+
 // Rumus Haversine: Hitung jarak akurat antara dua titik koordinat bumi (dalam kilometer)
 function haversineDistance(lat1, lon1, lat2, lon2) {
   const R = 6371; // Radius rata-rata bumi dalam km
@@ -119,6 +121,14 @@ const WILAYAH_DEFAULT_COORDS = {
 
 // Hitung koordinat stabil berbasis teks destinasi
 function resolveCoordinates(dest, index = 0) {
+  // 1. Prioritas Utama: Koordinat Presisi Nyata dari Kamus Terverifikasi
+  if (dest.id && EXACT_COORDINATES[dest.id]) {
+    return {
+      lat: EXACT_COORDINATES[dest.id].lat,
+      lon: EXACT_COORDINATES[dest.id].lon
+    };
+  }
+
   const text = `${dest.nama} ${dest.lokasi} ${dest.kabKota || ''} ${dest.provinsi || ''}`.toLowerCase();
   
   let base = null;
