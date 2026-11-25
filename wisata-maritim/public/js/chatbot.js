@@ -41,7 +41,7 @@
     toggleBtn.className = 'maritim-chat-toggle';
     toggleBtn.id = 'maritim-chat-toggle';
     toggleBtn.setAttribute('aria-label', 'Buka Asisten MaritimBot');
-    toggleBtn.title = 'Tanya Asisten AI Maritim (DBpedia Connected)';
+    toggleBtn.title = 'Tanya Asisten Wisata Bahari';
     toggleBtn.innerHTML = `
       <svg viewBox="0 0 24 24">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -64,7 +64,7 @@
             <h4>MaritimBot</h4>
             <div class="maritim-chat-status" id="maritim-bot-status">
               <span class="maritim-chat-status-dot"></span>
-              <span>Online · DBpedia Connected</span>
+              <span>Siap membantu</span>
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@
       <div class="maritim-chat-messages" id="maritim-chat-messages" aria-live="polite"></div>
 
       <form class="maritim-chat-input-row" id="maritim-chat-form">
-        <input type="text" class="maritim-chat-input" id="maritim-chat-input" placeholder="Tanyakan seputar wisata maritim & ontologi..." autocomplete="off" aria-label="Pesan untuk MaritimBot">
+        <input type="text" class="maritim-chat-input" id="maritim-chat-input" placeholder="Tanyakan tentang destinasi, aktivitas, harga, atau lokasi..." autocomplete="off" aria-label="Pesan untuk MaritimBot">
         <button type="submit" class="maritim-chat-send" id="maritim-chat-send" title="Kirim Pesan" aria-label="Kirim">
           <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>
@@ -127,7 +127,7 @@
         : '';
       const linkTag = dbpediaData.wikiPage || dbpediaData.resource
         ? `<a class="maritim-dbpedia-link" href="${esc(dbpediaData.wikiPage || dbpediaData.resource)}" target="_blank" rel="noopener">
-            <span>Lihat Entitas di DBpedia / Wikipedia</span>
+            <span>Baca informasi lebih lanjut</span>
             <svg style="width:12px;height:12px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
            </a>`
         : '';
@@ -136,7 +136,7 @@
         <div class="maritim-dbpedia-card">
           <div class="maritim-dbpedia-tag">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <span>Linked Open Data · DBpedia SPARQL</span>
+            <span>Sumber informasi tambahan</span>
           </div>
           ${imgTag}
           ${linkTag}
@@ -213,7 +213,7 @@
         botReply = await DBpedia.askChatbot(text);
       } else {
         botReply = {
-          text: `Halo! Saya menerima pesan Anda: "${text}". Modul kecerdasan sedang diinisialisasi.`,
+          text: `Halo! Saya menerima pesan Anda: "${text}". Saya belum siap menjawab saat ini, coba lagi sebentar ya.`,
           dbpediaData: null,
           suggestions: ['Destinasi snorkeling terbaik', 'Pantai di Bali']
         };
@@ -221,7 +221,7 @@
     } catch (err) {
       console.error('[MaritimBot Error]:', err);
       botReply = {
-        text: 'Maaf, terjadi sedikit kendala saat mengambil data ontologi. Coba ulangi pertanyaan atau tanyakan destinasi lain ya! 😊',
+        text: 'Maaf, ada kendala saat mencari informasi. Coba ulangi pertanyaan atau tanyakan destinasi lain ya! 😊',
         dbpediaData: null,
         suggestions: ['Ceritakan tentang Bunaken', 'Pantai gratis di Bali']
       };
@@ -229,7 +229,7 @@
 
     hideTypingIndicator();
     isThinking = false;
-    if (statusText) statusText.textContent = 'Online · DBpedia Connected';
+    if (statusText) statusText.textContent = 'Siap membantu';
 
     // 4. Tampilkan Bubble Bot
     appendMessage({
@@ -246,12 +246,12 @@
   function sendInitialGreeting() {
     appendMessage({
       sender: 'bot',
-      textHtml: renderMarkdown(`Halo! 🌊 Selamat datang di **MaritimBot**!\nSaya asisten cerdas berbasis **Web Semantik & DBpedia SPARQL** untuk memandu wisata bahari nusantara.\n\nPilih topik di bawah atau ketik langsung pertanyaanmu:`),
+      textHtml: renderMarkdown(`Halo! 🌊 Selamat datang di **MaritimBot**!\nSaya siap membantu menemukan wisata bahari berdasarkan lokasi, aktivitas, kisaran biaya, dan fasilitas.\n\nPilih topik di bawah atau ketik langsung pertanyaanmu:`),
       dbpediaData: null,
       suggestions: [
         'Pantai gratis di Bali apa saja?',
-        'Tingkat level diatas pemula',
-        'Tingkat ahli',
+        'Wisata untuk tingkat menengah',
+        'Wisata untuk penyelam mahir',
         'Peralatan apa saja yang disewakan?',
         'Aktivitas apa saja yang ada?',
         'Rekomendasi wisata maritim terbaik'
