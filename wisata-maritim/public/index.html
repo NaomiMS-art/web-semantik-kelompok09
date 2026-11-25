@@ -149,7 +149,7 @@
         <!-- PRO SEARCH BAR (PROPORSIONAL & TIDAK TERPOTONG) -->
         <div class="search-card-pro">
           <form id="hero-search-form" class="search-form-row" role="search">
-            <div class="search-field-main">
+            <div class="search-field-main" style="position:relative">
               <svg class="svg-icon"><use href="#icon-search"/></svg>
               <input 
                 type="search" 
@@ -157,6 +157,8 @@
                 placeholder="Cari aktivitas, lokasi, atau budget..." 
                 autocomplete="off"
               >
+              <!-- AUTOCOMPLETE / SEARCH SUGGESTIONS DROPDOWN -->
+              <div class="search-suggestions-dropdown" id="hero-search-suggestions" style="display:none"></div>
             </div>
 
             <div class="search-field-select">
@@ -188,24 +190,49 @@
           </form>
         </div>
 
-        <!-- TRENDING PILLS -->
-        <div class="trending-bar">
-          <span class="trending-label">
-            <svg class="svg-icon svg-icon-sm"><use href="#icon-network"/></svg>
-            Rekomendasi:
-          </span>
-          <button type="button" class="trending-tag" data-q="tempat snorkeling untuk pemula dengan budget maksimal Rp250.000 dan menyediakan alat snorkeling">
-            Snorkeling Pemula Budget &le; 250rb + Alat
-          </button>
-          <button type="button" class="trending-tag" data-q="spot diving mahir dengan sewa BCD dan tabung scuba">
-            Diving Mahir Sewa BCD &amp; Tabung
-          </button>
-          <button type="button" class="trending-tag" data-q="pantai surfing pemula dengan sewa papan di bawah 100rb">
-            Surfing Pemula Sewa Papan &lt; 100rb
-          </button>
-          <button type="button" class="trending-tag" data-q="destinasi wisata gratis di Maluku">
-            Wisata Gratis di Maluku
-          </button>
+        <!-- TRENDING & PALING SERING DICARI PILLS -->
+        <div class="trending-bar" style="margin-top:0.75rem">
+          <div style="display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;justify-content:center;width:100%;margin-bottom:0.25rem">
+            <span class="trending-label" style="color:#38bdf8;font-weight:700">
+              🔥 Paling Sering Dicari:
+            </span>
+            <button type="button" class="trending-tag popular-badge" data-q="snorkeling pemula budget 250rb ada alat">
+              🤿 Snorkeling Pemula &le; 250rb
+            </button>
+            <button type="button" class="trending-tag popular-badge" data-q="pantai pasir putih di Bali dan Lombok">
+              🏖️ Pantai Pasir Putih Bali &amp; Lombok
+            </button>
+            <button type="button" class="trending-tag popular-badge" data-q="spot diving mahir sewa bcd dan tabung scuba">
+              🤿 Diving Mahir + Sewa BCD
+            </button>
+            <button type="button" class="trending-tag popular-badge" data-q="surfing pemula sewa papan selancar">
+              🏄 Surfing Pemula + Papan
+            </button>
+            <button type="button" class="trending-tag popular-badge" data-q="pulau eksotis hidden gem di Raja Ampat">
+              🏝️ Pulau Eksotis Raja Ampat
+            </button>
+            <button type="button" class="trending-tag popular-badge" data-q="wisata bahari keluarga murah di Jawa">
+              👨‍👩‍👧 Wisata Bahari Murah di Jawa
+            </button>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:0.4rem;flex-wrap:wrap;justify-content:center;width:100%">
+            <span class="trending-label" style="color:#a7f3d0;font-weight:700">
+              💡 Rekomendasi Cepat:
+            </span>
+            <button type="button" class="trending-tag" data-q="destinasi wisata gratis di Maluku">
+              Wisata Gratis Maluku
+            </button>
+            <button type="button" class="trending-tag" data-q="sunset dan kano di Labuan Bajo">
+              Sunset &amp; Kano Labuan Bajo
+            </button>
+            <button type="button" class="trending-tag" data-q="snorkeling terumbu karang di Bunaken">
+              Terumbu Karang Bunaken
+            </button>
+            <button type="button" class="trending-tag" data-q="pantai pasir timbul Ngurtafur">
+              Pasir Timbul Ngurtafur
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -421,6 +448,27 @@
         </div>
       </div>
 
+      <!-- PETA & RADAR TERDEKAT INTERAKTIF DENGAN LEGENDA & ARAH -->
+      <div id="home-nearby-map-wrapper" style="margin-top:1.25rem;margin-bottom:1.5rem">
+        <div id="home-nearby-map" style="width:100%;height:350px;border-radius:var(--radius-lg);border:1px solid var(--border-subtle);box-shadow:var(--shadow-sm);background:var(--bg-subtle)"></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;margin-top:0.6rem;padding:0.75rem 1rem;background:var(--card-bg);border:1px solid var(--border-subtle);border-radius:var(--radius-md);font-size:0.78rem">
+          <div style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap">
+            <span style="font-weight:700;color:var(--text-main)">🗺️ Legenda Peta:</span>
+            <div style="display:flex;align-items:center;gap:0.4rem">
+              <span style="display:inline-block;width:14px;height:14px;background:#ef4444;border-radius:50%;border:2px solid white;box-shadow:0 0 8px rgba(239,68,68,0.9)"></span>
+              <span style="color:var(--text-main);font-weight:600">Posisi Acuan / GPS Anda</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.4rem">
+              <span style="display:inline-block;width:14px;height:14px;background:#0284c7;border-radius:50%;border:2px solid white;box-shadow:0 0 8px rgba(2,132,199,0.8)"></span>
+              <span style="color:var(--text-main);font-weight:600">Wisata Maritim Terdekat (#1 s/d #6)</span>
+            </div>
+          </div>
+          <div style="color:var(--text-muted);font-size:0.74rem">
+            🧭 <em>Garis putus-putus &amp; panah kompas menunjukkan arah serta jarak langsung (Haversine Formula)</em>
+          </div>
+        </div>
+      </div>
+
       <div class="destinations-card-grid" id="nearby-destinations-grid">
         <!-- Populated by JS -->
       </div>
@@ -460,7 +508,7 @@
         </p>
 
         <form id="explorer-search-form" style="display:flex;gap:0.5rem;width:100%;max-width:760px;margin:0 auto;justify-content:center;flex-wrap:wrap" role="search">
-          <div class="search-field-main" style="flex:1;min-width:240px;text-align:left">
+          <div class="search-field-main" style="flex:1;min-width:240px;text-align:left;position:relative">
             <svg class="svg-icon"><use href="#icon-search"/></svg>
             <input 
               type="search" 
@@ -468,11 +516,23 @@
               placeholder="Ketik pencarian semantik (contoh: snorkeling pemula budget 250rb ada alat)..." 
               autocomplete="off"
             >
+            <!-- AUTOCOMPLETE / SEARCH SUGGESTIONS DROPDOWN EXPLORER -->
+            <div class="search-suggestions-dropdown" id="explorer-search-suggestions" style="display:none"></div>
           </div>
           <button type="submit" class="btn-search-exec">
             <span>Cari</span>
           </button>
         </form>
+
+        <!-- EXPLORER QUICK POPULAR KEYWORDS -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:0.45rem;flex-wrap:wrap;margin-top:0.75rem;font-size:0.78rem">
+          <span style="color:#38bdf8;font-weight:700">🔥 Sering dicari:</span>
+          <button type="button" class="trending-tag" data-q="snorkeling pemula budget 250rb" style="padding:0.25rem 0.65rem;font-size:0.75rem">Snorkeling Pemula</button>
+          <button type="button" class="trending-tag" data-q="diving sewa tabung bcd" style="padding:0.25rem 0.65rem;font-size:0.75rem">Diving &amp; Sewa Tabung</button>
+          <button type="button" class="trending-tag" data-q="surfing papan selancar" style="padding:0.25rem 0.65rem;font-size:0.75rem">Surfing</button>
+          <button type="button" class="trending-tag" data-q="pantai pasir putih Bali" style="padding:0.25rem 0.65rem;font-size:0.75rem">Pantai Pasir Putih</button>
+          <button type="button" class="trending-tag" data-q="pulau eksotis Raja Ampat" style="padding:0.25rem 0.65rem;font-size:0.75rem">Raja Ampat</button>
+        </div>
       </div>
     </div>
 

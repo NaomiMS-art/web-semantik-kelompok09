@@ -23133,3 +23133,2315 @@ data:kuliner_PPA-25_2 a maritim:KulinerSekitar ;
     maritim:jarakKm 1.7 ;
     maritim:latitude -0.5551 ;
     maritim:longitude 130.6433 .
+
+data:destinasi_SMT-61 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-61" ;
+    maritim:namaDestinasi "Pulau Enggano" ;
+    maritim:lokasiLengkap "Bengkulu Utara, Bengkulu" ;
+    maritim:beradaDiProvinsi data:provinsi_Bengkulu ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 15000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 315000 ;
+    maritim:kategoriHargaTotal data:Range_250k_500k ;
+    maritim:latitude -5.35 ;
+    maritim:longitude 102.2667 ;
+    maritim:hargaAktivitasMulai 300000 ;
+    maritim:kategoriHargaAktivitas data:Range_250k_500k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_nelayan ;
+    maritim:memilikiFasilitas data:fasilitas_dermaga_feri_perintis ;
+    maritim:memilikiFasilitas data:fasilitas_sewa_perahu ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-61_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-61_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-61_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-61_3 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-61_4 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-61_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-61_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-61_2 .
+data:offer_SMT-61_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-61_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-61_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-61_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 300000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-61_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_SMT-61_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar & Gulai Kepala Ikan Pulau" ;
+    maritim:kategoriKuliner "Seafood & Masakan Minang / Pesisir" ;
+    maritim:menuAndalan "Gulai Kepala Ikan Kakap, Ikan Bakar Sambal Balado, Cumi Goreng Tepung" ;
+    maritim:estimasiHarga "Rp35.000 – Rp85.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 0.9 ;
+    maritim:latitude -5.3421 ;
+    maritim:longitude 102.2685 .
+data:kuliner_SMT-61_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Nelayan Segar Pulau" ;
+    maritim:kategoriKuliner "Seafood Bakar Tradisional" ;
+    maritim:menuAndalan "Kepiting Saus Padang, Udang Bakar Mentega, Kelapa Muda" ;
+    maritim:estimasiHarga "Rp30.000 – Rp70.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.6 ;
+    maritim:latitude -5.3598 ;
+    maritim:longitude 102.2773 .
+data:kuliner_SMT-61_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Kopi & Snack Pesisir Pulau" ;
+    maritim:kategoriKuliner "Kafe & Camilan Pesisir" ;
+    maritim:menuAndalan "Kopi Tarik / Ulee Kareng, Pisang Goreng Keju, Kelapa Ijo" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 2.3 ;
+    maritim:latitude -5.3561 ;
+    maritim:longitude 102.2468 .
+
+data:destinasi_SMT-62 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-62" ;
+    maritim:namaDestinasi "Pantai Karang Nawing" ;
+    maritim:lokasiLengkap "Belitung Timur, Bangka Belitung" ;
+    maritim:beradaDiProvinsi data:provinsi_Bangka_Belitung ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -2.9167 ;
+    maritim:longitude 108.2833 ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Warung_kopi_pesisir ;
+    maritim:memilikiFasilitas data:fasilitas_gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-62_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-62_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-62_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-62_2 .
+data:offer_SMT-62_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_SMT-62_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar & Gulai Kepala Ikan Pantai" ;
+    maritim:kategoriKuliner "Seafood & Masakan Minang / Pesisir" ;
+    maritim:menuAndalan "Gulai Kepala Ikan Kakap, Ikan Bakar Sambal Balado, Cumi Goreng Tepung" ;
+    maritim:estimasiHarga "Rp35.000 – Rp85.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 0.9 ;
+    maritim:latitude -2.9115 ;
+    maritim:longitude 108.2895 .
+data:kuliner_SMT-62_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Nelayan Segar Pantai" ;
+    maritim:kategoriKuliner "Seafood Bakar Tradisional" ;
+    maritim:menuAndalan "Kepiting Saus Padang, Udang Bakar Mentega, Kelapa Muda" ;
+    maritim:estimasiHarga "Rp30.000 – Rp70.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.6 ;
+    maritim:latitude -2.9309 ;
+    maritim:longitude 108.2858 .
+data:kuliner_SMT-62_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Kopi & Snack Pesisir Pantai" ;
+    maritim:kategoriKuliner "Kafe & Camilan Pesisir" ;
+    maritim:menuAndalan "Kopi Tarik / Ulee Kareng, Pisang Goreng Keju, Kelapa Ijo" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 2.3 ;
+    maritim:latitude -2.9096 ;
+    maritim:longitude 108.2638 .
+
+data:destinasi_SMT-63 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-63" ;
+    maritim:namaDestinasi "Pulau Sikakap & Teluk Silabu" ;
+    maritim:lokasiLengkap "Kep. Mentawai, Sumbar" ;
+    maritim:beradaDiProvinsi data:provinsi_Sumbar ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Mahir ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 500000 ;
+    maritim:kategoriHargaTotal data:Range_250k_500k ;
+    maritim:latitude -2.7833 ;
+    maritim:longitude 100.2167 ;
+    maritim:hargaAktivitasMulai 500000 ;
+    maritim:kategoriHargaAktivitas data:Range_250k_500k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiAktivitas data:aktivitas_Memancing ;
+    maritim:memilikiFasilitas data:fasilitas_Surf_camp_lokal ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_jukung ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-63_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-63_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-63_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-63_3 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-63_4 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-63_5 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-63_6 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-63_7 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-63_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-63_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-63_2 .
+data:offer_SMT-63_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-63_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-63_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-63_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 500000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-63_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 500000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Mahir .
+data:offer_SMT-63_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SMT-63_6 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-63_7 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_SMT-63_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar & Gulai Kepala Ikan Pulau" ;
+    maritim:kategoriKuliner "Seafood & Masakan Minang / Pesisir" ;
+    maritim:menuAndalan "Gulai Kepala Ikan Kakap, Ikan Bakar Sambal Balado, Cumi Goreng Tepung" ;
+    maritim:estimasiHarga "Rp35.000 – Rp85.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 0.9 ;
+    maritim:latitude -2.7829 ;
+    maritim:longitude 100.2248 .
+data:kuliner_SMT-63_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Nelayan Segar Pulau" ;
+    maritim:kategoriKuliner "Seafood Bakar Tradisional" ;
+    maritim:menuAndalan "Kepiting Saus Padang, Udang Bakar Mentega, Kelapa Muda" ;
+    maritim:estimasiHarga "Rp30.000 – Rp70.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.6 ;
+    maritim:latitude -2.7961 ;
+    maritim:longitude 100.2101 .
+data:kuliner_SMT-63_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Kopi & Snack Pesisir Pulau" ;
+    maritim:kategoriKuliner "Kafe & Camilan Pesisir" ;
+    maritim:menuAndalan "Kopi Tarik / Ulee Kareng, Pisang Goreng Keju, Kelapa Ijo" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 2.3 ;
+    maritim:latitude -2.7659 ;
+    maritim:longitude 100.2054 .
+
+data:destinasi_SMT-64 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-64" ;
+    maritim:namaDestinasi "Pantai Teluk Hantu" ;
+    maritim:lokasiLengkap "Pesawaran, Lampung" ;
+    maritim:beradaDiProvinsi data:provinsi_Lampung ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 45000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -5.6167 ;
+    maritim:longitude 105.1833 ;
+    maritim:hargaAktivitasMulai 35000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Camping_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Area_camping ;
+    maritim:memilikiFasilitas data:fasilitas_sewa_alat_snorkel_lokal ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-64_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-64_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-64_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-64_3 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-64_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-64_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-64_2 .
+data:offer_SMT-64_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-64_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-64_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-64_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_SMT-64_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar & Gulai Kepala Ikan Pantai" ;
+    maritim:kategoriKuliner "Seafood & Masakan Minang / Pesisir" ;
+    maritim:menuAndalan "Gulai Kepala Ikan Kakap, Ikan Bakar Sambal Balado, Cumi Goreng Tepung" ;
+    maritim:estimasiHarga "Rp35.000 – Rp85.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 0.9 ;
+    maritim:latitude -5.6212 ;
+    maritim:longitude 105.1901 .
+data:kuliner_SMT-64_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Nelayan Segar Pantai" ;
+    maritim:kategoriKuliner "Seafood Bakar Tradisional" ;
+    maritim:menuAndalan "Kepiting Saus Padang, Udang Bakar Mentega, Kelapa Muda" ;
+    maritim:estimasiHarga "Rp30.000 – Rp70.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.6 ;
+    maritim:latitude -5.623 ;
+    maritim:longitude 105.1703 .
+data:kuliner_SMT-64_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Kopi & Snack Pesisir Pantai" ;
+    maritim:kategoriKuliner "Kafe & Camilan Pesisir" ;
+    maritim:menuAndalan "Kopi Tarik / Ulee Kareng, Pisang Goreng Keju, Kelapa Ijo" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 2.3 ;
+    maritim:latitude -5.596 ;
+    maritim:longitude 105.1848 .
+
+data:destinasi_SMT-65 a maritim:DestinasiWisata ;
+    maritim:kode "SMT-65" ;
+    maritim:namaDestinasi "Pulau Silabu Nyang-Nyang" ;
+    maritim:lokasiLengkap "Kep. Mentawai, Sumbar" ;
+    maritim:beradaDiProvinsi data:provinsi_Sumbar ;
+    maritim:beradaDiWilayah data:wilayah_Sumatra ;
+    maritim:cocokUntukTingkat data:Tingkat_Mahir ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 150000 ;
+    maritim:kategoriHargaTotal data:Range_100k_250k ;
+    maritim:latitude -1.8833 ;
+    maritim:longitude 99.2333 ;
+    maritim:hargaAktivitasMulai 150000 ;
+    maritim:kategoriHargaAktivitas data:Range_100k_250k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Surfing ;
+    maritim:memilikiFasilitas data:fasilitas_Surf_lodge ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_antar-jemput ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-65_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-65_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-65_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-65_3 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-65_4 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-65_5 ;
+    maritim:memilikiPenawaranAlat data:offer_SMT-65_6 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-65_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-65_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SMT-65_2 .
+data:offer_SMT-65_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-65_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-65_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-65_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 150000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SMT-65_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_papan-selancar ;
+    rdfs:label "Papan Selancar Fiber / Hardboard" ;
+    maritim:hargaSewa 150000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Mahir .
+data:offer_SMT-65_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_leash-surfing ;
+    rdfs:label "Leash (Tali Pengaman Kaki) & Wax" ;
+    maritim:hargaSewa 0 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SMT-65_6 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_rashguard-surfing ;
+    rdfs:label "Baju Renang / Rashguard" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_SMT-65_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar & Gulai Kepala Ikan Pulau" ;
+    maritim:kategoriKuliner "Seafood & Masakan Minang / Pesisir" ;
+    maritim:menuAndalan "Gulai Kepala Ikan Kakap, Ikan Bakar Sambal Balado, Cumi Goreng Tepung" ;
+    maritim:estimasiHarga "Rp35.000 – Rp85.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 0.9 ;
+    maritim:latitude -1.891 ;
+    maritim:longitude 99.2359 .
+data:kuliner_SMT-65_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Nelayan Segar Pulau" ;
+    maritim:kategoriKuliner "Seafood Bakar Tradisional" ;
+    maritim:menuAndalan "Kepiting Saus Padang, Udang Bakar Mentega, Kelapa Muda" ;
+    maritim:estimasiHarga "Rp30.000 – Rp70.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.6 ;
+    maritim:latitude -1.8805 ;
+    maritim:longitude 99.2191 .
+data:kuliner_SMT-65_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Kopi & Snack Pesisir Pulau" ;
+    maritim:kategoriKuliner "Kafe & Camilan Pesisir" ;
+    maritim:menuAndalan "Kopi Tarik / Ulee Kareng, Pisang Goreng Keju, Kelapa Ijo" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 2.3 ;
+    maritim:latitude -1.8677 ;
+    maritim:longitude 99.2469 .
+
+data:destinasi_JWA-55 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-55" ;
+    maritim:namaDestinasi "Pantai Teluk Asmara" ;
+    maritim:lokasiLengkap "Malang, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 15000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 75000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -8.4356 ;
+    maritim:longitude 112.6358 ;
+    maritim:hargaAktivitasMulai 60000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiAktivitas data:aktivitas_Camping_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_warung_makan ;
+    maritim:memilikiFasilitas data:fasilitas_toilet ;
+    maritim:memilikiFasilitas data:fasilitas_area_camping ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-55_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-55_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-55_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-55_2 .
+data:offer_JWA-55_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_JWA-55_0 a maritim:KulinerSekitar ;
+    rdfs:label "Pondok Makan Ikan Bakar Jimbaran Rasa Pantai" ;
+    maritim:kategoriKuliner "Seafood Bakar Arang" ;
+    maritim:menuAndalan "Ikan Bawal Bakar Bumbu Madu, Cumi Saus Tiram, Cah Kangkung Terasi" ;
+    maritim:estimasiHarga "Rp30.000 – Rp75.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.1 ;
+    maritim:latitude -8.445 ;
+    maritim:longitude 112.6391 .
+data:kuliner_JWA-55_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Seafood Pinggir Pantai Pantai" ;
+    maritim:kategoriKuliner "Warung Pesisir Tradisional" ;
+    maritim:menuAndalan "Udang Asam Manis, Ikan Kerapu Bakar, Es Kelapa Batok" ;
+    maritim:estimasiHarga "Rp25.000 – Rp60.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 1.8 ;
+    maritim:latitude -8.4325 ;
+    maritim:longitude 112.6197 .
+data:kuliner_JWA-55_2 a maritim:KulinerSekitar ;
+    rdfs:label "Sunset Cafe & Resto Pesisir Pantai" ;
+    maritim:kategoriKuliner "Kafe Pantai & Kopi" ;
+    maritim:menuAndalan "Mendoan Hangat Sambal Kecap, Kopi Tubruk, Es Kelapa Muda Jeruk" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 2.5 ;
+    maritim:latitude -8.4186 ;
+    maritim:longitude 112.6507 .
+
+data:destinasi_JWA-56 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-56" ;
+    maritim:namaDestinasi "Pantai Nglambor" ;
+    maritim:lokasiLengkap "Gunungkidul, DI Yogyakarta" ;
+    maritim:beradaDiProvinsi data:provinsi_DI_Yogyakarta ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 60000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -8.1833 ;
+    maritim:longitude 110.6833 ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Penyewaan_snorkel ;
+    maritim:memilikiFasilitas data:fasilitas_pemandu_foto_bawah_air ;
+    maritim:memilikiFasilitas data:fasilitas_mushola ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-56_0 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-56_1 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-56_2 ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-56_3 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-56_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-56_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-56_2 .
+data:offer_JWA-56_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_JWA-56_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_JWA-56_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_JWA-56_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_JWA-56_0 a maritim:KulinerSekitar ;
+    rdfs:label "Pondok Makan Ikan Bakar Jimbaran Rasa Pantai" ;
+    maritim:kategoriKuliner "Seafood Bakar Arang" ;
+    maritim:menuAndalan "Ikan Bawal Bakar Bumbu Madu, Cumi Saus Tiram, Cah Kangkung Terasi" ;
+    maritim:estimasiHarga "Rp30.000 – Rp75.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.1 ;
+    maritim:latitude -8.1927 ;
+    maritim:longitude 110.6802 .
+data:kuliner_JWA-56_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Seafood Pinggir Pantai Pantai" ;
+    maritim:kategoriKuliner "Warung Pesisir Tradisional" ;
+    maritim:menuAndalan "Udang Asam Manis, Ikan Kerapu Bakar, Es Kelapa Batok" ;
+    maritim:estimasiHarga "Rp25.000 – Rp60.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 1.8 ;
+    maritim:latitude -8.1712 ;
+    maritim:longitude 110.6723 .
+data:kuliner_JWA-56_2 a maritim:KulinerSekitar ;
+    rdfs:label "Sunset Cafe & Resto Pesisir Pantai" ;
+    maritim:kategoriKuliner "Kafe Pantai & Kopi" ;
+    maritim:menuAndalan "Mendoan Hangat Sambal Kecap, Kopi Tubruk, Es Kelapa Muda Jeruk" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 2.5 ;
+    maritim:latitude -8.1786 ;
+    maritim:longitude 110.7056 .
+
+data:destinasi_JWA-57 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-57" ;
+    maritim:namaDestinasi "Pantai Payangan & Teluk Love" ;
+    maritim:lokasiLengkap "Jember, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 7500 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 7500 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -8.43 ;
+    maritim:longitude 113.5833 ;
+    maritim:memilikiAktivitas data:aktivitas_Trekking___Panjat ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Warung_seafood ;
+    maritim:memilikiFasilitas data:fasilitas_tangga_setapak_bukit ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-57_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-57_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-57_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-57_2 .
+data:offer_JWA-57_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_JWA-57_0 a maritim:KulinerSekitar ;
+    rdfs:label "Pondok Makan Ikan Bakar Jimbaran Rasa Pantai" ;
+    maritim:kategoriKuliner "Seafood Bakar Arang" ;
+    maritim:menuAndalan "Ikan Bawal Bakar Bumbu Madu, Cumi Saus Tiram, Cah Kangkung Terasi" ;
+    maritim:estimasiHarga "Rp30.000 – Rp75.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.1 ;
+    maritim:latitude -8.4357 ;
+    maritim:longitude 113.5751 .
+data:kuliner_JWA-57_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Seafood Pinggir Pantai Pantai" ;
+    maritim:kategoriKuliner "Warung Pesisir Tradisional" ;
+    maritim:menuAndalan "Udang Asam Manis, Ikan Kerapu Bakar, Es Kelapa Batok" ;
+    maritim:estimasiHarga "Rp25.000 – Rp60.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 1.8 ;
+    maritim:latitude -8.4138 ;
+    maritim:longitude 113.5819 .
+data:kuliner_JWA-57_2 a maritim:KulinerSekitar ;
+    rdfs:label "Sunset Cafe & Resto Pesisir Pantai" ;
+    maritim:kategoriKuliner "Kafe Pantai & Kopi" ;
+    maritim:menuAndalan "Mendoan Hangat Sambal Kecap, Kopi Tubruk, Es Kelapa Muda Jeruk" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 2.5 ;
+    maritim:latitude -8.4395 ;
+    maritim:longitude 113.6039 .
+
+data:destinasi_JWA-58 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-58" ;
+    maritim:namaDestinasi "Pantai Karang Tawulan" ;
+    maritim:lokasiLengkap "Tasikmalaya, Jawa Barat" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Barat ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 10000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -7.75 ;
+    maritim:longitude 108.2833 ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo_gardu_pandang ;
+    maritim:memilikiFasilitas data:fasilitas_warung_makan ;
+    maritim:memilikiFasilitas data:fasilitas_toilet ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-58_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-58_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-58_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-58_2 .
+data:offer_JWA-58_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_JWA-58_0 a maritim:KulinerSekitar ;
+    rdfs:label "Pondok Makan Ikan Bakar Jimbaran Rasa Pantai" ;
+    maritim:kategoriKuliner "Seafood Bakar Arang" ;
+    maritim:menuAndalan "Ikan Bawal Bakar Bumbu Madu, Cumi Saus Tiram, Cah Kangkung Terasi" ;
+    maritim:estimasiHarga "Rp30.000 – Rp75.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.1 ;
+    maritim:latitude -7.7497 ;
+    maritim:longitude 108.2733 .
+data:kuliner_JWA-58_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Seafood Pinggir Pantai Pantai" ;
+    maritim:kategoriKuliner "Warung Pesisir Tradisional" ;
+    maritim:menuAndalan "Udang Asam Manis, Ikan Kerapu Bakar, Es Kelapa Batok" ;
+    maritim:estimasiHarga "Rp25.000 – Rp60.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 1.8 ;
+    maritim:latitude -7.7362 ;
+    maritim:longitude 108.292 .
+data:kuliner_JWA-58_2 a maritim:KulinerSekitar ;
+    rdfs:label "Sunset Cafe & Resto Pesisir Pantai" ;
+    maritim:kategoriKuliner "Kafe Pantai & Kopi" ;
+    maritim:menuAndalan "Mendoan Hangat Sambal Kecap, Kopi Tubruk, Es Kelapa Muda Jeruk" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 2.5 ;
+    maritim:latitude -7.7699 ;
+    maritim:longitude 108.294 .
+
+data:destinasi_JWA-59 a maritim:DestinasiWisata ;
+    maritim:kode "JWA-59" ;
+    maritim:namaDestinasi "Pantai Pangi" ;
+    maritim:lokasiLengkap "Blitar, Jawa Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Jawa_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Jawa ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 25000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -8.3333 ;
+    maritim:longitude 112.0833 ;
+    maritim:hargaAktivitasMulai 15000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Camping_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Warung ;
+    maritim:memilikiFasilitas data:fasilitas_toilet ;
+    maritim:memilikiFasilitas data:fasilitas_sewa_pelampung ;
+    maritim:memilikiPenawaranAlat data:offer_JWA-59_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-59_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-59_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_JWA-59_2 .
+data:offer_JWA-59_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_JWA-59_0 a maritim:KulinerSekitar ;
+    rdfs:label "Pondok Makan Ikan Bakar Jimbaran Rasa Pantai" ;
+    maritim:kategoriKuliner "Seafood Bakar Arang" ;
+    maritim:menuAndalan "Ikan Bawal Bakar Bumbu Madu, Cumi Saus Tiram, Cah Kangkung Terasi" ;
+    maritim:estimasiHarga "Rp30.000 – Rp75.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.1 ;
+    maritim:latitude -8.3271 ;
+    maritim:longitude 112.0755 .
+data:kuliner_JWA-59_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Seafood Pinggir Pantai Pantai" ;
+    maritim:kategoriKuliner "Warung Pesisir Tradisional" ;
+    maritim:menuAndalan "Udang Asam Manis, Ikan Kerapu Bakar, Es Kelapa Batok" ;
+    maritim:estimasiHarga "Rp25.000 – Rp60.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 1.8 ;
+    maritim:latitude -8.3275 ;
+    maritim:longitude 112.0986 .
+data:kuliner_JWA-59_2 a maritim:KulinerSekitar ;
+    rdfs:label "Sunset Cafe & Resto Pesisir Pantai" ;
+    maritim:kategoriKuliner "Kafe Pantai & Kopi" ;
+    maritim:menuAndalan "Mendoan Hangat Sambal Kecap, Kopi Tubruk, Es Kelapa Muda Jeruk" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 2.5 ;
+    maritim:latitude -8.3555 ;
+    maritim:longitude 112.0797 .
+
+data:destinasi_KLM-31 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-31" ;
+    maritim:namaDestinasi "Pulau Lemukutan" ;
+    maritim:lokasiLengkap "Bengkayang, Kalimantan Barat" ;
+    maritim:beradaDiProvinsi data:provinsi_Kalimantan_Barat ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 15000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 50000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude 0.75 ;
+    maritim:longitude 108.7167 ;
+    maritim:hargaAktivitasMulai 35000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Kano___Kayak ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_nelayan ;
+    maritim:memilikiFasilitas data:fasilitas_persewaan_alat_snorkel ;
+    maritim:memilikiFasilitas data:fasilitas_dermaga ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-31_0 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-31_1 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-31_2 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-31_3 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-31_4 ;
+    maritim:memilikiKulinerSekitar data:kuliner_KLM-31_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_KLM-31_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_KLM-31_2 .
+data:offer_KLM-31_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-31_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-31_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-31_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-31_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_kano-kayak ;
+    rdfs:label "Perahu Kano / Kayak & Dayung" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_KLM-31_0 a maritim:KulinerSekitar ;
+    rdfs:label "Rumah Makan Ikan Bakar Patin & Baung Pulau" ;
+    maritim:kategoriKuliner "Seafood & Ikan Sungai/Laut" ;
+    maritim:menuAndalan "Patin Bakar Bambu, Ikan Bakar Rica, Sambal Raja" ;
+    maritim:estimasiHarga "Rp30.000 – Rp75.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 0.3 ;
+    maritim:latitude 0.7526 ;
+    maritim:longitude 108.7173 .
+data:kuliner_KLM-31_1 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Seafood Kepiting Asap Pulau" ;
+    maritim:kategoriKuliner "Kuliner Seafood Pesisir" ;
+    maritim:menuAndalan "Kepiting Asap Spesial, Cumi Bakar Bumbu Pedas, Es Jeruk Borneo" ;
+    maritim:estimasiHarga "Rp45.000 – Rp110.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1 ;
+    maritim:latitude 0.7439 ;
+    maritim:longitude 108.7233 .
+data:kuliner_KLM-31_2 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Kopi & Pisang Gapit Pesisir Pulau" ;
+    maritim:kategoriKuliner "Camilan Tradisional" ;
+    maritim:menuAndalan "Pisang Gapit Kuah Kinca, Kopi Susu Tradisional, Kelapa Muda" ;
+    maritim:estimasiHarga "Rp15.000 – Rp30.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 1.7 ;
+    maritim:latitude 0.7455 ;
+    maritim:longitude 108.7021 .
+
+data:destinasi_KLM-32 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-32" ;
+    maritim:namaDestinasi "Pantai Biduk-Biduk & Teluk Sulaiman" ;
+    maritim:lokasiLengkap "Berau, Kalimantan Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Kalimantan_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 210000 ;
+    maritim:kategoriHargaTotal data:Range_100k_250k ;
+    maritim:latitude 1.2167 ;
+    maritim:longitude 118.7333 ;
+    maritim:hargaAktivitasMulai 200000 ;
+    maritim:kategoriHargaAktivitas data:Range_100k_250k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_lokal ;
+    maritim:memilikiFasilitas data:fasilitas_warung_makan_kelapa ;
+    maritim:memilikiFasilitas data:fasilitas_perahu ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-32_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_KLM-32_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_KLM-32_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_KLM-32_2 .
+data:offer_KLM-32_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_KLM-32_0 a maritim:KulinerSekitar ;
+    rdfs:label "Rumah Makan Ikan Bakar Patin & Baung Pantai" ;
+    maritim:kategoriKuliner "Seafood & Ikan Sungai/Laut" ;
+    maritim:menuAndalan "Patin Bakar Bambu, Ikan Bakar Rica, Sambal Raja" ;
+    maritim:estimasiHarga "Rp30.000 – Rp75.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 0.3 ;
+    maritim:latitude 1.2184 ;
+    maritim:longitude 118.7354 .
+data:kuliner_KLM-32_1 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Seafood Kepiting Asap Pantai" ;
+    maritim:kategoriKuliner "Kuliner Seafood Pesisir" ;
+    maritim:menuAndalan "Kepiting Asap Spesial, Cumi Bakar Bumbu Pedas, Es Jeruk Borneo" ;
+    maritim:estimasiHarga "Rp45.000 – Rp110.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1 ;
+    maritim:latitude 1.2078 ;
+    maritim:longitude 118.7349 .
+data:kuliner_KLM-32_2 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Kopi & Pisang Gapit Pesisir Pantai" ;
+    maritim:kategoriKuliner "Camilan Tradisional" ;
+    maritim:menuAndalan "Pisang Gapit Kuah Kinca, Kopi Susu Tradisional, Kelapa Muda" ;
+    maritim:estimasiHarga "Rp15.000 – Rp30.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 1.7 ;
+    maritim:latitude 1.2219 ;
+    maritim:longitude 118.7189 .
+
+data:destinasi_KLM-33 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-33" ;
+    maritim:namaDestinasi "Labuan Cermin" ;
+    maritim:lokasiLengkap "Berau, Kalimantan Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Kalimantan_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 20000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 50000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude 1.2667 ;
+    maritim:longitude 118.6833 ;
+    maritim:hargaAktivitasMulai 30000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_penyeberangan ;
+    maritim:memilikiFasilitas data:fasilitas_persewaan_pelampung ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-33_0 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-33_1 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-33_2 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-33_3 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-33_4 ;
+    maritim:memilikiKulinerSekitar data:kuliner_KLM-33_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_KLM-33_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_KLM-33_2 .
+data:offer_KLM-33_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-33_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-33_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-33_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 30000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-33_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_KLM-33_0 a maritim:KulinerSekitar ;
+    rdfs:label "Rumah Makan Ikan Bakar Patin & Baung Labuan" ;
+    maritim:kategoriKuliner "Seafood & Ikan Sungai/Laut" ;
+    maritim:menuAndalan "Patin Bakar Bambu, Ikan Bakar Rica, Sambal Raja" ;
+    maritim:estimasiHarga "Rp30.000 – Rp75.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 0.3 ;
+    maritim:latitude 1.2668 ;
+    maritim:longitude 118.686 .
+data:kuliner_KLM-33_1 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Seafood Kepiting Asap Labuan" ;
+    maritim:kategoriKuliner "Kuliner Seafood Pesisir" ;
+    maritim:menuAndalan "Kepiting Asap Spesial, Cumi Bakar Bumbu Pedas, Es Jeruk Borneo" ;
+    maritim:estimasiHarga "Rp45.000 – Rp110.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1 ;
+    maritim:latitude 1.2587 ;
+    maritim:longitude 118.6792 .
+data:kuliner_KLM-33_2 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Kopi & Pisang Gapit Pesisir Labuan" ;
+    maritim:kategoriKuliner "Camilan Tradisional" ;
+    maritim:menuAndalan "Pisang Gapit Kuah Kinca, Kopi Susu Tradisional, Kelapa Muda" ;
+    maritim:estimasiHarga "Rp15.000 – Rp30.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 1.7 ;
+    maritim:latitude 1.2795 ;
+    maritim:longitude 118.675 .
+
+data:destinasi_KLM-34 a maritim:DestinasiWisata ;
+    maritim:kode "KLM-34" ;
+    maritim:namaDestinasi "Pulau Bilang-Bilangan" ;
+    maritim:lokasiLengkap "Berau, Kalimantan Timur" ;
+    maritim:beradaDiProvinsi data:provinsi_Kalimantan_Timur ;
+    maritim:beradaDiWilayah data:wilayah_Kalimantan ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 25000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 1025000 ;
+    maritim:kategoriHargaTotal data:Range_Above1M ;
+    maritim:latitude 1.75 ;
+    maritim:longitude 118.5833 ;
+    maritim:hargaAktivitasMulai 1000000 ;
+    maritim:kategoriHargaAktivitas data:Range_500k_1M ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Pos_ranger_BKSDA ;
+    maritim:memilikiFasilitas data:fasilitas_dermaga_kayu ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-34_0 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-34_1 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-34_2 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-34_3 ;
+    maritim:memilikiPenawaranAlat data:offer_KLM-34_4 ;
+    maritim:memilikiKulinerSekitar data:kuliner_KLM-34_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_KLM-34_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_KLM-34_2 .
+data:offer_KLM-34_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-34_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-34_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-34_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 1000000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_KLM-34_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_KLM-34_0 a maritim:KulinerSekitar ;
+    rdfs:label "Rumah Makan Ikan Bakar Patin & Baung Pulau" ;
+    maritim:kategoriKuliner "Seafood & Ikan Sungai/Laut" ;
+    maritim:menuAndalan "Patin Bakar Bambu, Ikan Bakar Rica, Sambal Raja" ;
+    maritim:estimasiHarga "Rp30.000 – Rp75.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 0.3 ;
+    maritim:latitude 1.7485 ;
+    maritim:longitude 118.5855 .
+data:kuliner_KLM-34_1 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Seafood Kepiting Asap Pulau" ;
+    maritim:kategoriKuliner "Kuliner Seafood Pesisir" ;
+    maritim:menuAndalan "Kepiting Asap Spesial, Cumi Bakar Bumbu Pedas, Es Jeruk Borneo" ;
+    maritim:estimasiHarga "Rp45.000 – Rp110.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1 ;
+    maritim:latitude 1.7461 ;
+    maritim:longitude 118.5752 .
+data:kuliner_KLM-34_2 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Kopi & Pisang Gapit Pesisir Pulau" ;
+    maritim:kategoriKuliner "Camilan Tradisional" ;
+    maritim:menuAndalan "Pisang Gapit Kuah Kinca, Kopi Susu Tradisional, Kelapa Muda" ;
+    maritim:estimasiHarga "Rp15.000 – Rp30.000 / orang" ;
+    maritim:rating 4.6 ;
+    maritim:jarakKm 1.7 ;
+    maritim:latitude 1.7653 ;
+    maritim:longitude 118.5844 .
+
+data:destinasi_BNT-73 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-73" ;
+    maritim:namaDestinasi "Pantai Atuh & Diamond Cliff" ;
+    maritim:lokasiLengkap "Nusa Penida, Bali" ;
+    maritim:beradaDiProvinsi data:provinsi_Bali ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 10000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -8.777 ;
+    maritim:longitude 115.6179 ;
+    maritim:memilikiAktivitas data:aktivitas_Trekking___Panjat ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Warung_lokal ;
+    maritim:memilikiFasilitas data:fasilitas_tangga_semen_terjal ;
+    maritim:memilikiFasilitas data:fasilitas_toilet ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-73_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-73_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-73_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-73_2 .
+data:offer_BNT-73_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_BNT-73_0 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Ikan Bakar Sambal Matah Pantai" ;
+    maritim:kategoriKuliner "Seafood Khas Bali" ;
+    maritim:menuAndalan "Ikan Kakap Bakar Sambal Matah, Pelecing Kangkung, Udang Bakar Jimbaran" ;
+    maritim:estimasiHarga "Rp40.000 – Rp90.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.5 ;
+    maritim:latitude -8.7768 ;
+    maritim:longitude 115.6225 .
+data:kuliner_BNT-73_1 a maritim:KulinerSekitar ;
+    rdfs:label "Resto Pesisir & Sunset Lounge Pantai" ;
+    maritim:kategoriKuliner "Seafood & Grill Modern" ;
+    maritim:menuAndalan "Grilled Seafood Platter, Calamari Crispy, Fresh Coconut" ;
+    maritim:estimasiHarga "Rp50.000 – Rp120.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.2 ;
+    maritim:latitude -8.7866 ;
+    maritim:longitude 115.6129 .
+data:kuliner_BNT-73_2 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Lokal Ayam Betutu & Sup Ikan Pantai" ;
+    maritim:kategoriKuliner "Masakan Khas Daerah" ;
+    maritim:menuAndalan "Sup Kepala Ikan Segar, Nasi Campur Bali, Es Jeruk Nipis" ;
+    maritim:estimasiHarga "Rp25.000 – Rp55.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.9 ;
+    maritim:latitude -8.7626 ;
+    maritim:longitude 115.6085 .
+
+data:destinasi_BNT-74 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-74" ;
+    maritim:namaDestinasi "Pantai Gunung Payung" ;
+    maritim:lokasiLengkap "Badung, Bali" ;
+    maritim:beradaDiProvinsi data:provinsi_Bali ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 8000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 8000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -8.8417 ;
+    maritim:longitude 115.2 ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiFasilitas data:fasilitas_Amfiteater ;
+    maritim:memilikiFasilitas data:fasilitas_shuttle_mobil_golf ;
+    maritim:memilikiFasilitas data:fasilitas_warung ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-74_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-74_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-74_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-74_2 .
+data:offer_BNT-74_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_BNT-74_0 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Ikan Bakar Sambal Matah Pantai" ;
+    maritim:kategoriKuliner "Seafood Khas Bali" ;
+    maritim:menuAndalan "Ikan Kakap Bakar Sambal Matah, Pelecing Kangkung, Udang Bakar Jimbaran" ;
+    maritim:estimasiHarga "Rp40.000 – Rp90.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.5 ;
+    maritim:latitude -8.8442 ;
+    maritim:longitude 115.2038 .
+data:kuliner_BNT-74_1 a maritim:KulinerSekitar ;
+    rdfs:label "Resto Pesisir & Sunset Lounge Pantai" ;
+    maritim:kategoriKuliner "Seafood & Grill Modern" ;
+    maritim:menuAndalan "Grilled Seafood Platter, Calamari Crispy, Fresh Coconut" ;
+    maritim:estimasiHarga "Rp50.000 – Rp120.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.2 ;
+    maritim:latitude -8.8464 ;
+    maritim:longitude 115.1902 .
+data:kuliner_BNT-74_2 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Lokal Ayam Betutu & Sup Ikan Pantai" ;
+    maritim:kategoriKuliner "Masakan Khas Daerah" ;
+    maritim:menuAndalan "Sup Kepala Ikan Segar, Nasi Campur Bali, Es Jeruk Nipis" ;
+    maritim:estimasiHarga "Rp25.000 – Rp55.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.9 ;
+    maritim:latitude -8.8246 ;
+    maritim:longitude 115.2012 .
+
+data:destinasi_BNT-75 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-75" ;
+    maritim:namaDestinasi "Gili Layar & Gili Rengit" ;
+    maritim:lokasiLengkap "Lombok Barat, NTB" ;
+    maritim:beradaDiProvinsi data:provinsi_NTB ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 0 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 400000 ;
+    maritim:kategoriHargaTotal data:Range_250k_500k ;
+    maritim:latitude -8.7333 ;
+    maritim:longitude 115.9 ;
+    maritim:hargaAktivitasMulai 400000 ;
+    maritim:kategoriHargaAktivitas data:Range_250k_500k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Bungalow_bambu ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_charter_nelayan ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-75_0 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-75_1 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-75_2 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-75_3 ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-75_4 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-75_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-75_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-75_2 .
+data:offer_BNT-75_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-75_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-75_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-75_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 400000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_BNT-75_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_BNT-75_0 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Ikan Bakar Sambal Matah Gili" ;
+    maritim:kategoriKuliner "Seafood Khas Bali" ;
+    maritim:menuAndalan "Ikan Kakap Bakar Sambal Matah, Pelecing Kangkung, Udang Bakar Jimbaran" ;
+    maritim:estimasiHarga "Rp40.000 – Rp90.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.5 ;
+    maritim:latitude -8.7376 ;
+    maritim:longitude 115.9015 .
+data:kuliner_BNT-75_1 a maritim:KulinerSekitar ;
+    rdfs:label "Resto Pesisir & Sunset Lounge Gili" ;
+    maritim:kategoriKuliner "Seafood & Grill Modern" ;
+    maritim:menuAndalan "Grilled Seafood Platter, Calamari Crispy, Fresh Coconut" ;
+    maritim:estimasiHarga "Rp50.000 – Rp120.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.2 ;
+    maritim:latitude -8.7312 ;
+    maritim:longitude 115.8893 .
+data:kuliner_BNT-75_2 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Lokal Ayam Betutu & Sup Ikan Gili" ;
+    maritim:kategoriKuliner "Masakan Khas Daerah" ;
+    maritim:menuAndalan "Sup Kepala Ikan Segar, Nasi Campur Bali, Es Jeruk Nipis" ;
+    maritim:estimasiHarga "Rp25.000 – Rp55.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.9 ;
+    maritim:latitude -8.7204 ;
+    maritim:longitude 115.9114 .
+
+data:destinasi_BNT-76 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-76" ;
+    maritim:namaDestinasi "Pantai Mbawana (Batu Cincin)" ;
+    maritim:lokasiLengkap "Sumba Barat Daya, NTT" ;
+    maritim:beradaDiProvinsi data:provinsi_NTT ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 10000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -9.5833 ;
+    maritim:longitude 119.05 ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Jalan_setapak_bukit ;
+    maritim:memilikiFasilitas data:fasilitas_gazebo_bambu ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-76_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-76_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-76_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-76_2 .
+data:offer_BNT-76_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_BNT-76_0 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Ikan Bakar Sambal Matah Pantai" ;
+    maritim:kategoriKuliner "Seafood Khas Bali" ;
+    maritim:menuAndalan "Ikan Kakap Bakar Sambal Matah, Pelecing Kangkung, Udang Bakar Jimbaran" ;
+    maritim:estimasiHarga "Rp40.000 – Rp90.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.5 ;
+    maritim:latitude -9.5876 ;
+    maritim:longitude 119.0486 .
+data:kuliner_BNT-76_1 a maritim:KulinerSekitar ;
+    rdfs:label "Resto Pesisir & Sunset Lounge Pantai" ;
+    maritim:kategoriKuliner "Seafood & Grill Modern" ;
+    maritim:menuAndalan "Grilled Seafood Platter, Calamari Crispy, Fresh Coconut" ;
+    maritim:estimasiHarga "Rp50.000 – Rp120.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.2 ;
+    maritim:latitude -9.5753 ;
+    maritim:longitude 119.0427 .
+data:kuliner_BNT-76_2 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Lokal Ayam Betutu & Sup Ikan Pantai" ;
+    maritim:kategoriKuliner "Masakan Khas Daerah" ;
+    maritim:menuAndalan "Sup Kepala Ikan Segar, Nasi Campur Bali, Es Jeruk Nipis" ;
+    maritim:estimasiHarga "Rp25.000 – Rp55.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.9 ;
+    maritim:latitude -9.5797 ;
+    maritim:longitude 119.067 .
+
+data:destinasi_BNT-77 a maritim:DestinasiWisata ;
+    maritim:kode "BNT-77" ;
+    maritim:namaDestinasi "Teluk Gurita & Pantai Atapupu" ;
+    maritim:lokasiLengkap "Belu, NTT" ;
+    maritim:beradaDiProvinsi data:provinsi_NTT ;
+    maritim:beradaDiWilayah data:wilayah_Bali___Nusa_Tenggara ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 5000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 5000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -9 ;
+    maritim:longitude 124.8833 ;
+    maritim:memilikiAktivitas data:aktivitas_Wisata_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Lopo-lopo_santai ;
+    maritim:memilikiFasilitas data:fasilitas_warung_ikan_bakar ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_BNT-77_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-77_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-77_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_BNT-77_2 .
+data:offer_BNT-77_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_BNT-77_0 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Ikan Bakar Sambal Matah Teluk" ;
+    maritim:kategoriKuliner "Seafood Khas Bali" ;
+    maritim:menuAndalan "Ikan Kakap Bakar Sambal Matah, Pelecing Kangkung, Udang Bakar Jimbaran" ;
+    maritim:estimasiHarga "Rp40.000 – Rp90.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.5 ;
+    maritim:latitude -9.0026 ;
+    maritim:longitude 124.8796 .
+data:kuliner_BNT-77_1 a maritim:KulinerSekitar ;
+    rdfs:label "Resto Pesisir & Sunset Lounge Teluk" ;
+    maritim:kategoriKuliner "Seafood & Grill Modern" ;
+    maritim:menuAndalan "Grilled Seafood Platter, Calamari Crispy, Fresh Coconut" ;
+    maritim:estimasiHarga "Rp50.000 – Rp120.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.2 ;
+    maritim:latitude -8.9892 ;
+    maritim:longitude 124.8823 .
+data:kuliner_BNT-77_2 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Lokal Ayam Betutu & Sup Ikan Teluk" ;
+    maritim:kategoriKuliner "Masakan Khas Daerah" ;
+    maritim:menuAndalan "Sup Kepala Ikan Segar, Nasi Campur Bali, Es Jeruk Nipis" ;
+    maritim:estimasiHarga "Rp25.000 – Rp55.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.9 ;
+    maritim:latitude -9.0072 ;
+    maritim:longitude 124.899 .
+
+data:destinasi_SLW-41 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-41" ;
+    maritim:namaDestinasi "Pulau Sombori (Tebing Kahyangan)" ;
+    maritim:lokasiLengkap "Morowali, Sulawesi Tengah" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Tengah ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 30000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 430000 ;
+    maritim:kategoriHargaTotal data:Range_250k_500k ;
+    maritim:latitude -3.25 ;
+    maritim:longitude 122.3833 ;
+    maritim:hargaAktivitasMulai 400000 ;
+    maritim:kategoriHargaAktivitas data:Range_250k_500k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_terapung_suku_Bajo ;
+    maritim:memilikiFasilitas data:fasilitas_perahu_katinting ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-41_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-41_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-41_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-41_3 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SLW-41_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SLW-41_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SLW-41_2 .
+data:offer_SLW-41_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-41_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-41_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-41_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 400000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_SLW-41_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar Rica & Colo-Colo Pulau" ;
+    maritim:kategoriKuliner "Seafood Khas Sulawesi" ;
+    maritim:menuAndalan "Ikan Baronang Bakar Rica, Sambal Dabu-Dabu Lilin, Sayur Kangkung Bunga Pepaya" ;
+    maritim:estimasiHarga "Rp35.000 – Rp80.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.9 ;
+    maritim:latitude -3.2421 ;
+    maritim:longitude 122.3851 .
+data:kuliner_SLW-41_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Makan Coto & Konro Pesisir Pulau" ;
+    maritim:kategoriKuliner "Masakan Tradisional Bugis/Makassar" ;
+    maritim:menuAndalan "Coto Makassar Daging Segar, Pallubasa Telur, Es Pisang Ijo" ;
+    maritim:estimasiHarga "Rp25.000 – Rp50.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.6 ;
+    maritim:latitude -3.2598 ;
+    maritim:longitude 122.3939 .
+data:kuliner_SLW-41_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Kopi & Kue Tradisional Pulau" ;
+    maritim:kategoriKuliner "Kafe Santai Pesisir" ;
+    maritim:menuAndalan "Kopi Toraja / Kopi Gie, Panada Segar, Kelapa Muda" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 2.3 ;
+    maritim:latitude -3.2561 ;
+    maritim:longitude 122.3635 .
+
+data:destinasi_SLW-42 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-42" ;
+    maritim:namaDestinasi "Pulau Labengki (Blue Lagoon)" ;
+    maritim:lokasiLengkap "Konawe Utara, Sulawesi Tenggara" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Tenggara ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 30000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 80000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -3.45 ;
+    maritim:longitude 122.45 ;
+    maritim:hargaAktivitasMulai 50000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Trekking___Panjat ;
+    maritim:memilikiFasilitas data:fasilitas_Labengki_resort ;
+    maritim:memilikiFasilitas data:fasilitas_homestay_desa ;
+    maritim:memilikiFasilitas data:fasilitas_sewa_snorkel ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-42_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-42_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-42_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-42_3 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-42_4 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SLW-42_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SLW-42_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SLW-42_2 .
+data:offer_SLW-42_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-42_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-42_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-42_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-42_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_SLW-42_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar Rica & Colo-Colo Pulau" ;
+    maritim:kategoriKuliner "Seafood Khas Sulawesi" ;
+    maritim:menuAndalan "Ikan Baronang Bakar Rica, Sambal Dabu-Dabu Lilin, Sayur Kangkung Bunga Pepaya" ;
+    maritim:estimasiHarga "Rp35.000 – Rp80.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.9 ;
+    maritim:latitude -3.4448 ;
+    maritim:longitude 122.4562 .
+data:kuliner_SLW-42_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Makan Coto & Konro Pesisir Pulau" ;
+    maritim:kategoriKuliner "Masakan Tradisional Bugis/Makassar" ;
+    maritim:menuAndalan "Coto Makassar Daging Segar, Pallubasa Telur, Es Pisang Ijo" ;
+    maritim:estimasiHarga "Rp25.000 – Rp50.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.6 ;
+    maritim:latitude -3.4642 ;
+    maritim:longitude 122.4525 .
+data:kuliner_SLW-42_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Kopi & Kue Tradisional Pulau" ;
+    maritim:kategoriKuliner "Kafe Santai Pesisir" ;
+    maritim:menuAndalan "Kopi Toraja / Kopi Gie, Panada Segar, Kelapa Muda" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 2.3 ;
+    maritim:latitude -3.4429 ;
+    maritim:longitude 122.4305 .
+
+data:destinasi_SLW-43 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-43" ;
+    maritim:namaDestinasi "Pantai Biluhu Timur" ;
+    maritim:lokasiLengkap "Gorontalo, Gorontalo" ;
+    maritim:beradaDiProvinsi data:provinsi_Gorontalo ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 45000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude 0.45 ;
+    maritim:longitude 123.0167 ;
+    maritim:hargaAktivitasMulai 600000 ;
+    maritim:kategoriHargaAktivitas data:Range_500k_1M ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Diving ;
+    maritim:memilikiFasilitas data:fasilitas_Diving_resort_lokal ;
+    maritim:memilikiFasilitas data:fasilitas_gazebo_tepi_laut ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-43_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-43_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-43_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-43_3 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-43_4 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-43_5 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-43_6 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-43_7 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-43_8 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SLW-43_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SLW-43_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SLW-43_2 .
+data:offer_SLW-43_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-43_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-43_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-43_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 35000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-43_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-fins-diving ;
+    rdfs:label "Masker & Fins Diving" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SLW-43_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_wetsuit-diving ;
+    rdfs:label "Wetsuit Selam" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_SLW-43_6 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_tabung-scuba ;
+    rdfs:label "Tabung Scuba (Oksigen)" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_SLW-43_7 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_bcd-regulator ;
+    rdfs:label "BCD & Regulator Selam" ;
+    maritim:hargaSewa 200000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_SLW-43_8 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_paket-fun-dive ;
+    rdfs:label "Paket Fun Dive Lengkap (Alat + Guide + Kapal)" ;
+    maritim:hargaSewa 750000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_SLW-43_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar Rica & Colo-Colo Pantai" ;
+    maritim:kategoriKuliner "Seafood Khas Sulawesi" ;
+    maritim:menuAndalan "Ikan Baronang Bakar Rica, Sambal Dabu-Dabu Lilin, Sayur Kangkung Bunga Pepaya" ;
+    maritim:estimasiHarga "Rp35.000 – Rp80.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.9 ;
+    maritim:latitude 0.4504 ;
+    maritim:longitude 123.0248 .
+data:kuliner_SLW-43_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Makan Coto & Konro Pesisir Pantai" ;
+    maritim:kategoriKuliner "Masakan Tradisional Bugis/Makassar" ;
+    maritim:menuAndalan "Coto Makassar Daging Segar, Pallubasa Telur, Es Pisang Ijo" ;
+    maritim:estimasiHarga "Rp25.000 – Rp50.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.6 ;
+    maritim:latitude 0.4372 ;
+    maritim:longitude 123.0102 .
+data:kuliner_SLW-43_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Kopi & Kue Tradisional Pantai" ;
+    maritim:kategoriKuliner "Kafe Santai Pesisir" ;
+    maritim:menuAndalan "Kopi Toraja / Kopi Gie, Panada Segar, Kelapa Muda" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 2.3 ;
+    maritim:latitude 0.4674 ;
+    maritim:longitude 123.0054 .
+
+data:destinasi_SLW-44 a maritim:DestinasiWisata ;
+    maritim:kode "SLW-44" ;
+    maritim:namaDestinasi "Gua Halo Tabung & Danau Mariona" ;
+    maritim:lokasiLengkap "Tojo Una-Una, Sulawesi Tengah" ;
+    maritim:beradaDiProvinsi data:provinsi_Sulawesi_Tengah ;
+    maritim:beradaDiWilayah data:wilayah_Sulawesi ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 20000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 420000 ;
+    maritim:kategoriHargaTotal data:Range_250k_500k ;
+    maritim:latitude -0.35 ;
+    maritim:longitude 121.9 ;
+    maritim:hargaAktivitasMulai 400000 ;
+    maritim:kategoriHargaAktivitas data:Range_250k_500k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiFasilitas data:fasilitas_Pemandu_lokal_Togean ;
+    maritim:memilikiFasilitas data:fasilitas_tangga_kayu ;
+    maritim:memilikiFasilitas data:fasilitas_perahu ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-44_0 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-44_1 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-44_2 ;
+    maritim:memilikiPenawaranAlat data:offer_SLW-44_3 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SLW-44_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SLW-44_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_SLW-44_2 .
+data:offer_SLW-44_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-44_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-44_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_SLW-44_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 400000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_SLW-44_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar Rica & Colo-Colo Gua" ;
+    maritim:kategoriKuliner "Seafood Khas Sulawesi" ;
+    maritim:menuAndalan "Ikan Baronang Bakar Rica, Sambal Dabu-Dabu Lilin, Sayur Kangkung Bunga Pepaya" ;
+    maritim:estimasiHarga "Rp35.000 – Rp80.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.9 ;
+    maritim:latitude -0.3545 ;
+    maritim:longitude 121.9067 .
+data:kuliner_SLW-44_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Makan Coto & Konro Pesisir Gua" ;
+    maritim:kategoriKuliner "Masakan Tradisional Bugis/Makassar" ;
+    maritim:menuAndalan "Coto Makassar Daging Segar, Pallubasa Telur, Es Pisang Ijo" ;
+    maritim:estimasiHarga "Rp25.000 – Rp50.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.6 ;
+    maritim:latitude -0.3563 ;
+    maritim:longitude 121.887 .
+data:kuliner_SLW-44_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Kopi & Kue Tradisional Gua" ;
+    maritim:kategoriKuliner "Kafe Santai Pesisir" ;
+    maritim:menuAndalan "Kopi Toraja / Kopi Gie, Panada Segar, Kelapa Muda" ;
+    maritim:estimasiHarga "Rp15.000 – Rp35.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 2.3 ;
+    maritim:latitude -0.3293 ;
+    maritim:longitude 121.9014 .
+
+data:destinasi_MLK-25 a maritim:DestinasiWisata ;
+    maritim:kode "MLK-25" ;
+    maritim:namaDestinasi "Pulau Bair & Laguna Dullah" ;
+    maritim:lokasiLengkap "Maluku Tenggara, Maluku" ;
+    maritim:beradaDiProvinsi data:provinsi_Maluku ;
+    maritim:beradaDiWilayah data:wilayah_Maluku ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 25000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 375000 ;
+    maritim:kategoriHargaTotal data:Range_250k_500k ;
+    maritim:latitude -5.5833 ;
+    maritim:longitude 132.6833 ;
+    maritim:hargaAktivitasMulai 350000 ;
+    maritim:kategoriHargaAktivitas data:Range_250k_500k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_jukung_lokal ;
+    maritim:memilikiFasilitas data:fasilitas_pemandu ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-25_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_MLK-25_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_MLK-25_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_MLK-25_2 .
+data:offer_MLK-25_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_MLK-25_0 a maritim:KulinerSekitar ;
+    rdfs:label "Rumah Makan Ikan Kuah Kuning & Papeda Pulau" ;
+    maritim:kategoriKuliner "Kuliner Tradisional Maluku" ;
+    maritim:menuAndalan "Papeda Ikan Kuah Kuning Segar, Gohu Ikan Tuna Mentah, Ikan Asar Sambal Colo-Colo" ;
+    maritim:estimasiHarga "Rp30.000 – Rp75.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.7 ;
+    maritim:latitude -5.5893 ;
+    maritim:longitude 132.6854 .
+data:kuliner_MLK-25_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Nelayan Segar Banda Pulau" ;
+    maritim:kategoriKuliner "Seafood Bakar Rempah" ;
+    maritim:menuAndalan "Ikan Cakalang Bakar Rempah Pala, Cumi Bakar Hitam, Sambal Kenari" ;
+    maritim:estimasiHarga "Rp30.000 – Rp70.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.4 ;
+    maritim:latitude -5.5809 ;
+    maritim:longitude 132.6709 .
+data:kuliner_MLK-25_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Kopi Rujak Natsepa Pulau" ;
+    maritim:kategoriKuliner "Camilan Ikonik Pesisir" ;
+    maritim:menuAndalan "Rujak Buah Saus Kacang Bumbu Pala, Kopi Rarobang Rempah, Kelapa Dingin" ;
+    maritim:estimasiHarga "Rp15.000 – Rp30.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 2.1 ;
+    maritim:latitude -5.569 ;
+    maritim:longitude 132.6958 .
+
+data:destinasi_MLK-26 a maritim:DestinasiWisata ;
+    maritim:kode "MLK-26" ;
+    maritim:namaDestinasi "Pantai Ngurtafur (Pulau Waha)" ;
+    maritim:lokasiLengkap "Maluku Tenggara, Maluku" ;
+    maritim:beradaDiProvinsi data:provinsi_Maluku ;
+    maritim:beradaDiWilayah data:wilayah_Maluku ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 25000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 625000 ;
+    maritim:kategoriHargaTotal data:Range_500k_1M ;
+    maritim:latitude -5.6667 ;
+    maritim:longitude 132.6167 ;
+    maritim:hargaAktivitasMulai 600000 ;
+    maritim:kategoriHargaAktivitas data:Range_500k_1M ;
+    maritim:memilikiAktivitas data:aktivitas_Wisata_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_charter_dari_Debut ;
+    maritim:memilikiFasilitas data:fasilitas_pos_pemantau ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-26_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_MLK-26_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_MLK-26_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_MLK-26_2 .
+data:offer_MLK-26_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_MLK-26_0 a maritim:KulinerSekitar ;
+    rdfs:label "Rumah Makan Ikan Kuah Kuning & Papeda Pantai" ;
+    maritim:kategoriKuliner "Kuliner Tradisional Maluku" ;
+    maritim:menuAndalan "Papeda Ikan Kuah Kuning Segar, Gohu Ikan Tuna Mentah, Ikan Asar Sambal Colo-Colo" ;
+    maritim:estimasiHarga "Rp30.000 – Rp75.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.7 ;
+    maritim:latitude -5.6727 ;
+    maritim:longitude 132.6147 .
+data:kuliner_MLK-26_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Nelayan Segar Banda Pantai" ;
+    maritim:kategoriKuliner "Seafood Bakar Rempah" ;
+    maritim:menuAndalan "Ikan Cakalang Bakar Rempah Pala, Cumi Bakar Hitam, Sambal Kenari" ;
+    maritim:estimasiHarga "Rp30.000 – Rp70.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.4 ;
+    maritim:latitude -5.6573 ;
+    maritim:longitude 132.6082 .
+data:kuliner_MLK-26_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Kopi Rujak Natsepa Pantai" ;
+    maritim:kategoriKuliner "Camilan Ikonik Pesisir" ;
+    maritim:menuAndalan "Rujak Buah Saus Kacang Bumbu Pala, Kopi Rarobang Rempah, Kelapa Dingin" ;
+    maritim:estimasiHarga "Rp15.000 – Rp30.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 2.1 ;
+    maritim:latitude -5.6628 ;
+    maritim:longitude 132.6353 .
+
+data:destinasi_MLK-27 a maritim:DestinasiWisata ;
+    maritim:kode "MLK-27" ;
+    maritim:namaDestinasi "Pulau Rhun & Ay Banda" ;
+    maritim:lokasiLengkap "Maluku Tengah, Maluku" ;
+    maritim:beradaDiProvinsi data:provinsi_Maluku ;
+    maritim:beradaDiWilayah data:wilayah_Maluku ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 20000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 320000 ;
+    maritim:kategoriHargaTotal data:Range_250k_500k ;
+    maritim:latitude -4.55 ;
+    maritim:longitude 129.6833 ;
+    maritim:hargaAktivitasMulai 800000 ;
+    maritim:kategoriHargaAktivitas data:Range_500k_1M ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Diving ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiAktivitas data:aktivitas_Sejarah___Budaya_Bahari ;
+    maritim:memilikiFasilitas data:fasilitas_Homestay_nelayan_Banda ;
+    maritim:memilikiFasilitas data:fasilitas_dive_center ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-27_0 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-27_1 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-27_2 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-27_3 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-27_4 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-27_5 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-27_6 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-27_7 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-27_8 ;
+    maritim:memilikiPenawaranAlat data:offer_MLK-27_9 ;
+    maritim:memilikiKulinerSekitar data:kuliner_MLK-27_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_MLK-27_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_MLK-27_2 .
+data:offer_MLK-27_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-27_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-27_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-27_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 300000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_MLK-27_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-fins-diving ;
+    rdfs:label "Masker & Fins Diving" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_MLK-27_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_wetsuit-diving ;
+    rdfs:label "Wetsuit Selam" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_MLK-27_6 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_tabung-scuba ;
+    rdfs:label "Tabung Scuba (Oksigen)" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_MLK-27_7 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_bcd-regulator ;
+    rdfs:label "BCD & Regulator Selam" ;
+    maritim:hargaSewa 200000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_MLK-27_8 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_paket-fun-dive ;
+    rdfs:label "Paket Fun Dive Lengkap (Alat + Guide + Kapal)" ;
+    maritim:hargaSewa 750000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_MLK-27_9 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_MLK-27_0 a maritim:KulinerSekitar ;
+    rdfs:label "Rumah Makan Ikan Kuah Kuning & Papeda Pulau" ;
+    maritim:kategoriKuliner "Kuliner Tradisional Maluku" ;
+    maritim:menuAndalan "Papeda Ikan Kuah Kuning Segar, Gohu Ikan Tuna Mentah, Ikan Asar Sambal Colo-Colo" ;
+    maritim:estimasiHarga "Rp30.000 – Rp75.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.7 ;
+    maritim:latitude -4.5536 ;
+    maritim:longitude 129.6781 .
+data:kuliner_MLK-27_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Nelayan Segar Banda Pulau" ;
+    maritim:kategoriKuliner "Seafood Bakar Rempah" ;
+    maritim:menuAndalan "Ikan Cakalang Bakar Rempah Pala, Cumi Bakar Hitam, Sambal Kenari" ;
+    maritim:estimasiHarga "Rp30.000 – Rp70.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1.4 ;
+    maritim:latitude -4.5374 ;
+    maritim:longitude 129.6822 .
+data:kuliner_MLK-27_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kedai Kopi Rujak Natsepa Pulau" ;
+    maritim:kategoriKuliner "Camilan Ikonik Pesisir" ;
+    maritim:menuAndalan "Rujak Buah Saus Kacang Bumbu Pala, Kopi Rarobang Rempah, Kelapa Dingin" ;
+    maritim:estimasiHarga "Rp15.000 – Rp30.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 2.1 ;
+    maritim:latitude -4.558 ;
+    maritim:longitude 129.7005 .
+
+data:destinasi_PPA-26 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-26" ;
+    maritim:namaDestinasi "Danau Karst Lenmakana" ;
+    maritim:lokasiLengkap "Raja Ampat, Papua Barat Daya" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua_Barat_Daya ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Menengah ;
+    maritim:hargaTiketMasuk 100000 ;
+    maritim:kategoriHargaTiket data:Range_100k_250k ;
+    maritim:estimasiTotalBiaya 2100000 ;
+    maritim:kategoriHargaTotal data:Range_Above1M ;
+    maritim:latitude -1.95 ;
+    maritim:longitude 130.3333 ;
+    maritim:hargaAktivitasMulai 2000000 ;
+    maritim:kategoriHargaAktivitas data:Range_Above1M ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiFasilitas data:fasilitas_Pemandu_adat_Misool ;
+    maritim:memilikiFasilitas data:fasilitas_tali_panjat_tebing ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-26_0 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-26_1 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-26_2 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-26_3 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-26_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-26_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-26_2 .
+data:offer_PPA-26_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-26_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-26_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-26_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 2000000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_PPA-26_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar Papua & Sambal Dabu-Dabu Danau" ;
+    maritim:kategoriKuliner "Seafood Khas Papua" ;
+    maritim:menuAndalan "Ikan Bobara Bakar Arang, Ikan Kuah Asam Segar, Tumis Kangkung Belacan" ;
+    maritim:estimasiHarga "Rp40.000 – Rp90.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.3 ;
+    maritim:latitude -1.9526 ;
+    maritim:longitude 130.3325 .
+data:kuliner_PPA-26_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Papeda Ikan Kakap Merah Danau" ;
+    maritim:kategoriKuliner "Kuliner Tradisional Papua" ;
+    maritim:menuAndalan "Papeda Panas Ikan Kakap Kuah Kuning, Sambal Colo-Colo Lemon Cui" ;
+    maritim:estimasiHarga "Rp35.000 – Rp80.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1 ;
+    maritim:latitude -1.9433 ;
+    maritim:longitude 130.3273 .
+data:kuliner_PPA-26_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kafe Pesisir Teluk Pasir Danau" ;
+    maritim:kategoriKuliner "Kafe Pesisir & Sunset" ;
+    maritim:menuAndalan "Kopi Wamena Robusta/Arabika, Pisang Goreng Sambal, Kelapa Segar" ;
+    maritim:estimasiHarga "Rp20.000 – Rp40.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.7 ;
+    maritim:latitude -1.9468 ;
+    maritim:longitude 130.3483 .
+
+data:destinasi_PPA-27 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-27" ;
+    maritim:namaDestinasi "Kali Biru Warsambin" ;
+    maritim:lokasiLengkap "Raja Ampat, Papua Barat Daya" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua_Barat_Daya ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 30000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 50000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -0.3167 ;
+    maritim:longitude 130.85 ;
+    maritim:hargaAktivitasMulai 20000 ;
+    maritim:kategoriHargaAktivitas data:Range_Under100k ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiFasilitas data:fasilitas_Jembatan_kayu ;
+    maritim:memilikiFasilitas data:fasilitas_gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_pelampung ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-27_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-27_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-27_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-27_2 .
+data:offer_PPA-27_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_PPA-27_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar Papua & Sambal Dabu-Dabu Kali" ;
+    maritim:kategoriKuliner "Seafood Khas Papua" ;
+    maritim:menuAndalan "Ikan Bobara Bakar Arang, Ikan Kuah Asam Segar, Tumis Kangkung Belacan" ;
+    maritim:estimasiHarga "Rp40.000 – Rp90.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.3 ;
+    maritim:latitude -0.3183 ;
+    maritim:longitude 130.8478 .
+data:kuliner_PPA-27_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Papeda Ikan Kakap Merah Kali" ;
+    maritim:kategoriKuliner "Kuliner Tradisional Papua" ;
+    maritim:menuAndalan "Papeda Panas Ikan Kakap Kuah Kuning, Sambal Colo-Colo Lemon Cui" ;
+    maritim:estimasiHarga "Rp35.000 – Rp80.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1 ;
+    maritim:latitude -0.3077 ;
+    maritim:longitude 130.8492 .
+data:kuliner_PPA-27_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kafe Pesisir Teluk Pasir Kali" ;
+    maritim:kategoriKuliner "Kafe Pesisir & Sunset" ;
+    maritim:menuAndalan "Kopi Wamena Robusta/Arabika, Pisang Goreng Sambal, Kelapa Segar" ;
+    maritim:estimasiHarga "Rp20.000 – Rp40.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.7 ;
+    maritim:latitude -0.3232 ;
+    maritim:longitude 130.8639 .
+
+data:destinasi_PPA-28 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-28" ;
+    maritim:namaDestinasi "Pantai Tanjung Kasuari" ;
+    maritim:lokasiLengkap "Sorong, Papua Barat Daya" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua_Barat_Daya ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 10000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 10000 ;
+    maritim:kategoriHargaTotal data:Range_Under100k ;
+    maritim:latitude -0.8333 ;
+    maritim:longitude 131.25 ;
+    maritim:memilikiAktivitas data:aktivitas_Berenang ;
+    maritim:memilikiAktivitas data:aktivitas_Fotografi___Sunset ;
+    maritim:memilikiFasilitas data:fasilitas_Gazebo ;
+    maritim:memilikiFasilitas data:fasilitas_warung_makan_kelapa ;
+    maritim:memilikiFasilitas data:fasilitas_parkir ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-28_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-28_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-28_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-28_2 .
+data:offer_PPA-28_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_pelampung-pantai ;
+    rdfs:label "Ban Renang / Pelampung Santai" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_PPA-28_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar Papua & Sambal Dabu-Dabu Pantai" ;
+    maritim:kategoriKuliner "Seafood Khas Papua" ;
+    maritim:menuAndalan "Ikan Bobara Bakar Arang, Ikan Kuah Asam Segar, Tumis Kangkung Belacan" ;
+    maritim:estimasiHarga "Rp40.000 – Rp90.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.3 ;
+    maritim:latitude -0.8332 ;
+    maritim:longitude 131.2473 .
+data:kuliner_PPA-28_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Papeda Ikan Kakap Merah Pantai" ;
+    maritim:kategoriKuliner "Kuliner Tradisional Papua" ;
+    maritim:menuAndalan "Papeda Panas Ikan Kakap Kuah Kuning, Sambal Colo-Colo Lemon Cui" ;
+    maritim:estimasiHarga "Rp35.000 – Rp80.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1 ;
+    maritim:latitude -0.8257 ;
+    maritim:longitude 131.2548 .
+data:kuliner_PPA-28_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kafe Pesisir Teluk Pasir Pantai" ;
+    maritim:kategoriKuliner "Kafe Pesisir & Sunset" ;
+    maritim:menuAndalan "Kopi Wamena Robusta/Arabika, Pisang Goreng Sambal, Kelapa Segar" ;
+    maritim:estimasiHarga "Rp20.000 – Rp40.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.7 ;
+    maritim:latitude -0.8468 ;
+    maritim:longitude 131.2572 .
+
+data:destinasi_PPA-29 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-29" ;
+    maritim:namaDestinasi "Pantai Pasir Enam" ;
+    maritim:lokasiLengkap "Jayapura, Papua" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Pemula ;
+    maritim:hargaTiketMasuk 15000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 265000 ;
+    maritim:kategoriHargaTotal data:Range_250k_500k ;
+    maritim:latitude -2.5 ;
+    maritim:longitude 140.7333 ;
+    maritim:hargaAktivitasMulai 250000 ;
+    maritim:kategoriHargaAktivitas data:Range_100k_250k ;
+    maritim:memilikiAktivitas data:aktivitas_Snorkeling ;
+    maritim:memilikiAktivitas data:aktivitas_Camping_Pantai ;
+    maritim:memilikiFasilitas data:fasilitas_Perahu_carter_dari_Dok_IX ;
+    maritim:memilikiFasilitas data:fasilitas_area_camping ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-29_0 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-29_1 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-29_2 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-29_3 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-29_4 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-29_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-29_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-29_2 .
+data:offer_PPA-29_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-snorkel ;
+    rdfs:label "Masker & Snorkel" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-29_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_fins-snorkeling ;
+    rdfs:label "Fins (Kaki Katak)" ;
+    maritim:hargaSewa 25000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-29_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_life-jacket ;
+    rdfs:label "Pelampung / Life Jacket" ;
+    maritim:hargaSewa 20000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-29_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_snorkel-set-lengkap ;
+    rdfs:label "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)" ;
+    maritim:hargaSewa 250000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:offer_PPA-29_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_PPA-29_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar Papua & Sambal Dabu-Dabu Pantai" ;
+    maritim:kategoriKuliner "Seafood Khas Papua" ;
+    maritim:menuAndalan "Ikan Bobara Bakar Arang, Ikan Kuah Asam Segar, Tumis Kangkung Belacan" ;
+    maritim:estimasiHarga "Rp40.000 – Rp90.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.3 ;
+    maritim:latitude -2.4983 ;
+    maritim:longitude 140.7312 .
+data:kuliner_PPA-29_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Papeda Ikan Kakap Merah Pantai" ;
+    maritim:kategoriKuliner "Kuliner Tradisional Papua" ;
+    maritim:menuAndalan "Papeda Panas Ikan Kakap Kuah Kuning, Sambal Colo-Colo Lemon Cui" ;
+    maritim:estimasiHarga "Rp35.000 – Rp80.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1 ;
+    maritim:latitude -2.4968 ;
+    maritim:longitude 140.7417 .
+data:kuliner_PPA-29_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kafe Pesisir Teluk Pasir Pantai" ;
+    maritim:kategoriKuliner "Kafe Pesisir & Sunset" ;
+    maritim:menuAndalan "Kopi Wamena Robusta/Arabika, Pisang Goreng Sambal, Kelapa Segar" ;
+    maritim:estimasiHarga "Rp20.000 – Rp40.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.7 ;
+    maritim:latitude -2.5151 ;
+    maritim:longitude 140.7309 .
+
+data:destinasi_PPA-30 a maritim:DestinasiWisata ;
+    maritim:kode "PPA-30" ;
+    maritim:namaDestinasi "Kepulauan Mapia (Pulau Bras)" ;
+    maritim:lokasiLengkap "Supiori, Papua" ;
+    maritim:beradaDiProvinsi data:provinsi_Papua ;
+    maritim:beradaDiWilayah data:wilayah_Papua ;
+    maritim:cocokUntukTingkat data:Tingkat_Mahir ;
+    maritim:hargaTiketMasuk 50000 ;
+    maritim:kategoriHargaTiket data:Range_Under100k ;
+    maritim:estimasiTotalBiaya 3050000 ;
+    maritim:kategoriHargaTotal data:Range_Above1M ;
+    maritim:latitude 0.9167 ;
+    maritim:longitude 134.3333 ;
+    maritim:hargaAktivitasMulai 3000000 ;
+    maritim:kategoriHargaAktivitas data:Range_Above1M ;
+    maritim:memilikiAktivitas data:aktivitas_Diving ;
+    maritim:memilikiAktivitas data:aktivitas_Satwa_Laut ;
+    maritim:memilikiAktivitas data:aktivitas_Memancing ;
+    maritim:memilikiFasilitas data:fasilitas_Pos_navigasi_mercusuar ;
+    maritim:memilikiFasilitas data:fasilitas_kapal_perintis ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-30_0 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-30_1 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-30_2 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-30_3 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-30_4 ;
+    maritim:memilikiPenawaranAlat data:offer_PPA-30_5 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-30_0 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-30_1 ;
+    maritim:memilikiKulinerSekitar data:kuliner_PPA-30_2 .
+data:offer_PPA-30_0 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_masker-fins-diving ;
+    rdfs:label "Masker & Fins Diving" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_PPA-30_1 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_wetsuit-diving ;
+    rdfs:label "Wetsuit Selam" ;
+    maritim:hargaSewa 50000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_SemuaLevel .
+data:offer_PPA-30_2 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_tabung-scuba ;
+    rdfs:label "Tabung Scuba (Oksigen)" ;
+    maritim:hargaSewa 100000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Mahir .
+data:offer_PPA-30_3 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_bcd-regulator ;
+    rdfs:label "BCD & Regulator Selam" ;
+    maritim:hargaSewa 200000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Mahir .
+data:offer_PPA-30_4 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_paket-fun-dive ;
+    rdfs:label "Paket Fun Dive Lengkap (Alat + Guide + Kapal)" ;
+    maritim:hargaSewa 750000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Menengah .
+data:offer_PPA-30_5 a maritim:PenawaranAlat ;
+    maritim:alatTerkait data:alat_sewa-perahu ;
+    rdfs:label "Sewa Perahu Nelayan / Wisata Keliling" ;
+    maritim:hargaSewa 350000 ;
+    maritim:statusSewa "Tersedia Disewa" ;
+    maritim:tingkatAlat data:Tingkat_Pemula .
+data:kuliner_PPA-30_0 a maritim:KulinerSekitar ;
+    rdfs:label "RM Ikan Bakar Papua & Sambal Dabu-Dabu Kepulauan" ;
+    maritim:kategoriKuliner "Seafood Khas Papua" ;
+    maritim:menuAndalan "Ikan Bobara Bakar Arang, Ikan Kuah Asam Segar, Tumis Kangkung Belacan" ;
+    maritim:estimasiHarga "Rp40.000 – Rp90.000 / orang" ;
+    maritim:rating 4.9 ;
+    maritim:jarakKm 0.3 ;
+    maritim:latitude 0.9192 ;
+    maritim:longitude 134.3322 .
+data:kuliner_PPA-30_1 a maritim:KulinerSekitar ;
+    rdfs:label "Warung Papeda Ikan Kakap Merah Kepulauan" ;
+    maritim:kategoriKuliner "Kuliner Tradisional Papua" ;
+    maritim:menuAndalan "Papeda Panas Ikan Kakap Kuah Kuning, Sambal Colo-Colo Lemon Cui" ;
+    maritim:estimasiHarga "Rp35.000 – Rp80.000 / orang" ;
+    maritim:rating 4.8 ;
+    maritim:jarakKm 1 ;
+    maritim:latitude 0.9158 ;
+    maritim:longitude 134.3423 .
+data:kuliner_PPA-30_2 a maritim:KulinerSekitar ;
+    rdfs:label "Kafe Pesisir Teluk Pasir Kepulauan" ;
+    maritim:kategoriKuliner "Kafe Pesisir & Sunset" ;
+    maritim:menuAndalan "Kopi Wamena Robusta/Arabika, Pisang Goreng Sambal, Kelapa Segar" ;
+    maritim:estimasiHarga "Rp20.000 – Rp40.000 / orang" ;
+    maritim:rating 4.7 ;
+    maritim:jarakKm 1.7 ;
+    maritim:latitude 0.9043 ;
+    maritim:longitude 134.3243 .
