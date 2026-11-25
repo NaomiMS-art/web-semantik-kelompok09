@@ -40,7 +40,11 @@ const server = app.listen(3001, async () => {
     // 5. Test Facets
     const r5 = await testUrl('/api/facets');
     const data5 = JSON.parse(r5.body);
-    console.log(`[PASS] GET /api/facets : Status ${r5.status}, Total Destinasi: ${data5.totalDestinasi}, Ranges:`, data5.rangeTotal);
+    const activityRangeKeys = ['di-bawah-100k', '100k-250k', '250k-500k', '500k-1jt', 'di-atas-1jt'];
+    if (!activityRangeKeys.every(key => typeof data5.rangeAktivitas?.[key] === 'number')) {
+      throw new Error('Facets rangeAktivitas belum mengembalikan jumlah untuk semua rentang harga.');
+    }
+    console.log(`[PASS] GET /api/facets : Status ${r5.status}, Total Destinasi: ${data5.totalDestinasi}, Ranges:`, data5.rangeTotal, 'Activity ranges:', data5.rangeAktivitas);
 
     // 6. Test SPARQL Endpoint
     const sparqlQuery = `PREFIX maritim: <http://wisatamaritim.id/ontology#>

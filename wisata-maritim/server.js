@@ -184,6 +184,13 @@ app.get('/api/facets', (req, res) => {
     '500k-1jt': 0,
     'di-atas-1jt': 0
   };
+  const rangeAktivitasCount = {
+    'di-bawah-100k': 0,
+    '100k-250k': 0,
+    '250k-500k': 0,
+    '500k-1jt': 0,
+    'di-atas-1jt': 0
+  };
   const peralatanCount = {};
   const wilayahCount = {};
   const provinsiCount = {};
@@ -206,6 +213,9 @@ app.get('/api/facets', (req, res) => {
     // Range Tiket
     if (rangeTiketCount[d.rangeHargaTiket] !== undefined) rangeTiketCount[d.rangeHargaTiket]++;
 
+    // Range Aktivitas
+    if (rangeAktivitasCount[d.rangeHargaAktivitas] !== undefined) rangeAktivitasCount[d.rangeHargaAktivitas]++;
+
     // Peralatan
     d.peralatan.forEach(eq => {
       peralatanCount[eq.nama] = (peralatanCount[eq.nama] || 0) + 1;
@@ -223,6 +233,7 @@ app.get('/api/facets', (req, res) => {
     level: levelCount,
     rangeTotal: rangeTotalCount,
     rangeTiket: rangeTiketCount,
+    rangeAktivitas: rangeAktivitasCount,
     peralatan: peralatanCount,
     wilayah: wilayahCount,
     provinsi: Object.keys(provinsiCount).sort().reduce((acc, k) => {
