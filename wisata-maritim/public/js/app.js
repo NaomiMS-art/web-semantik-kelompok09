@@ -542,11 +542,11 @@ function applySearchQuery(query) {
 
   const heroInput = document.getElementById('hero-search-input');
   const explorerInput = document.getElementById('explorer-search-input');
-  if (heroInput) heroInput.value = query;
-  if (explorerInput) explorerInput.value = query;
+  if (heroInput) heroInput.value = APP_STATE.query;
+  if (explorerInput) explorerInput.value = APP_STATE.query;
 
   switchTab('explorer');
-  executeSearch();
+  executeSearch({ scrollToResults: true });
 }
 
 // Search Forms (Hero Search & Explorer Search)
@@ -556,38 +556,49 @@ function initSearchForms() {
   const heroInput = document.getElementById('hero-search-input');
   const heroLevel = document.getElementById('hero-level-select');
   const heroRange = document.getElementById('hero-range-select');
+  const explorerInput = document.getElementById('explorer-search-input');
 
   // Setup Autocomplete & Rekomendasi di Hero & Explorer
   setupSearchAutocomplete('hero-search-input', 'hero-search-suggestions');
   setupSearchAutocomplete('explorer-search-input', 'explorer-search-suggestions');
 
+  if (heroInput && explorerInput) {
+    heroInput.addEventListener('input', () => {
+      explorerInput.value = heroInput.value;
+    });
+    explorerInput.addEventListener('input', () => {
+      heroInput.value = explorerInput.value;
+    });
+  }
+
   if (heroForm) {
     heroForm.addEventListener('submit', (e) => {
       e.preventDefault();
       APP_STATE.query = heroInput.value.trim();
+      heroInput.value = APP_STATE.query;
       if (heroLevel && heroLevel.value) APP_STATE.filters.level = heroLevel.value;
       if (heroRange && heroRange.value) APP_STATE.filters.rangeHarga = heroRange.value;
       APP_STATE.currentPage = 1;
 
       // Sync to Explorer input
-      const explorerInput = document.getElementById('explorer-search-input');
       if (explorerInput) explorerInput.value = APP_STATE.query;
 
       switchTab('explorer');
-      executeSearch();
+      executeSearch({ scrollToResults: true });
     });
   }
 
   // 2. Explorer Search Form
   const explorerForm = document.getElementById('explorer-search-form');
-  const explorerInput = document.getElementById('explorer-search-input');
 
   if (explorerForm) {
     explorerForm.addEventListener('submit', (e) => {
       e.preventDefault();
       APP_STATE.query = explorerInput.value.trim();
+      explorerInput.value = APP_STATE.query;
+      if (heroInput) heroInput.value = APP_STATE.query;
       APP_STATE.currentPage = 1;
-      executeSearch();
+      executeSearch({ scrollToResults: true });
     });
   }
 
@@ -734,11 +745,7 @@ function initFacetedFilterEvents() {
 
   if (toggleCollapseBtn && topFilterBody) {
     toggleCollapseBtn.addEventListener('click', () => {
-      const isCollapsed = topFilterBody.classList.toggle('collapsed');
-      toggleCollapseBtn.setAttribute('aria-expanded', !isCollapsed);
-      if (collapseBtnText) {
-        collapseBtnText.textContent = isCollapsed ? 'Buka Panel Filter' : 'Sembunyikan Filter';
-      }
+      setTopFilterCollapsed(!topFilterBody.classList.contains('collapsed'));
     });
   }
 
@@ -783,6 +790,19 @@ function initFacetedFilterEvents() {
       const grid = document.getElementById('destinations-grid');
       if (grid) grid.scrollIntoView({ behavior: 'smooth' });
     });
+  }
+}
+
+function setTopFilterCollapsed(collapsed) {
+  const topFilterBody = document.getElementById('top-filter-body');
+  const toggleCollapseBtn = document.getElementById('btn-toggle-filter-collapse');
+  const collapseBtnText = document.getElementById('collapse-btn-text');
+  if (!topFilterBody || !toggleCollapseBtn) return;
+
+  topFilterBody.classList.toggle('collapsed', collapsed);
+  toggleCollapseBtn.setAttribute('aria-expanded', String(!collapsed));
+  if (collapseBtnText) {
+    collapseBtnText.textContent = collapsed ? 'Buka Panel Filter' : 'Sembunyikan Filter';
   }
 }
 
@@ -841,7 +861,7 @@ function resetAllFilters() {
 // ==============================================================================
 // SEARCH CLIENT & PAGINATION ENGINE (SLIDE SELANJUTNYA)
 // ==============================================================================
-async function executeSearch() {
+async function executeSearch({ scrollToResults = false } = {}) {
   const grid = document.getElementById('destinations-grid');
   const countLabel = document.getElementById('results-count-label');
 
@@ -884,6 +904,10 @@ async function executeSearch() {
     }
 
     sortAndRenderResults();
+    if (scrollToResults && countLabel) {
+      setTopFilterCollapsed(true);
+      countLabel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   } catch (err) {
     console.error("Search error:", err);
     if (grid) {

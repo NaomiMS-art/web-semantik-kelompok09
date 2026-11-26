@@ -469,15 +469,15 @@
               <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-left"/></svg>
               <span>Reset Filter</span>
             </button>
-            <button type="button" class="btn-toggle-filter-collapse" id="btn-toggle-filter-collapse" aria-expanded="true">
-              <span id="collapse-btn-text">Sembunyikan Filter</span>
+            <button type="button" class="btn-toggle-filter-collapse" id="btn-toggle-filter-collapse" aria-expanded="false">
+              <span id="collapse-btn-text">Buka Panel Filter</span>
               <svg class="svg-icon svg-icon-sm"><use href="#icon-sliders"/></svg>
             </button>
           </div>
         </div>
 
         <!-- Filter Content Body (Collapsible) -->
-        <div class="top-filter-body" id="top-filter-body">
+        <div class="top-filter-body collapsed" id="top-filter-body">
           <!-- BARIS 1: Range Harga Google Style (Horizontal Full Width Strip) -->
           <div class="top-filter-row-price">
             <div class="price-header-strip">
@@ -621,7 +621,7 @@
 
           <div class="results-sorting-wrap">
             <label for="sort-select">Urutkan:</label>
-            <select class="custom-select" id="sort-select" style="width:auto;padding:0.45rem 0.85rem">
+            <select class="custom-select" id="sort-select">
               <option value="rekomendasi">Relevansi / Rekomendasi</option>
               <option value="termurah">Biaya Termurah</option>
               <option value="termahal">Biaya Tertinggi</option>
