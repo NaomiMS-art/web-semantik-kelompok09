@@ -2,7 +2,7 @@ const STOP_WORDS = new Set([
   'untuk', 'dengan', 'dan', 'di', 'yang', 'ke', 'dari', 'tersedia', 'wisata', 'tempat',
   'cari', 'saya', 'mau', 'ada', 'atau', 'dgn', 'buat', 'yg', 'lokasi', 'destinasi',
   'rekomendasi', 'tolong', 'carikan', 'butuh', 'ingin', 'dong', 'apakah', 'spot',
-  'menyediakan', 'harga', 'budget', 'bujet', 'maksimal', 'maks', 'minimal', 'min',
+  'menyediakan', 'harga', 'biaya', 'range', 'kategori', 'budget', 'bujet', 'maksimal', 'maks', 'minimal', 'min',
   'apa', 'saja', 'aja', 'laut', 'pantai', 'air', 'bahari', 'pesisir', 'pulau'
 ]);
 
@@ -155,16 +155,24 @@ class SemanticSearch {
       q = q.replace(bMatch[0], ' ');
     }
 
+    const priceCategories = [
+      { pattern: /\b(?:murah|hemat|ekonomis|ramah di kantong|ramah kantong|budget friendly|low budget)\b/i, range: 'di-bawah-100k' },
+      { pattern: /\b(?:terjangkau|affordable)\b/i, range: '100k-250k' },
+      { pattern: /\b(?:standar|standard|mid[- ]range)\b/i, range: '250k-500k' },
+      { pattern: /\b(?:sangat mahal|premium|mewah|luxury|high[- ]end)\b/i, range: 'di-atas-1jt' },
+      { pattern: /\b(?:mahal|expensive)\b/i, range: '500k-1jt' },
+    ];
+    const priceCategory = priceCategories.find(category => category.pattern.test(q));
+    priceCategories.forEach(category => {
+      q = q.replace(new RegExp(category.pattern.source, 'ig'), ' ');
+    });
+
     if (/gratis|tanpa biaya/i.test(q)) {
       parsed.maxBudget = 0;
       parsed.rangeHarga = 'di-bawah-100k';
       q = q.replace(/gratis|tanpa biaya/ig, ' ');
-    } else if (parsed.maxBudget !== null) {
-      if (parsed.maxBudget < 100000) parsed.rangeHarga = 'di-bawah-100k';
-      else if (parsed.maxBudget <= 250000) parsed.rangeHarga = '100k-250k';
-      else if (parsed.maxBudget <= 500000) parsed.rangeHarga = '250k-500k';
-      else if (parsed.maxBudget <= 1000000) parsed.rangeHarga = '500k-1jt';
-      else parsed.rangeHarga = 'di-atas-1jt';
+    } else if (priceCategory) {
+      parsed.rangeHarga = priceCategory.range;
     }
 
     // Normalisasikan leetspeak pada teks query yang tersisa (misal: b3l -> bel, sn0rkeling -> snorkeling, p4nt4i -> pantai)

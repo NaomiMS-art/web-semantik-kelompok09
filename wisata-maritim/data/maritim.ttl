@@ -166,7 +166,7 @@ data:Tingkat_SemuaLevel a maritim:TingkatKeahlian ;
 data:Range_Under100k a maritim:KategoriRangeHarga ;
     rdfs:label "Di bawah Rp100.000"@id ;
     maritim:minPrice 0 ;
-    maritim:maxPrice 100000 .
+    maritim:maxPrice 99999 .
 
 data:Range_100k_250k a maritim:KategoriRangeHarga ;
     rdfs:label "Rp100.000 – Rp250.000"@id ;
@@ -175,17 +175,17 @@ data:Range_100k_250k a maritim:KategoriRangeHarga ;
 
 data:Range_250k_500k a maritim:KategoriRangeHarga ;
     rdfs:label "Rp250.000 – Rp500.000"@id ;
-    maritim:minPrice 250000 ;
+    maritim:minPrice 250001 ;
     maritim:maxPrice 500000 .
 
 data:Range_500k_1M a maritim:KategoriRangeHarga ;
     rdfs:label "Rp500.000 – Rp1.000.000"@id ;
-    maritim:minPrice 500000 ;
+    maritim:minPrice 500001 ;
     maritim:maxPrice 1000000 .
 
 data:Range_Above1M a maritim:KategoriRangeHarga ;
     rdfs:label "Di atas Rp1.000.000"@id ;
-    maritim:minPrice 1000000 ;
+    maritim:minPrice 1000001 ;
     maritim:maxPrice 999999999 .
 
 # ------------------------------------------------------------------------------

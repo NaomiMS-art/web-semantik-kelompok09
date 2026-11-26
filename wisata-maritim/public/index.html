@@ -575,7 +575,7 @@
         </div>
 
         <!-- Filter Content Body (Collapsible) -->
-        <div class="top-filter-body" id="top-filter-body">
+        <div class="top-filter-body collapsed" id="top-filter-body">
           <!-- BARIS 1: Range Harga Google Style (Horizontal Full Width Strip) -->
           <div class="top-filter-row-price">
             <div class="price-header-strip">
@@ -719,7 +719,7 @@
 
           <div class="results-sorting-wrap">
             <label for="sort-select">Urutkan:</label>
-            <select class="custom-select" id="sort-select" style="width:auto;padding:0.45rem 0.85rem">
+            <select class="custom-select" id="sort-select">
               <option value="rekomendasi">Relevansi / Rekomendasi</option>
               <option value="termurah">Biaya Termurah</option>
               <option value="termahal">Biaya Tertinggi</option>
@@ -732,6 +732,14 @@
         <div class="destinations-card-grid" id="destinations-grid">
           <!-- Populated by JS -->
         </div>
+
+        <section class="related-recommendations" id="related-recommendations" aria-labelledby="related-recommendations-title" hidden>
+          <div class="related-recommendations-heading">
+            <h3 id="related-recommendations-title">Rekomendasi terkait</h3>
+            <p id="related-recommendations-description"></p>
+          </div>
+          <div class="destinations-card-grid" id="related-recommendations-grid"></div>
+        </section>
 
         <!-- PAGINATION BAR -->
         <div class="pagination-controls-bar" id="pagination-controls-bar">
