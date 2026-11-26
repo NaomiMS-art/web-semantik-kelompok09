@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5">
   <title>Ombak Nusantara · Mesin Pencari Wisata Maritim Semantik</title>
-  <meta name="description" content="Mesin pencari wisata maritim Indonesia berbasis Web Semantik. Filter berdasarkan range harga Google, aktivitas, tingkat keahlian, persewaan alat, dan fasilitas pendukung.">
+  <meta name="description"
+    content="Mesin pencari wisata maritim Indonesia berbasis Web Semantik. Filter berdasarkan range harga Google, aktivitas, tingkat keahlian, persewaan alat, dan fasilitas pendukung.">
   <link rel="icon" type="image/jpeg" href="images/logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/chatbot.css">
   <!-- LEAFLET MAP ASSETS WITH FALLBACK CDN -->
@@ -21,59 +25,90 @@
     }
   </script>
 </head>
+
 <body>
 
   <svg style="display:none" aria-hidden="true">
     <symbol id="icon-search" viewBox="0 0 24 24">
-      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      <circle cx="11" cy="11" r="8" />
+      <path d="m21 21-4.35-4.35" />
     </symbol>
     <symbol id="icon-terminal" viewBox="0 0 24 24">
-      <polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>
+      <polyline points="4 17 10 11 4 5" />
+      <line x1="12" y1="19" x2="20" y2="19" />
     </symbol>
     <symbol id="icon-book" viewBox="0 0 24 24">
-      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/>
+      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+      <path d="M6 6h10M6 10h10" />
     </symbol>
     <symbol id="icon-heart" viewBox="0 0 24 24">
-      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+      <path
+        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
     </symbol>
     <symbol id="icon-compass" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+      <circle cx="12" cy="12" r="10" />
+      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
     </symbol>
     <symbol id="icon-wallet" viewBox="0 0 24 24">
-      <rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><circle cx="16" cy="15" r="1"/>
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <line x1="2" y1="10" x2="22" y2="10" />
+      <circle cx="16" cy="15" r="1" />
     </symbol>
     <symbol id="icon-target" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="12" r="6" />
+      <circle cx="12" cy="12" r="2" />
     </symbol>
     <symbol id="icon-tool" viewBox="0 0 24 24">
-      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+      <path
+        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
     </symbol>
     <symbol id="icon-network" viewBox="0 0 24 24">
-      <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
     </symbol>
     <symbol id="icon-pin" viewBox="0 0 24 24">
-      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+      <circle cx="12" cy="10" r="3" />
     </symbol>
     <symbol id="icon-sliders" viewBox="0 0 24 24">
-      <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/>
+      <line x1="4" y1="21" x2="4" y2="14" />
+      <line x1="4" y1="10" x2="4" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="12" />
+      <line x1="12" y1="8" x2="12" y2="3" />
+      <line x1="20" y1="21" x2="20" y2="16" />
+      <line x1="20" y1="12" x2="20" y2="3" />
+      <line x1="1" y1="14" x2="7" y2="14" />
+      <line x1="9" y1="8" x2="15" y2="8" />
+      <line x1="17" y1="16" x2="23" y2="16" />
     </symbol>
     <symbol id="icon-arrow-right" viewBox="0 0 24 24">
-      <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <polyline points="12 5 19 12 12 19" />
     </symbol>
     <symbol id="icon-arrow-left" viewBox="0 0 24 24">
-      <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+      <line x1="19" y1="12" x2="5" y2="12" />
+      <polyline points="12 19 5 12 12 5" />
     </symbol>
     <symbol id="icon-moon" viewBox="0 0 24 24">
-      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
     </symbol>
     <symbol id="icon-sun" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+      <circle cx="12" cy="12" r="4" />
+      <path
+        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
     </symbol>
     <symbol id="icon-database" viewBox="0 0 24 24">
-      <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/>
+      <ellipse cx="12" cy="5" rx="9" ry="3" />
+      <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+      <path d="M3 12A9 3 0 0 0 21 12" />
     </symbol>
     <symbol id="icon-x" viewBox="0 0 24 24">
-      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
     </symbol>
   </svg>
 
@@ -92,27 +127,38 @@
 
       <nav class="nav-menu">
         <button class="nav-link-btn active" data-tab="home">
-          <svg class="svg-icon"><use href="#icon-compass"/></svg>
+          <svg class="svg-icon">
+            <use href="#icon-compass" />
+          </svg>
           <span>Beranda</span>
         </button>
         <button class="nav-link-btn" data-tab="explorer">
-          <svg class="svg-icon"><use href="#icon-search"/></svg>
+          <svg class="svg-icon">
+            <use href="#icon-search" />
+          </svg>
           <span>Jelajah Destinasi</span>
         </button>
         <button class="nav-link-btn" data-tab="map">
-          <svg class="svg-icon"><use href="#icon-compass"/></svg>
+          <svg class="svg-icon">
+            <use href="#icon-compass" />
+          </svg>
           <span>Peta Nusantara</span>
         </button>
         <button class="nav-link-btn" data-tab="favorites">
-          <svg class="svg-icon"><use href="#icon-heart"/></svg>
+          <svg class="svg-icon">
+            <use href="#icon-heart" />
+          </svg>
           <span>Favorit</span>
           <span class="fav-badge-counter" id="desktop-fav-count" style="display:none">0</span>
         </button>
       </nav>
 
       <div class="header-actions">
-        <button class="theme-btn" id="btn-theme-toggle" type="button" onclick="toggleTheme()" title="Ganti Mode Tampilan" aria-label="Ganti Mode Tampilan">
-          <svg class="svg-icon"><use href="#icon-moon"/></svg>
+        <button class="theme-btn" id="btn-theme-toggle" type="button" onclick="toggleTheme()"
+          title="Ganti Mode Tampilan" aria-label="Ganti Mode Tampilan">
+          <svg class="svg-icon">
+            <use href="#icon-moon" />
+          </svg>
         </button>
       </div>
     </div>
@@ -121,19 +167,27 @@
   <!-- MOBILE BOTTOM APP BAR (SEPERTI APLIKASI NATIVE TRAVELOKA / AIRBNB) -->
   <nav class="mobile-bottom-bar" aria-label="Navigasi Mobile">
     <button class="bottom-bar-btn active" data-tab="home">
-      <svg class="svg-icon"><use href="#icon-compass"/></svg>
+      <svg class="svg-icon">
+        <use href="#icon-compass" />
+      </svg>
       <span>Beranda</span>
     </button>
     <button class="bottom-bar-btn" data-tab="explorer">
-      <svg class="svg-icon"><use href="#icon-search"/></svg>
+      <svg class="svg-icon">
+        <use href="#icon-search" />
+      </svg>
       <span>Jelajah</span>
     </button>
     <button class="bottom-bar-btn" data-tab="map">
-      <svg class="svg-icon"><use href="#icon-compass"/></svg>
+      <svg class="svg-icon">
+        <use href="#icon-compass" />
+      </svg>
       <span>Peta</span>
     </button>
     <button class="bottom-bar-btn" data-tab="favorites">
-      <svg class="svg-icon"><use href="#icon-heart"/></svg>
+      <svg class="svg-icon">
+        <use href="#icon-heart" />
+      </svg>
       <span>Favorit</span>
       <span class="fav-badge-counter-mob" id="mobile-fav-count" style="display:none">0</span>
     </button>
@@ -143,26 +197,27 @@
        HALAMAN 1: BERANDA (HOMEPAGE)
        ============================================================================== -->
   <section class="tab-view-section page-scroll-section" id="view-home">
-    
+
     <!-- HERO SECTION WITH PRO SEARCH (MENYATU DENGAN BACKGROUND BERGRADASI & SEARCH BAR DITENGAH) -->
     <section class="hero-pro">
       <div class="hero-content-pro">
         <h2 class="hero-title-pro">Jelajahi Wisata Maritim Nusantara Berdasarkan Budget &amp; Kemampuan</h2>
         <p class="hero-subtitle-pro">
-          Mesin pencari semantik cerdas menghubungkan 300+ destinasi maritim Indonesia dengan <strong>5 kategori range harga Google</strong>, <strong>tingkat keahlian pengguna</strong>, serta <strong>katalog peralatan &amp; persewaan</strong> lengkap.
+          Mesin pencari semantik cerdas menghubungkan 300+ destinasi maritim Indonesia dengan <strong>5 kategori range
+            harga Google</strong>, <strong>tingkat keahlian pengguna</strong>, serta <strong>katalog peralatan &amp;
+            persewaan</strong> lengkap.
         </p>
 
         <!-- PRO SEARCH BAR (FOKUS INPUT TUNGGAL DI BERANDA) -->
         <div class="search-card-pro">
           <form id="hero-search-form" class="search-form-row hero-single-search" role="search">
             <div class="search-field-main" style="position:relative;width:100%">
-              <svg class="svg-icon"><use href="#icon-search"/></svg>
-              <input 
-                type="search" 
-                id="hero-search-input" 
-                placeholder="Cari aktivitas, lokasi, atau budget (contoh: snorkeling pemula budget 250rb)..." 
-                autocomplete="off"
-              >
+              <svg class="svg-icon">
+                <use href="#icon-search" />
+              </svg>
+              <input type="search" id="hero-search-input"
+                placeholder="Cari aktivitas, lokasi, atau budget (contoh: snorkeling pemula budget 250rb)..."
+                autocomplete="off">
               <!-- AUTOCOMPLETE / SEARCH SUGGESTIONS DROPDOWN -->
               <div class="search-suggestions-dropdown" id="hero-search-suggestions" style="display:none"></div>
             </div>
@@ -173,7 +228,9 @@
         <div class="hero-search-btn-wrapper">
           <button type="submit" form="hero-search-form" class="btn-search-exec hero-btn-exec">
             <span>Cari Semantik</span>
-            <svg class="svg-icon"><use href="#icon-arrow-right"/></svg>
+            <svg class="svg-icon">
+              <use href="#icon-arrow-right" />
+            </svg>
           </button>
         </div>
 
@@ -189,7 +246,8 @@
             <button type="button" class="trending-tag popular-badge" data-q="pantai pasir putih di Bali dan Lombok">
               🏖️ Pantai Pasir Putih Bali &amp; Lombok
             </button>
-            <button type="button" class="trending-tag popular-badge" data-q="spot diving mahir sewa bcd dan tabung scuba">
+            <button type="button" class="trending-tag popular-badge"
+              data-q="spot diving mahir sewa bcd dan tabung scuba">
               🤿 Diving Mahir + Sewa BCD
             </button>
             <button type="button" class="trending-tag popular-badge" data-q="surfing pemula sewa papan selancar">
@@ -231,7 +289,7 @@
        HALAMAN 2: JELAJAH DESTINASI & FACETED FILTER (SEARCH ENGINE WITH SLIDES/PAGINATION)
        ============================================================================== -->
   <section class="tab-view-section page-scroll-section" id="view-explorer">
-    
+
     <!-- TOP SEARCH CONTROLS (KONTRAST TINGGI & PRESTISIUS MARITIM) -->
     <div class="explorer-hero-banner">
       <div class="explorer-hero-content">
@@ -241,13 +299,12 @@
 
         <form id="explorer-search-form" class="explorer-search-form" role="search">
           <div class="search-field-main" style="position:relative">
-            <svg class="svg-icon"><use href="#icon-search"/></svg>
-            <input 
-              type="search" 
-              id="explorer-search-input" 
-              placeholder="Ketik pencarian semantik (contoh: snorkeling pemula budget 250rb ada alat)..." 
-              autocomplete="off"
-            >
+            <svg class="svg-icon">
+              <use href="#icon-search" />
+            </svg>
+            <input type="search" id="explorer-search-input"
+              placeholder="Ketik pencarian semantik (contoh: snorkeling pemula budget 250rb ada alat)..."
+              autocomplete="off">
             <!-- AUTOCOMPLETE / SEARCH SUGGESTIONS DROPDOWN EXPLORER -->
             <div class="search-suggestions-dropdown" id="explorer-search-suggestions" style="display:none"></div>
           </div>
@@ -268,7 +325,8 @@
             <button type="button" class="trending-tag popular-badge" data-q="pantai pasir putih di Bali dan Lombok">
               🏖️ Pantai Pasir Putih Bali &amp; Lombok
             </button>
-            <button type="button" class="trending-tag popular-badge" data-q="spot diving mahir sewa bcd dan tabung scuba">
+            <button type="button" class="trending-tag popular-badge"
+              data-q="spot diving mahir sewa bcd dan tabung scuba">
               🤿 Diving Mahir + Sewa BCD
             </button>
             <button type="button" class="trending-tag popular-badge" data-q="surfing pemula sewa papan selancar">
@@ -308,7 +366,9 @@
       <div class="semantic-pipeline-card">
         <div class="pipeline-header">
           <div class="pipeline-title">
-            <svg class="svg-icon" style="color:var(--sea-blue)"><use href="#icon-network"/></svg>
+            <svg class="svg-icon" style="color:var(--sea-blue)">
+              <use href="#icon-network" />
+            </svg>
             <span>Inferensi Relasi Web Semantik (Semantic Reasoning Chain)</span>
           </div>
         </div>
@@ -325,15 +385,20 @@
       <div class="island-slider-wrapper">
         <div class="island-slider-header">
           <div class="island-slider-title">
-            <svg class="svg-icon svg-icon-sm" style="color:var(--primary-color)"><use href="#icon-compass"/></svg>
+            <svg class="svg-icon svg-icon-sm" style="color:var(--primary-color)">
+              <use href="#icon-compass" />
+            </svg>
             <span>Jelajah Pulau &amp; Kepulauan Maritim</span>
             <span class="island-active-badge" id="island-active-count">Semua (305 Wisata)</span>
           </div>
         </div>
 
         <div class="island-grid-5x2" id="explorer-wilayah-pills">
-          <button type="button" class="island-slide-card filter-pill-opt active" data-wil="" data-prov="" title="Semua Destinasi Maritim Indonesia">
-            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80')"></div>
+          <button type="button" class="island-slide-card filter-pill-opt active" data-wil="" data-prov=""
+            title="Semua Destinasi Maritim Indonesia">
+            <div class="island-card-bg"
+              style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80')">
+            </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
               <span class="island-badge-code">ALL</span>
@@ -344,8 +409,11 @@
             </div>
           </button>
 
-          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sumatra" data-prov="" title="Pulau Sumatra">
-            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80')"></div>
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sumatra" data-prov=""
+            title="Pulau Sumatra">
+            <div class="island-card-bg"
+              style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80')">
+            </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
               <span class="island-badge-code">SM</span>
@@ -356,8 +424,11 @@
             </div>
           </button>
 
-          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Jawa" data-prov="" title="Pulau Jawa">
-            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80')"></div>
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Jawa" data-prov=""
+            title="Pulau Jawa">
+            <div class="island-card-bg"
+              style="background-image:url('https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=600&q=80')">
+            </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
               <span class="island-badge-code">JW</span>
@@ -368,8 +439,11 @@
             </div>
           </button>
 
-          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Bali & Nusa Tenggara" data-prov="Bali" title="Pulau Dewata Bali">
-            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80')"></div>
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Bali & Nusa Tenggara"
+            data-prov="Bali" title="Pulau Dewata Bali">
+            <div class="island-card-bg"
+              style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80')">
+            </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
               <span class="island-badge-code">BL</span>
@@ -380,8 +454,11 @@
             </div>
           </button>
 
-          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Bali & Nusa Tenggara" data-prov="NTB,NTT" title="Kepulauan Nusa Tenggara">
-            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=600&q=80')"></div>
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Bali & Nusa Tenggara"
+            data-prov="NTB,NTT" title="Kepulauan Nusa Tenggara">
+            <div class="island-card-bg"
+              style="background-image:url('https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=600&q=80')">
+            </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
               <span class="island-badge-code">NT</span>
@@ -392,8 +469,11 @@
             </div>
           </button>
 
-          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Kalimantan" data-prov="" title="Pulau Kalimantan">
-            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=600&q=80')"></div>
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Kalimantan" data-prov=""
+            title="Pulau Kalimantan">
+            <div class="island-card-bg"
+              style="background-image:url('https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=600&q=80')">
+            </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
               <span class="island-badge-code">KL</span>
@@ -404,8 +484,11 @@
             </div>
           </button>
 
-          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sulawesi" data-prov="" title="Pulau Sulawesi">
-            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80')"></div>
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sulawesi" data-prov=""
+            title="Pulau Sulawesi">
+            <div class="island-card-bg"
+              style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80')">
+            </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
               <span class="island-badge-code">SL</span>
@@ -416,8 +499,11 @@
             </div>
           </button>
 
-          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Maluku" data-prov="" title="Kepulauan Maluku">
-            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=600&q=80')"></div>
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Maluku" data-prov=""
+            title="Kepulauan Maluku">
+            <div class="island-card-bg"
+              style="background-image:url('https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=600&q=80')">
+            </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
               <span class="island-badge-code">ML</span>
@@ -428,8 +514,11 @@
             </div>
           </button>
 
-          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Papua" data-prov="" title="Tanah Papua">
-            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80')"></div>
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Papua" data-prov=""
+            title="Tanah Papua">
+            <div class="island-card-bg"
+              style="background-image:url('https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=600&q=80')">
+            </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
               <span class="island-badge-code">PP</span>
@@ -440,8 +529,11 @@
             </div>
           </button>
 
-          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sumatra" data-prov="Kepulauan Riau" title="Kepulauan Riau">
-            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80')"></div>
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sumatra" data-prov="Kepulauan Riau"
+            title="Kepulauan Riau">
+            <div class="island-card-bg"
+              style="background-image:url('https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80')">
+            </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
               <span class="island-badge-code">KR</span>
@@ -461,17 +553,23 @@
         <!-- Header Panel Filter -->
         <div class="top-filter-header">
           <div class="top-filter-title">
-            <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:#ffffff;margin:0">Filter Wisata Maritim</h3>
+            <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:#ffffff;margin:0">Filter
+              Wisata Maritim</h3>
           </div>
-          
+
           <div class="top-filter-actions">
             <button type="button" class="btn-clear-filters" id="btn-reset-filter" title="Reset Semua Filter">
-              <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-left"/></svg>
+              <svg class="svg-icon svg-icon-sm">
+                <use href="#icon-arrow-left" />
+              </svg>
               <span>Reset Filter</span>
             </button>
-            <button type="button" class="btn-toggle-filter-collapse" id="btn-toggle-filter-collapse" aria-expanded="false">
-              <span id="collapse-btn-text">Buka Panel Filter</span>
-              <svg class="svg-icon svg-icon-sm"><use href="#icon-sliders"/></svg>
+            <button type="button" class="btn-toggle-filter-collapse" id="btn-toggle-filter-collapse"
+              aria-expanded="true">
+              <span id="collapse-btn-text">Sembunyikan Filter</span>
+              <svg class="svg-icon svg-icon-sm">
+                <use href="#icon-sliders" />
+              </svg>
             </button>
           </div>
         </div>
@@ -662,20 +760,25 @@
        ============================================================================== -->
   <section class="tab-view-section page-scroll-section" id="view-map">
     <div style="max-width:1400px;margin:1.5rem auto;padding:0 1.25rem">
-      <div class="results-control-bar map-header-row" style="margin-bottom:1.25rem;flex-wrap:wrap;gap:1.25rem;align-items:center;justify-content:space-between">
+      <div class="results-control-bar map-header-row"
+        style="margin-bottom:1.25rem;flex-wrap:wrap;gap:1.25rem;align-items:center;justify-content:space-between">
         <div class="results-stat-text">
-          <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--text-main);margin-bottom:0.25rem">
+          <h2
+            style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--text-main);margin-bottom:0.25rem">
             Peta Eksplorasi Wisata Maritim Nusantara
           </h2>
           <p style="color:var(--text-muted);font-size:0.85rem">
-            Klik marker di peta atau pilih filter wilayah untuk menjelajahi 300+ surga maritim Indonesia dari Sabang sampai Merauke.
+            Klik marker di peta atau pilih filter wilayah untuk menjelajahi 300+ surga maritim Indonesia dari Sabang
+            sampai Merauke.
           </p>
         </div>
-        
+
         <!-- INTEGRATED UNIFIED MAP CONTROLS BAR -->
         <div class="map-controls-bar">
           <div class="map-region-picker">
-            <svg class="svg-icon svg-icon-xs map-picker-icon"><use href="#icon-compass"/></svg>
+            <svg class="svg-icon svg-icon-xs map-picker-icon">
+              <use href="#icon-compass" />
+            </svg>
             <select id="map-region-filter" class="map-region-select" aria-label="Filter Wilayah">
               <option value="">Semua Wilayah (7 Wilayah)</option>
               <option value="Sumatra">Sumatra</option>
@@ -688,14 +791,17 @@
             </select>
           </div>
           <button type="button" class="btn-map-gps" id="btn-map-my-location" title="Deteksi lokasi Anda di peta">
-            <svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg>
+            <svg class="svg-icon svg-icon-sm">
+              <use href="#icon-pin" />
+            </svg>
             <span>Lokasi Saya</span>
           </button>
         </div>
       </div>
 
       <!-- MAP CONTAINER -->
-      <div id="indonesia-map-container" style="width:100%;height:560px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-subtle);box-shadow:var(--shadow-md);position:relative;background:var(--bg-subtle)">
+      <div id="indonesia-map-container"
+        style="width:100%;height:560px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-subtle);box-shadow:var(--shadow-md);position:relative;background:var(--bg-subtle)">
         <!-- Leaflet Map rendered by JS -->
       </div>
 
@@ -715,11 +821,17 @@
 
           <!-- SLIDER NAVIGATION CONTROLS -->
           <div class="slider-nav-btns">
-            <button type="button" class="btn-slider-arrow" id="btn-map-slider-prev" aria-label="Geser ke Kiri" title="Geser ke Kiri" onclick="slideMapDestinations('left')">
-              <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-left"/></svg>
+            <button type="button" class="btn-slider-arrow" id="btn-map-slider-prev" aria-label="Geser ke Kiri"
+              title="Geser ke Kiri" onclick="slideMapDestinations('left')">
+              <svg class="svg-icon svg-icon-sm">
+                <use href="#icon-arrow-left" />
+              </svg>
             </button>
-            <button type="button" class="btn-slider-arrow" id="btn-map-slider-next" aria-label="Geser ke Kanan" title="Geser ke Kanan" onclick="slideMapDestinations('right')">
-              <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-right"/></svg>
+            <button type="button" class="btn-slider-arrow" id="btn-map-slider-next" aria-label="Geser ke Kanan"
+              title="Geser ke Kanan" onclick="slideMapDestinations('right')">
+              <svg class="svg-icon svg-icon-sm">
+                <use href="#icon-arrow-right" />
+              </svg>
             </button>
           </div>
         </div>
@@ -756,19 +868,27 @@
        ============================================================================== -->
   <dialog class="custom-modal" id="dest-detail-modal">
     <button type="button" class="modal-close-trigger" id="modal-close-btn" title="Tutup Modal" aria-label="Tutup Modal">
-      <svg class="svg-icon svg-icon-sm"><use href="#icon-x"/></svg>
+      <svg class="svg-icon svg-icon-sm">
+        <use href="#icon-x" />
+      </svg>
     </button>
     <div class="modal-hero-cover">
-      <img id="modal-header-img" src="" alt="Hero Destination">
+      <img id="modal-header-img"
+        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+        alt="Wisata Maritim Indonesia"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80';">
       <div class="modal-hero-text">
         <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:0.25rem">
-          <span class="card-code-tag" id="modal-dest-code">SMT-01</span>
-          <button type="button" class="btn-card-bookmark" id="modal-dest-fav-btn" title="Simpan ke Favorit" style="position:static;width:36px;height:36px">
-            <svg class="svg-icon svg-icon-sm"><use href="#icon-heart"/></svg>
+          <span class="card-code-tag" id="modal-dest-code">Memuat...</span>
+          <button type="button" class="btn-card-bookmark" id="modal-dest-fav-btn" title="Simpan ke Favorit"
+            style="position:static;width:36px;height:36px">
+            <svg class="svg-icon svg-icon-sm">
+              <use href="#icon-heart" />
+            </svg>
           </button>
         </div>
-        <h2 id="modal-dest-title">Nama Destinasi</h2>
-        <span style="font-size:0.85rem;opacity:0.9" id="modal-dest-loc">Lokasi, Provinsi</span>
+        <h2 id="modal-dest-title">Memuat Destinasi...</h2>
+        <span style="font-size:0.85rem;opacity:0.9" id="modal-dest-loc">Lokasi Destinasi</span>
       </div>
     </div>
 
@@ -789,12 +909,15 @@
             <img src="images/logo.jpg" alt="Logo Ombak Nusantara" class="brand-logo-img">
           </div>
           <div>
-            <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:white;margin:0">Ombak Nusantara</h3>
-            <span style="font-size:0.75rem;color:var(--accent-coral);font-weight:700">Wisata Maritim Indonesia · Kelompok 09</span>
+            <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:white;margin:0">Ombak
+              Nusantara</h3>
+            <span style="font-size:0.75rem;color:var(--accent-coral);font-weight:700">Wisata Maritim Indonesia ·
+              Kelompok 09</span>
           </div>
         </div>
         <p style="color:#94a3b8;font-size:0.85rem;line-height:1.6;max-width:440px">
-          Sistem mesin pencari dan penjelajah pengetahuan maritim Indonesia berbasis Web Semantik. Mengintegrasikan ontologi W3C RDF Turtle, pemetaan harga Google-style, dan eksplorasi peta interaktif Nusantara.
+          Sistem mesin pencari dan penjelajah pengetahuan maritim Indonesia berbasis Web Semantik. Mengintegrasikan
+          ontologi W3C RDF Turtle, pemetaan harga Google-style, dan eksplorasi peta interaktif Nusantara.
         </p>
       </div>
 
@@ -828,4 +951,5 @@
   <script src="js/dbpedia.js"></script>
   <script src="js/chatbot.js"></script>
 </body>
+
 </html>
