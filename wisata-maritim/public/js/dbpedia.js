@@ -288,46 +288,68 @@ LIMIT 3`;
     'rajaampat': 'raja ampat'
   };
 
+  function isSubsequenceMatch(shortStr, targetWord) {
+    if (!shortStr || !targetWord || shortStr.length < 3) return false;
+    if (shortStr[0] !== targetWord[0]) return false;
+    if (shortStr.length / targetWord.length < 0.48) return false;
+    let i = 0;
+    for (let j = 0; j < targetWord.length && i < shortStr.length; j++) {
+      if (shortStr[i] === targetWord[j]) i++;
+    }
+    return i === shortStr.length;
+  }
+
   function normalizeTypoLeetspeak(str) {
     if (!str) return '';
-    let s = str
-      .toLowerCase()
-      .replace(/3/g, 'e')
-      .replace(/4|@/g, 'a')
-      .replace(/1|!|\|/g, 'i')
-      .replace(/0/g, 'o')
-      .replace(/5|\$/g, 's')
-      .replace(/8/g, 'b')
-      .replace(/7/g, 't');
+    // Tokenisasi terlebih dahulu agar angka murni / nominal budget (misal 100rb, 250000) tidak berubah menjadi huruf
+    const rawTokens = str.toLowerCase().split(/[\s,?.!;:/\-\(\)]+/).filter(Boolean);
+    const canonicalKeywords = [
+      'halo', 'selamat', 'pantai', 'pulau', 'snorkeling', 'diving', 'surfing',
+      'berenang', 'kano', 'kuliner', 'peralatan', 'sewa', 'harga', 'tiket',
+      'murah', 'gratis', 'rekomendasi', 'pemula', 'menengah', 'ahli',
+      'bali', 'jawa', 'sumatra', 'kalimantan', 'sulawesi', 'maluku', 'papua',
+      'bunaken', 'komodo', 'wakatobi', 'karimunjawa', 'derawan', 'morotai',
+      'lampuuk', 'raja', 'ampat', 'lombok', 'labuan', 'bajo', 'mentawai',
+      'belitung', 'pahawang', 'tulamben', 'uluwatu', 'kelingking', 'pangandaran', 'sawarna'
+    ];
 
-    // Kompres huruf berulang lebih dari 2 kali: e.g. "hiiii" -> "hi", "pantaii" -> "pantai"
-    s = s.replace(/([a-z])\1{2,}/g, '$1');
+    const correctedTokens = rawTokens.map(rawTok => {
+      // Jangan ubah nominal angka/budget (misal: 0, 100, 100rb, 250k, 1jt)
+      if (/^\d+(rb|ribu|k|jt|juta)?$/.test(rawTok)) {
+        return rawTok;
+      }
 
-    // Tokenisasi per kata untuk koreksi typo & fuzzy matching
-    const tokens = s.split(/[\s,?.!;:/\-\(\)]+/).filter(Boolean);
-    const correctedTokens = tokens.map(tok => {
+      let tok = rawTok
+        .replace(/3/g, 'e')
+        .replace(/4|@/g, 'a')
+        .replace(/1|!|\|/g, 'i')
+        .replace(/0/g, 'o')
+        .replace(/5|\$/g, 's')
+        .replace(/6|9/g, 'g')
+        .replace(/8/g, 'b')
+        .replace(/7/g, 't')
+        .replace(/2/g, 'z')
+        .replace(/([a-z])\1{2,}/g, '$1');
+
       // 1. Cek kamus typo eksak
       if (TYPO_DICTIONARY[tok]) return TYPO_DICTIONARY[tok];
 
-      // 2. Fuzzy Levenshtein untuk kata-kata kunci utama
-      const canonicalKeywords = [
-        'halo', 'selamat', 'pantai', 'pulau', 'snorkeling', 'diving', 'surfing',
-        'berenang', 'kano', 'kuliner', 'peralatan', 'sewa', 'harga', 'tiket',
-        'murah', 'gratis', 'rekomendasi', 'pemula', 'menengah', 'ahli',
-        'bali', 'jawa', 'sumatra', 'kalimantan', 'sulawesi', 'maluku', 'papua',
-        'bunaken', 'komodo', 'wakatobi', 'karimunjawa', 'derawan', 'morotai'
-      ];
-
+      // 2. Subsequence & Fuzzy Levenshtein untuk kata-kata kunci utama
       if (tok.length >= 4) {
         let bestCandidate = tok;
         let minDiff = 999;
-        const maxDist = tok.length > 5 ? 2 : 1;
+        const maxDist = tok.length >= 6 ? 2 : (tok.length === 5 ? 2 : 1);
 
         for (const can of canonicalKeywords) {
-          const diff = levenshteinDistance(tok, can);
-          if (diff <= maxDist && diff < minDiff) {
-            minDiff = diff;
-            bestCandidate = can;
+          if (isSubsequenceMatch(tok, can)) {
+            return can;
+          }
+          if (Math.abs(tok.length - can.length) <= maxDist) {
+            const diff = levenshteinDistance(tok, can);
+            if (diff <= maxDist && diff < minDiff) {
+              minDiff = diff;
+              bestCandidate = can;
+            }
           }
         }
         if (minDiff <= maxDist) {

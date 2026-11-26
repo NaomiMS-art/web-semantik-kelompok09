@@ -6,7 +6,7 @@ const STOP_WORDS = new Set([
   'apa', 'saja', 'aja', 'laut', 'pantai', 'air', 'bahari', 'pesisir', 'pulau'
 ]);
 
-// Normalisasi leetspeak & angka yang mewakili huruf (misal: 3->e, 4/@->a, 1/!->i, 0->o, 5/$->s, 8->b, 7->t)
+// Normalisasi leetspeak & angka yang mewakili huruf (misal: 3->e, 4/@->a, 1/!->i, 0->o, 5/$->s, 6/9->g, 8->b, 7->t, 2->z)
 function normalizeTypoLeetspeak(str) {
   if (!str) return '';
   return str
@@ -16,8 +16,23 @@ function normalizeTypoLeetspeak(str) {
     .replace(/1|!|\|/g, 'i')
     .replace(/0/g, 'o')
     .replace(/5|\$/g, 's')
+    .replace(/6|9/g, 'g')
     .replace(/8/g, 'b')
-    .replace(/7/g, 't');
+    .replace(/7/g, 't')
+    .replace(/2/g, 'z')
+    .replace(/([a-z])\1{2,}/g, '$1');
+}
+
+// Cek apakah semua huruf shortStr muncul berurutan di dalam targetWord (misal: "bunkn" -> "bunaken", "lmpuk" -> "lampuuk")
+function isSubsequenceMatch(shortStr, targetWord) {
+  if (!shortStr || !targetWord || shortStr.length < 3) return false;
+  if (shortStr[0] !== targetWord[0]) return false;
+  if (shortStr.length / targetWord.length < 0.48) return false;
+  let i = 0;
+  for (let j = 0; j < targetWord.length && i < shortStr.length; j++) {
+    if (shortStr[i] === targetWord[j]) i++;
+  }
+  return i === shortStr.length;
 }
 
 // Levenshtein distance sederhana untuk typo tolerance kata tunggal
@@ -43,35 +58,59 @@ function levenshtein(a, b) {
   return matrix[b.length][a.length];
 }
 
-// Cek apakah keyword cocok dengan text haystack (dengan leetspeak + typo tolerance)
-function matchKeywordFuzzy(kw, haystack) {
-  if (!kw || !haystack) return false;
-  const kwRaw = kw.toLowerCase().trim();
-  const kwNorm = normalizeTypoLeetspeak(kwRaw);
-  const hayRaw = haystack.toLowerCase();
-  const hayNorm = normalizeTypoLeetspeak(hayRaw);
+// Hitung skor kecocokan sebuah kata terhadap field teks (exact > startsWith > substring > subsequence/typo)
+function scoreTextMatch(kwNorm, textRaw, allowFuzzy = true) {
+  if (!kwNorm || !textRaw) return 0;
+  const textNorm = normalizeTypoLeetspeak(textRaw);
+  const words = textNorm.split(/[^a-z0-9]+/).filter(Boolean);
 
-  // 1. Direct substring match (raw or leetspeak normalized)
-  if (hayRaw.includes(kwRaw) || hayRaw.includes(kwNorm) || hayNorm.includes(kwNorm)) {
-    return true;
-  }
+  if (words.includes(kwNorm)) return 120;
+  if (words.some(w => w.startsWith(kwNorm))) return 100;
+  if (textNorm.includes(kwNorm)) return 75;
 
-  // 2. Token-level fuzzy match
-  const hayWords = hayNorm.split(/[^a-z0-9]+/).filter(w => w.length >= 2);
-  for (const hw of hayWords) {
-    if (hw === kwNorm || hw.startsWith(kwNorm) || hw.includes(kwNorm)) {
-      return true;
-    }
-    // Typo tolerance Levenshtein jika panjang kata >= 4
-    if (kwNorm.length >= 4 && hw.length >= 4) {
-      const maxDist = kwNorm.length > 5 ? 2 : 1;
-      if (levenshtein(hw, kwNorm) <= maxDist) {
-        return true;
+  if (allowFuzzy && kwNorm.length >= 4) {
+    let bestFuzzy = 0;
+    for (const hw of words) {
+      if (hw.length < 3) continue;
+      if (isSubsequenceMatch(kwNorm, hw)) {
+        bestFuzzy = Math.max(bestFuzzy, 55);
+      }
+      const maxDist = kwNorm.length >= 6 ? 2 : (kwNorm.length === 5 && hw[0] === kwNorm[0] ? 2 : 1);
+      if (Math.abs(hw.length - kwNorm.length) <= maxDist) {
+        const dist = levenshtein(hw, kwNorm);
+        if (dist <= maxDist) {
+          bestFuzzy = Math.max(bestFuzzy, 50 - dist * 10);
+        }
       }
     }
+    return bestFuzzy;
   }
 
-  return false;
+  return 0;
+}
+
+// Hitung skor kecocokan keyword terhadap destinasi:
+// - Query pendek (<= 3 huruf, misal "bu", "pu", "lam") HANYA mencocokkan nama destinasi agar hasil akurat
+// - Query >= 4 huruf juga mencocokkan lokasi/provinsi/aktivitas/atraksi dengan prioritas di bawah nama
+function scoreDestinationKeyword(kw, dest) {
+  const kwNorm = normalizeTypoLeetspeak((kw || '').toLowerCase().trim());
+  if (!kwNorm) return 0;
+
+  const nameScore = scoreTextMatch(kwNorm, dest.nama || '', true);
+  if (nameScore > 0) return nameScore;
+
+  // Untuk kata pendek (2-3 huruf), wajib ada di nama destinasi
+  if (kwNorm.length <= 3) return 0;
+
+  const locText = `${dest.lokasi || ''} ${dest.kabKota || ''} ${dest.provinsi || ''} ${dest.wilayah || ''}`;
+  const locScore = scoreTextMatch(kwNorm, locText, true);
+  if (locScore > 0) return Math.round(locScore * 0.35);
+
+  const metaText = `${dest.jenisWisata || ''} ${dest.aktivitasStr || ''} ${dest.atraksi || ''} ${dest.fasilitasStr || ''}`;
+  const metaScore = scoreTextMatch(kwNorm, metaText, true);
+  if (metaScore > 0) return Math.round(metaScore * 0.2);
+
+  return 0;
 }
 
 class SemanticSearch {
@@ -130,6 +169,29 @@ class SemanticSearch {
 
     // Normalisasikan leetspeak pada teks query yang tersisa (misal: b3l -> bel, sn0rkeling -> snorkeling, p4nt4i -> pantai)
     q = normalizeTypoLeetspeak(q);
+
+    // Fuzzy token correction untuk kata kunci semantik utama (aktivitas, wilayah, tingkat keahlian)
+    const semanticCanonical = [
+      'snorkeling', 'diving', 'surfing', 'berenang', 'kano', 'kayak', 'memancing', 'camping', 'fotografi', 'kuliner',
+      'pemula', 'menengah', 'mahir', 'sumatra', 'jawa', 'kalimantan', 'bali', 'sulawesi', 'maluku', 'papua'
+    ];
+    q = q.replace(/\b([a-z]{4,})\b/g, (word) => {
+      if (semanticCanonical.includes(word)) return word;
+      let best = word;
+      let bestDist = 99;
+      const maxD = word.length >= 6 ? 2 : 1;
+      for (const can of semanticCanonical) {
+        if (isSubsequenceMatch(word, can)) return can;
+        if (Math.abs(word.length - can.length) <= maxD) {
+          const d = levenshtein(word, can);
+          if (d <= maxD && d < bestDist) {
+            bestDist = d;
+            best = can;
+          }
+        }
+      }
+      return best;
+    });
 
     // 2. Ekstraksi Tingkat Keahlian
     if (/di ?atas pemula|bukan pemula|setelah pemula/i.test(q)) {
@@ -430,6 +492,7 @@ class SemanticSearch {
       favIds: Array.isArray(params.favIds) ? params.favIds : (params.favIds ? params.favIds.split(',') : [])
     };
 
+    const scoreMap = new Map();
     // Filter seluruh destinasi
     let matches = this.destinasiList.filter(d => {
       // 1. Jenis Wisata
@@ -522,15 +585,23 @@ class SemanticSearch {
         if (!filters.favIds.includes(d.id)) return false;
       }
 
-      // 11. Sisa kata kunci bebas (mendukung leetspeak b3l -> bel dan typo tolerance)
+      // 11. Sisa kata kunci bebas (mendukung leetspeak, substring nama wisata, dan typo tolerance)
       if (parsed.keywords && parsed.keywords.length > 0) {
-        const searchHaystack = (d.nama + ' ' + d.lokasi + ' ' + (d.kabKota || '') + ' ' + d.provinsi + ' ' + d.wilayah + ' ' + d.jenisWisata + ' ' + d.aktivitasStr + ' ' + d.atraksi + ' ' + d.fasilitasStr).toLowerCase();
-        const matchesAll = parsed.keywords.every(kw => matchKeywordFuzzy(kw, searchHaystack));
-        if (!matchesAll) return false;
+        let totalScore = 0;
+        for (const kw of parsed.keywords) {
+          const s = scoreDestinationKeyword(kw, d);
+          if (s <= 0) return false;
+          totalScore += s;
+        }
+        scoreMap.set(d.id, totalScore);
       }
 
       return true;
     });
+
+    if (parsed.keywords && parsed.keywords.length > 0) {
+      matches.sort((a, b) => (scoreMap.get(b.id) || 0) - (scoreMap.get(a.id) || 0));
+    }
 
     const reasoning = this.buildReasoningSteps(parsed, filters);
     const sparql = this.generateSparqlQuery(parsed, filters);
