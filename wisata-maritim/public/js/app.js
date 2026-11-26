@@ -1015,13 +1015,16 @@ function renderDestinationCards(destList, targetGridId = 'destinations-grid') {
     return;
   }
 
-  grid.innerHTML = destList.map(d => {
+  grid.innerHTML = destList.map((d, idx) => {
     const isFav = APP_STATE.favorites.includes(d.id);
     const photoUrl = d.foto || getPhotoForDestination(d);
     const skillClass = `skill-${(d.level || 'pemula').toLowerCase().split(' ')[0]}`;
 
+    // Tag nomor urut destinasi (menegaskan urutan lengkap 1 s/d 336)
+    const numBadge = `<span class="badge-tag-clean" style="background:rgba(7,21,38,0.75);color:#fff;font-weight:700;font-size:0.68rem;padding:2px 6px">#${idx + 1}</span>`;
+
     // Tag peralatan
-    const eqChips = d.peralatan.slice(0, 3).map(eq => {
+    const eqChips = (d.peralatan || []).slice(0, 3).map(eq => {
       const priceText = eq.hargaSewa ? formatRupiah(eq.hargaSewa) : 'Include';
       return `<span class="mini-gear-tag">${escapeHtml(eq.nama.split(' ')[0])} (${priceText})</span>`;
     }).join('');
@@ -1032,7 +1035,10 @@ function renderDestinationCards(destList, targetGridId = 'destinations-grid') {
           <img src="${photoUrl}" alt="${escapeHtml(d.nama)}" loading="lazy">
           <div class="card-photo-overlay">
             <div class="card-badge-row">
-              <span class="badge-tag-clean">${escapeHtml(d.jenisWisata)}</span>
+              <div style="display:flex;gap:0.35rem;align-items:center">
+                <span class="badge-tag-clean">${escapeHtml(d.jenisWisata)}</span>
+                ${numBadge}
+              </div>
               <button type="button" class="btn-card-bookmark ${isFav ? 'active' : ''}" data-fav="${d.id}" title="Simpan Destinasi">
                 <svg class="svg-icon svg-icon-sm"><use href="#icon-heart"/></svg>
               </button>
@@ -1083,9 +1089,12 @@ function renderDestinationCards(destList, targetGridId = 'destinations-grid') {
     `;
   }).join('');
 
-  grid.querySelectorAll('.btn-open-detail-pro').forEach(btn => {
-    btn.addEventListener('click', () => {
-      openDestinationModal(btn.dataset.open);
+  // Klik seluruh kotak kartu untuk langsung membuka modal detail
+  grid.querySelectorAll('.card-destination-pro').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Abaikan jika klik tombol bookmark agar aksi simpan favorit tidak tertimpa
+      if (e.target.closest('.btn-card-bookmark')) return;
+      openDestinationModal(card.dataset.id);
     });
   });
 
@@ -2044,9 +2053,12 @@ async function renderNearbyDestinations(refLat, refLon, sourceLabel) {
     `;
   }).join('');
 
-  grid.querySelectorAll('.btn-open-detail-pro').forEach(btn => {
-    btn.addEventListener('click', () => {
-      openDestinationModal(btn.dataset.open);
+  // Klik seluruh kotak kartu untuk langsung membuka modal detail
+  grid.querySelectorAll('.card-destination-pro').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Abaikan jika klik tombol bookmark agar aksi simpan favorit tidak tertimpa
+      if (e.target.closest('.btn-card-bookmark')) return;
+      openDestinationModal(card.dataset.id);
     });
   });
 
@@ -2214,7 +2226,7 @@ function updateMapMarkers(regionFilter = '') {
   if (countEl) {
     countEl.textContent = regionFilter
       ? `Destinasi di Wilayah ${regionFilter} (${filtered.length} Destinasi)`
-      : `Seluruh Destinasi Bahari Nusantara (${filtered.length} Destinasi)`;
+      : `Seluruh Destinasi Maritim Nusantara (${filtered.length} Destinasi)`;
   }
 
   const maritimeIcon = L.divIcon({
@@ -2238,7 +2250,7 @@ function updateMapMarkers(regionFilter = '') {
         <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">
           <span style="background:#e0f2fe;color:#0284c7;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">Level: ${escapeHtml(d.level)}</span>
           <span style="background:#ecfdf5;color:#059669;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">${formatRupiah(d.estimasiTotalPerOrang)}</span>
-          <span style="background:#f0fdf4;color:#15803d;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">🌊 ${escapeHtml(d.jenisWisata || 'Wisata Bahari')}</span>
+          <span style="background:#f0fdf4;color:#15803d;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">🌊 ${escapeHtml(d.jenisWisata || 'Wisata Maritim')}</span>
         </div>
         <button type="button" class="btn-search-exec" style="width:100%;height:32px;font-size:0.75rem;padding:0" onclick="openDestinationModal('${d.id}')">
           Buka Detail &amp; Wisata Sekitar
@@ -2248,6 +2260,18 @@ function updateMapMarkers(regionFilter = '') {
     mapMarkerLayer.addLayer(marker);
   });
 
-  // Render kartu destinasi di bawah peta (slice 12 item)
-  renderDestinationCards(filtered.slice(0, 12), 'map-destinations-grid');
+  // Render SELURUH kartu destinasi di slider horizontal bawah peta (Sistem Slide Kesamping)
+  renderDestinationCards(filtered, 'map-destinations-grid');
 }
+
+/**
+ * Kontrol geser slider destinasi peta ke samping (Kiri / Kanan)
+ */
+function slideMapDestinations(direction) {
+  const slider = document.getElementById('map-destinations-grid');
+  if (!slider) return;
+  const cardWidth = 320;
+  const scrollAmount = direction === 'left' ? -(cardWidth * 2) : (cardWidth * 2);
+  slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}
+window.slideMapDestinations = slideMapDestinations;
