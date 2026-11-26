@@ -129,7 +129,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Pulau_Rubiah_dari_Pulau_Iboih_Sabang.jpg/960px-Pulau_Rubiah_dari_Pulau_Iboih_Sabang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 5.8693,
     "longitude": 95.2588,
     "kuliner": [
@@ -166,7 +166,8 @@
         "longitude": 95.2389,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pulau Rubiah dari Pulau Iboih Sabang.jpg)"
   },
   {
     "id": "SMT-02",
@@ -427,7 +428,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Banyak_Islands.jpg/960px-Banyak_Islands.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 2.1833,
     "longitude": 97.25,
     "kuliner": [
@@ -464,7 +465,8 @@
         "longitude": 97.2387,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kepulauan Banyak)"
   },
   {
     "id": "SMT-04",
@@ -745,7 +747,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Masjid_Rahmatullah_Lampuuk_%28cropped%29.jpg/960px-Masjid_Rahmatullah_Lampuuk_%28cropped%29.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 5.4851,
     "longitude": 95.2341,
     "kuliner": [
@@ -782,7 +784,8 @@
         "longitude": 95.2545,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Masjid Rahmatullah Lampuuk)"
   },
   {
     "id": "SMT-07",
@@ -833,7 +836,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/PLTD_Apong_Ie_Beuna.JPG/960px-PLTD_Apong_Ie_Beuna.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 5.5456,
     "longitude": 95.3181,
     "kuliner": [
@@ -870,7 +873,8 @@
         "longitude": 95.337,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (PLTD Apung)"
   },
   {
     "id": "SMT-08",
@@ -961,7 +965,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Pulo_Ie%2C_South_Kluet%2C_South_Aceh_Regency%2C_Aceh%2C_Indonesia_-_panoramio.jpg/960px-Pulo_Ie%2C_South_Kluet%2C_South_Aceh_Regency%2C_Aceh%2C_Indonesia_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 5.6667,
     "longitude": 95.1167,
     "kuliner": [
@@ -998,7 +1002,8 @@
         "longitude": 95.1265,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pulo Ie, South Kluet, South Aceh Regency, Aceh, Indonesia - panoramio.jpg)"
   },
   {
     "id": "SMT-09",
@@ -1158,7 +1163,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Kecamatan_Pantai_Cermin%2C_Serdang_Bedagai_%2801%29.jpg/960px-Kecamatan_Pantai_Cermin%2C_Serdang_Bedagai_%2801%29.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 3.6425,
     "longitude": 98.9881,
     "kuliner": [
@@ -1195,7 +1200,8 @@
         "longitude": 98.9759,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Cermin, Serdang Bedagai)"
   },
   {
     "id": "SMT-11",
@@ -1285,7 +1291,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Pulau_Berhala.jpg/960px-Pulau_Berhala.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 3.7758,
     "longitude": 99.5036,
     "kuliner": [
@@ -1322,7 +1328,8 @@
         "longitude": 99.4837,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Berhala (Kepulauan Riau))"
   },
   {
     "id": "SMT-12",
@@ -1411,7 +1418,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Mursalaisland.jpg/960px-Mursalaisland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 1.6425,
     "longitude": 98.5336,
     "kuliner": [
@@ -1448,7 +1455,8 @@
         "longitude": 98.5141,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Mursalaisland.jpg)"
   },
   {
     "id": "SMT-13",
@@ -1499,7 +1507,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Welcome_gate_to_Pandan%2C_Tapanuli_Tengah_%2801%29.jpg/960px-Welcome_gate_to_Pandan%2C_Tapanuli_Tengah_%2801%29.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 1.6917,
     "longitude": 98.8167,
     "kuliner": [
@@ -1536,7 +1544,8 @@
         "longitude": 98.8054,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pandan, Tapanuli Tengah)"
   },
   {
     "id": "SMT-14",
@@ -1608,7 +1617,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Pelabuhan_Kapal_Tuapejat_202308073.jpg/960px-Pelabuhan_Kapal_Tuapejat_202308073.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -2.7667,
     "longitude": 100.0833,
     "kuliner": [
@@ -1645,7 +1654,8 @@
         "longitude": 100.0847,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kabupaten Kepulauan Mentawai)"
   },
   {
     "id": "SMT-15",
@@ -1737,7 +1747,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Pantai_Carocok_Painan.jpg/960px-Pantai_Carocok_Painan.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -1.3486,
     "longitude": 100.5732,
     "kuliner": [
@@ -1774,7 +1784,8 @@
         "longitude": 100.5868,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Carocok)"
   },
   {
     "id": "SMT-16",
@@ -1866,7 +1877,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/PULAU_PASUMPAHAN%2C_SUMATRA_BARAT.jpg/960px-PULAU_PASUMPAHAN%2C_SUMATRA_BARAT.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -1.1167,
     "longitude": 100.3667,
     "kuliner": [
@@ -1903,7 +1914,8 @@
         "longitude": 100.387,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Pasumpahan)"
   },
   {
     "id": "SMT-17",
@@ -1954,7 +1966,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Pemandangan_pantai_air_manis_dari_ketinggian.jpg/960px-Pemandangan_pantai_air_manis_dari_ketinggian.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -0.9856,
     "longitude": 100.3542,
     "kuliner": [
@@ -1991,7 +2003,8 @@
         "longitude": 100.373,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Air Manis)"
   },
   {
     "id": "SMT-18",
@@ -2072,7 +2085,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Sikuai_Island.jpg/960px-Sikuai_Island.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -1.1167,
     "longitude": 100.35,
     "kuliner": [
@@ -2109,7 +2122,8 @@
         "longitude": 100.3597,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Sikuai)"
   },
   {
     "id": "SMT-19",
@@ -2160,7 +2174,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/YKL_7855.jpg/960px-YKL_7855.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 2.0167,
     "longitude": 101.5833,
     "kuliner": [
@@ -2197,7 +2211,8 @@
         "longitude": 101.5801,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Rupat)"
   },
   {
     "id": "SMT-20",
@@ -2278,7 +2293,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Sebong_Lagoi%2C_Teluk_Sebong%2C_Bintan_Regency%2C_Riau_Islands%2C_Indonesia_-_panoramio.jpg/960px-Sebong_Lagoi%2C_Teluk_Sebong%2C_Bintan_Regency%2C_Riau_Islands%2C_Indonesia_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 1.1764,
     "longitude": 104.3803,
     "kuliner": [
@@ -2315,7 +2330,8 @@
         "longitude": 104.3681,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Sebong Lagoi, Teluk Sebong, Bintan Regency, Riau Islands, Indonesia - panoramio.jpg)"
   },
   {
     "id": "SMT-21",
@@ -2457,7 +2473,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Pantai_Padang_Melang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "latitude": 3.2356,
     "longitude": 106.2758,
     "kuliner": [
@@ -2494,7 +2510,8 @@
         "longitude": 106.256,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Padang Melang.jpg)"
   },
   {
     "id": "SMT-22",
@@ -2545,7 +2562,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Pulau_Penyengat.JPG/960px-Pulau_Penyengat.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 0.9281,
     "longitude": 104.4194,
     "kuliner": [
@@ -2582,7 +2599,8 @@
         "longitude": 104.3999,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Penyengat)"
   },
   {
     "id": "SMT-23",
@@ -2721,7 +2739,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Pantai_Trikora_1.jpg/960px-Pantai_Trikora_1.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 1.1444,
     "longitude": 104.5639,
     "kuliner": [
@@ -2758,7 +2776,8 @@
         "longitude": 104.5653,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Trikora)"
   },
   {
     "id": "SMT-25",
@@ -2809,7 +2828,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1730178988919-0d7fe97bc499?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Jembatan_Tengku_Fisabilillah_%28jembatan_I%29.jpg/960px-Jembatan_Tengku_Fisabilillah_%28jembatan_I%29.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 0.9833,
     "longitude": 104.05,
     "kuliner": [
@@ -2846,7 +2865,8 @@
         "longitude": 104.0636,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Jembatan Barelang)"
   },
   {
     "id": "SMT-26",
@@ -2897,7 +2917,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/id/thumb/1/19/Nongsa_port.JPG/960px-Nongsa_port.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 1.1833,
     "longitude": 104.0958,
     "kuliner": [
@@ -2934,7 +2954,8 @@
         "longitude": 104.1161,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pelabuhan Nongsa)"
   },
   {
     "id": "SMT-27",
@@ -2984,7 +3005,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Pantai_Panjang_Bengkulu.jpg/960px-Pantai_Panjang_Bengkulu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -3.8167,
     "longitude": 102.2667,
     "kuliner": [
@@ -3021,7 +3042,8 @@
         "longitude": 102.2855,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Panjang Bengkulu.jpg)"
   },
   {
     "id": "SMT-28",
@@ -3071,7 +3093,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Fort_Marlborough_Depan.jpg/960px-Fort_Marlborough_Depan.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -3.7869,
     "longitude": 102.2508,
     "kuliner": [
@@ -3108,7 +3130,8 @@
         "longitude": 102.2605,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Benteng Marlborough)"
   },
   {
     "id": "SMT-29",
@@ -3368,7 +3391,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Tanjung_Tinggi_Beach%2C_Bangka-Belitung_Province%2C_Indonesia.jpg/960px-Tanjung_Tinggi_Beach%2C_Bangka-Belitung_Province%2C_Indonesia.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -2.5539,
     "longitude": 107.7139,
     "kuliner": [
@@ -3405,7 +3428,8 @@
         "longitude": 107.7017,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Tanjung Tinggi)"
   },
   {
     "id": "SMT-31",
@@ -3496,7 +3520,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Lengkuas_Island.JPG/960px-Lengkuas_Island.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -2.5317,
     "longitude": 107.6167,
     "kuliner": [
@@ -3533,7 +3557,8 @@
         "longitude": 107.5969,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Lengkuas)"
   },
   {
     "id": "SMT-32",
@@ -3586,7 +3611,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Pantai_Parai_Tenggiri_Bangka.jpg/960px-Pantai_Parai_Tenggiri_Bangka.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -1.8667,
     "longitude": 106.1667,
     "kuliner": [
@@ -3623,7 +3648,8 @@
         "longitude": 106.1472,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Parai Tenggiri)"
   },
   {
     "id": "SMT-33",
@@ -3674,7 +3700,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Matras_River_in_Matras_Beach.jpg/960px-Matras_River_in_Matras_Beach.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -1.8167,
     "longitude": 106.1333,
     "kuliner": [
@@ -3711,7 +3737,8 @@
         "longitude": 106.122,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Matras)"
   },
   {
     "id": "SMT-34",
@@ -3802,7 +3829,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Jalan_Taman_Bukit_Kepayang%2C_Seremban._Negeri_Sembilan._-_panoramio.jpg/960px-Jalan_Taman_Bukit_Kepayang%2C_Seremban._Negeri_Sembilan._-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -2.5667,
     "longitude": 107.65,
     "kuliner": [
@@ -3839,7 +3866,8 @@
         "longitude": 107.6514,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Jalan Taman Bukit Kepayang, Seremban. Negeri Sembilan. - panoramio.jpg)"
   },
   {
     "id": "SMT-35",
@@ -3929,7 +3957,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Kapal_berlayar_mendekati_Pulau_Batu.jpg/960px-Kapal_berlayar_mendekati_Pulau_Batu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -2.55,
     "longitude": 107.6667,
     "kuliner": [
@@ -3966,7 +3994,8 @@
         "longitude": 107.6803,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Kapal berlayar mendekati Pulau Batu.jpg)"
   },
   {
     "id": "SMT-36",
@@ -4018,7 +4047,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Pasir-padi.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -2.1333,
     "longitude": 106.1833,
     "kuliner": [
@@ -4055,7 +4084,8 @@
         "longitude": 106.2036,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Pasir Padi)"
   },
   {
     "id": "SMT-37",
@@ -4157,7 +4187,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Pahawang_Island%2C_Indonesia_%28Unsplash%29.jpg/960px-Pahawang_Island%2C_Indonesia_%28Unsplash%29.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -5.6738,
     "longitude": 105.2189,
     "kuliner": [
@@ -4194,7 +4224,8 @@
         "longitude": 105.2378,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Pahawang)"
   },
   {
     "id": "SMT-38",
@@ -4285,7 +4316,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Landscape_of_coconut_island_in_Kiluan_Bay.jpg/960px-Landscape_of_coconut_island_in_Kiluan_Bay.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -5.7667,
     "longitude": 105.15,
     "kuliner": [
@@ -4322,7 +4353,8 @@
         "longitude": 105.1598,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Teluk Kiluan)"
   },
   {
     "id": "SMT-39",
@@ -4414,7 +4446,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Anak_krakatau_sebelum_tsunami.jpg/960px-Anak_krakatau_sebelum_tsunami.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -6.1021,
     "longitude": 105.423,
     "kuliner": [
@@ -4451,7 +4483,8 @@
         "longitude": 105.4197,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Anak Krakatau)"
   },
   {
     "id": "SMT-40",
@@ -4533,7 +4566,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Pantai_mutun.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -5.5167,
     "longitude": 105.2667,
     "kuliner": [
@@ -4570,7 +4603,8 @@
         "longitude": 105.2545,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Mutun)"
   },
   {
     "id": "SMT-41",
@@ -4651,7 +4685,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Tegal_Mas_Island.jpg/960px-Tegal_Mas_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -5.5833,
     "longitude": 105.2833,
     "kuliner": [
@@ -4688,7 +4722,8 @@
         "longitude": 105.2634,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Tegal Mas Island.jpg)"
   },
   {
     "id": "SMT-42",
@@ -4985,7 +5020,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Surfing_Sawarna%2C_2017.jpg/960px-Surfing_Sawarna%2C_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -6.9844,
     "longitude": 106.3128,
     "kuliner": [
@@ -5022,7 +5057,8 @@
         "longitude": 106.2911,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Surfing Sawarna, 2017.jpg)"
   },
   {
     "id": "JWA-02",
@@ -5074,7 +5110,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Pantai_Anyer_Banten_Indonesia.jpg/960px-Pantai_Anyer_Banten_Indonesia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -6.0528,
     "longitude": 105.9083,
     "kuliner": [
@@ -5111,7 +5147,8 @@
         "longitude": 105.887,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Anyer Banten Indonesia.jpg)"
   },
   {
     "id": "JWA-03",
@@ -5192,7 +5229,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Peta_wisata_Kawasan_Ekonomi_Khusus_-_Tanjung_Lesung%2C_Panimbang%2C_Pandeglang%2C_Banten.jpg/960px-Peta_wisata_Kawasan_Ekonomi_Khusus_-_Tanjung_Lesung%2C_Panimbang%2C_Pandeglang%2C_Banten.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -6.4833,
     "longitude": 105.6589,
     "kuliner": [
@@ -5229,7 +5266,8 @@
         "longitude": 105.6466,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kawasan Ekonomi Khusus Tanjung Lesung)"
   },
   {
     "id": "JWA-04",
@@ -5310,7 +5348,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/9/90/Pulau_Tidung.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -5.8017,
     "longitude": 106.5258,
     "kuliner": [
@@ -5347,7 +5385,8 @@
         "longitude": 106.5274,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Tidung, Kepulauan Seribu Selatan, Kepulauan Seribu)"
   },
   {
     "id": "JWA-05",
@@ -5438,7 +5477,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/7/74/Dermaga_Pulau_Pramuka.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -5.7461,
     "longitude": 106.6139,
     "kuliner": [
@@ -5475,7 +5514,8 @@
         "longitude": 106.6288,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Pramuka)"
   },
   {
     "id": "JWA-06",
@@ -5567,7 +5607,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Foto_bersama_di_plang_antara_Palembang_dan_Jambi.jpg/960px-Foto_bersama_di_plang_antara_Palembang_dan_Jambi.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -5.6533,
     "longitude": 106.57,
     "kuliner": [
@@ -5604,7 +5644,8 @@
         "longitude": 106.5921,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Harapan, Sembawa, Banyuasin)"
   },
   {
     "id": "JWA-07",
@@ -5655,7 +5696,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Mercure_Ancol_-_panoramio.jpg/960px-Mercure_Ancol_-_panoramio.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -6.1215,
     "longitude": 106.8315,
     "kuliner": [
@@ -5692,7 +5733,8 @@
         "longitude": 106.852,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Mercure Convention Center Ancol)"
   },
   {
     "id": "JWA-08",
@@ -5772,7 +5814,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Pari_Island_Pier.jpg/960px-Pari_Island_Pier.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -5.8617,
     "longitude": 106.6217,
     "kuliner": [
@@ -5809,7 +5851,8 @@
         "longitude": 106.6323,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Pari)"
   },
   {
     "id": "JWA-09",
@@ -5860,7 +5903,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Pulau_Untung_Jawa_Kepulauan_Seribu_DKI.jpg/960px-Pulau_Untung_Jawa_Kepulauan_Seribu_DKI.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -5.9783,
     "longitude": 106.705,
     "kuliner": [
@@ -5897,7 +5940,8 @@
         "longitude": 106.7015,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Untung Jawa, Kepulauan Seribu Selatan, Kepulauan Seribu)"
   },
   {
     "id": "JWA-10",
@@ -5947,7 +5991,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Jakarta_Pelabuhan_Sunda_Kelapa.jpg/960px-Jakarta_Pelabuhan_Sunda_Kelapa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -6.1242,
     "longitude": 106.8089,
     "kuliner": [
@@ -5984,7 +6028,8 @@
         "longitude": 106.7956,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Jakarta Pelabuhan Sunda Kelapa.jpg)"
   },
   {
     "id": "JWA-11",
@@ -6037,7 +6082,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Mushroom_Rock_in_Cukang_Taneuh.jpg/960px-Mushroom_Rock_in_Cukang_Taneuh.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -7.7011,
     "longitude": 108.6508,
     "kuliner": [
@@ -6074,7 +6119,8 @@
         "longitude": 108.6291,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kabupaten Pangandaran)"
   },
   {
     "id": "JWA-12",
@@ -6156,7 +6202,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Pantai_Ujung_Genteng%2C_Sukabumi%2C_Jawa_Barat%2C_25052017.jpg/960px-Pantai_Ujung_Genteng%2C_Sukabumi%2C_Jawa_Barat%2C_25052017.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -7.3667,
     "longitude": 106.4,
     "kuliner": [
@@ -6193,7 +6239,8 @@
         "longitude": 106.3787,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Ujung Genteng, Ciracap, Sukabumi)"
   },
   {
     "id": "JWA-13",
@@ -6265,7 +6312,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Pantai_Pelabuhan_Ratu_-_panoramio.jpg/960px-Pantai_Pelabuhan_Ratu_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -6.9841,
     "longitude": 106.5414,
     "kuliner": [
@@ -6302,7 +6349,8 @@
         "longitude": 106.529,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Pelabuhan Ratu - panoramio.jpg)"
   },
   {
     "id": "JWA-14",
@@ -6383,7 +6431,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Pamengpeuk_Beach%2C_Garut.jpg/960px-Pamengpeuk_Beach%2C_Garut.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -7.6583,
     "longitude": 107.6917,
     "kuliner": [
@@ -6420,7 +6468,8 @@
         "longitude": 107.6933,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Santolo)"
   },
   {
     "id": "JWA-15",
@@ -6563,7 +6612,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Karimunjawa_2019-09-13_Landsat_8_T1_TOA.jpeg/960px-Karimunjawa_2019-09-13_Landsat_8_T1_TOA.jpeg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -5.8458,
     "longitude": 110.4289,
     "kuliner": [
@@ -6600,7 +6649,8 @@
         "longitude": 110.4438,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kepulauan Karimunjawa)"
   },
   {
     "id": "JWA-16",
@@ -6651,7 +6701,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Halte_Transjakarta_Bandengan_%282026%29_01.jpg/960px-Halte_Transjakarta_Bandengan_%282026%29_01.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -6.55,
     "longitude": 110.65,
     "kuliner": [
@@ -6688,7 +6738,8 @@
         "longitude": 110.6722,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Halte Transjakarta Bandengan)"
   },
   {
     "id": "JWA-17",
@@ -6739,7 +6790,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Loggerhead_sea_turtle.jpg/960px-Loggerhead_sea_turtle.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -7.7383,
     "longitude": 109.0233,
     "kuliner": [
@@ -6776,7 +6827,8 @@
         "longitude": 109.0439,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Penyu tempayan)"
   },
   {
     "id": "JWA-18",
@@ -6829,7 +6881,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Dusk_till_dawn_%28cropped%29.jpg/960px-Dusk_till_dawn_%28cropped%29.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.0189,
     "longitude": 110.3204,
     "kuliner": [
@@ -6866,7 +6918,8 @@
         "longitude": 110.3311,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Parangtritis)"
   },
   {
     "id": "JWA-19",
@@ -6918,7 +6971,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Pantai_Indrayanti_%28Pulang_Sawal%29_Gunungkidul.jpg/960px-Pantai_Indrayanti_%28Pulang_Sawal%29_Gunungkidul.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.1517,
     "longitude": 110.6128,
     "kuliner": [
@@ -6955,7 +7008,8 @@
         "longitude": 110.6092,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Indrayanti)"
   },
   {
     "id": "JWA-20",
@@ -7006,7 +7060,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/WATU_TOGOG_PANTAI_SIUNG.jpg/960px-WATU_TOGOG_PANTAI_SIUNG.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.1817,
     "longitude": 110.6833,
     "kuliner": [
@@ -7043,7 +7097,8 @@
         "longitude": 110.6699,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Siung)"
   },
   {
     "id": "JWA-21",
@@ -7095,7 +7150,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Sunset_papuma_beach.jpg/960px-Sunset_papuma_beach.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.4312,
     "longitude": 113.5601,
     "kuliner": [
@@ -7132,7 +7187,8 @@
         "longitude": 113.5383,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Papuma)"
   },
   {
     "id": "JWA-22",
@@ -7205,7 +7261,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Pulau_Merah.jpg/960px-Pulau_Merah.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.5992,
     "longitude": 114.0258,
     "kuliner": [
@@ -7242,7 +7298,8 @@
         "longitude": 114.0044,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Pulau Merah)"
   },
   {
     "id": "JWA-23",
@@ -7323,7 +7380,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Tiga_Warna_Beach.jpg/960px-Tiga_Warna_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.4375,
     "longitude": 112.6781,
     "kuliner": [
@@ -7360,7 +7417,8 @@
         "longitude": 112.6657,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Tiga Warna Beach.jpg)"
   },
   {
     "id": "JWA-24",
@@ -7412,7 +7470,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Pantai_Klayar%2C_Pacitan_-_panoramio.jpg/960px-Pantai_Klayar%2C_Pacitan_-_panoramio.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.2324,
     "longitude": 110.9472,
     "kuliner": [
@@ -7449,7 +7507,8 @@
         "longitude": 110.9488,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Klayar)"
   },
   {
     "id": "JWA-25",
@@ -7530,7 +7589,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/id/thumb/c/c2/Alun-Alun_Situbondo.jpg/960px-Alun-Alun_Situbondo.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -7.6908,
     "longitude": 113.8208,
     "kuliner": [
@@ -7567,7 +7626,8 @@
         "longitude": 113.8357,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kabupaten Situbondo)"
   },
   {
     "id": "JWA-26",
@@ -7618,7 +7678,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/id/6/6a/Teluk-hijau-finish.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -8.5583,
     "longitude": 113.925,
     "kuliner": [
@@ -7655,7 +7715,8 @@
         "longitude": 113.9473,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Teluk Hijau)"
   },
   {
     "id": "JWA-27",
@@ -7746,7 +7807,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Gili_Labak_Pulau_Surgawi.jpg/960px-Gili_Labak_Pulau_Surgawi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -7.2167,
     "longitude": 114.05,
     "kuliner": [
@@ -7783,7 +7844,8 @@
         "longitude": 114.0706,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Gili Labak Pulau Surgawi.jpg)"
   },
   {
     "id": "JWA-28",
@@ -7864,7 +7926,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bawean1.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -5.7833,
     "longitude": 112.65,
     "kuliner": [
@@ -7901,7 +7963,8 @@
         "longitude": 112.6606,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Bawean)"
   },
   {
     "id": "KLM-01",
@@ -8043,7 +8106,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Karimata.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -1.5833,
     "longitude": 109.1667,
     "kuliner": [
@@ -8080,7 +8143,8 @@
         "longitude": 109.152,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kepulauan Karimata)"
   },
   {
     "id": "KLM-02",
@@ -8132,7 +8196,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Pasir_Panjang_Beach%2C_Singkawang_City.jpg/960px-Pasir_Panjang_Beach%2C_Singkawang_City.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 0.8417,
     "longitude": 108.9167,
     "kuliner": [
@@ -8169,7 +8233,8 @@
         "longitude": 108.9023,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Pasir Panjang)"
   },
   {
     "id": "KLM-03",
@@ -8259,7 +8324,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/KLM-03.jpg",
     "latitude": 0.7583,
     "longitude": 108.6833,
     "kuliner": [
@@ -8296,7 +8361,8 @@
         "longitude": 108.675,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "KLM-04",
@@ -8347,7 +8413,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Kerang_di_tepian_pantai_temajuk.jpg/960px-Kerang_di_tepian_pantai_temajuk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 2.0167,
     "longitude": 109.65,
     "kuliner": [
@@ -8384,7 +8450,8 @@
         "longitude": 109.6511,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Kerang di tepian pantai temajuk.jpg)"
   },
   {
     "id": "KLM-05",
@@ -8435,7 +8502,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Camp_Kobes_Pantai_Ujung_Pandaran_%2820230113_154355%29.jpg/960px-Camp_Kobes_Pantai_Ujung_Pandaran_%2820230113_154355%29.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -3.05,
     "longitude": 112.9833,
     "kuliner": [
@@ -8472,7 +8539,8 @@
         "longitude": 112.9934,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Ujung Pandaran)"
   },
   {
     "id": "KLM-06",
@@ -8523,7 +8591,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/id/a/a8/Pantai_Batakan.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -3.9833,
     "longitude": 114.6167,
     "kuliner": [
@@ -8560,7 +8628,8 @@
         "longitude": 114.6317,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Batakan)"
   },
   {
     "id": "KLM-07",
@@ -8611,7 +8680,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/PantaiAngsanaPagiHari.jpeg/960px-PantaiAngsanaPagiHari.jpeg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -3.7667,
     "longitude": 115.5833,
     "kuliner": [
@@ -8648,7 +8717,8 @@
         "longitude": 115.5972,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Angsana)"
   },
   {
     "id": "KLM-08",
@@ -8699,7 +8769,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Kantor_Kelurahan_Kota_Pagatan%2C_Tanah_Bumbu.jpg/960px-Kantor_Kelurahan_Kota_Pagatan%2C_Tanah_Bumbu.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -3.6167,
     "longitude": 115.9167,
     "kuliner": [
@@ -8736,7 +8806,8 @@
         "longitude": 115.9239,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kota Pagatan, Kusan Hilir, Tanah Bumbu)"
   },
   {
     "id": "KLM-09",
@@ -8878,7 +8949,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Derawan_Island_East_Kalimantan.jpg/960px-Derawan_Island_East_Kalimantan.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 2.2872,
     "longitude": 118.2439,
     "kuliner": [
@@ -8915,7 +8986,8 @@
         "longitude": 118.2415,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kepulauan Derawan)"
   },
   {
     "id": "KLM-10",
@@ -9046,7 +9118,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Side_view_of_Maratua_Island.jpg/960px-Side_view_of_Maratua_Island.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 2.25,
     "longitude": 118.6167,
     "kuliner": [
@@ -9083,7 +9155,8 @@
         "longitude": 118.6077,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Maratua)"
   },
   {
     "id": "KLM-11",
@@ -9163,7 +9236,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Borneo_Topography.png/960px-Borneo_Topography.png?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 2.15,
     "longitude": 118.5333,
     "kuliner": [
@@ -9200,7 +9273,8 @@
         "longitude": 118.5186,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Kakaban)"
   },
   {
     "id": "KLM-12",
@@ -9301,7 +9375,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Sangalaki_aerial_photo.jpg/960px-Sangalaki_aerial_photo.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 2.0833,
     "longitude": 118.4,
     "kuliner": [
@@ -9338,7 +9412,8 @@
         "longitude": 118.3856,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Sangalaki)"
   },
   {
     "id": "KLM-13",
@@ -9389,7 +9464,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/KLM-13.jpg",
     "latitude": -1.275,
     "longitude": 116.8167,
     "kuliner": [
@@ -9426,7 +9501,8 @@
         "longitude": 116.8084,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "KLM-14",
@@ -9477,7 +9553,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Pantai-Manggar.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -1.2,
     "longitude": 116.9833,
     "kuliner": [
@@ -9514,7 +9590,8 @@
         "longitude": 116.9844,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Segara Sari, Manggar)"
   },
   {
     "id": "KLM-15",
@@ -9604,7 +9681,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Pulau_Beras_Basah_March_2018.jpg/960px-Pulau_Beras_Basah_March_2018.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 0.05,
     "longitude": 117.55,
     "kuliner": [
@@ -9641,7 +9718,8 @@
         "longitude": 117.56,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Beras Basah)"
   },
   {
     "id": "KLM-16",
@@ -9692,7 +9770,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Kantor_Kelurahan_Pantai_Amal%2C_Tarakan.JPG/960px-Kantor_Kelurahan_Pantai_Amal%2C_Tarakan.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 3.2833,
     "longitude": 117.65,
     "kuliner": [
@@ -9729,7 +9807,8 @@
         "longitude": 117.665,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Amal, Tarakan Timur, Tarakan)"
   },
   {
     "id": "KLM-17",
@@ -9780,7 +9859,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/KLM-17.png",
     "latitude": 3.3,
     "longitude": 117.5833,
     "kuliner": [
@@ -9817,7 +9896,8 @@
         "longitude": 117.5972,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "KLM-18",
@@ -9867,7 +9947,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Patok_1_Perbatasan_Indonesia-Malaysia_di_Sebatik_%282%29.JPG/960px-Patok_1_Perbatasan_Indonesia-Malaysia_di_Sebatik_%282%29.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 4.1667,
     "longitude": 117.75,
     "kuliner": [
@@ -9904,7 +9984,8 @@
         "longitude": 117.7572,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Sebatik)"
   },
   {
     "id": "BNT-01",
@@ -9977,7 +10058,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Pantai_Kuta_sejuta_cinta.jpg/960px-Pantai_Kuta_sejuta_cinta.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.7183,
     "longitude": 115.169,
     "kuliner": [
@@ -10014,7 +10095,8 @@
         "longitude": 115.1524,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Kuta)"
   },
   {
     "id": "BNT-02",
@@ -10157,7 +10239,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Broken_Beach.jpg/960px-Broken_Beach.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.7144,
     "longitude": 115.4586,
     "kuliner": [
@@ -10194,7 +10276,8 @@
         "longitude": 115.4423,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Nusa Penida)"
   },
   {
     "id": "BNT-03",
@@ -10246,7 +10329,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Kelingking_Beach%2C_Nusa_Penida.jpg/960px-Kelingking_Beach%2C_Nusa_Penida.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.7511,
     "longitude": 115.4744,
     "kuliner": [
@@ -10283,7 +10366,8 @@
         "longitude": 115.465,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Kelingking Beach, Nusa Penida.jpg)"
   },
   {
     "id": "BNT-04",
@@ -10840,7 +10924,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Pantai_di_Pulau_Menjangan_-_TN_Bali_Barat.jpg/960px-Pantai_di_Pulau_Menjangan_-_TN_Bali_Barat.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.0933,
     "longitude": 114.5167,
     "kuliner": [
@@ -10877,7 +10961,8 @@
         "longitude": 114.5324,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Menjangan)"
   },
   {
     "id": "BNT-08",
@@ -11009,7 +11094,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/MountAgung.jpg/960px-MountAgung.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.3417,
     "longitude": 115.6542,
     "kuliner": [
@@ -11046,7 +11131,8 @@
         "longitude": 115.6623,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Amed)"
   },
   {
     "id": "BNT-09",
@@ -11099,7 +11185,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Sanur_Beach.JPG/960px-Sanur_Beach.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.6888,
     "longitude": 115.2635,
     "kuliner": [
@@ -11136,7 +11222,8 @@
         "longitude": 115.2608,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Sanur)"
   },
   {
     "id": "BNT-10",
@@ -11267,7 +11354,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Snorkeling_Pemuteran_Bali_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "latitude": -8.1417,
     "longitude": 114.65,
     "kuliner": [
@@ -11304,7 +11391,8 @@
         "longitude": 114.6398,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Snorkeling Pemuteran Bali 3.jpg)"
   },
   {
     "id": "BNT-11",
@@ -11376,7 +11464,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Temple_uluwatu_ag1.jpg/960px-Temple_uluwatu_ag1.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.8291,
     "longitude": 115.0849,
     "kuliner": [
@@ -11413,7 +11501,8 @@
         "longitude": 115.0683,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pura Luhur Uluwatu)"
   },
   {
     "id": "BNT-12",
@@ -11495,7 +11584,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/4/44/Tanjung_Benoa_20120106.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -8.7617,
     "longitude": 115.2217,
     "kuliner": [
@@ -11532,7 +11621,8 @@
         "longitude": 115.2054,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Tanjung Benoa, Kuta Selatan, Badung)"
   },
   {
     "id": "BNT-13",
@@ -11712,7 +11802,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Bali_-_Pura_Tanah_Lot%2C_20220827_0957_1108.jpg/960px-Bali_-_Pura_Tanah_Lot%2C_20220827_0957_1108.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.6212,
     "longitude": 115.0868,
     "kuliner": [
@@ -11749,7 +11839,8 @@
         "longitude": 115.088,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Bali - Pura Tanah Lot, 20220827 0957 1108.jpg)"
   },
   {
     "id": "BNT-15",
@@ -11801,7 +11892,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Gede_Putu_Agus_Sunantara_Melasti_Gianyar_Bali.jpg/960px-Gede_Putu_Agus_Sunantara_Melasti_Gianyar_Bali.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.8479,
     "longitude": 115.1664,
     "kuliner": [
@@ -11838,7 +11929,8 @@
         "longitude": 115.1778,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Melasti)"
   },
   {
     "id": "BNT-16",
@@ -11889,7 +11981,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Jimbaran_%2826858077254%29.jpg/960px-Jimbaran_%2826858077254%29.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.7698,
     "longitude": 115.1668,
     "kuliner": [
@@ -11926,7 +12018,8 @@
         "longitude": 115.1837,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Jimbaran, Kuta Selatan, Badung)"
   },
   {
     "id": "BNT-17",
@@ -11997,7 +12090,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Padang_Kota_yang_Dikelilingi_Bukit_dan_Lautan.jpg/960px-Padang_Kota_yang_Dikelilingi_Bukit_dan_Lautan.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.8111,
     "longitude": 115.1036,
     "kuliner": [
@@ -12034,7 +12127,8 @@
         "longitude": 115.1193,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kota Padang)"
   },
   {
     "id": "BNT-18",
@@ -12086,7 +12180,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Pandawa_Beach%2C_Kuta_Selatan_-_Bali.jpg/960px-Pandawa_Beach%2C_Kuta_Selatan_-_Bali.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.8452,
     "longitude": 115.1866,
     "kuliner": [
@@ -12123,7 +12217,8 @@
         "longitude": 115.1947,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Pandawa)"
   },
   {
     "id": "BNT-19",
@@ -12174,7 +12269,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Aerial_view_of_serangan.jpg/960px-Aerial_view_of_serangan.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.7297,
     "longitude": 115.2344,
     "kuliner": [
@@ -12211,7 +12306,8 @@
         "longitude": 115.2317,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Serangan)"
   },
   {
     "id": "BNT-20",
@@ -12281,7 +12377,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Pantai_Medewi_Jembrana_-_panoramio.jpg/960px-Pantai_Medewi_Jembrana_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.4908,
     "longitude": 114.8083,
     "kuliner": [
@@ -12318,7 +12414,8 @@
         "longitude": 114.7981,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Medewi Jembrana - panoramio.jpg)"
   },
   {
     "id": "BNT-21",
@@ -12451,7 +12548,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Boats_at_Eastern_Gili_Trawangan_Beach.jpg/960px-Boats_at_Eastern_Gili_Trawangan_Beach.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.3533,
     "longitude": 116.0417,
     "kuliner": [
@@ -12488,7 +12585,8 @@
         "longitude": 116.0252,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Gili Trawangan)"
   },
   {
     "id": "BNT-22",
@@ -12579,7 +12677,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/2/24/Gili_Meno_West_Coast.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -8.35,
     "longitude": 116.0583,
     "kuliner": [
@@ -12616,7 +12714,8 @@
         "longitude": 116.042,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Gili Meno)"
   },
   {
     "id": "BNT-23",
@@ -12747,7 +12846,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Gili_Air_seen_from_gili_meno.jpg/960px-Gili_Air_seen_from_gili_meno.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.36,
     "longitude": 116.0833,
     "kuliner": [
@@ -12784,7 +12883,8 @@
         "longitude": 116.0739,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Gili Air)"
   },
   {
     "id": "BNT-24",
@@ -12857,7 +12957,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Kincir_Angin_%28skala_kecil%29_di_Pantai_Kuta_Mandalika%2C_Lombok_Utara.jpg/960px-Kincir_Angin_%28skala_kecil%29_di_Pantai_Kuta_Mandalika%2C_Lombok_Utara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.8956,
     "longitude": 116.2917,
     "kuliner": [
@@ -12894,7 +12994,8 @@
         "longitude": 116.2929,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Kincir Angin (skala kecil) di Pantai Kuta Mandalika, Lombok Utara.jpg)"
   },
   {
     "id": "BNT-25",
@@ -12966,7 +13067,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Selong_Blanak_Lombok_4.jpg/960px-Selong_Blanak_Lombok_4.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.8717,
     "longitude": 116.1667,
     "kuliner": [
@@ -13003,7 +13104,8 @@
         "longitude": 116.1781,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Selong Belanak)"
   },
   {
     "id": "BNT-26",
@@ -13145,7 +13247,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Tambora_volc.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -8.25,
     "longitude": 117.55,
     "kuliner": [
@@ -13182,7 +13284,8 @@
         "longitude": 117.5669,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Moyo)"
   },
   {
     "id": "BNT-27",
@@ -13273,7 +13376,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Gili_nanggu_Lombok.jpg/960px-Gili_nanggu_Lombok.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.7167,
     "longitude": 116.0167,
     "kuliner": [
@@ -13310,7 +13413,8 @@
         "longitude": 116.0324,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Gili nanggu Lombok.jpg)"
   },
   {
     "id": "BNT-28",
@@ -13520,7 +13624,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Pulau_kenawa.jpg/960px-Pulau_kenawa.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.5,
     "longitude": 116.8333,
     "kuliner": [
@@ -13557,7 +13661,8 @@
         "longitude": 116.8306,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Kenawa)"
   },
   {
     "id": "BNT-30",
@@ -13650,7 +13755,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Senggigi_Beach_Boats.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -8.4958,
     "longitude": 116.05,
     "kuliner": [
@@ -13687,7 +13792,8 @@
         "longitude": 116.0398,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Senggigi)"
   },
   {
     "id": "BNT-31",
@@ -13825,7 +13931,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/BIRUNYA_TANJUNG_AAN.jpg/960px-BIRUNYA_TANJUNG_AAN.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.91,
     "longitude": 116.3217,
     "kuliner": [
@@ -13862,7 +13968,8 @@
         "longitude": 116.3054,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Tanjung Aan)"
   },
   {
     "id": "BNT-33",
@@ -13953,7 +14060,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/GILI_KONDO_-_EAST_LOMBOK.jpg/960px-GILI_KONDO_-_EAST_LOMBOK.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.45,
     "longitude": 116.7167,
     "kuliner": [
@@ -13990,7 +14097,8 @@
         "longitude": 116.7073,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:GILI KONDO - EAST LOMBOK.jpg)"
   },
   {
     "id": "BNT-34",
@@ -14188,7 +14296,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Danau_Satonda.jpg/960px-Danau_Satonda.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.1167,
     "longitude": 117.75,
     "kuliner": [
@@ -14225,7 +14333,8 @@
         "longitude": 117.7613,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Danau Satonda)"
   },
   {
     "id": "BNT-36",
@@ -14318,7 +14427,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Komodo_Island_2009.jpg/960px-Komodo_Island_2009.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.5833,
     "longitude": 119.4833,
     "kuliner": [
@@ -14355,7 +14464,8 @@
         "longitude": 119.5002,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Komodo)"
   },
   {
     "id": "BNT-37",
@@ -14406,7 +14516,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Pulau_Padar_1.jpg/960px-Pulau_Padar_1.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.65,
     "longitude": 119.5667,
     "kuliner": [
@@ -14443,7 +14553,8 @@
         "longitude": 119.5824,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Padar)"
   },
   {
     "id": "BNT-38",
@@ -14524,7 +14635,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Pink_Beach%2C_Padar_Island%2C_Komodo_National_Park.jpg/960px-Pink_Beach%2C_Padar_Island%2C_Komodo_National_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.6,
     "longitude": 119.5167,
     "kuliner": [
@@ -14561,7 +14672,8 @@
         "longitude": 119.5248,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pink Beach, Padar Island, Komodo National Park.jpg)"
   },
   {
     "id": "BNT-39",
@@ -14831,7 +14943,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Kanawa_Island.jpg/960px-Kanawa_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.4958,
     "longitude": 119.7667,
     "kuliner": [
@@ -14868,7 +14980,8 @@
         "longitude": 119.7565,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Kanawa Island.jpg)"
   },
   {
     "id": "BNT-41",
@@ -14949,7 +15062,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Kayaking_around_Kelor_Island.jpg/960px-Kayaking_around_Kelor_Island.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.55,
     "longitude": 119.8167,
     "kuliner": [
@@ -14986,7 +15099,8 @@
         "longitude": 119.8001,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Kelor)"
   },
   {
     "id": "BNT-42",
@@ -15037,7 +15151,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Rinca_Island_-_Pulau_Rinca.jpg/960px-Rinca_Island_-_Pulau_Rinca.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.6833,
     "longitude": 119.6833,
     "kuliner": [
@@ -15074,7 +15188,8 @@
         "longitude": 119.667,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Rinca)"
   },
   {
     "id": "BNT-43",
@@ -15264,7 +15379,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Koka_Beach%2C_East_Flores.jpg/960px-Koka_Beach%2C_East_Flores.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.7167,
     "longitude": 122.1833,
     "kuliner": [
@@ -15301,7 +15416,8 @@
         "longitude": 122.1845,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Koka Beach, East Flores.jpg)"
   },
   {
     "id": "BNT-45",
@@ -15629,7 +15745,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Pantai_Pede_flor%C3%A8s.jpg/960px-Pantai_Pede_flor%C3%A8s.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.5167,
     "longitude": 119.8667,
     "kuliner": [
@@ -15666,7 +15782,8 @@
         "longitude": 119.8824,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Pede florès.jpg)"
   },
   {
     "id": "BNT-48",
@@ -15747,7 +15864,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Siang_Terik_di_Gili_Lawa_Darat.jpg/960px-Siang_Terik_di_Gili_Lawa_Darat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.45,
     "longitude": 119.5667,
     "kuliner": [
@@ -15784,7 +15901,8 @@
         "longitude": 119.5748,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Siang Terik di Gili Lawa Darat.jpg)"
   },
   {
     "id": "BNT-49",
@@ -15864,7 +15982,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Beautiful_Taka_Makassar_Island.jpg/960px-Beautiful_Taka_Makassar_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.55,
     "longitude": 119.6,
     "kuliner": [
@@ -15901,7 +16019,8 @@
         "longitude": 119.5973,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Beautiful Taka Makassar Island.jpg)"
   },
   {
     "id": "BNT-50",
@@ -15981,7 +16100,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Siaba_Besar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_1614_2822.jpg/960px-Siaba_Besar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_1614_2822.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.5167,
     "longitude": 119.6667,
     "kuliner": [
@@ -16018,7 +16137,8 @@
         "longitude": 119.6565,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Siaba Besar Island, Komodo National Park, Indonesia, 20250822 1614 2822.jpg)"
   },
   {
     "id": "BNT-51",
@@ -16099,7 +16219,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Sandakan_Sabah_Seraya-Roundabout-with-clock-tower-01.jpg/960px-Sandakan_Sabah_Seraya-Roundabout-with-clock-tower-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.4,
     "longitude": 119.8833,
     "kuliner": [
@@ -16136,7 +16256,8 @@
         "longitude": 119.8668,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Sandakan Sabah Seraya-Roundabout-with-clock-tower-01.jpg)"
   },
   {
     "id": "BNT-52",
@@ -16186,7 +16307,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Pantai_Walakiri%2C_Sumba_Timur%2C_Nusa_Tenggara_Timur_20170610.jpg/960px-Pantai_Walakiri%2C_Sumba_Timur%2C_Nusa_Tenggara_Timur_20170610.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -9.6167,
     "longitude": 120.35,
     "kuliner": [
@@ -16223,7 +16344,8 @@
         "longitude": 120.3337,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Walakiri, Sumba Timur, Nusa Tenggara Timur 20170610.jpg)"
   },
   {
     "id": "BNT-53",
@@ -16274,7 +16396,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Pantai_Mandorak%2C_Sumba_Barat_Daya.jpg/960px-Pantai_Mandorak%2C_Sumba_Barat_Daya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -9.4167,
     "longitude": 119.0167,
     "kuliner": [
@@ -16311,7 +16433,8 @@
         "longitude": 119.0073,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Mandorak, Sumba Barat Daya.jpg)"
   },
   {
     "id": "BNT-54",
@@ -16480,7 +16603,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Pemandangan_pantai_dengan_batu_karang.jpg/960px-Pemandangan_pantai_dengan_batu_karang.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -10.1833,
     "longitude": 123.4167,
     "kuliner": [
@@ -16517,7 +16640,8 @@
         "longitude": 123.4281,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Semau)"
   },
   {
     "id": "BNT-56",
@@ -16607,7 +16731,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Sow_with_piglet.jpg/960px-Sow_with_piglet.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.4167,
     "longitude": 122.5,
     "kuliner": [
@@ -16644,7 +16768,8 @@
         "longitude": 122.5169,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Babi)"
   },
   {
     "id": "SLW-01",
@@ -16823,7 +16948,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/1/10/Pulau_karampuang.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -2.6333,
     "longitude": 118.8667,
     "kuliner": [
@@ -16860,7 +16985,8 @@
         "longitude": 118.8472,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Karampuang)"
   },
   {
     "id": "SLW-03",
@@ -17002,7 +17128,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Keindahan_Taman_Nasional_Takabonerate.jpg/960px-Keindahan_Taman_Nasional_Takabonerate.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -6.6833,
     "longitude": 121.0833,
     "kuliner": [
@@ -17039,7 +17165,8 @@
         "longitude": 121.0719,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Taman Nasional Taka Bonerate)"
   },
   {
     "id": "SLW-04",
@@ -17180,7 +17307,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/id/4/49/Pulau_Samalona2.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -5.1242,
     "longitude": 119.3436,
     "kuliner": [
@@ -17217,7 +17344,8 @@
         "longitude": 119.3451,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Samalona)"
   },
   {
     "id": "SLW-05",
@@ -17358,7 +17486,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Heteractis_Magnifica.jpg/960px-Heteractis_Magnifica.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -4.7,
     "longitude": 118.95,
     "kuliner": [
@@ -17395,7 +17523,8 @@
         "longitude": 118.9636,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kepulauan Kapoposang)"
   },
   {
     "id": "SLW-06",
@@ -17487,7 +17616,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Bira_%28Sulawesi%29.jpg/960px-Bira_%28Sulawesi%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -5.6139,
     "longitude": 120.4578,
     "kuliner": [
@@ -17524,7 +17653,8 @@
         "longitude": 120.4782,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Bira (Sulawesi).jpg)"
   },
   {
     "id": "SLW-07",
@@ -17576,7 +17706,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Losari_Beach%2C_Makassar%2C_Indonesia.jpg/960px-Losari_Beach%2C_Makassar%2C_Indonesia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -5.1477,
     "longitude": 119.4069,
     "kuliner": [
@@ -17613,7 +17743,8 @@
         "longitude": 119.4258,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Losari Beach, Makassar, Indonesia.jpg)"
   },
   {
     "id": "SLW-08",
@@ -17664,7 +17795,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Desa_Buluduri%2C_Lae_Parira%2C_Dairi.jpg/960px-Desa_Buluduri%2C_Lae_Parira%2C_Dairi.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -5.1333,
     "longitude": 119.3917,
     "kuliner": [
@@ -17701,7 +17832,8 @@
         "longitude": 119.4015,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Bulu Duri, Lae Parira, Dairi)"
   },
   {
     "id": "SLW-09",
@@ -18128,7 +18260,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/0/02/Smallscale_Scorpionfish%2C_Desa%2C_Lamanggau%2C_Tomia%2C_Kabupaten_Wakatobi%2C_Sulawesi_Tenggara%2C_Indonesia_imported_from_iNaturalist_photo_294471750.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "latitude": -5.75,
     "longitude": 123.95,
     "kuliner": [
@@ -18165,7 +18297,8 @@
         "longitude": 123.9301,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Smallscale Scorpionfish, Desa, Lamanggau, Tomia, Kabupaten Wakatobi, Sulawesi Tenggara, Indonesia imported from iNaturalist photo 294471750.jpg)"
   },
   {
     "id": "SLW-12",
@@ -18639,7 +18772,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Magnificent_Sea_Anemone%2C_Taipi_Wall%2C_Pulau_Kadidiri%2C_Togean_Islands%2C_Sulawesi%2C_Indonesia_imported_from_iNaturalist_photo_384987396.jpg/960px-Magnificent_Sea_Anemone%2C_Taipi_Wall%2C_Pulau_Kadidiri%2C_Togean_Islands%2C_Sulawesi%2C_Indonesia_imported_from_iNaturalist_photo_384987396.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -0.3667,
     "longitude": 121.85,
     "kuliner": [
@@ -18676,7 +18809,8 @@
         "longitude": 121.8636,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Magnificent Sea Anemone, Taipi Wall, Pulau Kadidiri, Togean Islands, Sulawesi, Indonesia imported from iNaturalist photo 384987396.jpg)"
   },
   {
     "id": "SLW-16",
@@ -18727,7 +18861,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Taman_Rekreasi_Pantai_Talise.jpg/960px-Taman_Rekreasi_Pantai_Talise.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -0.8756,
     "longitude": 119.8667,
     "kuliner": [
@@ -18764,7 +18898,8 @@
         "longitude": 119.887,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Talise)"
   },
   {
     "id": "SLW-17",
@@ -19013,7 +19148,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Pantai_Pulau_Saronde.jpg/960px-Pantai_Pulau_Saronde.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 0.9167,
     "longitude": 122.8833,
     "kuliner": [
@@ -19050,7 +19185,8 @@
         "longitude": 122.893,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Saronde)"
   },
   {
     "id": "SLW-19",
@@ -19140,7 +19276,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Pulau_Cinta%2C_Situ_Patengang%2C_Ciwidey.jpg/960px-Pulau_Cinta%2C_Situ_Patengang%2C_Ciwidey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 0.4667,
     "longitude": 122.3167,
     "kuliner": [
@@ -19177,7 +19313,8 @@
         "longitude": 122.3135,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pulau Cinta, Situ Patengang, Ciwidey.jpg)"
   },
   {
     "id": "SLW-20",
@@ -19268,7 +19405,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Hiu_Paus_Botubarani.jpg/960px-Hiu_Paus_Botubarani.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 0.4851,
     "longitude": 123.0982,
     "kuliner": [
@@ -19305,7 +19442,8 @@
         "longitude": 123.086,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Hiu Paus Botubarani.jpg)"
   },
   {
     "id": "SLW-21",
@@ -19437,7 +19575,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Bunaken01.JPG/960px-Bunaken01.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 1.6231,
     "longitude": 124.7644,
     "kuliner": [
@@ -19474,7 +19612,8 @@
         "longitude": 124.7446,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Taman Nasional Bunaken)"
   },
   {
     "id": "SLW-22",
@@ -19565,7 +19704,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Selat_lembeh_-_panoramio.jpg/960px-Selat_lembeh_-_panoramio.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 1.4422,
     "longitude": 125.2289,
     "kuliner": [
@@ -19602,7 +19741,8 @@
         "longitude": 125.2094,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Selat Lembeh)"
   },
   {
     "id": "SLW-23",
@@ -19684,7 +19824,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Pantai_Paal.jpg/960px-Pantai_Paal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 1.5833,
     "longitude": 125.1167,
     "kuliner": [
@@ -19721,7 +19861,8 @@
         "longitude": 125.1054,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Paal.jpg)"
   },
   {
     "id": "SLW-24",
@@ -20020,7 +20161,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Siladen_Island_Resort%2C_Pulau_Siladen%2C_Sulawesi_%2815216101995%29.jpg/960px-Siladen_Island_Resort%2C_Pulau_Siladen%2C_Sulawesi_%2815216101995%29.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 1.625,
     "longitude": 124.8,
     "kuliner": [
@@ -20057,7 +20198,8 @@
         "longitude": 124.8136,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Siladen)"
   },
   {
     "id": "SLW-26",
@@ -20138,7 +20280,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Pulau_Manado_Tua.jpg/960px-Pulau_Manado_Tua.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 1.6333,
     "longitude": 124.7,
     "kuliner": [
@@ -20175,7 +20317,8 @@
         "longitude": 124.7203,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Manado Tua)"
   },
   {
     "id": "SLW-27",
@@ -20385,7 +20528,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Pulau_Talisei_dan_Pulau_Kinabuhutan.jpg/960px-Pulau_Talisei_dan_Pulau_Kinabuhutan.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 1.8333,
     "longitude": 125.0833,
     "kuliner": [
@@ -20422,7 +20565,8 @@
         "longitude": 125.093,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Talisei)"
   },
   {
     "id": "MLK-01",
@@ -20554,7 +20698,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/A_beach_on_dodola_island.jpg/960px-A_beach_on_dodola_island.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 2.1833,
     "longitude": 128.4167,
     "kuliner": [
@@ -20591,7 +20735,8 @@
         "longitude": 128.3986,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kabupaten Pulau Morotai)"
   },
   {
     "id": "MLK-02",
@@ -20672,7 +20817,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/MLK-02.jpg",
     "latitude": 0.85,
     "longitude": 127.3167,
     "kuliner": [
@@ -20709,7 +20854,8 @@
         "longitude": 127.2989,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "MLK-03",
@@ -20760,7 +20906,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Fort_Tolukko_op_Ternate%2C_KITLV_178142.tiff/lossy-page1-960px-Fort_Tolukko_op_Ternate%2C_KITLV_178142.tiff.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 0.8,
     "longitude": 127.3833,
     "kuliner": [
@@ -20797,7 +20943,8 @@
         "longitude": 127.373,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Benteng Tolukko)"
   },
   {
     "id": "MLK-04",
@@ -20887,7 +21034,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/c/cd/%22Watering_of_Dodola%22_by_Uro%C5%A1_Predi%C4%87%2C_published_in_magazine_%22Orao%22_in_1892.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "latitude": 2.0494,
     "longitude": 128.2989,
     "kuliner": [
@@ -20924,7 +21071,8 @@
         "longitude": 128.3002,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:\"Watering of Dodola\" by Uroš Predić, published in magazine \"Orao\" in 1892.jpg)"
   },
   {
     "id": "MLK-05",
@@ -21056,7 +21204,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Banda_Neira_%28group_band%29.png/960px-Banda_Neira_%28group_band%29.png?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -4.5244,
     "longitude": 129.9042,
     "kuliner": [
@@ -21093,7 +21241,8 @@
         "longitude": 129.9167,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Banda Neira (grup musik))"
   },
   {
     "id": "MLK-06",
@@ -21234,7 +21383,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Soekarno-Hatta_Airport_aerial_view.jpg/960px-Soekarno-Hatta_Airport_aerial_view.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -4.5833,
     "longitude": 130.0333,
     "kuliner": [
@@ -21271,7 +21420,8 @@
         "longitude": 130.0519,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Bandar Udara Internasional Soekarno–Hatta)"
   },
   {
     "id": "MLK-07",
@@ -21352,7 +21502,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Panorama_Pantai_Ora.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -3.0167,
     "longitude": 129.5833,
     "kuliner": [
@@ -21389,7 +21539,8 @@
         "longitude": 129.6005,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Ora)"
   },
   {
     "id": "MLK-08",
@@ -21440,7 +21591,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Lokasi_Wisata_Pantai_Natsepa_Ambon.jpg/960px-Lokasi_Wisata_Pantai_Natsepa_Ambon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -3.6167,
     "longitude": 128.2833,
     "kuliner": [
@@ -21477,7 +21628,8 @@
         "longitude": 128.2922,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Lokasi Wisata Pantai Natsepa Ambon.jpg)"
   },
   {
     "id": "MLK-09",
@@ -21527,7 +21679,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/MLK-09.jpg",
     "latitude": -5.6333,
     "longitude": 132.7333,
     "kuliner": [
@@ -21564,7 +21716,8 @@
         "longitude": 132.7303,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "MLK-10",
@@ -21645,7 +21798,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Dermaga_Desa_Liang.jpg/960px-Dermaga_Desa_Liang.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -3.5167,
     "longitude": 128.3333,
     "kuliner": [
@@ -21682,7 +21835,8 @@
         "longitude": 128.3222,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Liang)"
   },
   {
     "id": "MLK-11",
@@ -21732,7 +21886,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/AMH-6402-NA_Bird%27s_eye_view_of_Fort_Victoria%2C_Ambon.jpg/960px-AMH-6402-NA_Bird%27s_eye_view_of_Fort_Victoria%2C_Ambon.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -3.6958,
     "longitude": 128.1817,
     "kuliner": [
@@ -21769,7 +21923,8 @@
         "longitude": 128.1636,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Benteng Victoria)"
   },
   {
     "id": "MLK-12",
@@ -21900,7 +22055,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/BandaBesarIslandSeenFromFortBelgica.JPG/960px-BandaBesarIslandSeenFromFortBelgica.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -4.5167,
     "longitude": 129.7833,
     "kuliner": [
@@ -21937,7 +22092,8 @@
         "longitude": 129.7655,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kepulauan Banda)"
   },
   {
     "id": "MLK-13",
@@ -22018,7 +22174,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Run%2C_Banda_islands%2C_Maluku%2C_Indonesia.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -4.55,
     "longitude": 129.6833,
     "kuliner": [
@@ -22055,7 +22211,8 @@
         "longitude": 129.673,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "en.wikipedia (Run (island))"
   },
   {
     "id": "MLK-14",
@@ -22145,7 +22302,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Pulau_Pombo%2C_Maluku.jpg/960px-Pulau_Pombo%2C_Maluku.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -3.5333,
     "longitude": 128.3667,
     "kuliner": [
@@ -22182,7 +22339,8 @@
         "longitude": 128.368,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Pombo)"
   },
   {
     "id": "PPA-01",
@@ -22274,7 +22432,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Karst_Landscape_of_Piaynemo_Island.jpg/960px-Karst_Landscape_of_Piaynemo_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -0.5667,
     "longitude": 130.2667,
     "kuliner": [
@@ -22311,7 +22469,8 @@
         "longitude": 130.2521,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Karst Landscape of Piaynemo Island.jpg)"
   },
   {
     "id": "PPA-02",
@@ -22393,7 +22552,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Quiet_Atmosphere_Of_Wayag_%2869211405%29.jpeg/960px-Quiet_Atmosphere_Of_Wayag_%2869211405%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 0.1833,
     "longitude": 130.0333,
     "kuliner": [
@@ -22430,7 +22589,8 @@
         "longitude": 130.0189,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Quiet Atmosphere Of Wayag (69211405).jpeg)"
   },
   {
     "id": "PPA-03",
@@ -22522,7 +22682,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Kampung_Arborek.jpg/960px-Kampung_Arborek.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -0.5633,
     "longitude": 130.5167,
     "kuliner": [
@@ -22559,7 +22719,8 @@
         "longitude": 130.5084,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Kampung Arborek.jpg)"
   },
   {
     "id": "PPA-04",
@@ -22701,7 +22862,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Misool_Island%2C_ID%2C_Sentinel-2.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -1.8833,
     "longitude": 130.1667,
     "kuliner": [
@@ -22738,7 +22899,8 @@
         "longitude": 130.1678,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Misool)"
   },
   {
     "id": "PPA-05",
@@ -22828,7 +22990,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/KRI_dr._Soeharso.jpg/960px-KRI_dr._Soeharso.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -0.55,
     "longitude": 130.6833,
     "kuliner": [
@@ -22865,7 +23027,8 @@
         "longitude": 130.6933,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "en.wikipedia (KRI dr. Soeharso)"
   },
   {
     "id": "PPA-06",
@@ -22967,7 +23130,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/PPA-06.png",
     "latitude": -0.3833,
     "longitude": 130.55,
     "kuliner": [
@@ -23004,7 +23167,8 @@
         "longitude": 130.565,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "PPA-07",
@@ -23146,7 +23310,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Aku_dan_Alamku.jpg/960px-Aku_dan_Alamku.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -2.5,
     "longitude": 134.5,
     "kuliner": [
@@ -23183,7 +23347,8 @@
         "longitude": 134.5139,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Teluk Cenderawasih)"
   },
   {
     "id": "PPA-08",
@@ -23275,7 +23440,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Mansinam_Jesus_Statue.jpg/960px-Mansinam_Jesus_Statue.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -0.89,
     "longitude": 134.09,
     "kuliner": [
@@ -23312,7 +23477,8 @@
         "longitude": 134.0972,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Mansinam)"
   },
   {
     "id": "PPA-09",
@@ -23394,7 +23560,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Pantai_Base_G.jpg/960px-Pantai_Base_G.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -2.5167,
     "longitude": 140.7167,
     "kuliner": [
@@ -23431,7 +23597,8 @@
         "longitude": 140.7143,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Base G)"
   },
   {
     "id": "PPA-10",
@@ -23482,7 +23649,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Hamadi-01.jpg/960px-Hamadi-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -2.5667,
     "longitude": 140.7167,
     "kuliner": [
@@ -23519,7 +23686,8 @@
         "longitude": 140.7077,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Hamadi-01.jpg)"
   },
   {
     "id": "PPA-11",
@@ -23569,7 +23737,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Wasur_Rainbow_1994.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -8.4167,
     "longitude": 140.5833,
     "kuliner": [
@@ -23606,7 +23774,8 @@
         "longitude": 140.5685,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Taman Nasional Wasur)"
   },
   {
     "id": "PPA-12",
@@ -23658,7 +23827,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Pantai_Lampu_Satu%2C_Merauke%2C_Papua.jpg/960px-Pantai_Lampu_Satu%2C_Merauke%2C_Papua.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.5083,
     "longitude": 140.3833,
     "kuliner": [
@@ -23695,7 +23864,8 @@
         "longitude": 140.3687,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Lampu Satu, Merauke, Papua.jpg)"
   },
   {
     "id": "PPA-13",
@@ -23746,7 +23916,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/PPA-13.jpg",
     "latitude": -8.5333,
     "longitude": 140.4,
     "kuliner": [
@@ -23783,7 +23953,8 @@
         "longitude": 140.3916,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "SMT-44",
@@ -23855,7 +24026,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Ndulu_pantai_sorake.jpg/960px-Ndulu_pantai_sorake.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 0.575,
     "longitude": 97.7417,
     "kuliner": [
@@ -23892,7 +24063,8 @@
         "longitude": 97.7431,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Sorake)"
   },
   {
     "id": "SMT-45",
@@ -23975,7 +24147,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Pulau_Pagang_2012_-_panoramio.jpg/960px-Pulau_Pagang_2012_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -1.1333,
     "longitude": 100.3667,
     "kuliner": [
@@ -24012,7 +24184,8 @@
         "longitude": 100.3803,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pulau Pagang 2012 - panoramio.jpg)"
   },
   {
     "id": "SMT-46",
@@ -24115,7 +24288,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Kawasan_Wisata_Mandeh.jpg/960px-Kawasan_Wisata_Mandeh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -1.3333,
     "longitude": 100.4167,
     "kuliner": [
@@ -24152,7 +24325,8 @@
         "longitude": 100.437,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Kawasan Wisata Mandeh.jpg)"
   },
   {
     "id": "SMT-47",
@@ -24313,7 +24487,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Pantai_sasak.jpeg/960px-Pantai_sasak.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 0.1667,
     "longitude": 99.7833,
     "kuliner": [
@@ -24350,7 +24524,8 @@
         "longitude": 99.793,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai sasak.jpeg)"
   },
   {
     "id": "SMT-49",
@@ -24401,7 +24576,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Haematopus_longirostris_2.jpg/960px-Haematopus_longirostris_2.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -0.7333,
     "longitude": 100.2333,
     "kuliner": [
@@ -24438,7 +24613,8 @@
         "longitude": 100.2301,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kedidi tiram)"
   },
   {
     "id": "SMT-50",
@@ -24490,7 +24666,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Gandoriah_beach_%285%29.JPG/960px-Gandoriah_beach_%285%29.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -0.625,
     "longitude": 100.1167,
     "kuliner": [
@@ -24527,7 +24703,8 @@
         "longitude": 100.1045,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Gandoriah)"
   },
   {
     "id": "SMT-51",
@@ -24757,7 +24934,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Pesona_Bukit_Barisan_Selatan_dari_Hamparan_Pantai_Krui.jpg/960px-Pesona_Bukit_Barisan_Selatan_dari_Hamparan_Pantai_Krui.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -5.1833,
     "longitude": 103.9333,
     "kuliner": [
@@ -24794,7 +24971,8 @@
         "longitude": 103.9137,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pesona Bukit Barisan Selatan dari Hamparan Pantai Krui.jpg)"
   },
   {
     "id": "SMT-53",
@@ -24995,7 +25173,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Square_Tombs_at_Kubur_Kassim.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "latitude": -5.4833,
     "longitude": 105.2833,
     "kuliner": [
@@ -25032,7 +25210,8 @@
         "longitude": 105.2848,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Square Tombs at Kubur Kassim.png)"
   },
   {
     "id": "SMT-55",
@@ -25113,7 +25292,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Mahitam_Island.jpg/960px-Mahitam_Island.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -5.5667,
     "longitude": 105.25,
     "kuliner": [
@@ -25150,7 +25329,8 @@
         "longitude": 105.2637,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Mahitam Island.jpg)"
   },
   {
     "id": "SMT-56",
@@ -25459,7 +25639,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Cemara_Angin_%28Casuarina_Junghuhniana%29_in_Samosir_Island.JPG/960px-Cemara_Angin_%28Casuarina_Junghuhniana%29_in_Samosir_Island.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 3.25,
     "longitude": 106.2167,
     "kuliner": [
@@ -25496,7 +25676,8 @@
         "longitude": 106.2264,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Cemara gunung)"
   },
   {
     "id": "SMT-59",
@@ -25767,7 +25948,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Panorama_Alam_Di_Pantai_Menganti%2C_Kebumen%2C_Jawa_Tengah.jpg/960px-Panorama_Alam_Di_Pantai_Menganti%2C_Kebumen%2C_Jawa_Tengah.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -7.7697,
     "longitude": 109.4128,
     "kuliner": [
@@ -25804,7 +25985,8 @@
         "longitude": 109.4092,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Menganti)"
   },
   {
     "id": "JWA-30",
@@ -25855,7 +26037,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Gondala_pantai_Timang_-_Gunung_Kidul%2C_DIY.jpg/960px-Gondala_pantai_Timang_-_Gunung_Kidul%2C_DIY.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.1758,
     "longitude": 110.6622,
     "kuliner": [
@@ -25892,7 +26074,8 @@
         "longitude": 110.6488,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Timang)"
   },
   {
     "id": "JWA-31",
@@ -25944,7 +26127,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Baron_Beach_Gunung_Kidul.jpg/960px-Baron_Beach_Gunung_Kidul.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.1289,
     "longitude": 110.5489,
     "kuliner": [
@@ -25981,7 +26164,8 @@
         "longitude": 110.5271,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Baron)"
   },
   {
     "id": "JWA-32",
@@ -26052,7 +26236,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Krakal_Beach.jpg/960px-Krakal_Beach.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.1467,
     "longitude": 110.5989,
     "kuliner": [
@@ -26089,7 +26273,8 @@
         "longitude": 110.5775,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Krakal)"
   },
   {
     "id": "JWA-33",
@@ -26181,7 +26366,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Pantai_Drini_Top_View.jpg/960px-Pantai_Drini_Top_View.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.1483,
     "longitude": 110.5772,
     "kuliner": [
@@ -26218,7 +26403,8 @@
         "longitude": 110.5648,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Drini)"
   },
   {
     "id": "JWA-34",
@@ -26271,7 +26457,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Ngobaran_Beach.jpg/960px-Ngobaran_Beach.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.1189,
     "longitude": 110.5189,
     "kuliner": [
@@ -26308,7 +26494,8 @@
         "longitude": 110.5205,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Ngobaran)"
   },
   {
     "id": "JWA-35",
@@ -26421,7 +26608,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Wediombo_Beach_4.jpg/960px-Wediombo_Beach_4.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.1856,
     "longitude": 110.7083,
     "kuliner": [
@@ -26458,7 +26645,8 @@
         "longitude": 110.7232,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Wediombo)"
   },
   {
     "id": "JWA-36",
@@ -26511,7 +26699,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Delightful_Beach.jpg/960px-Delightful_Beach.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.1567,
     "longitude": 110.6217,
     "kuliner": [
@@ -26548,7 +26736,8 @@
         "longitude": 110.644,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Pok Tunggal)"
   },
   {
     "id": "JWA-37",
@@ -26599,7 +26788,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Glagah_Beach_Kulon_Progo.jpg/960px-Glagah_Beach_Kulon_Progo.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -7.9167,
     "longitude": 110.075,
     "kuliner": [
@@ -26636,7 +26825,8 @@
         "longitude": 110.0956,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Glagah Indah)"
   },
   {
     "id": "JWA-38",
@@ -26688,7 +26878,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/7/76/Karang_Bolong_Beach_Recreation.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -7.7578,
     "longitude": 109.4633,
     "kuliner": [
@@ -26725,7 +26915,8 @@
         "longitude": 109.474,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Karangbolong)"
   },
   {
     "id": "JWA-39",
@@ -26776,7 +26967,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/id/thumb/e/e8/Pantai_Kartini_Jepara_Indonesia.jpg/960px-Pantai_Kartini_Jepara_Indonesia.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -6.5917,
     "longitude": 110.6417,
     "kuliner": [
@@ -26813,7 +27004,8 @@
         "longitude": 110.6382,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Kartini)"
   },
   {
     "id": "JWA-40",
@@ -26864,7 +27056,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Kamarajar_Salai_and_Marina_Beach.jpg/960px-Kamarajar_Salai_and_Marina_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -6.95,
     "longitude": 110.3833,
     "kuliner": [
@@ -26901,7 +27093,8 @@
         "longitude": 110.37,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Kamarajar Salai and Marina Beach.jpg)"
   },
   {
     "id": "JWA-41",
@@ -26953,7 +27146,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/JWA-41.jpg",
     "latitude": -8.2083,
     "longitude": 114.3833,
     "kuliner": [
@@ -26990,7 +27183,8 @@
         "longitude": 114.3615,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "JWA-42",
@@ -27041,7 +27235,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Watu_dodol.jpg/960px-Watu_dodol.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.1333,
     "longitude": 114.4167,
     "kuliner": [
@@ -27078,7 +27272,8 @@
         "longitude": 114.3953,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Watu Dodol)"
   },
   {
     "id": "JWA-43",
@@ -27148,7 +27343,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/id/d/dd/Plengkungombak.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -8.7333,
     "longitude": 114.3667,
     "kuliner": [
@@ -27185,7 +27380,8 @@
         "longitude": 114.3543,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Plengkung)"
   },
   {
     "id": "JWA-44",
@@ -27236,7 +27432,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Pantai_Sukamade.jpg/960px-Pantai_Sukamade.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.55,
     "longitude": 113.8833,
     "kuliner": [
@@ -27273,7 +27469,8 @@
         "longitude": 113.8849,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Sukamade.jpg)"
   },
   {
     "id": "JWA-45",
@@ -27328,7 +27525,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Wisata-pantai-balekambang.jpg/960px-Wisata-pantai-balekambang.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.4033,
     "longitude": 112.5389,
     "kuliner": [
@@ -27365,7 +27562,8 @@
         "longitude": 112.5538,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Balekambang)"
   },
   {
     "id": "JWA-46",
@@ -27417,7 +27615,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Goa_Cina_Beach.jpg/960px-Goa_Cina_Beach.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.4456,
     "longitude": 112.6517,
     "kuliner": [
@@ -27454,7 +27652,8 @@
         "longitude": 112.674,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Goa Cina)"
   },
   {
     "id": "JWA-47",
@@ -27505,7 +27704,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Ritual_petik_Laut_Pantai_Sendang_Biru.jpg/960px-Ritual_petik_Laut_Pantai_Sendang_Biru.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.4333,
     "longitude": 112.6833,
     "kuliner": [
@@ -27542,7 +27741,8 @@
         "longitude": 112.7039,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Ritual petik Laut Pantai Sendang Biru.jpg)"
   },
   {
     "id": "JWA-48",
@@ -27593,7 +27793,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Pantai_Clungup_Indonesia.jpg/960px-Pantai_Clungup_Indonesia.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.4389,
     "longitude": 112.6806,
     "kuliner": [
@@ -27630,7 +27830,8 @@
         "longitude": 112.6913,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Clungup)"
   },
   {
     "id": "JWA-49",
@@ -27681,7 +27882,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/id/thumb/9/9f/Pasir_Putih_Tambakrejo.jpg/960px-Pasir_Putih_Tambakrejo.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.3247,
     "longitude": 112.1408,
     "kuliner": [
@@ -27718,7 +27919,8 @@
         "longitude": 112.1372,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Tambakrejo)"
   },
   {
     "id": "JWA-50",
@@ -27770,7 +27972,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/JWA-50.jpg",
     "latitude": -8.2936,
     "longitude": 111.7242,
     "kuliner": [
@@ -27807,7 +28009,8 @@
         "longitude": 111.7108,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "JWA-51",
@@ -27879,7 +28082,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Watu_Karung_Beach_Pacitan.JPG/960px-Watu_Karung_Beach_Pacitan.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.2458,
     "longitude": 111.0083,
     "kuliner": [
@@ -27916,7 +28119,8 @@
         "longitude": 110.9865,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Watu Karung Beach Pacitan.JPG)"
   },
   {
     "id": "JWA-52",
@@ -27967,7 +28171,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Panorama_pantai_kasap_.jpg/960px-Panorama_pantai_kasap_.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.2483,
     "longitude": 111.0189,
     "kuliner": [
@@ -28004,7 +28208,8 @@
         "longitude": 110.9975,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Panorama pantai kasap .jpg)"
   },
   {
     "id": "JWA-53",
@@ -28055,7 +28260,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Pantai_banyu_tibo.jpg/960px-Pantai_banyu_tibo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.2167,
     "longitude": 110.9167,
     "kuliner": [
@@ -28092,7 +28297,8 @@
         "longitude": 110.9043,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai banyu tibo.jpg)"
   },
   {
     "id": "JWA-54",
@@ -28163,7 +28369,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Pantai_Teleng_Ria%2C_Pacitan%2C_Jawa_Timur.jpg/960px-Pantai_Teleng_Ria%2C_Pacitan%2C_Jawa_Timur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.2189,
     "longitude": 111.0833,
     "kuliner": [
@@ -28200,7 +28406,8 @@
         "longitude": 111.0849,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Teleng Ria, Pacitan, Jawa Timur.jpg)"
   },
   {
     "id": "KLM-19",
@@ -28253,7 +28460,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Gradasi_Senja_Indah_di_Atas_Samudra.jpg/960px-Gradasi_Senja_Indah_di_Atas_Samudra.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 0.8167,
     "longitude": 108.8833,
     "kuliner": [
@@ -28290,7 +28497,8 @@
         "longitude": 108.8809,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Gradasi Senja Indah di Atas Samudra.jpg)"
   },
   {
     "id": "KLM-20",
@@ -28341,7 +28549,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/KLM-20.png",
     "latitude": 0.45,
     "longitude": 108.9167,
     "kuliner": [
@@ -28378,7 +28586,8 @@
         "longitude": 108.9077,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "KLM-21",
@@ -28430,7 +28639,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Kubu_Raya_Regent_office.jpg/960px-Kubu_Raya_Regent_office.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -2.9167,
     "longitude": 111.75,
     "kuliner": [
@@ -28467,7 +28676,8 @@
         "longitude": 111.7353,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kabupaten Kubu Raya)"
   },
   {
     "id": "KLM-22",
@@ -28518,7 +28728,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Sungai_Bakau.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -3.3167,
     "longitude": 112.55,
     "kuliner": [
@@ -28555,7 +28765,8 @@
         "longitude": 112.5356,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Sungai Bakau)"
   },
   {
     "id": "KLM-23",
@@ -28606,7 +28817,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Pantai_Takisung%2C_Tanah_Laut.jpg/960px-Pantai_Takisung%2C_Tanah_Laut.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -3.8833,
     "longitude": 114.5833,
     "kuliner": [
@@ -28643,7 +28854,8 @@
         "longitude": 114.5749,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Takisung)"
   },
   {
     "id": "KLM-24",
@@ -28695,7 +28907,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/KLM-24.png",
     "latitude": -3.9667,
     "longitude": 114.6167,
     "kuliner": [
@@ -28732,7 +28944,8 @@
         "longitude": 114.6178,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "KLM-25",
@@ -28813,7 +29026,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Pantai_Pasir_putih_di_Teluk_Tamiang%2C_Kalimantan_Selatan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "latitude": -3.95,
     "longitude": 116.15,
     "kuliner": [
@@ -28850,7 +29063,8 @@
         "longitude": 116.1601,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Pasir putih di Teluk Tamiang, Kalimantan Selatan.jpg)"
   },
   {
     "id": "KLM-26",
@@ -28901,7 +29115,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Pantai_Gedambaan%2C_Kotabaru%2C_Kalimantan_Selatan.jpg/960px-Pantai_Gedambaan%2C_Kotabaru%2C_Kalimantan_Selatan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -3.3,
     "longitude": 116.2833,
     "kuliner": [
@@ -28938,7 +29152,8 @@
         "longitude": 116.2983,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Gedambaan, Kotabaru, Kalimantan Selatan.jpg)"
   },
   {
     "id": "KLM-27",
@@ -28989,7 +29204,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Lokasi_Wisata_Pantai_Lamaru.png/960px-Lokasi_Wisata_Pantai_Lamaru.png?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -1.1833,
     "longitude": 117.0167,
     "kuliner": [
@@ -29026,7 +29241,8 @@
         "longitude": 117.0306,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Lamaru)"
   },
   {
     "id": "KLM-28",
@@ -29077,7 +29293,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/2016-11-15_Pantai_Kemala_Balikpapan.jpg/960px-2016-11-15_Pantai_Kemala_Balikpapan.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -1.2667,
     "longitude": 116.8167,
     "kuliner": [
@@ -29114,7 +29330,8 @@
         "longitude": 116.8239,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Kemala)"
   },
   {
     "id": "KLM-29",
@@ -29166,7 +29383,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/KLM-29.png",
     "latitude": -1.05,
     "longitude": 117.0667,
     "kuliner": [
@@ -29203,7 +29420,8 @@
         "longitude": 117.0643,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "KLM-30",
@@ -29294,7 +29512,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/KLM-30.jpg",
     "latitude": 1.15,
     "longitude": 118.8333,
     "kuliner": [
@@ -29331,7 +29549,8 @@
         "longitude": 118.8243,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "BNT-57",
@@ -29514,7 +29733,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Street_in_Canggu.jpg/960px-Street_in_Canggu.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.6592,
     "longitude": 115.1301,
     "kuliner": [
@@ -29551,7 +29770,8 @@
         "longitude": 115.1382,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Canggu, Kuta Utara, Badung)"
   },
   {
     "id": "BNT-59",
@@ -29732,7 +29952,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Pantai_Balangan_%2826334448230%29.jpg/960px-Pantai_Balangan_%2826334448230%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.7917,
     "longitude": 115.1236,
     "kuliner": [
@@ -29769,7 +29989,8 @@
         "longitude": 115.1134,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Balangan (26334448230).jpg)"
   },
   {
     "id": "BNT-61",
@@ -29840,7 +30061,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Dreamland_Beach_Bali.jpg/960px-Dreamland_Beach_Bali.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.7986,
     "longitude": 115.1181,
     "kuliner": [
@@ -29877,7 +30098,8 @@
         "longitude": 115.1015,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Dreamland)"
   },
   {
     "id": "BNT-62",
@@ -29929,7 +30151,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Tanjung_Benoa.JPG/960px-Tanjung_Benoa.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.7956,
     "longitude": 115.2217,
     "kuliner": [
@@ -29966,7 +30188,8 @@
         "longitude": 115.2054,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Nusa Dua)"
   },
   {
     "id": "BNT-63",
@@ -30166,7 +30389,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Virgin_Islands-CIA_WFB_Map.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -8.5,
     "longitude": 115.6167,
     "kuliner": [
@@ -30203,7 +30426,8 @@
         "longitude": 115.6179,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "en.wikipedia (List of beaches in the U.S. Virgin Islands)"
   },
   {
     "id": "BNT-65",
@@ -30274,7 +30498,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Pagi_di_Keramas.jpg/960px-Pagi_di_Keramas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.5833,
     "longitude": 115.3333,
     "kuliner": [
@@ -30311,7 +30535,8 @@
         "longitude": 115.3447,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pagi di Keramas.jpg)"
   },
   {
     "id": "BNT-66",
@@ -30697,7 +30922,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Pasir_Panjang%2C_Pulau_Redang%2C_Malaysia_%28192497585%29.jpg/960px-Pasir_Panjang%2C_Pulau_Redang%2C_Malaysia_%28192497585%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.5167,
     "longitude": 119.8,
     "kuliner": [
@@ -30734,7 +30959,8 @@
         "longitude": 119.7973,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pasir Panjang, Pulau Redang, Malaysia (192497585).jpg)"
   },
   {
     "id": "BNT-70",
@@ -30805,7 +31031,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/7/75/Pantai_Oetune.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -9.9167,
     "longitude": 124.6167,
     "kuliner": [
@@ -30842,7 +31068,8 @@
         "longitude": 124.6065,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Oetune)"
   },
   {
     "id": "BNT-71",
@@ -30892,7 +31119,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Pantai_kolbano_berpasir_batu_warna_warni.jpg/960px-Pantai_kolbano_berpasir_batu_warna_warni.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -9.9667,
     "longitude": 124.5,
     "kuliner": [
@@ -30929,7 +31156,8 @@
         "longitude": 124.4834,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai kolbano berpasir batu warna warni.jpg)"
   },
   {
     "id": "BNT-72",
@@ -31099,7 +31327,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/4/43/Pantai_Dato.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -3.5333,
     "longitude": 118.9667,
     "kuliner": [
@@ -31136,7 +31364,8 @@
         "longitude": 118.9635,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Dato Majene)"
   },
   {
     "id": "SLW-30",
@@ -31268,7 +31497,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Donggala.jpg/960px-Donggala.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -0.6278,
     "longitude": 119.7444,
     "kuliner": [
@@ -31305,7 +31534,8 @@
         "longitude": 119.7322,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kabupaten Donggala)"
   },
   {
     "id": "SLW-31",
@@ -31356,7 +31586,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Pusat_Laut_Beach%2C_Donggala%2C_2018-09-16_03.jpg/960px-Pusat_Laut_Beach%2C_Donggala%2C_2018-09-16_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -0.6667,
     "longitude": 119.7333,
     "kuliner": [
@@ -31393,7 +31623,8 @@
         "longitude": 119.7135,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pusat Laut Beach, Donggala, 2018-09-16 03.jpg)"
   },
   {
     "id": "SLW-32",
@@ -31653,7 +31884,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Pantai_Nirwana_-_Padang_15.jpg/960px-Pantai_Nirwana_-_Padang_15.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -5.5,
     "longitude": 122.5833,
     "kuliner": [
@@ -31690,7 +31921,8 @@
         "longitude": 122.5848,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Nirwana)"
   },
   {
     "id": "SLW-35",
@@ -31782,7 +32014,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Pantai_Meleura.jpg/960px-Pantai_Meleura.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -4.8333,
     "longitude": 122.7167,
     "kuliner": [
@@ -31819,7 +32051,8 @@
         "longitude": 122.7303,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai meleura)"
   },
   {
     "id": "SLW-36",
@@ -32018,7 +32251,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Pulau_Labengki_Besar.jpg/960px-Pulau_Labengki_Besar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -3.45,
     "longitude": 122.45,
     "kuliner": [
@@ -32055,7 +32288,8 @@
         "longitude": 122.4688,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pulau Labengki Besar.jpg)"
   },
   {
     "id": "SLW-38",
@@ -32106,7 +32340,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Sombori_Morowali.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -3.25,
     "longitude": 122.3833,
     "kuliner": [
@@ -32143,7 +32377,8 @@
         "longitude": 122.393,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Sombori)"
   },
   {
     "id": "SLW-39",
@@ -32192,7 +32427,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Malam_di_pulau_nain_-_panoramio.jpg/960px-Malam_di_pulau_nain_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 1.75,
     "longitude": 124.7833,
     "kuliner": [
@@ -32229,7 +32464,8 @@
         "longitude": 124.7801,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Malam di pulau nain - panoramio.jpg)"
   },
   {
     "id": "SLW-40",
@@ -32430,7 +32666,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/MLK-15.jpg",
     "latitude": -3.5167,
     "longitude": 128.3333,
     "kuliner": [
@@ -32467,7 +32703,8 @@
         "longitude": 128.3457,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "MLK-16",
@@ -32519,7 +32756,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/MLK-16.jpg",
     "latitude": -3.6167,
     "longitude": 128.2833,
     "kuliner": [
@@ -32556,7 +32793,8 @@
         "longitude": 128.3018,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "MLK-17",
@@ -32607,7 +32845,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/6/63/Pantai_Pintu_Kota.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -3.7667,
     "longitude": 128.15,
     "kuliner": [
@@ -32644,7 +32882,8 @@
         "longitude": 128.1672,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Pintu Kota)"
   },
   {
     "id": "MLK-18",
@@ -32734,7 +32973,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/MLK-18.jpg",
     "latitude": -3.0167,
     "longitude": 129.5833,
     "kuliner": [
@@ -32771,7 +33010,8 @@
         "longitude": 129.5922,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "MLK-19",
@@ -32821,7 +33061,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/MLK-19.jpg",
     "latitude": -3,
     "longitude": 129.6167,
     "kuliner": [
@@ -32858,7 +33098,8 @@
         "longitude": 129.6137,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "MLK-20",
@@ -32909,7 +33150,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Pasir_panjang_%28ngurbload%29%2C_Maluku_tenggara.jpg/960px-Pasir_panjang_%28ngurbload%29%2C_Maluku_tenggara.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -5.6333,
     "longitude": 132.7333,
     "kuliner": [
@@ -32946,7 +33187,8 @@
         "longitude": 132.7221,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Ngurbloat)"
   },
   {
     "id": "MLK-21",
@@ -33038,7 +33280,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Greco_Island_and_Bair_Island.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "latitude": -5.5833,
     "longitude": 132.6833,
     "kuliner": [
@@ -33075,7 +33317,8 @@
         "longitude": 132.6651,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Greco Island and Bair Island.png)"
   },
   {
     "id": "MLK-22",
@@ -33125,7 +33368,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/MLK-22.jpg",
     "latitude": -5.6,
     "longitude": 132.7,
     "kuliner": [
@@ -33162,7 +33405,8 @@
         "longitude": 132.6821,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "MLK-23",
@@ -33252,7 +33496,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/MLK-23.jpg",
     "latitude": -3.5333,
     "longitude": 128.3667,
     "kuliner": [
@@ -33289,7 +33533,8 @@
         "longitude": 128.3564,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "MLK-24",
@@ -33432,7 +33677,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/MLK-24.png",
     "latitude": -4.5833,
     "longitude": 130.0333,
     "kuliner": [
@@ -33469,7 +33714,8 @@
         "longitude": 130.0346,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "PPA-14",
@@ -33522,7 +33768,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/PPA-14.jpg",
     "latitude": -2.5167,
     "longitude": 140.7167,
     "kuliner": [
@@ -33559,7 +33805,8 @@
         "longitude": 140.7178,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "PPA-15",
@@ -33610,7 +33857,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/PPA-15.jpg",
     "latitude": -2.5667,
     "longitude": 140.7167,
     "kuliner": [
@@ -33647,7 +33894,8 @@
         "longitude": 140.7268,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "PPA-16",
@@ -33719,7 +33967,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Holtekamp_beach.jpg/960px-Holtekamp_beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -2.6167,
     "longitude": 140.7667,
     "kuliner": [
@@ -33756,7 +34004,8 @@
         "longitude": 140.7817,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Holtekamp beach.jpg)"
   },
   {
     "id": "PPA-17",
@@ -33846,7 +34095,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Harlem-02.jpg/960px-Harlem-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -2.4833,
     "longitude": 140.4667,
     "kuliner": [
@@ -33883,7 +34132,8 @@
         "longitude": 140.4806,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Harlem-02.jpg)"
   },
   {
     "id": "PPA-18",
@@ -33963,7 +34213,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/PPA-18.png",
     "latitude": -2.4667,
     "longitude": 140.4167,
     "kuliner": [
@@ -34000,7 +34250,8 @@
         "longitude": 140.4239,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "PPA-19",
@@ -34102,7 +34353,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/S33-75-038_-_STS-033_-_STS-33_earth_observations_-_DPLA_-_63275972da44abc39f96fb0af2265470.jpg/960px-S33-75-038_-_STS-033_-_STS-33_earth_observations_-_DPLA_-_63275972da44abc39f96fb0af2265470.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -1.25,
     "longitude": 136.4167,
     "kuliner": [
@@ -34139,7 +34390,8 @@
         "longitude": 136.4143,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Padaido, Biak Numfor)"
   },
   {
     "id": "PPA-20",
@@ -34222,7 +34474,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Collectie_Wereldmuseum%2C_TM-10029875%2C_Negatief%2C_%27Nederlandse_militairen_en_papoea_bij_een_jeep_op_het_strand%2C_Bosnik%2C_zuidkust_Biak%2C_mei_1949%27%2C_maker_Cees_Taillie%2C_29_mei_1949.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -1.1833,
     "longitude": 136.2167,
     "kuliner": [
@@ -34259,7 +34511,8 @@
         "longitude": 136.2077,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Collectie Wereldmuseum, TM-10029875, Negatief, 'Nederlandse militairen en papoea bij een jeep op het strand, Bosnik, zuidkust Biak, mei 1949', maker Cees Taillie, 29 mei 1949.jpg)"
   },
   {
     "id": "PPA-21",
@@ -34310,7 +34563,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Pulau_Triton.jpg/960px-Pulau_Triton.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -3.8833,
     "longitude": 134.1167,
     "kuliner": [
@@ -34347,7 +34600,8 @@
         "longitude": 134.102,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Teluk Triton)"
   },
   {
     "id": "PPA-22",
@@ -34489,7 +34743,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/PPA-22.jpg",
     "latitude": -0.5633,
     "longitude": 130.5167,
     "kuliner": [
@@ -34526,7 +34780,8 @@
         "longitude": 130.5023,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "PPA-23",
@@ -34577,7 +34832,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/a/ac/ID_Fam.PNG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -0.5667,
     "longitude": 130.2667,
     "kuliner": [
@@ -34614,7 +34869,8 @@
         "longitude": 130.2584,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "en.wikipedia (Fam Islands)"
   },
   {
     "id": "PPA-24",
@@ -34745,7 +35001,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/PPA-24.jpg",
     "latitude": -1.95,
     "longitude": 130.3333,
     "kuliner": [
@@ -34782,7 +35038,8 @@
         "longitude": 130.3344,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "PPA-25",
@@ -34913,7 +35170,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Dampier-Indonesia_view.jpg/960px-Dampier-Indonesia_view.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -0.5667,
     "longitude": 130.6333,
     "kuliner": [
@@ -34950,7 +35207,8 @@
         "longitude": 130.6433,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Selat Dampier)"
   },
   {
     "id": "SMT-61",
@@ -35041,7 +35299,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/6/68/Tari_Perang_Enggano_-_panoramio.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -5.35,
     "longitude": 102.2667,
     "kuliner": [
@@ -35078,7 +35336,8 @@
         "longitude": 102.2468,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Suku Enggano)"
   },
   {
     "id": "SMT-62",
@@ -35647,7 +35906,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/The_Beauty_Of_Teluk_Asmara.jpg/960px-The_Beauty_Of_Teluk_Asmara.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.4356,
     "longitude": 112.6358,
     "kuliner": [
@@ -35684,7 +35943,8 @@
         "longitude": 112.6507,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:The Beauty Of Teluk Asmara.jpg)"
   },
   {
     "id": "JWA-56",
@@ -35767,7 +36027,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Afternoon_at_Nglambor_Beach.jpg/960px-Afternoon_at_Nglambor_Beach.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.1833,
     "longitude": 110.6833,
     "kuliner": [
@@ -35804,7 +36064,8 @@
         "longitude": 110.7056,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Nglambor)"
   },
   {
     "id": "JWA-57",
@@ -35856,7 +36117,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/JWA-57.jpg",
     "latitude": -8.43,
     "longitude": 113.5833,
     "kuliner": [
@@ -35893,7 +36154,8 @@
         "longitude": 113.6039,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "JWA-58",
@@ -35944,7 +36206,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/JWA-58.png",
     "latitude": -7.75,
     "longitude": 108.2833,
     "kuliner": [
@@ -35981,7 +36243,8 @@
         "longitude": 108.294,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "JWA-59",
@@ -36033,7 +36296,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Pantai_Pangi_Blitar.jpg/960px-Pantai_Pangi_Blitar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.3333,
     "longitude": 112.0833,
     "kuliner": [
@@ -36070,7 +36333,8 @@
         "longitude": 112.0797,
         "jarakKm": 2.5
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Pangi Blitar.jpg)"
   },
   {
     "id": "KLM-31",
@@ -36162,7 +36426,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Alam_Pulau_Lemukutan.jpg/960px-Alam_Pulau_Lemukutan.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 0.75,
     "longitude": 108.7167,
     "kuliner": [
@@ -36199,7 +36463,8 @@
         "longitude": 108.7021,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "en.wikipedia (Lemukutan Island)"
   },
   {
     "id": "KLM-32",
@@ -36250,7 +36515,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/KLM-32.jpg",
     "latitude": 1.2167,
     "longitude": 118.7333,
     "kuliner": [
@@ -36287,7 +36552,8 @@
         "longitude": 118.7189,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "KLM-33",
@@ -36379,7 +36645,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Lake_Labuan_Cermin%2C_East_Kalimantan%2C_Indonesia.jpg/960px-Lake_Labuan_Cermin%2C_East_Kalimantan%2C_Indonesia.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 1.2667,
     "longitude": 118.6833,
     "kuliner": [
@@ -36416,7 +36682,8 @@
         "longitude": 118.675,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Danau Labuan Cermin)"
   },
   {
     "id": "KLM-34",
@@ -36507,7 +36774,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/KLM-34.jpg",
     "latitude": 1.75,
     "longitude": 118.5833,
     "kuliner": [
@@ -36544,7 +36811,8 @@
         "longitude": 118.5844,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "BNT-73",
@@ -36684,7 +36952,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Pantai_Widarapayung.jpg/960px-Pantai_Widarapayung.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": -8.8417,
     "longitude": 115.2,
     "kuliner": [
@@ -36721,7 +36989,8 @@
         "longitude": 115.2012,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Widarapayung)"
   },
   {
     "id": "BNT-75",
@@ -36900,7 +37169,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Pantai_Mbawana%2C_Sumba_Barat_Daya.jpg/960px-Pantai_Mbawana%2C_Sumba_Barat_Daya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -9.5833,
     "longitude": 119.05,
     "kuliner": [
@@ -36937,7 +37206,8 @@
         "longitude": 119.067,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Pantai Mbawana, Sumba Barat Daya.jpg)"
   },
   {
     "id": "BNT-77",
@@ -37402,7 +37672,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Kapal_Phinisi_berlabuh_di_perairan_lepas_pantai_Biluhu.jpg/960px-Kapal_Phinisi_berlabuh_di_perairan_lepas_pantai_Biluhu.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "latitude": 0.45,
     "longitude": 123.0167,
     "kuliner": [
@@ -37439,7 +37709,8 @@
         "longitude": 123.0054,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pantai Biluhu)"
   },
   {
     "id": "SLW-44",
@@ -37608,7 +37879,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/MLK-25.jpg",
     "latitude": -5.5833,
     "longitude": 132.6833,
     "kuliner": [
@@ -37645,7 +37916,8 @@
         "longitude": 132.6958,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "MLK-26",
@@ -37695,7 +37967,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/MLK-26.png",
     "latitude": -5.6667,
     "longitude": 132.6167,
     "kuliner": [
@@ -37732,7 +38004,8 @@
         "longitude": 132.6353,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "MLK-27",
@@ -37875,7 +38148,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Run_and_Nailaka_%28Banda_Islands%29.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": -4.55,
     "longitude": 129.6833,
     "kuliner": [
@@ -37912,7 +38185,8 @@
         "longitude": 129.7005,
         "jarakKm": 2.1
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Pulau Rhun, Banda, Maluku Tengah)"
   },
   {
     "id": "PPA-26",
@@ -37992,7 +38266,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/PPA-26.jpg",
     "latitude": -1.95,
     "longitude": 130.3333,
     "kuliner": [
@@ -38029,7 +38303,8 @@
         "longitude": 130.3483,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "PPA-27",
@@ -38080,7 +38355,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/PPA-27.jpg",
     "latitude": -0.3167,
     "longitude": 130.85,
     "kuliner": [
@@ -38117,7 +38392,8 @@
         "longitude": 130.8639,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "PPA-28",
@@ -38169,7 +38445,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/PPA-28.jpg",
     "latitude": -0.8333,
     "longitude": 131.25,
     "kuliner": [
@@ -38206,7 +38482,8 @@
         "longitude": 131.2572,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "PPA-29",
@@ -38297,7 +38574,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "images/destinasi/PPA-29.jpg",
     "latitude": -2.5,
     "longitude": 140.7333,
     "kuliner": [
@@ -38334,7 +38611,8 @@
         "longitude": 140.7309,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "manual (user upload)"
   },
   {
     "id": "PPA-30",
@@ -38436,7 +38714,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/3/37/Atol%C3%B3n_G%C3%BCedes_%28Mapia%29.png?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "latitude": 0.9167,
     "longitude": 134.3333,
     "kuliner": [
@@ -38473,6 +38751,7 @@
         "longitude": 134.3243,
         "jarakKm": 1.7
       }
-    ]
+    ],
+    "fotoSumber": "id.wikipedia (Kepulauan Mapia)"
   }
 ]

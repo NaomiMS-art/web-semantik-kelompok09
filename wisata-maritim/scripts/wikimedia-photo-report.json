@@ -1,0 +1,471 @@
+{
+  "total": 336,
+  "foundCount": 279,
+  "missingCount": 57,
+  "foundSample": [
+    {
+      "id": "SMT-01",
+      "nama": "Iboih & Rubiah Sabang",
+      "lokasi": "Sabang, Aceh",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Pulau_Rubiah_dari_Pulau_Iboih_Sabang.jpg/960px-Pulau_Rubiah_dari_Pulau_Iboih_Sabang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "commons (File:Pulau Rubiah dari Pulau Iboih Sabang.jpg)"
+    },
+    {
+      "id": "SMT-03",
+      "nama": "Pulau Banyak",
+      "lokasi": "Aceh Singkil, Aceh",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Banyak_Islands.jpg/960px-Banyak_Islands.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "source": "id.wikipedia (Kepulauan Banyak)"
+    },
+    {
+      "id": "SMT-06",
+      "nama": "Pantai Lampuuk",
+      "lokasi": "Aceh Besar, Aceh",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Masjid_Rahmatullah_Lampuuk_%28cropped%29.jpg/960px-Masjid_Rahmatullah_Lampuuk_%28cropped%29.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "source": "id.wikipedia (Masjid Rahmatullah Lampuuk)"
+    },
+    {
+      "id": "SMT-07",
+      "nama": "PLTD Apung",
+      "lokasi": "Banda Aceh, Aceh",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/PLTD_Apong_Ie_Beuna.JPG/960px-PLTD_Apong_Ie_Beuna.JPG?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "source": "id.wikipedia (PLTD Apung)"
+    },
+    {
+      "id": "SMT-08",
+      "nama": "Pulo Aceh",
+      "lokasi": "Aceh Besar, Aceh",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Pulo_Ie%2C_South_Kluet%2C_South_Aceh_Regency%2C_Aceh%2C_Indonesia_-_panoramio.jpg/960px-Pulo_Ie%2C_South_Kluet%2C_South_Aceh_Regency%2C_Aceh%2C_Indonesia_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "commons (File:Pulo Ie, South Kluet, South Aceh Regency, Aceh, Indonesia - panoramio.jpg)"
+    },
+    {
+      "id": "SMT-10",
+      "nama": "Pantai Cermin",
+      "lokasi": "Serdang Bedagai, Sumut",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Kecamatan_Pantai_Cermin%2C_Serdang_Bedagai_%2801%29.jpg/960px-Kecamatan_Pantai_Cermin%2C_Serdang_Bedagai_%2801%29.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "source": "id.wikipedia (Pantai Cermin, Serdang Bedagai)"
+    },
+    {
+      "id": "SMT-11",
+      "nama": "Pulau Berhala",
+      "lokasi": "Serdang Bedagai, Sumut",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Pulau_Berhala.jpg/960px-Pulau_Berhala.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "source": "id.wikipedia (Pulau Berhala (Kepulauan Riau))"
+    },
+    {
+      "id": "SMT-12",
+      "nama": "Pulau Mursala",
+      "lokasi": "Tapanuli Tengah, Sumut",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Mursalaisland.jpg/960px-Mursalaisland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "commons (File:Mursalaisland.jpg)"
+    },
+    {
+      "id": "SMT-13",
+      "nama": "Pantai Pandan",
+      "lokasi": "Tapanuli Tengah, Sumut",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Welcome_gate_to_Pandan%2C_Tapanuli_Tengah_%2801%29.jpg/960px-Welcome_gate_to_Pandan%2C_Tapanuli_Tengah_%2801%29.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "source": "id.wikipedia (Pandan, Tapanuli Tengah)"
+    },
+    {
+      "id": "SMT-14",
+      "nama": "Mentawai (Macaronis)",
+      "lokasi": "Kep. Mentawai, Sumbar",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Pelabuhan_Kapal_Tuapejat_202308073.jpg/960px-Pelabuhan_Kapal_Tuapejat_202308073.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "source": "id.wikipedia (Kabupaten Kepulauan Mentawai)"
+    },
+    {
+      "id": "SMT-15",
+      "nama": "Pantai Carocok",
+      "lokasi": "Pesisir Selatan, Sumbar",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Pantai_Carocok_Painan.jpg/960px-Pantai_Carocok_Painan.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "source": "id.wikipedia (Pantai Carocok)"
+    },
+    {
+      "id": "SMT-16",
+      "nama": "Pulau Pasumpahan",
+      "lokasi": "Padang, Sumbar",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/PULAU_PASUMPAHAN%2C_SUMATRA_BARAT.jpg/960px-PULAU_PASUMPAHAN%2C_SUMATRA_BARAT.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "source": "id.wikipedia (Pulau Pasumpahan)"
+    },
+    {
+      "id": "SMT-17",
+      "nama": "Pantai Air Manis",
+      "lokasi": "Padang, Sumbar",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Pemandangan_pantai_air_manis_dari_ketinggian.jpg/960px-Pemandangan_pantai_air_manis_dari_ketinggian.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "source": "id.wikipedia (Pantai Air Manis)"
+    },
+    {
+      "id": "SMT-18",
+      "nama": "Pulau Sikuai",
+      "lokasi": "Padang, Sumbar",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Sikuai_Island.jpg/960px-Sikuai_Island.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "source": "id.wikipedia (Pulau Sikuai)"
+    },
+    {
+      "id": "SMT-19",
+      "nama": "Pulau Rupat",
+      "lokasi": "Bengkalis, Riau",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/YKL_7855.jpg/960px-YKL_7855.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+      "source": "id.wikipedia (Pulau Rupat)"
+    }
+  ],
+  "missingList": [
+    {
+      "id": "SMT-02",
+      "nama": "Pantai Gapang",
+      "lokasi": "Sabang, Aceh",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-04",
+      "nama": "Titik Nol Kilometer Sabang",
+      "lokasi": "Sabang, Aceh",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-05",
+      "nama": "Pantai Sumur Tiga",
+      "lokasi": "Sabang, Aceh",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-09",
+      "nama": "Pantai Lagundri",
+      "lokasi": "Nias Selatan, Sumut",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-23",
+      "nama": "Pantai Sepempang",
+      "lokasi": "Natuna, Kepulauan Riau",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-29",
+      "nama": "Pulau Tikus Bengkulu",
+      "lokasi": "Bengkulu, Bengkulu",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-42",
+      "nama": "Pulau Kelagian Lunik",
+      "lokasi": "Pesawaran, Lampung",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-43",
+      "nama": "Pantai Tanjung Setia",
+      "lokasi": "Pesisir Barat, Lampung",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "BNT-04",
+      "nama": "Mangrove & Snorkeling Nusa Lembongan",
+      "lokasi": "Klungkung, Bali",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-05",
+      "nama": "Blue Lagoon Nusa Ceningan",
+      "lokasi": "Klungkung, Bali",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-06",
+      "nama": "USAT Liberty Shipwreck Tulamben",
+      "lokasi": "Karangasem, Bali",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-13",
+      "nama": "Lovina Dolphin Watching",
+      "lokasi": "Buleleng, Bali",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-28",
+      "nama": "Pink Beach Lombok (Tangsi)",
+      "lokasi": "Lombok Timur, NTB",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-31",
+      "nama": "Pantai Mawun",
+      "lokasi": "Lombok Tengah, NTB",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-34",
+      "nama": "Lakey Peak",
+      "lokasi": "Dompu, NTB",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-39",
+      "nama": "Manta Point Komodo",
+      "lokasi": "Manggarai Barat, NTT",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-43",
+      "nama": "Pantai Nihiwatu",
+      "lokasi": "Sumba Barat Daya, NTT",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-45",
+      "nama": "Pantai Nemberala",
+      "lokasi": "Rote Ndao, NTT",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-46",
+      "nama": "Pantai Deere",
+      "lokasi": "Alor, NTT",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-54",
+      "nama": "Pantai Lasiana",
+      "lokasi": "Kupang, NTT",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "SLW-01",
+      "nama": "Pantai Manakarra",
+      "lokasi": "Mamuju, Sulawesi Barat",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SLW-09",
+      "nama": "Pulau Kodingareng Keke",
+      "lokasi": "Makassar, Sulawesi Selatan",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SLW-10",
+      "nama": "Hoga Wakatobi",
+      "lokasi": "Wakatobi, Sulawesi Tenggara",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SLW-12",
+      "nama": "Pantai Toronipa",
+      "lokasi": "Konawe, Sulawesi Tenggara",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SLW-13",
+      "nama": "Pulau Bokori",
+      "lokasi": "Konawe, Sulawesi Tenggara",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SLW-14",
+      "nama": "Pulau Binongko",
+      "lokasi": "Wakatobi, Sulawesi Tenggara",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SLW-17",
+      "nama": "Olele",
+      "lokasi": "Bone Bolango, Gorontalo",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SLW-24",
+      "nama": "Pulau Bangka Likupang",
+      "lokasi": "Minahasa Utara, Sulawesi Utara",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SLW-27",
+      "nama": "Tanjung Pulisan",
+      "lokasi": "Minahasa Utara, Sulawesi Utara",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SMT-47",
+      "nama": "Pantai Pasir Putih Lhoknga",
+      "lokasi": "Aceh Besar, Aceh",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-51",
+      "nama": "Pulau Asu Hinako",
+      "lokasi": "Nias Barat, Sumut",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-53",
+      "nama": "Pantai Labuhan Jukung",
+      "lokasi": "Pesisir Barat, Lampung",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-56",
+      "nama": "Pantai Marina Kalianda",
+      "lokasi": "Lampung Selatan, Lampung",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-57",
+      "nama": "Pantai Gigi Hiu (Pegadungan)",
+      "lokasi": "Tanggamus, Lampung",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-59",
+      "nama": "Pantai Batu Kasah",
+      "lokasi": "Natuna, Kepulauan Riau",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-60",
+      "nama": "Pulau Senua",
+      "lokasi": "Natuna, Kepulauan Riau",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "BNT-57",
+      "nama": "Pantai Seminyak & Petitenget",
+      "lokasi": "Badung, Bali",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-59",
+      "nama": "Pantai Bingin",
+      "lokasi": "Badung, Bali",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-63",
+      "nama": "Pantai Bias Tugel Padangbai",
+      "lokasi": "Karangasem, Bali",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-66",
+      "nama": "Gili Asahan Sekotong",
+      "lokasi": "Lombok Barat, NTB",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-67",
+      "nama": "Pantai Senggigi Mangsit",
+      "lokasi": "Lombok Barat, NTB",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-68",
+      "nama": "Pantai Tanjung Bloam",
+      "lokasi": "Lombok Timur, NTB",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-72",
+      "nama": "Teluk Kabola Alor",
+      "lokasi": "Alor, NTT",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "SLW-32",
+      "nama": "Danau Paisupok",
+      "lokasi": "Banggai Kepulauan, Sulawesi Tengah",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SLW-33",
+      "nama": "Pantai Kilo 5",
+      "lokasi": "Luwuk Banggai, Sulawesi Tengah",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SLW-36",
+      "nama": "Danau Ubur-Ubur Mariona Togean",
+      "lokasi": "Tojo Una-Una, Sulawesi Tengah",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SLW-40",
+      "nama": "Pulau Lihaga Likupang",
+      "lokasi": "Minahasa Utara, Sulawesi Utara",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SMT-62",
+      "nama": "Pantai Karang Nawing",
+      "lokasi": "Belitung Timur, Bangka Belitung",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-63",
+      "nama": "Pulau Sikakap & Teluk Silabu",
+      "lokasi": "Kep. Mentawai, Sumbar",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-64",
+      "nama": "Pantai Teluk Hantu",
+      "lokasi": "Pesawaran, Lampung",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "SMT-65",
+      "nama": "Pulau Silabu Nyang-Nyang",
+      "lokasi": "Kep. Mentawai, Sumbar",
+      "wilayah": "Sumatra"
+    },
+    {
+      "id": "BNT-73",
+      "nama": "Pantai Atuh & Diamond Cliff",
+      "lokasi": "Nusa Penida, Bali",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-75",
+      "nama": "Gili Layar & Gili Rengit",
+      "lokasi": "Lombok Barat, NTB",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "BNT-77",
+      "nama": "Teluk Gurita & Pantai Atapupu",
+      "lokasi": "Belu, NTT",
+      "wilayah": "Bali & Nusa Tenggara"
+    },
+    {
+      "id": "SLW-41",
+      "nama": "Pulau Sombori (Tebing Kahyangan)",
+      "lokasi": "Morowali, Sulawesi Tengah",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SLW-42",
+      "nama": "Pulau Labengki (Blue Lagoon)",
+      "lokasi": "Konawe Utara, Sulawesi Tenggara",
+      "wilayah": "Sulawesi"
+    },
+    {
+      "id": "SLW-44",
+      "nama": "Gua Halo Tabung & Danau Mariona",
+      "lokasi": "Tojo Una-Una, Sulawesi Tengah",
+      "wilayah": "Sulawesi"
+    }
+  ]
+}
