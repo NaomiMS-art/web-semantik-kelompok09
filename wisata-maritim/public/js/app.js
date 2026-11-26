@@ -166,6 +166,20 @@ const formatRupiah = (num) => {
   return 'Rp' + Number(num).toLocaleString('id-ID');
 };
 
+function getAffordabilityCategory(amount) {
+  if (amount === null || amount === undefined || amount === '') {
+    return { key: 'unknown', label: 'Belum ada data' };
+  }
+  const cost = Number(amount);
+  if (!Number.isFinite(cost) || cost < 0) return { key: 'unknown', label: 'Belum ada data' };
+  if (cost === 0) return { key: 'gratis', label: 'Gratis' };
+  if (cost < 100000) return { key: 'murah', label: 'Murah' };
+  if (cost <= 250000) return { key: 'terjangkau', label: 'Terjangkau' };
+  if (cost <= 500000) return { key: 'standar', label: 'Standar' };
+  if (cost <= 1000000) return { key: 'mahal', label: 'Mahal' };
+  return { key: 'premium', label: 'Premium' };
+}
+
 const escapeHtml = (str) => {
   if (!str) return '';
   return String(str)
@@ -429,39 +443,51 @@ function setupSearchAutocomplete(inputId, dropdownId) {
   const dropEl = document.getElementById(dropdownId);
   if (!inputEl || !dropEl) return;
 
-  const showSuggestions = (val) => {
-    const q = (val || '').toLowerCase().trim();
+  const showSuggestions = async (val) => {
+    const q = (val || '').trim();
     let matches = [];
 
     if (!q) {
       // Saat kosong / klik input, tampilkan pencarian paling sering dicari
       matches = POPULAR_SEARCH_PRESETS.slice(0, 7);
     } else {
+      let allDests = APP_STATE.allDestinations || [];
+      if (allDests.length === 0) allDests = await loadAllDestinations();
+      if (inputEl.value.trim() !== q) return;
+
+      const normalizedQuery = normalizeNameToken(q);
+
       // 1. Cari dari daftar populer
       const fromPresets = POPULAR_SEARCH_PRESETS.filter(p =>
-        p.query.toLowerCase().includes(q) ||
-        p.title.toLowerCase().includes(q) ||
-        p.sub.toLowerCase().includes(q)
+        normalizeNameToken(p.query).includes(normalizedQuery) ||
+        normalizeNameToken(p.title).includes(normalizedQuery) ||
+        normalizeNameToken(p.sub).includes(normalizedQuery)
       );
 
-      // 2. Cari dari destinasi spesifik (nama destinasi & aktivitas)
-      const allDests = APP_STATE.allDestinations || [];
-      const fromDests = allDests
-        .filter(d =>
-          d.nama.toLowerCase().includes(q) ||
-          d.lokasi.toLowerCase().includes(q) ||
-          (d.aktivitas || []).some(a => a.toLowerCase().includes(q))
-        )
+      // 2. Cari destinasi melalui nama (termasuk awalan/typo), lokasi, atau aktivitas
+      const fromDests = allDests.map(d => {
+        const nameScore = getNameSuggestionScore(q, d.nama);
+        const locationMatch = normalizeNameToken(d.lokasi).includes(normalizedQuery);
+        const activityMatch = (d.aktivitas || []).some(a =>
+          normalizeNameToken(a).includes(normalizedQuery)
+        );
+        return {
+          destination: d,
+          score: nameScore ? 100 + nameScore : locationMatch ? 50 : activityMatch ? 40 : 0
+        };
+      })
+        .filter(match => match.score > 0)
+        .sort((a, b) => b.score - a.score)
         .slice(0, 5)
-        .map(d => ({
-          query: d.nama,
-          title: d.nama,
-          category: d.wilayah,
+        .map(match => ({
+          query: match.destination.nama,
+          title: match.destination.nama,
+          category: match.destination.wilayah,
           icon: "📍",
-          sub: `${d.lokasi} · Level ${d.level} · ${d.jenisWisata || 'Wisata Bahari'}`
+          sub: `${match.destination.lokasi} · Level ${match.destination.level} · ${match.destination.jenisWisata || 'Wisata Bahari'}`
         }));
 
-      matches = [...fromPresets, ...fromDests].slice(0, 8);
+      matches = [...fromDests, ...fromPresets].slice(0, 8);
     }
 
     if (matches.length === 0) {
@@ -534,6 +560,83 @@ function setupSearchAutocomplete(inputId, dropdownId) {
       dropEl.style.display = 'none';
     }
   });
+}
+
+function normalizeNameToken(value) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+function getEditDistance(left, right) {
+  const previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let i = 1; i <= left.length; i++) {
+    let diagonal = previous[0];
+    previous[0] = i;
+    for (let j = 1; j <= right.length; j++) {
+      const above = previous[j];
+      previous[j] = Math.min(
+        previous[j] + 1,
+        previous[j - 1] + 1,
+        diagonal + (left[i - 1] === right[j - 1] ? 0 : 1)
+      );
+      diagonal = above;
+    }
+  }
+  return previous[right.length];
+}
+
+function getNameSuggestionScore(query, destinationName) {
+  const normalizedQuery = normalizeNameToken(query);
+  const normalizedName = normalizeNameToken(destinationName);
+  if (!normalizedQuery || !normalizedName) return 0;
+  if (normalizedName.includes(normalizedQuery)) return 1000 + normalizedQuery.length;
+
+  const ignoredWords = new Set(['cari', 'carikan', 'destinasi', 'di', 'ke', 'mana', 'tempat', 'wisata', 'yang']);
+  const queryTokens = normalizedQuery.split(' ')
+    .filter(token => token.length >= 3 && !ignoredWords.has(token));
+  const nameTokens = normalizedName.split(' ').filter(Boolean);
+  if (queryTokens.length === 0) return 0;
+
+  let matches = 0;
+  let score = 0;
+  queryTokens.forEach(queryToken => {
+    let bestScore = 0;
+    nameTokens.forEach(nameToken => {
+      let tokenScore = 0;
+      if (nameToken === queryToken) {
+        tokenScore = 100;
+      } else if (nameToken.startsWith(queryToken)) {
+        tokenScore = 90 + queryToken.length / nameToken.length;
+      } else if (nameToken.includes(queryToken)) {
+        tokenScore = 80 + queryToken.length / nameToken.length;
+      } else if (queryToken.length >= 4) {
+        const queryConsonants = queryToken.replace(/[aeiou]/g, '');
+        const nameConsonants = nameToken.replace(/[aeiou]/g, '');
+        if (queryConsonants.length >= 3 && nameConsonants.startsWith(queryConsonants)) {
+          tokenScore = 75 + queryConsonants.length / nameConsonants.length;
+        } else {
+          const distance = getEditDistance(queryToken, nameToken);
+          const maxDistance = queryToken.length >= 7 ? 2 : 1;
+          const similarity = 1 - distance / Math.max(queryToken.length, nameToken.length);
+          if (distance > 0 && distance <= maxDistance && similarity >= 0.65) {
+            tokenScore = 65 + similarity * 10;
+          }
+        }
+      }
+      bestScore = Math.max(bestScore, tokenScore);
+    });
+
+    if (bestScore > 0) {
+      matches += 1;
+      score += bestScore;
+    }
+  });
+
+  return matches ? score / queryTokens.length + matches * 20 : 0;
 }
 
 function applySearchQuery(query) {
@@ -864,9 +967,15 @@ function resetAllFilters() {
 async function executeSearch({ scrollToResults = false } = {}) {
   const grid = document.getElementById('destinations-grid');
   const countLabel = document.getElementById('results-count-label');
+  const relatedSection = document.getElementById('related-recommendations');
 
   if (grid) {
     grid.innerHTML = '<div style="grid-column:1/-1;padding:3rem 1rem;text-align:center;color:var(--text-muted)">Menelusuri relasi semantik...</div>';
+  }
+  if (relatedSection) {
+    relatedSection.hidden = true;
+    const relatedGrid = document.getElementById('related-recommendations-grid');
+    if (relatedGrid) relatedGrid.innerHTML = '';
   }
 
   const params = new URLSearchParams();
@@ -904,6 +1013,7 @@ async function executeSearch({ scrollToResults = false } = {}) {
     }
 
     sortAndRenderResults();
+    await renderRelatedRecommendations(data);
     if (scrollToResults && countLabel) {
       setTopFilterCollapsed(true);
       countLabel.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -914,6 +1024,259 @@ async function executeSearch({ scrollToResults = false } = {}) {
       grid.innerHTML = `<div style="grid-column:1/-1;padding:2rem;text-align:center;color:red">Error: ${err.message}</div>`;
     }
   }
+}
+
+async function renderRelatedRecommendations(searchData) {
+  const section = document.getElementById('related-recommendations');
+  const title = document.getElementById('related-recommendations-title');
+  const description = document.getElementById('related-recommendations-description');
+  const grid = document.getElementById('related-recommendations-grid');
+  if (!section || !description || !grid || APP_STATE.totalResults > 3) return;
+
+  const destinations = APP_STATE.allDestinations.length
+    ? APP_STATE.allDestinations
+    : await loadAllDestinations();
+  const parsed = searchData.parsedQuery || {};
+  const filters = searchData.appliedFilters || {};
+  const primaryIds = new Set(APP_STATE.results.map(destination => destination.id));
+  const hasCoordinates = destination =>
+    destination.latitude !== null && destination.latitude !== undefined &&
+    destination.longitude !== null && destination.longitude !== undefined &&
+    Number.isFinite(Number(destination.latitude)) &&
+    Number.isFinite(Number(destination.longitude));
+  const anchorResults = APP_STATE.results.filter(hasCoordinates);
+  const nearbyRadiusKm = 100;
+  const activities = filters.aktivitas
+    ? [filters.aktivitas]
+    : (parsed.aktivitas || []);
+  const level = filters.level || parsed.tingkatKeahlian;
+  const province = filters.provinsi || parsed.provinsi;
+  const region = filters.wilayah || parsed.wilayah;
+  const equipment = filters.alat || (parsed.peralatan || [])[0];
+  const facility = filters.fasilitas || (parsed.fasilitas || [])[0];
+  const budgetValue = filters.maxBudget !== null && filters.maxBudget !== undefined
+    ? Number(filters.maxBudget)
+    : parsed.maxBudget;
+  const hasBudget = budgetValue !== null && budgetValue !== undefined && Number.isFinite(Number(budgetValue));
+  const range = filters.rangeHarga || parsed.rangeHarga;
+  const priceType = filters.priceType || 'total';
+  const keywordTokens = parsed.keywords || [];
+  const rangeOrder = ['di-bawah-100k', '100k-250k', '250k-500k', '500k-1jt', 'di-atas-1jt'];
+
+  const recommendations = destinations.map(destination => {
+    if (primaryIds.has(destination.id)) return null;
+
+    let score = 0;
+    let relatedSignals = 0;
+    const reasons = [];
+    const differences = [];
+    const addReason = (points, text) => {
+      score += points;
+      relatedSignals += 1;
+      reasons.push(text);
+    };
+
+    const nearestAnchor = hasCoordinates(destination)
+      ? anchorResults
+        .map(anchor => ({
+          anchor,
+          distanceKm: haversineDistKm(
+            anchor.latitude,
+            anchor.longitude,
+            destination.latitude,
+            destination.longitude
+          )
+        }))
+        .filter(item => item.distanceKm <= nearbyRadiusKm)
+        .sort((left, right) => left.distanceKm - right.distanceKm)[0]
+      : null;
+    if (nearestAnchor) {
+      const proximityScore = 10 + Math.round((nearbyRadiusKm - nearestAnchor.distanceKm) / 10);
+      addReason(
+        proximityScore,
+        `Dekat dengan ${nearestAnchor.anchor.nama} (±${Math.round(nearestAnchor.distanceKm)} km)`
+      );
+    }
+
+    const destinationActivities = destination.aktivitas || [];
+    const sharedActivities = activities.filter(activity =>
+      destinationActivities.some(destinationActivity =>
+        normalizeNameToken(destinationActivity).includes(normalizeNameToken(activity))
+      )
+    );
+    if (sharedActivities.length) {
+      addReason(6 + sharedActivities.length, `Aktivitas sama: ${sharedActivities.join(', ')}`);
+    }
+
+    const type = filters.jenis || '';
+    if (type && normalizeNameToken(destination.jenisWisata || '').includes(normalizeNameToken(type))) {
+      addReason(4, `Jenis wisata sesuai: ${destination.jenisWisata}`);
+    } else if (type) {
+      differences.push(`jenis wisata berbeda: ${destination.jenisWisata}`);
+    }
+
+    const destinationEquipment = destination.peralatan || [];
+    if (equipment) {
+      const matchingEquipment = destinationEquipment.find(item =>
+        item.id === equipment ||
+        normalizeNameToken(item.nama || '').includes(normalizeNameToken(equipment))
+      );
+      if (matchingEquipment) {
+        addReason(4, `Peralatan tersedia: ${matchingEquipment.nama}`);
+      } else {
+        differences.push('peralatan yang dipilih tidak tersedia');
+      }
+    }
+
+    if (filters.statusSewa) {
+      if (destinationEquipment.some(item => item.dapatDisewa)) {
+        addReason(2, 'Peralatan dapat disewa');
+      } else {
+        differences.push('tidak tersedia persewaan alat');
+      }
+    }
+
+    if (level && level !== 'Semua level' && level !== 'Semua') {
+      if (destination.level === level) {
+        addReason(2, `Level sesuai: ${destination.level}`);
+      } else if (destination.level === 'Semua level') {
+        addReason(1, 'Cocok untuk semua level');
+      } else {
+        differences.push(`level ${destination.level}`);
+      }
+    }
+
+    if (province) {
+      const matchingProvince = province.split(',').map(value => value.trim().toLowerCase())
+        .some(value => (destination.provinsi || '').toLowerCase().includes(value));
+      if (matchingProvince) {
+        addReason(3, `Provinsi sama: ${destination.provinsi}`);
+      } else {
+        differences.push(`lokasi berbeda: ${destination.provinsi}`);
+      }
+    }
+
+    if (region) {
+      if (normalizeNameToken(destination.wilayah || '').includes(normalizeNameToken(region))) {
+        addReason(2, `Wilayah sama: ${destination.wilayah}`);
+      } else {
+        differences.push(`wilayah berbeda: ${destination.wilayah}`);
+      }
+    }
+
+    if (facility) {
+      const matchingFacility = (destination.fasilitas || []).find(item =>
+        normalizeNameToken(item).includes(normalizeNameToken(facility))
+      );
+      if (matchingFacility) {
+        addReason(2, `Fasilitas tersedia: ${matchingFacility}`);
+      } else {
+        differences.push('fasilitas yang dipilih tidak tersedia');
+      }
+    }
+
+    const searchableText = normalizeNameToken([
+      destination.nama,
+      destination.lokasi,
+      destination.jenisWisata,
+      destination.aktivitasStr,
+      destination.atraksi,
+      destination.fasilitasStr
+    ].filter(Boolean).join(' '));
+    const matchingKeywords = keywordTokens.filter(keyword =>
+      searchableText.includes(normalizeNameToken(keyword)) ||
+      getNameSuggestionScore(keyword, destination.nama) > 0
+    );
+    if (matchingKeywords.length) {
+      addReason(3, `Kata pencarian terkait: ${matchingKeywords.join(', ')}`);
+    }
+
+    const rangeField = priceType === 'tiket'
+      ? 'rangeHargaTiket'
+      : priceType === 'aktivitas'
+        ? 'rangeHargaAktivitas'
+        : 'rangeHargaTotal';
+    const destinationRange = destination[rangeField];
+    if (range) {
+      const targetIndex = rangeOrder.indexOf(range);
+      const destinationIndex = rangeOrder.indexOf(destinationRange);
+      if (destinationRange === range) {
+        addReason(2, `Rentang harga sama: ${destination[`${rangeField}Label`] || destinationRange}`);
+      } else if (targetIndex >= 0 && destinationIndex >= 0 && Math.abs(targetIndex - destinationIndex) === 1) {
+        score += 1;
+        differences.push(`rentang harga berdekatan: ${destination[`${rangeField}Label`] || destinationRange}`);
+      } else {
+        differences.push(`rentang harga berbeda: ${destination[`${rangeField}Label`] || destinationRange}`);
+      }
+    }
+
+    const cost = Number(destination.estimasiTotalPerOrang);
+    if (hasBudget && Number.isFinite(cost)) {
+      if (cost <= Number(budgetValue)) {
+        addReason(2, `Sesuai budget ${formatRupiah(Number(budgetValue))}`);
+      } else {
+        score -= 2;
+        differences.push(`biaya ${formatRupiah(cost)} melebihi budget ${formatRupiah(Number(budgetValue))}`);
+      }
+    }
+
+    if (relatedSignals === 0 && APP_STATE.results.length > 0) {
+      const nearestResult = APP_STATE.results.map(result => {
+        const sharedActivities = destinationActivities.filter(activity =>
+          (result.aktivitas || []).some(resultActivity =>
+            normalizeNameToken(resultActivity) === normalizeNameToken(activity)
+          )
+        );
+        const sameType = normalizeNameToken(destination.jenisWisata || '') ===
+          normalizeNameToken(result.jenisWisata || '');
+        const sameRegion = normalizeNameToken(destination.wilayah || '') ===
+          normalizeNameToken(result.wilayah || '');
+        const relationScore = sharedActivities.length * 4 + (sameType ? 2 : 0) + (sameRegion ? 1 : 0);
+        const reason = sharedActivities.length
+          ? `Aktivitas serupa dengan ${result.nama}: ${sharedActivities.slice(0, 2).join(', ')}`
+          : sameType
+            ? `Jenis wisata serupa dengan ${result.nama}: ${destination.jenisWisata}`
+            : '';
+        return { relationScore, reason };
+      }).sort((left, right) => right.relationScore - left.relationScore)[0];
+
+      if (nearestResult && nearestResult.relationScore >= 2 && nearestResult.reason) {
+        addReason(nearestResult.relationScore, nearestResult.reason);
+      }
+    }
+
+    if (relatedSignals === 0) return null;
+    const importantDifferences = [
+      ...differences.filter(difference => difference.startsWith('biaya ')),
+      ...differences.filter(difference => !difference.startsWith('biaya ')).slice(0, 1)
+    ];
+    const reason = [...reasons.slice(0, 2), ...importantDifferences].join(' · ');
+    return { destination, score, reason, isNearby: Boolean(nearestAnchor) };
+  })
+    .filter(Boolean)
+    .sort((left, right) => right.score - left.score || left.destination.estimasiTotalPerOrang - right.destination.estimasiTotalPerOrang)
+    .slice(0, 4);
+
+  if (recommendations.length === 0) return;
+
+  const hasNearbyRecommendations = recommendations.some(item => item.isNearby);
+  if (title) {
+    title.textContent = hasNearbyRecommendations
+      ? 'Rekomendasi sekitar & terkait'
+      : 'Rekomendasi terkait';
+  }
+  description.textContent = hasNearbyRecommendations
+    ? `Destinasi sekitar dalam radius ${nearbyRadiusKm} km dari hasil pencarian, serta alternatif lain yang terkait.`
+    : APP_STATE.totalResults === 0
+      ? 'Belum ada hasil yang cocok. Berikut beberapa alternatif yang masih terkait dengan pencarian Anda.'
+      : 'Hasil yang cocok masih sedikit. Berikut beberapa alternatif terkait untuk dipertimbangkan.';
+  const reasonsById = Object.fromEntries(recommendations.map(item => [item.destination.id, item.reason]));
+  section.hidden = false;
+  renderDestinationCards(
+    recommendations.map(item => item.destination),
+    'related-recommendations-grid',
+    reasonsById
+  );
 }
 
 function sortAndRenderResults() {
@@ -1029,7 +1392,7 @@ function renderSemanticReasoning(steps) {
 }
 
 // Render Destination Cards (Bersih, Realistis, Bebas Emoji)
-function renderDestinationCards(destList, targetGridId = 'destinations-grid') {
+function renderDestinationCards(destList, targetGridId = 'destinations-grid', recommendationReasons = {}) {
   const grid = document.getElementById(targetGridId);
   if (!grid) return;
 
@@ -1071,6 +1434,9 @@ function renderDestinationCards(destList, targetGridId = 'destinations-grid') {
     const isFav = APP_STATE.favorites.includes(d.id);
     const photoUrl = d.foto || getPhotoForDestination(d);
     const skillClass = `skill-${(d.level || 'pemula').toLowerCase().split(' ')[0]}`;
+    const recommendationReason = recommendationReasons[d.id];
+    const activitiesText = (d.aktivitas || []).slice(0, 3).join(', ') || d.aktivitasStr || 'Belum ada data aktivitas';
+    const affordability = getAffordabilityCategory(d.estimasiTotalPerOrang);
 
     // Tag nomor urut destinasi (menegaskan urutan lengkap 1 s/d 336)
     const numBadge = `<span class="badge-tag-clean" style="background:rgba(7,21,38,0.75);color:#fff;font-weight:700;font-size:0.68rem;padding:2px 6px">#${idx + 1}</span>`;
@@ -1114,7 +1480,17 @@ function renderDestinationCards(destList, targetGridId = 'destinations-grid') {
             <span class="pill-info-chip price-badge">
               Range: ${escapeHtml(d.rangeHargaTotalLabel)}
             </span>
+            <span class="pill-info-chip affordability-badge affordability-${affordability.key}" title="Kategori dari estimasi total biaya per orang">
+              ${affordability.label}
+            </span>
           </div>
+
+          ${recommendationReason ? `
+            <div class="related-card-context">
+              <p><strong>Aktivitas:</strong> ${escapeHtml(activitiesText)}</p>
+              <p><strong>Alasan direkomendasikan:</strong> ${escapeHtml(recommendationReason)}</p>
+            </div>
+          ` : ''}
 
           <div class="equipment-section-preview">
             <div class="equipment-preview-head">
@@ -1272,6 +1648,7 @@ async function openDestinationModal(destId) {
 
     const d = data.destinasi;
     const photo = d.foto || getPhotoForDestination(d);
+    const affordability = getAffordabilityCategory(d.estimasiTotalPerOrang);
 
     document.getElementById('modal-header-img').src = photo;
     document.getElementById('modal-dest-code').textContent = `${d.id} · ${d.wilayah}`;
@@ -1324,7 +1701,10 @@ async function openDestinationModal(destId) {
             Estimasi Total / Orang
           </span>
           <strong class="modal-budget-kpi-val">${formatRupiah(d.estimasiTotalPerOrang)}</strong>
-          <span class="modal-budget-kpi-sub"><span class="badge-tag-clean" style="font-size:0.68rem;padding:0.15rem 0.5rem;background:var(--sea-blue);color:white">${escapeHtml(d.rangeHargaTotalLabel)}</span></span>
+          <span class="modal-budget-kpi-sub">
+            <span class="pill-info-chip affordability-badge affordability-${affordability.key}">${affordability.label}</span>
+            <span class="badge-tag-clean" style="font-size:0.68rem;padding:0.15rem 0.5rem;background:var(--sea-blue);color:white">${escapeHtml(d.rangeHargaTotalLabel)}</span>
+          </span>
         </div>
       </div>
 

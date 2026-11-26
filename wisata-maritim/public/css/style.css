@@ -2229,6 +2229,57 @@ a {
   }
 }
 
+.related-recommendations {
+  margin: 1.75rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-subtle);
+}
+
+.related-recommendations[hidden] {
+  display: none;
+}
+
+.related-recommendations-heading {
+  margin-bottom: 1rem;
+}
+
+.related-recommendations-heading h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.related-recommendations-heading p {
+  margin: 0.3rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.related-card-context {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.75rem 0;
+  padding: 0.7rem 0.8rem;
+  border-left: 3px solid var(--accent-emerald);
+  border-radius: var(--radius-xs);
+  background: var(--bg-subtle);
+}
+
+.related-card-context p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.related-card-context strong {
+  color: var(--text-main);
+}
+
 /* Destinations Card Grid */
 .destinations-card-grid {
   display: grid;
@@ -2429,6 +2480,72 @@ a {
   background: var(--bg-subtle);
   color: var(--text-secondary);
   border: 1px solid var(--border-subtle);
+}
+
+.pill-info-chip.affordability-badge {
+  border: 1px solid transparent;
+}
+
+.pill-info-chip.affordability-gratis,
+.pill-info-chip.affordability-murah {
+  background: #ecfdf5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+
+.pill-info-chip.affordability-terjangkau {
+  background: #eff6ff;
+  color: #1e40af;
+  border-color: #bfdbfe;
+}
+
+.pill-info-chip.affordability-standar {
+  background: #fffbeb;
+  color: #92400e;
+  border-color: #fde68a;
+}
+
+.pill-info-chip.affordability-mahal {
+  background: #fff7ed;
+  color: #9a3412;
+  border-color: #fed7aa;
+}
+
+.pill-info-chip.affordability-premium {
+  background: #fef2f2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+[data-theme="dark"] .pill-info-chip.affordability-gratis,
+[data-theme="dark"] .pill-info-chip.affordability-murah {
+  background: rgba(16, 185, 129, 0.14);
+  color: #34d399;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+[data-theme="dark"] .pill-info-chip.affordability-terjangkau {
+  background: rgba(59, 130, 246, 0.14);
+  color: #93c5fd;
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="dark"] .pill-info-chip.affordability-standar {
+  background: rgba(245, 158, 11, 0.14);
+  color: #fbbf24;
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+[data-theme="dark"] .pill-info-chip.affordability-mahal {
+  background: rgba(249, 115, 22, 0.14);
+  color: #fdba74;
+  border-color: rgba(249, 115, 22, 0.3);
+}
+
+[data-theme="dark"] .pill-info-chip.affordability-premium {
+  background: rgba(239, 68, 68, 0.14);
+  color: #fca5a5;
+  border-color: rgba(239, 68, 68, 0.3);
 }
 
 /* Equipment Preview */

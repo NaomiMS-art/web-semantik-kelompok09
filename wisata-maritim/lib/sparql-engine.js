@@ -26,11 +26,11 @@ class MaritimeSparqlEngine {
 
     // Range harga entities
     const ranges = [
-      { id: 'data:Range_Under100k', label: 'Di bawah Rp100.000', min: 0, max: 100000 },
+      { id: 'data:Range_Under100k', label: 'Di bawah Rp100.000', min: 0, max: 99999 },
       { id: 'data:Range_100k_250k', label: 'Rp100.000 – Rp250.000', min: 100000, max: 250000 },
-      { id: 'data:Range_250k_500k', label: 'Rp250.000 – Rp500.000', min: 250000, max: 500000 },
-      { id: 'data:Range_500k_1M', label: 'Rp500.000 – Rp1.000.000', min: 500000, max: 1000000 },
-      { id: 'data:Range_Above1M', label: 'Di atas Rp1.000.000', min: 1000000, max: 999999999 }
+      { id: 'data:Range_250k_500k', label: 'Rp250.000 – Rp500.000', min: 250001, max: 500000 },
+      { id: 'data:Range_500k_1M', label: 'Rp500.000 – Rp1.000.000', min: 500001, max: 1000000 },
+      { id: 'data:Range_Above1M', label: 'Di atas Rp1.000.000', min: 1000001, max: 999999999 }
     ];
 
     ranges.forEach(r => {
