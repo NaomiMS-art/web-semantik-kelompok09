@@ -1,7 +1,7 @@
 {
   "total": 336,
-  "foundCount": 279,
-  "missingCount": 57,
+  "foundCount": 283,
+  "missingCount": 53,
   "foundSample": [
     {
       "id": "SMT-01",
@@ -10,6 +10,14 @@
       "wilayah": "Sumatra",
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Pulau_Rubiah_dari_Pulau_Iboih_Sabang.jpg/960px-Pulau_Rubiah_dari_Pulau_Iboih_Sabang.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
       "source": "commons (File:Pulau Rubiah dari Pulau Iboih Sabang.jpg)"
+    },
+    {
+      "id": "SMT-02",
+      "nama": "Pantai Gapang",
+      "lokasi": "Sabang, Aceh",
+      "wilayah": "Sumatra",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Gapang_Beach%2C_Sabang%2C_Aceh.jpg/960px-Gapang_Beach%2C_Sabang%2C_Aceh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "source": "commons (File:Gapang Beach, Sabang, Aceh.jpg)"
     },
     {
       "id": "SMT-03",
@@ -114,23 +122,9 @@
       "wilayah": "Sumatra",
       "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Sikuai_Island.jpg/960px-Sikuai_Island.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
       "source": "id.wikipedia (Pulau Sikuai)"
-    },
-    {
-      "id": "SMT-19",
-      "nama": "Pulau Rupat",
-      "lokasi": "Bengkalis, Riau",
-      "wilayah": "Sumatra",
-      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/YKL_7855.jpg/960px-YKL_7855.jpg?utm_source=id.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "source": "id.wikipedia (Pulau Rupat)"
     }
   ],
   "missingList": [
-    {
-      "id": "SMT-02",
-      "nama": "Pantai Gapang",
-      "lokasi": "Sabang, Aceh",
-      "wilayah": "Sumatra"
-    },
     {
       "id": "SMT-04",
       "nama": "Titik Nol Kilometer Sabang",
@@ -204,12 +198,6 @@
       "wilayah": "Bali & Nusa Tenggara"
     },
     {
-      "id": "BNT-31",
-      "nama": "Pantai Mawun",
-      "lokasi": "Lombok Tengah, NTB",
-      "wilayah": "Bali & Nusa Tenggara"
-    },
-    {
       "id": "BNT-34",
       "nama": "Lakey Peak",
       "lokasi": "Dompu, NTB",
@@ -225,12 +213,6 @@
       "id": "BNT-43",
       "nama": "Pantai Nihiwatu",
       "lokasi": "Sumba Barat Daya, NTT",
-      "wilayah": "Bali & Nusa Tenggara"
-    },
-    {
-      "id": "BNT-45",
-      "nama": "Pantai Nemberala",
-      "lokasi": "Rote Ndao, NTT",
       "wilayah": "Bali & Nusa Tenggara"
     },
     {
@@ -298,12 +280,6 @@
       "nama": "Tanjung Pulisan",
       "lokasi": "Minahasa Utara, Sulawesi Utara",
       "wilayah": "Sulawesi"
-    },
-    {
-      "id": "SMT-47",
-      "nama": "Pantai Pasir Putih Lhoknga",
-      "lokasi": "Aceh Besar, Aceh",
-      "wilayah": "Sumatra"
     },
     {
       "id": "SMT-51",

@@ -42,7 +42,7 @@
       if (trimmed.startsWith('• ') || trimmed.startsWith('- ')) {
         const title = trimmed.replace(/^[•\-]\s*/, '');
         currentList.push({ title: title, subs: [] });
-      } else if (currentList.length > 0 && trimmed !== '' && !trimmed.startsWith('🔍') && !trimmed.startsWith('🌊') && !trimmed.startsWith('⚡') && !trimmed.startsWith('🏆') && !trimmed.startsWith('⚙️') && !trimmed.startsWith('🏝️') && !trimmed.startsWith('💸') && !trimmed.startsWith('🗺️')) {
+      } else if (currentList.length > 0 && trimmed !== '' && !trimmed.startsWith('') && !trimmed.startsWith('') && !trimmed.startsWith('') && !trimmed.startsWith('') && !trimmed.startsWith('') && !trimmed.startsWith('') && !trimmed.startsWith('') && !trimmed.startsWith('')) {
         currentList[currentList.length - 1].subs.push(trimmed);
       } else {
         if (currentList.length > 0) {
@@ -222,7 +222,7 @@
               </button>
             ` : ''}
             <button type="button" class="maritim-bot-btn-see-all" onclick="openAllInExplorer('${esc(qStr)}')">
-              <span>🔍 Lihat Semua ${totalCount} Destinasi di Katalog</span>
+              <span> Lihat Semua ${totalCount} Destinasi di Katalog</span>
               <svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </button>
           </div>
@@ -327,24 +327,24 @@
   }
 
   const COMMON_MARITIME_TOPICS = [
-    { title: 'Taman Nasional Bunaken', icon: '📍', sub: 'Sulawesi Utara · Diving & Snorkeling' },
-    { title: 'Taman Nasional Komodo', icon: '📍', sub: 'Nusa Tenggara Timur · Satwa & Karang' },
-    { title: 'Kepulauan Raja Ampat', icon: '📍', sub: 'Papua Barat Daya · Biodiversitas Dunia' },
-    { title: 'Kepulauan Karimunjawa', icon: '📍', sub: 'Jawa Tengah · Snorkeling & Hiu' },
-    { title: 'Kepulauan Derawan', icon: '📍', sub: 'Kalimantan Timur · Penyu & Ubur-ubur' },
-    { title: 'Banda Neira', icon: '📍', sub: 'Maluku · Sejarah & Karang' },
-    { title: 'Pantai Kuta Bali', icon: '📍', sub: 'Bali · Surfing Pemula & Sunset' },
-    { title: 'Pantai Sanur', icon: '📍', sub: 'Bali · Kano & Sunrise' },
-    { title: 'Pantai Bulbul', icon: '📍', sub: 'Sumatra Utara · Wisata Pasir Putih' },
-    { title: 'Teluk Buyat', icon: '📍', sub: 'Sulawesi Utara · Terumbu Karang' },
-    { title: 'Snorkeling untuk Pemula', icon: '🤿', sub: 'Aktivitas Bahari · Karang Dangkal' },
-    { title: 'Spot Diving Kelas Dunia', icon: '🌊', sub: 'Aktivitas Bahari · Penyelaman Laut' },
-    { title: 'Spot Surfing Terbaik', icon: '🏄', sub: 'Aktivitas Bahari · Selancar Ombak' },
-    { title: 'Wisata Pantai di Bali', icon: '🏝️', sub: 'Destinasi Wilayah · Pulau Bali' },
-    { title: 'Pantai Gratis di Bali (HTM Rp0)', icon: '💸', sub: 'Info Harga · Wisata Hemat' },
-    { title: 'Peralatan apa saja yang disewakan?', icon: '⚙️', sub: 'Info Sewa Alat Bahari' },
-    { title: 'Tingkat level diatas pemula', icon: '🎯', sub: 'Kategori Keahlian Menengah' },
-    { title: 'Tingkat ahli / mahir', icon: '⚡', sub: 'Kategori Keahlian Profesional' }
+    { title: 'Taman Nasional Bunaken', icon: '', sub: 'Sulawesi Utara · Diving & Snorkeling' },
+    { title: 'Taman Nasional Komodo', icon: '', sub: 'Nusa Tenggara Timur · Satwa & Karang' },
+    { title: 'Kepulauan Raja Ampat', icon: '', sub: 'Papua Barat Daya · Biodiversitas Dunia' },
+    { title: 'Kepulauan Karimunjawa', icon: '', sub: 'Jawa Tengah · Snorkeling & Hiu' },
+    { title: 'Kepulauan Derawan', icon: '', sub: 'Kalimantan Timur · Penyu & Ubur-ubur' },
+    { title: 'Banda Neira', icon: '', sub: 'Maluku · Sejarah & Karang' },
+    { title: 'Pantai Kuta Bali', icon: '', sub: 'Bali · Surfing Pemula & Sunset' },
+    { title: 'Pantai Sanur', icon: '', sub: 'Bali · Kano & Sunrise' },
+    { title: 'Pantai Bulbul', icon: '', sub: 'Sumatra Utara · Wisata Pasir Putih' },
+    { title: 'Teluk Buyat', icon: '', sub: 'Sulawesi Utara · Terumbu Karang' },
+    { title: 'Snorkeling untuk Pemula', icon: '', sub: 'Aktivitas Bahari · Karang Dangkal' },
+    { title: 'Spot Diving Kelas Dunia', icon: '', sub: 'Aktivitas Bahari · Penyelaman Laut' },
+    { title: 'Spot Surfing Terbaik', icon: '', sub: 'Aktivitas Bahari · Selancar Ombak' },
+    { title: 'Wisata Pantai di Bali', icon: '', sub: 'Destinasi Wilayah · Pulau Bali' },
+    { title: 'Pantai Gratis di Bali (HTM Rp0)', icon: '', sub: 'Info Harga · Wisata Hemat' },
+    { title: 'Peralatan apa saja yang disewakan?', icon: '', sub: 'Info Sewa Alat Bahari' },
+    { title: 'Tingkat level diatas pemula', icon: '', sub: 'Kategori Keahlian Menengah' },
+    { title: 'Tingkat ahli / mahir', icon: '', sub: 'Kategori Keahlian Profesional' }
   ];
 
   function highlightMatch(text, query) {
@@ -393,7 +393,7 @@
           suggestions.push({
             title: nama,
             sub: `${d.lokasi || d.provinsi || ''} · ${d.level || ''} (${d.rangeHargaTotalLabel || ''})`,
-            icon: '📍',
+            icon: '',
             priority: priority
           });
         }
@@ -486,7 +486,7 @@
     } catch (err) {
       console.error('[MaritimBot Error]:', err);
       botReply = {
-        text: 'Maaf, terjadi sedikit kendala saat mengambil data ontologi. Coba ulangi pertanyaan atau tanyakan destinasi lain ya! 😊',
+        text: 'Maaf, terjadi sedikit kendala saat mengambil data ontologi. Coba ulangi pertanyaan atau tanyakan destinasi lain ya! ',
         dbpediaData: null,
         suggestions: ['Ceritakan tentang Bunaken', 'Pantai gratis di Bali']
       };
@@ -513,7 +513,7 @@
   function sendInitialGreeting() {
     appendMessage({
       sender: 'bot',
-      textHtml: renderMarkdown(`Halo! 👋 Selamat datang di **MaritimBot Ombak Nusantara**!\n\nAda yang bisa saya bantu seputar destinasi atau liburan baharimu hari ini? 😊\n\nSaya asisten berbasis **Web Semantik & DBpedia SPARQL** yang siap membantu kamu mencari rekomendasi pantai, spot snorkeling/diving, info sewa alat & tiket, hingga level keahlian.\n\nPilih opsi di bawah atau ketik langsung pertanyaanmu ya:`),
+      textHtml: renderMarkdown(`Halo!  Selamat datang di **MaritimBot Ombak Nusantara**!\n\nAda yang bisa saya bantu seputar destinasi atau liburan baharimu hari ini? \n\nSaya asisten berbasis **Web Semantik & DBpedia SPARQL** yang siap membantu kamu mencari rekomendasi pantai, spot snorkeling/diving, info sewa alat & tiket, hingga level keahlian.\n\nPilih opsi di bawah atau ketik langsung pertanyaanmu ya:`),
       dbpediaData: null,
       suggestions: [
         'Pantai gratis di Bali apa saja?',

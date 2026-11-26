@@ -275,9 +275,31 @@ const DEST_PHOTO_MAP = [
   { match: /mursala/i, url: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80' },
   { match: /pasumpahan|sikuai/i, url: 'https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80' },
   { match: /air manis|malin kundang/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
+  {
+    match: /pantai gapang|SMT-02/i,
+    url: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Gapang_Beach%2C_Sabang%2C_Aceh.jpg/960px-Gapang_Beach%2C_Sabang%2C_Aceh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail',
+    source: 'commons (File:Gapang Beach, Sabang, Aceh.jpg)',
+    attribution: {
+      creator: 'Asep Mulyadi',
+      license: 'CC BY 2.0',
+      licenseUrl: 'https://creativecommons.org/licenses/by/2.0/',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Gapang_Beach,_Sabang,_Aceh.jpg'
+    }
+  },
   { match: /rubiah|iboih|gapang|sumur tiga/i, url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80' },
   { match: /titik nol|sabang/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /lampuuk/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
+  {
+    match: /pantai pasir putih lhoknga|SMT-47/i,
+    url: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Lhoknga_beach%2C_Aceh_20140912_113920.jpg/960px-Lhoknga_beach%2C_Aceh_20140912_113920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail',
+    source: 'commons (File:Lhoknga beach, Aceh 20140912 113920.jpg)',
+    attribution: {
+      creator: 'Ekacahyani',
+      license: 'CC BY-SA 4.0',
+      licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Lhoknga_beach,_Aceh_20140912_113920.jpg'
+    }
+  },
   { match: /pltd apung/i, url: 'https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80' },
   { match: /pulau banyak/i, url: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80' },
   { match: /pantai cermin|berhala/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
@@ -336,10 +358,32 @@ const DEST_PHOTO_MAP = [
   { match: /gili trawangan/i, url: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80' },
   { match: /gili meno|gili air|gili nanggu/i, url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80' },
   { match: /mandalika|selong belanak/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
+  {
+    match: /pantai mawun|BNT-31/i,
+    url: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Mawun_Beach_1.JPG/960px-Mawun_Beach_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail',
+    source: 'commons (File:Mawun Beach 1.JPG)',
+    attribution: {
+      creator: 'Midori',
+      license: 'CC BY 3.0',
+      licenseUrl: 'https://creativecommons.org/licenses/by/3.0/',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Mawun_Beach_1.JPG'
+    }
+  },
   { match: /pink beach/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /padar/i, url: 'https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80' },
   { match: /komodo|rinca/i, url: 'https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80' },
   { match: /kanawa|kelor|taka makassar/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
+  {
+    match: /pantai nemberala|BNT-45/i,
+    url: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Road_infrastructures_Oeseli_Beach%2C_Boa%2C_Nemberala_-_panoramio.jpg/960px-Road_infrastructures_Oeseli_Beach%2C_Boa%2C_Nemberala_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail',
+    source: 'commons (File:Road infrastructures Oeseli Beach, Boa, Nemberala - panoramio.jpg)',
+    attribution: {
+      creator: 'Mujiono Leo',
+      license: 'CC BY-SA 3.0',
+      licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Road_infrastructures_Oeseli_Beach,_Boa,_Nemberala_-_panoramio.jpg'
+    }
+  },
   { match: /nihiwatu|nemberala/i, url: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80' },
 
   // SULAWESI
@@ -366,12 +410,15 @@ const DEST_PHOTO_MAP = [
   { match: /cenderawasih|kwatisore/i, url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80' }
 ];
 
+function getPhotoMapEntry(dest) {
+  return DEST_PHOTO_MAP.find(item =>
+    item.match.test(dest.nama) || item.match.test(dest.lokasi) || (dest.id && item.match.test(dest.id))
+  );
+}
+
 function getPhotoForDestination(dest) {
-  for (const item of DEST_PHOTO_MAP) {
-    if (item.match.test(dest.nama) || item.match.test(dest.lokasi) || (dest.id && item.match.test(dest.id))) {
-      return item.url;
-    }
-  }
+  const photoEntry = getPhotoMapEntry(dest);
+  if (photoEntry) return photoEntry.url;
   if (dest.aktivitas && dest.aktivitas.includes('Surfing')) {
     return 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80';
   }
@@ -476,7 +523,12 @@ const destinasiListRaw = COMBINED_RAW.map(r => {
 
   itemObj.peralatan = generateEquipment(itemObj);
   itemObj.adaAlatDisewa = itemObj.peralatan.some(e => e.dapatDisewa);
+  const photoEntry = getPhotoMapEntry(itemObj);
   itemObj.foto = getPhotoForDestination(itemObj);
+  if (photoEntry && photoEntry.attribution) {
+    itemObj.fotoSumber = photoEntry.source;
+    itemObj.fotoAtribusi = photoEntry.attribution;
+  }
 
   return itemObj;
 });

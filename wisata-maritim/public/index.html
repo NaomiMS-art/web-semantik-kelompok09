@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5">
   <title>Ombak Nusantara · Mesin Pencari Wisata Maritim Semantik</title>
   <meta name="description"
-    content="Mesin pencari wisata maritim Indonesia berbasis Web Semantik. Filter berdasarkan range harga Google, aktivitas, tingkat keahlian, persewaan alat, dan fasilitas pendukung.">
+    content="Jelajahi destinasi maritim Indonesia dengan pencarian semantik dan filter aktivitas, estimasi biaya, tingkat keahlian, peralatan, jenis wisata, serta provinsi.">
   <link rel="icon" type="image/jpeg" href="images/logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,6 +49,39 @@
       <circle cx="12" cy="12" r="10" />
       <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
     </symbol>
+    <symbol id="icon-waves" viewBox="0 0 24 24">
+      <path d="M2 8c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
+      <path d="M2 14c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
+      <path d="M2 20c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" />
+    </symbol>
+    <symbol id="icon-mask" viewBox="0 0 24 24">
+      <path d="M3 8c2-2 5-3 9-3s7 1 9 3v6c-2 3-5 5-9 5s-7-2-9-5Z" />
+      <path d="M12 7v11M3 10H1m22 0h-2" />
+    </symbol>
+    <symbol id="icon-camera" viewBox="0 0 24 24">
+      <path d="M4 7h3l2-3h6l2 3h3a2 2 0 0 1 2 2v10H2V9a2 2 0 0 1 2-2Z" />
+      <circle cx="12" cy="13" r="4" />
+    </symbol>
+    <symbol id="icon-boat" viewBox="0 0 24 24">
+      <path d="M3 16h18l-3 5H7Z" />
+      <path d="M12 3v13M12 5l7 8h-7M10 8l-5 5h5" />
+      <path d="M2 22c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1" />
+    </symbol>
+    <symbol id="icon-fish" viewBox="0 0 24 24">
+      <path d="M3 12c3-4 7-6 12-6 2 0 4 1 6 3l2 3-2 3c-2 2-4 3-6 3-5 0-9-2-12-6Z" />
+      <path d="m3 12-2-3v6l2-3Zm11-2h.01M10 12a2 2 0 0 0 4 0" />
+    </symbol>
+    <symbol id="icon-mountain" viewBox="0 0 24 24">
+      <path d="m2 20 7-13 4 7 3-5 6 11Z" />
+      <path d="m7 11 2 2 2-2m4 0 1 2 2-1" />
+    </symbol>
+    <symbol id="icon-tent" viewBox="0 0 24 24">
+      <path d="M2 20 12 4l10 16H2Z" />
+      <path d="m9 20 3-7 3 7M12 4v3" />
+    </symbol>
+    <symbol id="icon-landmark" viewBox="0 0 24 24">
+      <path d="m3 9 9-6 9 6M5 10v9m5-9v9m4-9v9m5-9v9M3 21h18M2 10h20" />
+    </symbol>
     <symbol id="icon-wallet" viewBox="0 0 24 24">
       <rect x="2" y="4" width="20" height="16" rx="2" />
       <line x1="2" y1="10" x2="22" y2="10" />
@@ -58,6 +91,10 @@
       <circle cx="12" cy="12" r="10" />
       <circle cx="12" cy="12" r="6" />
       <circle cx="12" cy="12" r="2" />
+    </symbol>
+    <symbol id="icon-bulb" viewBox="0 0 24 24">
+      <path d="M9 18h6M10 22h4" />
+      <path d="M8.5 14.5A7 7 0 1 1 15.5 14.5C14.6 15.2 14 16 14 18h-4c0-2-.6-2.8-1.5-3.5Z" />
     </symbol>
     <symbol id="icon-tool" viewBox="0 0 24 24">
       <path
@@ -154,7 +191,7 @@
       </nav>
 
       <div class="header-actions">
-        <button class="theme-btn" id="btn-theme-toggle" type="button" onclick="toggleTheme()"
+        <button class="theme-btn" id="btn-theme-toggle" type="button"
           title="Ganti Mode Tampilan" aria-label="Ganti Mode Tampilan">
           <svg class="svg-icon">
             <use href="#icon-moon" />
@@ -238,32 +275,33 @@
         <div class="trending-bar">
           <div class="trending-group">
             <span class="trending-label" style="color:#ff8a65;font-weight:800">
-              🔥 Paling Sering Dicari:
+               Paling Sering Dicari:
             </span>
             <button type="button" class="trending-tag popular-badge" data-q="snorkeling pemula budget 250rb ada alat">
-              🤿 Snorkeling Pemula &le; 250rb
+               Snorkeling Pemula &le; 250rb
             </button>
             <button type="button" class="trending-tag popular-badge" data-q="pantai pasir putih di Bali dan Lombok">
-              🏖️ Pantai Pasir Putih Bali &amp; Lombok
+               Pantai Pasir Putih Bali &amp; Lombok
             </button>
             <button type="button" class="trending-tag popular-badge"
               data-q="spot diving mahir sewa bcd dan tabung scuba">
-              🤿 Diving Mahir + Sewa BCD
+               Diving Mahir + Sewa BCD
             </button>
             <button type="button" class="trending-tag popular-badge" data-q="surfing pemula sewa papan selancar">
-              🏄 Surfing Pemula + Papan
+               Surfing Pemula + Papan
             </button>
             <button type="button" class="trending-tag popular-badge" data-q="pulau eksotis hidden gem di Raja Ampat">
-              🏝️ Pulau Eksotis Raja Ampat
+               Pulau Eksotis Raja Ampat
             </button>
             <button type="button" class="trending-tag popular-badge" data-q="wisata maritim keluarga murah di Jawa">
-              👨‍👩‍👧 Wisata Maritim Murah di Jawa
+               Wisata Maritim Murah di Jawa
             </button>
           </div>
 
           <div class="trending-group">
             <span class="trending-label" style="color:#fcd34d;font-weight:800">
-              💡 Rekomendasi Cepat:
+              <svg class="svg-icon svg-icon-sm" aria-hidden="true"><use href="#icon-bulb" /></svg>
+              Rekomendasi Cepat:
             </span>
             <button type="button" class="trending-tag" data-q="destinasi wisata gratis di Maluku">
               Wisata Gratis Maluku
@@ -317,32 +355,33 @@
         <div class="trending-bar explorer-trending-bar">
           <div class="trending-group">
             <span class="trending-label" style="color:#ff8a65;font-weight:800">
-              🔥 Paling Sering Dicari:
+               Paling Sering Dicari:
             </span>
             <button type="button" class="trending-tag popular-badge" data-q="snorkeling pemula budget 250rb ada alat">
-              🤿 Snorkeling Pemula &le; 250rb
+               Snorkeling Pemula &le; 250rb
             </button>
             <button type="button" class="trending-tag popular-badge" data-q="pantai pasir putih di Bali dan Lombok">
-              🏖️ Pantai Pasir Putih Bali &amp; Lombok
+               Pantai Pasir Putih Bali &amp; Lombok
             </button>
             <button type="button" class="trending-tag popular-badge"
               data-q="spot diving mahir sewa bcd dan tabung scuba">
-              🤿 Diving Mahir + Sewa BCD
+               Diving Mahir + Sewa BCD
             </button>
             <button type="button" class="trending-tag popular-badge" data-q="surfing pemula sewa papan selancar">
-              🏄 Surfing Pemula + Papan
+               Surfing Pemula + Papan
             </button>
             <button type="button" class="trending-tag popular-badge" data-q="pulau eksotis hidden gem di Raja Ampat">
-              🏝️ Pulau Eksotis Raja Ampat
+               Pulau Eksotis Raja Ampat
             </button>
             <button type="button" class="trending-tag popular-badge" data-q="wisata maritim keluarga murah di Jawa">
-              👨‍👩‍👧 Wisata Maritim Murah di Jawa
+               Wisata Maritim Murah di Jawa
             </button>
           </div>
 
           <div class="trending-group">
             <span class="trending-label" style="color:#fcd34d;font-weight:800">
-              💡 Rekomendasi Cepat:
+              <svg class="svg-icon svg-icon-sm" aria-hidden="true"><use href="#icon-bulb" /></svg>
+              Rekomendasi Cepat:
             </span>
             <button type="button" class="trending-tag" data-q="destinasi wisata gratis di Maluku">
               Wisata Gratis Maluku
@@ -361,23 +400,6 @@
       </div>
     </div>
 
-    <!-- SEMANTIC REASONING PIPELINE -->
-    <div class="semantic-pipeline-wrap" id="semantic-reasoning-container" style="display:none">
-      <div class="semantic-pipeline-card">
-        <div class="pipeline-header">
-          <div class="pipeline-title">
-            <svg class="svg-icon" style="color:var(--sea-blue)">
-              <use href="#icon-network" />
-            </svg>
-            <span>Inferensi Relasi Web Semantik (Semantic Reasoning Chain)</span>
-          </div>
-        </div>
-        <div class="pipeline-flow" id="reasoning-chain">
-          <!-- Populated by JavaScript -->
-        </div>
-      </div>
-    </div>
-
     <!-- LAYOUT EXPLORER: FACETED FILTER DI ATAS, DAFTAR DESTINASI DI BAWAH -->
     <div class="explorer-layout-wrapper" id="destinasi-explorer">
 
@@ -389,7 +411,7 @@
               <use href="#icon-compass" />
             </svg>
             <span>Jelajah Pulau &amp; Kepulauan Maritim</span>
-            <span class="island-active-badge" id="island-active-count">Semua (305 Wisata)</span>
+            <span class="island-active-badge" id="island-active-count">(336 Destinasi)</span>
           </div>
         </div>
 
@@ -401,10 +423,9 @@
             </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
-              <span class="island-badge-code">ALL</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Semua Wilayah</span>
-                <span class="island-pill-count">305 Wisata</span>
+                <span class="island-pill-count">336 Wisata</span>
               </div>
             </div>
           </button>
@@ -416,7 +437,6 @@
             </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
-              <span class="island-badge-code">SM</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Sumatra</span>
                 <span class="island-pill-count">60 Wisata</span>
@@ -431,7 +451,6 @@
             </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
-              <span class="island-badge-code">JW</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Jawa</span>
                 <span class="island-pill-count">54 Wisata</span>
@@ -446,7 +465,6 @@
             </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
-              <span class="island-badge-code">BL</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Bali</span>
                 <span class="island-pill-count">29 Wisata</span>
@@ -461,7 +479,6 @@
             </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
-              <span class="island-badge-code">NT</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Nusa Tenggara</span>
                 <span class="island-pill-count">43 Wisata</span>
@@ -476,7 +493,6 @@
             </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
-              <span class="island-badge-code">KL</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Kalimantan</span>
                 <span class="island-pill-count">30 Wisata</span>
@@ -491,7 +507,6 @@
             </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
-              <span class="island-badge-code">SL</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Sulawesi</span>
                 <span class="island-pill-count">40 Wisata</span>
@@ -506,7 +521,6 @@
             </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
-              <span class="island-badge-code">ML</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Maluku</span>
                 <span class="island-pill-count">24 Wisata</span>
@@ -521,7 +535,6 @@
             </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
-              <span class="island-badge-code">PP</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Papua</span>
                 <span class="island-pill-count">25 Wisata</span>
@@ -536,7 +549,6 @@
             </div>
             <div class="island-card-overlay"></div>
             <div class="island-card-inner">
-              <span class="island-badge-code">KR</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Kepulauan Riau</span>
                 <span class="island-pill-count">10 Wisata</span>
@@ -549,163 +561,153 @@
       <!-- ==============================================================================
            1. FILTER WISATA MARITIM
            ============================================================================== -->
-      <section class="top-faceted-filter-card" id="top-faceted-filter">
-        <!-- Header Panel Filter -->
-        <div class="top-filter-header">
-          <div class="top-filter-title">
-            <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:#ffffff;margin:0">Filter
-              Wisata Maritim</h3>
-          </div>
-
-          <div class="top-filter-actions">
-            <button type="button" class="btn-clear-filters" id="btn-reset-filter" title="Reset Semua Filter">
-              <svg class="svg-icon svg-icon-sm">
-                <use href="#icon-arrow-left" />
-              </svg>
-              <span>Reset Filter</span>
+      <section class="top-faceted-filter-card editorial-filter-card" id="top-faceted-filter"
+        aria-label="Filter Wisata Maritim">
+        <div class="travel-filter-bar">
+          <div class="filter-segment-anchor">
+            <button type="button" class="filter-segment-trigger" id="activity-filter-trigger"
+              aria-expanded="false" aria-controls="activity-filter-popover">
+              <span class="filter-segment-icon"><svg class="svg-icon"><use href="#icon-compass" /></svg></span>
+              <span class="filter-segment-copy">
+                <span class="filter-segment-label">Aktivitas</span>
+                <strong id="activity-filter-value">Semua Aktivitas</strong>
+              </span>
+              <span class="filter-segment-chevron" aria-hidden="true"></span>
             </button>
-            <button type="button" class="btn-toggle-filter-collapse" id="btn-toggle-filter-collapse"
-              aria-expanded="true">
-              <span id="collapse-btn-text">Sembunyikan Filter</span>
-              <svg class="svg-icon svg-icon-sm">
-                <use href="#icon-sliders" />
-              </svg>
+            <div class="filter-popover activity-filter-popover" id="activity-filter-popover" hidden>
+              <p class="filter-popover-title">Pilih aktivitas</p>
+              <div class="activity-choice-grid" id="activity-choice-grid">
+                <button type="button" class="activity-choice" data-activity="" aria-pressed="true">
+                  <svg class="svg-icon"><use href="#icon-compass" /></svg>
+                  <span>Semua Aktivitas</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-segment-anchor">
+            <button type="button" class="filter-segment-trigger" id="cost-filter-trigger"
+              aria-expanded="false" aria-controls="cost-filter-popover">
+              <span class="filter-segment-icon"><svg class="svg-icon"><use href="#icon-wallet" /></svg></span>
+              <span class="filter-segment-copy">
+                <span class="filter-segment-label">Estimasi Biaya</span>
+                <strong id="cost-filter-value">Semua Harga</strong>
+              </span>
+              <span class="filter-segment-chevron" aria-hidden="true"></span>
             </button>
-          </div>
-        </div>
-
-        <!-- Filter Content Body (Collapsible) -->
-        <div class="top-filter-body collapsed" id="top-filter-body">
-          <!-- BARIS 1: Range Harga Google Style (Horizontal Full Width Strip) -->
-          <div class="top-filter-row-price">
-            <div class="price-header-strip">
-              <div class="filter-section-title">
-                <span>Range Harga (Google-Style)</span>
-              </div>
-              <div class="price-mode-nav">
-                <button type="button" class="mode-tab-btn active" data-mode="total">Total Biaya</button>
-                <button type="button" class="mode-tab-btn" data-mode="tiket">Tiket Masuk</button>
-                <button type="button" class="mode-tab-btn" data-mode="aktivitas">Aktivitas</button>
-              </div>
-            </div>
-
-            <div class="price-pill-stack horizontal-stack">
-              <div class="price-pill-row" data-val="di-bawah-100k">
-                <span>&lt; Rp100.000</span>
-                <span class="pill-counter">0</span>
-              </div>
-              <div class="price-pill-row" data-val="100k-250k">
-                <span>Rp100.000 – Rp250.000</span>
-                <span class="pill-counter">0</span>
-              </div>
-              <div class="price-pill-row" data-val="250k-500k">
-                <span>Rp250.000 – Rp500.000</span>
-                <span class="pill-counter">0</span>
-              </div>
-              <div class="price-pill-row" data-val="500k-1jt">
-                <span>Rp500.000 – Rp1.000.000</span>
-                <span class="pill-counter">0</span>
-              </div>
-              <div class="price-pill-row" data-val="di-atas-1jt">
-                <span>&gt; Rp1.000.000</span>
-                <span class="pill-counter">0</span>
+            <div class="filter-popover cost-filter-popover" id="cost-filter-popover" hidden>
+              <p class="filter-popover-title">Pilih kisaran biaya per orang</p>
+              <div class="cost-choice-list">
+                <button type="button" class="cost-choice" data-range="" aria-pressed="true">Semua Harga</button>
+                <button type="button" class="cost-choice" data-range="di-bawah-100k" aria-pressed="false">&lt; 100rb</button>
+                <button type="button" class="cost-choice" data-range="100k-250k" aria-pressed="false">100rb - 250rb</button>
+                <button type="button" class="cost-choice" data-range="250k-500k" aria-pressed="false">250rb - 500rb</button>
+                <button type="button" class="cost-choice" data-range="500k-1jt" aria-pressed="false">500rb - 1jt</button>
+                <button type="button" class="cost-choice" data-range="di-atas-1jt" aria-pressed="false">&gt; 1jt</button>
               </div>
             </div>
           </div>
 
-          <!-- BARIS 2: 5 Dimensi Semantik Terstruktur (Grid 5 Kolom di Desktop) -->
-          <div class="top-filter-grid-dimensions">
-            <!-- Dimensi 1: Tingkat Keahlian Pengguna -->
-            <div class="filter-col-block">
-              <div class="filter-col-label">
-                <span>Tingkat Keahlian</span>
-              </div>
-              <div class="skill-grid-row">
-                <div class="skill-btn" data-val="Pemula">
-                  <span class="status-dot" style="background:#10b981"></span>
-                  <span>Pemula</span>
-                </div>
-                <div class="skill-btn" data-val="Menengah">
-                  <span class="status-dot" style="background:#f59e0b"></span>
-                  <span>Menengah</span>
-                </div>
-                <div class="skill-btn" data-val="Mahir">
-                  <span class="status-dot" style="background:#ef4444"></span>
-                  <span>Mahir</span>
-                </div>
-              </div>
+          <div class="filter-level-segment" role="group" aria-label="Tingkat keahlian">
+            <span class="filter-segment-label">Tingkat</span>
+            <div class="level-choice-list">
+              <button type="button" class="level-choice active" data-level="" aria-pressed="true">Semua</button>
+              <button type="button" class="level-choice" data-level="Pemula" aria-pressed="false">Pemula</button>
+              <button type="button" class="level-choice" data-level="Menengah" aria-pressed="false">Menengah</button>
+              <button type="button" class="level-choice" data-level="Mahir" aria-pressed="false">Mahir</button>
             </div>
+          </div>
 
-            <!-- Dimensi 2: Peralatan & Ketersediaan Sewa -->
-            <div class="filter-col-block">
-              <div class="filter-col-label">
-                <span>Peralatan Maritim</span>
-              </div>
-              <select class="custom-select" id="filter-equipment-select">
-                <option value="">Semua Peralatan</option>
-                <option value="masker-snorkel">Masker &amp; Snorkel</option>
-                <option value="fins-snorkeling">Fins (Kaki Katak)</option>
-                <option value="life-jacket">Pelampung / Life Jacket</option>
-                <option value="bcd-regulator">BCD &amp; Regulator Selam</option>
-                <option value="tabung-scuba">Tabung Scuba (Oksigen)</option>
-                <option value="wetsuit-diving">Wetsuit Selam</option>
-                <option value="papan-selancar">Papan Selancar (Surfboard)</option>
-                <option value="kano-kayak">Perahu Kano / Kayak</option>
-                <option value="sewa-perahu">Sewa Perahu Wisata</option>
-              </select>
-              <label class="custom-radio-item" style="margin-top:0.4rem;font-weight:600;font-size:0.78rem">
-                <input type="checkbox" id="filter-sewa">
-                <span>Wajib Ada Persewaan Alat</span>
-              </label>
-            </div>
-
-            <!-- Dimensi 3: Aktivitas Maritim -->
-            <div class="filter-col-block">
-              <div class="filter-col-label">
-                <span>Aktivitas Maritim</span>
-              </div>
-              <select class="custom-select" id="filter-aktivitas">
-                <option value="">Semua Aktivitas</option>
-                <!-- Populated by JS -->
-              </select>
-            </div>
-
-            <!-- Dimensi 4: Jenis Wisata -->
-            <div class="filter-col-block">
-              <div class="filter-col-label">
-                <span>Jenis Wisata</span>
-              </div>
-              <select class="custom-select" id="filter-jenis">
-                <option value="">Semua Jenis Wisata</option>
-                <option value="Snorkeling">Wisata Bawah Laut / Snorkeling</option>
-                <option value="Selam">Wisata Selam (Diving)</option>
-                <option value="Pantai">Wisata Pantai &amp; Pesisir</option>
-                <option value="Pulau">Kepulauan &amp; Island Hopping</option>
-                <option value="Selancar">Selancar (Surfing)</option>
-                <option value="Sejarah">Sejarah &amp; Budaya Maritim</option>
-                <option value="Konservasi">Konservasi &amp; Satwa Laut</option>
-              </select>
-            </div>
-
-            <!-- Dimensi 5: Lokasi & Wilayah -->
-            <div class="filter-col-block">
-              <div class="filter-col-label">
-                <span>Wilayah &amp; Lokasi</span>
-              </div>
-              <div style="display:flex;flex-direction:column;gap:0.4rem">
-                <select class="custom-select" id="filter-wilayah">
-                  <option value="">Semua Wilayah</option>
-                  <!-- Populated by JS -->
-                </select>
-                <select class="custom-select" id="filter-provinsi">
-                  <option value="">Semua Provinsi</option>
-                  <!-- Populated by JS -->
-                </select>
-              </div>
-            </div>
+          <div class="filter-bar-actions">
+            <button type="button" class="filter-modal-trigger" id="btn-open-filter-modal"
+              aria-haspopup="dialog" aria-controls="filter-advanced-modal">
+              <svg class="svg-icon" aria-hidden="true"><use href="#icon-sliders" /></svg>
+              <span>Filter</span>
+              <span class="filter-advanced-count" id="filter-advanced-count" hidden></span>
+            </button>
+            <button type="button" class="filter-reset-link" id="btn-reset-filter" hidden>Reset</button>
           </div>
         </div>
       </section>
+
+      <dialog class="filter-modal" id="filter-advanced-modal" aria-labelledby="filter-modal-title">
+        <div class="filter-modal-inner">
+          <header class="filter-modal-header">
+            <div>
+              <p class="filter-modal-eyebrow">SESUAIKAN PERJALANAN</p>
+              <h2 id="filter-modal-title">Filter lainnya</h2>
+            </div>
+            <button type="button" class="filter-modal-close" id="btn-close-filter-modal" aria-label="Tutup filter">
+              <svg class="svg-icon" aria-hidden="true"><use href="#icon-x" /></svg>
+            </button>
+          </header>
+
+          <div class="filter-modal-content">
+            <section class="filter-modal-section">
+              <div class="filter-section-heading">
+                <h3>Peralatan maritim</h3>
+                <p>Pilih peralatan yang ingin tersedia.</p>
+              </div>
+              <div class="filter-chip-group" id="equipment-filter-options" role="group" aria-label="Peralatan maritim">
+                <button type="button" class="filter-choice-chip" data-equipment="" aria-pressed="true">Semua peralatan</button>
+                <button type="button" class="filter-choice-chip" data-equipment="masker-snorkel" aria-pressed="false">Masker &amp; Snorkel</button>
+                <button type="button" class="filter-choice-chip" data-equipment="fins-snorkeling" aria-pressed="false">Fins (Kaki Katak)</button>
+                <button type="button" class="filter-choice-chip" data-equipment="life-jacket" aria-pressed="false">Pelampung</button>
+                <button type="button" class="filter-choice-chip" data-equipment="bcd-regulator" aria-pressed="false">BCD &amp; Regulator</button>
+                <button type="button" class="filter-choice-chip" data-equipment="tabung-scuba" aria-pressed="false">Tabung Scuba</button>
+                <button type="button" class="filter-choice-chip" data-equipment="wetsuit-diving" aria-pressed="false">Wetsuit Selam</button>
+                <button type="button" class="filter-choice-chip" data-equipment="papan-selancar" aria-pressed="false">Papan Selancar</button>
+                <button type="button" class="filter-choice-chip" data-equipment="kano-kayak" aria-pressed="false">Kano / Kayak</button>
+                <button type="button" class="filter-choice-chip" data-equipment="sewa-perahu" aria-pressed="false">Sewa Perahu</button>
+              </div>
+            </section>
+
+            <section class="filter-modal-section">
+              <div class="filter-section-heading">
+                <h3>Jenis wisata</h3>
+                <p>Pilih jenis perjalanan yang kamu cari.</p>
+              </div>
+              <div class="filter-chip-group" id="type-filter-options" role="group" aria-label="Jenis wisata">
+                <button type="button" class="filter-choice-chip" data-type="" aria-pressed="true">Semua jenis</button>
+                <button type="button" class="filter-choice-chip" data-type="Snorkeling" aria-pressed="false">Snorkeling</button>
+                <button type="button" class="filter-choice-chip" data-type="Selam" aria-pressed="false">Selam</button>
+                <button type="button" class="filter-choice-chip" data-type="Pantai" aria-pressed="false">Pantai &amp; Pesisir</button>
+                <button type="button" class="filter-choice-chip" data-type="Pulau" aria-pressed="false">Kepulauan</button>
+                <button type="button" class="filter-choice-chip" data-type="Selancar" aria-pressed="false">Selancar</button>
+                <button type="button" class="filter-choice-chip" data-type="Sejarah" aria-pressed="false">Sejarah &amp; Budaya</button>
+                <button type="button" class="filter-choice-chip" data-type="Konservasi" aria-pressed="false">Konservasi</button>
+              </div>
+            </section>
+
+            <section class="filter-modal-section">
+              <div class="filter-section-heading">
+                <h3>Provinsi</h3>
+                <p>Persempit pencarian ke lokasi tertentu.</p>
+              </div>
+              <div class="filter-chip-group province-filter-options" id="province-filter-options"
+                role="group" aria-label="Provinsi">
+                <button type="button" class="filter-choice-chip" data-province="" aria-pressed="true">Semua provinsi</button>
+              </div>
+            </section>
+
+            <label class="rental-toggle-row" for="filter-sewa">
+              <span class="rental-toggle-copy">
+                <strong>Wajib ada persewaan alat</strong>
+                <span>Hanya tampilkan destinasi dengan opsi sewa.</span>
+              </span>
+              <span class="switch-control">
+                <input type="checkbox" id="filter-sewa">
+                <span class="switch-track" aria-hidden="true"></span>
+              </span>
+            </label>
+          </div>
+
+          <footer class="filter-modal-footer">
+            <span>Perubahan filter langsung diterapkan.</span>
+            <button type="button" class="filter-done-button" id="btn-done-filter-modal">Selesai</button>
+          </footer>
+        </div>
+      </dialog>
 
       <!-- ==============================================================================
            2. DAFTAR DESTINASI MARITIM (DI BAWAH FILTER - LEBAR PENUH & MEWAH)
@@ -889,6 +891,7 @@
         </div>
         <h2 id="modal-dest-title">Memuat Destinasi...</h2>
         <span style="font-size:0.85rem;opacity:0.9" id="modal-dest-loc">Lokasi Destinasi</span>
+        <div id="modal-photo-attribution"></div>
       </div>
     </div>
 

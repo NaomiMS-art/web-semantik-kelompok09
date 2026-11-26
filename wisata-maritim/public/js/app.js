@@ -1,5 +1,6 @@
 // ==============================================================================
 // INDONESIA MARITIME JOURNEY - CLIENT CONTROLLER (CLEAN ENTERPRISE)
+
 // Mesin Pencari Wisata Maritim Semantik & Knowledge Graph W3C
 // ==============================================================================
 
@@ -42,9 +43,11 @@ const DEST_PHOTO_MAP = [
   { match: /mursala/i, url: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80' },
   { match: /pasumpahan|sikuai/i, url: 'https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80' },
   { match: /air manis|malin kundang/i, url: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80' },
+  { match: /pantai gapang|SMT-02/i, url: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Gapang_Beach%2C_Sabang%2C_Aceh.jpg/960px-Gapang_Beach%2C_Sabang%2C_Aceh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail' },
   { match: /rubiah|iboih|gapang|sumur tiga/i, url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80' },
   { match: /titik nol|sabang/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /lampuuk/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
+  { match: /pantai pasir putih lhoknga|SMT-47/i, url: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Lhoknga_beach%2C_Aceh_20140912_113920.jpg/960px-Lhoknga_beach%2C_Aceh_20140912_113920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail' },
   { match: /pltd apung/i, url: 'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80' },
   { match: /pulau banyak/i, url: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80' },
   { match: /pantai cermin|berhala/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
@@ -104,10 +107,12 @@ const DEST_PHOTO_MAP = [
   { match: /gili trawangan/i, url: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80' },
   { match: /gili meno|gili air|gili nanggu/i, url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80' },
   { match: /mandalika|selong belanak/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
+  { match: /pantai mawun|BNT-31/i, url: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Mawun_Beach_1.JPG/960px-Mawun_Beach_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail' },
   { match: /pink beach/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /padar/i, url: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80' },
   { match: /komodo|rinca/i, url: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80' },
   { match: /kanawa|kelor|taka makassar/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
+  { match: /pantai nemberala|BNT-45/i, url: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Road_infrastructures_Oeseli_Beach%2C_Boa%2C_Nemberala_-_panoramio.jpg/960px-Road_infrastructures_Oeseli_Beach%2C_Boa%2C_Nemberala_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail' },
   { match: /nihiwatu|nemberala/i, url: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80' },
 
   // SULAWESI
@@ -189,6 +194,21 @@ const escapeHtml = (str) => {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
 };
+
+function renderPhotoAttribution(dest) {
+  const attribution = dest && dest.fotoAtribusi;
+  if (!attribution || !attribution.creator || !attribution.license || !attribution.sourceUrl || !attribution.licenseUrl) {
+    return '';
+  }
+
+  return `
+    <span class="photo-attribution">
+      <a href="${escapeHtml(attribution.sourceUrl)}" target="_blank" rel="noopener noreferrer">Foto: ${escapeHtml(attribution.creator)}</a>
+      <span aria-hidden="true">·</span>
+      <a href="${escapeHtml(attribution.licenseUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(attribution.license)}</a>
+    </span>
+  `;
+}
 
 // ==============================================================================
 // INITIALIZATION
@@ -343,8 +363,6 @@ window.filterByRegion = function (regionName) {
   APP_STATE.filters.wilayah = regionName;
   APP_STATE.filters.provinsi = '';
   APP_STATE.currentPage = 1;
-  const sel = document.getElementById('filter-wilayah');
-  if (sel) sel.value = regionName;
   const provSel = document.getElementById('filter-provinsi');
   if (provSel) provSel.value = '';
 
@@ -356,7 +374,7 @@ window.filterByRegion = function (regionName) {
       if (islandActiveCount) {
         const name = btn.querySelector('.island-pill-name')?.textContent || regionName;
         const count = btn.querySelector('.island-pill-count')?.textContent || '';
-        islandActiveCount.textContent = `${name} (${count} Wisata)`;
+        islandActiveCount.textContent = `${name} (${count})`;
       }
       btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     }
@@ -371,70 +389,70 @@ const POPULAR_SEARCH_PRESETS = [
     query: "snorkeling pemula budget 250rb ada alat",
     title: "Snorkeling Pemula &le; 250rb (Sewa Alat)",
     category: "Paling Populer",
-    icon: "🤿",
+    icon: "",
     sub: "Inferensi otomatis tingkat pemula, filter budget, dan kelengkapan alat"
   },
   {
     query: "pantai pasir putih di Bali dan Lombok",
     title: "Pantai Pasir Putih Bali & Lombok",
     category: "Paling Populer",
-    icon: "🏖️",
+    icon: "",
     sub: "Spot pantai pasir putih terpopuler untuk santai & foto"
   },
   {
     query: "spot diving mahir sewa bcd dan tabung scuba",
     title: "Diving Mahir + Sewa BCD & Tabung Scuba",
     category: "Paling Populer",
-    icon: "🌊",
+    icon: "",
     sub: "Spot laut dalam dengan sertifikasi & peralatan lengkap"
   },
   {
     query: "surfing pemula sewa papan selancar",
     title: "Surfing Pemula + Sewa Papan",
     category: "Paling Populer",
-    icon: "🏄",
+    icon: "",
     sub: "Ombak ramah pemula dan penyewaan papan surfing"
   },
   {
     query: "pulau eksotis hidden gem di Raja Ampat",
     title: "Pulau Eksotis Hidden Gem Raja Ampat",
     category: "Rekomendasi",
-    icon: "🏝️",
+    icon: "",
     sub: "Danau karst, gugusan pulau karang & perairan jernih"
   },
   {
     query: "wisata bahari keluarga murah di Jawa",
     title: "Wisata Bahari Keluarga Murah di Jawa",
     category: "Rekomendasi",
-    icon: "👨‍👩‍👧",
+    icon: "",
     sub: "Tiket terjangkau di bawah 50rb ramah anak & fasilitas lengkap"
   },
   {
     query: "sunset dan kano di Labuan Bajo",
     title: "Sunset & Kano Kayak Labuan Bajo",
     category: "Rekomendasi",
-    icon: "🛶",
+    icon: "",
     sub: "Pemandangan matahari terbenam dan petualangan kano teluk"
   },
   {
     query: "snorkeling terumbu karang di Bunaken",
     title: "Snorkeling Terumbu Karang Bunaken",
     category: "Rekomendasi",
-    icon: "🐠",
+    icon: "",
     sub: "Taman laut legendaris dengan keanekaragaman biota laut"
   },
   {
     query: "pantai pasir timbul Ngurtafur Maluku",
     title: "Pantai Pasir Timbul Ngurtafur Maluku",
     category: "Hidden Gem",
-    icon: "✨",
+    icon: "",
     sub: "Hamparan pasir putih memanjang 2 km membelah lautan"
   },
   {
     query: "destinasi wisata gratis di Maluku",
     title: "Wisata Bahari Gratis di Maluku",
     category: "Budget Hemat",
-    icon: "🏷️",
+    icon: "",
     sub: "Tiket masuk Rp0 tanpa biaya retribusi"
   }
 ];
@@ -479,7 +497,6 @@ function setupSearchAutocomplete(inputId, dropdownId) {
         return i === s.length;
       };
 
-      const allDests = APP_STATE.allDestinations || [];
       const scoredDests = allDests
         .map(d => {
           const namaLow = (d.nama || '').toLowerCase();
@@ -502,7 +519,7 @@ function setupSearchAutocomplete(inputId, dropdownId) {
           query: d.nama,
           title: d.nama,
           category: d.wilayah,
-          icon: "📍",
+          icon: "",
           sub: `${match.destination.lokasi} · Level ${match.destination.level} · ${match.destination.jenisWisata || 'Wisata Bahari'}`
         }));
 
@@ -529,7 +546,7 @@ function setupSearchAutocomplete(inputId, dropdownId) {
       return;
     }
 
-    const headerTitle = !q ? "🔥 Pencarian Paling Sering & Rekomendasi" : "💡 Saran & Rekomendasi Pencarian";
+    const headerTitle = !q ? " Pencarian Paling Sering & Rekomendasi" : " Saran & Rekomendasi Pencarian";
 
     dropEl.innerHTML = `
       <div class="suggestion-section-title">${headerTitle}</div>
@@ -660,6 +677,29 @@ function getNameSuggestionScore(query, destinationName) {
   return matches ? score / queryTokens.length + matches * 20 : 0;
 }
 
+function getLocationNameSuggestion(query, locationName) {
+  const queryTokens = normalizeNameToken(query).split(' ').filter(token => token.length >= 3);
+  const locationTokens = normalizeNameToken(locationName).split(' ').filter(Boolean);
+  if (!queryTokens.length || !locationTokens.length) return null;
+
+  const matches = queryTokens.flatMap(queryToken => {
+    const tokenMatches = locationTokens.map(locationToken => {
+      if (queryToken === locationToken) return { score: 100, isExact: true };
+
+      const maxDistance = queryToken.length >= 7 ? 2 : 1;
+      const distance = getEditDistance(queryToken, locationToken);
+      const similarity = 1 - distance / Math.max(queryToken.length, locationToken.length);
+      return distance > 0 && distance <= maxDistance && similarity >= 0.7
+        ? { score: similarity * 100, isExact: false }
+        : null;
+    }).filter(Boolean);
+    return tokenMatches.sort((left, right) => right.score - left.score).slice(0, 1);
+  });
+
+  if (!matches.length) return null;
+  return matches.sort((left, right) => right.score - left.score)[0];
+}
+
 function applySearchQuery(query) {
   APP_STATE.query = query.trim();
   APP_STATE.currentPage = 1;
@@ -736,150 +776,291 @@ function initSearchForms() {
 }
 
 // Faceted Filter Events
+function getActivityIcon(activity) {
+  if (/foto|fotografi/i.test(activity)) return 'icon-camera';
+  if (/camping/i.test(activity)) return 'icon-tent';
+  if (/snorkeling|selam|diving/i.test(activity)) return 'icon-mask';
+  if (/berenang|wahana|surfing|pantai/i.test(activity)) return 'icon-waves';
+  if (/pulau|island|kano|kayak/i.test(activity)) return 'icon-boat';
+  if (/kuliner|memancing|satwa/i.test(activity)) return 'icon-fish';
+  if (/sejarah|budaya/i.test(activity)) return 'icon-landmark';
+  if (/trekking|panjat/i.test(activity)) return 'icon-mountain';
+  return 'icon-compass';
+}
+
+function renderFilterFacetOptions(facets) {
+  const activityGrid = document.getElementById('activity-choice-grid');
+  if (activityGrid && facets.aktivitas) {
+    activityGrid.replaceChildren();
+    const activities = [['', 'Semua Aktivitas', null]]
+      .concat(Object.entries(facets.aktivitas)
+        .sort(([a], [b]) => a.localeCompare(b, 'id'))
+        .map(([activity, count]) => [activity, activity, count]));
+
+    activities.forEach(([value, label, count]) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'activity-choice';
+      button.dataset.activity = value;
+      button.setAttribute('aria-pressed', String(APP_STATE.filters.aktivitas === value));
+
+      const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      icon.classList.add('svg-icon');
+      icon.setAttribute('aria-hidden', 'true');
+      const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+      use.setAttribute('href', `#${value ? getActivityIcon(value) : 'icon-compass'}`);
+      icon.appendChild(use);
+
+      const text = document.createElement('span');
+      text.className = 'activity-choice-label';
+      text.textContent = label;
+      button.append(icon, text);
+
+      if (count !== null) {
+        const countLabel = document.createElement('span');
+        countLabel.className = 'activity-choice-count';
+        countLabel.textContent = count;
+        button.appendChild(countLabel);
+      }
+
+      activityGrid.appendChild(button);
+    });
+  }
+
+  const provinceGrid = document.getElementById('province-filter-options');
+  if (provinceGrid && facets.provinsi) {
+    const allButton = provinceGrid.querySelector('[data-province=""]');
+    provinceGrid.replaceChildren(allButton);
+    Object.entries(facets.provinsi)
+      .sort(([a], [b]) => a.localeCompare(b, 'id'))
+      .forEach(([province]) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'filter-choice-chip';
+        button.dataset.province = province;
+        button.textContent = province;
+        button.setAttribute('aria-pressed', String(APP_STATE.filters.provinsi === province));
+        provinceGrid.appendChild(button);
+      });
+  }
+
+  updateFilterBarState();
+}
+
+function updateFilterBarState() {
+  const activeCount = [
+    APP_STATE.filters.alat,
+    APP_STATE.filters.statusSewa,
+    APP_STATE.filters.jenis,
+    APP_STATE.filters.provinsi,
+    APP_STATE.filters.fasilitas
+  ].filter(Boolean).length;
+  const badge = document.getElementById('filter-advanced-count');
+  if (badge) {
+    badge.textContent = String(activeCount);
+    badge.setAttribute('aria-label', `${activeCount} filter lanjutan aktif`);
+    badge.hidden = activeCount === 0;
+  }
+
+  const resetButton = document.getElementById('btn-reset-filter');
+  if (resetButton) {
+    resetButton.hidden = ![
+      APP_STATE.filters.rangeHarga,
+      APP_STATE.filters.aktivitas,
+      APP_STATE.filters.level,
+      APP_STATE.filters.alat,
+      APP_STATE.filters.statusSewa,
+      APP_STATE.filters.jenis,
+      APP_STATE.filters.fasilitas,
+      APP_STATE.filters.provinsi,
+      APP_STATE.filters.wilayah
+    ].some(Boolean);
+  }
+
+  const activityValue = document.getElementById('activity-filter-value');
+  if (activityValue) activityValue.textContent = APP_STATE.filters.aktivitas || 'Semua Aktivitas';
+  document.querySelectorAll('.activity-choice').forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.activity === APP_STATE.filters.aktivitas));
+  });
+
+  const rangeLabels = {
+    'di-bawah-100k': '< 100rb',
+    '100k-250k': '100rb - 250rb',
+    '250k-500k': '250rb - 500rb',
+    '500k-1jt': '500rb - 1jt',
+    'di-atas-1jt': '> 1jt'
+  };
+  const costValue = document.getElementById('cost-filter-value');
+  if (costValue) costValue.textContent = rangeLabels[APP_STATE.filters.rangeHarga] || 'Semua Harga';
+  document.querySelectorAll('.cost-choice').forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.range === APP_STATE.filters.rangeHarga));
+  });
+
+  document.querySelectorAll('.level-choice').forEach(button => {
+    const selected = button.dataset.level === APP_STATE.filters.level;
+    button.classList.toggle('active', selected);
+    button.setAttribute('aria-pressed', String(selected));
+  });
+  document.querySelectorAll('[data-equipment]').forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.equipment === APP_STATE.filters.alat));
+  });
+  document.querySelectorAll('[data-type]').forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.type === APP_STATE.filters.jenis));
+  });
+  document.querySelectorAll('[data-province]').forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.province === APP_STATE.filters.provinsi));
+  });
+}
+
 function initFacetedFilterEvents() {
-  // Price Pills
-  document.querySelectorAll('.price-pill-row').forEach(row => {
-    row.addEventListener('click', () => {
-      const val = row.dataset.val;
-      if (APP_STATE.filters.rangeHarga === val) {
-        APP_STATE.filters.rangeHarga = '';
-        row.classList.remove('active');
-      } else {
-        APP_STATE.filters.rangeHarga = val;
-        document.querySelectorAll('.price-pill-row').forEach(p => p.classList.remove('active'));
-        row.classList.add('active');
-      }
-      APP_STATE.currentPage = 1;
-      executeSearch();
-    });
-  });
+  const regionGrid = document.getElementById('explorer-wilayah-pills');
+  if (regionGrid) {
+    regionGrid.addEventListener('click', event => {
+      const button = event.target.closest('.filter-pill-opt');
+      if (!button) return;
 
-  // Price Mode Pill (Total vs Tiket vs Aktivitas)
-  document.querySelectorAll('.mode-tab-btn[data-mode]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.mode-tab-btn[data-mode]').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      APP_STATE.filters.priceType = btn.dataset.mode;
-      APP_STATE.currentPage = 1;
-      executeSearch();
-    });
-  });
+      const wilayah = button.dataset.wil || '';
+      const provinsi = button.dataset.prov || '';
 
-  // Skill Level Chips
-  document.querySelectorAll('.skill-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const val = btn.dataset.val;
-      if (APP_STATE.filters.level === val) {
-        APP_STATE.filters.level = '';
-        btn.classList.remove('active');
-      } else {
-        APP_STATE.filters.level = val;
-        document.querySelectorAll('.skill-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      }
+      APP_STATE.filters.wilayah = wilayah;
+      APP_STATE.filters.provinsi = provinsi;
       APP_STATE.currentPage = 1;
-      executeSearch();
-    });
-  });
 
-  // Select Inputs
-  ['filter-aktivitas', 'filter-jenis', 'filter-wilayah', 'filter-provinsi'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.addEventListener('change', (e) => {
-        const key = id.replace('filter-', '');
-        APP_STATE.filters[key] = e.target.value;
-        if (key === 'wilayah') {
-          document.querySelectorAll('#explorer-wilayah-pills .filter-pill-opt').forEach(btn => {
-            const isMatch = btn.dataset.wil === e.target.value && !btn.dataset.prov;
-            btn.classList.toggle('active', isMatch);
-            if (isMatch) {
-              const islandActiveCount = document.getElementById('island-active-count');
-              if (islandActiveCount) {
-                const name = btn.querySelector('.island-pill-name')?.textContent || 'Semua';
-                const count = btn.querySelector('.island-pill-count')?.textContent || '';
-                islandActiveCount.textContent = `${name} (${count} Wisata)`;
-              }
-              btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-            }
-          });
-        }
-        APP_STATE.currentPage = 1;
-        executeSearch();
+      regionGrid.querySelectorAll('.filter-pill-opt').forEach(card => {
+        card.classList.toggle('active', card === button);
       });
-    }
-  });
 
-  // Quick Wilayah & Island Horizontal Scroll Bar in Explorer
-  const islandActiveCount = document.getElementById('island-active-count');
-
-  document.querySelectorAll('#explorer-wilayah-pills .filter-pill-opt').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const wil = btn.dataset.wil || '';
-      const prov = btn.dataset.prov || '';
-      APP_STATE.filters.wilayah = wil;
-      APP_STATE.filters.provinsi = prov;
-      APP_STATE.currentPage = 1;
-
-      const sel = document.getElementById('filter-wilayah');
-      if (sel) sel.value = wil;
-      const provSel = document.getElementById('filter-provinsi');
-      if (provSel) provSel.value = prov;
-
-      document.querySelectorAll('#explorer-wilayah-pills .filter-pill-opt').forEach(b => {
-        b.classList.remove('active');
-      });
-      btn.classList.add('active');
-
-      if (islandActiveCount) {
-        const name = btn.querySelector('.island-pill-name')?.textContent || 'Semua';
-        const count = btn.querySelector('.island-pill-count')?.textContent || '';
-        islandActiveCount.textContent = `${name} (${count} Wisata)`;
+      const activeCount = document.getElementById('island-active-count');
+      if (activeCount) {
+        const name = button.querySelector('.island-pill-name')?.textContent || 'Semua Wilayah';
+        const count = button.querySelector('.island-pill-count')?.textContent || '';
+        activeCount.textContent = name === 'Semua Wilayah'
+          ? `(${APP_STATE.allDestinations.length || 336} Destinasi)`
+          : `(${count || name})`;
+        activeCount.title = name;
       }
 
-      btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      executeSearch();
+    });
+  }
+
+  const activityTrigger = document.getElementById('activity-filter-trigger');
+  const activityPopover = document.getElementById('activity-filter-popover');
+  const costTrigger = document.getElementById('cost-filter-trigger');
+  const costPopover = document.getElementById('cost-filter-popover');
+  const popoverPairs = [[activityTrigger, activityPopover], [costTrigger, costPopover]];
+
+  const closeFilterPopovers = () => {
+    popoverPairs.forEach(([trigger, popover]) => {
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      if (popover) popover.hidden = true;
+    });
+  };
+
+  popoverPairs.forEach(([trigger, popover]) => {
+    if (!trigger || !popover) return;
+    trigger.addEventListener('click', () => {
+      const shouldOpen = trigger.getAttribute('aria-expanded') !== 'true';
+      closeFilterPopovers();
+      trigger.setAttribute('aria-expanded', String(shouldOpen));
+      popover.hidden = !shouldOpen;
+    });
+  });
+
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.filter-segment-anchor')) closeFilterPopovers();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeFilterPopovers();
+  });
+
+  const activityGrid = document.getElementById('activity-choice-grid');
+  if (activityGrid) {
+    activityGrid.addEventListener('click', event => {
+      const button = event.target.closest('.activity-choice');
+      if (!button) return;
+      APP_STATE.filters.aktivitas = button.dataset.activity;
+      APP_STATE.currentPage = 1;
+      closeFilterPopovers();
+      executeSearch();
+    });
+  }
+
+  document.querySelectorAll('.cost-choice').forEach(button => {
+    button.addEventListener('click', () => {
+      APP_STATE.filters.rangeHarga = button.dataset.range;
+      APP_STATE.filters.priceType = 'total';
+      APP_STATE.currentPage = 1;
+      closeFilterPopovers();
       executeSearch();
     });
   });
 
-  // Checkbox Sewa
+  document.querySelectorAll('.level-choice').forEach(button => {
+    button.addEventListener('click', () => {
+      APP_STATE.filters.level = button.dataset.level;
+      APP_STATE.currentPage = 1;
+      executeSearch();
+    });
+  });
+
+  document.querySelectorAll('[data-equipment]').forEach(button => {
+    button.addEventListener('click', () => {
+      const value = button.dataset.equipment;
+      APP_STATE.filters.alat = APP_STATE.filters.alat === value ? '' : value;
+      APP_STATE.currentPage = 1;
+      executeSearch();
+    });
+  });
+
+  document.querySelectorAll('[data-type]').forEach(button => {
+    button.addEventListener('click', () => {
+      const value = button.dataset.type;
+      APP_STATE.filters.jenis = APP_STATE.filters.jenis === value ? '' : value;
+      APP_STATE.currentPage = 1;
+      executeSearch();
+    });
+  });
+
+  const provinceGrid = document.getElementById('province-filter-options');
+  if (provinceGrid) {
+    provinceGrid.addEventListener('click', event => {
+      const button = event.target.closest('[data-province]');
+      if (!button) return;
+      const value = button.dataset.province;
+      APP_STATE.filters.provinsi = APP_STATE.filters.provinsi === value ? '' : value;
+      APP_STATE.currentPage = 1;
+      executeSearch();
+    });
+  }
+
   const sewaCb = document.getElementById('filter-sewa');
   if (sewaCb) {
-    sewaCb.addEventListener('change', (e) => {
-      APP_STATE.filters.statusSewa = e.target.checked;
+    sewaCb.addEventListener('change', () => {
+      APP_STATE.filters.statusSewa = sewaCb.checked;
       APP_STATE.currentPage = 1;
       executeSearch();
     });
   }
 
-  // Peralatan Select (Top Layout)
-  const eqSelect = document.getElementById('filter-equipment-select');
-  if (eqSelect) {
-    eqSelect.addEventListener('change', (e) => {
-      APP_STATE.filters.alat = e.target.value;
-      APP_STATE.currentPage = 1;
-      executeSearch();
+  const filterModal = document.getElementById('filter-advanced-modal');
+  const openFilterModal = document.getElementById('btn-open-filter-modal');
+  const closeFilterModal = () => {
+    if (filterModal && filterModal.open) filterModal.close();
+  };
+  if (filterModal && openFilterModal) {
+    openFilterModal.addEventListener('click', () => filterModal.showModal());
+    filterModal.addEventListener('click', event => {
+      if (event.target === filterModal) closeFilterModal();
     });
   }
+  ['btn-close-filter-modal', 'btn-done-filter-modal'].forEach(id => {
+    const button = document.getElementById(id);
+    if (button) button.addEventListener('click', closeFilterModal);
+  });
 
-  // Toggle Collapse Panel Filter di Atas
-  const toggleCollapseBtn = document.getElementById('btn-toggle-filter-collapse');
-  const topFilterBody = document.getElementById('top-filter-body');
-  const collapseBtnText = document.getElementById('collapse-btn-text');
-
-  if (toggleCollapseBtn && topFilterBody) {
-    toggleCollapseBtn.addEventListener('click', () => {
-      setTopFilterCollapsed(!topFilterBody.classList.contains('collapsed'));
-    });
-  }
-
-  // Reset Button
   const resetBtn = document.getElementById('btn-reset-filter');
-  if (resetBtn) {
-    resetBtn.addEventListener('click', () => {
-      resetAllFilters();
-    });
-  }
+  if (resetBtn) resetBtn.addEventListener('click', resetAllFilters);
 
   // Mobile Filter Drawer Toggle, Close & Apply
   const toggleMobileBtn = document.getElementById('btn-toggle-mobile-filter');
@@ -917,19 +1098,6 @@ function initFacetedFilterEvents() {
   }
 }
 
-function setTopFilterCollapsed(collapsed) {
-  const topFilterBody = document.getElementById('top-filter-body');
-  const toggleCollapseBtn = document.getElementById('btn-toggle-filter-collapse');
-  const collapseBtnText = document.getElementById('collapse-btn-text');
-  if (!topFilterBody || !toggleCollapseBtn) return;
-
-  topFilterBody.classList.toggle('collapsed', collapsed);
-  toggleCollapseBtn.setAttribute('aria-expanded', String(!collapsed));
-  if (collapseBtnText) {
-    collapseBtnText.textContent = collapsed ? 'Buka Panel Filter' : 'Sembunyikan Filter';
-  }
-}
-
 function initSortingEvents() {
   const sortSelect = document.getElementById('sort-select');
   if (sortSelect) {
@@ -962,17 +1130,27 @@ function resetAllFilters() {
   const explorerInput = document.getElementById('explorer-search-input');
   if (explorerInput) explorerInput.value = '';
 
-  document.querySelectorAll('.price-pill-row').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.skill-btn').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('#explorer-wilayah-pills .filter-pill-opt').forEach(b => {
     const isAll = (b.dataset.wil === '' && !b.dataset.prov);
     b.classList.toggle('active', isAll);
   });
   const islandActiveCount = document.getElementById('island-active-count');
-  if (islandActiveCount) islandActiveCount.textContent = 'Semua (305 Wisata)';
-  document.querySelectorAll('.custom-select').forEach(sel => sel.value = '');
+  if (islandActiveCount) {
+    islandActiveCount.textContent = APP_STATE.allDestinations.length
+      ? `(${APP_STATE.allDestinations.length} Destinasi)`
+      : '(336 Destinasi)';
+  }
   const sewaCb = document.getElementById('filter-sewa');
   if (sewaCb) sewaCb.checked = false;
+  document.querySelectorAll('.filter-popover').forEach(popover => {
+    popover.hidden = true;
+  });
+  document.querySelectorAll('.filter-segment-trigger').forEach(trigger => {
+    trigger.setAttribute('aria-expanded', 'false');
+  });
+  const filterModal = document.getElementById('filter-advanced-modal');
+  if (filterModal && filterModal.open) filterModal.close();
+  updateFilterBarState();
 
   const heroLevel = document.getElementById('hero-level-select');
   const heroRange = document.getElementById('hero-range-select');
@@ -986,6 +1164,7 @@ function resetAllFilters() {
 // SEARCH CLIENT & PAGINATION ENGINE (SLIDE SELANJUTNYA)
 // ==============================================================================
 async function executeSearch({ scrollToResults = false } = {}) {
+  updateFilterBarState();
   const grid = document.getElementById('destinations-grid');
   const countLabel = document.getElementById('results-count-label');
   const relatedSection = document.getElementById('related-recommendations');
@@ -1036,7 +1215,6 @@ async function executeSearch({ scrollToResults = false } = {}) {
     sortAndRenderResults();
     await renderRelatedRecommendations(data);
     if (scrollToResults && countLabel) {
-      setTopFilterCollapsed(true);
       countLabel.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   } catch (err) {
@@ -1052,20 +1230,42 @@ async function renderRelatedRecommendations(searchData) {
   const title = document.getElementById('related-recommendations-title');
   const description = document.getElementById('related-recommendations-description');
   const grid = document.getElementById('related-recommendations-grid');
-  if (!section || !description || !grid || APP_STATE.totalResults > 3) return;
+  if (!section || !description || !grid) return;
+
+  const parsed = searchData.parsedQuery || {};
+  const keywordTokens = parsed.keywords || [];
+  if (APP_STATE.totalResults > 3 && keywordTokens.length === 0) return;
 
   const destinations = APP_STATE.allDestinations.length
     ? APP_STATE.allDestinations
     : await loadAllDestinations();
-  const parsed = searchData.parsedQuery || {};
   const filters = searchData.appliedFilters || {};
   const primaryIds = new Set(APP_STATE.results.map(destination => destination.id));
+  const cityMatches = [...new Set(destinations.map(destination => destination.kabKota).filter(Boolean))]
+    .map(cityName => {
+      const match = keywordTokens
+        .map(keyword => getLocationNameSuggestion(keyword, cityName))
+        .filter(Boolean)
+        .sort((left, right) => right.score - left.score)[0];
+      return match && match.score >= 78 ? { cityName, ...match } : null;
+    })
+    .filter(Boolean)
+    .sort((left, right) => right.score - left.score);
+  if (APP_STATE.totalResults > 3 && cityMatches.length === 0) return;
+
+  const matchedCityNames = new Set(cityMatches.map(match => normalizeNameToken(match.cityName)));
+  const cityAnchorResults = destinations.filter(destination =>
+    matchedCityNames.has(normalizeNameToken(destination.kabKota || '')) && destination.latitude != null && destination.longitude != null
+  );
   const hasCoordinates = destination =>
     destination.latitude !== null && destination.latitude !== undefined &&
     destination.longitude !== null && destination.longitude !== undefined &&
     Number.isFinite(Number(destination.latitude)) &&
     Number.isFinite(Number(destination.longitude));
-  const anchorResults = APP_STATE.results.filter(hasCoordinates);
+  const anchorCandidates = cityMatches.length ? cityAnchorResults : APP_STATE.results;
+  const anchorResults = [...new Map(
+    anchorCandidates.filter(hasCoordinates).map(destination => [destination.id, destination])
+  ).values()];
   const nearbyRadiusKm = 100;
   const activities = filters.aktivitas
     ? [filters.aktivitas]
@@ -1081,7 +1281,6 @@ async function renderRelatedRecommendations(searchData) {
   const hasBudget = budgetValue !== null && budgetValue !== undefined && Number.isFinite(Number(budgetValue));
   const range = filters.rangeHarga || parsed.rangeHarga;
   const priceType = filters.priceType || 'total';
-  const keywordTokens = parsed.keywords || [];
   const rangeOrder = ['di-bawah-100k', '100k-250k', '250k-500k', '500k-1jt', 'di-atas-1jt'];
 
   const recommendations = destinations.map(destination => {
@@ -1204,6 +1403,19 @@ async function renderRelatedRecommendations(searchData) {
       destination.atraksi,
       destination.fasilitasStr
     ].filter(Boolean).join(' '));
+    const cityName = destination.kabKota || '';
+    const matchingCity = cityMatches.find(match =>
+      normalizeNameToken(match.cityName) === normalizeNameToken(cityName)
+    );
+    if (matchingCity) {
+      addReason(
+        matchingCity.isExact ? 14 : 12,
+        matchingCity.isExact
+          ? `Lokasi di ${cityName}`
+          : `Lokasi di ${cityName}, nama kota mirip dengan pencarian`
+      );
+    }
+
     const matchingKeywords = keywordTokens.filter(keyword =>
       searchableText.includes(normalizeNameToken(keyword)) ||
       getNameSuggestionScore(keyword, destination.nama) > 0
@@ -1282,11 +1494,15 @@ async function renderRelatedRecommendations(searchData) {
 
   const hasNearbyRecommendations = recommendations.some(item => item.isNearby);
   if (title) {
-    title.textContent = hasNearbyRecommendations
+    title.textContent = cityMatches.length
+      ? `Rekomendasi di ${cityMatches[0].cityName} & sekitarnya`
+      : hasNearbyRecommendations
       ? 'Rekomendasi sekitar & terkait'
       : 'Rekomendasi terkait';
   }
-  description.textContent = hasNearbyRecommendations
+  description.textContent = cityMatches.length
+    ? `Nama pencarian mirip dengan kota ${cityMatches[0].cityName}. Destinasi di kota tersebut dan sekitarnya ditampilkan di sini.`
+    : hasNearbyRecommendations
     ? `Destinasi sekitar dalam radius ${nearbyRadiusKm} km dari hasil pencarian, serta alternatif lain yang terkait.`
     : APP_STATE.totalResults === 0
       ? 'Belum ada hasil yang cocok. Berikut beberapa alternatif yang masih terkait dengan pencarian Anda.'
@@ -1459,8 +1675,9 @@ function renderDestinationCards(destList, targetGridId = 'destinations-grid', re
     const activitiesText = (d.aktivitas || []).slice(0, 3).join(', ') || d.aktivitasStr || 'Belum ada data aktivitas';
     const affordability = getAffordabilityCategory(d.estimasiTotalPerOrang);
 
-    // Tag nomor urut destinasi (menegaskan urutan lengkap 1 s/d 336)
-    const numBadge = `<span class="badge-tag-clean" style="background:rgba(7,21,38,0.75);color:#fff;font-weight:700;font-size:0.68rem;padding:2px 6px">#${idx + 1}</span>`;
+    // Nomor urut mengikuti posisi destinasi pada seluruh hasil pencarian.
+    const absoluteIndex = (APP_STATE.currentPage - 1) * APP_STATE.pageSize + idx + 1;
+    const numBadge = `<span class="badge-tag-clean" style="background:rgba(7,21,38,0.75);color:#fff;font-weight:700;font-size:0.68rem;padding:2px 6px">#${absoluteIndex}</span>`;
 
     // Tag peralatan
     const eqChips = (d.peralatan || []).slice(0, 3).map(eq => {
@@ -1485,10 +1702,11 @@ function renderDestinationCards(destList, targetGridId = 'destinations-grid', re
             <div class="card-header-titles">
               <span class="card-code-tag">${d.id} · ${escapeHtml(d.wilayah)}</span>
               <h3 class="card-dest-name">${escapeHtml(d.nama)}</h3>
-              <span class="card-dest-location">
+              <a class="card-dest-location" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(d.nama + ' ' + d.lokasi)}" target="_blank" rel="noopener noreferrer" title="Buka lokasi ${escapeHtml(d.lokasi)} di Google Maps" onclick="event.stopPropagation()">
                 <svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg>
                 ${escapeHtml(d.lokasi)}
-              </span>
+              </a>
+              ${renderPhotoAttribution(d)}
             </div>
           </div>
         </div>
@@ -1509,7 +1727,7 @@ function renderDestinationCards(destList, targetGridId = 'destinations-grid', re
           ${recommendationReason ? `
             <div class="related-card-context">
               <p><strong>Aktivitas:</strong> ${escapeHtml(activitiesText)}</p>
-              <p><strong>Alasan direkomendasikan:</strong> ${escapeHtml(recommendationReason)}</p>
+              <p>${escapeHtml(recommendationReason)}</p>
             </div>
           ` : ''}
 
@@ -1542,7 +1760,7 @@ function renderDestinationCards(destList, targetGridId = 'destinations-grid', re
   grid.querySelectorAll('.card-destination-pro').forEach(card => {
     card.addEventListener('click', (e) => {
       // Abaikan jika klik tombol bookmark agar aksi simpan favorit tidak tertimpa
-      if (e.target.closest('.btn-card-bookmark')) return;
+      if (e.target.closest('.btn-card-bookmark, .photo-attribution')) return;
       openDestinationModal(card.dataset.id);
     });
   });
@@ -1561,48 +1779,7 @@ async function loadFacets() {
     const res = await fetch('/api/facets');
     const facets = await res.json();
     APP_STATE.facets = facets;
-
-    // Update pill counts
-    const pillKeys = ['di-bawah-100k', '100k-250k', '250k-500k', '500k-1jt', 'di-atas-1jt'];
-    pillKeys.forEach(k => {
-      const el = document.querySelector(`.price-pill-row[data-val="${k}"] .pill-counter`);
-      if (el && facets.rangeTotal[k] !== undefined) {
-        el.textContent = facets.rangeTotal[k];
-      }
-    });
-
-    // Populate Aktivitas Select
-    const aktSel = document.getElementById('filter-aktivitas');
-    if (aktSel && facets.aktivitas) {
-      Object.keys(facets.aktivitas).sort().forEach(act => {
-        const opt = document.createElement('option');
-        opt.value = act;
-        opt.textContent = `${act} (${facets.aktivitas[act]})`;
-        aktSel.appendChild(opt);
-      });
-    }
-
-    // Populate Wilayah Select
-    const wilSel = document.getElementById('filter-wilayah');
-    if (wilSel && facets.wilayah) {
-      Object.keys(facets.wilayah).forEach(w => {
-        const opt = document.createElement('option');
-        opt.value = w;
-        opt.textContent = `${w} (${facets.wilayah[w]})`;
-        wilSel.appendChild(opt);
-      });
-    }
-
-    // Populate Provinsi Select
-    const provSel = document.getElementById('filter-provinsi');
-    if (provSel && facets.provinsi) {
-      Object.keys(facets.provinsi).forEach(p => {
-        const opt = document.createElement('option');
-        opt.value = p;
-        opt.textContent = `${p} (${facets.provinsi[p]})`;
-        provSel.appendChild(opt);
-      });
-    }
+    renderFilterFacetOptions(facets);
 
     // Populate Peralatan
     const eqList = document.getElementById('filter-equipment-list');
@@ -1682,6 +1859,8 @@ async function openDestinationModal(destId) {
     if (destTitle) destTitle.textContent = localDest.nama;
     const destLoc = document.getElementById('modal-dest-loc');
     if (destLoc) destLoc.textContent = localDest.lokasi;
+    const photoAttribution = document.getElementById('modal-photo-attribution');
+    if (photoAttribution) photoAttribution.innerHTML = renderPhotoAttribution(localDest);
   }
 
   body.innerHTML = '<div style="padding:2.5rem;text-align:center;color:var(--text-muted)">Memuat detail semantik &amp; kalkulator...</div>';
@@ -1708,6 +1887,7 @@ async function openDestinationModal(destId) {
     }
 
     APP_STATE.activeDestDetail = data || { destinasi: d, semanticRecommendations: [] };
+    const affordability = getAffordabilityCategory(d.estimasiTotalPerOrang);
 
     const photo = d.foto || getPhotoForDestination(d);
     const headerImg = document.getElementById('modal-header-img');
@@ -1718,6 +1898,8 @@ async function openDestinationModal(destId) {
     if (destTitle) destTitle.textContent = d.nama;
     const destLoc = document.getElementById('modal-dest-loc');
     if (destLoc) destLoc.textContent = d.lokasi;
+    const photoAttribution = document.getElementById('modal-photo-attribution');
+    if (photoAttribution) photoAttribution.innerHTML = renderPhotoAttribution(d);
 
     const modalFavBtn = document.getElementById('modal-dest-fav-btn');
     if (modalFavBtn) {
@@ -1868,7 +2050,7 @@ async function openDestinationModal(destId) {
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem">
           <div>
             <div style="display:flex;align-items:center;gap:0.5rem">
-              <span style="font-size:1.15rem">🌊</span>
+              <span style="font-size:1.15rem"></span>
               <h4 style="font-weight:800;color:var(--text-main);font-size:1.05rem;margin:0">
                 Peta &amp; Wisata Maritim Terdekat di Sekitar Sini
               </h4>
@@ -1896,7 +2078,7 @@ async function openDestinationModal(destId) {
             <strong>Spot Wisata Bahari Sekitar</strong>
           </div>
           <div style="margin-left:auto;color:var(--text-muted);font-size:0.72rem">
-            <em>⚡ Garis biru menunjukkan jarak langsung (Haversine Formula)</em>
+            <em> Garis biru menunjukkan jarak langsung (Haversine Formula)</em>
           </div>
         </div>
 
@@ -1951,7 +2133,7 @@ function initModalMap(dest) {
     className: 'current-modal-pin',
     html: `
       <div style="background:#ef4444;color:white;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:15px;box-shadow:0 0 16px rgba(239,68,68,0.95);border:3px solid white;font-weight:bold">
-        📍
+        
       </div>
     `,
     iconSize: [32, 32],
@@ -1966,9 +2148,9 @@ function initModalMap(dest) {
 
   destMarker.bindPopup(`
     <div style="font-size:0.85rem;min-width:190px">
-      <div style="color:#ef4444;font-size:0.7rem;font-weight:800;text-transform:uppercase;margin-bottom:2px">📍 Destinasi Saat Ini</div>
+      <div style="color:#ef4444;font-size:0.7rem;font-weight:800;text-transform:uppercase;margin-bottom:2px"> Destinasi Saat Ini</div>
       <strong style="color:var(--text-main);font-size:0.95rem;display:block;margin-bottom:2px">${escapeHtml(dest.nama)}</strong>
-      <span style="color:#64748b;font-size:0.75rem;display:block">📍 ${escapeHtml(dest.lokasi)}</span>
+      <span style="color:#64748b;font-size:0.75rem;display:block"> ${escapeHtml(dest.lokasi)}</span>
       <div style="margin-top:0.4rem;font-size:0.72rem;background:#fef2f2;color:#b91c1c;padding:3px 6px;border-radius:4px;font-weight:700">
         Kategori: ${escapeHtml(dest.jenisWisata || 'Wisata Bahari')}
       </div>
@@ -2007,9 +2189,9 @@ function initModalMap(dest) {
 
     spotMarker.bindPopup(`
       <div style="font-size:0.84rem;min-width:210px">
-        <span style="color:#0284c7;font-size:0.7rem;font-weight:800;text-transform:uppercase">#${idx + 1} Terdekat (⚡ ${spot.distanceKm} km)</span>
+        <span style="color:#0284c7;font-size:0.7rem;font-weight:800;text-transform:uppercase">#${idx + 1} Terdekat ( ${spot.distanceKm} km)</span>
         <strong style="color:var(--text-main);font-size:0.95rem;display:block;margin:3px 0">${escapeHtml(spot.nama)}</strong>
-        <span style="color:#64748b;font-size:0.74rem;display:block;margin-bottom:6px">📍 ${escapeHtml(spot.lokasi)}</span>
+        <span style="color:#64748b;font-size:0.74rem;display:block;margin-bottom:6px"> ${escapeHtml(spot.lokasi)}</span>
         <div style="display:flex;gap:4px;margin-bottom:8px">
           <span style="background:#e0f2fe;color:#0284c7;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">${escapeHtml(spot.level)}</span>
           <span style="background:#ecfdf5;color:#059669;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">${formatRupiah(spot.estimasiTotalPerOrang)}</span>
@@ -2043,7 +2225,7 @@ function initModalMap(dest) {
       containerList.innerHTML = nearbySpots.map((spot, idx) => {
         const photoUrl = spot.foto || getPhotoForDestination(spot);
         return `
-          <div class="nearby-spot-modal-card" style="background:var(--bg-subtle);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:0.85rem;display:flex;flex-direction:column;gap:0.45rem;cursor:pointer;transition:transform 0.2s ease, box-shadow 0.2s ease" onclick="openDestinationModal('${spot.id}')" title="Klik untuk membuka detail wisata ini">
+          <div class="nearby-spot-modal-card" style="background:var(--bg-subtle);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:0.85rem;display:flex;flex-direction:column;gap:0.45rem;cursor:pointer;transition:transform 0.2s ease, box-shadow 0.2s ease" onclick="if (!event.target.closest('.photo-attribution')) openDestinationModal('${spot.id}')" title="Klik untuk membuka detail wisata ini">
             <div style="display:flex;gap:0.75rem;align-items:center">
               <img src="${photoUrl}" style="width:58px;height:58px;border-radius:8px;object-fit:cover;flex-shrink:0" alt="${escapeHtml(spot.nama)}" loading="lazy">
               <div style="overflow:hidden">
@@ -2051,14 +2233,15 @@ function initModalMap(dest) {
                   <span style="background:var(--sea-blue);color:white;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:0.68rem;font-weight:800;flex-shrink:0">${idx + 1}</span>
                   <strong style="color:var(--text-main);font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block">${escapeHtml(spot.nama)}</strong>
                 </div>
-                <span style="font-size:0.74rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block">📍 ${escapeHtml(spot.lokasi)}</span>
+                <span style="font-size:0.74rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block"> ${escapeHtml(spot.lokasi)}</span>
                 <span style="font-size:0.7rem;color:var(--sea-blue);font-weight:600">${escapeHtml(spot.jenisWisata)}</span>
               </div>
             </div>
+            ${renderPhotoAttribution(spot)}
             <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.74rem;padding-top:0.4rem;border-top:1px dashed var(--border-subtle)">
               <span style="color:#059669;font-weight:700">${formatRupiah(spot.estimasiTotalPerOrang)}</span>
               <span class="badge-tag-clean" style="font-size:0.7rem;background:rgba(2,132,199,0.12);color:var(--sea-blue);font-weight:800">
-                ⚡ ${spot.distanceKm} km
+                 ${spot.distanceKm} km
               </span>
             </div>
           </div>
@@ -2241,16 +2424,51 @@ function renderKnowledgeGraph(graphData) {
 // ==============================================================================
 async function loadAllDestinations() {
   if (APP_STATE.allDestinations && APP_STATE.allDestinations.length > 0) {
+    updateIslandDestinationCounts(APP_STATE.allDestinations);
     return APP_STATE.allDestinations;
   }
   try {
     const res = await fetch(`/api/search?_v=${Date.now()}`);
     const data = await res.json();
     APP_STATE.allDestinations = data.results || [];
+    updateIslandDestinationCounts(APP_STATE.allDestinations);
     return APP_STATE.allDestinations;
   } catch (err) {
     console.error('Gagal memuat seluruh destinasi:', err);
     return [];
+  }
+}
+
+function updateIslandDestinationCounts(destinations) {
+  if (!Array.isArray(destinations) || destinations.length === 0) return;
+
+  document.querySelectorAll('#explorer-wilayah-pills .filter-pill-opt').forEach(btn => {
+    const wilayah = btn.dataset.wil || '';
+    const provinsi = btn.dataset.prov || '';
+    let count;
+
+    if (!wilayah) {
+      count = destinations.length;
+    } else if (provinsi) {
+      const provinces = provinsi.split(',').map(value => value.trim());
+      count = destinations.filter(dest =>
+        dest.wilayah === wilayah &&
+        provinces.includes(dest.provinsi)
+      ).length;
+    } else {
+      count = destinations.filter(dest => dest.wilayah === wilayah).length;
+    }
+
+    const countElement = btn.querySelector('.island-pill-count');
+    if (countElement) countElement.textContent = `${count} Wisata`;
+  });
+
+  const activeCount = document.getElementById('island-active-count');
+  if (activeCount) {
+    const activeButton = document.querySelector('#explorer-wilayah-pills .filter-pill-opt.active');
+    const name = activeButton?.querySelector('.island-pill-name')?.textContent;
+    const count = activeButton?.querySelector('.island-pill-count')?.textContent;
+    activeCount.textContent = name && count ? `(${count})` : `(${destinations.length} Destinasi)`;
   }
 }
 
@@ -2395,7 +2613,7 @@ function initHomeNearbyMap(refLat, refLon, sourceLabel, topSpots) {
       <div style="position:relative;width:34px;height:34px;display:grid;place-items:center">
         <div style="position:absolute;width:34px;height:34px;border-radius:50%;background:rgba(239,68,68,0.35);animation:pulse-ring 2s infinite"></div>
         <div style="background:#ef4444;color:white;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:12px;box-shadow:0 0 10px rgba(239,68,68,0.8);border:2.5px solid white;font-weight:900;z-index:2">
-          📍
+          
         </div>
       </div>
     `,
@@ -2435,9 +2653,9 @@ function initHomeNearbyMap(refLat, refLon, sourceLabel, topSpots) {
     const marker = L.marker([spot.latitude, spot.longitude], { icon: spotIcon }).addTo(map);
     marker.bindPopup(`
       <div style="font-size:0.84rem;min-width:220px;max-width:250px">
-        <span style="color:#0284c7;font-size:0.7rem;font-weight:800;text-transform:uppercase">#${idx + 1} Terdekat · 🧭 ${bearing.arrow} ${spot.distanceKm} km (${bearing.direction})</span>
+        <span style="color:#0284c7;font-size:0.7rem;font-weight:800;text-transform:uppercase">#${idx + 1} Terdekat ·  ${bearing.arrow} ${spot.distanceKm} km (${bearing.direction})</span>
         <strong style="color:var(--text-main);font-size:0.95rem;display:block;margin:4px 0 2px 0">${escapeHtml(spot.nama)}</strong>
-        <span style="color:#64748b;font-size:0.75rem;display:block;margin-bottom:6px">📍 ${escapeHtml(spot.lokasi)}</span>
+        <span style="color:#64748b;font-size:0.75rem;display:block;margin-bottom:6px"> ${escapeHtml(spot.lokasi)}</span>
         <div style="display:flex;gap:4px;margin-bottom:8px">
           <span style="background:#e0f2fe;color:#0284c7;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">${escapeHtml(spot.level)}</span>
           <span style="background:#ecfdf5;color:#059669;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">${formatRupiah(spot.estimasiTotalPerOrang)}</span>
@@ -2472,7 +2690,7 @@ async function renderNearbyDestinations(refLat, refLon, sourceLabel) {
   if (!grid) return;
 
   if (statusEl) {
-    statusEl.innerHTML = `📍 Menampilkan rekomendasi wisata bahari terdekat dari: <strong style="color:var(--sea-blue)">${escapeHtml(sourceLabel)}</strong>`;
+    statusEl.innerHTML = ` Menampilkan rekomendasi wisata bahari terdekat dari: <strong style="color:var(--sea-blue)">${escapeHtml(sourceLabel)}</strong>`;
   }
 
   const all = await loadAllDestinations();
@@ -2504,7 +2722,7 @@ async function renderNearbyDestinations(refLat, refLon, sourceLabel) {
           <div class="card-photo-overlay">
             <div class="card-badge-row">
               <span class="badge-tag-clean" style="background:#0284c7;color:white;font-weight:700">
-                #${idx + 1} Terdekat · 🧭 ${d.bearing.arrow} ${d.distanceKm} km ${d.bearing.direction}
+                #${idx + 1} Terdekat ·  ${d.bearing.arrow} ${d.distanceKm} km ${d.bearing.direction}
               </span>
               <button type="button" class="btn-card-bookmark ${isFav ? 'active' : ''}" data-fav="${d.id}" title="Simpan Destinasi">
                 <svg class="svg-icon svg-icon-sm"><use href="#icon-heart"/></svg>
@@ -2517,6 +2735,7 @@ async function renderNearbyDestinations(refLat, refLon, sourceLabel) {
                 <svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg>
                 ${escapeHtml(d.lokasi)}
               </span>
+              ${renderPhotoAttribution(d)}
             </div>
           </div>
         </div>
@@ -2533,8 +2752,8 @@ async function renderNearbyDestinations(refLat, refLon, sourceLabel) {
               <small>${escapeHtml(d.jenisWisata)}</small>
             </div>
             <div class="equipment-chips-wrap">
-              <span class="mini-gear-tag">🌊 ${(d.aktivitas || []).slice(0, 2).join(', ')}</span>
-              <span class="mini-gear-tag">📍 ${escapeHtml(d.kabKota || d.lokasi.split(',')[0])}</span>
+              <span class="mini-gear-tag"> ${(d.aktivitas || []).slice(0, 2).join(', ')}</span>
+              <span class="mini-gear-tag"> ${escapeHtml(d.kabKota || d.lokasi.split(',')[0])}</span>
             </div>
           </div>
 
@@ -2707,7 +2926,7 @@ async function renderIndonesiaMapView() {
               });
               L.marker([userLat, userLon], { icon: userIcon })
                 .addTo(indonesiaMapInstance)
-                .bindPopup('<strong>📍 Posisi Anda Saat Ini</strong>')
+                .bindPopup('<strong> Posisi Anda Saat Ini</strong>')
                 .openPopup();
             },
             err => {
@@ -2767,7 +2986,7 @@ function updateMapMarkers(regionFilter = '') {
 
   const maritimeIcon = L.divIcon({
     className: 'maritime-map-pin',
-    html: '<div style="background:#0284c7;color:white;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:12px;box-shadow:0 2px 8px rgba(0,0,0,0.3);border:2px solid white">🌊</div>',
+    html: '<div style="background:#0284c7;color:white;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:12px;box-shadow:0 2px 8px rgba(0,0,0,0.3);border:2px solid white"></div>',
     iconSize: [24, 24],
     iconAnchor: [12, 12]
   });
@@ -2781,12 +3000,13 @@ function updateMapMarkers(regionFilter = '') {
     marker.bindPopup(`
       <div style="font-size:0.85rem;min-width:220px;max-width:260px">
         <img src="${photoUrl}" style="width:100%;height:110px;object-fit:cover;border-radius:8px;margin-bottom:8px">
+        ${renderPhotoAttribution(d)}
         <strong style="color:var(--text-main);font-size:0.95rem;display:block;margin-bottom:2px">${escapeHtml(d.nama)}</strong>
-        <span style="color:#64748b;font-size:0.75rem;display:block;margin-bottom:6px">📍 ${escapeHtml(d.lokasi)}</span>
+        <span style="color:#64748b;font-size:0.75rem;display:block;margin-bottom:6px"> ${escapeHtml(d.lokasi)}</span>
         <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">
           <span style="background:#e0f2fe;color:#0284c7;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">Level: ${escapeHtml(d.level)}</span>
           <span style="background:#ecfdf5;color:#059669;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">${formatRupiah(d.estimasiTotalPerOrang)}</span>
-          <span style="background:#f0fdf4;color:#15803d;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">🌊 ${escapeHtml(d.jenisWisata || 'Wisata Maritim')}</span>
+          <span style="background:#f0fdf4;color:#15803d;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700"> ${escapeHtml(d.jenisWisata || 'Wisata Maritim')}</span>
         </div>
         <button type="button" class="btn-search-exec" style="width:100%;height:32px;font-size:0.75rem;padding:0" onclick="openDestinationModal('${d.id}')">
           Buka Detail &amp; Wisata Sekitar

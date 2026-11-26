@@ -299,7 +299,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Gapang_Beach%2C_Sabang%2C_Aceh.jpg/960px-Gapang_Beach%2C_Sabang%2C_Aceh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 5.8631,
     "longitude": 95.2801,
     "kuliner": [
@@ -336,7 +336,14 @@
         "longitude": 95.2605,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Gapang Beach, Sabang, Aceh.jpg)",
+    "fotoAtribusi": {
+      "creator": "Asep Mulyadi",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gapang_Beach,_Sabang,_Aceh.jpg"
+    }
   },
   {
     "id": "SMT-03",
@@ -13843,7 +13850,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Mawun_Beach_1.JPG/960px-Mawun_Beach_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -8.8983,
     "longitude": 116.2333,
     "kuliner": [
@@ -13880,7 +13887,14 @@
         "longitude": 116.2167,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Mawun Beach 1.JPG)",
+    "fotoAtribusi": {
+      "creator": "Midori",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mawun_Beach_1.JPG"
+    }
   },
   {
     "id": "BNT-32",
@@ -15488,7 +15502,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Road_infrastructures_Oeseli_Beach%2C_Boa%2C_Nemberala_-_panoramio.jpg/960px-Road_infrastructures_Oeseli_Beach%2C_Boa%2C_Nemberala_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": -10.6167,
     "longitude": 122.8667,
     "kuliner": [
@@ -15525,7 +15539,14 @@
         "longitude": 122.8781,
         "jarakKm": 1.9
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Road infrastructures Oeseli Beach, Boa, Nemberala - panoramio.jpg)",
+    "fotoAtribusi": {
+      "creator": "Mujiono Leo",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Road_infrastructures_Oeseli_Beach,_Boa,_Nemberala_-_panoramio.jpg"
+    }
   },
   {
     "id": "BNT-46",
@@ -24398,7 +24419,7 @@
       }
     ],
     "adaAlatDisewa": true,
-    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Lhoknga_beach%2C_Aceh_20140912_113920.jpg/960px-Lhoknga_beach%2C_Aceh_20140912_113920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "latitude": 5.4667,
     "longitude": 95.2333,
     "kuliner": [
@@ -24435,7 +24456,14 @@
         "longitude": 95.2522,
         "jarakKm": 2.3
       }
-    ]
+    ],
+    "fotoSumber": "commons (File:Lhoknga beach, Aceh 20140912 113920.jpg)",
+    "fotoAtribusi": {
+      "creator": "Ekacahyani",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lhoknga_beach,_Aceh_20140912_113920.jpg"
+    }
   },
   {
     "id": "SMT-48",

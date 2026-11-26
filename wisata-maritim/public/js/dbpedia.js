@@ -404,7 +404,7 @@ LIMIT 3`;
     const hasSpecificIntent = /\b(snorkeling|diving|surfing|pantai|pulau|sewa|peralatan|alat|harga|tiket|gratis|budget|level|pemula|ahli|menengah|bali|jawa|sumatra|kalimantan|sulawesi|maluku|papua|komodo|bunaken|raja ampat|wakatobi|karimunjawa|derawan|aktivitas|ontologi|rekomendasi)\b/i.test(lc);
 
     if (isGreetingWord && !hasSpecificIntent) {
-      text = `Halo! 👋 Senang bisa menyapa kamu!\n\n**Ada yang bisa saya bantu seputar wisata maritim atau liburan baharimu hari ini?** 😊\n\nSaya asisten cerdas berbasis **Web Semantik & DBpedia SPARQL** yang siap membantu kamu mencari:\n• 🤿 **Aktivitas Bahari**: Rekomendasi snorkeling, diving, surfing, kano, island hopping\n• 📍 **Pencarian Wilayah**: Eksplorasi spot eksotis di Bali, Jawa, Nusa Tenggara, Sumatra, Sulawesi, Maluku, hingga Papua\n• 💰 **Info Biaya & Tiket**: Destinasi gratis (HTM Rp0), wisata hemat di bawah 100rb, hingga sewa peralatan\n• 🎯 **Tingkat Keahlian**: Level pemula (ramah keluarga), menengah, hingga ahli/mahir\n\nSilakan pilih salah satu opsi di bawah atau ketik langsung pertanyaanmu ya!`;
+      text = `Halo!  Senang bisa menyapa kamu!\n\n**Ada yang bisa saya bantu seputar wisata maritim atau liburan baharimu hari ini?** \n\nSaya asisten cerdas berbasis **Web Semantik & DBpedia SPARQL** yang siap membantu kamu mencari:\n•  **Aktivitas Bahari**: Rekomendasi snorkeling, diving, surfing, kano, island hopping\n•  **Pencarian Wilayah**: Eksplorasi spot eksotis di Bali, Jawa, Nusa Tenggara, Sumatra, Sulawesi, Maluku, hingga Papua\n•  **Info Biaya & Tiket**: Destinasi gratis (HTM Rp0), wisata hemat di bawah 100rb, hingga sewa peralatan\n•  **Tingkat Keahlian**: Level pemula (ramah keluarga), menengah, hingga ahli/mahir\n\nSilakan pilih salah satu opsi di bawah atau ketik langsung pertanyaanmu ya!`;
       suggestions = [
         'Pantai gratis di Bali apa saja?',
         'Rekomendasi snorkeling untuk pemula',
@@ -418,7 +418,7 @@ LIMIT 3`;
 
     // B. Terima Kasih / Pamit
     if (/\b(terima kasih|makasih|thanks|thank you|bye|dadah|sampai jumpa|oke|siap)\b/i.test(lc)) {
-      text = `Sama-sama! Senang bisa membantu menjelajahi kekayaan bahari nusantara 🏝️ Jika ada yang ingin ditanyakan seputar harga, peralatan, tingkat level, atau rekomendasi destinasi, silakan tanyakan kapan saja!`;
+      text = `Sama-sama! Senang bisa membantu menjelajahi kekayaan bahari nusantara  Jika ada yang ingin ditanyakan seputar harga, peralatan, tingkat level, atau rekomendasi destinasi, silakan tanyakan kapan saja!`;
       suggestions = [
         'Rekomendasi wisata maritim terbaik',
         'Tempat yang ada sewa alat',
@@ -429,7 +429,7 @@ LIMIT 3`;
 
     // C. Tanya Web Semantik / Ontologi
     if (/\b(ontologi|web semantik|semantic web|sparql|turtle|rdf|triple)\b/i.test(lc)) {
-      text = `🌐 **Arsitektur Web Semantik Ombak Nusantara:**\n\n• **Ontologi W3C RDF Turtle (\`.ttl\`)**: Memodelkan relasi kelas \`maritim:DestinasiWisata\`, \`maritim:AktivitasBahari\`, \`maritim:Peralatan\`, dan \`maritim:TingkatKeahlian\`.\n• **SPARQL Endpoint**: Menyediakan query reasoning in-memory standar W3C di endpoint \`/api/sparql\`.\n• **Integrasi DBpedia**: Mengambil graf pengetahuan global (*Linked Open Data*) dari endpoint resmi \`https://dbpedia.org/sparql\`.\n• **Faceted Search**: Multi-dimensi berdasarkan range harga Google, status sewa alat, dan level keahlian.`;
+      text = ` **Arsitektur Web Semantik Ombak Nusantara:**\n\n• **Ontologi W3C RDF Turtle (\`.ttl\`)**: Memodelkan relasi kelas \`maritim:DestinasiWisata\`, \`maritim:AktivitasBahari\`, \`maritim:Peralatan\`, dan \`maritim:TingkatKeahlian\`.\n• **SPARQL Endpoint**: Menyediakan query reasoning in-memory standar W3C di endpoint \`/api/sparql\`.\n• **Integrasi DBpedia**: Mengambil graf pengetahuan global (*Linked Open Data*) dari endpoint resmi \`https://dbpedia.org/sparql\`.\n• **Faceted Search**: Multi-dimensi berdasarkan range harga Google, status sewa alat, dan level keahlian.`;
       suggestions = [
         'Rekomendasi wisata maritim terbaik',
         'Tingkat level diatas pemula',
@@ -440,7 +440,7 @@ LIMIT 3`;
 
     // D. Tanya Semua Aktivitas Maritim yang Tersedia
     if (/\b(aktivitas apa saja|ada aktivitas apa|bisa ngapain|macam aktivitas|kegiatan apa saja)\b/i.test(lc)) {
-      text = `🤿 **14 Aktivitas Wisata Bahari yang Terdata di Sistem:**\n\n1. **Snorkeling**: Terumbu karang dangkal (Bunaken, Karimunjawa, Gili Trawangan)\n2. **Diving (Penyelaman)**: Dinding karang & kapal karam (Raja Ampat, Tulamben, Lembeh)\n3. **Surfing (Selancar)**: Ombak barrel kelas dunia (Mentawai, Nias Lagundri, Pantai Kuta Bali)\n4. **Kano & Kayak**: Mendayung di laguna tenang & hutan mangrove\n5. **Island Hopping**: Jelajah antarpulau pasir putih (Kepulauan Derawan, Belitung)\n6. **Satwa Laut**: Observasi penyu, lumba-lumba Lovina, pari manta, & hiu paus Botubarani\n7. **Berenang & Berjemur**: Pantai pasir putih ramah keluarga\n8. **Wahana Air**: Banana boat, jet ski, parasailing (Tanjung Benoa Bali, Anyer)\n9. **Trekking & Panjat**: Tebing karst & panorama teluk (Pulau Padar, Pantai Siung)\n10. **Sejarah & Budaya Bahari**: Benteng Belgica Banda Neira, Pura Tanah Lot, peninggalan PD II\n11. **Kuliner Laut**: Ikan bakar pesisir, seafood Jimbaran Bali, cumi & kepiting segar\n12. **Fotografi & Sunset**: Golden hour di tebing karang & pohon bakau Walakiri\n13. **Camping Pantai**: Berkemah di tepi pantai tenang\n14. **Memancing**: Memancing jukung tradisional di laut lepas\n\nMau cari destinasi untuk aktivitas yang mana?`;
+      text = ` **14 Aktivitas Wisata Bahari yang Terdata di Sistem:**\n\n1. **Snorkeling**: Terumbu karang dangkal (Bunaken, Karimunjawa, Gili Trawangan)\n2. **Diving (Penyelaman)**: Dinding karang & kapal karam (Raja Ampat, Tulamben, Lembeh)\n3. **Surfing (Selancar)**: Ombak barrel kelas dunia (Mentawai, Nias Lagundri, Pantai Kuta Bali)\n4. **Kano & Kayak**: Mendayung di laguna tenang & hutan mangrove\n5. **Island Hopping**: Jelajah antarpulau pasir putih (Kepulauan Derawan, Belitung)\n6. **Satwa Laut**: Observasi penyu, lumba-lumba Lovina, pari manta, & hiu paus Botubarani\n7. **Berenang & Berjemur**: Pantai pasir putih ramah keluarga\n8. **Wahana Air**: Banana boat, jet ski, parasailing (Tanjung Benoa Bali, Anyer)\n9. **Trekking & Panjat**: Tebing karst & panorama teluk (Pulau Padar, Pantai Siung)\n10. **Sejarah & Budaya Bahari**: Benteng Belgica Banda Neira, Pura Tanah Lot, peninggalan PD II\n11. **Kuliner Laut**: Ikan bakar pesisir, seafood Jimbaran Bali, cumi & kepiting segar\n12. **Fotografi & Sunset**: Golden hour di tebing karang & pohon bakau Walakiri\n13. **Camping Pantai**: Berkemah di tepi pantai tenang\n14. **Memancing**: Memancing jukung tradisional di laut lepas\n\nMau cari destinasi untuk aktivitas yang mana?`;
       suggestions = [
         'Surfing',
         'Snorkeling',
@@ -463,7 +463,7 @@ LIMIT 3`;
 
       const locHeader = matchedWil ? `di ${matchedWil.label || matchedWil.name}` : 'di Indonesia';
 
-      text = `🌊 **Destinasi Tingkat Level Diatas Pemula (Menengah) ${locHeader}:**\n\n` +
+      text = ` **Destinasi Tingkat Level Diatas Pemula (Menengah) ${locHeader}:**\n\n` +
         `**Karakteristik Level Menengah:**\n` +
         `• Membutuhkan kebugaran fisik yang baik dan kemampuan berenang mandiri.\n` +
         `• Menghadapi perairan terbuka dengan arus ringan-sedang atau ombak berskala menengah.\n` +
@@ -492,7 +492,7 @@ LIMIT 3`;
 
       const locHeader = matchedWil ? `di ${matchedWil.label || matchedWil.name}` : 'di Indonesia';
 
-      text = `⚡ **Destinasi Tingkat Ahli (Mahir / Expert) ${locHeader}:**\n\n` +
+      text = ` **Destinasi Tingkat Ahli (Mahir / Expert) ${locHeader}:**\n\n` +
         `**Karakteristik Level Mahir:**\n` +
         `• Diperuntukkan bagi petualang berpengalaman, peselancar profesional, atau penyelam tingkat lanjut (*Advanced Open Water / Rescue Diver*).\n` +
         `• Karakter medan menantang: ombak barrel Samudra Hindia yang kuat, arus bawah laut (*drift dive*), atau dinding karang vertikal (*deep wall diving* hingga 30+ meter).\n` +
@@ -516,7 +516,7 @@ LIMIT 3`;
         return `• **${d.nama}** (${d.provinsi})\n  Sewa Alat: ${eqNames || 'Tersedia lengkap di lokasi'}`;
       }).join('\n\n');
 
-      text = `⚙️ **Peralatan Bahari & Status Persewaan Alat:**\n\n` +
+      text = ` **Peralatan Bahari & Status Persewaan Alat:**\n\n` +
         `Sistem mencatat rincian alat resmi untuk setiap aktivitas bahari:\n` +
         `1. **Snorkeling**: Masker & Snorkel (sewa ~Rp25rb), Fins kaki katak (~Rp25rb), Pelampung / Life Jacket (~Rp20rb), Full Set Snorkeling (~Rp50rb)\n` +
         `2. **Scuba Diving**: BCD & Regulator Selam (~Rp200rb), Tabung Scuba Oksigen (~Rp100rb), Wetsuit Selam (~Rp50rb), Paket Fun Dive Lengkap + Guide (~Rp600rb-800rb)\n` +
@@ -541,7 +541,7 @@ LIMIT 3`;
 
     // H. Tanya Rekomendasi Terpadu (Curated Recommendations)
     if (/\b(rekomendasi|rekomendasikan|paling bagus|destinasi terbaik|favorit|tempat terbaik)\b/i.test(lc) && !matchedWil) {
-      text = `🏆 **Rekomendasi Destinasi Wisata Maritim Terbaik di Indonesia:**\n\n` +
+      text = ` **Rekomendasi Destinasi Wisata Maritim Terbaik di Indonesia:**\n\n` +
         `1. **Untuk Snorkeling Pemula & Keluarga**:\n` +
         `   • **Gili Trawangan** (Lombok, NTB) — Air tenang, penyu liar, patung bawah laut Nest\n` +
         `   • **Karimunjawa** (Jepara, Jawa Tengah) — Terumbu karang dangkal, penangkaran hiu\n\n` +
@@ -575,14 +575,14 @@ LIMIT 3`;
 
       let localInfo = '';
       if (hit) {
-        localInfo = `\n\n📌 **Rincian Data Destinasi:**\n• Lokasi: ${hit.lokasi}\n• HTM Tiket Masuk: ${hit.hargaTiketMasuk ? 'Rp' + hit.hargaTiketMasuk.toLocaleString('id-ID') : 'Gratis (Rp0)'}\n• Level Keahlian: **${hit.level}**\n• Peralatan Tersedia: ${hit.peralatan?.map(p => p.nama).slice(0, 3).join(', ') || 'Alat standar'}\n• Estimasi Biaya Total: ${hit.rangeHargaTotalLabel || '-'}`;
+        localInfo = `\n\n **Rincian Data Destinasi:**\n• Lokasi: ${hit.lokasi}\n• HTM Tiket Masuk: ${hit.hargaTiketMasuk ? 'Rp' + hit.hargaTiketMasuk.toLocaleString('id-ID') : 'Gratis (Rp0)'}\n• Level Keahlian: **${hit.level}**\n• Peralatan Tersedia: ${hit.peralatan?.map(p => p.nama).slice(0, 3).join(', ') || 'Alat standar'}\n• Estimasi Biaya Total: ${hit.rangeHargaTotalLabel || '-'}`;
       }
 
       if (dbpediaData && dbpediaData.abstract) {
         const ab = dbpediaData.abstract.length > 360 ? dbpediaData.abstract.slice(0, 360) + '...' : dbpediaData.abstract;
-        text = `🏝️ **${dbpediaData.nama || matchedPlace.toUpperCase()} (Data DBpedia SPARQL)**\n\n${ab}${localInfo}`;
+        text = ` **${dbpediaData.nama || matchedPlace.toUpperCase()} (Data DBpedia SPARQL)**\n\n${ab}${localInfo}`;
       } else {
-        text = `🏝️ **Informasi Destinasi: ${matchedPlace.toUpperCase()}**${localInfo || '\nDestinasi maritim unggulan nusantara dengan pesona bahari yang menakjubkan.'}`;
+        text = ` **Informasi Destinasi: ${matchedPlace.toUpperCase()}**${localInfo || '\nDestinasi maritim unggulan nusantara dengan pesona bahari yang menakjubkan.'}`;
       }
 
       suggestions = [
@@ -599,7 +599,7 @@ LIMIT 3`;
       {
         id: 'Snorkeling',
         rx: /\b(snorkeling|snorkel|snorkling)\b/i,
-        icon: '🤿',
+        icon: '',
         title: 'Snorkeling (Selam Permukaan)',
         desc: 'Menikmati keindahan terumbu karang warna-warni dan ikan hias di perairan dangkal (1–4 meter) yang jernih dan tenang.',
         alat: 'Masker Snorkel (~Rp25rb), Fins Kaki Katak (~Rp25rb), Pelampung / Life Jacket (~Rp20rb), Full Set Snorkeling (~Rp50rb-150rb)',
@@ -608,7 +608,7 @@ LIMIT 3`;
       {
         id: 'Diving',
         rx: /\b(diving|selam|menyelam|scuba|freedive|freediving)\b/i,
-        icon: '🌊',
+        icon: '',
         title: 'Penyelaman Laut (Scuba & Freediving)',
         desc: 'Menjelajahi keanekaragaman terumbu karang, dinding karang vertikal, dan bangkai kapal karam di kedalaman 10–30+ meter.',
         alat: 'Tabung Scuba Oksigen (~Rp100rb), BCD & Regulator Selam (~Rp200rb), Wetsuit (~Rp50rb), Dive Computer, Paket Fun Dive + Guide (~Rp600rb-800rb)',
@@ -617,7 +617,7 @@ LIMIT 3`;
       {
         id: 'Surfing',
         rx: /\b(surfing|selancar|surf|ombak)\b/i,
-        icon: '🏄',
+        icon: '',
         title: 'Selancar Ombak (Surfing)',
         desc: 'Menunggangi gulungan ombak samudra kelas dunia, dari beach break ramah pemula hingga reef break barrel menantang.',
         alat: 'Papan Selancar Soft-top pemula / Fiber mahir (~Rp50rb-100rb/hari), Leash tali kaki, Wax papan, Rashguard / Wetsuit',
@@ -626,7 +626,7 @@ LIMIT 3`;
       {
         id: 'Berenang',
         rx: /\b(berenang|berjemur|renang|mandi laut)\b/i,
-        icon: '🏊',
+        icon: '',
         title: 'Berenang & Berjemur di Pantai',
         desc: 'Rekreasi santai berenang di perairan pantai tenang berpasir putih, aman untuk keluarga dan anak-anak.',
         alat: 'Pakaian renang, Pelampung pantai / ban renang (~Rp10rb-20rb), Kacamata renang, Sunscreen',
@@ -635,7 +635,7 @@ LIMIT 3`;
       {
         id: 'Island Hopping',
         rx: /\b(island hopping|jelajah pulau|keliling pulau|antar pulau)\b/i,
-        icon: '🏝️',
+        icon: '',
         title: 'Island Hopping (Jelajah Antarpulau)',
         desc: 'Petualangan berlayar menjelajahi gugusan pulau-pulau eksotis, laguna tersembunyi, dan gosong pasir putih dalam satu perjalanan trip.',
         alat: 'Sewa Perahu / Speedboat / Jukung (~Rp300rb-800rb/kapal), Life Jacket keselamatan, Dry bag anti air',
@@ -644,7 +644,7 @@ LIMIT 3`;
       {
         id: 'Kano & Kayak',
         rx: /\b(kano|kayak|mendayung)\b/i,
-        icon: '🛶',
+        icon: '',
         title: 'Kano & Kayak Laut',
         desc: 'Mendayung santai menyusuri perairan pantai tenang, laguna karang, atau ekowisata hutan mangrove pesisir.',
         alat: 'Perahu Kano / Kayak Single & Double (~Rp50rb-100rb/jam), Dayung ganda, Life Jacket / Pelampung',
@@ -653,7 +653,7 @@ LIMIT 3`;
       {
         id: 'Wahana Air',
         rx: /\b(wahana air|water sports|watersport|banana boat|jet ski|jetski|parasailing|wahana)\b/i,
-        icon: '🚤',
+        icon: '',
         title: 'Wahana Olahraga Air (Water Sports)',
         desc: 'Sensasi rekreasi pemacu adrenalin di laut seperti Banana Boat, Jet Ski, Donut Boat, Flyboard, dan Parasailing.',
         alat: 'Pelampung keselamatan khusus watersport, Helm pelindung, Instruktur boat berpengalaman',
@@ -662,7 +662,7 @@ LIMIT 3`;
       {
         id: 'Satwa Laut',
         rx: /\b(satwa laut|satwa|penyu|lumba|dolphin|manta|hiu paus|hiu)\b/i,
-        icon: '🐢',
+        icon: '',
         title: 'Wisata Satwa & Konservasi Bahari',
         desc: 'Ekowisata edukatif mengamati satwa laut eksotis di habitat alaminya: penangkaran penyu, atraksi lumba-lumba liar, pari manta, hingga hiu paus jinak.',
         alat: 'Perahu jukung pengamat, Masker snorkel & pelampung, Pemandu ranger konservasi',
@@ -671,7 +671,7 @@ LIMIT 3`;
       {
         id: 'Trekking & Panjat',
         rx: /\b(trekking|hiking|panjat tebing|panjat|tebing|bukit)\b/i,
-        icon: '🧗',
+        icon: '',
         title: 'Trekking & Panjat Tebing Karst Pesisir',
         desc: 'Mendaki bukit savana berpemandangan teluk bahari spektakuler atau memanjat tebing karang karst tepi laut.',
         alat: 'Sepatu trekking anti-slip, Tali karmantel & harness panjat, Helm pengaman, Pemandu lokal',
@@ -680,7 +680,7 @@ LIMIT 3`;
       {
         id: 'Sejarah & Budaya Bahari',
         rx: /\b(sejarah|budaya bahari|budaya|benteng|museum|tugu|pura|kapal karam|arkeologi)\b/i,
-        icon: '🏛️',
+        icon: '',
         title: 'Sejarah & Budaya Bahari Nusantara',
         desc: 'Menelusuri jejak kejayaan maritim jalur rempah, benteng kolonial tepi laut, pura suci pesisir, hingga situs kapal karam bersejarah Perang Dunia II.',
         alat: 'Kamera, Pemandu sejarah lokal, Tiket situs cagar budaya',
@@ -689,7 +689,7 @@ LIMIT 3`;
       {
         id: 'Kuliner Laut',
         rx: /\b(kuliner laut|makanan laut|kuliner|seafood|ikan bakar|kepiting|cumi|udang)\b/i,
-        icon: '🦐',
+        icon: '',
         title: 'Wisata Kuliner Laut (Seafood Pesisir)',
         desc: 'Menikmati hidangan laut segar langsung dari tangkapan nelayan lokal: ikan bakar bumbu rempah pesisir, lobster, cumi, kepiting, dan kerang di tepi pantai.',
         alat: 'Sentra kuliner nelayan, Restoran tepi pantai, Warung seafood pesisir',
@@ -698,7 +698,7 @@ LIMIT 3`;
       {
         id: 'Fotografi & Sunset',
         rx: /\b(fotografi|sunset|sunrise|senja|foto|matahari terbit|matahari terbenam)\b/i,
-        icon: '🌅',
+        icon: '',
         title: 'Fotografi & Golden Hour Sunset / Sunrise',
         desc: 'Berburu panorama siluet tebing karang, pohon bakau magis, dan semburat cahaya matahari terbenam atau terbit di cakrawala laut lepas.',
         alat: 'Kamera DSLR / Mirrorless / HP, Tripod, Filter ND / CPL',
@@ -707,7 +707,7 @@ LIMIT 3`;
       {
         id: 'Camping Pantai',
         rx: /\b(camping pantai|berkemah pantai|camping|kemah|tenda|berkemah)\b/i,
-        icon: '⛺',
+        icon: '',
         title: 'Camping Pantai (Berkemah di Pesisir)',
         desc: 'Merasakan pengalaman bermalam di bawah taburan bintang di tepi pantai tenang, diiringi deburan ombak dan hangatnya api unggun.',
         alat: 'Tenda dome tahan angin laut, Matras & sleeping bag, Lampu tenda / senter, Kompor portabel',
@@ -716,7 +716,7 @@ LIMIT 3`;
       {
         id: 'Memancing',
         rx: /\b(memancing|mancing|fishing|joran)\b/i,
-        icon: '🎣',
+        icon: '',
         title: 'Memancing Laut (Sport Fishing & Tradisional)',
         desc: 'Sensasi *strike* memancing ikan karang hingga ikan pelagis besar menggunakan jukung sewaan nelayan tradisional atau teknik popping & jigging.',
         alat: 'Joran pancing laut, Reel, Umpan hidup / lure tiruan, Sewa perahu jukung nelayan',
@@ -742,7 +742,7 @@ LIMIT 3`;
         `• **${d.nama}** (${d.lokasi})\n  Tingkat Keahlian: **${d.level}** | Biaya: ${d.rangeHargaTotalLabel}`
       ).join('\n\n');
 
-      text = `${matchedAct.icon} **Destinasi ${matchedAct.title} ${wilText}:**\n\n${matchedAct.desc}\n\n**Spot Rekomendasi:**\n\n${listText || 'Belum ada data destinasi spesifik untuk kombinasi ini.'}\n\n🛠️ **Peralatan yang Digunakan:**\n${matchedAct.alat}`;
+      text = `${matchedAct.icon} **Destinasi ${matchedAct.title} ${wilText}:**\n\n${matchedAct.desc}\n\n**Spot Rekomendasi:**\n\n${listText || 'Belum ada data destinasi spesifik untuk kombinasi ini.'}\n\n **Peralatan yang Digunakan:**\n${matchedAct.alat}`;
 
       suggestions = matchedWil ? [
         `Spot ${matchedAct.id} untuk pemula`,
@@ -775,13 +775,13 @@ LIMIT 3`;
         const wilLabel = matchedWil ? `di ${matchedWil.label || matchedWil.name}` : 'di Indonesia';
         const listText = localHits.slice(0, 5).map(d => `• **${d.nama}** (${d.lokasi}) — HTM: Rp0 (Gratis)`).join('\n');
 
-        text = `💸 **Destinasi Wisata Bahari Gratis (HTM Rp0) ${wilLabel}:**\n\n${listText || 'Belum ada data destinasi gratis yang terdaftar untuk filter ini.'}\n\n*Tips: Walaupun tiket masuk gratis, siapkan dana untuk transportasi, kuliner lokal, atau sewa perlengkapan jika ingin snorkeling/surfing ya!*`;
+        text = ` **Destinasi Wisata Bahari Gratis (HTM Rp0) ${wilLabel}:**\n\n${listText || 'Belum ada data destinasi gratis yang terdaftar untuk filter ini.'}\n\n*Tips: Walaupun tiket masuk gratis, siapkan dana untuk transportasi, kuliner lokal, atau sewa perlengkapan jika ingin snorkeling/surfing ya!*`;
 
         if (matchedWil) {
           dbpediaData = await searchDestination(matchedWil.name);
         }
       } else {
-        text = `💰 **Sistem Filter Harga Google-Style Ombak Nusantara:**\n\nKami mengelompokkan biaya wisata menjadi 5 kategori transparan:\n1. **< Rp100.000**: Sangat hemat / wisata pantai lokal\n2. **Rp100.000 – Rp250.000**: Wisata bahari + sewa alat snorkeling\n3. **Rp250.000 – Rp500.000**: Trip island hopping & wahana air\n4. **Rp500.000 – Rp1.000.000**: Paket fun dive & boat charter sedang\n5. **> Rp1.000.000**: Paket diving profesional & liveaboard kapal pinisi\n\nKamu bisa meminta rekomendasi tempat pada range harga tertentu (contoh: *"destinasi di bawah 100rb"*).`;
+        text = ` **Sistem Filter Harga Google-Style Ombak Nusantara:**\n\nKami mengelompokkan biaya wisata menjadi 5 kategori transparan:\n1. **< Rp100.000**: Sangat hemat / wisata pantai lokal\n2. **Rp100.000 – Rp250.000**: Wisata bahari + sewa alat snorkeling\n3. **Rp250.000 – Rp500.000**: Trip island hopping & wahana air\n4. **Rp500.000 – Rp1.000.000**: Paket fun dive & boat charter sedang\n5. **> Rp1.000.000**: Paket diving profesional & liveaboard kapal pinisi\n\nKamu bisa meminta rekomendasi tempat pada range harga tertentu (contoh: *"destinasi di bawah 100rb"*).`;
       }
 
       suggestions = matchedWil ? [
@@ -819,7 +819,7 @@ LIMIT 3`;
 
       const listText = localHits.slice(0, 5).map(d => `• **${d.nama}** (${d.lokasi})\n  Aktivitas: ${d.aktivitas?.slice(0, 2).join(', ')} | Biaya: ${d.rangeHargaTotalLabel}`).join('\n\n');
 
-      text = `🗺️ **Destinasi Wisata Bahari di ${matchedWil.label || matchedWil.name}:**\n\n${extraDesc}${listText || 'Banyak destinasi eksotis tersebar di daerah ini.'}\n\nMau rekomendasi aktivitas khusus seperti snorkeling, diving, surfing, atau mencari pantai gratis di ${matchedWil.name}?`;
+      text = ` **Destinasi Wisata Bahari di ${matchedWil.label || matchedWil.name}:**\n\n${extraDesc}${listText || 'Banyak destinasi eksotis tersebar di daerah ini.'}\n\nMau rekomendasi aktivitas khusus seperti snorkeling, diving, surfing, atau mencari pantai gratis di ${matchedWil.name}?`;
       suggestions = [
         `Pantai gratis di ${matchedWil.name} apa saja?`,
         `Spot snorkeling di ${matchedWil.name}`,
@@ -832,7 +832,7 @@ LIMIT 3`;
     // M. Fallback: Cari dengan API Lokal & DBpedia
     const searchHits = await queryLocalApi(normMsg || rawMsg);
     if (searchHits.length > 0) {
-      text = `🔍 **Ditemukan ${searchHits.length} Destinasi Terkait "${rawMsg}":**\nBerikut destinasi bahari pilihan yang cocok untukmu:`;
+      text = ` **Ditemukan ${searchHits.length} Destinasi Terkait "${rawMsg}":**\nBerikut destinasi bahari pilihan yang cocok untukmu:`;
       recommendations = searchHits;
       suggestions = [
         'Tingkat level diatas pemula',
@@ -850,7 +850,7 @@ LIMIT 3`;
     }
 
     // Default Fallback
-    text = `Saya mengerti kamu sedang mencari info tentang **"${rawMsg}"** 🌊\n\nKamu bisa menanyakan:\n• **Harga**: *"Pantai gratis di Bali"*, *"Wisata di bawah 100rb"*\n• **Peralatan**: *"Peralatan apa saja yang disewakan?"*, *"Sewa alat snorkeling"*\n• **Tingkat Keahlian**: *"Tingkat level diatas pemula"*, *"Tingkat ahli"*\n• **Aktivitas**: *"Aktivitas apa saja yang ada?"*, *"Surfing"*, *"Diving"*\n• **Rekomendasi**: *"Rekomendasi wisata maritim terbaik"*`;
+    text = `Saya mengerti kamu sedang mencari info tentang **"${rawMsg}"** \n\nKamu bisa menanyakan:\n• **Harga**: *"Pantai gratis di Bali"*, *"Wisata di bawah 100rb"*\n• **Peralatan**: *"Peralatan apa saja yang disewakan?"*, *"Sewa alat snorkeling"*\n• **Tingkat Keahlian**: *"Tingkat level diatas pemula"*, *"Tingkat ahli"*\n• **Aktivitas**: *"Aktivitas apa saja yang ada?"*, *"Surfing"*, *"Diving"*\n• **Rekomendasi**: *"Rekomendasi wisata maritim terbaik"*`;
     suggestions = [
       'Rekomendasi wisata maritim terbaik',
       'Tingkat level diatas pemula',
