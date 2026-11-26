@@ -210,9 +210,87 @@ LIMIT 3`;
   /* ------------------------------------------------------------------ */
   /* 5. Natural Language Understanding & Asisten Chatbot Hybrid         */
   /* ------------------------------------------------------------------ */
+  function levenshteinDistance(a, b) {
+    if (a === b) return 0;
+    if (!a.length) return b.length;
+    if (!b.length) return a.length;
+    const matrix = [];
+    for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+    for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+    for (let i = 1; i <= b.length; i++) {
+      for (let j = 1; j <= a.length; j++) {
+        if (b.charAt(i - 1) === a.charAt(j - 1)) {
+          matrix[i][j] = matrix[i - 1][j - 1];
+        } else {
+          matrix[i][j] = Math.min(
+            matrix[i - 1][j - 1] + 1,
+            Math.min(matrix[i][j - 1] + 1, matrix[i - 1][j] + 1)
+          );
+        }
+      }
+    }
+    return matrix[b.length][a.length];
+  }
+
+  // Kamus Typo & Slang Bahasa Indonesia untuk Wisata Maritim
+  const TYPO_DICTIONARY = {
+    // Sapaan / Greetings
+    'hi': 'halo', 'hii': 'halo', 'hiii': 'halo', 'hai': 'halo', 'haii': 'halo', 'hay': 'halo',
+    'hallo': 'halo', 'haloo': 'halo', 'helo': 'halo', 'heloo': 'halo', 'hy': 'halo', 'hey': 'halo',
+    'p': 'halo', 'ping': 'halo', 'oy': 'halo', 'woi': 'halo', 'woyy': 'halo', 'bot': 'bot', 'maritimbot': 'bot',
+    'slamat': 'selamat', 'slaamat': 'selamat', 'selmat': 'selamat', 'aslm': 'assalamualaikum', 'assalam': 'assalamualaikum',
+    'asalamualaikum': 'assalamualaikum', 'misi': 'permisi', 'punten': 'permisi',
+
+    // Aktivitas Bahari
+    'snorkling': 'snorkeling', 'snorkle': 'snorkeling', 'senorkling': 'snorkeling', 'senorkel': 'snorkeling',
+    'divng': 'diving', 'divin': 'diving', 'daiving': 'diving', 'menyelm': 'diving', 'menyelam': 'diving', 'nylam': 'diving',
+    'serfing': 'surfing', 'selansar': 'surfing', 'selancr': 'surfing', 'sorfing': 'surfing', 'surving': 'surfing',
+    'brenang': 'berenang', 'renang': 'berenang', 'bernamg': 'berenang', 'mandi': 'berenang',
+    'kanu': 'kano', 'kayak': 'kano', 'kaiak': 'kano',
+    'kulner': 'kuliner', 'kulinr': 'kuliner', 'seafod': 'kuliner', 'seafood': 'kuliner', 'sifud': 'kuliner', 'mknan': 'kuliner',
+    'mancing': 'memancing', 'mancng': 'memancing', 'fishing': 'memancing',
+    'kemping': 'camping', 'kemah': 'camping', 'tenda': 'camping',
+    'fhoto': 'fotografi', 'foto': 'fotografi', 'poto': 'fotografi',
+    'snset': 'sunset', 'senja': 'sunset',
+    'watersport': 'wahana air', 'jetski': 'wahana air',
+
+    // Kata Kunci & Fasilitas
+    'pante': 'pantai', 'pantey': 'pantai', 'pantae': 'pantai', 'pntai': 'pantai', 'pantaii': 'pantai',
+    'pulo': 'pulau', 'plau': 'pulau', 'pulaw': 'pulau',
+    'pralatan': 'peralatan', 'perlatn': 'peralatan', 'alat': 'peralatan', 'perlengkapan': 'peralatan',
+    'sewa': 'sewa', 'nyewa': 'sewa', 'rental': 'sewa', 'rentl': 'sewa',
+    'tket': 'tiket', 'tickt': 'tiket', 'htm': 'tiket',
+    'hrga': 'harga', 'byaya': 'harga', 'biaya': 'harga',
+    'mrah': 'murah', 'terjangkaw': 'murah',
+    'grtis': 'gratis', 'gratiss': 'gratis', 'free': 'gratis',
+    'rekomen': 'rekomendasi', 'rekomndasi': 'rekomendasi', 'recomended': 'rekomendasi', 'bagus': 'rekomendasi', 'terbaek': 'rekomendasi',
+    'pmula': 'pemula', 'newbie': 'pemula',
+    'mnengah': 'menengah', 'intermediate': 'menengah',
+    'mhir': 'ahli', 'mahir': 'ahli', 'expert': 'ahli',
+
+    // Wilayah & Destinasi Ikonik
+    'blai': 'bali', 'balii': 'bali',
+    'jwa': 'jawa', 'jakrta': 'jakarta', 'jogja': 'yogyakarta',
+    'sumtra': 'sumatra', 'sumtara': 'sumatra', 'sumatera': 'sumatra',
+    'kalimntan': 'kalimantan', 'borneo': 'kalimantan',
+    'sulwesi': 'sulawesi', 'slwesi': 'sulawesi',
+    'mluku': 'maluku',
+    'papua': 'papua', 'papoa': 'papua',
+    'bunakn': 'bunaken', 'bunakan': 'bunaken', 'bnaken': 'bunaken',
+    'wakatbi': 'wakatobi', 'wktobi': 'wakatobi',
+    'krmunjawa': 'karimunjawa', 'karimun': 'karimunjawa',
+    'kmdo': 'komodo', 'komdo': 'komodo',
+    'labuanbajo': 'labuan bajo', 'lb bajo': 'labuan bajo',
+    'gilitrawangan': 'gili trawangan', 'gilit': 'gili trawangan',
+    'nusapenida': 'nusa penida',
+    'drawan': 'derawan',
+    'bandaneira': 'banda neira',
+    'rajaampat': 'raja ampat'
+  };
+
   function normalizeTypoLeetspeak(str) {
     if (!str) return '';
-    return str
+    let s = str
       .toLowerCase()
       .replace(/3/g, 'e')
       .replace(/4|@/g, 'a')
@@ -221,6 +299,46 @@ LIMIT 3`;
       .replace(/5|\$/g, 's')
       .replace(/8/g, 'b')
       .replace(/7/g, 't');
+
+    // Kompres huruf berulang lebih dari 2 kali: e.g. "hiiii" -> "hi", "pantaii" -> "pantai"
+    s = s.replace(/([a-z])\1{2,}/g, '$1');
+
+    // Tokenisasi per kata untuk koreksi typo & fuzzy matching
+    const tokens = s.split(/[\s,?.!;:/\-\(\)]+/).filter(Boolean);
+    const correctedTokens = tokens.map(tok => {
+      // 1. Cek kamus typo eksak
+      if (TYPO_DICTIONARY[tok]) return TYPO_DICTIONARY[tok];
+
+      // 2. Fuzzy Levenshtein untuk kata-kata kunci utama
+      const canonicalKeywords = [
+        'halo', 'selamat', 'pantai', 'pulau', 'snorkeling', 'diving', 'surfing',
+        'berenang', 'kano', 'kuliner', 'peralatan', 'sewa', 'harga', 'tiket',
+        'murah', 'gratis', 'rekomendasi', 'pemula', 'menengah', 'ahli',
+        'bali', 'jawa', 'sumatra', 'kalimantan', 'sulawesi', 'maluku', 'papua',
+        'bunaken', 'komodo', 'wakatobi', 'karimunjawa', 'derawan', 'morotai'
+      ];
+
+      if (tok.length >= 4) {
+        let bestCandidate = tok;
+        let minDiff = 999;
+        const maxDist = tok.length > 5 ? 2 : 1;
+
+        for (const can of canonicalKeywords) {
+          const diff = levenshteinDistance(tok, can);
+          if (diff <= maxDist && diff < minDiff) {
+            minDiff = diff;
+            bestCandidate = can;
+          }
+        }
+        if (minDiff <= maxDist) {
+          return bestCandidate;
+        }
+      }
+
+      return tok;
+    });
+
+    return correctedTokens.join(' ');
   }
 
   async function askChatbot(userMessage) {
@@ -259,12 +377,16 @@ LIMIT 3`;
     ];
     const matchedWil = wilKeywords.find(w => w.rx.test(lc));
 
-    // A. Greeting (Sapaan)
-    if (/\b(halo|hai|hei|hi|hello|selamat|assalam|pagi|siang|sore|malam)\b/i.test(lc)) {
-      text = `Halo! 🌊 Saya **MaritimBot**, asisten cerdas berbasis **Web Semantik & DBpedia SPARQL**.\n\nSaya bisa membantu kamu mencari:\n• **Harga & Budget**: Tiket gratis, hemat < 100rb, hingga paket diving premium\n• **Peralatan & Persewaan**: Masker snorkel, fins, tabung selam, papan selancar\n• **Tingkat Keahlian**: Level pemula, diatas pemula (menengah), hingga ahli (mahir)\n• **Aktivitas Bahari**: Surfing, diving, snorkeling, kano, island hopping\n• **Rekomendasi Terbaik**: Destinasi pilihan keluarga, petualang, dan solo trip\n\nApa yang ingin kamu tanyakan sekarang?`;
+    // A. Greeting (Sapaan Balik & Menanyakan Bantuan)
+    const isGreetingWord = /\b(halo|hai|hei|hi|hello|p|ping|oy|woi|bot|assalamualaikum|assalam|permisi|selamat|pagi|siang|sore|malam)\b/i.test(lc);
+    const hasSpecificIntent = /\b(snorkeling|diving|surfing|pantai|pulau|sewa|peralatan|alat|harga|tiket|gratis|budget|level|pemula|ahli|menengah|bali|jawa|sumatra|kalimantan|sulawesi|maluku|papua|komodo|bunaken|raja ampat|wakatobi|karimunjawa|derawan|aktivitas|ontologi|rekomendasi)\b/i.test(lc);
+
+    if (isGreetingWord && !hasSpecificIntent) {
+      text = `Halo! 👋 Senang bisa menyapa kamu!\n\n**Ada yang bisa saya bantu seputar wisata maritim atau liburan baharimu hari ini?** 😊\n\nSaya asisten cerdas berbasis **Web Semantik & DBpedia SPARQL** yang siap membantu kamu mencari:\n• 🤿 **Aktivitas Bahari**: Rekomendasi snorkeling, diving, surfing, kano, island hopping\n• 📍 **Pencarian Wilayah**: Eksplorasi spot eksotis di Bali, Jawa, Nusa Tenggara, Sumatra, Sulawesi, Maluku, hingga Papua\n• 💰 **Info Biaya & Tiket**: Destinasi gratis (HTM Rp0), wisata hemat di bawah 100rb, hingga sewa peralatan\n• 🎯 **Tingkat Keahlian**: Level pemula (ramah keluarga), menengah, hingga ahli/mahir\n\nSilakan pilih salah satu opsi di bawah atau ketik langsung pertanyaanmu ya!`;
       suggestions = [
-        'Rekomendasi snorkeling untuk pemula',
         'Pantai gratis di Bali apa saja?',
+        'Rekomendasi snorkeling untuk pemula',
+        'Spot diving di Bunaken',
         'Tingkat level diatas pemula',
         'Tingkat ahli',
         'Peralatan apa saja yang disewakan?'
@@ -385,7 +507,14 @@ LIMIT 3`;
         'Destinasi sewa alat di Bali',
         'Harga tiket masuk dan sewa alat'
       ];
-      return { text, dbpediaData, suggestions };
+      return {
+        text,
+        dbpediaData,
+        recommendations: (typeof localHits !== 'undefined' && localHits) ? localHits : [],
+        totalResults: (typeof localHits !== 'undefined' && localHits) ? localHits.length : 0,
+        searchQuery: matchedWil ? matchedWil.name : 'gratis',
+        suggestions
+      };
     }
 
     // H. Tanya Rekomendasi Terpadu (Curated Recommendations)
@@ -599,7 +728,14 @@ LIMIT 3`;
         `Pantai gratis di ${matchedWil.name}`
       ] : matchedAct.sug;
 
-      return { text, dbpediaData, suggestions };
+      return {
+        text,
+        dbpediaData,
+        recommendations: (typeof localHits !== 'undefined' && localHits) ? localHits : [],
+        totalResults: (typeof localHits !== 'undefined' && localHits) ? localHits.length : 0,
+        searchQuery: matchedWil ? matchedWil.name : 'gratis',
+        suggestions
+      };
     }
 
     // K. Tanya Harga & Budget (Gratis, Murah, Range Harga Google-Style)
@@ -635,7 +771,14 @@ LIMIT 3`;
         'Pantai gratis di Bali apa saja?',
         'Snorkeling pemula budget 250rb'
       ];
-      return { text, dbpediaData, suggestions };
+      return {
+        text,
+        dbpediaData,
+        recommendations: (typeof localHits !== 'undefined' && localHits) ? localHits : [],
+        totalResults: (typeof localHits !== 'undefined' && localHits) ? localHits.length : 0,
+        searchQuery: matchedWil ? matchedWil.name : 'gratis',
+        suggestions
+      };
     }
 
     // L. Tanya Berdasarkan Wilayah / Daerah
@@ -667,15 +810,21 @@ LIMIT 3`;
     // M. Fallback: Cari dengan API Lokal & DBpedia
     const searchHits = await queryLocalApi(normMsg || rawMsg);
     if (searchHits.length > 0) {
-      const listText = searchHits.slice(0, 4).map(d => `• **${d.nama}** (${d.provinsi})\n  Aktivitas: ${d.aktivitas?.join(', ')}\n  Estimasi Biaya: ${d.rangeHargaTotalLabel}`).join('\n\n');
-      text = `🔍 **Ditemukan ${searchHits.length} Destinasi Terkait "${rawMsg}":**\n\n${listText}`;
-      recommendations = searchHits.slice(0, 4);
+      text = `🔍 **Ditemukan ${searchHits.length} Destinasi Terkait "${rawMsg}":**\nBerikut destinasi bahari pilihan yang cocok untukmu:`;
+      recommendations = searchHits;
       suggestions = [
         'Tingkat level diatas pemula',
         'Tingkat ahli',
         'Peralatan apa saja yang disewakan?'
       ];
-      return { text, dbpediaData, recommendations, suggestions };
+      return {
+        text,
+        dbpediaData,
+        recommendations,
+        totalResults: searchHits.length,
+        searchQuery: rawMsg,
+        suggestions
+      };
     }
 
     // Default Fallback

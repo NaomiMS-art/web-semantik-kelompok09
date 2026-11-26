@@ -167,8 +167,8 @@ function generateEquipment(d) {
       dapatDisewa: true,
       hargaSewa: d.biayaAktivitasMulai || 750000,
       tingkatKeahlian: d.level === "Pemula" ? "Pemula" : "Menengah",
-      keterangan: d.level === "Pemula" 
-        ? "Discovery Scuba Dive (DSD) dengan bimbingan instruktur langsung untuk pemula non-sertifikasi." 
+      keterangan: d.level === "Pemula"
+        ? "Discovery Scuba Dive (DSD) dengan bimbingan instruktur langsung untuk pemula non-sertifikasi."
         : "Fun dive berpemandu divemaster untuk penyelam bersertifikasi Open Water / Advanced."
     });
   }
@@ -183,8 +183,8 @@ function generateEquipment(d) {
       dapatDisewa: true,
       hargaSewa: d.biayaAlatMin || 75000,
       tingkatKeahlian: isPemula ? "Pemula" : (d.level || "Menengah"),
-      keterangan: isPemula 
-        ? "Papan busa empuk (soft-top) stabil dan aman dari benturan saat latihan." 
+      keterangan: isPemula
+        ? "Papan busa empuk (soft-top) stabil dan aman dari benturan saat latihan."
         : "Papan selancar performa tinggi untuk ombak bertenaga."
     });
     eqList.push({
@@ -276,16 +276,16 @@ const DEST_PHOTO_MAP = [
   { match: /pasumpahan|sikuai/i, url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80' },
   { match: /air manis|malin kundang/i, url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80' },
   { match: /rubiah|iboih|gapang|sumur tiga/i, url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80' },
-  { match: /titik nol|sabang/i, url: 'https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=800&q=80' },
+  { match: /titik nol|sabang/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /lampuuk/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /pltd apung/i, url: 'https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80' },
   { match: /pulau banyak/i, url: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80' },
   { match: /pantai cermin|berhala/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /lagoi|bintan|trikora/i, url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80' },
   { match: /anambas|padang melang/i, url: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80' },
-  { match: /barelang|batam|nongsa/i, url: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80' },
-  { match: /penyengat/i, url: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=800&q=80' },
-  { match: /marlborough|benteng/i, url: 'https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?auto=format&fit=crop&w=800&q=80' },
+  { match: /barelang|batam|nongsa/i, url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80' },
+  { match: /penyengat/i, url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80' },
+  { match: /marlborough|benteng/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /pantai panjang bengkulu/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /tanjung tinggi|belitung|laskar pelangi/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /lengkuas|mercusuar/i, url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80' },
@@ -299,7 +299,7 @@ const DEST_PHOTO_MAP = [
   { match: /sawarna|tanjung layar/i, url: 'https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=80' },
   { match: /anyer|tanjung lesung/i, url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80' },
   { match: /tidung|jembatan cinta/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
-  { match: /pramuka|penyu/i, url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80' },
+  { match: /pramuka|penyu/i, url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80' },
   { match: /pari|pantai perawan|harapan/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /sunda kelapa/i, url: 'https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80' },
   { match: /ancol/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
@@ -382,7 +382,7 @@ function getPhotoForDestination(dest) {
     return 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80';
   }
   if (dest.aktivitas && (dest.aktivitas.includes('Satwa Laut') || dest.aktivitas.includes('Penyu') || dest.aktivitas.includes('Lumba-lumba'))) {
-    return 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80';
+    return 'https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&fit=crop&w=800&q=80';
   }
   if (dest.jenisWisata && (dest.jenisWisata.includes('Sejarah') || dest.jenisWisata.includes('Budaya'))) {
     return 'https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80';

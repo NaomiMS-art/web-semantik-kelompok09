@@ -43,16 +43,16 @@ const DEST_PHOTO_MAP = [
   { match: /pasumpahan|sikuai/i, url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80' },
   { match: /air manis|malin kundang/i, url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80' },
   { match: /rubiah|iboih|gapang|sumur tiga/i, url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80' },
-  { match: /titik nol|sabang/i, url: 'https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=800&q=80' },
+  { match: /titik nol|sabang/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /lampuuk/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /pltd apung/i, url: 'https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80' },
   { match: /pulau banyak/i, url: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80' },
   { match: /pantai cermin|berhala/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /lagoi|bintan|trikora/i, url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80' },
   { match: /anambas|padang melang/i, url: 'https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80' },
-  { match: /barelang|batam|nongsa/i, url: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80' },
-  { match: /penyengat/i, url: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=800&q=80' },
-  { match: /marlborough|benteng/i, url: 'https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?auto=format&fit=crop&w=800&q=80' },
+  { match: /barelang|batam|nongsa/i, url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80' },
+  { match: /penyengat/i, url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80' },
+  { match: /marlborough|benteng/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /pantai panjang bengkulu/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /tanjung tinggi|belitung|laskar pelangi/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /lengkuas|mercusuar/i, url: 'https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80' },
@@ -66,7 +66,7 @@ const DEST_PHOTO_MAP = [
   { match: /sawarna|tanjung layar/i, url: 'https://images.unsplash.com/photo-1509233725247-49e657c54213?auto=format&fit=crop&w=800&q=80' },
   { match: /anyer|tanjung lesung/i, url: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80' },
   { match: /tidung|jembatan cinta/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
-  { match: /pramuka|penyu/i, url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80' },
+  { match: /pramuka|penyu/i, url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80' },
   { match: /pari|pantai perawan|harapan/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
   { match: /sunda kelapa/i, url: 'https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80' },
   { match: /ancol/i, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
@@ -196,9 +196,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initThemeToggle() {
-  const savedTheme = localStorage.getItem('imj_theme') || 
+  const savedTheme = localStorage.getItem('imj_theme') ||
     (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    
+
   applyTheme(savedTheme);
 
   const themeBtn = document.getElementById('btn-theme-toggle');
@@ -314,7 +314,7 @@ function initScrollSpy() {
 }
 
 // Quick Category Filtering from Category Cards
-window.filterByCategory = function(categoryKeyword) {
+window.filterByCategory = function (categoryKeyword) {
   APP_STATE.filters.jenis = categoryKeyword;
   APP_STATE.currentPage = 1;
   const sel = document.getElementById('filter-jenis');
@@ -324,7 +324,7 @@ window.filterByCategory = function(categoryKeyword) {
 };
 
 // Quick Region Filtering from Region Cards & Pills
-window.filterByRegion = function(regionName) {
+window.filterByRegion = function (regionName) {
   APP_STATE.filters.wilayah = regionName;
   APP_STATE.filters.provinsi = '';
   APP_STATE.currentPage = 1;
@@ -920,8 +920,8 @@ function sortAndRenderResults() {
 
   const paginationInfo = document.getElementById('pagination-info-text');
   if (paginationInfo) {
-    paginationInfo.textContent = totalItems === 0 
-      ? 'Tidak ada destinasi yang cocok' 
+    paginationInfo.textContent = totalItems === 0
+      ? 'Tidak ada destinasi yang cocok'
       : `Menampilkan ${startIndex + 1} - ${endIndex} dari ${totalItems} destinasi`;
   }
 
@@ -972,7 +972,7 @@ function renderPaginationControls(totalPages) {
   container.innerHTML = html;
 }
 
-window.changePage = function(newPage) {
+window.changePage = function (newPage) {
   APP_STATE.currentPage = newPage;
   sortAndRenderResults();
   const explorerEl = document.getElementById('destinasi-explorer');
@@ -1239,20 +1239,64 @@ async function openDestinationModal(destId) {
   if (!modal) return;
 
   modal.showModal();
-  body.innerHTML = '<div style="padding:2.5rem;text-align:center">Memuat detail semantik...</div>';
+
+  // 1. Cari data lokal secara sinkron untuk render instan tanpa jeda/flicker
+  let localDest = null;
+  if (destId && APP_STATE.allDestinations && APP_STATE.allDestinations.length > 0) {
+    const cleanId = String(destId).trim().toLowerCase();
+    localDest = APP_STATE.allDestinations.find(x =>
+      (x.id && x.id.toLowerCase() === cleanId) ||
+      (x.nama && x.nama.toLowerCase() === cleanId) ||
+      (x.nama && x.nama.toLowerCase().includes(cleanId))
+    );
+  }
+
+  if (localDest) {
+    const photo = localDest.foto || getPhotoForDestination(localDest);
+    const headerImg = document.getElementById('modal-header-img');
+    if (headerImg) headerImg.src = photo;
+    const destCode = document.getElementById('modal-dest-code');
+    if (destCode) destCode.textContent = `${localDest.id} · ${localDest.wilayah}`;
+    const destTitle = document.getElementById('modal-dest-title');
+    if (destTitle) destTitle.textContent = localDest.nama;
+    const destLoc = document.getElementById('modal-dest-loc');
+    if (destLoc) destLoc.textContent = localDest.lokasi;
+  }
+
+  body.innerHTML = '<div style="padding:2.5rem;text-align:center;color:var(--text-muted)">Memuat detail semantik &amp; kalkulator...</div>';
 
   try {
-    const res = await fetch(`/api/destinasi/${destId}`);
-    const data = await res.json();
-    APP_STATE.activeDestDetail = data;
+    const fetchId = localDest ? localDest.id : destId;
+    let data = null;
+    if (fetchId && fetchId !== 'undefined') {
+      try {
+        const res = await fetch(`/api/destinasi/${encodeURIComponent(fetchId)}`);
+        if (res.ok) data = await res.json();
+      } catch (_) { }
+    }
 
-    const d = data.destinasi;
+    const d = (data && data.destinasi) ? data.destinasi : localDest;
+    if (!d) {
+      body.innerHTML = `
+        <div style="padding:3rem 1.5rem;text-align:center;color:var(--text-muted)">
+          <p style="font-size:1.15rem;font-weight:700;color:var(--text-main);margin-bottom:0.5rem">Destinasi Tidak Ditemukan</p>
+          <p style="font-size:0.85rem">Silakan pilih destinasi wisata bahari lainnya dari katalog jelajah.</p>
+        </div>
+      `;
+      return;
+    }
+
+    APP_STATE.activeDestDetail = data || { destinasi: d, semanticRecommendations: [] };
+
     const photo = d.foto || getPhotoForDestination(d);
-
-    document.getElementById('modal-header-img').src = photo;
-    document.getElementById('modal-dest-code').textContent = `${d.id} · ${d.wilayah}`;
-    document.getElementById('modal-dest-title').textContent = d.nama;
-    document.getElementById('modal-dest-loc').textContent = d.lokasi;
+    const headerImg = document.getElementById('modal-header-img');
+    if (headerImg) headerImg.src = photo;
+    const destCode = document.getElementById('modal-dest-code');
+    if (destCode) destCode.textContent = `${d.id} · ${d.wilayah}`;
+    const destTitle = document.getElementById('modal-dest-title');
+    if (destTitle) destTitle.textContent = d.nama;
+    const destLoc = document.getElementById('modal-dest-loc');
+    if (destLoc) destLoc.textContent = d.lokasi;
 
     const modalFavBtn = document.getElementById('modal-dest-fav-btn');
     if (modalFavBtn) {
@@ -1443,6 +1487,14 @@ async function openDestinationModal(destId) {
     initModalMap(d);
   } catch (err) {
     console.error("Gagal open modal:", err);
+    if (body) {
+      body.innerHTML = `
+        <div style="padding:2.5rem;text-align:center;color:var(--text-muted)">
+          <p style="font-weight:700;color:var(--text-main);margin-bottom:0.4rem">Terjadi Kendala Memuat Detail</p>
+          <p style="font-size:0.85rem">Silakan coba buka kembali atau pilih destinasi lainnya.</p>
+        </div>
+      `;
+    }
   }
 }
 
@@ -2187,7 +2239,7 @@ async function renderIndonesiaMapView() {
         scrollWheelZoom: true
       });
 
-// Layer ubin OpenStreetMap (100% gratis, bebas watermark, tanpa API key)
+      // Layer ubin OpenStreetMap (100% gratis, bebas watermark, tanpa API key)
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         subdomains: 'abc',
