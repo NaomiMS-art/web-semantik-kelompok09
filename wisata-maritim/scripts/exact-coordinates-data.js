@@ -321,7 +321,53 @@ const EXACT_COORDINATES = {
   "PPA-22": { lat: -0.5633, lon: 130.5167 }, // Pulau Arborek Raja Ampat
   "PPA-23": { lat: -0.5667, lon: 130.2667 }, // Kepulauan Fam (Piaynemo) Raja Ampat
   "PPA-24": { lat: -1.9500, lon: 130.3333 }, // Danau Lenmakana Misool
-  "PPA-25": { lat: -0.5667, lon: 130.6333 }  // Selat Dampier (Kri & Mansuar) Raja Ampat
+  "PPA-25": { lat: -0.5667, lon: 130.6333 }, // Selat Dampier (Kri & Mansuar) Raja Ampat
+
+  // --- DESTINASI WISATA MARITIM TERSEMBUNYI (HIDDEN GEMS) BARU ---
+  // SUMATRA
+  "SMT-61": { lat: -5.3500, lon: 102.2667 }, // Pulau Enggano Bengkulu Utara
+  "SMT-62": { lat: -2.9167, lon: 108.2833 }, // Pantai Karang Nawing Belitung Timur
+  "SMT-63": { lat: -2.7833, lon: 100.2167 }, // Pulau Sikakap Mentawai
+  "SMT-64": { lat: -5.6167, lon: 105.1833 }, // Pantai Teluk Hantu Lampung
+  "SMT-65": { lat: -1.8833, lon: 99.2333 },  // Pulau Silabu Nyang-Nyang Mentawai
+
+  // JAWA
+  "JWA-55": { lat: -8.4356, lon: 112.6358 }, // Pantai Teluk Asmara Malang Jatim
+  "JWA-56": { lat: -8.1833, lon: 110.6833 }, // Pantai Nglambor Gunungkidul DIY
+  "JWA-57": { lat: -8.4300, lon: 113.5833 }, // Pantai Payangan Jember Jatim
+  "JWA-58": { lat: -7.7500, lon: 108.2833 }, // Pantai Karang Tawulan Tasikmalaya Jabar
+  "JWA-59": { lat: -8.3333, lon: 112.0833 }, // Pantai Pangi Blitar Jatim
+
+  // KALIMANTAN
+  "KLM-31": { lat: 0.7500, lon: 108.7167 },  // Pulau Lemukutan Bengkayang Kalbar
+  "KLM-32": { lat: 1.2167, lon: 118.7333 },  // Pantai Biduk-Biduk Berau Kaltim
+  "KLM-33": { lat: 1.2667, lon: 118.6833 },  // Labuan Cermin Berau Kaltim
+  "KLM-34": { lat: 1.7500, lon: 118.5833 },  // Pulau Bilang-Bilangan Berau Kaltim
+
+  // BALI & NUSA TENGGARA
+  "BNT-73": { lat: -8.7770, lon: 115.6179 }, // Pantai Atuh Nusa Penida Bali
+  "BNT-74": { lat: -8.8417, lon: 115.2000 }, // Pantai Gunung Payung Badung Bali
+  "BNT-75": { lat: -8.7333, lon: 115.9000 }, // Gili Layar Lombok Barat NTB
+  "BNT-76": { lat: -9.5833, lon: 119.0500 }, // Pantai Mbawana Sumba Barat NTT
+  "BNT-77": { lat: -9.0000, lon: 124.8833 }, // Teluk Gurita Belu Timor NTT
+
+  // SULAWESI
+  "SLW-41": { lat: -3.2500, lon: 122.3833 }, // Pulau Sombori Morowali Sulteng
+  "SLW-42": { lat: -3.4500, lon: 122.4500 }, // Pulau Labengki Konawe Utara Sultra
+  "SLW-43": { lat: 0.4500, lon: 123.0167 },  // Pantai Biluhu Timur Gorontalo
+  "SLW-44": { lat: -0.3500, lon: 121.9000 }, // Gua Halo Tabung Togean Sulteng
+
+  // MALUKU
+  "MLK-25": { lat: -5.5833, lon: 132.6833 }, // Pulau Bair Kei Malra
+  "MLK-26": { lat: -5.6667, lon: 132.6167 }, // Pantai Ngurtafur Kei Malra
+  "MLK-27": { lat: -4.5500, lon: 129.6833 }, // Pulau Rhun & Ay Banda Maluku
+
+  // PAPUA
+  "PPA-26": { lat: -1.9500, lon: 130.3333 }, // Danau Karst Lenmakana Misool
+  "PPA-27": { lat: -0.3167, lon: 130.8500 }, // Kali Biru Warsambin Raja Ampat
+  "PPA-28": { lat: -0.8333, lon: 131.2500 }, // Pantai Tanjung Kasuari Sorong
+  "PPA-29": { lat: -2.5000, lon: 140.7333 }, // Pantai Pasir Enam Jayapura
+  "PPA-30": { lat: 0.9167, lon: 134.3333 }   // Kepulauan Mapia Supiori Papua
 };
 
 module.exports = { EXACT_COORDINATES };

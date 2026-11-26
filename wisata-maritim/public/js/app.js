@@ -302,6 +302,205 @@ window.filterByRegion = function(regionName) {
   executeSearch();
 };
 
+// DAFTAR PENCARIAN PALING SERING DICARI & REKOMENDASI PENCARIAN
+const POPULAR_SEARCH_PRESETS = [
+  {
+    query: "snorkeling pemula budget 250rb ada alat",
+    title: "Snorkeling Pemula &le; 250rb (Sewa Alat)",
+    category: "Paling Populer",
+    icon: "🤿",
+    sub: "Inferensi otomatis tingkat pemula, filter budget, dan kelengkapan alat"
+  },
+  {
+    query: "pantai pasir putih di Bali dan Lombok",
+    title: "Pantai Pasir Putih Bali & Lombok",
+    category: "Paling Populer",
+    icon: "🏖️",
+    sub: "Spot pantai pasir putih terpopuler untuk santai & foto"
+  },
+  {
+    query: "spot diving mahir sewa bcd dan tabung scuba",
+    title: "Diving Mahir + Sewa BCD & Tabung Scuba",
+    category: "Paling Populer",
+    icon: "🌊",
+    sub: "Spot laut dalam dengan sertifikasi & peralatan lengkap"
+  },
+  {
+    query: "surfing pemula sewa papan selancar",
+    title: "Surfing Pemula + Sewa Papan",
+    category: "Paling Populer",
+    icon: "🏄",
+    sub: "Ombak ramah pemula dan penyewaan papan surfing"
+  },
+  {
+    query: "pulau eksotis hidden gem di Raja Ampat",
+    title: "Pulau Eksotis Hidden Gem Raja Ampat",
+    category: "Rekomendasi",
+    icon: "🏝️",
+    sub: "Danau karst, gugusan pulau karang & perairan jernih"
+  },
+  {
+    query: "wisata bahari keluarga murah di Jawa",
+    title: "Wisata Bahari Keluarga Murah di Jawa",
+    category: "Rekomendasi",
+    icon: "👨‍👩‍👧",
+    sub: "Tiket terjangkau di bawah 50rb ramah anak & fasilitas lengkap"
+  },
+  {
+    query: "sunset dan kano di Labuan Bajo",
+    title: "Sunset & Kano Kayak Labuan Bajo",
+    category: "Rekomendasi",
+    icon: "🛶",
+    sub: "Pemandangan matahari terbenam dan petualangan kano teluk"
+  },
+  {
+    query: "snorkeling terumbu karang di Bunaken",
+    title: "Snorkeling Terumbu Karang Bunaken",
+    category: "Rekomendasi",
+    icon: "🐠",
+    sub: "Taman laut legendaris dengan keanekaragaman biota laut"
+  },
+  {
+    query: "pantai pasir timbul Ngurtafur Maluku",
+    title: "Pantai Pasir Timbul Ngurtafur Maluku",
+    category: "Hidden Gem",
+    icon: "✨",
+    sub: "Hamparan pasir putih memanjang 2 km membelah lautan"
+  },
+  {
+    query: "destinasi wisata gratis di Maluku",
+    title: "Wisata Bahari Gratis di Maluku",
+    category: "Budget Hemat",
+    icon: "🏷️",
+    sub: "Tiket masuk Rp0 tanpa biaya retribusi"
+  }
+];
+
+function setupSearchAutocomplete(inputId, dropdownId) {
+  const inputEl = document.getElementById(inputId);
+  const dropEl = document.getElementById(dropdownId);
+  if (!inputEl || !dropEl) return;
+
+  const showSuggestions = (val) => {
+    const q = (val || '').toLowerCase().trim();
+    let matches = [];
+
+    if (!q) {
+      // Saat kosong / klik input, tampilkan pencarian paling sering dicari
+      matches = POPULAR_SEARCH_PRESETS.slice(0, 7);
+    } else {
+      // 1. Cari dari daftar populer
+      const fromPresets = POPULAR_SEARCH_PRESETS.filter(p =>
+        p.query.toLowerCase().includes(q) ||
+        p.title.toLowerCase().includes(q) ||
+        p.sub.toLowerCase().includes(q)
+      );
+
+      // 2. Cari dari destinasi spesifik (nama destinasi & aktivitas)
+      const allDests = APP_STATE.allDestinations || [];
+      const fromDests = allDests
+        .filter(d =>
+          d.nama.toLowerCase().includes(q) ||
+          d.lokasi.toLowerCase().includes(q) ||
+          (d.aktivitas || []).some(a => a.toLowerCase().includes(q))
+        )
+        .slice(0, 5)
+        .map(d => ({
+          query: d.nama,
+          title: d.nama,
+          category: d.wilayah,
+          icon: "📍",
+          sub: `${d.lokasi} · Level ${d.level} · ${d.jenisWisata || 'Wisata Bahari'}`
+        }));
+
+      matches = [...fromPresets, ...fromDests].slice(0, 8);
+    }
+
+    if (matches.length === 0) {
+      dropEl.innerHTML = `
+        <div style="padding:1rem;font-size:0.82rem;color:var(--text-muted);text-align:center">
+          Tidak ada rekomendasi langsung untuk "<strong>${escapeHtml(q)}</strong>".<br>
+          <span style="font-size:0.75rem;color:var(--sea-blue);cursor:pointer" id="btn-force-search">Tekan Enter atau klik Cari untuk pencarian semantik penuh.</span>
+        </div>
+      `;
+      dropEl.style.display = 'block';
+      const forceBtn = dropEl.querySelector('#btn-force-search');
+      if (forceBtn) {
+        forceBtn.addEventListener('click', () => {
+          applySearchQuery(q);
+          dropEl.style.display = 'none';
+        });
+      }
+      return;
+    }
+
+    const headerTitle = !q ? "🔥 Pencarian Paling Sering & Rekomendasi" : "💡 Saran & Rekomendasi Pencarian";
+
+    dropEl.innerHTML = `
+      <div class="suggestion-section-title">${headerTitle}</div>
+      ${matches.map(m => `
+        <div class="suggestion-item" data-q="${escapeHtml(m.query)}">
+          <div class="suggestion-item-main">
+            <span class="suggestion-icon">${m.icon}</span>
+            <div class="suggestion-text-wrap">
+              <span class="suggestion-query-text">${escapeHtml(m.title)}</span>
+              <span class="suggestion-sub-text">${escapeHtml(m.sub)}</span>
+            </div>
+          </div>
+          <span class="suggestion-tag-chip">${escapeHtml(m.category)}</span>
+        </div>
+      `).join('')}
+    `;
+
+    dropEl.querySelectorAll('.suggestion-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const selectedQuery = item.dataset.q;
+        inputEl.value = selectedQuery;
+        dropEl.style.display = 'none';
+        applySearchQuery(selectedQuery);
+      });
+    });
+
+    dropEl.style.display = 'block';
+  };
+
+  inputEl.addEventListener('focus', () => {
+    showSuggestions(inputEl.value);
+  });
+
+  inputEl.addEventListener('input', () => {
+    showSuggestions(inputEl.value);
+  });
+
+  // Tutup dropdown saat klik di luar
+  document.addEventListener('click', (e) => {
+    if (!inputEl.contains(e.target) && !dropEl.contains(e.target)) {
+      dropEl.style.display = 'none';
+    }
+  });
+
+  // Navigasi keyboard Escape untuk menutup
+  inputEl.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      dropEl.style.display = 'none';
+    }
+  });
+}
+
+function applySearchQuery(query) {
+  APP_STATE.query = query.trim();
+  APP_STATE.currentPage = 1;
+
+  const heroInput = document.getElementById('hero-search-input');
+  const explorerInput = document.getElementById('explorer-search-input');
+  if (heroInput) heroInput.value = query;
+  if (explorerInput) explorerInput.value = query;
+
+  switchTab('explorer');
+  executeSearch();
+}
+
 // Search Forms (Hero Search & Explorer Search)
 function initSearchForms() {
   // 1. Hero Search Form
@@ -309,6 +508,10 @@ function initSearchForms() {
   const heroInput = document.getElementById('hero-search-input');
   const heroLevel = document.getElementById('hero-level-select');
   const heroRange = document.getElementById('hero-range-select');
+
+  // Setup Autocomplete & Rekomendasi di Hero & Explorer
+  setupSearchAutocomplete('hero-search-input', 'hero-search-suggestions');
+  setupSearchAutocomplete('explorer-search-input', 'explorer-search-suggestions');
 
   if (heroForm) {
     heroForm.addEventListener('submit', (e) => {
@@ -340,16 +543,11 @@ function initSearchForms() {
     });
   }
 
-  // 3. Trending Chips
+  // 3. Trending & Popular Chips
   document.querySelectorAll('.trending-tag[data-q]').forEach(tag => {
     tag.addEventListener('click', () => {
       const q = tag.dataset.q;
-      APP_STATE.query = q;
-      APP_STATE.currentPage = 1;
-      if (heroInput) heroInput.value = q;
-      if (explorerInput) explorerInput.value = q;
-      switchTab('explorer');
-      executeSearch();
+      applySearchQuery(q);
     });
   });
 }
@@ -965,13 +1163,16 @@ function renderDestinationCards(destList, targetGridId = 'destinations-grid') {
     return;
   }
 
-  grid.innerHTML = destList.map(d => {
+  grid.innerHTML = destList.map((d, idx) => {
     const isFav = APP_STATE.favorites.includes(d.id);
     const photoUrl = d.foto || getPhotoForDestination(d);
     const skillClass = `skill-${(d.level || 'pemula').toLowerCase().split(' ')[0]}`;
 
+    // Tag nomor urut destinasi (menegaskan urutan lengkap 1 s/d 336)
+    const numBadge = `<span class="badge-tag-clean" style="background:rgba(7,21,38,0.75);color:#fff;font-weight:700;font-size:0.68rem;padding:2px 6px">#${idx + 1}</span>`;
+
     // Tag peralatan
-    const eqChips = d.peralatan.slice(0, 3).map(eq => {
+    const eqChips = (d.peralatan || []).slice(0, 3).map(eq => {
       const priceText = eq.hargaSewa ? formatRupiah(eq.hargaSewa) : 'Include';
       return `<span class="mini-gear-tag">${escapeHtml(eq.nama.split(' ')[0])} (${priceText})</span>`;
     }).join('');
@@ -982,7 +1183,10 @@ function renderDestinationCards(destList, targetGridId = 'destinations-grid') {
           <img src="${photoUrl}" alt="${escapeHtml(d.nama)}" loading="lazy">
           <div class="card-photo-overlay">
             <div class="card-badge-row">
-              <span class="badge-tag-clean">${escapeHtml(d.jenisWisata)}</span>
+              <div style="display:flex;gap:0.35rem;align-items:center">
+                <span class="badge-tag-clean">${escapeHtml(d.jenisWisata)}</span>
+                ${numBadge}
+              </div>
               <button type="button" class="btn-card-bookmark ${isFav ? 'active' : ''}" data-fav="${d.id}" title="Simpan Destinasi">
                 <svg class="svg-icon svg-icon-sm"><use href="#icon-heart"/></svg>
               </button>
@@ -1033,9 +1237,12 @@ function renderDestinationCards(destList, targetGridId = 'destinations-grid') {
     `;
   }).join('');
 
-  grid.querySelectorAll('.btn-open-detail-pro').forEach(btn => {
-    btn.addEventListener('click', () => {
-      openDestinationModal(btn.dataset.open);
+  // Klik seluruh kotak kartu untuk langsung membuka modal detail
+  grid.querySelectorAll('.card-destination-pro').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Abaikan jika klik tombol bookmark agar aksi simpan favorit tidak tertimpa
+      if (e.target.closest('.btn-card-bookmark')) return;
+      openDestinationModal(card.dataset.id);
     });
   });
 
@@ -1206,78 +1413,79 @@ async function openDestinationModal(destId) {
       <div class="calc-widget-box">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:1rem">
           <div>
+            <h4 style="font-weight:800;color:var(--text-main);font-size:1.05rem;margin:0 0 0.25rem 0">Simulasi Budget Rombongan &amp; Sewa Alat</h4>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin:0">Hitung estimasi pengeluaran secara real-time berdasarkan jumlah orang dan alat yang dipilih.</p>
             <h4 style="font-weight:800;color:var(--text-main)">Perkiraan Biaya Rombongan &amp; Sewa Alat</h4>
             <p style="font-size:0.8rem;color:var(--text-muted)">Lihat perkiraan biaya berdasarkan jumlah orang dan peralatan yang dipilih.</p>
           </div>
           <div style="display:flex;align-items:center;gap:0.5rem">
-            <label style="font-size:0.85rem;font-weight:700">Jumlah Orang:</label>
-            <input type="number" id="calc-people" min="1" max="50" value="2" style="width:70px;padding:0.4rem 0.6rem;border-radius:var(--radius-sm);border:1px solid #bae6fd;font-weight:700">
+            <label for="calc-people" style="font-size:0.85rem;font-weight:700;color:var(--text-main)">Jumlah Orang:</label>
+            <input type="number" id="calc-people" class="calc-people-input" min="1" max="50" value="2">
           </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
-          <div style="background:white;padding:1rem;border-radius:var(--radius-md);border:1px solid #bae6fd">
-            <strong style="font-size:0.82rem;display:block;margin-bottom:0.6rem">Centang Alat yang Ingin Disewa:</strong>
-            <div id="calc-eq-checkboxes" style="display:flex;flex-direction:column;gap:0.45rem;max-height:160px;overflow-y:auto">
+        <div class="calc-grid-row">
+          <div class="calc-card-block">
+            <strong class="calc-card-title">Centang Alat yang Ingin Disewa:</strong>
+            <div id="calc-eq-checkboxes" style="display:flex;flex-direction:column;gap:0.45rem;max-height:160px;overflow-y:auto;padding-right:0.25rem">
               ${d.peralatan.filter(eq => eq.hargaSewa > 0).map(eq => `
-                <label class="custom-radio-item" style="font-size:0.8rem">
+                <label class="custom-radio-item" style="font-size:0.82rem">
                   <input type="checkbox" class="calc-cb-item" data-price="${eq.hargaSewa}" checked>
-                  <span>${escapeHtml(eq.nama)} (+${formatRupiah(eq.hargaSewa)})</span>
+                  <span style="color:var(--text-main);font-weight:600">${escapeHtml(eq.nama)} <small style="color:var(--text-muted);font-weight:normal">(+${formatRupiah(eq.hargaSewa)})</small></span>
                 </label>
-              `).join('') || '<span style="font-size:0.75rem;color:var(--text-muted)">Semua alat sudah termasuk dalam tiket.</span>'}
+              `).join('') || '<span style="font-size:0.78rem;color:var(--text-muted)">Semua alat sudah termasuk dalam tiket.</span>'}
             </div>
           </div>
 
-          <div style="background:white;padding:1rem;border-radius:var(--radius-md);border:1px solid #bae6fd;display:flex;flex-direction:column;justify-content:center">
-            <span style="font-size:0.75rem;color:var(--text-muted)">Total Estimasi Pengeluaran:</span>
-            <strong id="calc-total-amount" style="font-family:var(--font-display);font-size:1.6rem;color:var(--sea-blue);font-weight:800">Rp 0</strong>
-            <span id="calc-per-person-text" style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem">Rp 0 / orang</span>
-            <div id="calc-range-result" style="margin-top:0.6rem"></div>
+          <div class="calc-card-block" style="display:flex;flex-direction:column;justify-content:center">
+            <span style="font-size:0.75rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.04em">Total Estimasi Pengeluaran:</span>
+            <strong id="calc-total-amount" style="font-family:var(--font-display);font-size:1.85rem;color:var(--accent-coral);font-weight:900;margin:0.25rem 0">Rp 0</strong>
+            <span id="calc-per-person-text" style="font-size:0.82rem;color:var(--text-secondary);font-weight:500">Rp 0 / orang</span>
+            <div id="calc-range-result" style="margin-top:0.75rem"></div>
           </div>
         </div>
       </div>
 
-      <!-- SEKSI KULINER TERDEKAT & PETA LOKASI -->
+      <!-- SEKSI WISATA MARITIM TERDEKAT & PETA LOKASI -->
       <div style="margin-top:1.75rem">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem">
           <div>
-            <h4 style="font-weight:800;color:var(--text-main);font-size:1.05rem">
-              Kuliner &amp; Tempat Makan Terdekat
-            </h4>
-            <p style="font-size:0.8rem;color:var(--text-muted)">
-              Rekomendasi warung seafood, kuliner khas pesisir, dan kafe santai di sekitar destinasi beserta jaraknya.
+            <div style="display:flex;align-items:center;gap:0.5rem">
+              <span style="font-size:1.15rem">🌊</span>
+              <h4 style="font-weight:800;color:var(--text-main);font-size:1.05rem;margin:0">
+                Peta &amp; Wisata Maritim Terdekat di Sekitar Sini
+              </h4>
+            </div>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin:0.25rem 0 0 0">
+              Jelajahi destinasi bahari, pantai, dan pulau lain yang berjarak paling dekat dari <strong>${escapeHtml(d.nama)}</strong>.
             </p>
           </div>
-          <span class="badge-tag-clean" style="font-size:0.72rem">
-            ${d.kuliner ? d.kuliner.length : 0} Titik Kuliner Sekitar
+          <span class="badge-tag-clean" style="font-size:0.75rem;background:rgba(2,132,199,0.1);color:var(--sea-blue)" id="modal-nearby-count-badge">
+            Wisata Bahari Sekitar
           </span>
         </div>
 
-        <!-- PETA LEAFLET INTERAKTIF DESTINASI & TITIK KULINER -->
-        <div id="modal-map-${d.id}" style="width:100%;height:280px;border-radius:var(--radius-md);border:1px solid var(--border-subtle);margin-bottom:1rem;background:var(--bg-subtle)"></div>
+        <!-- PETA LEAFLET INTERAKTIF DESTINASI & WISATA BAHARI TERDEKAT -->
+        <div id="modal-map-${d.id}" style="width:100%;height:320px;border-radius:var(--radius-md);border:1px solid var(--border-subtle);margin-bottom:0.75rem;background:var(--bg-subtle)"></div>
 
-        <!-- DAFTAR KARTU KULINER -->
-        <div class="culinary-cards-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:0.85rem">
-          ${(d.kuliner || []).map(cul => `
-            <div class="culinary-card-item" style="background:var(--bg-subtle);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:0.95rem;display:flex;flex-direction:column;gap:0.35rem">
-              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:0.5rem">
-                <strong style="color:var(--text-main);font-size:0.92rem">${escapeHtml(cul.nama)}</strong>
-                <span class="badge-tag-clean" style="font-size:0.7rem;white-space:nowrap;background:rgba(245, 158, 11, 0.15);color:#d97706;border-color:rgba(245, 158, 11, 0.3)">
-                  ⭐ ${cul.rating}
-                </span>
-              </div>
-              <span style="font-size:0.75rem;color:var(--sea-blue);font-weight:600">${escapeHtml(cul.kategori)}</span>
-              <div style="font-size:0.78rem;color:var(--text-secondary);line-height:1.4">
-                <strong>Menu:</strong> ${escapeHtml(cul.menuAndalan)}
-              </div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:0.35rem;font-size:0.75rem;padding-top:0.35rem;border-top:1px dashed var(--border-subtle)">
-                <span style="color:var(--text-muted)">Estimasi: <strong>${escapeHtml(cul.estimasiHarga)}</strong></span>
-                <span class="badge-tag-clean" style="font-size:0.7rem;background:rgba(2, 132, 199, 0.1);color:var(--sea-blue)">
-                  📍 ${cul.jarakKm} km
-                </span>
-              </div>
-            </div>
-          `).join('')}
+        <!-- LEGENDA MINI PETA MODAL -->
+        <div style="display:flex;gap:1.25rem;align-items:center;margin-bottom:1rem;padding:0.55rem 0.95rem;background:var(--bg-subtle);border:1px solid var(--border-subtle);border-radius:var(--radius-md);font-size:0.76rem;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:0.4rem">
+            <span style="display:inline-block;width:14px;height:14px;background:#ef4444;border-radius:50%;border:2px solid white;box-shadow:0 0 8px rgba(239,68,68,0.9)"></span>
+            <strong>Lokasi Pilihan: ${escapeHtml(d.nama)}</strong>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.4rem">
+            <span style="display:inline-block;width:14px;height:14px;background:#0284c7;border-radius:50%;border:2px solid white;box-shadow:0 0 8px rgba(2,132,199,0.9)"></span>
+            <strong>Spot Wisata Bahari Sekitar</strong>
+          </div>
+          <div style="margin-left:auto;color:var(--text-muted);font-size:0.72rem">
+            <em>⚡ Garis biru menunjukkan jarak langsung (Haversine Formula)</em>
+          </div>
+        </div>
+
+        <!-- DAFTAR KARTU WISATA MARITIM TERDEKAT -->
+        <div class="nearby-spots-grid" id="modal-nearby-spots-list" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:0.85rem">
+          <!-- Populated by initModalMap -->
         </div>
       </div>
     `;
@@ -1305,7 +1513,7 @@ function initModalMap(dest) {
   const map = L.map(mapDivId, {
     zoomControl: true,
     scrollWheelZoom: false
-  }).setView([lat, lon], 13);
+  }).setView([lat, lon], 12);
 
   window._modalMapInstance = map;
 
@@ -1313,44 +1521,129 @@ function initModalMap(dest) {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  // Marker Destinasi Utama
+  // Marker Destinasi Utama (Warna Merah dengan denyut pin)
+  const currentPinIcon = L.divIcon({
+    className: 'current-modal-pin',
+    html: `
+      <div style="background:#ef4444;color:white;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:15px;box-shadow:0 0 16px rgba(239,68,68,0.95);border:3px solid white;font-weight:bold">
+        📍
+      </div>
+    `,
+    iconSize: [32, 32],
+    iconAnchor: [16, 16]
+  });
+
   const destMarker = L.marker([lat, lon], {
-    title: dest.nama
+    icon: currentPinIcon,
+    title: dest.nama,
+    zIndexOffset: 1000
   }).addTo(map);
 
   destMarker.bindPopup(`
-    <div style="font-size:0.85rem;min-width:180px">
-      <strong style="color:#0284c7;font-size:0.95rem">${escapeHtml(dest.nama)}</strong><br>
-      <span style="color:#64748b;font-size:0.75rem">${escapeHtml(dest.lokasi)}</span><br>
-      <div style="margin-top:0.35rem;font-size:0.75rem;font-weight:700;color:#059669">📍 Lokasi Destinasi Wisata</div>
+    <div style="font-size:0.85rem;min-width:190px">
+      <div style="color:#ef4444;font-size:0.7rem;font-weight:800;text-transform:uppercase;margin-bottom:2px">📍 Destinasi Saat Ini</div>
+      <strong style="color:var(--text-main);font-size:0.95rem;display:block;margin-bottom:2px">${escapeHtml(dest.nama)}</strong>
+      <span style="color:#64748b;font-size:0.75rem;display:block">📍 ${escapeHtml(dest.lokasi)}</span>
+      <div style="margin-top:0.4rem;font-size:0.72rem;background:#fef2f2;color:#b91c1c;padding:3px 6px;border-radius:4px;font-weight:700">
+        Kategori: ${escapeHtml(dest.jenisWisata || 'Wisata Bahari')}
+      </div>
     </div>
   `).openPopup();
 
-  // Marker Tempat Kuliner
-  if (dest.kuliner && dest.kuliner.length) {
-    const culinaryIcon = L.divIcon({
-      className: 'culinary-map-marker',
-      html: '<div style="background:#f59e0b;color:white;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,0.3);border:2px solid white">🍽️</div>',
-      iconSize: [26, 26],
-      iconAnchor: [13, 13]
-    });
+  // Hitung jarak ke seluruh destinasi maritim lainnya dan ambil 5 terdekat
+  const all = APP_STATE.allDestinations || [];
+  const nearbySpots = all
+    .filter(other => other.id !== dest.id && typeof other.latitude === 'number' && typeof other.longitude === 'number')
+    .map(other => {
+      const dist = haversineDistKm(lat, lon, other.latitude, other.longitude);
+      return { ...other, distanceKm: dist };
+    })
+    .sort((a, b) => a.distanceKm - b.distanceKm)
+    .slice(0, 5); // 5 destinasi bahari terdekat
 
-    const bounds = L.latLngBounds([[lat, lon]]);
+  const bounds = L.latLngBounds([[lat, lon]]);
 
-    dest.kuliner.forEach(cul => {
-      bounds.extend([cul.latitude, cul.longitude]);
-      const culMarker = L.marker([cul.latitude, cul.longitude], { icon: culinaryIcon }).addTo(map);
-      culMarker.bindPopup(`
-        <div style="font-size:0.82rem;min-width:200px">
-          <strong style="color:#d97706;font-size:0.9rem">${escapeHtml(cul.nama)}</strong><br>
-          <span style="color:#64748b;font-size:0.72rem">${escapeHtml(cul.kategori)} · ⭐ ${cul.rating}</span><br>
-          <div style="margin:0.25rem 0;font-size:0.75rem"><strong>Jarak:</strong> ${cul.jarakKm} km dari tempat wisata</div>
-          <div style="font-size:0.72rem;color:#475569"><em>${escapeHtml(cul.menuAndalan)}</em></div>
+  // Pin untuk Destinasi Terdekat (Biru Bahari)
+  nearbySpots.forEach((spot, idx) => {
+    bounds.extend([spot.latitude, spot.longitude]);
+
+    const spotIcon = L.divIcon({
+      className: 'nearby-spot-pin',
+      html: `
+        <div style="background:#0284c7;color:white;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:12px;box-shadow:0 3px 10px rgba(2,132,199,0.5);border:2px solid white;font-weight:800">
+          ${idx + 1}
         </div>
-      `);
+      `,
+      iconSize: [28, 28],
+      iconAnchor: [14, 14]
     });
 
-    map.fitBounds(bounds, { padding: [30, 30] });
+    const spotMarker = L.marker([spot.latitude, spot.longitude], { icon: spotIcon }).addTo(map);
+
+    spotMarker.bindPopup(`
+      <div style="font-size:0.84rem;min-width:210px">
+        <span style="color:#0284c7;font-size:0.7rem;font-weight:800;text-transform:uppercase">#${idx + 1} Terdekat (⚡ ${spot.distanceKm} km)</span>
+        <strong style="color:var(--text-main);font-size:0.95rem;display:block;margin:3px 0">${escapeHtml(spot.nama)}</strong>
+        <span style="color:#64748b;font-size:0.74rem;display:block;margin-bottom:6px">📍 ${escapeHtml(spot.lokasi)}</span>
+        <div style="display:flex;gap:4px;margin-bottom:8px">
+          <span style="background:#e0f2fe;color:#0284c7;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">${escapeHtml(spot.level)}</span>
+          <span style="background:#ecfdf5;color:#059669;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">${formatRupiah(spot.estimasiTotalPerOrang)}</span>
+        </div>
+        <button type="button" class="btn-search-exec" style="width:100%;height:32px;font-size:0.78rem;padding:0" onclick="openDestinationModal('${spot.id}')">
+          Buka Wisata Ini →
+        </button>
+      </div>
+    `);
+
+    // Tambahkan garis putus-putus penghubung
+    L.polyline([[lat, lon], [spot.latitude, spot.longitude]], {
+      color: '#0ea5e9',
+      weight: 2.5,
+      opacity: 0.7,
+      dashArray: '6, 8'
+    }).addTo(map);
+  });
+
+  // Render kartu destinasi bahari terdekat di bawah peta modal
+  const containerList = document.getElementById('modal-nearby-spots-list');
+  const badgeCount = document.getElementById('modal-nearby-count-badge');
+  if (badgeCount) {
+    badgeCount.textContent = `${nearbySpots.length} Destinasi Bahari Terdekat`;
+  }
+
+  if (containerList) {
+    if (nearbySpots.length === 0) {
+      containerList.innerHTML = '<div style="padding:1rem;color:var(--text-muted);font-size:0.85rem">Tidak ada destinasi bahari terdekat lainnya yang terdaftar di area ini.</div>';
+    } else {
+      containerList.innerHTML = nearbySpots.map((spot, idx) => {
+        const photoUrl = spot.foto || getPhotoForDestination(spot);
+        return `
+          <div class="nearby-spot-modal-card" style="background:var(--bg-subtle);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:0.85rem;display:flex;flex-direction:column;gap:0.45rem;cursor:pointer;transition:transform 0.2s ease, box-shadow 0.2s ease" onclick="openDestinationModal('${spot.id}')" title="Klik untuk membuka detail wisata ini">
+            <div style="display:flex;gap:0.75rem;align-items:center">
+              <img src="${photoUrl}" style="width:58px;height:58px;border-radius:8px;object-fit:cover;flex-shrink:0" alt="${escapeHtml(spot.nama)}" loading="lazy">
+              <div style="overflow:hidden">
+                <div style="display:flex;align-items:center;gap:0.35rem">
+                  <span style="background:var(--sea-blue);color:white;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:0.68rem;font-weight:800;flex-shrink:0">${idx + 1}</span>
+                  <strong style="color:var(--text-main);font-size:0.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block">${escapeHtml(spot.nama)}</strong>
+                </div>
+                <span style="font-size:0.74rem;color:var(--text-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block">📍 ${escapeHtml(spot.lokasi)}</span>
+                <span style="font-size:0.7rem;color:var(--sea-blue);font-weight:600">${escapeHtml(spot.jenisWisata)}</span>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.74rem;padding-top:0.4rem;border-top:1px dashed var(--border-subtle)">
+              <span style="color:#059669;font-weight:700">${formatRupiah(spot.estimasiTotalPerOrang)}</span>
+              <span class="badge-tag-clean" style="font-size:0.7rem;background:rgba(2,132,199,0.12);color:var(--sea-blue);font-weight:800">
+                ⚡ ${spot.distanceKm} km
+              </span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+  }
+
+  if (nearbySpots.length > 0) {
+    map.fitBounds(bounds, { padding: [40, 40] });
   }
 
   setTimeout(() => {
@@ -1617,6 +1910,7 @@ const CITY_PRESETS = {
 };
 
 let userLocationCoords = null;
+let homeNearbyMapInstance = null;
 
 function haversineDistKm(lat1, lon1, lat2, lon2) {
   const R = 6371;
@@ -1629,6 +1923,127 @@ function haversineDistKm(lat1, lon1, lat2, lon2) {
     Math.sin(dLon / 2) * Math.sin(dLon / 2);
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   return Math.round(R * c * 10) / 10;
+}
+
+// Menghitung bearing derajat dan arah mata angin kompas (Utara, Timur Laut, dst.)
+function calculateBearing(lat1, lon1, lat2, lon2) {
+  const toRad = d => (d * Math.PI) / 180;
+  const toDeg = r => (r * 180) / Math.PI;
+  const phi1 = toRad(lat1);
+  const phi2 = toRad(lat2);
+  const dLambda = toRad(lon2 - lon1);
+
+  const y = Math.sin(dLambda) * Math.cos(phi2);
+  const x = Math.cos(phi1) * Math.sin(phi2) - Math.sin(phi1) * Math.cos(phi2) * Math.cos(dLambda);
+  let brng = (toDeg(Math.atan2(y, x)) + 360) % 360;
+
+  const points = ['Utara', 'Timur Laut', 'Timur', 'Tenggara', 'Selatan', 'Barat Daya', 'Barat', 'Barat Laut'];
+  const arrows = ['↑', '↗', '→', '↘', '↓', '↙', '←', '↖'];
+  const idx = Math.round(brng / 45) % 8;
+
+  return {
+    degrees: Math.round(brng),
+    direction: points[idx],
+    arrow: arrows[idx]
+  };
+}
+
+function initHomeNearbyMap(refLat, refLon, sourceLabel, topSpots) {
+  const mapEl = document.getElementById('home-nearby-map');
+  if (!mapEl || typeof L === 'undefined') return;
+
+  if (homeNearbyMapInstance) {
+    homeNearbyMapInstance.remove();
+    homeNearbyMapInstance = null;
+  }
+
+  const map = L.map('home-nearby-map', {
+    center: [refLat, refLon],
+    zoom: 8,
+    scrollWheelZoom: false
+  });
+  homeNearbyMapInstance = map;
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Pin Titik Acuan / GPS Pengguna (Merah dengan Efek Radar Berdenyut)
+  const userPinIcon = L.divIcon({
+    className: 'home-user-pin',
+    html: `
+      <div style="position:relative;width:34px;height:34px;display:grid;place-items:center">
+        <div style="position:absolute;width:34px;height:34px;border-radius:50%;background:rgba(239,68,68,0.35);animation:pulse-ring 2s infinite"></div>
+        <div style="background:#ef4444;color:white;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:12px;box-shadow:0 0 10px rgba(239,68,68,0.8);border:2.5px solid white;font-weight:900;z-index:2">
+          📍
+        </div>
+      </div>
+    `,
+    iconSize: [34, 34],
+    iconAnchor: [17, 17]
+  });
+
+  const userMarker = L.marker([refLat, refLon], { icon: userPinIcon }).addTo(map);
+  userMarker.bindPopup(`
+    <div style="font-size:0.84rem;min-width:200px">
+      <span style="color:#ef4444;font-size:0.7rem;font-weight:800;text-transform:uppercase">Titik Acuan Anda</span>
+      <strong style="color:var(--text-main);font-size:0.95rem;display:block;margin:3px 0">${escapeHtml(sourceLabel)}</strong>
+      <span style="color:#64748b;font-size:0.74rem">Koordinat: ${refLat.toFixed(4)}, ${refLon.toFixed(4)}</span>
+    </div>
+  `).openPopup();
+
+  const bounds = L.latLngBounds([[refLat, refLon]]);
+
+  topSpots.forEach((spot, idx) => {
+    if (typeof spot.latitude !== 'number' || typeof spot.longitude !== 'number') return;
+    bounds.extend([spot.latitude, spot.longitude]);
+
+    const bearing = calculateBearing(refLat, refLon, spot.latitude, spot.longitude);
+
+    // Marker Peringkat 1 s/d 6 dengan nomor dan warna kontras
+    const spotIcon = L.divIcon({
+      className: 'home-spot-pin',
+      html: `
+        <div style="background:#0284c7;color:white;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:13px;box-shadow:0 3px 10px rgba(2,132,199,0.5);border:2.5px solid white;font-weight:800;cursor:pointer">
+          ${idx + 1}
+        </div>
+      `,
+      iconSize: [30, 30],
+      iconAnchor: [15, 15]
+    });
+
+    const marker = L.marker([spot.latitude, spot.longitude], { icon: spotIcon }).addTo(map);
+    marker.bindPopup(`
+      <div style="font-size:0.84rem;min-width:220px;max-width:250px">
+        <span style="color:#0284c7;font-size:0.7rem;font-weight:800;text-transform:uppercase">#${idx + 1} Terdekat · 🧭 ${bearing.arrow} ${spot.distanceKm} km (${bearing.direction})</span>
+        <strong style="color:var(--text-main);font-size:0.95rem;display:block;margin:4px 0 2px 0">${escapeHtml(spot.nama)}</strong>
+        <span style="color:#64748b;font-size:0.75rem;display:block;margin-bottom:6px">📍 ${escapeHtml(spot.lokasi)}</span>
+        <div style="display:flex;gap:4px;margin-bottom:8px">
+          <span style="background:#e0f2fe;color:#0284c7;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">${escapeHtml(spot.level)}</span>
+          <span style="background:#ecfdf5;color:#059669;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">${formatRupiah(spot.estimasiTotalPerOrang)}</span>
+        </div>
+        <button type="button" class="btn-search-exec" style="width:100%;height:32px;font-size:0.78rem;padding:0" onclick="openDestinationModal('${spot.id}')">
+          Buka Detail Wisata →
+        </button>
+      </div>
+    `);
+
+    // Garis putus-putus dengan panah/garis langsung dari user ke destinasi
+    L.polyline([[refLat, refLon], [spot.latitude, spot.longitude]], {
+      color: '#0ea5e9',
+      weight: 2.5,
+      opacity: 0.75,
+      dashArray: '5, 8'
+    }).addTo(map);
+  });
+
+  if (topSpots.length > 0) {
+    map.fitBounds(bounds, { padding: [45, 45] });
+  }
+
+  setTimeout(() => {
+    map.invalidateSize();
+  }, 250);
 }
 
 async function renderNearbyDestinations(refLat, refLon, sourceLabel) {
@@ -1647,13 +2062,17 @@ async function renderNearbyDestinations(refLat, refLon, sourceLabel) {
     const lat = d.latitude || -2.5;
     const lon = d.longitude || 118.0;
     const dist = haversineDistKm(refLat, refLon, lat, lon);
-    return { ...d, distanceKm: dist };
+    const bearing = calculateBearing(refLat, refLon, lat, lon);
+    return { ...d, distanceKm: dist, bearing };
   });
 
   withDist.sort((a, b) => a.distanceKm - b.distanceKm);
   const top6 = withDist.slice(0, 6);
 
-  grid.innerHTML = top6.map(d => {
+  // Render Peta Interaktif & Radar Terdekat di Beranda
+  initHomeNearbyMap(refLat, refLon, sourceLabel, top6);
+
+  grid.innerHTML = top6.map((d, idx) => {
     const photoUrl = d.foto || getPhotoForDestination(d);
     const isFav = APP_STATE.favorites.includes(d.id);
     const skillClass = `skill-${(d.level || 'pemula').toLowerCase().split(' ')[0]}`;
@@ -1664,7 +2083,9 @@ async function renderNearbyDestinations(refLat, refLon, sourceLabel) {
           <img src="${photoUrl}" alt="${escapeHtml(d.nama)}" loading="lazy">
           <div class="card-photo-overlay">
             <div class="card-badge-row">
-              <span class="badge-tag-clean" style="background:#0284c7;color:white;font-weight:700">⚡ ${d.distanceKm} km dari posisimu</span>
+              <span class="badge-tag-clean" style="background:#0284c7;color:white;font-weight:700">
+                #${idx + 1} Terdekat · 🧭 ${d.bearing.arrow} ${d.distanceKm} km ${d.bearing.direction}
+              </span>
               <button type="button" class="btn-card-bookmark ${isFav ? 'active' : ''}" data-fav="${d.id}" title="Simpan Destinasi">
                 <svg class="svg-icon svg-icon-sm"><use href="#icon-heart"/></svg>
               </button>
@@ -1688,11 +2109,12 @@ async function renderNearbyDestinations(refLat, refLon, sourceLabel) {
 
           <div class="equipment-section-preview">
             <div class="equipment-preview-head">
-              <span>Kuliner Terdekat</span>
-              <small>${d.kuliner ? d.kuliner.length : 0} Titik</small>
+              <span>Fasilitas &amp; Aktivitas</span>
+              <small>${escapeHtml(d.jenisWisata)}</small>
             </div>
             <div class="equipment-chips-wrap">
-              ${(d.kuliner || []).slice(0, 2).map(c => `<span class="mini-gear-tag">🍽️ ${escapeHtml(c.nama.split(' ')[0])} (${c.jarakKm} km)</span>`).join('') || '<span class="mini-gear-tag">Kuliner tersedia</span>'}
+              <span class="mini-gear-tag">🌊 ${(d.aktivitas || []).slice(0, 2).join(', ')}</span>
+              <span class="mini-gear-tag">📍 ${escapeHtml(d.kabKota || d.lokasi.split(',')[0])}</span>
             </div>
           </div>
 
@@ -1702,7 +2124,7 @@ async function renderNearbyDestinations(refLat, refLon, sourceLabel) {
               <strong>${formatRupiah(d.estimasiTotalPerOrang)}</strong>
             </div>
             <button type="button" class="btn-open-detail-pro" data-open="${d.id}">
-              <span>Detail &amp; Kuliner</span>
+              <span>Detail &amp; Wisata Sekitar</span>
               <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-right"/></svg>
             </button>
           </div>
@@ -1711,9 +2133,12 @@ async function renderNearbyDestinations(refLat, refLon, sourceLabel) {
     `;
   }).join('');
 
-  grid.querySelectorAll('.btn-open-detail-pro').forEach(btn => {
-    btn.addEventListener('click', () => {
-      openDestinationModal(btn.dataset.open);
+  // Klik seluruh kotak kartu untuk langsung membuka modal detail
+  grid.querySelectorAll('.card-destination-pro').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Abaikan jika klik tombol bookmark agar aksi simpan favorit tidak tertimpa
+      if (e.target.closest('.btn-card-bookmark')) return;
+      openDestinationModal(card.dataset.id);
     });
   });
 
@@ -1881,7 +2306,7 @@ function updateMapMarkers(regionFilter = '') {
   if (countEl) {
     countEl.textContent = regionFilter
       ? `Destinasi di Wilayah ${regionFilter} (${filtered.length} Destinasi)`
-      : `Seluruh Destinasi Bahari Nusantara (${filtered.length} Destinasi)`;
+      : `Seluruh Destinasi Maritim Nusantara (${filtered.length} Destinasi)`;
   }
 
   const maritimeIcon = L.divIcon({
@@ -1905,16 +2330,28 @@ function updateMapMarkers(regionFilter = '') {
         <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px">
           <span style="background:#e0f2fe;color:#0284c7;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">Pengalaman: ${escapeHtml(d.level)}</span>
           <span style="background:#ecfdf5;color:#059669;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">${formatRupiah(d.estimasiTotalPerOrang)}</span>
-          <span style="background:#fef3c7;color:#d97706;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">🍽️ ${d.kuliner ? d.kuliner.length : 0} Kuliner</span>
+          <span style="background:#f0fdf4;color:#15803d;font-size:0.68rem;padding:2px 6px;border-radius:4px;font-weight:700">🌊 ${escapeHtml(d.jenisWisata || 'Wisata Maritim')}</span>
         </div>
         <button type="button" class="btn-search-exec" style="width:100%;height:32px;font-size:0.75rem;padding:0" onclick="openDestinationModal('${d.id}')">
-          Buka Detail &amp; Kuliner Sekitar
+          Buka Detail &amp; Wisata Sekitar
         </button>
       </div>
     `);
     mapMarkerLayer.addLayer(marker);
   });
 
-  // Render kartu destinasi di bawah peta (slice 12 item)
-  renderDestinationCards(filtered.slice(0, 12), 'map-destinations-grid');
+  // Render SELURUH kartu destinasi di slider horizontal bawah peta (Sistem Slide Kesamping)
+  renderDestinationCards(filtered, 'map-destinations-grid');
 }
+
+/**
+ * Kontrol geser slider destinasi peta ke samping (Kiri / Kanan)
+ */
+function slideMapDestinations(direction) {
+  const slider = document.getElementById('map-destinations-grid');
+  if (!slider) return;
+  const cardWidth = 320;
+  const scrollAmount = direction === 'left' ? -(cardWidth * 2) : (cardWidth * 2);
+  slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}
+window.slideMapDestinations = slideMapDestinations;

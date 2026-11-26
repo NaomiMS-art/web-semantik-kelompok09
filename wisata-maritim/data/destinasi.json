@@ -34951,5 +34951,3528 @@
         "jarakKm": 1.7
       }
     ]
+  },
+  {
+    "id": "SMT-61",
+    "nama": "Pulau Enggano",
+    "lokasi": "Bengkulu Utara, Bengkulu",
+    "kabKota": "Bengkulu Utara",
+    "provinsi": "Bengkulu",
+    "wilayah": "Sumatra",
+    "wilayahIdx": 0,
+    "jenisWisata": "Pulau Konservasi & Karang Terluar",
+    "aktivitasStr": "Snorkeling, observasi terumbu karang alami, jelajah hutan bakau",
+    "aktivitas": [
+      "Snorkeling"
+    ],
+    "atraksi": "Pulau terluar Samudra Hindia dengan laguna Kahyapu dan pantai perawan",
+    "fasilitasStr": "Homestay nelayan, dermaga feri perintis, sewa perahu",
+    "fasilitas": [
+      "Homestay nelayan",
+      "dermaga feri perintis",
+      "sewa perahu"
+    ],
+    "teksTiket": "Rp15.000",
+    "teksAlat": "Sewa perahu Rp300–500rb",
+    "level": "Menengah",
+    "sumber": "Dinas Pariwisata Bengkulu",
+    "hargaTiketMasuk": 15000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 300000,
+    "rangeHargaAktivitas": "250k-500k",
+    "rangeHargaAktivitasLabel": "Rp250.000 – Rp500.000",
+    "hargaPaketWisata": 300000,
+    "rangeHargaPaket": "250k-500k",
+    "biayaAlatMin": 300000,
+    "estimasiTotalPerOrang": 315000,
+    "rangeHargaTotal": "250k-500k",
+    "rangeHargaTotalLabel": "Rp250.000 – Rp500.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 300000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      },
+      {
+        "id": "sewa-perahu",
+        "nama": "Sewa Perahu Nelayan / Wisata Keliling",
+        "kategoriAktivitas": "Island Hopping",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 350000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Perahu motor tradisional / speed boat untuk trip hopping dan melihat atraksi bahari."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "latitude": -5.35,
+    "longitude": 102.2667,
+    "kuliner": [
+      {
+        "id": "SMT-61-KUL-1",
+        "nama": "RM Ikan Bakar & Gulai Kepala Ikan Pulau",
+        "kategori": "Seafood & Masakan Minang / Pesisir",
+        "menuAndalan": "Gulai Kepala Ikan Kakap, Ikan Bakar Sambal Balado, Cumi Goreng Tepung",
+        "estimasiHarga": "Rp35.000 – Rp85.000 / orang",
+        "rating": 4.8,
+        "latitude": -5.3421,
+        "longitude": 102.2685,
+        "jarakKm": 0.9
+      },
+      {
+        "id": "SMT-61-KUL-2",
+        "nama": "Warung Nelayan Segar Pulau",
+        "kategori": "Seafood Bakar Tradisional",
+        "menuAndalan": "Kepiting Saus Padang, Udang Bakar Mentega, Kelapa Muda",
+        "estimasiHarga": "Rp30.000 – Rp70.000 / orang",
+        "rating": 4.7,
+        "latitude": -5.3598,
+        "longitude": 102.2773,
+        "jarakKm": 1.6
+      },
+      {
+        "id": "SMT-61-KUL-3",
+        "nama": "Kedai Kopi & Snack Pesisir Pulau",
+        "kategori": "Kafe & Camilan Pesisir",
+        "menuAndalan": "Kopi Tarik / Ulee Kareng, Pisang Goreng Keju, Kelapa Ijo",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.6,
+        "latitude": -5.3561,
+        "longitude": 102.2468,
+        "jarakKm": 2.3
+      }
+    ]
+  },
+  {
+    "id": "SMT-62",
+    "nama": "Pantai Karang Nawing",
+    "lokasi": "Belitung Timur, Bangka Belitung",
+    "kabKota": "Belitung Timur",
+    "provinsi": "Bangka Belitung",
+    "wilayah": "Sumatra",
+    "wilayahIdx": 0,
+    "jenisWisata": "Pantai Granit & Laguna Tersembunyi",
+    "aktivitasStr": "Fotografi batu granit purba, berenang, santai",
+    "aktivitas": [
+      "Berenang",
+      "Fotografi & Sunset"
+    ],
+    "atraksi": "Formasi batuan granit raksasa tersembunyi di pesisir Manggar",
+    "fasilitasStr": "Warung kopi pesisir, gazebo, parkir",
+    "fasilitas": [
+      "Warung kopi pesisir",
+      "gazebo",
+      "parkir"
+    ],
+    "teksTiket": "Rp5.000",
+    "teksAlat": "-",
+    "level": "Pemula",
+    "sumber": "Disparbud Belitung Timur",
+    "hargaTiketMasuk": 5000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": null,
+    "rangeHargaAktivitas": null,
+    "rangeHargaAktivitasLabel": null,
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": null,
+    "estimasiTotalPerOrang": 5000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "pelampung-pantai",
+        "nama": "Ban Renang / Pelampung Santai",
+        "kategoriAktivitas": "Berenang",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelampung rekreasi untuk bermain ombak tenang di tepi pantai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": -2.9167,
+    "longitude": 108.2833,
+    "kuliner": [
+      {
+        "id": "SMT-62-KUL-1",
+        "nama": "RM Ikan Bakar & Gulai Kepala Ikan Pantai",
+        "kategori": "Seafood & Masakan Minang / Pesisir",
+        "menuAndalan": "Gulai Kepala Ikan Kakap, Ikan Bakar Sambal Balado, Cumi Goreng Tepung",
+        "estimasiHarga": "Rp35.000 – Rp85.000 / orang",
+        "rating": 4.8,
+        "latitude": -2.9115,
+        "longitude": 108.2895,
+        "jarakKm": 0.9
+      },
+      {
+        "id": "SMT-62-KUL-2",
+        "nama": "Warung Nelayan Segar Pantai",
+        "kategori": "Seafood Bakar Tradisional",
+        "menuAndalan": "Kepiting Saus Padang, Udang Bakar Mentega, Kelapa Muda",
+        "estimasiHarga": "Rp30.000 – Rp70.000 / orang",
+        "rating": 4.7,
+        "latitude": -2.9309,
+        "longitude": 108.2858,
+        "jarakKm": 1.6
+      },
+      {
+        "id": "SMT-62-KUL-3",
+        "nama": "Kedai Kopi & Snack Pesisir Pantai",
+        "kategori": "Kafe & Camilan Pesisir",
+        "menuAndalan": "Kopi Tarik / Ulee Kareng, Pisang Goreng Keju, Kelapa Ijo",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.6,
+        "latitude": -2.9096,
+        "longitude": 108.2638,
+        "jarakKm": 2.3
+      }
+    ]
+  },
+  {
+    "id": "SMT-63",
+    "nama": "Pulau Sikakap & Teluk Silabu",
+    "lokasi": "Kep. Mentawai, Sumbar",
+    "kabKota": "Kep. Mentawai",
+    "provinsi": "Sumbar",
+    "wilayah": "Sumatra",
+    "wilayahIdx": 0,
+    "jenisWisata": "Pulau Terpencil & Surfing Perawan",
+    "aktivitasStr": "Surfing, snorkeling karang atol, memancing",
+    "aktivitas": [
+      "Snorkeling",
+      "Surfing",
+      "Memancing"
+    ],
+    "atraksi": "Teluk terlindung berpasir putih dan spot selancar rahasia Mentawai",
+    "fasilitasStr": "Surf camp lokal, perahu jukung",
+    "fasilitas": [
+      "Surf camp lokal",
+      "perahu jukung"
+    ],
+    "teksTiket": "Gratis",
+    "teksAlat": "Sewa perahu Rp500rb–1jt",
+    "level": "Mahir",
+    "sumber": "Kemenparekraf",
+    "hargaTiketMasuk": 0,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 500000,
+    "rangeHargaAktivitas": "250k-500k",
+    "rangeHargaAktivitasLabel": "Rp250.000 – Rp500.000",
+    "hargaPaketWisata": 500000,
+    "rangeHargaPaket": "250k-500k",
+    "biayaAlatMin": 500000,
+    "estimasiTotalPerOrang": 500000,
+    "rangeHargaTotal": "250k-500k",
+    "rangeHargaTotalLabel": "Rp250.000 – Rp500.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 500000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      },
+      {
+        "id": "papan-selancar",
+        "nama": "Papan Selancar Fiber / Hardboard",
+        "kategoriAktivitas": "Surfing",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 500000,
+        "tingkatKeahlian": "Mahir",
+        "keterangan": "Papan selancar performa tinggi untuk ombak bertenaga."
+      },
+      {
+        "id": "leash-surfing",
+        "nama": "Leash (Tali Pengaman Kaki) & Wax",
+        "kategoriAktivitas": "Surfing",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 0,
+        "tingkatKeahlian": "Semua Level",
+        "keterangan": "Sudah termasuk dalam persewaan papan selancar."
+      },
+      {
+        "id": "rashguard-surfing",
+        "nama": "Baju Renang / Rashguard",
+        "kategoriAktivitas": "Surfing",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 35000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelindung kulit dari gesekan papan selancar dan terik matahari."
+      },
+      {
+        "id": "sewa-perahu",
+        "nama": "Sewa Perahu Nelayan / Wisata Keliling",
+        "kategoriAktivitas": "Island Hopping",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 350000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Perahu motor tradisional / speed boat untuk trip hopping dan melihat atraksi bahari."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "latitude": -2.7833,
+    "longitude": 100.2167,
+    "kuliner": [
+      {
+        "id": "SMT-63-KUL-1",
+        "nama": "RM Ikan Bakar & Gulai Kepala Ikan Pulau",
+        "kategori": "Seafood & Masakan Minang / Pesisir",
+        "menuAndalan": "Gulai Kepala Ikan Kakap, Ikan Bakar Sambal Balado, Cumi Goreng Tepung",
+        "estimasiHarga": "Rp35.000 – Rp85.000 / orang",
+        "rating": 4.8,
+        "latitude": -2.7829,
+        "longitude": 100.2248,
+        "jarakKm": 0.9
+      },
+      {
+        "id": "SMT-63-KUL-2",
+        "nama": "Warung Nelayan Segar Pulau",
+        "kategori": "Seafood Bakar Tradisional",
+        "menuAndalan": "Kepiting Saus Padang, Udang Bakar Mentega, Kelapa Muda",
+        "estimasiHarga": "Rp30.000 – Rp70.000 / orang",
+        "rating": 4.7,
+        "latitude": -2.7961,
+        "longitude": 100.2101,
+        "jarakKm": 1.6
+      },
+      {
+        "id": "SMT-63-KUL-3",
+        "nama": "Kedai Kopi & Snack Pesisir Pulau",
+        "kategori": "Kafe & Camilan Pesisir",
+        "menuAndalan": "Kopi Tarik / Ulee Kareng, Pisang Goreng Keju, Kelapa Ijo",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.6,
+        "latitude": -2.7659,
+        "longitude": 100.2054,
+        "jarakKm": 2.3
+      }
+    ]
+  },
+  {
+    "id": "SMT-64",
+    "nama": "Pantai Teluk Hantu",
+    "lokasi": "Pesawaran, Lampung",
+    "kabKota": "Pesawaran",
+    "provinsi": "Lampung",
+    "wilayah": "Sumatra",
+    "wilayahIdx": 0,
+    "jenisWisata": "Pantai Tersembunyi Pasir Putih",
+    "aktivitasStr": "Berenang, berkemah tepi tebing, snorkeling",
+    "aktivitas": [
+      "Snorkeling",
+      "Berenang",
+      "Camping Pantai"
+    ],
+    "atraksi": "Pantai tersembunyi berpasir putih sehalus tepung di balik tebing terjal",
+    "fasilitasStr": "Area camping, sewa alat snorkel lokal",
+    "fasilitas": [
+      "Area camping",
+      "sewa alat snorkel lokal"
+    ],
+    "teksTiket": "Rp10.000",
+    "teksAlat": "Snorkel Rp35rb",
+    "level": "Pemula",
+    "sumber": "Dinas Pariwisata Lampung",
+    "hargaTiketMasuk": 10000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 35000,
+    "rangeHargaAktivitas": "di-bawah-100k",
+    "rangeHargaAktivitasLabel": "< Rp100.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 35000,
+    "estimasiTotalPerOrang": 45000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 35000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "latitude": -5.6167,
+    "longitude": 105.1833,
+    "kuliner": [
+      {
+        "id": "SMT-64-KUL-1",
+        "nama": "RM Ikan Bakar & Gulai Kepala Ikan Pantai",
+        "kategori": "Seafood & Masakan Minang / Pesisir",
+        "menuAndalan": "Gulai Kepala Ikan Kakap, Ikan Bakar Sambal Balado, Cumi Goreng Tepung",
+        "estimasiHarga": "Rp35.000 – Rp85.000 / orang",
+        "rating": 4.8,
+        "latitude": -5.6212,
+        "longitude": 105.1901,
+        "jarakKm": 0.9
+      },
+      {
+        "id": "SMT-64-KUL-2",
+        "nama": "Warung Nelayan Segar Pantai",
+        "kategori": "Seafood Bakar Tradisional",
+        "menuAndalan": "Kepiting Saus Padang, Udang Bakar Mentega, Kelapa Muda",
+        "estimasiHarga": "Rp30.000 – Rp70.000 / orang",
+        "rating": 4.7,
+        "latitude": -5.623,
+        "longitude": 105.1703,
+        "jarakKm": 1.6
+      },
+      {
+        "id": "SMT-64-KUL-3",
+        "nama": "Kedai Kopi & Snack Pesisir Pantai",
+        "kategori": "Kafe & Camilan Pesisir",
+        "menuAndalan": "Kopi Tarik / Ulee Kareng, Pisang Goreng Keju, Kelapa Ijo",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.6,
+        "latitude": -5.596,
+        "longitude": 105.1848,
+        "jarakKm": 2.3
+      }
+    ]
+  },
+  {
+    "id": "SMT-65",
+    "nama": "Pulau Silabu Nyang-Nyang",
+    "lokasi": "Kep. Mentawai, Sumbar",
+    "kabKota": "Kep. Mentawai",
+    "provinsi": "Sumbar",
+    "wilayah": "Sumatra",
+    "wilayahIdx": 0,
+    "jenisWisata": "Laguna Karang & Selancar",
+    "aktivitasStr": "Surfing kelas dunia, snorkeling laguna jernih",
+    "aktivitas": [
+      "Snorkeling",
+      "Surfing"
+    ],
+    "atraksi": "Ombak kiri kelas dunia E-Bay dan laguna air toska tanpa ombak",
+    "fasilitasStr": "Surf lodge, perahu antar-jemput",
+    "fasilitas": [
+      "Surf lodge",
+      "perahu antar-jemput"
+    ],
+    "teksTiket": "Gratis",
+    "teksAlat": "Sewa papan Rp150rb",
+    "level": "Mahir",
+    "sumber": "Kemenparekraf",
+    "hargaTiketMasuk": 0,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 150000,
+    "rangeHargaAktivitas": "100k-250k",
+    "rangeHargaAktivitasLabel": "Rp100.000 – Rp250.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 150000,
+    "estimasiTotalPerOrang": 150000,
+    "rangeHargaTotal": "100k-250k",
+    "rangeHargaTotalLabel": "Rp100.000 – Rp250.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 150000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      },
+      {
+        "id": "papan-selancar",
+        "nama": "Papan Selancar Fiber / Hardboard",
+        "kategoriAktivitas": "Surfing",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 150000,
+        "tingkatKeahlian": "Mahir",
+        "keterangan": "Papan selancar performa tinggi untuk ombak bertenaga."
+      },
+      {
+        "id": "leash-surfing",
+        "nama": "Leash (Tali Pengaman Kaki) & Wax",
+        "kategoriAktivitas": "Surfing",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 0,
+        "tingkatKeahlian": "Semua Level",
+        "keterangan": "Sudah termasuk dalam persewaan papan selancar."
+      },
+      {
+        "id": "rashguard-surfing",
+        "nama": "Baju Renang / Rashguard",
+        "kategoriAktivitas": "Surfing",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 35000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelindung kulit dari gesekan papan selancar dan terik matahari."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=800&q=80",
+    "latitude": -1.8833,
+    "longitude": 99.2333,
+    "kuliner": [
+      {
+        "id": "SMT-65-KUL-1",
+        "nama": "RM Ikan Bakar & Gulai Kepala Ikan Pulau",
+        "kategori": "Seafood & Masakan Minang / Pesisir",
+        "menuAndalan": "Gulai Kepala Ikan Kakap, Ikan Bakar Sambal Balado, Cumi Goreng Tepung",
+        "estimasiHarga": "Rp35.000 – Rp85.000 / orang",
+        "rating": 4.8,
+        "latitude": -1.891,
+        "longitude": 99.2359,
+        "jarakKm": 0.9
+      },
+      {
+        "id": "SMT-65-KUL-2",
+        "nama": "Warung Nelayan Segar Pulau",
+        "kategori": "Seafood Bakar Tradisional",
+        "menuAndalan": "Kepiting Saus Padang, Udang Bakar Mentega, Kelapa Muda",
+        "estimasiHarga": "Rp30.000 – Rp70.000 / orang",
+        "rating": 4.7,
+        "latitude": -1.8805,
+        "longitude": 99.2191,
+        "jarakKm": 1.6
+      },
+      {
+        "id": "SMT-65-KUL-3",
+        "nama": "Kedai Kopi & Snack Pesisir Pulau",
+        "kategori": "Kafe & Camilan Pesisir",
+        "menuAndalan": "Kopi Tarik / Ulee Kareng, Pisang Goreng Keju, Kelapa Ijo",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.6,
+        "latitude": -1.8677,
+        "longitude": 99.2469,
+        "jarakKm": 2.3
+      }
+    ]
+  },
+  {
+    "id": "JWA-55",
+    "nama": "Pantai Teluk Asmara",
+    "lokasi": "Malang, Jawa Timur",
+    "kabKota": "Malang",
+    "provinsi": "Jawa Timur",
+    "wilayah": "Jawa",
+    "wilayahIdx": 1,
+    "jenisWisata": "Gugusan Karang & Pantai Tenang",
+    "aktivitasStr": "Berenang, camping pulau karang, sunset",
+    "aktivitas": [
+      "Berenang",
+      "Fotografi & Sunset",
+      "Camping Pantai"
+    ],
+    "atraksi": "Raja Ampat-nya Jawa Timur dengan pulau-pulau karang kecil melingkar",
+    "fasilitasStr": "Gazebo, warung makan, toilet, area camping",
+    "fasilitas": [
+      "Gazebo",
+      "warung makan",
+      "toilet",
+      "area camping"
+    ],
+    "teksTiket": "Rp15.000",
+    "teksAlat": "Sewa tenda Rp60–90rb",
+    "level": "Pemula",
+    "sumber": "Disbudpar Kab. Malang",
+    "hargaTiketMasuk": 15000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 60000,
+    "rangeHargaAktivitas": "di-bawah-100k",
+    "rangeHargaAktivitasLabel": "< Rp100.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 60000,
+    "estimasiTotalPerOrang": 75000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "pelampung-pantai",
+        "nama": "Ban Renang / Pelampung Santai",
+        "kategoriAktivitas": "Berenang",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelampung rekreasi untuk bermain ombak tenang di tepi pantai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": -8.4356,
+    "longitude": 112.6358,
+    "kuliner": [
+      {
+        "id": "JWA-55-KUL-1",
+        "nama": "Pondok Makan Ikan Bakar Jimbaran Rasa Pantai",
+        "kategori": "Seafood Bakar Arang",
+        "menuAndalan": "Ikan Bawal Bakar Bumbu Madu, Cumi Saus Tiram, Cah Kangkung Terasi",
+        "estimasiHarga": "Rp30.000 – Rp75.000 / orang",
+        "rating": 4.8,
+        "latitude": -8.445,
+        "longitude": 112.6391,
+        "jarakKm": 1.1
+      },
+      {
+        "id": "JWA-55-KUL-2",
+        "nama": "Warung Seafood Pinggir Pantai Pantai",
+        "kategori": "Warung Pesisir Tradisional",
+        "menuAndalan": "Udang Asam Manis, Ikan Kerapu Bakar, Es Kelapa Batok",
+        "estimasiHarga": "Rp25.000 – Rp60.000 / orang",
+        "rating": 4.6,
+        "latitude": -8.4325,
+        "longitude": 112.6197,
+        "jarakKm": 1.8
+      },
+      {
+        "id": "JWA-55-KUL-3",
+        "nama": "Sunset Cafe & Resto Pesisir Pantai",
+        "kategori": "Kafe Pantai & Kopi",
+        "menuAndalan": "Mendoan Hangat Sambal Kecap, Kopi Tubruk, Es Kelapa Muda Jeruk",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.7,
+        "latitude": -8.4186,
+        "longitude": 112.6507,
+        "jarakKm": 2.5
+      }
+    ]
+  },
+  {
+    "id": "JWA-56",
+    "nama": "Pantai Nglambor",
+    "lokasi": "Gunungkidul, DI Yogyakarta",
+    "kabKota": "Gunungkidul",
+    "provinsi": "DI Yogyakarta",
+    "wilayah": "Jawa",
+    "wilayahIdx": 1,
+    "jenisWisata": "Laguna Karang & Snorkeling Terlindung",
+    "aktivitasStr": "Snorkeling terumbu karang, foto bawah air, renang",
+    "aktivitas": [
+      "Snorkeling",
+      "Berenang",
+      "Fotografi & Sunset"
+    ],
+    "atraksi": "Dua tebing karang kura-kura pelindung laguna dari ombak Samudra Hindia",
+    "fasilitasStr": "Penyewaan snorkel, pemandu foto bawah air, mushola",
+    "fasilitas": [
+      "Penyewaan snorkel",
+      "pemandu foto bawah air",
+      "mushola"
+    ],
+    "teksTiket": "Rp10.000",
+    "teksAlat": "Paket snorkel lengkap + foto Rp50rb",
+    "level": "Pemula",
+    "sumber": "Dinas Pariwisata DIY",
+    "hargaTiketMasuk": 10000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 50000,
+    "rangeHargaAktivitas": "di-bawah-100k",
+    "rangeHargaAktivitasLabel": "< Rp100.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 50000,
+    "estimasiTotalPerOrang": 60000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 50000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": -8.1833,
+    "longitude": 110.6833,
+    "kuliner": [
+      {
+        "id": "JWA-56-KUL-1",
+        "nama": "Pondok Makan Ikan Bakar Jimbaran Rasa Pantai",
+        "kategori": "Seafood Bakar Arang",
+        "menuAndalan": "Ikan Bawal Bakar Bumbu Madu, Cumi Saus Tiram, Cah Kangkung Terasi",
+        "estimasiHarga": "Rp30.000 – Rp75.000 / orang",
+        "rating": 4.8,
+        "latitude": -8.1927,
+        "longitude": 110.6802,
+        "jarakKm": 1.1
+      },
+      {
+        "id": "JWA-56-KUL-2",
+        "nama": "Warung Seafood Pinggir Pantai Pantai",
+        "kategori": "Warung Pesisir Tradisional",
+        "menuAndalan": "Udang Asam Manis, Ikan Kerapu Bakar, Es Kelapa Batok",
+        "estimasiHarga": "Rp25.000 – Rp60.000 / orang",
+        "rating": 4.6,
+        "latitude": -8.1712,
+        "longitude": 110.6723,
+        "jarakKm": 1.8
+      },
+      {
+        "id": "JWA-56-KUL-3",
+        "nama": "Sunset Cafe & Resto Pesisir Pantai",
+        "kategori": "Kafe Pantai & Kopi",
+        "menuAndalan": "Mendoan Hangat Sambal Kecap, Kopi Tubruk, Es Kelapa Muda Jeruk",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.7,
+        "latitude": -8.1786,
+        "longitude": 110.7056,
+        "jarakKm": 2.5
+      }
+    ]
+  },
+  {
+    "id": "JWA-57",
+    "nama": "Pantai Payangan & Teluk Love",
+    "lokasi": "Jember, Jawa Timur",
+    "kabKota": "Jember",
+    "provinsi": "Jawa Timur",
+    "wilayah": "Jawa",
+    "wilayahIdx": 1,
+    "jenisWisata": "Pantai Bukit & Teluk Hati",
+    "aktivitasStr": "Trekking bukit karang, melihat teluk berbentuk hati, sunset",
+    "aktivitas": [
+      "Trekking & Panjat",
+      "Fotografi & Sunset"
+    ],
+    "atraksi": "Teluk berbentuk hati dilihat dari puncak Bukit Domba dan pantai nelayan",
+    "fasilitasStr": "Warung seafood, tangga setapak bukit, parkir",
+    "fasilitas": [
+      "Warung seafood",
+      "tangga setapak bukit",
+      "parkir"
+    ],
+    "teksTiket": "Rp7.500",
+    "teksAlat": "-",
+    "level": "Pemula",
+    "sumber": "Disparbud Jember",
+    "hargaTiketMasuk": 7500,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": null,
+    "rangeHargaAktivitas": null,
+    "rangeHargaAktivitasLabel": null,
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": null,
+    "estimasiTotalPerOrang": 7500,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "pelampung-pantai",
+        "nama": "Ban Renang / Pelampung Santai",
+        "kategoriAktivitas": "Berenang",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelampung rekreasi untuk bermain ombak tenang di tepi pantai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": -8.43,
+    "longitude": 113.5833,
+    "kuliner": [
+      {
+        "id": "JWA-57-KUL-1",
+        "nama": "Pondok Makan Ikan Bakar Jimbaran Rasa Pantai",
+        "kategori": "Seafood Bakar Arang",
+        "menuAndalan": "Ikan Bawal Bakar Bumbu Madu, Cumi Saus Tiram, Cah Kangkung Terasi",
+        "estimasiHarga": "Rp30.000 – Rp75.000 / orang",
+        "rating": 4.8,
+        "latitude": -8.4357,
+        "longitude": 113.5751,
+        "jarakKm": 1.1
+      },
+      {
+        "id": "JWA-57-KUL-2",
+        "nama": "Warung Seafood Pinggir Pantai Pantai",
+        "kategori": "Warung Pesisir Tradisional",
+        "menuAndalan": "Udang Asam Manis, Ikan Kerapu Bakar, Es Kelapa Batok",
+        "estimasiHarga": "Rp25.000 – Rp60.000 / orang",
+        "rating": 4.6,
+        "latitude": -8.4138,
+        "longitude": 113.5819,
+        "jarakKm": 1.8
+      },
+      {
+        "id": "JWA-57-KUL-3",
+        "nama": "Sunset Cafe & Resto Pesisir Pantai",
+        "kategori": "Kafe Pantai & Kopi",
+        "menuAndalan": "Mendoan Hangat Sambal Kecap, Kopi Tubruk, Es Kelapa Muda Jeruk",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.7,
+        "latitude": -8.4395,
+        "longitude": 113.6039,
+        "jarakKm": 2.5
+      }
+    ]
+  },
+  {
+    "id": "JWA-58",
+    "nama": "Pantai Karang Tawulan",
+    "lokasi": "Tasikmalaya, Jawa Barat",
+    "kabKota": "Tasikmalaya",
+    "provinsi": "Jawa Barat",
+    "wilayah": "Jawa",
+    "wilayahIdx": 1,
+    "jenisWisata": "Tebing Karang Samudra Selatan",
+    "aktivitasStr": "Fotografi tebing samudra, piknik rumput hijau",
+    "aktivitas": [
+      "Fotografi & Sunset"
+    ],
+    "atraksi": "Tebing karang hijau menyerupai Nusa Penida di pesisir Tasikmalaya",
+    "fasilitasStr": "Gazebo gardu pandang, warung makan, toilet",
+    "fasilitas": [
+      "Gazebo gardu pandang",
+      "warung makan",
+      "toilet"
+    ],
+    "teksTiket": "Rp10.000",
+    "teksAlat": "-",
+    "level": "Pemula",
+    "sumber": "Disparbud Tasikmalaya",
+    "hargaTiketMasuk": 10000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": null,
+    "rangeHargaAktivitas": null,
+    "rangeHargaAktivitasLabel": null,
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": null,
+    "estimasiTotalPerOrang": 10000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "pelampung-pantai",
+        "nama": "Ban Renang / Pelampung Santai",
+        "kategoriAktivitas": "Berenang",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelampung rekreasi untuk bermain ombak tenang di tepi pantai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": -7.75,
+    "longitude": 108.2833,
+    "kuliner": [
+      {
+        "id": "JWA-58-KUL-1",
+        "nama": "Pondok Makan Ikan Bakar Jimbaran Rasa Pantai",
+        "kategori": "Seafood Bakar Arang",
+        "menuAndalan": "Ikan Bawal Bakar Bumbu Madu, Cumi Saus Tiram, Cah Kangkung Terasi",
+        "estimasiHarga": "Rp30.000 – Rp75.000 / orang",
+        "rating": 4.8,
+        "latitude": -7.7497,
+        "longitude": 108.2733,
+        "jarakKm": 1.1
+      },
+      {
+        "id": "JWA-58-KUL-2",
+        "nama": "Warung Seafood Pinggir Pantai Pantai",
+        "kategori": "Warung Pesisir Tradisional",
+        "menuAndalan": "Udang Asam Manis, Ikan Kerapu Bakar, Es Kelapa Batok",
+        "estimasiHarga": "Rp25.000 – Rp60.000 / orang",
+        "rating": 4.6,
+        "latitude": -7.7362,
+        "longitude": 108.292,
+        "jarakKm": 1.8
+      },
+      {
+        "id": "JWA-58-KUL-3",
+        "nama": "Sunset Cafe & Resto Pesisir Pantai",
+        "kategori": "Kafe Pantai & Kopi",
+        "menuAndalan": "Mendoan Hangat Sambal Kecap, Kopi Tubruk, Es Kelapa Muda Jeruk",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.7,
+        "latitude": -7.7699,
+        "longitude": 108.294,
+        "jarakKm": 2.5
+      }
+    ]
+  },
+  {
+    "id": "JWA-59",
+    "nama": "Pantai Pangi",
+    "lokasi": "Blitar, Jawa Timur",
+    "kabKota": "Blitar",
+    "provinsi": "Jawa Timur",
+    "wilayah": "Jawa",
+    "wilayahIdx": 1,
+    "jenisWisata": "Muara Sungai Air Payau & Pantai Karang",
+    "aktivitasStr": "Berenang di muara sungai jernih, camping pantai",
+    "aktivitas": [
+      "Berenang",
+      "Camping Pantai"
+    ],
+    "atraksi": "Muara sungai tenang air tawar berpasir putih dikelilingi tebing karst",
+    "fasilitasStr": "Warung, toilet, sewa pelampung",
+    "fasilitas": [
+      "Warung",
+      "toilet",
+      "sewa pelampung"
+    ],
+    "teksTiket": "Rp10.000",
+    "teksAlat": "Sewa ban Rp15rb",
+    "level": "Pemula",
+    "sumber": "Dinas Pariwisata Blitar",
+    "hargaTiketMasuk": 10000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 15000,
+    "rangeHargaAktivitas": "di-bawah-100k",
+    "rangeHargaAktivitasLabel": "< Rp100.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 15000,
+    "estimasiTotalPerOrang": 25000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "pelampung-pantai",
+        "nama": "Ban Renang / Pelampung Santai",
+        "kategoriAktivitas": "Berenang",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelampung rekreasi untuk bermain ombak tenang di tepi pantai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": -8.3333,
+    "longitude": 112.0833,
+    "kuliner": [
+      {
+        "id": "JWA-59-KUL-1",
+        "nama": "Pondok Makan Ikan Bakar Jimbaran Rasa Pantai",
+        "kategori": "Seafood Bakar Arang",
+        "menuAndalan": "Ikan Bawal Bakar Bumbu Madu, Cumi Saus Tiram, Cah Kangkung Terasi",
+        "estimasiHarga": "Rp30.000 – Rp75.000 / orang",
+        "rating": 4.8,
+        "latitude": -8.3271,
+        "longitude": 112.0755,
+        "jarakKm": 1.1
+      },
+      {
+        "id": "JWA-59-KUL-2",
+        "nama": "Warung Seafood Pinggir Pantai Pantai",
+        "kategori": "Warung Pesisir Tradisional",
+        "menuAndalan": "Udang Asam Manis, Ikan Kerapu Bakar, Es Kelapa Batok",
+        "estimasiHarga": "Rp25.000 – Rp60.000 / orang",
+        "rating": 4.6,
+        "latitude": -8.3275,
+        "longitude": 112.0986,
+        "jarakKm": 1.8
+      },
+      {
+        "id": "JWA-59-KUL-3",
+        "nama": "Sunset Cafe & Resto Pesisir Pantai",
+        "kategori": "Kafe Pantai & Kopi",
+        "menuAndalan": "Mendoan Hangat Sambal Kecap, Kopi Tubruk, Es Kelapa Muda Jeruk",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.7,
+        "latitude": -8.3555,
+        "longitude": 112.0797,
+        "jarakKm": 2.5
+      }
+    ]
+  },
+  {
+    "id": "KLM-31",
+    "nama": "Pulau Lemukutan",
+    "lokasi": "Bengkayang, Kalimantan Barat",
+    "kabKota": "Bengkayang",
+    "provinsi": "Kalimantan Barat",
+    "wilayah": "Kalimantan",
+    "wilayahIdx": 2,
+    "jenisWisata": "Pulau Nelayan & Taman Karang",
+    "aktivitasStr": "Snorkeling terumbu karang dangkal, kano, homestay pesisir",
+    "aktivitas": [
+      "Snorkeling",
+      "Kano & Kayak"
+    ],
+    "atraksi": "Keindahan taman karang tepi dermaga dan desa nelayan damai",
+    "fasilitasStr": "Homestay nelayan, persewaan alat snorkel, dermaga",
+    "fasilitas": [
+      "Homestay nelayan",
+      "persewaan alat snorkel",
+      "dermaga"
+    ],
+    "teksTiket": "Rp15.000",
+    "teksAlat": "Snorkel Rp35rb; kano Rp40rb",
+    "level": "Pemula",
+    "sumber": "Disporapar Kalbar",
+    "hargaTiketMasuk": 15000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 35000,
+    "rangeHargaAktivitas": "di-bawah-100k",
+    "rangeHargaAktivitasLabel": "< Rp100.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 35000,
+    "estimasiTotalPerOrang": 50000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 35000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      },
+      {
+        "id": "kano-kayak",
+        "nama": "Perahu Kano / Kayak & Dayung",
+        "kategoriAktivitas": "Kano & Kayak",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 35000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Perahu santai untuk menjelajah laguna tenang atau hutan mangrove."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
+    "latitude": 0.75,
+    "longitude": 108.7167,
+    "kuliner": [
+      {
+        "id": "KLM-31-KUL-1",
+        "nama": "Rumah Makan Ikan Bakar Patin & Baung Pulau",
+        "kategori": "Seafood & Ikan Sungai/Laut",
+        "menuAndalan": "Patin Bakar Bambu, Ikan Bakar Rica, Sambal Raja",
+        "estimasiHarga": "Rp30.000 – Rp75.000 / orang",
+        "rating": 4.7,
+        "latitude": 0.7526,
+        "longitude": 108.7173,
+        "jarakKm": 0.3
+      },
+      {
+        "id": "KLM-31-KUL-2",
+        "nama": "Kedai Seafood Kepiting Asap Pulau",
+        "kategori": "Kuliner Seafood Pesisir",
+        "menuAndalan": "Kepiting Asap Spesial, Cumi Bakar Bumbu Pedas, Es Jeruk Borneo",
+        "estimasiHarga": "Rp45.000 – Rp110.000 / orang",
+        "rating": 4.8,
+        "latitude": 0.7439,
+        "longitude": 108.7233,
+        "jarakKm": 1
+      },
+      {
+        "id": "KLM-31-KUL-3",
+        "nama": "Warung Kopi & Pisang Gapit Pesisir Pulau",
+        "kategori": "Camilan Tradisional",
+        "menuAndalan": "Pisang Gapit Kuah Kinca, Kopi Susu Tradisional, Kelapa Muda",
+        "estimasiHarga": "Rp15.000 – Rp30.000 / orang",
+        "rating": 4.6,
+        "latitude": 0.7455,
+        "longitude": 108.7021,
+        "jarakKm": 1.7
+      }
+    ]
+  },
+  {
+    "id": "KLM-32",
+    "nama": "Pantai Biduk-Biduk & Teluk Sulaiman",
+    "lokasi": "Berau, Kalimantan Timur",
+    "kabKota": "Berau",
+    "provinsi": "Kalimantan Timur",
+    "wilayah": "Kalimantan",
+    "wilayahIdx": 2,
+    "jenisWisata": "Pesisir Pasir Putih Berair Kristal",
+    "aktivitasStr": "Berenang air kristal, melihat matahari terbit, santai",
+    "aktivitas": [
+      "Berenang"
+    ],
+    "atraksi": "Garis pantai perawan berair super jernih di semenanjung Berau",
+    "fasilitasStr": "Homestay lokal, warung makan kelapa, perahu",
+    "fasilitas": [
+      "Homestay lokal",
+      "warung makan kelapa",
+      "perahu"
+    ],
+    "teksTiket": "Rp10.000",
+    "teksAlat": "Perahu wisata Rp200–350rb",
+    "level": "Pemula",
+    "sumber": "Dispar Berau",
+    "hargaTiketMasuk": 10000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 200000,
+    "rangeHargaAktivitas": "100k-250k",
+    "rangeHargaAktivitasLabel": "Rp100.000 – Rp250.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 200000,
+    "estimasiTotalPerOrang": 210000,
+    "rangeHargaTotal": "100k-250k",
+    "rangeHargaTotalLabel": "Rp100.000 – Rp250.000",
+    "peralatan": [
+      {
+        "id": "sewa-perahu",
+        "nama": "Sewa Perahu Nelayan / Wisata Keliling",
+        "kategoriAktivitas": "Island Hopping",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 350000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Perahu motor tradisional / speed boat untuk trip hopping dan melihat atraksi bahari."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": 1.2167,
+    "longitude": 118.7333,
+    "kuliner": [
+      {
+        "id": "KLM-32-KUL-1",
+        "nama": "Rumah Makan Ikan Bakar Patin & Baung Pantai",
+        "kategori": "Seafood & Ikan Sungai/Laut",
+        "menuAndalan": "Patin Bakar Bambu, Ikan Bakar Rica, Sambal Raja",
+        "estimasiHarga": "Rp30.000 – Rp75.000 / orang",
+        "rating": 4.7,
+        "latitude": 1.2184,
+        "longitude": 118.7354,
+        "jarakKm": 0.3
+      },
+      {
+        "id": "KLM-32-KUL-2",
+        "nama": "Kedai Seafood Kepiting Asap Pantai",
+        "kategori": "Kuliner Seafood Pesisir",
+        "menuAndalan": "Kepiting Asap Spesial, Cumi Bakar Bumbu Pedas, Es Jeruk Borneo",
+        "estimasiHarga": "Rp45.000 – Rp110.000 / orang",
+        "rating": 4.8,
+        "latitude": 1.2078,
+        "longitude": 118.7349,
+        "jarakKm": 1
+      },
+      {
+        "id": "KLM-32-KUL-3",
+        "nama": "Warung Kopi & Pisang Gapit Pesisir Pantai",
+        "kategori": "Camilan Tradisional",
+        "menuAndalan": "Pisang Gapit Kuah Kinca, Kopi Susu Tradisional, Kelapa Muda",
+        "estimasiHarga": "Rp15.000 – Rp30.000 / orang",
+        "rating": 4.6,
+        "latitude": 1.2219,
+        "longitude": 118.7189,
+        "jarakKm": 1.7
+      }
+    ]
+  },
+  {
+    "id": "KLM-33",
+    "nama": "Labuan Cermin",
+    "lokasi": "Berau, Kalimantan Timur",
+    "kabKota": "Berau",
+    "provinsi": "Kalimantan Timur",
+    "wilayah": "Kalimantan",
+    "wilayahIdx": 2,
+    "jenisWisata": "Danau Dua Rasa Sebening Kaca",
+    "aktivitasStr": "Berenang, mendayung perahu kaca, foto bawah air",
+    "aktivitas": [
+      "Berenang",
+      "Fotografi & Sunset"
+    ],
+    "atraksi": "Danau alami dua rasa (asin di dasar, tawar di permukaan) seakan melayang",
+    "fasilitasStr": "Perahu penyeberangan, persewaan pelampung, warung",
+    "fasilitas": [
+      "Perahu penyeberangan",
+      "persewaan pelampung",
+      "warung"
+    ],
+    "teksTiket": "Rp20.000",
+    "teksAlat": "Sewa perahu Rp150rb; snorkel Rp30rb",
+    "level": "Pemula",
+    "sumber": "Dispar Berau",
+    "hargaTiketMasuk": 20000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 30000,
+    "rangeHargaAktivitas": "di-bawah-100k",
+    "rangeHargaAktivitasLabel": "< Rp100.000",
+    "hargaPaketWisata": 150000,
+    "rangeHargaPaket": "100k-250k",
+    "biayaAlatMin": 30000,
+    "estimasiTotalPerOrang": 50000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 30000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      },
+      {
+        "id": "sewa-perahu",
+        "nama": "Sewa Perahu Nelayan / Wisata Keliling",
+        "kategoriAktivitas": "Island Hopping",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 350000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Perahu motor tradisional / speed boat untuk trip hopping dan melihat atraksi bahari."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": 1.2667,
+    "longitude": 118.6833,
+    "kuliner": [
+      {
+        "id": "KLM-33-KUL-1",
+        "nama": "Rumah Makan Ikan Bakar Patin & Baung Labuan",
+        "kategori": "Seafood & Ikan Sungai/Laut",
+        "menuAndalan": "Patin Bakar Bambu, Ikan Bakar Rica, Sambal Raja",
+        "estimasiHarga": "Rp30.000 – Rp75.000 / orang",
+        "rating": 4.7,
+        "latitude": 1.2668,
+        "longitude": 118.686,
+        "jarakKm": 0.3
+      },
+      {
+        "id": "KLM-33-KUL-2",
+        "nama": "Kedai Seafood Kepiting Asap Labuan",
+        "kategori": "Kuliner Seafood Pesisir",
+        "menuAndalan": "Kepiting Asap Spesial, Cumi Bakar Bumbu Pedas, Es Jeruk Borneo",
+        "estimasiHarga": "Rp45.000 – Rp110.000 / orang",
+        "rating": 4.8,
+        "latitude": 1.2587,
+        "longitude": 118.6792,
+        "jarakKm": 1
+      },
+      {
+        "id": "KLM-33-KUL-3",
+        "nama": "Warung Kopi & Pisang Gapit Pesisir Labuan",
+        "kategori": "Camilan Tradisional",
+        "menuAndalan": "Pisang Gapit Kuah Kinca, Kopi Susu Tradisional, Kelapa Muda",
+        "estimasiHarga": "Rp15.000 – Rp30.000 / orang",
+        "rating": 4.6,
+        "latitude": 1.2795,
+        "longitude": 118.675,
+        "jarakKm": 1.7
+      }
+    ]
+  },
+  {
+    "id": "KLM-34",
+    "nama": "Pulau Bilang-Bilangan",
+    "lokasi": "Berau, Kalimantan Timur",
+    "kabKota": "Berau",
+    "provinsi": "Kalimantan Timur",
+    "wilayah": "Kalimantan",
+    "wilayahIdx": 2,
+    "jenisWisata": "Pulau Konservasi Penyu Hijau",
+    "aktivitasStr": "Melihat peneluran penyu hijau alami, snorkeling karang",
+    "aktivitas": [
+      "Snorkeling",
+      "Satwa Laut"
+    ],
+    "atraksi": "Salah satu pulau peneluran penyu terbesar di Asia Tenggara",
+    "fasilitasStr": "Pos ranger BKSDA, dermaga kayu",
+    "fasilitas": [
+      "Pos ranger BKSDA",
+      "dermaga kayu"
+    ],
+    "teksTiket": "Rp25.000",
+    "teksAlat": "Charter perahu Berau Rp1–2jt",
+    "level": "Menengah",
+    "sumber": "BKSDA Kaltim",
+    "hargaTiketMasuk": 25000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 1000000,
+    "rangeHargaAktivitas": "500k-1jt",
+    "rangeHargaAktivitasLabel": "Rp500.000 – Rp1.000.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 1000000,
+    "estimasiTotalPerOrang": 1025000,
+    "rangeHargaTotal": "di-atas-1jt",
+    "rangeHargaTotalLabel": "> Rp1.000.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 1000000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      },
+      {
+        "id": "sewa-perahu",
+        "nama": "Sewa Perahu Nelayan / Wisata Keliling",
+        "kategoriAktivitas": "Island Hopping",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 350000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Perahu motor tradisional / speed boat untuk trip hopping dan melihat atraksi bahari."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "latitude": 1.75,
+    "longitude": 118.5833,
+    "kuliner": [
+      {
+        "id": "KLM-34-KUL-1",
+        "nama": "Rumah Makan Ikan Bakar Patin & Baung Pulau",
+        "kategori": "Seafood & Ikan Sungai/Laut",
+        "menuAndalan": "Patin Bakar Bambu, Ikan Bakar Rica, Sambal Raja",
+        "estimasiHarga": "Rp30.000 – Rp75.000 / orang",
+        "rating": 4.7,
+        "latitude": 1.7485,
+        "longitude": 118.5855,
+        "jarakKm": 0.3
+      },
+      {
+        "id": "KLM-34-KUL-2",
+        "nama": "Kedai Seafood Kepiting Asap Pulau",
+        "kategori": "Kuliner Seafood Pesisir",
+        "menuAndalan": "Kepiting Asap Spesial, Cumi Bakar Bumbu Pedas, Es Jeruk Borneo",
+        "estimasiHarga": "Rp45.000 – Rp110.000 / orang",
+        "rating": 4.8,
+        "latitude": 1.7461,
+        "longitude": 118.5752,
+        "jarakKm": 1
+      },
+      {
+        "id": "KLM-34-KUL-3",
+        "nama": "Warung Kopi & Pisang Gapit Pesisir Pulau",
+        "kategori": "Camilan Tradisional",
+        "menuAndalan": "Pisang Gapit Kuah Kinca, Kopi Susu Tradisional, Kelapa Muda",
+        "estimasiHarga": "Rp15.000 – Rp30.000 / orang",
+        "rating": 4.6,
+        "latitude": 1.7653,
+        "longitude": 118.5844,
+        "jarakKm": 1.7
+      }
+    ]
+  },
+  {
+    "id": "BNT-73",
+    "nama": "Pantai Atuh & Diamond Cliff",
+    "lokasi": "Nusa Penida, Bali",
+    "kabKota": "Nusa Penida",
+    "provinsi": "Bali",
+    "wilayah": "Bali & Nusa Tenggara",
+    "wilayahIdx": 3,
+    "jenisWisata": "Pantai Tebing Karang Terjal",
+    "aktivitasStr": "Trekking tangga tebing, fotografi panorama tebing intan",
+    "aktivitas": [
+      "Trekking & Panjat",
+      "Fotografi & Sunset"
+    ],
+    "atraksi": "Gugusan karang runcing menyerupai permata di laut biru tua",
+    "fasilitasStr": "Warung lokal, tangga semen terjal, toilet",
+    "fasilitas": [
+      "Warung lokal",
+      "tangga semen terjal",
+      "toilet"
+    ],
+    "teksTiket": "Rp10.000",
+    "teksAlat": "-",
+    "level": "Menengah",
+    "sumber": "Dinas Pariwisata Klungkung",
+    "hargaTiketMasuk": 10000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": null,
+    "rangeHargaAktivitas": null,
+    "rangeHargaAktivitasLabel": null,
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": null,
+    "estimasiTotalPerOrang": 10000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "pelampung-pantai",
+        "nama": "Ban Renang / Pelampung Santai",
+        "kategoriAktivitas": "Berenang",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelampung rekreasi untuk bermain ombak tenang di tepi pantai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": -8.777,
+    "longitude": 115.6179,
+    "kuliner": [
+      {
+        "id": "BNT-73-KUL-1",
+        "nama": "Warung Ikan Bakar Sambal Matah Pantai",
+        "kategori": "Seafood Khas Bali",
+        "menuAndalan": "Ikan Kakap Bakar Sambal Matah, Pelecing Kangkung, Udang Bakar Jimbaran",
+        "estimasiHarga": "Rp40.000 – Rp90.000 / orang",
+        "rating": 4.9,
+        "latitude": -8.7768,
+        "longitude": 115.6225,
+        "jarakKm": 0.5
+      },
+      {
+        "id": "BNT-73-KUL-2",
+        "nama": "Resto Pesisir & Sunset Lounge Pantai",
+        "kategori": "Seafood & Grill Modern",
+        "menuAndalan": "Grilled Seafood Platter, Calamari Crispy, Fresh Coconut",
+        "estimasiHarga": "Rp50.000 – Rp120.000 / orang",
+        "rating": 4.8,
+        "latitude": -8.7866,
+        "longitude": 115.6129,
+        "jarakKm": 1.2
+      },
+      {
+        "id": "BNT-73-KUL-3",
+        "nama": "Warung Lokal Ayam Betutu & Sup Ikan Pantai",
+        "kategori": "Masakan Khas Daerah",
+        "menuAndalan": "Sup Kepala Ikan Segar, Nasi Campur Bali, Es Jeruk Nipis",
+        "estimasiHarga": "Rp25.000 – Rp55.000 / orang",
+        "rating": 4.7,
+        "latitude": -8.7626,
+        "longitude": 115.6085,
+        "jarakKm": 1.9
+      }
+    ]
+  },
+  {
+    "id": "BNT-74",
+    "nama": "Pantai Gunung Payung",
+    "lokasi": "Badung, Bali",
+    "kabKota": "Badung",
+    "provinsi": "Bali",
+    "wilayah": "Bali & Nusa Tenggara",
+    "wilayahIdx": 3,
+    "jenisWisata": "Pantai Gua Karang Tersembunyi",
+    "aktivitasStr": "Berenang di air bening, eksplorasi gua karang peneduh",
+    "aktivitas": [
+      "Berenang"
+    ],
+    "atraksi": "Gua karang alami di tepi pantai berpasir putih tenang",
+    "fasilitasStr": "Amfiteater, shuttle mobil golf, warung",
+    "fasilitas": [
+      "Amfiteater",
+      "shuttle mobil golf",
+      "warung"
+    ],
+    "teksTiket": "Rp8.000",
+    "teksAlat": "-",
+    "level": "Pemula",
+    "sumber": "Dinas Pariwisata Badung",
+    "hargaTiketMasuk": 8000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": null,
+    "rangeHargaAktivitas": null,
+    "rangeHargaAktivitasLabel": null,
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": null,
+    "estimasiTotalPerOrang": 8000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "pelampung-pantai",
+        "nama": "Ban Renang / Pelampung Santai",
+        "kategoriAktivitas": "Berenang",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelampung rekreasi untuk bermain ombak tenang di tepi pantai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": -8.8417,
+    "longitude": 115.2,
+    "kuliner": [
+      {
+        "id": "BNT-74-KUL-1",
+        "nama": "Warung Ikan Bakar Sambal Matah Pantai",
+        "kategori": "Seafood Khas Bali",
+        "menuAndalan": "Ikan Kakap Bakar Sambal Matah, Pelecing Kangkung, Udang Bakar Jimbaran",
+        "estimasiHarga": "Rp40.000 – Rp90.000 / orang",
+        "rating": 4.9,
+        "latitude": -8.8442,
+        "longitude": 115.2038,
+        "jarakKm": 0.5
+      },
+      {
+        "id": "BNT-74-KUL-2",
+        "nama": "Resto Pesisir & Sunset Lounge Pantai",
+        "kategori": "Seafood & Grill Modern",
+        "menuAndalan": "Grilled Seafood Platter, Calamari Crispy, Fresh Coconut",
+        "estimasiHarga": "Rp50.000 – Rp120.000 / orang",
+        "rating": 4.8,
+        "latitude": -8.8464,
+        "longitude": 115.1902,
+        "jarakKm": 1.2
+      },
+      {
+        "id": "BNT-74-KUL-3",
+        "nama": "Warung Lokal Ayam Betutu & Sup Ikan Pantai",
+        "kategori": "Masakan Khas Daerah",
+        "menuAndalan": "Sup Kepala Ikan Segar, Nasi Campur Bali, Es Jeruk Nipis",
+        "estimasiHarga": "Rp25.000 – Rp55.000 / orang",
+        "rating": 4.7,
+        "latitude": -8.8246,
+        "longitude": 115.2012,
+        "jarakKm": 1.9
+      }
+    ]
+  },
+  {
+    "id": "BNT-75",
+    "nama": "Gili Layar & Gili Rengit",
+    "lokasi": "Lombok Barat, NTB",
+    "kabKota": "Lombok Barat",
+    "provinsi": "NTB",
+    "wilayah": "Bali & Nusa Tenggara",
+    "wilayahIdx": 3,
+    "jenisWisata": "Gili Rahasia Tanpa Polusi",
+    "aktivitasStr": "Snorkeling terumbu karang meja, renang bersama penyu",
+    "aktivitas": [
+      "Snorkeling",
+      "Berenang",
+      "Satwa Laut"
+    ],
+    "atraksi": "Gili tersembunyi (Secret Gili) berpasir putih sepi pengunjung",
+    "fasilitasStr": "Bungalow bambu, perahu charter nelayan",
+    "fasilitas": [
+      "Bungalow bambu",
+      "perahu charter nelayan"
+    ],
+    "teksTiket": "Gratis",
+    "teksAlat": "Sewa perahu hopping Rp400–600rb",
+    "level": "Pemula",
+    "sumber": "Dispar Lombok Barat",
+    "hargaTiketMasuk": 0,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 400000,
+    "rangeHargaAktivitas": "250k-500k",
+    "rangeHargaAktivitasLabel": "Rp250.000 – Rp500.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 400000,
+    "estimasiTotalPerOrang": 400000,
+    "rangeHargaTotal": "250k-500k",
+    "rangeHargaTotalLabel": "Rp250.000 – Rp500.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 400000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      },
+      {
+        "id": "sewa-perahu",
+        "nama": "Sewa Perahu Nelayan / Wisata Keliling",
+        "kategoriAktivitas": "Island Hopping",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 350000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Perahu motor tradisional / speed boat untuk trip hopping dan melihat atraksi bahari."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "latitude": -8.7333,
+    "longitude": 115.9,
+    "kuliner": [
+      {
+        "id": "BNT-75-KUL-1",
+        "nama": "Warung Ikan Bakar Sambal Matah Gili",
+        "kategori": "Seafood Khas Bali",
+        "menuAndalan": "Ikan Kakap Bakar Sambal Matah, Pelecing Kangkung, Udang Bakar Jimbaran",
+        "estimasiHarga": "Rp40.000 – Rp90.000 / orang",
+        "rating": 4.9,
+        "latitude": -8.7376,
+        "longitude": 115.9015,
+        "jarakKm": 0.5
+      },
+      {
+        "id": "BNT-75-KUL-2",
+        "nama": "Resto Pesisir & Sunset Lounge Gili",
+        "kategori": "Seafood & Grill Modern",
+        "menuAndalan": "Grilled Seafood Platter, Calamari Crispy, Fresh Coconut",
+        "estimasiHarga": "Rp50.000 – Rp120.000 / orang",
+        "rating": 4.8,
+        "latitude": -8.7312,
+        "longitude": 115.8893,
+        "jarakKm": 1.2
+      },
+      {
+        "id": "BNT-75-KUL-3",
+        "nama": "Warung Lokal Ayam Betutu & Sup Ikan Gili",
+        "kategori": "Masakan Khas Daerah",
+        "menuAndalan": "Sup Kepala Ikan Segar, Nasi Campur Bali, Es Jeruk Nipis",
+        "estimasiHarga": "Rp25.000 – Rp55.000 / orang",
+        "rating": 4.7,
+        "latitude": -8.7204,
+        "longitude": 115.9114,
+        "jarakKm": 1.9
+      }
+    ]
+  },
+  {
+    "id": "BNT-76",
+    "nama": "Pantai Mbawana (Batu Cincin)",
+    "lokasi": "Sumba Barat Daya, NTT",
+    "kabKota": "Sumba Barat Daya",
+    "provinsi": "NTT",
+    "wilayah": "Bali & Nusa Tenggara",
+    "wilayahIdx": 3,
+    "jenisWisata": "Pantai Tebing Bolong Sumba",
+    "aktivitasStr": "Sunset magis, fotografi tebing batu cincin",
+    "aktivitas": [
+      "Fotografi & Sunset"
+    ],
+    "atraksi": "Tebing karang berlubang raksasa menjorok ke Samudra Hindia",
+    "fasilitasStr": "Jalan setapak bukit, gazebo bambu",
+    "fasilitas": [
+      "Jalan setapak bukit",
+      "gazebo bambu"
+    ],
+    "teksTiket": "Rp10.000",
+    "teksAlat": "-",
+    "level": "Pemula",
+    "sumber": "Dinas Pariwisata Sumba",
+    "hargaTiketMasuk": 10000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": null,
+    "rangeHargaAktivitas": null,
+    "rangeHargaAktivitasLabel": null,
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": null,
+    "estimasiTotalPerOrang": 10000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "pelampung-pantai",
+        "nama": "Ban Renang / Pelampung Santai",
+        "kategoriAktivitas": "Berenang",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelampung rekreasi untuk bermain ombak tenang di tepi pantai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": -9.5833,
+    "longitude": 119.05,
+    "kuliner": [
+      {
+        "id": "BNT-76-KUL-1",
+        "nama": "Warung Ikan Bakar Sambal Matah Pantai",
+        "kategori": "Seafood Khas Bali",
+        "menuAndalan": "Ikan Kakap Bakar Sambal Matah, Pelecing Kangkung, Udang Bakar Jimbaran",
+        "estimasiHarga": "Rp40.000 – Rp90.000 / orang",
+        "rating": 4.9,
+        "latitude": -9.5876,
+        "longitude": 119.0486,
+        "jarakKm": 0.5
+      },
+      {
+        "id": "BNT-76-KUL-2",
+        "nama": "Resto Pesisir & Sunset Lounge Pantai",
+        "kategori": "Seafood & Grill Modern",
+        "menuAndalan": "Grilled Seafood Platter, Calamari Crispy, Fresh Coconut",
+        "estimasiHarga": "Rp50.000 – Rp120.000 / orang",
+        "rating": 4.8,
+        "latitude": -9.5753,
+        "longitude": 119.0427,
+        "jarakKm": 1.2
+      },
+      {
+        "id": "BNT-76-KUL-3",
+        "nama": "Warung Lokal Ayam Betutu & Sup Ikan Pantai",
+        "kategori": "Masakan Khas Daerah",
+        "menuAndalan": "Sup Kepala Ikan Segar, Nasi Campur Bali, Es Jeruk Nipis",
+        "estimasiHarga": "Rp25.000 – Rp55.000 / orang",
+        "rating": 4.7,
+        "latitude": -9.5797,
+        "longitude": 119.067,
+        "jarakKm": 1.9
+      }
+    ]
+  },
+  {
+    "id": "BNT-77",
+    "nama": "Teluk Gurita & Pantai Atapupu",
+    "lokasi": "Belu, NTT",
+    "kabKota": "Belu",
+    "provinsi": "NTT",
+    "wilayah": "Bali & Nusa Tenggara",
+    "wilayahIdx": 3,
+    "jenisWisata": "Teluk Pesisir Perbatasan",
+    "aktivitasStr": "Melihat dermaga alami nelayan, santai pesisir bakau",
+    "aktivitas": [
+      "Wisata Pantai"
+    ],
+    "atraksi": "Teluk tenang alami perbatasan Indonesia-Timor Leste",
+    "fasilitasStr": "Lopo-lopo santai, warung ikan bakar, parkir",
+    "fasilitas": [
+      "Lopo-lopo santai",
+      "warung ikan bakar",
+      "parkir"
+    ],
+    "teksTiket": "Rp5.000",
+    "teksAlat": "-",
+    "level": "Pemula",
+    "sumber": "Dispar Belu NTT",
+    "hargaTiketMasuk": 5000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": null,
+    "rangeHargaAktivitas": null,
+    "rangeHargaAktivitasLabel": null,
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": null,
+    "estimasiTotalPerOrang": 5000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "pelampung-pantai",
+        "nama": "Ban Renang / Pelampung Santai",
+        "kategoriAktivitas": "Berenang",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelampung rekreasi untuk bermain ombak tenang di tepi pantai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": -9,
+    "longitude": 124.8833,
+    "kuliner": [
+      {
+        "id": "BNT-77-KUL-1",
+        "nama": "Warung Ikan Bakar Sambal Matah Teluk",
+        "kategori": "Seafood Khas Bali",
+        "menuAndalan": "Ikan Kakap Bakar Sambal Matah, Pelecing Kangkung, Udang Bakar Jimbaran",
+        "estimasiHarga": "Rp40.000 – Rp90.000 / orang",
+        "rating": 4.9,
+        "latitude": -9.0026,
+        "longitude": 124.8796,
+        "jarakKm": 0.5
+      },
+      {
+        "id": "BNT-77-KUL-2",
+        "nama": "Resto Pesisir & Sunset Lounge Teluk",
+        "kategori": "Seafood & Grill Modern",
+        "menuAndalan": "Grilled Seafood Platter, Calamari Crispy, Fresh Coconut",
+        "estimasiHarga": "Rp50.000 – Rp120.000 / orang",
+        "rating": 4.8,
+        "latitude": -8.9892,
+        "longitude": 124.8823,
+        "jarakKm": 1.2
+      },
+      {
+        "id": "BNT-77-KUL-3",
+        "nama": "Warung Lokal Ayam Betutu & Sup Ikan Teluk",
+        "kategori": "Masakan Khas Daerah",
+        "menuAndalan": "Sup Kepala Ikan Segar, Nasi Campur Bali, Es Jeruk Nipis",
+        "estimasiHarga": "Rp25.000 – Rp55.000 / orang",
+        "rating": 4.7,
+        "latitude": -9.0072,
+        "longitude": 124.899,
+        "jarakKm": 1.9
+      }
+    ]
+  },
+  {
+    "id": "SLW-41",
+    "nama": "Pulau Sombori (Tebing Kahyangan)",
+    "lokasi": "Morowali, Sulawesi Tengah",
+    "kabKota": "Morowali",
+    "provinsi": "Sulawesi Tengah",
+    "wilayah": "Sulawesi",
+    "wilayahIdx": 4,
+    "jenisWisata": "Gugusan Atol & Tebing Karst",
+    "aktivitasStr": "Cliff jumping, mendaki Tebing Kahyangan, snorkeling laguna",
+    "aktivitas": [
+      "Snorkeling"
+    ],
+    "atraksi": "Raja Ampat-nya Sulawesi Tengah dengan goa berlian dan laguna toska",
+    "fasilitasStr": "Homestay terapung suku Bajo, perahu katinting",
+    "fasilitas": [
+      "Homestay terapung suku Bajo",
+      "perahu katinting"
+    ],
+    "teksTiket": "Rp30.000",
+    "teksAlat": "Sewa katinting trip Rp400–700rb",
+    "level": "Menengah",
+    "sumber": "Dispar Morowali",
+    "hargaTiketMasuk": 30000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 400000,
+    "rangeHargaAktivitas": "250k-500k",
+    "rangeHargaAktivitasLabel": "Rp250.000 – Rp500.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 400000,
+    "estimasiTotalPerOrang": 430000,
+    "rangeHargaTotal": "250k-500k",
+    "rangeHargaTotalLabel": "Rp250.000 – Rp500.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 400000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "latitude": -3.25,
+    "longitude": 122.3833,
+    "kuliner": [
+      {
+        "id": "SLW-41-KUL-1",
+        "nama": "RM Ikan Bakar Rica & Colo-Colo Pulau",
+        "kategori": "Seafood Khas Sulawesi",
+        "menuAndalan": "Ikan Baronang Bakar Rica, Sambal Dabu-Dabu Lilin, Sayur Kangkung Bunga Pepaya",
+        "estimasiHarga": "Rp35.000 – Rp80.000 / orang",
+        "rating": 4.9,
+        "latitude": -3.2421,
+        "longitude": 122.3851,
+        "jarakKm": 0.9
+      },
+      {
+        "id": "SLW-41-KUL-2",
+        "nama": "Warung Makan Coto & Konro Pesisir Pulau",
+        "kategori": "Masakan Tradisional Bugis/Makassar",
+        "menuAndalan": "Coto Makassar Daging Segar, Pallubasa Telur, Es Pisang Ijo",
+        "estimasiHarga": "Rp25.000 – Rp50.000 / orang",
+        "rating": 4.8,
+        "latitude": -3.2598,
+        "longitude": 122.3939,
+        "jarakKm": 1.6
+      },
+      {
+        "id": "SLW-41-KUL-3",
+        "nama": "Kedai Kopi & Kue Tradisional Pulau",
+        "kategori": "Kafe Santai Pesisir",
+        "menuAndalan": "Kopi Toraja / Kopi Gie, Panada Segar, Kelapa Muda",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.7,
+        "latitude": -3.2561,
+        "longitude": 122.3635,
+        "jarakKm": 2.3
+      }
+    ]
+  },
+  {
+    "id": "SLW-42",
+    "nama": "Pulau Labengki (Blue Lagoon)",
+    "lokasi": "Konawe Utara, Sulawesi Tenggara",
+    "kabKota": "Konawe Utara",
+    "provinsi": "Sulawesi Tenggara",
+    "wilayah": "Sulawesi",
+    "wilayahIdx": 4,
+    "jenisWisata": "Laguna Kima & Teluk Cinta",
+    "aktivitasStr": "Snorkeling kima raksasa (Tridacna), trekking Teluk Cinta",
+    "aktivitas": [
+      "Snorkeling",
+      "Trekking & Panjat"
+    ],
+    "atraksi": "Habitat kerang raksasa kima dan laguna berbentuk hati",
+    "fasilitasStr": "Labengki resort, homestay desa, sewa snorkel",
+    "fasilitas": [
+      "Labengki resort",
+      "homestay desa",
+      "sewa snorkel"
+    ],
+    "teksTiket": "Rp30.000",
+    "teksAlat": "Snorkel Rp50rb; perahu trip Rp500rb",
+    "level": "Pemula",
+    "sumber": "Dinas Pariwisata Sultra",
+    "hargaTiketMasuk": 30000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 50000,
+    "rangeHargaAktivitas": "di-bawah-100k",
+    "rangeHargaAktivitasLabel": "< Rp100.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 50000,
+    "estimasiTotalPerOrang": 80000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 50000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      },
+      {
+        "id": "sewa-perahu",
+        "nama": "Sewa Perahu Nelayan / Wisata Keliling",
+        "kategoriAktivitas": "Island Hopping",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 350000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Perahu motor tradisional / speed boat untuk trip hopping dan melihat atraksi bahari."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "latitude": -3.45,
+    "longitude": 122.45,
+    "kuliner": [
+      {
+        "id": "SLW-42-KUL-1",
+        "nama": "RM Ikan Bakar Rica & Colo-Colo Pulau",
+        "kategori": "Seafood Khas Sulawesi",
+        "menuAndalan": "Ikan Baronang Bakar Rica, Sambal Dabu-Dabu Lilin, Sayur Kangkung Bunga Pepaya",
+        "estimasiHarga": "Rp35.000 – Rp80.000 / orang",
+        "rating": 4.9,
+        "latitude": -3.4448,
+        "longitude": 122.4562,
+        "jarakKm": 0.9
+      },
+      {
+        "id": "SLW-42-KUL-2",
+        "nama": "Warung Makan Coto & Konro Pesisir Pulau",
+        "kategori": "Masakan Tradisional Bugis/Makassar",
+        "menuAndalan": "Coto Makassar Daging Segar, Pallubasa Telur, Es Pisang Ijo",
+        "estimasiHarga": "Rp25.000 – Rp50.000 / orang",
+        "rating": 4.8,
+        "latitude": -3.4642,
+        "longitude": 122.4525,
+        "jarakKm": 1.6
+      },
+      {
+        "id": "SLW-42-KUL-3",
+        "nama": "Kedai Kopi & Kue Tradisional Pulau",
+        "kategori": "Kafe Santai Pesisir",
+        "menuAndalan": "Kopi Toraja / Kopi Gie, Panada Segar, Kelapa Muda",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.7,
+        "latitude": -3.4429,
+        "longitude": 122.4305,
+        "jarakKm": 2.3
+      }
+    ]
+  },
+  {
+    "id": "SLW-43",
+    "nama": "Pantai Biluhu Timur",
+    "lokasi": "Gorontalo, Gorontalo",
+    "kabKota": "Gorontalo",
+    "provinsi": "Gorontalo",
+    "wilayah": "Sulawesi",
+    "wilayahIdx": 4,
+    "jenisWisata": "Tebing Bawah Laut & Snorkeling",
+    "aktivitasStr": "Diving dinding karang, snorkeling di tepi tebing laut",
+    "aktivitas": [
+      "Snorkeling",
+      "Diving"
+    ],
+    "atraksi": "Terumbu karang curam tepat beberapa meter dari bibir pantai",
+    "fasilitasStr": "Diving resort lokal, gazebo tepi laut",
+    "fasilitas": [
+      "Diving resort lokal",
+      "gazebo tepi laut"
+    ],
+    "teksTiket": "Rp10.000",
+    "teksAlat": "Sewa snorkel Rp35rb; dive Rp600rb",
+    "level": "Pemula",
+    "sumber": "Dispar Gorontalo",
+    "hargaTiketMasuk": 10000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 600000,
+    "rangeHargaAktivitas": "500k-1jt",
+    "rangeHargaAktivitasLabel": "Rp500.000 – Rp1.000.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 35000,
+    "estimasiTotalPerOrang": 45000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 35000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      },
+      {
+        "id": "masker-fins-diving",
+        "nama": "Masker & Fins Diving",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 50000,
+        "tingkatKeahlian": "Semua Level",
+        "keterangan": "Masker silikon kedap air bertekanan dan open-heel fins."
+      },
+      {
+        "id": "wetsuit-diving",
+        "nama": "Wetsuit Selam",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 50000,
+        "tingkatKeahlian": "Semua Level",
+        "keterangan": "Pakaian selam neoprena pelindung suhu tubuh dan sengatan ubur-ubur."
+      },
+      {
+        "id": "tabung-scuba",
+        "nama": "Tabung Scuba (Oksigen)",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 100000,
+        "tingkatKeahlian": "Menengah",
+        "keterangan": "Tabung udara terkompresi dengan pengisian udara bersih standar PADI/SSI."
+      },
+      {
+        "id": "bcd-regulator",
+        "nama": "BCD & Regulator Selam",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 200000,
+        "tingkatKeahlian": "Menengah",
+        "keterangan": "Buoyancy Control Device dan sistem pernafasan regulator 1st & 2nd stage."
+      },
+      {
+        "id": "paket-fun-dive",
+        "nama": "Paket Fun Dive Lengkap (Alat + Guide + Kapal)",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 750000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Discovery Scuba Dive (DSD) dengan bimbingan instruktur langsung untuk pemula non-sertifikasi."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=800&q=80",
+    "latitude": 0.45,
+    "longitude": 123.0167,
+    "kuliner": [
+      {
+        "id": "SLW-43-KUL-1",
+        "nama": "RM Ikan Bakar Rica & Colo-Colo Pantai",
+        "kategori": "Seafood Khas Sulawesi",
+        "menuAndalan": "Ikan Baronang Bakar Rica, Sambal Dabu-Dabu Lilin, Sayur Kangkung Bunga Pepaya",
+        "estimasiHarga": "Rp35.000 – Rp80.000 / orang",
+        "rating": 4.9,
+        "latitude": 0.4504,
+        "longitude": 123.0248,
+        "jarakKm": 0.9
+      },
+      {
+        "id": "SLW-43-KUL-2",
+        "nama": "Warung Makan Coto & Konro Pesisir Pantai",
+        "kategori": "Masakan Tradisional Bugis/Makassar",
+        "menuAndalan": "Coto Makassar Daging Segar, Pallubasa Telur, Es Pisang Ijo",
+        "estimasiHarga": "Rp25.000 – Rp50.000 / orang",
+        "rating": 4.8,
+        "latitude": 0.4372,
+        "longitude": 123.0102,
+        "jarakKm": 1.6
+      },
+      {
+        "id": "SLW-43-KUL-3",
+        "nama": "Kedai Kopi & Kue Tradisional Pantai",
+        "kategori": "Kafe Santai Pesisir",
+        "menuAndalan": "Kopi Toraja / Kopi Gie, Panada Segar, Kelapa Muda",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.7,
+        "latitude": 0.4674,
+        "longitude": 123.0054,
+        "jarakKm": 2.3
+      }
+    ]
+  },
+  {
+    "id": "SLW-44",
+    "nama": "Gua Halo Tabung & Danau Mariona",
+    "lokasi": "Tojo Una-Una, Sulawesi Tengah",
+    "kabKota": "Tojo Una-Una",
+    "provinsi": "Sulawesi Tengah",
+    "wilayah": "Sulawesi",
+    "wilayahIdx": 4,
+    "jenisWisata": "Gua Laut Stalaktit & Danau Ubur-Ubur",
+    "aktivitasStr": "Cliff jumping ke air laut dalam gua, snorkeling ubur-ubur",
+    "aktivitas": [
+      "Snorkeling"
+    ],
+    "atraksi": "Gua vertikal berisi air laut biru kristal sedalam belasan meter",
+    "fasilitasStr": "Pemandu lokal Togean, tangga kayu, perahu",
+    "fasilitas": [
+      "Pemandu lokal Togean",
+      "tangga kayu",
+      "perahu"
+    ],
+    "teksTiket": "Rp20.000",
+    "teksAlat": "Sewa kapal keliling Rp400–800rb",
+    "level": "Menengah",
+    "sumber": "TN Kepulauan Togean",
+    "hargaTiketMasuk": 20000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 400000,
+    "rangeHargaAktivitas": "250k-500k",
+    "rangeHargaAktivitasLabel": "Rp250.000 – Rp500.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 400000,
+    "estimasiTotalPerOrang": 420000,
+    "rangeHargaTotal": "250k-500k",
+    "rangeHargaTotalLabel": "Rp250.000 – Rp500.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 400000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "latitude": -0.35,
+    "longitude": 121.9,
+    "kuliner": [
+      {
+        "id": "SLW-44-KUL-1",
+        "nama": "RM Ikan Bakar Rica & Colo-Colo Gua",
+        "kategori": "Seafood Khas Sulawesi",
+        "menuAndalan": "Ikan Baronang Bakar Rica, Sambal Dabu-Dabu Lilin, Sayur Kangkung Bunga Pepaya",
+        "estimasiHarga": "Rp35.000 – Rp80.000 / orang",
+        "rating": 4.9,
+        "latitude": -0.3545,
+        "longitude": 121.9067,
+        "jarakKm": 0.9
+      },
+      {
+        "id": "SLW-44-KUL-2",
+        "nama": "Warung Makan Coto & Konro Pesisir Gua",
+        "kategori": "Masakan Tradisional Bugis/Makassar",
+        "menuAndalan": "Coto Makassar Daging Segar, Pallubasa Telur, Es Pisang Ijo",
+        "estimasiHarga": "Rp25.000 – Rp50.000 / orang",
+        "rating": 4.8,
+        "latitude": -0.3563,
+        "longitude": 121.887,
+        "jarakKm": 1.6
+      },
+      {
+        "id": "SLW-44-KUL-3",
+        "nama": "Kedai Kopi & Kue Tradisional Gua",
+        "kategori": "Kafe Santai Pesisir",
+        "menuAndalan": "Kopi Toraja / Kopi Gie, Panada Segar, Kelapa Muda",
+        "estimasiHarga": "Rp15.000 – Rp35.000 / orang",
+        "rating": 4.7,
+        "latitude": -0.3293,
+        "longitude": 121.9014,
+        "jarakKm": 2.3
+      }
+    ]
+  },
+  {
+    "id": "MLK-25",
+    "nama": "Pulau Bair & Laguna Dullah",
+    "lokasi": "Maluku Tenggara, Maluku",
+    "kabKota": "Maluku Tenggara",
+    "provinsi": "Maluku",
+    "wilayah": "Maluku",
+    "wilayahIdx": 5,
+    "jenisWisata": "Labirin Karst & Air Zamrud",
+    "aktivitasStr": "Berenang di laguna tenang, melihat anak hiu karang",
+    "aktivitas": [
+      "Berenang",
+      "Satwa Laut"
+    ],
+    "atraksi": "Labirin tebing batu kapur dan air hijau toska di Kepulauan Kei",
+    "fasilitasStr": "Perahu jukung lokal, pemandu",
+    "fasilitas": [
+      "Perahu jukung lokal",
+      "pemandu"
+    ],
+    "teksTiket": "Rp25.000",
+    "teksAlat": "Sewa perahu jukung Rp350–500rb",
+    "level": "Pemula",
+    "sumber": "Dispar Maluku Tenggara",
+    "hargaTiketMasuk": 25000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 350000,
+    "rangeHargaAktivitas": "250k-500k",
+    "rangeHargaAktivitasLabel": "Rp250.000 – Rp500.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 350000,
+    "estimasiTotalPerOrang": 375000,
+    "rangeHargaTotal": "250k-500k",
+    "rangeHargaTotalLabel": "Rp250.000 – Rp500.000",
+    "peralatan": [
+      {
+        "id": "sewa-perahu",
+        "nama": "Sewa Perahu Nelayan / Wisata Keliling",
+        "kategoriAktivitas": "Island Hopping",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 350000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Perahu motor tradisional / speed boat untuk trip hopping dan melihat atraksi bahari."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
+    "latitude": -5.5833,
+    "longitude": 132.6833,
+    "kuliner": [
+      {
+        "id": "MLK-25-KUL-1",
+        "nama": "Rumah Makan Ikan Kuah Kuning & Papeda Pulau",
+        "kategori": "Kuliner Tradisional Maluku",
+        "menuAndalan": "Papeda Ikan Kuah Kuning Segar, Gohu Ikan Tuna Mentah, Ikan Asar Sambal Colo-Colo",
+        "estimasiHarga": "Rp30.000 – Rp75.000 / orang",
+        "rating": 4.9,
+        "latitude": -5.5893,
+        "longitude": 132.6854,
+        "jarakKm": 0.7
+      },
+      {
+        "id": "MLK-25-KUL-2",
+        "nama": "Warung Nelayan Segar Banda Pulau",
+        "kategori": "Seafood Bakar Rempah",
+        "menuAndalan": "Ikan Cakalang Bakar Rempah Pala, Cumi Bakar Hitam, Sambal Kenari",
+        "estimasiHarga": "Rp30.000 – Rp70.000 / orang",
+        "rating": 4.8,
+        "latitude": -5.5809,
+        "longitude": 132.6709,
+        "jarakKm": 1.4
+      },
+      {
+        "id": "MLK-25-KUL-3",
+        "nama": "Kedai Kopi Rujak Natsepa Pulau",
+        "kategori": "Camilan Ikonik Pesisir",
+        "menuAndalan": "Rujak Buah Saus Kacang Bumbu Pala, Kopi Rarobang Rempah, Kelapa Dingin",
+        "estimasiHarga": "Rp15.000 – Rp30.000 / orang",
+        "rating": 4.8,
+        "latitude": -5.569,
+        "longitude": 132.6958,
+        "jarakKm": 2.1
+      }
+    ]
+  },
+  {
+    "id": "MLK-26",
+    "nama": "Pantai Ngurtafur (Pulau Waha)",
+    "lokasi": "Maluku Tenggara, Maluku",
+    "kabKota": "Maluku Tenggara",
+    "provinsi": "Maluku",
+    "wilayah": "Maluku",
+    "wilayahIdx": 5,
+    "jenisWisata": "Pasir Timbul Terpanjang Samudra",
+    "aktivitasStr": "Berjalan di pasir timbul 2 km ke tengah laut, lihat burung pelikan",
+    "aktivitas": [
+      "Wisata Pantai"
+    ],
+    "atraksi": "Lidah pasir putih memanjang 2 km membelah Laut Banda",
+    "fasilitasStr": "Perahu charter dari Debut, pos pemantau",
+    "fasilitas": [
+      "Perahu charter dari Debut",
+      "pos pemantau"
+    ],
+    "teksTiket": "Rp25.000",
+    "teksAlat": "Sewa kapal Rp600rb–1jt/kapal",
+    "level": "Pemula",
+    "sumber": "Dispar Maluku Tenggara",
+    "hargaTiketMasuk": 25000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 600000,
+    "rangeHargaAktivitas": "500k-1jt",
+    "rangeHargaAktivitasLabel": "Rp500.000 – Rp1.000.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 600000,
+    "estimasiTotalPerOrang": 625000,
+    "rangeHargaTotal": "500k-1jt",
+    "rangeHargaTotalLabel": "Rp500.000 – Rp1.000.000",
+    "peralatan": [
+      {
+        "id": "pelampung-pantai",
+        "nama": "Ban Renang / Pelampung Santai",
+        "kategoriAktivitas": "Berenang",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelampung rekreasi untuk bermain ombak tenang di tepi pantai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": -5.6667,
+    "longitude": 132.6167,
+    "kuliner": [
+      {
+        "id": "MLK-26-KUL-1",
+        "nama": "Rumah Makan Ikan Kuah Kuning & Papeda Pantai",
+        "kategori": "Kuliner Tradisional Maluku",
+        "menuAndalan": "Papeda Ikan Kuah Kuning Segar, Gohu Ikan Tuna Mentah, Ikan Asar Sambal Colo-Colo",
+        "estimasiHarga": "Rp30.000 – Rp75.000 / orang",
+        "rating": 4.9,
+        "latitude": -5.6727,
+        "longitude": 132.6147,
+        "jarakKm": 0.7
+      },
+      {
+        "id": "MLK-26-KUL-2",
+        "nama": "Warung Nelayan Segar Banda Pantai",
+        "kategori": "Seafood Bakar Rempah",
+        "menuAndalan": "Ikan Cakalang Bakar Rempah Pala, Cumi Bakar Hitam, Sambal Kenari",
+        "estimasiHarga": "Rp30.000 – Rp70.000 / orang",
+        "rating": 4.8,
+        "latitude": -5.6573,
+        "longitude": 132.6082,
+        "jarakKm": 1.4
+      },
+      {
+        "id": "MLK-26-KUL-3",
+        "nama": "Kedai Kopi Rujak Natsepa Pantai",
+        "kategori": "Camilan Ikonik Pesisir",
+        "menuAndalan": "Rujak Buah Saus Kacang Bumbu Pala, Kopi Rarobang Rempah, Kelapa Dingin",
+        "estimasiHarga": "Rp15.000 – Rp30.000 / orang",
+        "rating": 4.8,
+        "latitude": -5.6628,
+        "longitude": 132.6353,
+        "jarakKm": 2.1
+      }
+    ]
+  },
+  {
+    "id": "MLK-27",
+    "nama": "Pulau Rhun & Ay Banda",
+    "lokasi": "Maluku Tengah, Maluku",
+    "kabKota": "Maluku Tengah",
+    "provinsi": "Maluku",
+    "wilayah": "Maluku",
+    "wilayahIdx": 5,
+    "jenisWisata": "Pulau Bersejarah & Dinding Karang",
+    "aktivitasStr": "Wall diving, snorkeling penyu sisik, napak tilas sejarah pala",
+    "aktivitas": [
+      "Snorkeling",
+      "Diving",
+      "Satwa Laut",
+      "Sejarah & Budaya Bahari"
+    ],
+    "atraksi": "Pulau kecil bersejarah yang pernah ditukar dengan Manhattan New York",
+    "fasilitasStr": "Homestay nelayan Banda, dive center",
+    "fasilitas": [
+      "Homestay nelayan Banda",
+      "dive center"
+    ],
+    "teksTiket": "Rp20.000",
+    "teksAlat": "Fun dive Rp800rb; perahu Rp300rb",
+    "level": "Menengah",
+    "sumber": "Dispar Maluku Tengah",
+    "hargaTiketMasuk": 20000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 800000,
+    "rangeHargaAktivitas": "500k-1jt",
+    "rangeHargaAktivitasLabel": "Rp500.000 – Rp1.000.000",
+    "hargaPaketWisata": 300000,
+    "rangeHargaPaket": "250k-500k",
+    "biayaAlatMin": 300000,
+    "estimasiTotalPerOrang": 320000,
+    "rangeHargaTotal": "250k-500k",
+    "rangeHargaTotalLabel": "Rp250.000 – Rp500.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 300000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      },
+      {
+        "id": "masker-fins-diving",
+        "nama": "Masker & Fins Diving",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 50000,
+        "tingkatKeahlian": "Semua Level",
+        "keterangan": "Masker silikon kedap air bertekanan dan open-heel fins."
+      },
+      {
+        "id": "wetsuit-diving",
+        "nama": "Wetsuit Selam",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 50000,
+        "tingkatKeahlian": "Semua Level",
+        "keterangan": "Pakaian selam neoprena pelindung suhu tubuh dan sengatan ubur-ubur."
+      },
+      {
+        "id": "tabung-scuba",
+        "nama": "Tabung Scuba (Oksigen)",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 100000,
+        "tingkatKeahlian": "Menengah",
+        "keterangan": "Tabung udara terkompresi dengan pengisian udara bersih standar PADI/SSI."
+      },
+      {
+        "id": "bcd-regulator",
+        "nama": "BCD & Regulator Selam",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 200000,
+        "tingkatKeahlian": "Menengah",
+        "keterangan": "Buoyancy Control Device dan sistem pernafasan regulator 1st & 2nd stage."
+      },
+      {
+        "id": "paket-fun-dive",
+        "nama": "Paket Fun Dive Lengkap (Alat + Guide + Kapal)",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 750000,
+        "tingkatKeahlian": "Menengah",
+        "keterangan": "Fun dive berpemandu divemaster untuk penyelam bersertifikasi Open Water / Advanced."
+      },
+      {
+        "id": "sewa-perahu",
+        "nama": "Sewa Perahu Nelayan / Wisata Keliling",
+        "kategoriAktivitas": "Island Hopping",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 350000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Perahu motor tradisional / speed boat untuk trip hopping dan melihat atraksi bahari."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=800&q=80",
+    "latitude": -4.55,
+    "longitude": 129.6833,
+    "kuliner": [
+      {
+        "id": "MLK-27-KUL-1",
+        "nama": "Rumah Makan Ikan Kuah Kuning & Papeda Pulau",
+        "kategori": "Kuliner Tradisional Maluku",
+        "menuAndalan": "Papeda Ikan Kuah Kuning Segar, Gohu Ikan Tuna Mentah, Ikan Asar Sambal Colo-Colo",
+        "estimasiHarga": "Rp30.000 – Rp75.000 / orang",
+        "rating": 4.9,
+        "latitude": -4.5536,
+        "longitude": 129.6781,
+        "jarakKm": 0.7
+      },
+      {
+        "id": "MLK-27-KUL-2",
+        "nama": "Warung Nelayan Segar Banda Pulau",
+        "kategori": "Seafood Bakar Rempah",
+        "menuAndalan": "Ikan Cakalang Bakar Rempah Pala, Cumi Bakar Hitam, Sambal Kenari",
+        "estimasiHarga": "Rp30.000 – Rp70.000 / orang",
+        "rating": 4.8,
+        "latitude": -4.5374,
+        "longitude": 129.6822,
+        "jarakKm": 1.4
+      },
+      {
+        "id": "MLK-27-KUL-3",
+        "nama": "Kedai Kopi Rujak Natsepa Pulau",
+        "kategori": "Camilan Ikonik Pesisir",
+        "menuAndalan": "Rujak Buah Saus Kacang Bumbu Pala, Kopi Rarobang Rempah, Kelapa Dingin",
+        "estimasiHarga": "Rp15.000 – Rp30.000 / orang",
+        "rating": 4.8,
+        "latitude": -4.558,
+        "longitude": 129.7005,
+        "jarakKm": 2.1
+      }
+    ]
+  },
+  {
+    "id": "PPA-26",
+    "nama": "Danau Karst Lenmakana",
+    "lokasi": "Raja Ampat, Papua Barat Daya",
+    "kabKota": "Raja Ampat",
+    "provinsi": "Papua Barat Daya",
+    "wilayah": "Papua",
+    "wilayahIdx": 6,
+    "jenisWisata": "Danau Ubur-Ubur Emas Tanpa Sengat",
+    "aktivitasStr": "Snorkeling di tengah ribuan ubur-ubur emas terisolasi",
+    "aktivitas": [
+      "Snorkeling"
+    ],
+    "atraksi": "Danau air asin tertutup tebing karst jutaan tahun habitat ubur-ubur",
+    "fasilitasStr": "Pemandu adat Misool, tali panjat tebing",
+    "fasilitas": [
+      "Pemandu adat Misool",
+      "tali panjat tebing"
+    ],
+    "teksTiket": "Rp100.000",
+    "teksAlat": "Paket liveaboard / speedboat Rp2–4jt",
+    "level": "Menengah",
+    "sumber": "BLUD UPTD Raja Ampat",
+    "hargaTiketMasuk": 100000,
+    "rangeHargaTiket": "100k-250k",
+    "rangeHargaTiketLabel": "Rp100.000 – Rp250.000",
+    "hargaAktivitasMulai": 2000000,
+    "rangeHargaAktivitas": "di-atas-1jt",
+    "rangeHargaAktivitasLabel": "> Rp1.000.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 2000000,
+    "estimasiTotalPerOrang": 2100000,
+    "rangeHargaTotal": "di-atas-1jt",
+    "rangeHargaTotalLabel": "> Rp1.000.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 2000000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "latitude": -1.95,
+    "longitude": 130.3333,
+    "kuliner": [
+      {
+        "id": "PPA-26-KUL-1",
+        "nama": "RM Ikan Bakar Papua & Sambal Dabu-Dabu Danau",
+        "kategori": "Seafood Khas Papua",
+        "menuAndalan": "Ikan Bobara Bakar Arang, Ikan Kuah Asam Segar, Tumis Kangkung Belacan",
+        "estimasiHarga": "Rp40.000 – Rp90.000 / orang",
+        "rating": 4.9,
+        "latitude": -1.9526,
+        "longitude": 130.3325,
+        "jarakKm": 0.3
+      },
+      {
+        "id": "PPA-26-KUL-2",
+        "nama": "Warung Papeda Ikan Kakap Merah Danau",
+        "kategori": "Kuliner Tradisional Papua",
+        "menuAndalan": "Papeda Panas Ikan Kakap Kuah Kuning, Sambal Colo-Colo Lemon Cui",
+        "estimasiHarga": "Rp35.000 – Rp80.000 / orang",
+        "rating": 4.8,
+        "latitude": -1.9433,
+        "longitude": 130.3273,
+        "jarakKm": 1
+      },
+      {
+        "id": "PPA-26-KUL-3",
+        "nama": "Kafe Pesisir Teluk Pasir Danau",
+        "kategori": "Kafe Pesisir & Sunset",
+        "menuAndalan": "Kopi Wamena Robusta/Arabika, Pisang Goreng Sambal, Kelapa Segar",
+        "estimasiHarga": "Rp20.000 – Rp40.000 / orang",
+        "rating": 4.7,
+        "latitude": -1.9468,
+        "longitude": 130.3483,
+        "jarakKm": 1.7
+      }
+    ]
+  },
+  {
+    "id": "PPA-27",
+    "nama": "Kali Biru Warsambin",
+    "lokasi": "Raja Ampat, Papua Barat Daya",
+    "kabKota": "Raja Ampat",
+    "provinsi": "Papua Barat Daya",
+    "wilayah": "Papua",
+    "wilayahIdx": 6,
+    "jenisWisata": "Sungai Air Sejuk Teluk Mayalibit",
+    "aktivitasStr": "Berenang di air tawar es alami dekat pesisir mangrove",
+    "aktivitas": [
+      "Berenang"
+    ],
+    "atraksi": "Sungai alami berwarna biru pekat di tengah rimba dekat teluk",
+    "fasilitasStr": "Jembatan kayu, gazebo, pelampung",
+    "fasilitas": [
+      "Jembatan kayu",
+      "gazebo",
+      "pelampung"
+    ],
+    "teksTiket": "Rp30.000",
+    "teksAlat": "Pelampung ban Rp20rb",
+    "level": "Pemula",
+    "sumber": "Dinas Pariwisata Raja Ampat",
+    "hargaTiketMasuk": 30000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 20000,
+    "rangeHargaAktivitas": "di-bawah-100k",
+    "rangeHargaAktivitasLabel": "< Rp100.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 20000,
+    "estimasiTotalPerOrang": 50000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "pelampung-pantai",
+        "nama": "Ban Renang / Pelampung Santai",
+        "kategoriAktivitas": "Berenang",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelampung rekreasi untuk bermain ombak tenang di tepi pantai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80",
+    "latitude": -0.3167,
+    "longitude": 130.85,
+    "kuliner": [
+      {
+        "id": "PPA-27-KUL-1",
+        "nama": "RM Ikan Bakar Papua & Sambal Dabu-Dabu Kali",
+        "kategori": "Seafood Khas Papua",
+        "menuAndalan": "Ikan Bobara Bakar Arang, Ikan Kuah Asam Segar, Tumis Kangkung Belacan",
+        "estimasiHarga": "Rp40.000 – Rp90.000 / orang",
+        "rating": 4.9,
+        "latitude": -0.3183,
+        "longitude": 130.8478,
+        "jarakKm": 0.3
+      },
+      {
+        "id": "PPA-27-KUL-2",
+        "nama": "Warung Papeda Ikan Kakap Merah Kali",
+        "kategori": "Kuliner Tradisional Papua",
+        "menuAndalan": "Papeda Panas Ikan Kakap Kuah Kuning, Sambal Colo-Colo Lemon Cui",
+        "estimasiHarga": "Rp35.000 – Rp80.000 / orang",
+        "rating": 4.8,
+        "latitude": -0.3077,
+        "longitude": 130.8492,
+        "jarakKm": 1
+      },
+      {
+        "id": "PPA-27-KUL-3",
+        "nama": "Kafe Pesisir Teluk Pasir Kali",
+        "kategori": "Kafe Pesisir & Sunset",
+        "menuAndalan": "Kopi Wamena Robusta/Arabika, Pisang Goreng Sambal, Kelapa Segar",
+        "estimasiHarga": "Rp20.000 – Rp40.000 / orang",
+        "rating": 4.7,
+        "latitude": -0.3232,
+        "longitude": 130.8639,
+        "jarakKm": 1.7
+      }
+    ]
+  },
+  {
+    "id": "PPA-28",
+    "nama": "Pantai Tanjung Kasuari",
+    "lokasi": "Sorong, Papua Barat Daya",
+    "kabKota": "Sorong",
+    "provinsi": "Papua Barat Daya",
+    "wilayah": "Papua",
+    "wilayahIdx": 6,
+    "jenisWisata": "Pantai Pesisir Pohon Kasuari",
+    "aktivitasStr": "Berenang, santai di bawah pohon cemara kasuari, sunset",
+    "aktivitas": [
+      "Berenang",
+      "Fotografi & Sunset"
+    ],
+    "atraksi": "Pesisir utara Sorong dengan pohon kasuari dan ombak Selat Dampier",
+    "fasilitasStr": "Gazebo, warung makan kelapa, parkir",
+    "fasilitas": [
+      "Gazebo",
+      "warung makan kelapa",
+      "parkir"
+    ],
+    "teksTiket": "Rp10.000",
+    "teksAlat": "-",
+    "level": "Pemula",
+    "sumber": "Dinas Pariwisata Kota Sorong",
+    "hargaTiketMasuk": 10000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": null,
+    "rangeHargaAktivitas": null,
+    "rangeHargaAktivitasLabel": null,
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": null,
+    "estimasiTotalPerOrang": 10000,
+    "rangeHargaTotal": "di-bawah-100k",
+    "rangeHargaTotalLabel": "< Rp100.000",
+    "peralatan": [
+      {
+        "id": "pelampung-pantai",
+        "nama": "Ban Renang / Pelampung Santai",
+        "kategoriAktivitas": "Berenang",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Pelampung rekreasi untuk bermain ombak tenang di tepi pantai."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "latitude": -0.8333,
+    "longitude": 131.25,
+    "kuliner": [
+      {
+        "id": "PPA-28-KUL-1",
+        "nama": "RM Ikan Bakar Papua & Sambal Dabu-Dabu Pantai",
+        "kategori": "Seafood Khas Papua",
+        "menuAndalan": "Ikan Bobara Bakar Arang, Ikan Kuah Asam Segar, Tumis Kangkung Belacan",
+        "estimasiHarga": "Rp40.000 – Rp90.000 / orang",
+        "rating": 4.9,
+        "latitude": -0.8332,
+        "longitude": 131.2473,
+        "jarakKm": 0.3
+      },
+      {
+        "id": "PPA-28-KUL-2",
+        "nama": "Warung Papeda Ikan Kakap Merah Pantai",
+        "kategori": "Kuliner Tradisional Papua",
+        "menuAndalan": "Papeda Panas Ikan Kakap Kuah Kuning, Sambal Colo-Colo Lemon Cui",
+        "estimasiHarga": "Rp35.000 – Rp80.000 / orang",
+        "rating": 4.8,
+        "latitude": -0.8257,
+        "longitude": 131.2548,
+        "jarakKm": 1
+      },
+      {
+        "id": "PPA-28-KUL-3",
+        "nama": "Kafe Pesisir Teluk Pasir Pantai",
+        "kategori": "Kafe Pesisir & Sunset",
+        "menuAndalan": "Kopi Wamena Robusta/Arabika, Pisang Goreng Sambal, Kelapa Segar",
+        "estimasiHarga": "Rp20.000 – Rp40.000 / orang",
+        "rating": 4.7,
+        "latitude": -0.8468,
+        "longitude": 131.2572,
+        "jarakKm": 1.7
+      }
+    ]
+  },
+  {
+    "id": "PPA-29",
+    "nama": "Pantai Pasir Enam",
+    "lokasi": "Jayapura, Papua",
+    "kabKota": "Jayapura",
+    "provinsi": "Papua",
+    "wilayah": "Papua",
+    "wilayahIdx": 6,
+    "jenisWisata": "Pantai Teluk Tersembunyi Pasifik",
+    "aktivitasStr": "Snorkeling karang alami, camping tepi tebing",
+    "aktivitas": [
+      "Snorkeling",
+      "Camping Pantai"
+    ],
+    "atraksi": "Pantai tersembunyi berpasir putih bersih di balik tanjung Jayapura",
+    "fasilitasStr": "Perahu carter dari Dok IX, area camping",
+    "fasilitas": [
+      "Perahu carter dari Dok IX",
+      "area camping"
+    ],
+    "teksTiket": "Rp15.000",
+    "teksAlat": "Sewa perahu nelayan Rp250–400rb",
+    "level": "Pemula",
+    "sumber": "Disbudpar Kota Jayapura",
+    "hargaTiketMasuk": 15000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 250000,
+    "rangeHargaAktivitas": "100k-250k",
+    "rangeHargaAktivitasLabel": "Rp100.000 – Rp250.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 250000,
+    "estimasiTotalPerOrang": 265000,
+    "rangeHargaTotal": "250k-500k",
+    "rangeHargaTotalLabel": "Rp250.000 – Rp500.000",
+    "peralatan": [
+      {
+        "id": "masker-snorkel",
+        "nama": "Masker & Snorkel",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Alat bernafas dasar di permukaan laut, sangat ramah pemula."
+      },
+      {
+        "id": "fins-snorkeling",
+        "nama": "Fins (Kaki Katak)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 25000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Membantu mobilitas berenang di permukaan dan kedalaman dangkal."
+      },
+      {
+        "id": "life-jacket",
+        "nama": "Pelampung / Life Jacket",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 20000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Wajib untuk pemula yang belum mahir berenang agar tetap aman dan nyaman mengapung."
+      },
+      {
+        "id": "snorkel-set-lengkap",
+        "nama": "Full Set Snorkeling (Masker, Snorkel, Fins, Pelampung)",
+        "kategoriAktivitas": "Snorkeling",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 250000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Paket lengkap alat snorkeling siap pakai."
+      },
+      {
+        "id": "sewa-perahu",
+        "nama": "Sewa Perahu Nelayan / Wisata Keliling",
+        "kategoriAktivitas": "Island Hopping",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 350000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Perahu motor tradisional / speed boat untuk trip hopping dan melihat atraksi bahari."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    "latitude": -2.5,
+    "longitude": 140.7333,
+    "kuliner": [
+      {
+        "id": "PPA-29-KUL-1",
+        "nama": "RM Ikan Bakar Papua & Sambal Dabu-Dabu Pantai",
+        "kategori": "Seafood Khas Papua",
+        "menuAndalan": "Ikan Bobara Bakar Arang, Ikan Kuah Asam Segar, Tumis Kangkung Belacan",
+        "estimasiHarga": "Rp40.000 – Rp90.000 / orang",
+        "rating": 4.9,
+        "latitude": -2.4983,
+        "longitude": 140.7312,
+        "jarakKm": 0.3
+      },
+      {
+        "id": "PPA-29-KUL-2",
+        "nama": "Warung Papeda Ikan Kakap Merah Pantai",
+        "kategori": "Kuliner Tradisional Papua",
+        "menuAndalan": "Papeda Panas Ikan Kakap Kuah Kuning, Sambal Colo-Colo Lemon Cui",
+        "estimasiHarga": "Rp35.000 – Rp80.000 / orang",
+        "rating": 4.8,
+        "latitude": -2.4968,
+        "longitude": 140.7417,
+        "jarakKm": 1
+      },
+      {
+        "id": "PPA-29-KUL-3",
+        "nama": "Kafe Pesisir Teluk Pasir Pantai",
+        "kategori": "Kafe Pesisir & Sunset",
+        "menuAndalan": "Kopi Wamena Robusta/Arabika, Pisang Goreng Sambal, Kelapa Segar",
+        "estimasiHarga": "Rp20.000 – Rp40.000 / orang",
+        "rating": 4.7,
+        "latitude": -2.5151,
+        "longitude": 140.7309,
+        "jarakKm": 1.7
+      }
+    ]
+  },
+  {
+    "id": "PPA-30",
+    "nama": "Kepulauan Mapia (Pulau Bras)",
+    "lokasi": "Supiori, Papua",
+    "kabKota": "Supiori",
+    "provinsi": "Papua",
+    "wilayah": "Papua",
+    "wilayahIdx": 6,
+    "jenisWisata": "Atol Terluar Samudra Pasifik",
+    "aktivitasStr": "Diving atol Pasifik, konservasi penyu hijau, mancing samudra",
+    "aktivitas": [
+      "Diving",
+      "Satwa Laut",
+      "Memancing"
+    ],
+    "atraksi": "Gugusan atol terluar Indonesia di utara khatulistiwa Samudra Pasifik",
+    "fasilitasStr": "Pos navigasi mercusuar, kapal perintis",
+    "fasilitas": [
+      "Pos navigasi mercusuar",
+      "kapal perintis"
+    ],
+    "teksTiket": "Rp50.000",
+    "teksAlat": "Kapal ekspedisi carter",
+    "level": "Mahir",
+    "sumber": "Kemenparekraf",
+    "hargaTiketMasuk": 50000,
+    "rangeHargaTiket": "di-bawah-100k",
+    "rangeHargaTiketLabel": "< Rp100.000",
+    "hargaAktivitasMulai": 3000000,
+    "rangeHargaAktivitas": "di-atas-1jt",
+    "rangeHargaAktivitasLabel": "> Rp1.000.000",
+    "hargaPaketWisata": null,
+    "rangeHargaPaket": null,
+    "biayaAlatMin": 3000000,
+    "estimasiTotalPerOrang": 3050000,
+    "rangeHargaTotal": "di-atas-1jt",
+    "rangeHargaTotalLabel": "> Rp1.000.000",
+    "peralatan": [
+      {
+        "id": "masker-fins-diving",
+        "nama": "Masker & Fins Diving",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 50000,
+        "tingkatKeahlian": "Semua Level",
+        "keterangan": "Masker silikon kedap air bertekanan dan open-heel fins."
+      },
+      {
+        "id": "wetsuit-diving",
+        "nama": "Wetsuit Selam",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 50000,
+        "tingkatKeahlian": "Semua Level",
+        "keterangan": "Pakaian selam neoprena pelindung suhu tubuh dan sengatan ubur-ubur."
+      },
+      {
+        "id": "tabung-scuba",
+        "nama": "Tabung Scuba (Oksigen)",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 100000,
+        "tingkatKeahlian": "Mahir",
+        "keterangan": "Tabung udara terkompresi dengan pengisian udara bersih standar PADI/SSI."
+      },
+      {
+        "id": "bcd-regulator",
+        "nama": "BCD & Regulator Selam",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 200000,
+        "tingkatKeahlian": "Mahir",
+        "keterangan": "Buoyancy Control Device dan sistem pernafasan regulator 1st & 2nd stage."
+      },
+      {
+        "id": "paket-fun-dive",
+        "nama": "Paket Fun Dive Lengkap (Alat + Guide + Kapal)",
+        "kategoriAktivitas": "Diving",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 750000,
+        "tingkatKeahlian": "Menengah",
+        "keterangan": "Fun dive berpemandu divemaster untuk penyelam bersertifikasi Open Water / Advanced."
+      },
+      {
+        "id": "sewa-perahu",
+        "nama": "Sewa Perahu Nelayan / Wisata Keliling",
+        "kategoriAktivitas": "Island Hopping",
+        "tersedia": true,
+        "dapatDisewa": true,
+        "hargaSewa": 350000,
+        "tingkatKeahlian": "Pemula",
+        "keterangan": "Perahu motor tradisional / speed boat untuk trip hopping dan melihat atraksi bahari."
+      }
+    ],
+    "adaAlatDisewa": true,
+    "foto": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=800&q=80",
+    "latitude": 0.9167,
+    "longitude": 134.3333,
+    "kuliner": [
+      {
+        "id": "PPA-30-KUL-1",
+        "nama": "RM Ikan Bakar Papua & Sambal Dabu-Dabu Kepulauan",
+        "kategori": "Seafood Khas Papua",
+        "menuAndalan": "Ikan Bobara Bakar Arang, Ikan Kuah Asam Segar, Tumis Kangkung Belacan",
+        "estimasiHarga": "Rp40.000 – Rp90.000 / orang",
+        "rating": 4.9,
+        "latitude": 0.9192,
+        "longitude": 134.3322,
+        "jarakKm": 0.3
+      },
+      {
+        "id": "PPA-30-KUL-2",
+        "nama": "Warung Papeda Ikan Kakap Merah Kepulauan",
+        "kategori": "Kuliner Tradisional Papua",
+        "menuAndalan": "Papeda Panas Ikan Kakap Kuah Kuning, Sambal Colo-Colo Lemon Cui",
+        "estimasiHarga": "Rp35.000 – Rp80.000 / orang",
+        "rating": 4.8,
+        "latitude": 0.9158,
+        "longitude": 134.3423,
+        "jarakKm": 1
+      },
+      {
+        "id": "PPA-30-KUL-3",
+        "nama": "Kafe Pesisir Teluk Pasir Kepulauan",
+        "kategori": "Kafe Pesisir & Sunset",
+        "menuAndalan": "Kopi Wamena Robusta/Arabika, Pisang Goreng Sambal, Kelapa Segar",
+        "estimasiHarga": "Rp20.000 – Rp40.000 / orang",
+        "rating": 4.7,
+        "latitude": 0.9043,
+        "longitude": 134.3243,
+        "jarakKm": 1.7
+      }
+    ]
   }
 ]
