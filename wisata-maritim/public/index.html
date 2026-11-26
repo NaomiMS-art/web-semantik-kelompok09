@@ -11,7 +11,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/chatbot.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <!-- LEAFLET MAP ASSETS WITH FALLBACK CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    if (typeof L === 'undefined') {
+      document.write('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">');
+      document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"><\/script>');
+    }
+  </script>
 </head>
 <body>
 
@@ -103,7 +111,7 @@
       </nav>
 
       <div class="header-actions">
-        <button class="theme-btn" id="btn-theme-toggle" title="Ganti Mode Tampilan">
+        <button class="theme-btn" id="btn-theme-toggle" type="button" onclick="toggleTheme()" title="Ganti Mode Tampilan" aria-label="Ganti Mode Tampilan">
           <svg class="svg-icon"><use href="#icon-moon"/></svg>
         </button>
       </div>
@@ -134,62 +142,39 @@
   <!-- ==============================================================================
        HALAMAN 1: BERANDA (HOMEPAGE)
        ============================================================================== -->
-  <div class="tab-view-section" id="view-home">
+  <section class="tab-view-section page-scroll-section" id="view-home">
     
     <!-- HERO SECTION WITH PRO SEARCH (MENYATU DENGAN BACKGROUND BERGRADASI & SEARCH BAR DITENGAH) -->
     <section class="hero-pro">
       <div class="hero-content-pro">
-        <div class="hero-badge-pill">
-          <span class="pulse-indicator"></span>
-          <span>Knowledge Graph &amp; Rekomendasi Maritim Nusantara</span>
-        </div>
         <h2 class="hero-title-pro">Jelajahi Wisata Maritim Nusantara Berdasarkan Budget &amp; Kemampuan</h2>
         <p class="hero-subtitle-pro">
           Mesin pencari semantik cerdas menghubungkan 300+ destinasi maritim Indonesia dengan <strong>5 kategori range harga Google</strong>, <strong>tingkat keahlian pengguna</strong>, serta <strong>katalog peralatan &amp; persewaan</strong> lengkap.
         </p>
 
-        <!-- PRO SEARCH BAR (DITENGAH & PROPORSIONAL SATU BARIS DI DESKTOP) -->
+        <!-- PRO SEARCH BAR (FOKUS INPUT TUNGGAL DI BERANDA) -->
         <div class="search-card-pro">
-          <form id="hero-search-form" class="search-form-row" role="search">
-            <div class="search-field-main" style="position:relative">
+          <form id="hero-search-form" class="search-form-row hero-single-search" role="search">
+            <div class="search-field-main" style="position:relative;width:100%">
               <svg class="svg-icon"><use href="#icon-search"/></svg>
               <input 
                 type="search" 
                 id="hero-search-input" 
-                placeholder="Cari aktivitas, lokasi, atau budget..." 
+                placeholder="Cari aktivitas, lokasi, atau budget (contoh: snorkeling pemula budget 250rb)..." 
                 autocomplete="off"
               >
               <!-- AUTOCOMPLETE / SEARCH SUGGESTIONS DROPDOWN -->
               <div class="search-suggestions-dropdown" id="hero-search-suggestions" style="display:none"></div>
             </div>
-
-            <div class="search-field-select">
-              <svg class="svg-icon"><use href="#icon-target"/></svg>
-              <select id="hero-level-select" aria-label="Tingkat Keahlian">
-                <option value="">Semua Tingkat</option>
-                <option value="Pemula">Tingkat Pemula</option>
-                <option value="Menengah">Tingkat Menengah</option>
-                <option value="Mahir">Tingkat Mahir</option>
-              </select>
-            </div>
-
-            <div class="search-field-select">
-              <svg class="svg-icon"><use href="#icon-wallet"/></svg>
-              <select id="hero-range-select" aria-label="Range Harga">
-                <option value="">Semua Range Harga</option>
-                <option value="di-bawah-100k">&lt; Rp100.000</option>
-                <option value="100k-250k">Rp100.000 – Rp250.000</option>
-                <option value="250k-500k">Rp250.000 – Rp500.000</option>
-                <option value="500k-1jt">Rp500.000 – Rp1.000.000</option>
-                <option value="di-atas-1jt">&gt; Rp1.000.000</option>
-              </select>
-            </div>
-
-            <button type="submit" class="btn-search-exec">
-              <span>Cari Semantik</span>
-              <svg class="svg-icon"><use href="#icon-arrow-right"/></svg>
-            </button>
           </form>
+        </div>
+
+        <!-- TOMBOL CARI SEMANTIK DIPINDAHKAN DI BAWAH SEARCH BAR -->
+        <div class="hero-search-btn-wrapper">
+          <button type="submit" form="hero-search-form" class="btn-search-exec hero-btn-exec">
+            <span>Cari Semantik</span>
+            <svg class="svg-icon"><use href="#icon-arrow-right"/></svg>
+          </button>
         </div>
 
         <!-- TRENDING & PALING SERING DICARI PILLS (DITENGAH DI BAWAHNYA) -->
@@ -240,283 +225,19 @@
       </div>
     </section>
 
-    <!-- STATS STRIP -->
-    <div class="stats-section-wrap">
-      <div class="stats-card-container">
-        <div class="stat-box">
-          <div class="stat-icon-wrap">
-            <svg class="svg-icon svg-icon-lg"><use href="#icon-compass"/></svg>
-          </div>
-          <div class="stat-data">
-            <strong>300+</strong>
-            <span>Destinasi Maritim (7 Wilayah)</span>
-          </div>
-        </div>
-
-        <div class="stat-box">
-          <div class="stat-icon-wrap" style="color:var(--amber-accent);background:#fef3c7">
-            <svg class="svg-icon svg-icon-lg"><use href="#icon-wallet"/></svg>
-          </div>
-          <div class="stat-data">
-            <strong>5 Range</strong>
-            <span>Filter Harga Google-Style</span>
-          </div>
-        </div>
-
-        <div class="stat-box">
-          <div class="stat-icon-wrap" style="color:var(--emerald-accent);background:#d1fae5">
-            <svg class="svg-icon svg-icon-lg"><use href="#icon-tool"/></svg>
-          </div>
-          <div class="stat-data">
-            <strong>Katalog Alat</strong>
-            <span>Status Ketersediaan &amp; Sewa</span>
-          </div>
-        </div>
-
-        <div class="stat-box">
-          <div class="stat-icon-wrap" style="color:#8b5cf6;background:#f3e8ff">
-            <svg class="svg-icon svg-icon-lg"><use href="#icon-database"/></svg>
-          </div>
-          <div class="stat-data">
-            <strong>3.950+</strong>
-            <span>Triples RDF Terstruktur W3C</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- KATEGORI WISATA MARITIM -->
-    <section class="home-section-container">
-      <div class="section-title-row">
-        <div>
-          <h2>Kategori Wisata Maritim</h2>
-          <p>Eksplorasi destinasi maritim Indonesia berdasarkan fokus aktivitas.</p>
-        </div>
-        <button type="button" class="btn-open-sparql-badge" onclick="switchTab('explorer')">
-          <span>Lihat Semua Destinasi</span>
-          <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-right"/></svg>
-        </button>
-      </div>
-
-      <div class="category-cards-grid">
-        <div class="category-tile" onclick="filterByCategory('Snorkeling')">
-          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="Snorkeling" loading="lazy">
-          <div class="category-tile-content">
-            <div class="category-tile-title">Bawah Laut &amp; Snorkeling</div>
-            <div class="category-tile-subtitle">Terumbu karang dangkal</div>
-          </div>
-        </div>
-
-        <div class="category-tile" onclick="filterByCategory('Selam')">
-          <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80" alt="Diving Scuba" loading="lazy">
-          <div class="category-tile-content">
-            <div class="category-tile-title">Diving &amp; Scuba</div>
-            <div class="category-tile-subtitle">Bangkai kapal &amp; wall dive</div>
-          </div>
-        </div>
-
-        <div class="category-tile" onclick="filterByCategory('Selancar')">
-          <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80" alt="Surfing" loading="lazy">
-          <div class="category-tile-content">
-            <div class="category-tile-title">Surfing &amp; Selancar</div>
-            <div class="category-tile-subtitle">Ombak samudra kelas dunia</div>
-          </div>
-        </div>
-
-        <div class="category-tile" onclick="filterByCategory('Pulau')">
-          <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=600&q=80" alt="Kepulauan" loading="lazy">
-          <div class="category-tile-content">
-            <div class="category-tile-title">Kepulauan &amp; Hopping</div>
-            <div class="category-tile-subtitle">Gugusan pulau &amp; laguna</div>
-          </div>
-        </div>
-
-        <div class="category-tile" onclick="filterByCategory('Satwa Laut')">
-          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Satwa Laut" loading="lazy">
-          <div class="category-tile-content">
-            <div class="category-tile-title">Konservasi Satwa Laut</div>
-            <div class="category-tile-subtitle">Penyu, manta &amp; hiu paus</div>
-          </div>
-        </div>
-
-        <div class="category-tile" onclick="filterByCategory('Sejarah')">
-          <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=600&q=80" alt="Budaya Maritim" loading="lazy">
-          <div class="category-tile-content">
-            <div class="category-tile-title">Sejarah &amp; Budaya Maritim</div>
-            <div class="category-tile-subtitle">Benteng &amp; tradisi pesisir</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- JELAJAHI 7 WILAYAH MARITIM NUSANTARA -->
-    <section class="home-section-container">
-      <div class="section-title-row">
-        <div>
-          <h2>Kategori Wilayah Nusantara</h2>
-          <p>Eksplorasi kekayaan maritim dari 7 kepulauan besar Indonesia dari Sabang sampai Merauke.</p>
-        </div>
-        <button type="button" class="btn-hero-action-pill" onclick="switchTab('map')">
-          <span>Lihat di Peta Interaktif</span>
-          <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-right"/></svg>
-        </button>
-      </div>
-
-      <div class="region-cards-grid">
-        <div class="region-tile" onclick="filterByRegion('Sumatra')">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Sumatra" loading="lazy">
-          <div class="region-tile-content">
-            <div class="region-tile-title">Sumatra</div>
-            <div class="region-tile-subtitle">Sabang, Belitung &amp; Nias</div>
-          </div>
-        </div>
-
-        <div class="region-tile" onclick="filterByRegion('Jawa')">
-          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="Jawa" loading="lazy">
-          <div class="region-tile-content">
-            <div class="region-tile-title">Jawa</div>
-            <div class="region-tile-subtitle">Karimunjawa &amp; Kep. Seribu</div>
-          </div>
-        </div>
-
-        <div class="region-tile" onclick="filterByRegion('Bali & Nusa Tenggara')">
-          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Bali & Nusa Tenggara" loading="lazy">
-          <div class="region-tile-content">
-            <div class="region-tile-title">Bali &amp; Nusa Tenggara</div>
-            <div class="region-tile-subtitle">Komodo, Penida &amp; Gili</div>
-          </div>
-        </div>
-
-        <div class="region-tile" onclick="filterByRegion('Kalimantan')">
-          <img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=600&q=80" alt="Kalimantan" loading="lazy">
-          <div class="region-tile-content">
-            <div class="region-tile-title">Kalimantan</div>
-            <div class="region-tile-subtitle">Derawan &amp; Maratua</div>
-          </div>
-        </div>
-
-        <div class="region-tile" onclick="filterByRegion('Sulawesi')">
-          <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80" alt="Sulawesi" loading="lazy">
-          <div class="region-tile-content">
-            <div class="region-tile-title">Sulawesi</div>
-            <div class="region-tile-subtitle">Bunaken &amp; Wakatobi</div>
-          </div>
-        </div>
-
-        <div class="region-tile" onclick="filterByRegion('Maluku')">
-          <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=600&q=80" alt="Maluku" loading="lazy">
-          <div class="region-tile-content">
-            <div class="region-tile-title">Maluku</div>
-            <div class="region-tile-subtitle">Banda Neira &amp; Pantai Ora</div>
-          </div>
-        </div>
-
-        <div class="region-tile" onclick="filterByRegion('Papua')">
-          <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=600&q=80" alt="Papua" loading="lazy">
-          <div class="region-tile-content">
-            <div class="region-tile-title">Papua</div>
-            <div class="region-tile-subtitle">Raja Ampat &amp; Cenderawasih</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- REKOMENDASI WISATA MARITIM TERDEKAT (GEOLOCATION API & FALLBACK KOTA) -->
-    <section class="home-section-container">
-      <div class="section-title-row nearby-header-row">
-        <div>
-          <h2>Wisata Maritim Terdekat dari Lokasimu</h2>
-          <p id="nearby-status-text">Deteksi posisi otomatis dengan GPS atau pilih kota acuan manual.</p>
-        </div>
-        
-        <!-- INTEGRATED UNIFIED LOCATION SELECTOR -->
-        <div class="nearby-location-bar">
-          <button type="button" class="btn-nearby-gps" id="btn-detect-gps" title="Deteksi lokasi saat ini dengan GPS">
-            <svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg>
-            <span>Deteksi Lokasi GPS</span>
-          </button>
-          
-          <span class="nearby-loc-divider">atau</span>
-          
-          <div class="nearby-city-picker">
-            <svg class="svg-icon svg-icon-xs nearby-city-icon"><use href="#icon-compass"/></svg>
-            <select id="select-city-fallback" class="nearby-city-select" aria-label="Pilih Kota Acuan">
-              <option value="">-- Pilih Kota Acuan --</option>
-              <option value="jakarta" selected>Jakarta / Jabodetabek</option>
-              <option value="medan">Medan (Sumut)</option>
-              <option value="padang">Padang (Sumbar)</option>
-              <option value="semarang">Semarang (Jateng)</option>
-              <option value="surabaya">Surabaya (Jatim)</option>
-              <option value="denpasar">Denpasar (Bali)</option>
-              <option value="mataram">Mataram (Lombok)</option>
-              <option value="balikpapan">Balikpapan (Kaltim)</option>
-              <option value="makassar">Makassar (Sulsel)</option>
-              <option value="manado">Manado (Sulut)</option>
-              <option value="ambon">Ambon (Maluku)</option>
-              <option value="jayapura">Jayapura (Papua)</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- PETA & RADAR TERDEKAT INTERAKTIF DENGAN LEGENDA & ARAH -->
-      <div id="home-nearby-map-wrapper" style="margin-top:1.25rem;margin-bottom:1.5rem">
-        <div id="home-nearby-map" style="width:100%;height:350px;border-radius:var(--radius-lg);border:1px solid var(--border-subtle);box-shadow:var(--shadow-sm);background:var(--bg-subtle)"></div>
-        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;margin-top:0.6rem;padding:0.75rem 1rem;background:var(--card-bg);border:1px solid var(--border-subtle);border-radius:var(--radius-md);font-size:0.78rem">
-          <div style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap">
-            <span style="font-weight:700;color:var(--text-main)">🗺️ Legenda Peta:</span>
-            <div style="display:flex;align-items:center;gap:0.4rem">
-              <span style="display:inline-block;width:14px;height:14px;background:#ef4444;border-radius:50%;border:2px solid white;box-shadow:0 0 8px rgba(239,68,68,0.9)"></span>
-              <span style="color:var(--text-main);font-weight:600">Posisi Acuan / GPS Anda</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:0.4rem">
-              <span style="display:inline-block;width:14px;height:14px;background:#0284c7;border-radius:50%;border:2px solid white;box-shadow:0 0 8px rgba(2,132,199,0.8)"></span>
-              <span style="color:var(--text-main);font-weight:600">Wisata Maritim Terdekat (#1 s/d #6)</span>
-            </div>
-          </div>
-          <div style="color:var(--text-muted);font-size:0.74rem">
-            🧭 <em>Garis putus-putus &amp; panah kompas menunjukkan arah serta jarak langsung (Haversine Formula)</em>
-          </div>
-        </div>
-      </div>
-
-      <div class="destinations-card-grid" id="nearby-destinations-grid">
-        <!-- Populated by JS -->
-      </div>
-    </section>
-
-    <!-- HIGHLIGHT BANNER CTA -->
-    <div class="home-section-container">
-      <div class="featured-strip-box">
-        <div class="featured-text">
-          <h3>Eksplorasi dengan Sistem Faceted Filter Kombinasi</h3>
-          <p>
-            Gunakan filter kombinasi: <strong>Wilayah + Jenis Wisata + Tingkat Keahlian + Range Harga + Peralatan + Fasilitas</strong> secara bersamaan untuk menemukan spot terbaik sesuai kebutuhan Anda.
-          </p>
-        </div>
-        <button type="button" class="btn-open-explorer-cta" onclick="switchTab('explorer')">
-          <span>Buka Mesin Pencari</span>
-          <svg class="svg-icon"><use href="#icon-arrow-right"/></svg>
-        </button>
-      </div>
-    </div>
-
-  </div>
+  </section>
 
   <!-- ==============================================================================
        HALAMAN 2: JELAJAH DESTINASI & FACETED FILTER (SEARCH ENGINE WITH SLIDES/PAGINATION)
        ============================================================================== -->
-  <div class="tab-view-section" id="view-explorer" style="display:none">
+  <section class="tab-view-section page-scroll-section" id="view-explorer">
     
     <!-- TOP SEARCH CONTROLS (KONTRAST TINGGI & PRESTISIUS MARITIM) -->
     <div class="explorer-hero-banner">
       <div class="explorer-hero-content">
         <h2 class="explorer-hero-title">
-          Mesin Pencari &amp; Faceted Filter Wisata Maritim
+          Mesin Pencari Wisata Maritim
         </h2>
-        <p class="explorer-hero-subtitle">
-          Sistem inferensi ontologi W3C menyaring destinasi berdasarkan ketersediaan alat, rentang budget, dan kapabilitas keahlian.
-        </p>
 
         <form id="explorer-search-form" class="explorer-search-form" role="search">
           <div class="search-field-main" style="position:relative">
@@ -535,14 +256,49 @@
           </button>
         </form>
 
-        <!-- EXPLORER QUICK POPULAR KEYWORDS -->
-        <div class="explorer-trending-row">
-          <span class="explorer-trending-label">🔥 Sering dicari:</span>
-          <button type="button" class="trending-tag" data-q="snorkeling pemula budget 250rb">Snorkeling Pemula</button>
-          <button type="button" class="trending-tag" data-q="diving sewa tabung bcd">Diving &amp; Sewa Tabung</button>
-          <button type="button" class="trending-tag" data-q="surfing papan selancar">Surfing</button>
-          <button type="button" class="trending-tag" data-q="pantai pasir putih Bali">Pantai Pasir Putih</button>
-          <button type="button" class="trending-tag" data-q="pulau eksotis Raja Ampat">Raja Ampat</button>
+        <!-- EXPLORER QUICK POPULAR KEYWORDS & REKOMENDASI CEPAT -->
+        <div class="trending-bar explorer-trending-bar">
+          <div class="trending-group">
+            <span class="trending-label" style="color:#ff8a65;font-weight:800">
+              🔥 Paling Sering Dicari:
+            </span>
+            <button type="button" class="trending-tag popular-badge" data-q="snorkeling pemula budget 250rb ada alat">
+              🤿 Snorkeling Pemula &le; 250rb
+            </button>
+            <button type="button" class="trending-tag popular-badge" data-q="pantai pasir putih di Bali dan Lombok">
+              🏖️ Pantai Pasir Putih Bali &amp; Lombok
+            </button>
+            <button type="button" class="trending-tag popular-badge" data-q="spot diving mahir sewa bcd dan tabung scuba">
+              🤿 Diving Mahir + Sewa BCD
+            </button>
+            <button type="button" class="trending-tag popular-badge" data-q="surfing pemula sewa papan selancar">
+              🏄 Surfing Pemula + Papan
+            </button>
+            <button type="button" class="trending-tag popular-badge" data-q="pulau eksotis hidden gem di Raja Ampat">
+              🏝️ Pulau Eksotis Raja Ampat
+            </button>
+            <button type="button" class="trending-tag popular-badge" data-q="wisata maritim keluarga murah di Jawa">
+              👨‍👩‍👧 Wisata Maritim Murah di Jawa
+            </button>
+          </div>
+
+          <div class="trending-group">
+            <span class="trending-label" style="color:#fcd34d;font-weight:800">
+              💡 Rekomendasi Cepat:
+            </span>
+            <button type="button" class="trending-tag" data-q="destinasi wisata gratis di Maluku">
+              Wisata Gratis Maluku
+            </button>
+            <button type="button" class="trending-tag" data-q="sunset dan kano di Labuan Bajo">
+              Sunset &amp; Kano Labuan Bajo
+            </button>
+            <button type="button" class="trending-tag" data-q="snorkeling terumbu karang di Bunaken">
+              Terumbu Karang Bunaken
+            </button>
+            <button type="button" class="trending-tag" data-q="pantai pasir timbul Ngurtafur">
+              Pasir Timbul Ngurtafur
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -565,7 +321,7 @@
     <!-- LAYOUT EXPLORER: FACETED FILTER DI ATAS, DAFTAR DESTINASI DI BAWAH -->
     <div class="explorer-layout-wrapper" id="destinasi-explorer">
 
-      <!-- QUICK WILAYAH & ISLAND SELECTION (HORIZONTAL SCROLL) -->
+      <!-- QUICK WILAYAH & ISLAND SELECTION (GRID 5x2 DENGAN GAMBAR PULAU) -->
       <div class="island-slider-wrapper">
         <div class="island-slider-header">
           <div class="island-slider-title">
@@ -573,114 +329,139 @@
             <span>Jelajah Pulau &amp; Kepulauan Maritim</span>
             <span class="island-active-badge" id="island-active-count">Semua (305 Wisata)</span>
           </div>
-          <span style="font-size:0.75rem;color:var(--text-muted);font-weight:600;display:flex;align-items:center;gap:0.3rem">
-            <svg class="svg-icon svg-icon-xs" style="color:var(--sea-blue)"><use href="#icon-arrow-right"/></svg>
-            Geser untuk pulau lainnya
-          </span>
         </div>
 
-        <div class="island-slider-track-wrap">
-          <div class="island-slider-track" id="explorer-wilayah-pills">
-            <button type="button" class="island-slide-card filter-pill-opt active" data-wil="" data-prov="" title="Semua Destinasi Maritim Indonesia">
+        <div class="island-grid-5x2" id="explorer-wilayah-pills">
+          <button type="button" class="island-slide-card filter-pill-opt active" data-wil="" data-prov="" title="Semua Destinasi Maritim Indonesia">
+            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="island-card-overlay"></div>
+            <div class="island-card-inner">
               <span class="island-badge-code">ALL</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Semua Wilayah</span>
-                <span class="island-pill-count">305</span>
+                <span class="island-pill-count">305 Wisata</span>
               </div>
-            </button>
-            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sumatra" data-prov="" title="Pulau Sumatra">
+            </div>
+          </button>
+
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sumatra" data-prov="" title="Pulau Sumatra">
+            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="island-card-overlay"></div>
+            <div class="island-card-inner">
               <span class="island-badge-code">SM</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Sumatra</span>
-                <span class="island-pill-count">60</span>
+                <span class="island-pill-count">60 Wisata</span>
               </div>
-            </button>
-            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Jawa" data-prov="" title="Pulau Jawa">
+            </div>
+          </button>
+
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Jawa" data-prov="" title="Pulau Jawa">
+            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="island-card-overlay"></div>
+            <div class="island-card-inner">
               <span class="island-badge-code">JW</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Jawa</span>
-                <span class="island-pill-count">54</span>
+                <span class="island-pill-count">54 Wisata</span>
               </div>
-            </button>
-            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Bali & Nusa Tenggara" data-prov="Bali" title="Pulau Dewata Bali">
+            </div>
+          </button>
+
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Bali & Nusa Tenggara" data-prov="Bali" title="Pulau Dewata Bali">
+            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="island-card-overlay"></div>
+            <div class="island-card-inner">
               <span class="island-badge-code">BL</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Bali</span>
-                <span class="island-pill-count">29</span>
+                <span class="island-pill-count">29 Wisata</span>
               </div>
-            </button>
-            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Bali & Nusa Tenggara" data-prov="NTB,NTT" title="Kepulauan Nusa Tenggara (Lombok, Komodo &amp; Flores)">
+            </div>
+          </button>
+
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Bali & Nusa Tenggara" data-prov="NTB,NTT" title="Kepulauan Nusa Tenggara">
+            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="island-card-overlay"></div>
+            <div class="island-card-inner">
               <span class="island-badge-code">NT</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Nusa Tenggara</span>
-                <span class="island-pill-count">43</span>
+                <span class="island-pill-count">43 Wisata</span>
               </div>
-            </button>
-            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Kalimantan" data-prov="" title="Pulau Kalimantan (Borneo)">
+            </div>
+          </button>
+
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Kalimantan" data-prov="" title="Pulau Kalimantan">
+            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="island-card-overlay"></div>
+            <div class="island-card-inner">
               <span class="island-badge-code">KL</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Kalimantan</span>
-                <span class="island-pill-count">30</span>
+                <span class="island-pill-count">30 Wisata</span>
               </div>
-            </button>
-            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sulawesi" data-prov="" title="Pulau Sulawesi (Bunaken &amp; Wakatobi)">
+            </div>
+          </button>
+
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sulawesi" data-prov="" title="Pulau Sulawesi">
+            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="island-card-overlay"></div>
+            <div class="island-card-inner">
               <span class="island-badge-code">SL</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Sulawesi</span>
-                <span class="island-pill-count">40</span>
+                <span class="island-pill-count">40 Wisata</span>
               </div>
-            </button>
-            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Maluku" data-prov="" title="Kepulauan Maluku (Banda Neira &amp; Kei)">
+            </div>
+          </button>
+
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Maluku" data-prov="" title="Kepulauan Maluku">
+            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="island-card-overlay"></div>
+            <div class="island-card-inner">
               <span class="island-badge-code">ML</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Maluku</span>
-                <span class="island-pill-count">24</span>
+                <span class="island-pill-count">24 Wisata</span>
               </div>
-            </button>
-            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Papua" data-prov="" title="Tanah Papua &amp; Raja Ampat">
+            </div>
+          </button>
+
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Papua" data-prov="" title="Tanah Papua">
+            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="island-card-overlay"></div>
+            <div class="island-card-inner">
               <span class="island-badge-code">PP</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Papua</span>
-                <span class="island-pill-count">25</span>
+                <span class="island-pill-count">25 Wisata</span>
               </div>
-            </button>
-            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sumatra" data-prov="Kepulauan Riau" title="Kepulauan Riau (Bintan, Batam, Anambas)">
+            </div>
+          </button>
+
+          <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sumatra" data-prov="Kepulauan Riau" title="Kepulauan Riau">
+            <div class="island-card-bg" style="background-image:url('https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="island-card-overlay"></div>
+            <div class="island-card-inner">
               <span class="island-badge-code">KR</span>
               <div class="island-pill-info">
                 <span class="island-pill-name">Kepulauan Riau</span>
-                <span class="island-pill-count">10</span>
+                <span class="island-pill-count">10 Wisata</span>
               </div>
-            </button>
-            <button type="button" class="island-slide-card filter-pill-opt" data-wil="Sumatra" data-prov="Bangka Belitung" title="Kepulauan Bangka Belitung">
-              <span class="island-badge-code">BB</span>
-              <div class="island-pill-info">
-                <span class="island-pill-name">Bangka Belitung</span>
-                <span class="island-pill-count">7</span>
-              </div>
-            </button>
-          </div>
+            </div>
+          </button>
         </div>
       </div>
 
       <!-- ==============================================================================
-           1. FACETED FILTER 6 DIMENSI (DI ATAS DAFTAR DESTINASI)
+           1. FILTER WISATA MARITIM
            ============================================================================== -->
       <section class="top-faceted-filter-card" id="top-faceted-filter">
         <!-- Header Panel Filter -->
         <div class="top-filter-header">
           <div class="top-filter-title">
-            <div class="filter-header-icon">
-              <svg class="svg-icon"><use href="#icon-sliders"/></svg>
-            </div>
-            <div>
-              <div style="display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap">
-                <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:800;color:var(--text-main);margin:0">Faceted Filter Wisata Maritim</h3>
-                <span class="badge-tag-clean">6 Dimensi Ontologi W3C</span>
-              </div>
-              <p style="font-size:0.8rem;color:var(--text-muted);margin:0.2rem 0 0 0">
-                Pilih kombinasi range harga Google, keahlian, persewaan alat, aktivitas, dan wilayah untuk memfilter 300+ destinasi di bawah.
-              </p>
-            </div>
+            <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:#ffffff;margin:0">Filter Wisata Maritim</h3>
           </div>
           
           <div class="top-filter-actions">
@@ -701,7 +482,6 @@
           <div class="top-filter-row-price">
             <div class="price-header-strip">
               <div class="filter-section-title">
-                <svg class="svg-icon svg-icon-sm" style="color:var(--amber-accent)"><use href="#icon-wallet"/></svg>
                 <span>Range Harga (Google-Style)</span>
               </div>
               <div class="price-mode-nav">
@@ -740,7 +520,6 @@
             <!-- Dimensi 1: Tingkat Keahlian Pengguna -->
             <div class="filter-col-block">
               <div class="filter-col-label">
-                <svg class="svg-icon svg-icon-sm" style="color:var(--emerald-accent)"><use href="#icon-target"/></svg>
                 <span>Tingkat Keahlian</span>
               </div>
               <div class="skill-grid-row">
@@ -762,7 +541,6 @@
             <!-- Dimensi 2: Peralatan & Ketersediaan Sewa -->
             <div class="filter-col-block">
               <div class="filter-col-label">
-                <svg class="svg-icon svg-icon-sm" style="color:#8b5cf6"><use href="#icon-tool"/></svg>
                 <span>Peralatan Maritim</span>
               </div>
               <select class="custom-select" id="filter-equipment-select">
@@ -786,7 +564,6 @@
             <!-- Dimensi 3: Aktivitas Maritim -->
             <div class="filter-col-block">
               <div class="filter-col-label">
-                <svg class="svg-icon svg-icon-sm" style="color:var(--sea-blue)"><use href="#icon-compass"/></svg>
                 <span>Aktivitas Maritim</span>
               </div>
               <select class="custom-select" id="filter-aktivitas">
@@ -798,7 +575,6 @@
             <!-- Dimensi 4: Jenis Wisata -->
             <div class="filter-col-block">
               <div class="filter-col-label">
-                <svg class="svg-icon svg-icon-sm" style="color:#0284c7"><use href="#icon-network"/></svg>
                 <span>Jenis Wisata</span>
               </div>
               <select class="custom-select" id="filter-jenis">
@@ -816,7 +592,6 @@
             <!-- Dimensi 5: Lokasi & Wilayah -->
             <div class="filter-col-block">
               <div class="filter-col-label">
-                <svg class="svg-icon svg-icon-sm" style="color:#f97316"><use href="#icon-pin"/></svg>
                 <span>Wilayah &amp; Lokasi</span>
               </div>
               <div style="display:flex;flex-direction:column;gap:0.4rem">
@@ -872,12 +647,12 @@
       </main>
 
     </div>
-  </div>
+  </section>
 
   <!-- ==============================================================================
        HALAMAN 3: EKSPLORASI PETA NUSANTARA
        ============================================================================== -->
-  <div class="tab-view-section" id="view-map" style="display:none">
+  <section class="tab-view-section page-scroll-section" id="view-map">
     <div style="max-width:1400px;margin:1.5rem auto;padding:0 1.25rem">
       <div class="results-control-bar map-header-row" style="margin-bottom:1.25rem;flex-wrap:wrap;gap:1.25rem;align-items:center;justify-content:space-between">
         <div class="results-stat-text">
@@ -949,12 +724,12 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ==============================================================================
        HALAMAN 4: FAVORIT
        ============================================================================== -->
-  <div class="tab-view-section" id="view-favorites" style="display:none">
+  <section class="tab-view-section page-scroll-section" id="view-favorites">
     <div style="max-width:1400px;margin:2rem auto;padding:0 1.25rem">
       <div class="results-control-bar" style="margin-bottom:1.5rem">
         <div class="results-stat-text">
@@ -966,7 +741,7 @@
         <!-- Populated by JS -->
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- ==============================================================================
        MODAL DETAIL DESTINASI, BIAYA & KALKULATOR BUDGET
@@ -1041,7 +816,6 @@
     </div>
   </footer>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="js/app.js"></script>
   <script src="js/dbpedia.js"></script>
   <script src="js/chatbot.js"></script>

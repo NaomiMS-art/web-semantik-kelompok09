@@ -189,19 +189,11 @@ document.addEventListener('DOMContentLoaded', () => {
   loadFacets();
   loadAllDestinations().then(() => {
     initNearbyRecommendations();
+    renderIndonesiaMapView();
+    renderFavoritesView();
   });
   executeSearch();
 });
-
-function initNavigation() {
-  const allNavBtns = document.querySelectorAll('.nav-link-btn[data-tab], .bottom-bar-btn[data-tab]');
-  allNavBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      switchTab(btn.dataset.tab);
-    });
-  });
-}
 
 function initThemeToggle() {
   const savedTheme = localStorage.getItem('imj_theme') || 
@@ -212,13 +204,22 @@ function initThemeToggle() {
   const themeBtn = document.getElementById('btn-theme-toggle');
   if (themeBtn) {
     themeBtn.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      applyTheme(newTheme);
-      localStorage.setItem('imj_theme', newTheme);
+      toggleTheme();
     });
   }
 }
+
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  applyTheme(newTheme);
+  try {
+    localStorage.setItem('imj_theme', newTheme);
+  } catch (e) {
+    console.warn('Gagal menyimpan tema ke localStorage:', e);
+  }
+}
+window.toggleTheme = toggleTheme;
 
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
@@ -229,9 +230,23 @@ function applyTheme(theme) {
       ? '<svg class="svg-icon"><use href="#icon-sun"/></svg>'
       : '<svg class="svg-icon"><use href="#icon-moon"/></svg>';
     themeBtn.title = isDark ? 'Beralih ke Mode Terang' : 'Beralih ke Mode Gelap';
+    themeBtn.setAttribute('aria-label', themeBtn.title);
   }
 }
 
+function initNavigation() {
+  const allNavBtns = document.querySelectorAll('.nav-link-btn[data-tab], .bottom-bar-btn[data-tab]');
+  allNavBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchTab(btn.dataset.tab);
+    });
+  });
+
+  initScrollSpy();
+}
+
+let isManualScroll = false;
 function switchTab(tabName) {
   APP_STATE.currentTab = tabName;
   document.querySelectorAll('.nav-link-btn[data-tab]').forEach(b => {
@@ -241,13 +256,61 @@ function switchTab(tabName) {
     b.classList.toggle('active', b.dataset.tab === tabName);
   });
 
-  document.querySelectorAll('.tab-view-section').forEach(view => {
-    view.style.display = view.id === `view-${tabName}` ? 'block' : 'none';
-  });
+  const targetEl = document.getElementById(`view-${tabName}`);
+  if (targetEl) {
+    isManualScroll = true;
+    const navOffset = 74;
+    const elementPos = targetEl.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPos = Math.max(0, elementPos - navOffset);
+    window.scrollTo({
+      top: offsetPos,
+      behavior: 'smooth'
+    });
+    setTimeout(() => {
+      isManualScroll = false;
+    }, 850);
+  }
 
   if (tabName === 'favorites') renderFavoritesView();
-  if (tabName === 'map') renderIndonesiaMapView();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (tabName === 'map') {
+    renderIndonesiaMapView();
+    setTimeout(() => {
+      if (indonesiaMapInstance) indonesiaMapInstance.invalidateSize();
+    }, 350);
+  }
+}
+
+function initScrollSpy() {
+  const sectionIds = ['home', 'explorer', 'map', 'favorites'];
+  const sections = sectionIds
+    .map(name => document.getElementById(`view-${name}`))
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      if (isManualScroll) return;
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const tabName = entry.target.id.replace('view-', '');
+          APP_STATE.currentTab = tabName;
+          document.querySelectorAll('.nav-link-btn[data-tab]').forEach(b => {
+            b.classList.toggle('active', b.dataset.tab === tabName);
+          });
+          document.querySelectorAll('.bottom-bar-btn[data-tab]').forEach(b => {
+            b.classList.toggle('active', b.dataset.tab === tabName);
+          });
+          if (tabName === 'map' && indonesiaMapInstance) {
+            indonesiaMapInstance.invalidateSize();
+          }
+        }
+      });
+    }, {
+      rootMargin: '-25% 0px -55% 0px',
+      threshold: 0.05
+    });
+
+    sections.forEach(sec => observer.observe(sec));
+  }
 }
 
 // Quick Category Filtering from Category Cards
@@ -613,42 +676,7 @@ function initFacetedFilterEvents() {
   });
 
   // Quick Wilayah & Island Horizontal Scroll Bar in Explorer
-  const islandTrack = document.getElementById('explorer-wilayah-pills');
   const islandActiveCount = document.getElementById('island-active-count');
-
-  if (islandTrack) {
-    // 1. Mouse Wheel Horizontal Scroll Support
-    islandTrack.addEventListener('wheel', (e) => {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        e.preventDefault();
-        islandTrack.scrollLeft += e.deltaY;
-      }
-    }, { passive: false });
-
-    // 2. Drag / Grab to Scroll for Desktop Mouse
-    let isDown = false;
-    let startX, scrollLeftVal;
-
-    islandTrack.addEventListener('mousedown', (e) => {
-      isDown = true;
-      islandTrack.classList.add('grabbing');
-      startX = e.pageX - islandTrack.offsetLeft;
-      scrollLeftVal = islandTrack.scrollLeft;
-    });
-
-    window.addEventListener('mouseup', () => {
-      isDown = false;
-      if (islandTrack) islandTrack.classList.remove('grabbing');
-    });
-
-    islandTrack.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - islandTrack.offsetLeft;
-      const walk = (x - startX) * 1.4;
-      islandTrack.scrollLeft = scrollLeftVal - walk;
-    });
-  }
 
   document.querySelectorAll('#explorer-wilayah-pills .filter-pill-opt').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1787,11 +1815,7 @@ function toggleFavorite(id) {
   }
 
   updateFavoriteBadge();
-
-  // Jika sedang berada di tab favorit, render ulang daftarnya
-  if (APP_STATE.currentTab === 'favorites') {
-    renderFavoritesView();
-  }
+  renderFavoritesView();
 }
 
 async function renderFavoritesView() {
@@ -2140,78 +2164,114 @@ const REGION_MAP_VIEWS = {
 
 async function renderIndonesiaMapView() {
   const container = document.getElementById('indonesia-map-container');
-  if (!container || typeof L === 'undefined') return;
+  if (!container) return;
 
-  await loadAllDestinations();
+  if (typeof L === 'undefined') {
+    console.warn('Leaflet library (L) belum siap, mencoba ulang sesaat lagi...');
+    setTimeout(renderIndonesiaMapView, 250);
+    return;
+  }
+
+  // Bersihkan ID instance leaflet lama jika container pernah di-mount tapi instance hilang
+  if (container._leaflet_id && !indonesiaMapInstance) {
+    container._leaflet_id = null;
+  }
 
   if (!indonesiaMapInstance) {
-    indonesiaMapInstance = L.map('indonesia-map-container', {
-      center: [-2.5, 118.0],
-      zoom: 5,
-      minZoom: 4,
-      maxZoom: 18,
-      scrollWheelZoom: true
-    });
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(indonesiaMapInstance);
-
-    mapMarkerLayer = L.layerGroup().addTo(indonesiaMapInstance);
-
-    // Event listener untuk filter wilayah di peta
-    const regionSelect = document.getElementById('map-region-filter');
-    if (regionSelect) {
-      regionSelect.addEventListener('change', (e) => {
-        const reg = e.target.value;
-        updateMapMarkers(reg);
-        const cfg = REGION_MAP_VIEWS[reg] || REGION_MAP_VIEWS[''];
-        indonesiaMapInstance.flyTo(cfg.center, cfg.zoom, { duration: 1.2 });
+    try {
+      indonesiaMapInstance = L.map('indonesia-map-container', {
+        center: [-2.5, 118.0],
+        zoom: 5,
+        minZoom: 4,
+        maxZoom: 18,
+        scrollWheelZoom: true
       });
-    }
 
-    // Event listener untuk tombol lokasi saya di peta
-    const myLocBtn = document.getElementById('btn-map-my-location');
-    if (myLocBtn) {
-      myLocBtn.addEventListener('click', () => {
-        if (!navigator.geolocation) {
-          alert('Browser Anda tidak mendukung deteksi lokasi.');
-          return;
-        }
-        myLocBtn.textContent = 'Mencari...';
-        navigator.geolocation.getCurrentPosition(
-          pos => {
-            myLocBtn.innerHTML = '<svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg><span>Lokasi Saya</span>';
-            const userLat = pos.coords.latitude;
-            const userLon = pos.coords.longitude;
-            indonesiaMapInstance.flyTo([userLat, userLon], 9, { duration: 1.5 });
+// Layer ubin OpenStreetMap (100% gratis, bebas watermark, tanpa API key)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        subdomains: 'abc',
+        maxZoom: 19
+      }).addTo(indonesiaMapInstance);
 
-            const userIcon = L.divIcon({
-              className: 'user-pulse-marker',
-              html: '<div style="background:#ef4444;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 0 12px rgba(239,68,68,0.9)"></div>',
-              iconSize: [20, 20],
-              iconAnchor: [10, 10]
-            });
-            L.marker([userLat, userLon], { icon: userIcon })
-              .addTo(indonesiaMapInstance)
-              .bindPopup('<strong>📍 Posisi Anda Saat Ini</strong>')
-              .openPopup();
-          },
-          err => {
-            myLocBtn.innerHTML = '<svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg><span>Lokasi Saya</span>';
-            alert('Izin lokasi tidak diberikan.');
+      mapMarkerLayer = L.layerGroup().addTo(indonesiaMapInstance);
+
+      // Event listener untuk filter wilayah di peta
+      const regionSelect = document.getElementById('map-region-filter');
+      if (regionSelect) {
+        regionSelect.addEventListener('change', (e) => {
+          const reg = e.target.value;
+          updateMapMarkers(reg);
+          const cfg = REGION_MAP_VIEWS[reg] || REGION_MAP_VIEWS[''];
+          indonesiaMapInstance.flyTo(cfg.center, cfg.zoom, { duration: 1.2 });
+        });
+      }
+
+      // Event listener untuk tombol lokasi saya di peta
+      const myLocBtn = document.getElementById('btn-map-my-location');
+      if (myLocBtn) {
+        myLocBtn.addEventListener('click', () => {
+          if (!navigator.geolocation) {
+            alert('Browser Anda tidak mendukung deteksi lokasi.');
+            return;
           }
-        );
-      });
+          myLocBtn.textContent = 'Mencari...';
+          navigator.geolocation.getCurrentPosition(
+            pos => {
+              myLocBtn.innerHTML = '<svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg><span>Lokasi Saya</span>';
+              const userLat = pos.coords.latitude;
+              const userLon = pos.coords.longitude;
+              indonesiaMapInstance.flyTo([userLat, userLon], 9, { duration: 1.5 });
+
+              const userIcon = L.divIcon({
+                className: 'user-pulse-marker',
+                html: '<div style="background:#ef4444;width:20px;height:20px;border-radius:50%;border:3px solid white;box-shadow:0 0 12px rgba(239,68,68,0.9)"></div>',
+                iconSize: [20, 20],
+                iconAnchor: [10, 10]
+              });
+              L.marker([userLat, userLon], { icon: userIcon })
+                .addTo(indonesiaMapInstance)
+                .bindPopup('<strong>📍 Posisi Anda Saat Ini</strong>')
+                .openPopup();
+            },
+            err => {
+              myLocBtn.innerHTML = '<svg class="svg-icon svg-icon-sm"><use href="#icon-pin"/></svg><span>Lokasi Saya</span>';
+              alert('Izin lokasi tidak diberikan.');
+            }
+          );
+        });
+      }
+
+      // IntersectionObserver khusus agar peta langsung kalkulasi ulang saat discroll ke layar
+      if ('IntersectionObserver' in window) {
+        const mapObs = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && indonesiaMapInstance) {
+              indonesiaMapInstance.invalidateSize();
+            }
+          });
+        }, { threshold: [0, 0.1, 0.5] });
+        mapObs.observe(container);
+      }
+    } catch (mapErr) {
+      console.error('Error saat inisialisasi peta Leaflet:', mapErr);
+      if (container._leaflet_id) {
+        container._leaflet_id = null;
+      }
     }
   }
 
+  // Invalidate size beberapa kali untuk menangani transisi CSS / font loading
+  [100, 350, 700, 1400].forEach(delay => {
+    setTimeout(() => {
+      if (indonesiaMapInstance) indonesiaMapInstance.invalidateSize();
+    }, delay);
+  });
+
+  // Muat dan render marker destinasi
+  await loadAllDestinations();
   const currentReg = document.getElementById('map-region-filter')?.value || '';
   updateMapMarkers(currentReg);
-
-  setTimeout(() => {
-    if (indonesiaMapInstance) indonesiaMapInstance.invalidateSize();
-  }, 250);
 }
 
 function updateMapMarkers(regionFilter = '') {
