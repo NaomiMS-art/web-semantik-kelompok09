@@ -22,16 +22,62 @@
     return new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
   }
 
-  // Markdown renderer sederhana untuk bubble bot
+  // Markdown renderer sederhana & rapi untuk bubble bot
   function renderMarkdown(md) {
     if (!md) return '';
-    return md
+    
+    let text = md
       .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.+?)\*/g, '<em>$1</em>')
-      .replace(/`([^`]+)`/g, '<code style="background:rgba(56,189,248,0.15);padding:1px 5px;border-radius:4px;color:#38bdf8;font-size:0.8em">$1</code>')
-      .replace(/^• (.+)$/gm, '<li>$1</li>')
-      .replace(/(<li>.*<\/li>\n?)+/g, m => `<ul>${m}</ul>`)
-      .replace(/\n/g, '<br>');
+      .replace(/`([^`]+)`/g, '<code style="background:rgba(56,189,248,0.15);padding:1px 5px;border-radius:4px;color:#38bdf8;font-size:0.8em">$1</code>');
+
+    const lines = text.split(/\r?\n/);
+    const result = [];
+    let currentList = [];
+
+    for (let i = 0; i < lines.length; i++) {
+      const rawLine = lines[i];
+      const trimmed = rawLine.trim();
+
+      if (trimmed.startsWith('• ') || trimmed.startsWith('- ')) {
+        const title = trimmed.replace(/^[•\-]\s*/, '');
+        currentList.push({ title: title, subs: [] });
+      } else if (currentList.length > 0 && trimmed !== '' && !trimmed.startsWith('🔍') && !trimmed.startsWith('🌊') && !trimmed.startsWith('⚡') && !trimmed.startsWith('🏆') && !trimmed.startsWith('⚙️') && !trimmed.startsWith('🏝️') && !trimmed.startsWith('💸') && !trimmed.startsWith('🗺️')) {
+        currentList[currentList.length - 1].subs.push(trimmed);
+      } else {
+        if (currentList.length > 0) {
+          let ul = '<ul class="maritim-chat-list">';
+          for (const item of currentList) {
+            ul += '<li>' + item.title;
+            if (item.subs.length > 0) {
+              ul += '<div class="maritim-list-sub">' + item.subs.join('<br>') + '</div>';
+            }
+            ul += '</li>';
+          }
+          ul += '</ul>';
+          result.push(ul);
+          currentList = [];
+        }
+        if (trimmed !== '') {
+          result.push('<p class="maritim-chat-p">' + trimmed + '</p>');
+        }
+      }
+    }
+
+    if (currentList.length > 0) {
+      let ul = '<ul class="maritim-chat-list">';
+      for (const item of currentList) {
+        ul += '<li>' + item.title;
+        if (item.subs.length > 0) {
+          ul += '<div class="maritim-list-sub">' + item.subs.join('<br>') + '</div>';
+        }
+        ul += '</li>';
+      }
+      ul += '</ul>';
+      result.push(ul);
+    }
+
+    return result.join('');
   }
 
   // Buat Elemen DOM Widget Chatbot
@@ -43,9 +89,10 @@
     toggleBtn.setAttribute('aria-label', 'Buka Asisten MaritimBot');
     toggleBtn.title = 'Tanya Asisten AI Maritim (DBpedia Connected)';
     toggleBtn.innerHTML = `
-      <svg viewBox="0 0 24 24">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-      </svg>
+      <img src="images/logo.jpg" alt="Logo MaritimBot" class="maritim-toggle-logo-img">
+      <span class="maritim-toggle-close-icon">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </span>
       <span class="maritim-chat-badge-pulse"></span>
     `;
     document.body.appendChild(toggleBtn);
@@ -59,7 +106,9 @@
     chatWin.innerHTML = `
       <div class="maritim-chat-header">
         <div class="maritim-chat-brand">
-          <div class="maritim-chat-avatar">🤖</div>
+          <div class="maritim-chat-avatar">
+            <img src="images/logo.jpg" alt="Logo MaritimBot" class="maritim-avatar-logo-img">
+          </div>
           <div class="maritim-chat-title-group">
             <h4>MaritimBot</h4>
             <div class="maritim-chat-status" id="maritim-bot-status">
@@ -80,6 +129,8 @@
 
       <div class="maritim-chat-messages" id="maritim-chat-messages" aria-live="polite"></div>
 
+      <div class="maritim-chat-autocomplete" id="maritim-chat-autocomplete" style="display:none"></div>
+
       <form class="maritim-chat-input-row" id="maritim-chat-form">
         <input type="text" class="maritim-chat-input" id="maritim-chat-input" placeholder="Tanyakan seputar wisata maritim & ontologi..." autocomplete="off" aria-label="Pesan untuk MaritimBot">
         <button type="submit" class="maritim-chat-send" id="maritim-chat-send" title="Kirim Pesan" aria-label="Kirim">
@@ -90,19 +141,50 @@
     document.body.appendChild(chatWin);
   }
 
+  // Helper Global untuk Buka Semua di Katalog Utama
+  window.openAllInExplorer = function(q) {
+    if (typeof window.applySearchQuery === 'function') {
+      window.applySearchQuery(q || '');
+      const el = document.getElementById('destinasi-explorer') || document.getElementById('section-explorer') || document.querySelector('.destinasi-explorer-section');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      const explorerInput = document.getElementById('explorer-search-input') || document.getElementById('hero-search-input');
+      if (explorerInput) {
+        explorerInput.value = q || '';
+        explorerInput.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+    }
+  };
+
   // Tambah Pesan ke History
-  function appendMessage({ sender, textHtml, dbpediaData, recommendations, suggestions, time }) {
+  function appendMessage({ sender, textHtml, dbpediaData, recommendations, totalResults, searchQuery, suggestions, time }) {
     const box = document.getElementById('maritim-chat-messages');
     if (!box) return;
 
     const row = document.createElement('div');
     row.className = `maritim-msg-row ${sender}`;
 
-    let contentHtml = `<div class="maritim-msg-bubble">${textHtml}</div>`;
+    let contentHtml = '';
+    if (sender === 'bot') {
+      contentHtml += `
+        <div class="maritim-msg-author-tag">
+          <img src="images/logo.jpg" alt="Logo" class="maritim-msg-avatar-mini">
+          <span>MaritimBot</span>
+        </div>
+      `;
+    }
+    contentHtml += `<div class="maritim-msg-bubble">${textHtml}</div>`;
 
     // Jika ada rekomendasi destinasi terstruktur, tampilkan kartu mini interaktif
     if (recommendations && recommendations.length > 0) {
-      const recsHtml = recommendations.slice(0, 4).map(d => `
+      const initialCards = recommendations.slice(0, 4);
+      const remainingCards = recommendations.slice(4);
+      const totalCount = totalResults || recommendations.length;
+      const qStr = searchQuery || '';
+
+      const renderCard = (d) => `
         <div class="maritim-bot-card">
           <img class="maritim-bot-thumb" src="${esc(d.foto || 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=200&auto=format&fit=crop&q=80')}" alt="${esc(d.nama)}" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=200&auto=format&fit=crop&q=80';">
           <div class="maritim-bot-card-info">
@@ -115,9 +197,45 @@
           </div>
           <button type="button" class="maritim-bot-btn-action" onclick="openDestinationModal('${esc(d.id)}')">Detail</button>
         </div>
-      `).join('');
+      `;
 
-      contentHtml += `<div class="maritim-bot-dest-grid">${recsHtml}</div>`;
+      let cardsHtml = initialCards.map(renderCard).join('');
+      let extraCardsHtml = remainingCards.slice(0, 16).map(renderCard).join('');
+
+      let viewAllBarHtml = '';
+      if (totalCount > 4) {
+        viewAllBarHtml = `
+          <div class="maritim-bot-actions-row">
+            ${remainingCards.length > 0 ? `
+              <button type="button" class="maritim-bot-btn-expand" onclick="
+                const wrap = this.closest('.maritim-bot-dest-wrapper');
+                const extra = wrap.querySelector('.extra-cards');
+                if (extra.style.display === 'none') {
+                  extra.style.display = 'flex';
+                  this.innerHTML = '▲ Sembunyikan Tambahan';
+                } else {
+                  extra.style.display = 'none';
+                  this.innerHTML = '▼ Tampilkan Lebih Banyak di Chat (+${Math.min(remainingCards.length, 16)})';
+                }
+              ">
+                ▼ Tampilkan Lebih Banyak di Chat (+${Math.min(remainingCards.length, 16)})
+              </button>
+            ` : ''}
+            <button type="button" class="maritim-bot-btn-see-all" onclick="openAllInExplorer('${esc(qStr)}')">
+              <span>🔍 Lihat Semua ${totalCount} Destinasi di Katalog</span>
+              <svg style="width:14px;height:14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </button>
+          </div>
+        `;
+      }
+
+      contentHtml += `
+        <div class="maritim-bot-dest-wrapper">
+          <div class="maritim-bot-dest-grid">${cardsHtml}</div>
+          ${remainingCards.length > 0 ? `<div class="maritim-bot-dest-grid extra-cards" style="display:none;margin-top:8px;">${extraCardsHtml}</div>` : ''}
+          ${viewAllBarHtml}
+        </div>
+      `;
     }
 
     // Jika ada data DBpedia, tampilkan kartu visual
@@ -135,7 +253,7 @@
       contentHtml += `
         <div class="maritim-dbpedia-card">
           <div class="maritim-dbpedia-tag">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <svg style="width:14px;height:14px;min-width:14px;min-height:14px;max-width:14px;max-height:14px;flex-shrink:0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             <span>Linked Open Data · DBpedia SPARQL</span>
           </div>
           ${imgTag}
@@ -184,8 +302,155 @@
     if (el) el.remove();
   }
 
+  // Live Smart Autocomplete Logic
+  let allDestinationsCache = [];
+  let acSelectedIndex = -1;
+
+  async function getDestinationsForAutocomplete() {
+    if (allDestinationsCache.length > 0) return allDestinationsCache;
+    try {
+      if (typeof window !== 'undefined' && window.APP_STATE && window.APP_STATE.allDestinations && window.APP_STATE.allDestinations.length > 0) {
+        allDestinationsCache = window.APP_STATE.allDestinations;
+        return allDestinationsCache;
+      }
+      if (typeof window !== 'undefined' && typeof window.loadAllDestinations === 'function') {
+        allDestinationsCache = await window.loadAllDestinations();
+        return allDestinationsCache;
+      }
+      const res = await fetch('/api/search?q=');
+      if (res.ok) {
+        const json = await res.json();
+        allDestinationsCache = json.results || [];
+      }
+    } catch (_) {}
+    return allDestinationsCache;
+  }
+
+  const COMMON_MARITIME_TOPICS = [
+    { title: 'Taman Nasional Bunaken', icon: '📍', sub: 'Sulawesi Utara · Diving & Snorkeling' },
+    { title: 'Taman Nasional Komodo', icon: '📍', sub: 'Nusa Tenggara Timur · Satwa & Karang' },
+    { title: 'Kepulauan Raja Ampat', icon: '📍', sub: 'Papua Barat Daya · Biodiversitas Dunia' },
+    { title: 'Kepulauan Karimunjawa', icon: '📍', sub: 'Jawa Tengah · Snorkeling & Hiu' },
+    { title: 'Kepulauan Derawan', icon: '📍', sub: 'Kalimantan Timur · Penyu & Ubur-ubur' },
+    { title: 'Banda Neira', icon: '📍', sub: 'Maluku · Sejarah & Karang' },
+    { title: 'Pantai Kuta Bali', icon: '📍', sub: 'Bali · Surfing Pemula & Sunset' },
+    { title: 'Pantai Sanur', icon: '📍', sub: 'Bali · Kano & Sunrise' },
+    { title: 'Pantai Bulbul', icon: '📍', sub: 'Sumatra Utara · Wisata Pasir Putih' },
+    { title: 'Teluk Buyat', icon: '📍', sub: 'Sulawesi Utara · Terumbu Karang' },
+    { title: 'Snorkeling untuk Pemula', icon: '🤿', sub: 'Aktivitas Bahari · Karang Dangkal' },
+    { title: 'Spot Diving Kelas Dunia', icon: '🌊', sub: 'Aktivitas Bahari · Penyelaman Laut' },
+    { title: 'Spot Surfing Terbaik', icon: '🏄', sub: 'Aktivitas Bahari · Selancar Ombak' },
+    { title: 'Wisata Pantai di Bali', icon: '🏝️', sub: 'Destinasi Wilayah · Pulau Bali' },
+    { title: 'Pantai Gratis di Bali (HTM Rp0)', icon: '💸', sub: 'Info Harga · Wisata Hemat' },
+    { title: 'Peralatan apa saja yang disewakan?', icon: '⚙️', sub: 'Info Sewa Alat Bahari' },
+    { title: 'Tingkat level diatas pemula', icon: '🎯', sub: 'Kategori Keahlian Menengah' },
+    { title: 'Tingkat ahli / mahir', icon: '⚡', sub: 'Kategori Keahlian Profesional' }
+  ];
+
+  function highlightMatch(text, query) {
+    if (!query) return esc(text);
+    const idx = text.toLowerCase().indexOf(query.toLowerCase());
+    if (idx === -1) return esc(text);
+    const before = esc(text.substring(0, idx));
+    const match = esc(text.substring(idx, idx + query.length));
+    const after = esc(text.substring(idx + query.length));
+    return `${before}<strong>${match}</strong>${after}`;
+  }
+
+  async function updateAutocomplete(query) {
+    const box = document.getElementById('maritim-chat-autocomplete');
+    if (!box) return;
+
+    const q = (query || '').trim().toLowerCase();
+    if (q.length < 2) {
+      hideAutocomplete();
+      return;
+    }
+
+    const allDests = await getDestinationsForAutocomplete();
+    const suggestions = [];
+    const seenTitles = new Set();
+
+    // 1. Cari dari seluruh destinasi (nama, lokasi, provinsi, aktivitas)
+    for (const d of allDests) {
+      const nama = d.nama || '';
+      const lokasi = d.lokasi || '';
+      const provinsi = d.provinsi || '';
+      const lowerNama = nama.toLowerCase();
+      const lowerLoc = lokasi.toLowerCase() + ' ' + provinsi.toLowerCase();
+
+      const namaIndex = lowerNama.indexOf(q);
+      const locIndex = lowerLoc.indexOf(q);
+
+      if (namaIndex !== -1 || locIndex !== -1) {
+        if (!seenTitles.has(lowerNama)) {
+          seenTitles.add(lowerNama);
+          let priority = 3;
+          if (namaIndex === 0) priority = 1;
+          else if (namaIndex > 0) priority = 2;
+          else if (locIndex === 0) priority = 3;
+
+          suggestions.push({
+            title: nama,
+            sub: `${d.lokasi || d.provinsi || ''} · ${d.level || ''} (${d.rangeHargaTotalLabel || ''})`,
+            icon: '📍',
+            priority: priority
+          });
+        }
+      }
+      if (suggestions.length >= 15) break;
+    }
+
+    // 2. Tambah dari topik maritim populer jika sesuai
+    for (const t of COMMON_MARITIME_TOPICS) {
+      const lowerTitle = t.title.toLowerCase();
+      if (lowerTitle.includes(q) && !seenTitles.has(lowerTitle)) {
+        seenTitles.add(lowerTitle);
+        suggestions.push({
+          title: t.title,
+          sub: t.sub,
+          icon: t.icon,
+          priority: lowerTitle.startsWith(q) ? 1 : 2
+        });
+      }
+      if (suggestions.length >= 18) break;
+    }
+
+    if (suggestions.length === 0) {
+      hideAutocomplete();
+      return;
+    }
+
+    // Urutkan berdasarkan prioritas kecocokan terdekat
+    suggestions.sort((a, b) => a.priority - b.priority);
+    const displayItems = suggestions.slice(0, 5);
+
+    box.innerHTML = displayItems.map((item, idx) => `
+      <div class="maritim-ac-item ${idx === acSelectedIndex ? 'active' : ''}" data-index="${idx}" data-query="${esc(item.title)}">
+        <span class="maritim-ac-icon">${item.icon}</span>
+        <div class="maritim-ac-info">
+          <div class="maritim-ac-title">${highlightMatch(item.title, q)}</div>
+          <div class="maritim-ac-sub">${esc(item.sub)}</div>
+        </div>
+        <span class="maritim-ac-action">Pilih ↵</span>
+      </div>
+    `).join('');
+
+    box.style.display = 'flex';
+  }
+
+  function hideAutocomplete() {
+    const box = document.getElementById('maritim-chat-autocomplete');
+    if (box) {
+      box.style.display = 'none';
+      box.innerHTML = '';
+    }
+    acSelectedIndex = -1;
+  }
+
   // Kirim Pesan Pengguna
   async function handleSend(userText) {
+    hideAutocomplete();
     if (!userText || isThinking) return;
     const text = userText.trim();
     if (!text) return;
@@ -237,6 +502,8 @@
       textHtml: renderMarkdown(botReply.text),
       dbpediaData: botReply.dbpediaData,
       recommendations: botReply.recommendations,
+      totalResults: botReply.totalResults,
+      searchQuery: botReply.searchQuery || text,
       suggestions: botReply.suggestions,
       time: formatTime()
     });
@@ -246,15 +513,15 @@
   function sendInitialGreeting() {
     appendMessage({
       sender: 'bot',
-      textHtml: renderMarkdown(`Halo! 🌊 Selamat datang di **MaritimBot**!\nSaya asisten cerdas berbasis **Web Semantik & DBpedia SPARQL** untuk memandu wisata bahari nusantara.\n\nPilih topik di bawah atau ketik langsung pertanyaanmu:`),
+      textHtml: renderMarkdown(`Halo! 👋 Selamat datang di **MaritimBot Ombak Nusantara**!\n\nAda yang bisa saya bantu seputar destinasi atau liburan baharimu hari ini? 😊\n\nSaya asisten berbasis **Web Semantik & DBpedia SPARQL** yang siap membantu kamu mencari rekomendasi pantai, spot snorkeling/diving, info sewa alat & tiket, hingga level keahlian.\n\nPilih opsi di bawah atau ketik langsung pertanyaanmu ya:`),
       dbpediaData: null,
       suggestions: [
         'Pantai gratis di Bali apa saja?',
+        'Rekomendasi snorkeling untuk pemula',
         'Tingkat level diatas pemula',
         'Tingkat ahli',
         'Peralatan apa saja yang disewakan?',
-        'Aktivitas apa saja yang ada?',
-        'Rekomendasi wisata maritim terbaik'
+        'Aktivitas apa saja yang ada?'
       ],
       time: formatTime()
     });
@@ -281,6 +548,7 @@
   }
 
   function closeChat() {
+    hideAutocomplete();
     const win = document.getElementById('maritim-chat-window');
     const toggle = document.getElementById('maritim-chat-toggle');
     if (!win) return;
@@ -290,6 +558,7 @@
   }
 
   function resetChat() {
+    hideAutocomplete();
     const box = document.getElementById('maritim-chat-messages');
     if (box) box.innerHTML = '';
     sendInitialGreeting();
@@ -303,6 +572,7 @@
     const formEl    = document.getElementById('maritim-chat-form');
     const inputEl   = document.getElementById('maritim-chat-input');
     const boxEl     = document.getElementById('maritim-chat-messages');
+    const acBox     = document.getElementById('maritim-chat-autocomplete');
 
     if (toggleBtn) {
       toggleBtn.addEventListener('click', () => {
@@ -313,9 +583,52 @@
     if (closeBtn) closeBtn.addEventListener('click', closeChat);
     if (resetBtn) resetBtn.addEventListener('click', resetChat);
 
+    if (inputEl) {
+      inputEl.addEventListener('input', (e) => {
+        updateAutocomplete(e.target.value);
+      });
+
+      inputEl.addEventListener('keydown', (e) => {
+        if (!acBox || acBox.style.display === 'none') return;
+        const items = acBox.querySelectorAll('.maritim-ac-item');
+        if (items.length === 0) return;
+
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          acSelectedIndex = (acSelectedIndex + 1) % items.length;
+          items.forEach((it, i) => it.classList.toggle('active', i === acSelectedIndex));
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          acSelectedIndex = (acSelectedIndex - 1 + items.length) % items.length;
+          items.forEach((it, i) => it.classList.toggle('active', i === acSelectedIndex));
+        } else if (e.key === 'Enter') {
+          if (acSelectedIndex >= 0 && items[acSelectedIndex]) {
+            e.preventDefault();
+            const chosenQuery = items[acSelectedIndex].dataset.query;
+            hideAutocomplete();
+            handleSend(chosenQuery);
+          }
+        } else if (e.key === 'Escape') {
+          hideAutocomplete();
+        }
+      });
+    }
+
+    if (acBox) {
+      acBox.addEventListener('click', (e) => {
+        const item = e.target.closest('.maritim-ac-item');
+        if (item && item.dataset.query) {
+          const chosenQuery = item.dataset.query;
+          hideAutocomplete();
+          handleSend(chosenQuery);
+        }
+      });
+    }
+
     if (formEl) {
       formEl.addEventListener('submit', (e) => {
         e.preventDefault();
+        hideAutocomplete();
         if (inputEl) handleSend(inputEl.value);
       });
     }
@@ -325,15 +638,23 @@
       boxEl.addEventListener('click', (e) => {
         const chip = e.target.closest('.maritim-sug-chip');
         if (chip && chip.dataset.query) {
+          hideAutocomplete();
           handleSend(chip.dataset.query);
         }
       });
     }
 
-    // Tutup saat Escape
+    // Tutup saat Escape atau klik di luar autocomplete
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && isOpen) {
-        closeChat();
+      if (e.key === 'Escape') {
+        hideAutocomplete();
+        if (isOpen) closeChat();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('#maritim-chat-autocomplete') && !e.target.closest('#maritim-chat-input')) {
+        hideAutocomplete();
       }
     });
   }

@@ -10,55 +10,90 @@
   bottom: 24px;
   right: 24px;
   z-index: 99990;
-  width: 54px;
-  height: 54px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 2.5px solid #ffffff;
   background: var(--ocean-deep, #0a1e38);
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 8px 24px -4px rgba(10, 30, 56, 0.35);
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px -4px rgba(10, 30, 56, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   outline: none;
+  padding: 0;
+  overflow: hidden;
 }
 
 .maritim-chat-toggle:hover {
-  transform: translateY(-2px);
-  background: var(--accent-coral, #d94829);
-  box-shadow: 0 12px 28px -4px rgba(217, 72, 41, 0.4);
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 14px 28px -4px rgba(10, 30, 56, 0.5);
 }
 
 .maritim-chat-toggle:active {
-  transform: scale(0.96);
+  transform: scale(0.95);
 }
 
-.maritim-chat-toggle svg {
+.maritim-toggle-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.maritim-chat-toggle:hover .maritim-toggle-logo-img {
+  transform: scale(1.08);
+}
+
+.maritim-toggle-close-icon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.maritim-toggle-close-icon svg {
   width: 24px;
   height: 24px;
   fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
+  stroke: #ffffff;
+  stroke-width: 2.5;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: transform 0.25s ease;
 }
 
-.maritim-chat-toggle.active svg {
-  transform: rotate(90deg);
+.maritim-chat-toggle.active {
+  background: var(--accent-coral, #d94829);
+  border-color: #ffffff;
+}
+
+.maritim-chat-toggle.active .maritim-toggle-logo-img {
+  display: none;
+}
+
+.maritim-chat-toggle.active .maritim-toggle-close-icon {
+  display: flex;
 }
 
 .maritim-chat-badge-pulse {
   position: absolute;
   top: 2px;
   right: 2px;
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   background: #10b981;
   border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.35);
+}
+
+.maritim-chat-toggle.active .maritim-chat-badge-pulse {
+  display: none;
 }
 
 /* ---- Chat Container Window ---- */
@@ -120,11 +155,21 @@
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: var(--accent-coral, #d94829);
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.maritim-avatar-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .maritim-chat-title-group h4 {
@@ -232,6 +277,29 @@
   align-items: flex-start;
 }
 
+.maritim-msg-author-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 5px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: var(--ocean-deep, #0a1e38);
+}
+
+[data-theme="dark"] .maritim-msg-author-tag {
+  color: #93c5fd;
+}
+
+.maritim-msg-avatar-mini {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  display: inline-block;
+}
+
 .maritim-msg-bubble {
   padding: 10px 14px;
   border-radius: 12px;
@@ -267,6 +335,48 @@
 
 [data-theme="dark"] .maritim-msg-bubble strong {
   color: #38bdf8;
+}
+
+/* ---- Chat Bubble Typography & Lists ---- */
+.maritim-chat-p {
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+.maritim-chat-p:first-child {
+  margin-top: 0;
+}
+
+.maritim-chat-p:last-child {
+  margin-bottom: 0;
+}
+
+.maritim-chat-list {
+  margin: 6px 0;
+  padding-left: 18px;
+  list-style-type: disc;
+}
+
+.maritim-chat-list li {
+  margin-bottom: 8px;
+  line-height: 1.45;
+  color: inherit;
+}
+
+.maritim-chat-list li:last-child {
+  margin-bottom: 0;
+}
+
+.maritim-list-sub {
+  display: block;
+  font-size: 0.77rem;
+  color: var(--text-muted, #64748b);
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+[data-theme="dark"] .maritim-list-sub {
+  color: #94a3b8;
 }
 
 .maritim-msg-time {
@@ -365,6 +475,158 @@
   background: var(--accent-coral, #d94829);
 }
 
+/* ---- Bot Actions Row (Lihat Semua & Expand) ---- */
+.maritim-bot-dest-wrapper {
+  width: 100%;
+}
+
+.maritim-bot-actions-row {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.maritim-bot-btn-expand {
+  width: 100%;
+  padding: 8px 12px;
+  background: rgba(10, 30, 56, 0.05);
+  border: 1px dashed var(--border-subtle, #cbd5e1);
+  border-radius: 8px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--ocean-deep, #0a1e38);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: center;
+}
+
+[data-theme="dark"] .maritim-bot-btn-expand {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: #1e3048;
+  color: #38bdf8;
+}
+
+.maritim-bot-btn-expand:hover {
+  background: rgba(10, 30, 56, 0.1);
+  border-color: var(--ocean-deep, #0a1e38);
+}
+
+[data-theme="dark"] .maritim-bot-btn-expand:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+}
+
+.maritim-bot-btn-see-all {
+  width: 100%;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, var(--ocean-deep, #0a1e38) 0%, var(--ocean-marine, #154273) 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 9px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px -3px rgba(10, 30, 56, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.maritim-bot-btn-see-all:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, var(--accent-coral, #d94829) 0%, #b83318 100%);
+  box-shadow: 0 6px 18px -3px rgba(217, 72, 41, 0.45);
+}
+
+.maritim-bot-btn-see-all:active {
+  transform: scale(0.98);
+}
+
+/* ---- DBpedia Linked Data Visual Card ---- */
+.maritim-dbpedia-card {
+  margin-top: 8px;
+  background: var(--bg-surface, #ffffff);
+  border: 1px solid var(--border-subtle, #e6dfd3);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(10, 30, 56, 0.06);
+  max-width: 100%;
+}
+
+[data-theme="dark"] .maritim-dbpedia-card {
+  background: #142030;
+  border-color: #1e3048;
+}
+
+.maritim-dbpedia-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: rgba(10, 30, 56, 0.05);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--ocean-marine, #154273);
+  border-bottom: 1px solid var(--border-subtle, #e6dfd3);
+}
+
+[data-theme="dark"] .maritim-dbpedia-tag {
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  border-color: #1e3048;
+}
+
+.maritim-dbpedia-tag svg {
+  width: 14px !important;
+  height: 14px !important;
+  min-width: 14px !important;
+  min-height: 14px !important;
+  max-width: 14px !important;
+  max-height: 14px !important;
+  flex-shrink: 0;
+  display: inline-block;
+  stroke: currentColor;
+}
+
+.maritim-dbpedia-img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+}
+
+.maritim-dbpedia-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ocean-marine, #154273);
+  text-decoration: none;
+  background: var(--bg-surface, #ffffff);
+  transition: background 0.15s, color 0.15s;
+}
+
+[data-theme="dark"] .maritim-dbpedia-link {
+  background: #142030;
+  color: #38bdf8;
+}
+
+.maritim-dbpedia-link:hover {
+  background: rgba(10, 30, 56, 0.06);
+  color: var(--accent-coral, #d94829);
+}
+
+.maritim-dbpedia-link svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
 /* ---- Suggestions Chips ---- */
 .maritim-chat-suggestions {
   display: flex;
@@ -400,6 +662,132 @@
 [data-theme="dark"] .maritim-sug-chip:hover {
   background: var(--accent-coral, #d94829);
   border-color: var(--accent-coral, #d94829);
+}
+
+/* ---- Instant Smart Autocomplete ---- */
+.maritim-chat-autocomplete {
+  position: absolute;
+  bottom: 60px;
+  left: 14px;
+  right: 14px;
+  background: var(--bg-surface, #ffffff);
+  border: 1px solid var(--border-subtle, #e6dfd3);
+  border-radius: 12px;
+  box-shadow: 0 -8px 24px -4px rgba(10, 30, 56, 0.2);
+  max-height: 230px;
+  overflow-y: auto;
+  z-index: 99995;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  gap: 3px;
+  animation: slideUpAc 0.15s ease-out;
+}
+
+@keyframes slideUpAc {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+[data-theme="dark"] .maritim-chat-autocomplete {
+  background: #101c2c;
+  border-color: #1e3048;
+  box-shadow: 0 -8px 24px -4px rgba(0, 0, 0, 0.6);
+}
+
+.maritim-ac-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  font-size: 0.8rem;
+  color: var(--text-main, #0c1c2e);
+  user-select: none;
+}
+
+[data-theme="dark"] .maritim-ac-item {
+  color: #f1f5f9;
+}
+
+.maritim-ac-item:hover,
+.maritim-ac-item.active {
+  background: rgba(10, 30, 56, 0.07);
+}
+
+[data-theme="dark"] .maritim-ac-item:hover,
+[data-theme="dark"] .maritim-ac-item.active {
+  background: rgba(56, 189, 248, 0.15);
+}
+
+.maritim-ac-icon {
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.maritim-ac-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.maritim-ac-title {
+  font-weight: 700;
+  color: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.82rem;
+}
+
+.maritim-ac-title strong {
+  color: var(--accent-coral, #d94829);
+  font-weight: 800;
+}
+
+[data-theme="dark"] .maritim-ac-title strong {
+  color: #38bdf8;
+}
+
+.maritim-ac-sub {
+  font-size: 0.68rem;
+  color: var(--text-muted, #64748b);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 1px;
+}
+
+[data-theme="dark"] .maritim-ac-sub {
+  color: #94a3b8;
+}
+
+.maritim-ac-action {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-muted, #94a3b8);
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.04);
+  flex-shrink: 0;
+  transition: all 0.12s;
+}
+
+[data-theme="dark"] .maritim-ac-action {
+  background: rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+}
+
+.maritim-ac-item:hover .maritim-ac-action,
+.maritim-ac-item.active .maritim-ac-action {
+  background: var(--accent-coral, #d94829);
+  color: #ffffff;
 }
 
 /* ---- Chat Input Form ---- */
