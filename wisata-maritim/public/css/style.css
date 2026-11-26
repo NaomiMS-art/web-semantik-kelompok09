@@ -2631,15 +2631,77 @@ dialog.custom-modal::backdrop {
 
 /* Modal Interactive Calculator Widget */
 .calc-widget-box {
-  background: var(--bg-page);
+  background: var(--bg-subtle);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 1.25rem;
-  margin-top: 1.25rem;
+  border-radius: var(--radius-lg);
+  padding: 1.35rem;
+  margin-top: 1.5rem;
 }
 
 [data-theme="dark"] .calc-widget-box {
-  background: var(--bg-subtle);
+  background: rgba(7, 21, 38, 0.7);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.calc-grid-row {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .calc-grid-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.calc-card-block {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  color: var(--text-main);
+  box-shadow: var(--shadow-xs);
+}
+
+[data-theme="dark"] .calc-card-block {
+  background: var(--bg-surface);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.calc-card-title {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: var(--text-main);
+  display: block;
+  margin-bottom: 0.65rem;
+}
+
+.calc-people-input {
+  width: 70px;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+[data-theme="dark"] .calc-people-input {
+  background: var(--bg-surface);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--text-main);
+}
+
+.calc-people-input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
 }
 
 .calc-cb-item {

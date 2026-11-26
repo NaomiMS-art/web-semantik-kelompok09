@@ -1336,33 +1336,33 @@ async function openDestinationModal(destId) {
       <div class="calc-widget-box">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:1rem">
           <div>
-            <h4 style="font-weight:800;color:var(--text-main)">Simulasi Budget Rombongan &amp; Sewa Alat</h4>
-            <p style="font-size:0.8rem;color:var(--text-muted)">Hitung estimasi pengeluaran secara real-time berdasarkan jumlah orang dan alat yang dipilih.</p>
+            <h4 style="font-weight:800;color:var(--text-main);font-size:1.05rem;margin:0 0 0.25rem 0">Simulasi Budget Rombongan &amp; Sewa Alat</h4>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin:0">Hitung estimasi pengeluaran secara real-time berdasarkan jumlah orang dan alat yang dipilih.</p>
           </div>
           <div style="display:flex;align-items:center;gap:0.5rem">
-            <label style="font-size:0.85rem;font-weight:700">Jumlah Orang:</label>
-            <input type="number" id="calc-people" min="1" max="50" value="2" style="width:70px;padding:0.4rem 0.6rem;border-radius:var(--radius-sm);border:1px solid #bae6fd;font-weight:700">
+            <label for="calc-people" style="font-size:0.85rem;font-weight:700;color:var(--text-main)">Jumlah Orang:</label>
+            <input type="number" id="calc-people" class="calc-people-input" min="1" max="50" value="2">
           </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
-          <div style="background:white;padding:1rem;border-radius:var(--radius-md);border:1px solid #bae6fd">
-            <strong style="font-size:0.82rem;display:block;margin-bottom:0.6rem">Centang Alat yang Ingin Disewa:</strong>
-            <div id="calc-eq-checkboxes" style="display:flex;flex-direction:column;gap:0.45rem;max-height:160px;overflow-y:auto">
+        <div class="calc-grid-row">
+          <div class="calc-card-block">
+            <strong class="calc-card-title">Centang Alat yang Ingin Disewa:</strong>
+            <div id="calc-eq-checkboxes" style="display:flex;flex-direction:column;gap:0.45rem;max-height:160px;overflow-y:auto;padding-right:0.25rem">
               ${d.peralatan.filter(eq => eq.hargaSewa > 0).map(eq => `
-                <label class="custom-radio-item" style="font-size:0.8rem">
+                <label class="custom-radio-item" style="font-size:0.82rem">
                   <input type="checkbox" class="calc-cb-item" data-price="${eq.hargaSewa}" checked>
-                  <span>${escapeHtml(eq.nama)} (+${formatRupiah(eq.hargaSewa)})</span>
+                  <span style="color:var(--text-main);font-weight:600">${escapeHtml(eq.nama)} <small style="color:var(--text-muted);font-weight:normal">(+${formatRupiah(eq.hargaSewa)})</small></span>
                 </label>
-              `).join('') || '<span style="font-size:0.75rem;color:var(--text-muted)">Semua alat sudah termasuk dalam tiket.</span>'}
+              `).join('') || '<span style="font-size:0.78rem;color:var(--text-muted)">Semua alat sudah termasuk dalam tiket.</span>'}
             </div>
           </div>
 
-          <div style="background:white;padding:1rem;border-radius:var(--radius-md);border:1px solid #bae6fd;display:flex;flex-direction:column;justify-content:center">
-            <span style="font-size:0.75rem;color:var(--text-muted)">Total Estimasi Pengeluaran:</span>
-            <strong id="calc-total-amount" style="font-family:var(--font-display);font-size:1.6rem;color:var(--sea-blue);font-weight:800">Rp 0</strong>
-            <span id="calc-per-person-text" style="font-size:0.8rem;color:var(--text-muted);margin-top:0.25rem">Rp 0 / orang</span>
-            <div id="calc-range-result" style="margin-top:0.6rem"></div>
+          <div class="calc-card-block" style="display:flex;flex-direction:column;justify-content:center">
+            <span style="font-size:0.75rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.04em">Total Estimasi Pengeluaran:</span>
+            <strong id="calc-total-amount" style="font-family:var(--font-display);font-size:1.85rem;color:var(--accent-coral);font-weight:900;margin:0.25rem 0">Rp 0</strong>
+            <span id="calc-per-person-text" style="font-size:0.82rem;color:var(--text-secondary);font-weight:500">Rp 0 / orang</span>
+            <div id="calc-range-result" style="margin-top:0.75rem"></div>
           </div>
         </div>
       </div>
