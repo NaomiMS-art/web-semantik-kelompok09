@@ -2206,34 +2206,40 @@ async function openDestinationModal(destId) {
         </div>
       </div>
 
-      <!-- KULINER SEKITAR DESTINASI (maritim:KulinerSekitar) -->
+      <!-- KULINER SEKITAR DESTINASI -->
       ${d.kuliner && d.kuliner.length ? `
-        <div style="margin-top:2rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem">
-          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;margin-bottom:1rem">
+        <div class="culinary-section-wrap">
+          <div class="culinary-section-head">
             <div>
-              <h4 style="font-weight:800;color:var(--text-main);font-size:1.05rem;margin:0">
-                🍽️ Kuliner &amp; Seafood Sekitar ${escapeHtml(d.nama)}
-              </h4>
-              <p style="font-size:0.8rem;color:var(--text-muted);margin:0.25rem 0 0 0">
-                Rekomendasi tempat makan pesisir terdekat berdasarkan relasi <code>maritim:memilikiKulinerSekitar</code>.
-              </p>
+              <h4 class="culinary-section-title">Kuliner &amp; Seafood Sekitar ${escapeHtml(d.nama)}</h4>
+              <p class="culinary-section-sub">Rekomendasi tempat makan pesisir terdekat dari lokasi wisata.</p>
             </div>
-            <span class="badge-tag-clean" style="font-size:0.75rem;background:rgba(245,158,11,0.12);color:#d97706">
-              ${d.kuliner.length} Tempat Kuliner
-            </span>
+            <span class="culinary-count-pill">${d.kuliner.length} Tempat Kuliner</span>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:0.85rem">
+          <div class="culinary-cards-grid">
             ${d.kuliner.map(c => `
-              <div style="background:var(--bg-subtle);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:0.95rem;display:flex;flex-direction:column;gap:0.4rem">
-                <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:0.5rem">
-                  <strong style="color:var(--text-main);font-size:0.9rem;line-height:1.3">${escapeHtml(c.nama)}</strong>
-                  <span style="background:rgba(245,158,11,0.15);color:#d97706;font-size:0.7rem;font-weight:800;padding:2px 7px;border-radius:999px;white-space:nowrap">★ ${c.rating || '4.5'}</span>
+              <div class="culinary-spot-card">
+                <div class="culinary-card-top">
+                  <strong class="culinary-card-name">${escapeHtml(c.nama)}</strong>
+                  <span class="culinary-rating-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    ${c.rating || '4.5'}
+                  </span>
                 </div>
-                <span style="font-size:0.75rem;color:var(--sea-blue);font-weight:700">${escapeHtml(c.kategori || 'Kuliner Pesisir')}</span>
-                <span style="font-size:0.78rem;color:var(--text-secondary)">Menu Andalan: <strong>${escapeHtml(c.menuAndalan || '-')}</strong></span>
-                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-top:auto;padding-top:0.45rem;border-top:1px dashed var(--border-subtle);font-size:0.75rem;color:var(--text-muted)">
-                  <span>💰 ${escapeHtml(c.estimasiHarga || '-')}</span>
-                  <span>📍 ${c.jarakKm || '-'} km</span>
+                <span class="culinary-category-label">${escapeHtml(c.kategori || 'Kuliner Pesisir')}</span>
+                <div class="culinary-menu-box">
+                  <span class="culinary-menu-label">Menu Andalan</span>
+                  <span class="culinary-menu-text">${escapeHtml(c.menuAndalan || '-')}</span>
+                </div>
+                <div class="culinary-card-footer">
+                  <span class="culinary-price-text">
+                    <svg class="svg-icon svg-icon-xs" aria-hidden="true"><use href="#icon-wallet"/></svg>
+                    ${escapeHtml(c.estimasiHarga || '-')}
+                  </span>
+                  <span class="culinary-dist-pill">
+                    <svg class="svg-icon svg-icon-xs" aria-hidden="true"><use href="#icon-pin"/></svg>
+                    ${c.jarakKm || '-'} km
+                  </span>
                 </div>
               </div>
             `).join('')}
