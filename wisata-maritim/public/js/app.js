@@ -2205,6 +2205,41 @@ async function openDestinationModal(destId) {
           <!-- Populated by initModalMap -->
         </div>
       </div>
+
+      <!-- KULINER SEKITAR DESTINASI (maritim:KulinerSekitar) -->
+      ${d.kuliner && d.kuliner.length ? `
+        <div style="margin-top:2rem;border-top:1px solid var(--border-subtle);padding-top:1.5rem">
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;margin-bottom:1rem">
+            <div>
+              <h4 style="font-weight:800;color:var(--text-main);font-size:1.05rem;margin:0">
+                🍽️ Kuliner &amp; Seafood Sekitar ${escapeHtml(d.nama)}
+              </h4>
+              <p style="font-size:0.8rem;color:var(--text-muted);margin:0.25rem 0 0 0">
+                Rekomendasi tempat makan pesisir terdekat berdasarkan relasi <code>maritim:memilikiKulinerSekitar</code>.
+              </p>
+            </div>
+            <span class="badge-tag-clean" style="font-size:0.75rem;background:rgba(245,158,11,0.12);color:#d97706">
+              ${d.kuliner.length} Tempat Kuliner
+            </span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:0.85rem">
+            ${d.kuliner.map(c => `
+              <div style="background:var(--bg-subtle);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:0.95rem;display:flex;flex-direction:column;gap:0.4rem">
+                <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:0.5rem">
+                  <strong style="color:var(--text-main);font-size:0.9rem;line-height:1.3">${escapeHtml(c.nama)}</strong>
+                  <span style="background:rgba(245,158,11,0.15);color:#d97706;font-size:0.7rem;font-weight:800;padding:2px 7px;border-radius:999px;white-space:nowrap">★ ${c.rating || '4.5'}</span>
+                </div>
+                <span style="font-size:0.75rem;color:var(--sea-blue);font-weight:700">${escapeHtml(c.kategori || 'Kuliner Pesisir')}</span>
+                <span style="font-size:0.78rem;color:var(--text-secondary)">Menu Andalan: <strong>${escapeHtml(c.menuAndalan || '-')}</strong></span>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-top:auto;padding-top:0.45rem;border-top:1px dashed var(--border-subtle);font-size:0.75rem;color:var(--text-muted)">
+                  <span>💰 ${escapeHtml(c.estimasiHarga || '-')}</span>
+                  <span>📍 ${c.jarakKm || '-'} km</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
     `;
 
     initModalCalculator(d);
