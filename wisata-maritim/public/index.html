@@ -235,89 +235,118 @@
        ============================================================================== -->
   <section class="tab-view-section page-scroll-section" id="view-home">
 
-    <!-- HERO SECTION WITH PRO SEARCH (MENYATU DENGAN BACKGROUND BERGRADASI & SEARCH BAR DITENGAH) -->
-    <section class="hero-pro">
-      <div class="hero-content-pro">
-        <h2 class="hero-title-pro">Jelajahi Wisata Maritim Nusantara Berdasarkan Budget &amp; Kemampuan</h2>
-        <p class="hero-subtitle-pro">
-          Mesin pencari semantik cerdas menghubungkan 300+ destinasi maritim Indonesia dengan <strong>5 kategori range
-            harga Google</strong>, <strong>tingkat keahlian pengguna</strong>, serta <strong>katalog peralatan &amp;
-            persewaan</strong> lengkap.
-        </p>
+    <!-- HERO SECTION SHOWCASE 2-KOLOM + BOTTOM SEARCH DOCK -->
+    <section class="hero-pro hero-showcase" id="hero-showcase-bg">
+      <div class="hero-content-pro hero-showcase-container">
+        <div class="hero-showcase-grid">
+          <!-- KOLOM KIRI: INFO DESTINASI UNGGULAN & KONTROL CAROUSEL -->
+          <div class="hero-showcase-left">
+            <div class="hero-showcase-meta-top">
+              <span class="hero-showcase-cats" id="hero-sc-cats">SNORKELING / DIVING / PULAU KARST</span>
+              <span class="hero-showcase-studio-pill" id="hero-sc-region">PAPUA BARAT DAYA</span>
+            </div>
 
-        <!-- PRO SEARCH BAR (FOKUS INPUT TUNGGAL DI BERANDA) -->
-        <div class="search-card-pro">
-          <form id="hero-search-form" class="search-form-row hero-single-search" role="search">
-            <div class="search-field-main" style="position:relative;width:100%">
+            <h2 class="hero-showcase-title" id="hero-sc-title">Wayag Raja Ampat</h2>
+            <p class="hero-showcase-desc" id="hero-sc-desc">
+              Gugusan pulau karst ikonik dengan laguna biru jernih dan terumbu karang kelas dunia. Cocok untuk snorkeling, diving, dan fotografi panorama bahari Nusantara.
+            </p>
+
+            <div class="hero-showcase-actions">
+              <button type="button" class="hero-btn-gold" id="hero-sc-detail-btn">
+                Lihat detail
+              </button>
+              <button type="button" class="hero-btn-glass" onclick="switchTab('explorer')">
+                Jelajah Destinasi
+              </button>
+              <button type="button" class="hero-btn-glass" id="hero-sc-map-btn">
+                Lihat di Peta
+              </button>
+            </div>
+
+            <div class="hero-showcase-nav-arrows">
+              <button type="button" class="hero-arrow-btn" id="hero-sc-prev" aria-label="Destinasi sebelumnya">
+                <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-left" /></svg>
+              </button>
+              <button type="button" class="hero-arrow-btn" id="hero-sc-next" aria-label="Destinasi berikutnya">
+                <svg class="svg-icon svg-icon-sm"><use href="#icon-arrow-right" /></svg>
+              </button>
+            </div>
+
+            <div class="hero-showcase-tabs" id="hero-sc-tabs">
+              <!-- Diisi dinamis 01 .. 05 oleh initHeroShowcase() -->
+            </div>
+          </div>
+
+          <!-- KOLOM KANAN: KARTU PREVIEW DESTINASI UNGGULAN -->
+          <div class="hero-showcase-right">
+            <div class="hero-featured-card" id="hero-sc-card">
+              <div class="hero-featured-media" id="hero-sc-media-trigger" role="button" tabindex="0" title="Klik untuk melihat detail destinasi">
+                <img id="hero-sc-img" src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=900&q=80" alt="Destinasi Unggulan">
+                <div class="hero-featured-badges">
+                  <span class="hero-badge-hot">Destinasi unggulan</span>
+                  <span class="hero-badge-rating" id="hero-sc-level-badge">★ Pemula</span>
+                </div>
+                <span class="hero-featured-play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                    <polygon points="8 5 19 12 8 19 8 5"></polygon>
+                  </svg>
+                </span>
+              </div>
+              <div class="hero-featured-body">
+                <span class="hero-featured-eyebrow" id="hero-sc-eyebrow">PAPUA · RAJA AMPAT</span>
+                <h3 class="hero-featured-name" id="hero-sc-card-title">Wayag Raja Ampat</h3>
+                <div class="hero-featured-footer">
+                  <span class="hero-featured-meta" id="hero-sc-meta">Estimasi Rp500.000 · Snorkeling</span>
+                  <span class="hero-featured-chip" id="hero-sc-chip">Pulau Karst</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM BAR: SEARCH BAR SEMANTIK & PENCARIAN CEPAT -->
+        <div class="hero-bottom-search-dock">
+          <form id="hero-search-form" class="hero-dock-form" role="search">
+            <div class="search-field-main hero-dock-input-wrap" style="position:relative;flex:1">
               <svg class="svg-icon">
                 <use href="#icon-search" />
               </svg>
               <input type="search" id="hero-search-input"
                 placeholder="Cari aktivitas, lokasi, atau budget (contoh: snorkeling pemula budget 250rb)..."
                 autocomplete="off">
-              <!-- AUTOCOMPLETE / SEARCH SUGGESTIONS DROPDOWN -->
               <div class="search-suggestions-dropdown" id="hero-search-suggestions" style="display:none"></div>
             </div>
+            <button type="submit" class="btn-search-exec hero-dock-submit">
+              <span>Cari Semantik</span>
+              <svg class="svg-icon">
+                <use href="#icon-arrow-right" />
+              </svg>
+            </button>
           </form>
-        </div>
 
-        <!-- TOMBOL CARI SEMANTIK DIPINDAHKAN DI BAWAH SEARCH BAR -->
-        <div class="hero-search-btn-wrapper">
-          <button type="submit" form="hero-search-form" class="btn-search-exec hero-btn-exec">
-            <span>Cari Semantik</span>
-            <svg class="svg-icon">
-              <use href="#icon-arrow-right" />
-            </svg>
-          </button>
-        </div>
+          <div class="trending-bar hero-dock-trending">
+            <div class="trending-group">
+              <span class="trending-label" style="color:#ff8a65;font-weight:800">Paling Sering Dicari:</span>
+              <button type="button" class="trending-tag popular-badge" data-q="snorkeling pemula budget 250rb ada alat">Snorkeling Pemula &le; 250rb</button>
+              <button type="button" class="trending-tag popular-badge" data-q="pantai pasir putih di Bali dan Lombok">Pantai Pasir Putih Bali &amp; Lombok</button>
+              <button type="button" class="trending-tag popular-badge" data-q="spot diving mahir sewa bcd dan tabung scuba">Diving Mahir + Sewa BCD</button>
+              <button type="button" class="trending-tag popular-badge" data-q="surfing pemula sewa papan selancar">Surfing Pemula + Papan</button>
+              <button type="button" class="trending-tag popular-badge" data-q="pulau eksotis hidden gem di Raja Ampat">Pulau Eksotis Raja Ampat</button>
+              <button type="button" class="trending-tag popular-badge" data-q="wisata maritim keluarga murah di Jawa">Wisata Maritim Murah di Jawa</button>
+            </div>
 
-        <!-- TRENDING & PALING SERING DICARI PILLS (DITENGAH DI BAWAHNYA) -->
-        <div class="trending-bar">
-          <div class="trending-group">
-            <span class="trending-label" style="color:#ff8a65;font-weight:800">
-               Paling Sering Dicari:
-            </span>
-            <button type="button" class="trending-tag popular-badge" data-q="snorkeling pemula budget 250rb ada alat">
-               Snorkeling Pemula &le; 250rb
-            </button>
-            <button type="button" class="trending-tag popular-badge" data-q="pantai pasir putih di Bali dan Lombok">
-               Pantai Pasir Putih Bali &amp; Lombok
-            </button>
-            <button type="button" class="trending-tag popular-badge"
-              data-q="spot diving mahir sewa bcd dan tabung scuba">
-               Diving Mahir + Sewa BCD
-            </button>
-            <button type="button" class="trending-tag popular-badge" data-q="surfing pemula sewa papan selancar">
-               Surfing Pemula + Papan
-            </button>
-            <button type="button" class="trending-tag popular-badge" data-q="pulau eksotis hidden gem di Raja Ampat">
-               Pulau Eksotis Raja Ampat
-            </button>
-            <button type="button" class="trending-tag popular-badge" data-q="wisata maritim keluarga murah di Jawa">
-               Wisata Maritim Murah di Jawa
-            </button>
-          </div>
-
-          <div class="trending-group">
-            <span class="trending-label" style="color:#fcd34d;font-weight:800">
-              <svg class="svg-icon svg-icon-sm" aria-hidden="true"><use href="#icon-bulb" /></svg>
-              Rekomendasi Cepat:
-            </span>
-            <button type="button" class="trending-tag" data-q="destinasi wisata gratis di Maluku">
-              Wisata Gratis Maluku
-            </button>
-            <button type="button" class="trending-tag" data-q="sunset dan kano di Labuan Bajo">
-              Sunset &amp; Kano Labuan Bajo
-            </button>
-            <button type="button" class="trending-tag" data-q="snorkeling terumbu karang di Bunaken">
-              Terumbu Karang Bunaken
-            </button>
-            <button type="button" class="trending-tag" data-q="pantai pasir timbul Ngurtafur">
-              Pasir Timbul Ngurtafur
-            </button>
+            <div class="trending-group">
+              <span class="trending-label" style="color:#fcd34d;font-weight:800">
+                <svg class="svg-icon svg-icon-sm" aria-hidden="true"><use href="#icon-bulb" /></svg>
+                Rekomendasi Cepat:
+              </span>
+              <button type="button" class="trending-tag" data-q="destinasi wisata gratis di Maluku">Wisata Gratis Maluku</button>
+              <button type="button" class="trending-tag" data-q="sunset dan kano di Labuan Bajo">Sunset &amp; Kano Labuan Bajo</button>
+              <button type="button" class="trending-tag" data-q="snorkeling terumbu karang di Bunaken">Terumbu Karang Bunaken</button>
+              <button type="button" class="trending-tag" data-q="pantai pasir timbul Ngurtafur">Pasir Timbul Ngurtafur</button>
+            </div>
           </div>
         </div>
-
       </div>
     </section>
 

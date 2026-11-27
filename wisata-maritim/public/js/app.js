@@ -223,12 +223,121 @@ document.addEventListener('DOMContentLoaded', () => {
   updateFavoriteBadge();
   loadFacets();
   loadAllDestinations().then(() => {
+    initHeroShowcase();
     initNearbyRecommendations();
     renderIndonesiaMapView();
     renderFavoritesView();
   });
   executeSearch();
 });
+
+let heroShowcaseIndex = 0;
+let heroShowcaseTimer = null;
+
+function initHeroShowcase() {
+  const allDests = APP_STATE.allDestinations || [];
+  if (allDests.length === 0) return;
+
+  const featuredIds = ['PPA-01', 'SLW-21', 'BNT-03', 'KLM-09', 'MLK-05'];
+  const featured = featuredIds
+    .map(id => allDests.find(d => d.id === id))
+    .filter(Boolean);
+
+  if (featured.length < 5) {
+    for (const d of allDests) {
+      if (featured.length >= 5) break;
+      if (!featured.some(f => f.id === d.id)) featured.push(d);
+    }
+  }
+
+  const tabsEl = document.getElementById('hero-sc-tabs');
+  const prevBtn = document.getElementById('hero-sc-prev');
+  const nextBtn = document.getElementById('hero-sc-next');
+  const bgEl = document.getElementById('hero-showcase-bg');
+
+  const renderSlide = (idx) => {
+    heroShowcaseIndex = (idx + featured.length) % featured.length;
+    const d = featured[heroShowcaseIndex];
+    const photoUrl = d.foto || getPhotoForDestination(d);
+
+    if (bgEl) {
+      bgEl.style.backgroundImage = `linear-gradient(to right, var(--ocean-abyss) 0%, rgba(7, 21, 38, 0.92) 38%, rgba(7, 21, 38, 0.68) 72%, rgba(7, 21, 38, 0.78) 100%), linear-gradient(to bottom, rgba(7, 21, 38, 0.15) 60%, var(--ocean-abyss) 100%), url('${photoUrl}')`;
+      bgEl.style.backgroundSize = 'cover';
+      bgEl.style.backgroundPosition = 'center';
+    }
+
+    const catsEl = document.getElementById('hero-sc-cats');
+    const regEl = document.getElementById('hero-sc-region');
+    const titleEl = document.getElementById('hero-sc-title');
+    const descEl = document.getElementById('hero-sc-desc');
+    const imgEl = document.getElementById('hero-sc-img');
+    const lvlEl = document.getElementById('hero-sc-level-badge');
+    const eyeEl = document.getElementById('hero-sc-eyebrow');
+    const cardTitleEl = document.getElementById('hero-sc-card-title');
+    const metaEl = document.getElementById('hero-sc-meta');
+    const chipEl = document.getElementById('hero-sc-chip');
+    const detailBtn = document.getElementById('hero-sc-detail-btn');
+    const mediaTrigger = document.getElementById('hero-sc-media-trigger');
+    const mapBtn = document.getElementById('hero-sc-map-btn');
+
+    if (catsEl) catsEl.textContent = (d.aktivitas && d.aktivitas.length ? d.aktivitas.slice(0, 3).join(' / ') : d.jenisWisata || 'WISATA BAHARI').toUpperCase();
+    if (regEl) regEl.textContent = (d.provinsi || d.wilayah || 'NUSANTARA').toUpperCase();
+    if (titleEl) titleEl.textContent = d.nama;
+    if (descEl) {
+      const snippet = d.atraksi ? `${d.atraksi}. ` : '';
+      descEl.textContent = `${snippet}Berlokasi di ${d.lokasi} (${d.wilayah}). Cocok untuk tingkat ${d.level} dengan estimasi biaya ${formatRupiah(d.estimasiTotalPerOrang)} per orang.`;
+    }
+    if (imgEl) {
+      imgEl.src = photoUrl;
+      imgEl.alt = d.nama;
+    }
+    if (lvlEl) lvlEl.textContent = `★ ${d.level || 'Pemula'}`;
+    if (eyeEl) eyeEl.textContent = `${(d.wilayah || '').toUpperCase()} · ${(d.provinsi || '').toUpperCase()}`;
+    if (cardTitleEl) cardTitleEl.textContent = d.nama;
+    if (metaEl) metaEl.textContent = `${formatRupiah(d.estimasiTotalPerOrang)} · ${(d.aktivitas && d.aktivitas[0]) || 'Bahari'}`;
+    if (chipEl) chipEl.textContent = d.jenisWisata || 'Wisata Maritim';
+
+    const openDetail = () => openDestinationModal(d.id);
+    if (detailBtn) detailBtn.onclick = openDetail;
+    if (mediaTrigger) mediaTrigger.onclick = openDetail;
+    if (mapBtn) {
+      mapBtn.onclick = () => {
+        switchTab('map');
+        setTimeout(() => {
+          if (indonesiaMapInstance && d.latitude && d.longitude) {
+            indonesiaMapInstance.flyTo([d.latitude, d.longitude], 11, { duration: 1.2 });
+          }
+        }, 400);
+      };
+    }
+
+    if (tabsEl) {
+      tabsEl.innerHTML = featured.map((item, i) => {
+        const num = String(i + 1).padStart(2, '0');
+        const shortName = item.nama.replace(/^(Pantai|Pulau|Taman Nasional)\s+/i, '').split(/[(,]/)[0].trim();
+        return `<button type="button" class="hero-sc-tab ${i === heroShowcaseIndex ? 'active' : ''}" data-slide="${i}">${num} ${escapeHtml(shortName)}</button>`;
+      }).join('');
+
+      tabsEl.querySelectorAll('.hero-sc-tab').forEach(btn => {
+        btn.addEventListener('click', () => {
+          renderSlide(Number(btn.dataset.slide));
+          resetAutoRotate();
+        });
+      });
+    }
+  };
+
+  const resetAutoRotate = () => {
+    if (heroShowcaseTimer) clearInterval(heroShowcaseTimer);
+    heroShowcaseTimer = setInterval(() => renderSlide(heroShowcaseIndex + 1), 7000);
+  };
+
+  if (prevBtn) prevBtn.addEventListener('click', () => { renderSlide(heroShowcaseIndex - 1); resetAutoRotate(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { renderSlide(heroShowcaseIndex + 1); resetAutoRotate(); });
+
+  renderSlide(0);
+  resetAutoRotate();
+}
 
 function initThemeToggle() {
   const savedTheme = localStorage.getItem('imj_theme') ||
