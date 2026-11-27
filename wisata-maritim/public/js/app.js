@@ -2186,7 +2186,7 @@ async function openDestinationModal(destId) {
         <div id="modal-map-${d.id}" style="width:100%;height:320px;border-radius:var(--radius-md);border:1px solid var(--border-subtle);margin-bottom:0.75rem;background:var(--bg-subtle)"></div>
 
         <!-- LEGENDA MINI PETA MODAL -->
-        <div style="display:flex;gap:1.25rem;align-items:center;margin-bottom:1rem;padding:0.55rem 0.95rem;background:var(--bg-subtle);border:1px solid var(--border-subtle);border-radius:var(--radius-md);font-size:0.76rem;flex-wrap:wrap">
+        <div style="display:flex;gap:1.25rem;align-items:center;margin-bottom:0.85rem;padding:0.55rem 0.95rem;background:var(--bg-subtle);border:1px solid var(--border-subtle);border-radius:var(--radius-md);font-size:0.76rem;flex-wrap:wrap">
           <div style="display:flex;align-items:center;gap:0.4rem">
             <span style="display:inline-block;width:14px;height:14px;background:#ef4444;border-radius:50%;border:2px solid white;box-shadow:0 0 8px rgba(239,68,68,0.9)"></span>
             <strong>Lokasi Pilihan: ${escapeHtml(d.nama)}</strong>
@@ -2198,6 +2198,19 @@ async function openDestinationModal(destId) {
           <div style="margin-left:auto;color:var(--text-muted);font-size:0.72rem">
             <em> Garis biru menunjukkan jarak langsung (Haversine Formula)</em>
           </div>
+        </div>
+
+        <!-- SUBJUDUL DAFTAR KARTU WISATA TERDEKAT -->
+        <div style="margin:0.85rem 0 0.6rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.4rem">
+          <div style="display:flex;align-items:center;gap:0.45rem">
+            <span style="font-size:1rem">🏖️</span>
+            <h5 style="font-size:0.92rem;font-weight:700;color:var(--text-main);margin:0">
+              Daftar Destinasi Bahari Terdekat yang Bisa Dikunjungi:
+            </h5>
+          </div>
+          <span style="font-size:0.75rem;color:var(--text-muted);font-style:italic">
+            💡 Urut dari jarak terdekat • Klik kartu untuk melihat detail
+          </span>
         </div>
 
         <!-- DAFTAR KARTU WISATA MARITIM TERDEKAT -->
