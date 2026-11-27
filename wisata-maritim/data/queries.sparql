@@ -1,0 +1,115 @@
+# ==============================================================================
+# KUMPULAN CONTOH SPARQL QUERY — WISATA MARITIM INDONESIA (KELOMPOK 09)
+# Ontologi: http://wisatamaritim.id/ontology#
+# Resource: http://wisatamaritim.id/resource/
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Pencarian Kompleks: Snorkeling + Tingkat Pemula + Budget <= Rp250.000
+# ------------------------------------------------------------------------------
+PREFIX maritim: <http://wisatamaritim.id/ontology#>
+PREFIX data: <http://wisatamaritim.id/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?dest ?nama ?provinsi ?level ?hargaTiket ?totalBiaya
+WHERE {
+  ?dest a maritim:DestinasiWisata .
+  ?dest maritim:namaDestinasi ?nama .
+  ?dest maritim:beradaDiProvinsi ?provUri .
+  ?provUri rdfs:label ?provinsi .
+  ?dest maritim:cocokUntukTingkat ?tingkatUri .
+  ?tingkatUri rdfs:label ?level .
+  ?dest maritim:hargaTiketMasuk ?hargaTiket .
+  ?dest maritim:estimasiTotalBiaya ?totalBiaya .
+  ?dest maritim:memilikiAktivitas data:aktivitas_Snorkeling .
+  ?dest maritim:cocokUntukTingkat data:Tingkat_Pemula .
+  FILTER(?totalBiaya <= 250000)
+}
+ORDER BY ASC(?totalBiaya)
+LIMIT 25
+
+# ------------------------------------------------------------------------------
+# 2. Filter Harga Lebih Dari Rp250.000 (>250rb)
+# ------------------------------------------------------------------------------
+PREFIX maritim: <http://wisatamaritim.id/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?dest ?nama ?provinsi ?level ?hargaTiket ?totalBiaya
+WHERE {
+  ?dest a maritim:DestinasiWisata .
+  ?dest maritim:namaDestinasi ?nama .
+  ?dest maritim:beradaDiProvinsi ?provUri .
+  ?provUri rdfs:label ?provinsi .
+  ?dest maritim:cocokUntukTingkat ?tingkatUri .
+  ?tingkatUri rdfs:label ?level .
+  ?dest maritim:hargaTiketMasuk ?hargaTiket .
+  ?dest maritim:estimasiTotalBiaya ?totalBiaya .
+  FILTER(?totalBiaya > 250000)
+}
+ORDER BY ASC(?totalBiaya)
+LIMIT 25
+
+# ------------------------------------------------------------------------------
+# 3. Filter Rentang Harga (100rb - 250rb)
+# ------------------------------------------------------------------------------
+PREFIX maritim: <http://wisatamaritim.id/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?dest ?nama ?provinsi ?level ?hargaTiket ?totalBiaya
+WHERE {
+  ?dest a maritim:DestinasiWisata .
+  ?dest maritim:namaDestinasi ?nama .
+  ?dest maritim:beradaDiProvinsi ?provUri .
+  ?provUri rdfs:label ?provinsi .
+  ?dest maritim:cocokUntukTingkat ?tingkatUri .
+  ?tingkatUri rdfs:label ?level .
+  ?dest maritim:hargaTiketMasuk ?hargaTiket .
+  ?dest maritim:estimasiTotalBiaya ?totalBiaya .
+  FILTER(?totalBiaya >= 100000 && ?totalBiaya <= 250000)
+}
+ORDER BY ASC(?totalBiaya)
+LIMIT 25
+
+# ------------------------------------------------------------------------------
+# 4. Filter Harga Pas (500rb / =500000)
+# ------------------------------------------------------------------------------
+PREFIX maritim: <http://wisatamaritim.id/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?dest ?nama ?provinsi ?level ?hargaTiket ?totalBiaya
+WHERE {
+  ?dest a maritim:DestinasiWisata .
+  ?dest maritim:namaDestinasi ?nama .
+  ?dest maritim:beradaDiProvinsi ?provUri .
+  ?provUri rdfs:label ?provinsi .
+  ?dest maritim:cocokUntukTingkat ?tingkatUri .
+  ?tingkatUri rdfs:label ?level .
+  ?dest maritim:hargaTiketMasuk ?hargaTiket .
+  ?dest maritim:estimasiTotalBiaya ?totalBiaya .
+  FILTER(?totalBiaya = 500000)
+}
+ORDER BY ASC(?totalBiaya)
+LIMIT 25
+
+# ------------------------------------------------------------------------------
+# 5. Filter Aktivitas Diving + Kategori Range Harga (Rp250.000 - Rp500.000)
+# ------------------------------------------------------------------------------
+PREFIX maritim: <http://wisatamaritim.id/ontology#>
+PREFIX data: <http://wisatamaritim.id/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?dest ?nama ?provinsi ?level ?hargaTiket ?totalBiaya
+WHERE {
+  ?dest a maritim:DestinasiWisata .
+  ?dest maritim:namaDestinasi ?nama .
+  ?dest maritim:beradaDiProvinsi ?provUri .
+  ?provUri rdfs:label ?provinsi .
+  ?dest maritim:cocokUntukTingkat ?tingkatUri .
+  ?tingkatUri rdfs:label ?level .
+  ?dest maritim:hargaTiketMasuk ?hargaTiket .
+  ?dest maritim:estimasiTotalBiaya ?totalBiaya .
+  ?dest maritim:memilikiAktivitas data:aktivitas_Diving .
+  ?dest maritim:kategoriHargaTotal data:Range_250k_500k .
+}
+ORDER BY ASC(?totalBiaya)
+LIMIT 25
