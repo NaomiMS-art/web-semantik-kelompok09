@@ -646,7 +646,7 @@ function matchesPriceFilterClient(d, priceFilter, priceType = 'total') {
     if (pc.op === 'lt' && !(targetVal < pc.value)) return false;
     if (pc.op === 'lte' && !(targetVal <= pc.value)) return false;
     if (pc.op === 'between' && !(targetVal >= pc.min && targetVal <= pc.max)) return false;
-    if (pc.op === 'eq' && !(total === pc.value || tiket === pc.value || akt === pc.value)) return false;
+    if (pc.op === 'eq' && !(targetVal === pc.value)) return false;
   }
   if (priceFilter.rest && priceFilter.rest.length >= 2) {
     const blob = `${d.id} ${d.nama} ${d.lokasi} ${d.provinsi} ${d.wilayah} ${(d.aktivitas || []).join(' ')} ${(d.kuliner || []).map(c => `${c.nama} ${c.menuAndalan}`).join(' ')} ${(d.peralatan || []).map(e => e.nama).join(' ')} ${(d.fasilitas || []).join(' ')}`.toLowerCase();
@@ -950,12 +950,29 @@ function initSearchForms() {
   setupSearchAutocomplete('explorer-search-input', 'explorer-search-suggestions');
 
   let liveSearchTimer = null;
+  const resetToInitialIfCleared = (rawValue) => {
+    if (rawValue.trim() === '' && APP_STATE.query !== '') {
+      clearTimeout(liveSearchTimer);
+      APP_STATE.query = '';
+      APP_STATE.currentPage = 1;
+      executeSearch();
+      return true;
+    }
+    return false;
+  };
+
   if (heroInput && explorerInput) {
     heroInput.addEventListener('input', () => {
       explorerInput.value = heroInput.value;
+      resetToInitialIfCleared(heroInput.value);
+    });
+    heroInput.addEventListener('search', () => {
+      explorerInput.value = heroInput.value;
+      resetToInitialIfCleared(heroInput.value);
     });
     explorerInput.addEventListener('input', () => {
       heroInput.value = explorerInput.value;
+      if (resetToInitialIfCleared(explorerInput.value)) return;
       clearTimeout(liveSearchTimer);
       liveSearchTimer = setTimeout(() => {
         const nextQ = explorerInput.value.trim();
@@ -968,6 +985,10 @@ function initSearchForms() {
           executeSearch();
         }
       }, 280);
+    });
+    explorerInput.addEventListener('search', () => {
+      heroInput.value = explorerInput.value;
+      resetToInitialIfCleared(explorerInput.value);
     });
   }
 

@@ -410,10 +410,21 @@ class SemanticSearch {
           whereClauses.push(`?dest maritim:cocokUntukTingkat data:Tingkat_${activeLevel} .`);
         }
 
-    const activeBudget = filters.maxBudget !== undefined ? filters.maxBudget : parsed.maxBudget;
-        if(activeBudget !== null && activeBudget !== undefined) {
-        filterClauses.push(`?totalBiaya <= ${activeBudget}`);
+    const priceVar = filters.priceType === 'tiket' ? '?hargaTiket' : '?totalBiaya';
+    const pc = parsed.priceConstraint;
+    if (pc) {
+      if (pc.op === 'gt') filterClauses.push(`${priceVar} > ${pc.value}`);
+      else if (pc.op === 'gte') filterClauses.push(`${priceVar} >= ${pc.value}`);
+      else if (pc.op === 'lt') filterClauses.push(`${priceVar} < ${pc.value}`);
+      else if (pc.op === 'lte') filterClauses.push(`${priceVar} <= ${pc.value}`);
+      else if (pc.op === 'between') filterClauses.push(`${priceVar} >= ${pc.min} && ${priceVar} <= ${pc.max}`);
+      else if (pc.op === 'eq') filterClauses.push(`${priceVar} = ${pc.value}`);
+    } else {
+      const activeBudget = filters.maxBudget !== undefined ? filters.maxBudget : parsed.maxBudget;
+      if (activeBudget !== null && activeBudget !== undefined) {
+        filterClauses.push(`${priceVar} <= ${activeBudget}`);
       }
+    }
 
       const activeRange = filters.rangeHarga || parsed.rangeHarga;
       if (activeRange) {
@@ -611,13 +622,7 @@ class SemanticSearch {
         if (pc.op === 'lt' && !(targetVal < pc.value)) return false;
         if (pc.op === 'lte' && !(targetVal <= pc.value)) return false;
         if (pc.op === 'between' && !(targetVal >= pc.min && targetVal <= pc.max)) return false;
-        if (pc.op === 'eq') {
-          const exactMatch =
-            d.estimasiTotalPerOrang === pc.value ||
-            d.hargaTiketMasuk === pc.value ||
-            (d.hargaAktivitasMulai && d.hargaAktivitasMulai === pc.value);
-          if (!exactMatch) return false;
-        }
+        if (pc.op === 'eq' && !(targetVal === pc.value)) return false;
       } else if (filters.maxBudget !== null && filters.maxBudget !== undefined) {
         if (filters.priceType === 'tiket') {
           if (d.hargaTiketMasuk > filters.maxBudget) return false;

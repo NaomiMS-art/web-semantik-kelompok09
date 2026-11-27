@@ -315,7 +315,7 @@
     <maritim:kode>SMT-02</maritim:kode>
     <maritim:namaDestinasi>Pantai Gapang</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Sabang, Aceh</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Gapang_Beach%2C_Sabang%2C_Aceh.jpg/960px-Gapang_Beach%2C_Sabang%2C_Aceh.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/SMT-02.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Aceh"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -443,7 +443,7 @@
     <maritim:kode>SMT-03</maritim:kode>
     <maritim:namaDestinasi>Pulau Banyak</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Aceh Singkil, Aceh</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Banyak_Islands.jpg/960px-Banyak_Islands.jpg?utm_source=id.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/SMT-03.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Aceh"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -539,7 +539,7 @@
     <maritim:kode>SMT-04</maritim:kode>
     <maritim:namaDestinasi>Titik Nol Kilometer Sabang</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Sabang, Aceh</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-04.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Aceh"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -601,7 +601,7 @@
     <maritim:kode>SMT-05</maritim:kode>
     <maritim:namaDestinasi>Pantai Sumur Tiga</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Sabang, Aceh</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-05.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Aceh"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -689,7 +689,7 @@
     <maritim:kode>SMT-06</maritim:kode>
     <maritim:namaDestinasi>Pantai Lampuuk</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Aceh Besar, Aceh</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Masjid_Rahmatullah_Lampuuk_%28cropped%29.jpg/960px-Masjid_Rahmatullah_Lampuuk_%28cropped%29.jpg?utm_source=id.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/SMT-06.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Aceh"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -929,7 +929,7 @@
     <maritim:kode>SMT-09</maritim:kode>
     <maritim:namaDestinasi>Pantai Lagundri</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Nias Selatan, Sumut</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-09.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sumut"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Mahir"/>
@@ -2094,7 +2094,7 @@
     <maritim:kode>SMT-23</maritim:kode>
     <maritim:namaDestinasi>Pantai Sepempang</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Natuna, Kepulauan Riau</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-23.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Kepulauan_Riau"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -2463,7 +2463,7 @@
     <maritim:kode>SMT-29</maritim:kode>
     <maritim:namaDestinasi>Pulau Tikus Bengkulu</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Bengkulu, Bengkulu</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-29.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Bengkulu"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -3632,7 +3632,7 @@
     <maritim:kode>SMT-42</maritim:kode>
     <maritim:namaDestinasi>Pulau Kelagian Lunik</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Pesawaran, Lampung</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-42.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Lampung"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -3718,7 +3718,7 @@
     <maritim:kode>SMT-43</maritim:kode>
     <maritim:namaDestinasi>Pantai Tanjung Setia</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Pesisir Barat, Lampung</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-43.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Lampung"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Mahir"/>
@@ -6869,7 +6869,7 @@
     <maritim:kode>KLM-11</maritim:kode>
     <maritim:namaDestinasi>Pulau Kakaban</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Berau, Kalimantan Timur</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Borneo_Topography.png/960px-Borneo_Topography.png?utm_source=id.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/KLM-11.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Kalimantan_Timur"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Kalimantan"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -7745,7 +7745,7 @@
     <maritim:kode>BNT-04</maritim:kode>
     <maritim:namaDestinasi>Mangrove &amp; Snorkeling Nusa Lembongan</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Klungkung, Bali</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-04.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Bali"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -7842,7 +7842,7 @@
     <maritim:kode>BNT-05</maritim:kode>
     <maritim:namaDestinasi>Blue Lagoon Nusa Ceningan</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Klungkung, Bali</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-05.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Bali"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Menengah"/>
@@ -7928,7 +7928,7 @@
     <maritim:kode>BNT-06</maritim:kode>
     <maritim:namaDestinasi>USAT Liberty Shipwreck Tulamben</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Karangasem, Bali</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-06.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Bali"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_SemuaLevel"/>
@@ -8679,7 +8679,7 @@
     <maritim:kode>BNT-13</maritim:kode>
     <maritim:namaDestinasi>Lovina Dolphin Watching</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Buleleng, Bali</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-13.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Bali"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -9989,7 +9989,7 @@
     <maritim:kode>BNT-28</maritim:kode>
     <maritim:namaDestinasi>Pink Beach Lombok (Tangsi)</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Lombok Timur, NTB</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-28.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTB"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -10269,7 +10269,7 @@
     <maritim:kode>BNT-31</maritim:kode>
     <maritim:namaDestinasi>Pantai Mawun</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Lombok Tengah, NTB</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Mawun_Beach_1.JPG/960px-Mawun_Beach_1.JPG?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/BNT-31.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTB"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -10485,7 +10485,7 @@
     <maritim:kode>BNT-34</maritim:kode>
     <maritim:namaDestinasi>Lakey Peak</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Dompu, NTB</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-34.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTB"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Mahir"/>
@@ -10821,7 +10821,7 @@
     <maritim:kode>BNT-38</maritim:kode>
     <maritim:namaDestinasi>Pink Beach Komodo</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Manggarai Barat, NTT</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Pink_Beach%2C_Padar_Island%2C_Komodo_National_Park.jpg/960px-Pink_Beach%2C_Padar_Island%2C_Komodo_National_Park.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/BNT-38.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTT"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -10908,7 +10908,7 @@
     <maritim:kode>BNT-39</maritim:kode>
     <maritim:namaDestinasi>Manta Point Komodo</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Manggarai Barat, NTT</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-39.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTT"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Menengah"/>
@@ -11289,7 +11289,7 @@
     <maritim:kode>BNT-43</maritim:kode>
     <maritim:namaDestinasi>Pantai Nihiwatu</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Sumba Barat Daya, NTT</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-43.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTT"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Mahir"/>
@@ -11456,7 +11456,7 @@
     <maritim:kode>BNT-45</maritim:kode>
     <maritim:namaDestinasi>Pantai Nemberala</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Rote Ndao, NTT</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Road_infrastructures_Oeseli_Beach%2C_Boa%2C_Nemberala_-_panoramio.jpg/960px-Road_infrastructures_Oeseli_Beach%2C_Boa%2C_Nemberala_-_panoramio.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/BNT-45.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTT"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Mahir"/>
@@ -11535,7 +11535,7 @@
     <maritim:kode>BNT-46</maritim:kode>
     <maritim:namaDestinasi>Pantai Deere</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Alor, NTT</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-46.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTT"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Menengah"/>
@@ -12191,7 +12191,7 @@
     <maritim:kode>BNT-54</maritim:kode>
     <maritim:namaDestinasi>Pantai Lasiana</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Kupang, NTT</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-54.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTT"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -12439,7 +12439,7 @@
     <maritim:kode>SLW-01</maritim:kode>
     <maritim:namaDestinasi>Pantai Manakarra</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Mamuju, Sulawesi Barat</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-01.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Barat"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -13225,7 +13225,7 @@
     <maritim:kode>SLW-09</maritim:kode>
     <maritim:namaDestinasi>Pulau Kodingareng Keke</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Makassar, Sulawesi Selatan</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-09.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Selatan"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -13322,7 +13322,7 @@
     <maritim:kode>SLW-10</maritim:kode>
     <maritim:namaDestinasi>Hoga Wakatobi</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Wakatobi, Sulawesi Tenggara</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-10.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Tenggara"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -13577,7 +13577,7 @@
     <maritim:kode>SLW-12</maritim:kode>
     <maritim:namaDestinasi>Pantai Toronipa</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Konawe, Sulawesi Tenggara</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-12.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Tenggara"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -13637,7 +13637,7 @@
     <maritim:kode>SLW-13</maritim:kode>
     <maritim:namaDestinasi>Pulau Bokori</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Konawe, Sulawesi Tenggara</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-13.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Tenggara"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -13731,7 +13731,7 @@
     <maritim:kode>SLW-14</maritim:kode>
     <maritim:namaDestinasi>Pulau Binongko</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Wakatobi, Sulawesi Tenggara</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-14.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Tenggara"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -14021,7 +14021,7 @@
     <maritim:kode>SLW-17</maritim:kode>
     <maritim:namaDestinasi>Olele</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Bone Bolango, Gorontalo</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-17.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Gorontalo"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Menengah"/>
@@ -14329,7 +14329,7 @@
     <maritim:kode>SLW-20</maritim:kode>
     <maritim:namaDestinasi>Hiu Paus Botubarani</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Bone Bolango, Gorontalo</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Hiu_Paus_Botubarani.jpg/960px-Hiu_Paus_Botubarani.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/SLW-20.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Gorontalo"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -14427,7 +14427,7 @@
     <maritim:kode>SLW-21</maritim:kode>
     <maritim:namaDestinasi>Taman Nasional Bunaken</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Manado, Sulawesi Utara</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Bunaken01.JPG/960px-Bunaken01.JPG?utm_source=id.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/SLW-21.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Utara"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_SemuaLevel"/>
@@ -14738,7 +14738,7 @@
     <maritim:kode>SLW-24</maritim:kode>
     <maritim:namaDestinasi>Pulau Bangka Likupang</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Minahasa Utara, Sulawesi Utara</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-24.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Utara"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Menengah"/>
@@ -15079,7 +15079,7 @@
     <maritim:kode>SLW-27</maritim:kode>
     <maritim:namaDestinasi>Tanjung Pulisan</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Minahasa Utara, Sulawesi Utara</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-27.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Utara"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -15483,7 +15483,7 @@
     <maritim:kode>MLK-03</maritim:kode>
     <maritim:namaDestinasi>Benteng Tolukko</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Ternate, Maluku Utara</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Fort_Tolukko_op_Ternate%2C_KITLV_178142.tiff/lossy-page1-960px-Fort_Tolukko_op_Ternate%2C_KITLV_178142.tiff.jpg?utm_source=id.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/MLK-03.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Maluku_Utara"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Maluku"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -15544,7 +15544,7 @@
     <maritim:kode>MLK-04</maritim:kode>
     <maritim:namaDestinasi>Pulau Dodola</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Pulau Morotai, Maluku Utara</maritim:lokasiLengkap>
-    <schema:image>https://upload.wikimedia.org/wikipedia/commons/c/cd/%22Watering_of_Dodola%22_by_Uro%C5%A1_Predi%C4%87%2C_published_in_magazine_%22Orao%22_in_1892.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled</schema:image>
+    <schema:image>images/destinasi/MLK-04.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Maluku_Utara"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Maluku"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -15641,7 +15641,7 @@
     <maritim:kode>MLK-05</maritim:kode>
     <maritim:namaDestinasi>Banda Neira</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Maluku Tengah, Maluku</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Banda_Neira_%28group_band%29.png/960px-Banda_Neira_%28group_band%29.png?utm_source=id.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/MLK-05.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Maluku"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Maluku"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -16199,7 +16199,7 @@
     <maritim:kode>MLK-11</maritim:kode>
     <maritim:namaDestinasi>Benteng Victoria</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Ambon, Maluku</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/AMH-6402-NA_Bird%27s_eye_view_of_Fort_Victoria%2C_Ambon.jpg/960px-AMH-6402-NA_Bird%27s_eye_view_of_Fort_Victoria%2C_Ambon.jpg?utm_source=id.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/MLK-11.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Maluku"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Maluku"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -17083,7 +17083,7 @@
     <maritim:kode>PPA-06</maritim:kode>
     <maritim:namaDestinasi>Teluk Kabui</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Raja Ampat, Papua Barat Daya</maritim:lokasiLengkap>
-    <schema:image>images/destinasi/PPA-06.png</schema:image>
+    <schema:image>images/destinasi/PPA-06.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Papua_Barat_Daya"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Papua"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -18036,7 +18036,7 @@
     <maritim:kode>SMT-47</maritim:kode>
     <maritim:namaDestinasi>Pantai Pasir Putih Lhoknga</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Aceh Besar, Aceh</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Lhoknga_beach%2C_Aceh_20140912_113920.jpg/960px-Lhoknga_beach%2C_Aceh_20140912_113920.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/SMT-47.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Aceh"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Menengah"/>
@@ -18303,7 +18303,7 @@
     <maritim:kode>SMT-51</maritim:kode>
     <maritim:namaDestinasi>Pulau Asu Hinako</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Nias Barat, Sumut</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-51.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sumut"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Mahir"/>
@@ -18502,7 +18502,7 @@
     <maritim:kode>SMT-53</maritim:kode>
     <maritim:namaDestinasi>Pantai Labuhan Jukung</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Pesisir Barat, Lampung</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-53.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Lampung"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -18583,7 +18583,7 @@
     <maritim:kode>SMT-54</maritim:kode>
     <maritim:namaDestinasi>Pulau Kubur</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Pesawaran, Lampung</maritim:lokasiLengkap>
-    <schema:image>https://upload.wikimedia.org/wikipedia/commons/d/d7/Square_Tombs_at_Kubur_Kassim.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled</schema:image>
+    <schema:image>images/destinasi/SMT-54.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Lampung"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -18765,7 +18765,7 @@
     <maritim:kode>SMT-56</maritim:kode>
     <maritim:namaDestinasi>Pantai Marina Kalianda</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Lampung Selatan, Lampung</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-56.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Lampung"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -18827,7 +18827,7 @@
     <maritim:kode>SMT-57</maritim:kode>
     <maritim:namaDestinasi>Pantai Gigi Hiu (Pegadungan)</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Tanggamus, Lampung</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-57.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Lampung"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Menengah"/>
@@ -19016,7 +19016,7 @@
     <maritim:kode>SMT-59</maritim:kode>
     <maritim:namaDestinasi>Pantai Batu Kasah</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Natuna, Kepulauan Riau</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-59.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Kepulauan_Riau"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -19078,7 +19078,7 @@
     <maritim:kode>SMT-60</maritim:kode>
     <maritim:namaDestinasi>Pulau Senua</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Natuna, Kepulauan Riau</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-60.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Kepulauan_Riau"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -21775,7 +21775,7 @@
     <maritim:kode>BNT-57</maritim:kode>
     <maritim:namaDestinasi>Pantai Seminyak &amp; Petitenget</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Badung, Bali</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-57.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Bali"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -21937,7 +21937,7 @@
     <maritim:kode>BNT-59</maritim:kode>
     <maritim:namaDestinasi>Pantai Bingin</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Badung, Bali</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-59.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Bali"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Mahir"/>
@@ -22240,7 +22240,7 @@
     <maritim:kode>BNT-63</maritim:kode>
     <maritim:namaDestinasi>Pantai Bias Tugel Padangbai</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Karangasem, Bali</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-63.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Bali"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -22494,7 +22494,7 @@
     <maritim:kode>BNT-66</maritim:kode>
     <maritim:namaDestinasi>Gili Asahan Sekotong</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Lombok Barat, NTB</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-66.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTB"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -22590,7 +22590,7 @@
     <maritim:kode>BNT-67</maritim:kode>
     <maritim:namaDestinasi>Pantai Senggigi Mangsit</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Lombok Barat, NTB</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-67.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTB"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -22678,7 +22678,7 @@
     <maritim:kode>BNT-68</maritim:kode>
     <maritim:namaDestinasi>Pantai Tanjung Bloam</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Lombok Timur, NTB</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1607153333879-c174d265f1d2?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-68.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTB"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Menengah"/>
@@ -22940,7 +22940,7 @@
     <maritim:kode>BNT-72</maritim:kode>
     <maritim:namaDestinasi>Teluk Kabola Alor</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Alor, NTT</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-72.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTT"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -23280,7 +23280,7 @@
     <maritim:kode>SLW-32</maritim:kode>
     <maritim:namaDestinasi>Danau Paisupok</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Banggai Kepulauan, Sulawesi Tengah</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-32.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Tengah"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -23345,7 +23345,7 @@
     <maritim:kode>SLW-33</maritim:kode>
     <maritim:namaDestinasi>Pantai Kilo 5</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Luwuk Banggai, Sulawesi Tengah</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-33.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Tengah"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -23592,7 +23592,7 @@
     <maritim:kode>SLW-36</maritim:kode>
     <maritim:namaDestinasi>Danau Ubur-Ubur Mariona Togean</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Tojo Una-Una, Sulawesi Tengah</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-36.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Tengah"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -23890,7 +23890,7 @@
     <maritim:kode>SLW-40</maritim:kode>
     <maritim:namaDestinasi>Pulau Lihaga Likupang</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Minahasa Utara, Sulawesi Utara</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-40.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Utara"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -24408,7 +24408,7 @@
     <maritim:kode>MLK-21</maritim:kode>
     <maritim:namaDestinasi>Pulau Bair (Raja Ampat Mini Kei)</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Maluku Tenggara, Maluku</maritim:lokasiLengkap>
-    <schema:image>https://upload.wikimedia.org/wikipedia/commons/7/7b/Greco_Island_and_Bair_Island.png?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled</schema:image>
+    <schema:image>images/destinasi/MLK-21.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Maluku"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Maluku"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -25093,7 +25093,7 @@
     <maritim:kode>PPA-18</maritim:kode>
     <maritim:namaDestinasi>Pantai Tablanusu</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Jayapura, Papua</maritim:lokasiLengkap>
-    <schema:image>images/destinasi/PPA-18.png</schema:image>
+    <schema:image>images/destinasi/PPA-18.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Papua"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Papua"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -25179,7 +25179,7 @@
     <maritim:kode>PPA-19</maritim:kode>
     <maritim:namaDestinasi>Kepulauan Padaido</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Biak Numfor, Papua</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/S33-75-038_-_STS-033_-_STS-33_earth_observations_-_DPLA_-_63275972da44abc39f96fb0af2265470.jpg/960px-S33-75-038_-_STS-033_-_STS-33_earth_observations_-_DPLA_-_63275972da44abc39f96fb0af2265470.jpg?utm_source=id.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/PPA-19.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Papua"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Papua"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Menengah"/>
@@ -25283,7 +25283,7 @@
     <maritim:kode>PPA-20</maritim:kode>
     <maritim:namaDestinasi>Pantai Bosnik (Segara Indah)</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Biak Timur, Papua</maritim:lokasiLengkap>
-    <schema:image>https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Collectie_Wereldmuseum%2C_TM-10029875%2C_Negatief%2C_%27Nederlandse_militairen_en_papoea_bij_een_jeep_op_het_strand%2C_Bosnik%2C_zuidkust_Biak%2C_mei_1949%27%2C_maker_Cees_Taillie%2C_29_mei_1949.jpg/960px-thumbnail.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail</schema:image>
+    <schema:image>images/destinasi/PPA-20.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Papua"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Papua"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -25571,7 +25571,7 @@
     <maritim:kode>PPA-23</maritim:kode>
     <maritim:namaDestinasi>Kepulauan Fam (Piaynemo)</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Raja Ampat, Papua Barat Daya</maritim:lokasiLengkap>
-    <schema:image>https://upload.wikimedia.org/wikipedia/commons/a/ac/ID_Fam.PNG?utm_source=en.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail_unscaled</schema:image>
+    <schema:image>images/destinasi/PPA-23.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Papua_Barat_Daya"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Papua"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -25983,7 +25983,7 @@
     <maritim:kode>SMT-62</maritim:kode>
     <maritim:namaDestinasi>Pantai Karang Nawing</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Belitung Timur, Bangka Belitung</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-62.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Bangka_Belitung"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -26045,7 +26045,7 @@
     <maritim:kode>SMT-63</maritim:kode>
     <maritim:namaDestinasi>Pulau Sikakap &amp; Teluk Silabu</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Kep. Mentawai, Sumbar</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-63.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sumbar"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Mahir"/>
@@ -26165,7 +26165,7 @@
     <maritim:kode>SMT-64</maritim:kode>
     <maritim:namaDestinasi>Pantai Teluk Hantu</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Pesawaran, Lampung</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-64.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Lampung"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -26253,7 +26253,7 @@
     <maritim:kode>SMT-65</maritim:kode>
     <maritim:namaDestinasi>Pulau Silabu Nyang-Nyang</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Kep. Mentawai, Sumbar</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SMT-65.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sumbar"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sumatra"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Mahir"/>
@@ -27056,7 +27056,7 @@
     <maritim:kode>BNT-73</maritim:kode>
     <maritim:namaDestinasi>Pantai Atuh &amp; Diamond Cliff</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Nusa Penida, Bali</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-73.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Bali"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Menengah"/>
@@ -27179,7 +27179,7 @@
     <maritim:kode>BNT-75</maritim:kode>
     <maritim:namaDestinasi>Gili Layar &amp; Gili Rengit</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Lombok Barat, NTB</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-75.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTB"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -27335,7 +27335,7 @@
     <maritim:kode>BNT-77</maritim:kode>
     <maritim:namaDestinasi>Teluk Gurita &amp; Pantai Atapupu</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Belu, NTT</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/BNT-77.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_NTT"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Bali___Nusa_Tenggara"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -27396,7 +27396,7 @@
     <maritim:kode>SLW-41</maritim:kode>
     <maritim:namaDestinasi>Pulau Sombori (Tebing Kahyangan)</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Morowali, Sulawesi Tengah</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-41.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Tengah"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Menengah"/>
@@ -27482,7 +27482,7 @@
     <maritim:kode>SLW-42</maritim:kode>
     <maritim:namaDestinasi>Pulau Labengki (Blue Lagoon)</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Konawe Utara, Sulawesi Tenggara</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-42.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Tenggara"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Pemula"/>
@@ -27705,7 +27705,7 @@
     <maritim:kode>SLW-44</maritim:kode>
     <maritim:namaDestinasi>Gua Halo Tabung &amp; Danau Mariona</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Tojo Una-Una, Sulawesi Tengah</maritim:lokasiLengkap>
-    <schema:image>https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&amp;fit=crop&amp;w=800&amp;q=80</schema:image>
+    <schema:image>images/destinasi/SLW-44.jpg</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Sulawesi_Tengah"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Sulawesi"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Menengah"/>
@@ -28360,7 +28360,7 @@
     <maritim:kode>PPA-30</maritim:kode>
     <maritim:namaDestinasi>Kepulauan Mapia (Pulau Bras)</maritim:namaDestinasi>
     <maritim:lokasiLengkap>Supiori, Papua</maritim:lokasiLengkap>
-    <schema:image>https://upload.wikimedia.org/wikipedia/commons/3/37/Atol%C3%B3n_G%C3%BCedes_%28Mapia%29.png?utm_source=id.wikipedia.org&amp;utm_campaign=api&amp;utm_content=thumbnail_unscaled</schema:image>
+    <schema:image>images/destinasi/PPA-30.png</schema:image>
     <maritim:beradaDiProvinsi rdf:resource="http://wisatamaritim.id/resource/provinsi_Papua"/>
     <maritim:beradaDiWilayah rdf:resource="http://wisatamaritim.id/resource/wilayah_Papua"/>
     <maritim:cocokUntukTingkat rdf:resource="http://wisatamaritim.id/resource/Tingkat_Mahir"/>

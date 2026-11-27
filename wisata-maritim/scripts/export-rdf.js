@@ -534,15 +534,24 @@ function generateRdfXml(destinasiList) {
   return lines.join('\n') + '\n';
 }
 
-const destinasiList = JSON.parse(fs.readFileSync(DEST_JSON, 'utf8'));
-const ttlContent = generateTurtle(destinasiList);
-const rdfContent = generateRdfXml(destinasiList);
+function exportRdfFiles(inputList) {
+  const destinasiList = inputList || JSON.parse(fs.readFileSync(DEST_JSON, 'utf8'));
+  const ttlContent = generateTurtle(destinasiList);
+  const rdfContent = generateRdfXml(destinasiList);
 
-const ttlOut = path.join(DATA_DIR, 'maritim.ttl');
-const rdfOut = path.join(DATA_DIR, 'maritim.rdf');
+  const ttlOut = path.join(DATA_DIR, 'maritim.ttl');
+  const rdfOut = path.join(DATA_DIR, 'maritim.rdf');
 
-fs.writeFileSync(ttlOut, ttlContent, 'utf8');
-fs.writeFileSync(rdfOut, rdfContent, 'utf8');
+  fs.writeFileSync(ttlOut, ttlContent, 'utf8');
+  fs.writeFileSync(rdfOut, rdfContent, 'utf8');
 
-console.log(`Berhasil menulis ${ttlOut} (${ttlContent.length} bytes)`);
-console.log(`Berhasil menulis ${rdfOut} (${rdfContent.length} bytes)`);
+  return { ttlOut, rdfOut, ttlBytes: ttlContent.length, rdfBytes: rdfContent.length };
+}
+
+if (require.main === module) {
+  const res = exportRdfFiles();
+  console.log(`Berhasil menulis ${res.ttlOut} (${res.ttlBytes} bytes)`);
+  console.log(`Berhasil menulis ${res.rdfOut} (${res.rdfBytes} bytes)`);
+}
+
+module.exports = { exportRdfFiles, generateTurtle, generateRdfXml };

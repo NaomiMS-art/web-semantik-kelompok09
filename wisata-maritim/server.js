@@ -5,6 +5,7 @@ const fs = require('fs');
 
 const SemanticSearch = require('./lib/semantic-search');
 const MaritimeSparqlEngine = require('./lib/sparql-engine');
+const { exportRdfFiles } = require('./scripts/export-rdf');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,12 +14,24 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Load Data Destinasi (Mendukung Dynamic Reload dari file terbaru)
+// Load Data Destinasi (Mendukung Dynamic Reload & Auto-Sinkronisasi TTL/RDF)
 const dataFile = path.join(__dirname, 'data', 'destinasi.json');
+const ttlFile = path.join(__dirname, 'data', 'maritim.ttl');
+const rdfFile = path.join(__dirname, 'data', 'maritim.rdf');
 let destinasiList = [];
 let semanticSearch = null;
 let sparqlEngine = null;
 let lastDataMtime = 0;
+
+function syncRdfIfNeeded(jsonMtime) {
+  const ttlMissing = !fs.existsSync(ttlFile);
+  const rdfMissing = !fs.existsSync(rdfFile);
+  const ttlStale = !ttlMissing && fs.statSync(ttlFile).mtimeMs < jsonMtime;
+  const rdfStale = !rdfMissing && fs.statSync(rdfFile).mtimeMs < jsonMtime;
+  if (ttlMissing || rdfMissing || ttlStale || rdfStale) {
+    exportRdfFiles(destinasiList);
+  }
+}
 
 function reloadDataIfNeeded() {
   try {
@@ -29,6 +42,7 @@ function reloadDataIfNeeded() {
     if (stat.mtimeMs !== lastDataMtime || !semanticSearch) {
       destinasiList = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
       lastDataMtime = stat.mtimeMs;
+      syncRdfIfNeeded(stat.mtimeMs);
       semanticSearch = new SemanticSearch(destinasiList);
       sparqlEngine = new MaritimeSparqlEngine(destinasiList);
     }

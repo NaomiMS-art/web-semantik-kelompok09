@@ -184,9 +184,9 @@ class MaritimeSparqlEngine {
           });
         }
 
-        // FILTER(?hargaTiket <= 50000) atau FILTER(?totalBiaya <= 250000)
-        const numMatch = filter.match(/\?(\w+)\s*(<=|<|>=|>|==|=)\s*(\d+)/i);
-        if (numMatch) {
+        // FILTER(?hargaTiket <= 50000) atau FILTER(?totalBiaya >= 100000 && ?totalBiaya <= 250000)
+        const numMatches = [...filter.matchAll(/\?(\w+)\s*(<=|<|>=|>|==|=)\s*(\d+)/gi)];
+        for (const numMatch of numMatches) {
           const varName = numMatch[1];
           const op = numMatch[2];
           const val = parseInt(numMatch[3], 10);
