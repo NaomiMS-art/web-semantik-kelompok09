@@ -7,7 +7,7 @@
   <title>Ombak Nusantara · Mesin Pencari Wisata Maritim Semantik</title>
   <meta name="description"
     content="Jelajahi destinasi maritim Indonesia dengan pencarian semantik dan filter aktivitas, estimasi biaya, tingkat keahlian, peralatan, jenis wisata, serta provinsi.">
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+  <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -154,7 +154,7 @@
     <div class="header-container">
       <a href="#" class="brand-wrapper" onclick="switchTab('home')">
         <div class="brand-logo-img-wrap">
-          <img src="images/logo.jpg" alt="Logo Ombak Nusantara" class="brand-logo-img">
+          <img src="images/logo.png" alt="Logo Ombak Nusantara" class="brand-logo-img">
         </div>
         <div class="brand-info">
           <h1>Ombak Nusantara</h1>
@@ -869,25 +869,26 @@
        MODAL DETAIL DESTINASI, BIAYA & KALKULATOR BUDGET
        ============================================================================== -->
   <dialog class="custom-modal" id="dest-detail-modal">
-    <button type="button" class="modal-close-trigger" id="modal-close-btn" title="Tutup Modal" aria-label="Tutup Modal">
-      <svg class="svg-icon svg-icon-sm">
-        <use href="#icon-x" />
-      </svg>
-    </button>
+    <div class="modal-top-actions">
+      <button type="button" class="btn-card-bookmark" id="modal-dest-fav-btn" title="Simpan ke Favorit" aria-label="Simpan ke Favorit">
+        <svg class="svg-icon svg-icon-sm">
+          <use href="#icon-heart" />
+        </svg>
+      </button>
+      <button type="button" class="modal-close-trigger" id="modal-close-btn" title="Tutup Modal" aria-label="Tutup Modal">
+        <svg class="svg-icon svg-icon-sm">
+          <use href="#icon-x" />
+        </svg>
+      </button>
+    </div>
     <div class="modal-hero-cover">
       <img id="modal-header-img"
         src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
         alt="Wisata Maritim Indonesia"
         onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80';">
       <div class="modal-hero-text">
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:0.25rem">
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.35rem">
           <span class="card-code-tag" id="modal-dest-code">Memuat...</span>
-          <button type="button" class="btn-card-bookmark" id="modal-dest-fav-btn" title="Simpan ke Favorit"
-            style="position:static;width:36px;height:36px">
-            <svg class="svg-icon svg-icon-sm">
-              <use href="#icon-heart" />
-            </svg>
-          </button>
         </div>
         <h2 id="modal-dest-title">Memuat Destinasi...</h2>
         <span style="font-size:0.85rem;opacity:0.9" id="modal-dest-loc">Lokasi Destinasi</span>
@@ -909,7 +910,7 @@
       <div class="footer-col">
         <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem">
           <div class="brand-logo-img-wrap" style="width:42px;height:42px">
-            <img src="images/logo.jpg" alt="Logo Ombak Nusantara" class="brand-logo-img">
+            <img src="images/logo.png" alt="Logo Ombak Nusantara" class="brand-logo-img">
           </div>
           <div>
             <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:white;margin:0">Ombak

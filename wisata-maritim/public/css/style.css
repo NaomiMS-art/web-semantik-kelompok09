@@ -270,19 +270,20 @@ a {
 .brand-logo-img-wrap {
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-sm);
+  border-radius: 50%;
   overflow: hidden;
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-sm);
-  background: white;
+  border: none;
+  box-shadow: none;
+  background: transparent;
   display: grid;
   place-items: center;
+  flex-shrink: 0;
 }
 
 .brand-logo-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .brand-info {
@@ -2735,40 +2736,75 @@ a {
 .pagination-pages-list {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
 .page-nav-btn,
 .page-num-btn {
-  min-width: 36px;
-  height: 36px;
-  padding: 0 0.5rem;
-  border-radius: var(--radius-sm);
+  height: 38px;
+  border-radius: 10px;
   border: 1px solid var(--border-subtle);
   background: var(--bg-surface);
   color: var(--text-secondary);
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: pointer;
   transition: all var(--transition-fast);
+}
+
+.page-num-btn {
+  min-width: 38px;
+  padding: 0 0.65rem;
+}
+
+.page-nav-btn {
+  gap: 0.45rem;
+  padding: 0 0.95rem;
+}
+
+.page-nav-btn .svg-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.page-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 38px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  user-select: none;
 }
 
 .page-nav-btn:hover:not(:disabled),
 .page-num-btn:hover {
-  border-color: var(--border-strong);
-  color: var(--text-main);
+  border-color: var(--sea-blue);
+  color: var(--sea-blue);
+  background: rgba(14, 165, 233, 0.06);
+  transform: translateY(-1px);
 }
 
 .page-num-btn.active {
   background: var(--ocean-deep);
   color: #ffffff;
   border-color: var(--ocean-deep);
+  box-shadow: 0 4px 12px rgba(7, 21, 38, 0.2);
 }
 
 [data-theme="dark"] .page-num-btn.active {
   background: var(--accent-coral);
   border-color: var(--accent-coral);
+  box-shadow: 0 4px 12px rgba(217, 72, 41, 0.35);
 }
 
 .page-nav-btn:disabled {
@@ -2840,31 +2876,40 @@ dialog.custom-modal::backdrop {
   line-height: 1.2;
 }
 
-.modal-close-trigger {
+.modal-top-actions {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: rgba(7, 21, 38, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  color: #ffffff;
   display: flex;
   align-items: center;
+  gap: 0.55rem;
+  z-index: 15;
+}
+
+.modal-close-trigger,
+.modal-top-actions .btn-card-bookmark {
+  position: static;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(7, 21, 38, 0.62);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  z-index: 10;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
   transition: all var(--transition-fast);
   padding: 0;
 }
 
-.modal-close-trigger .svg-icon {
-  width: 17px;
-  height: 17px;
+.modal-close-trigger .svg-icon,
+.modal-top-actions .btn-card-bookmark .svg-icon {
+  width: 18px;
+  height: 18px;
   stroke: #ffffff;
   stroke-width: 2.2;
   display: block;
@@ -2875,11 +2920,24 @@ dialog.custom-modal::backdrop {
   background: var(--accent-coral);
   border-color: var(--accent-coral);
   color: #ffffff;
-  transform: scale(1.08);
+  transform: scale(1.06);
   box-shadow: 0 6px 16px rgba(217, 72, 41, 0.45);
 }
 
-.modal-close-trigger:active {
+.modal-top-actions .btn-card-bookmark:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.06);
+}
+
+.modal-top-actions .btn-card-bookmark.is-favorited {
+  background: var(--accent-coral);
+  border-color: var(--accent-coral);
+  color: #ffffff;
+}
+
+.modal-close-trigger:active,
+.modal-top-actions .btn-card-bookmark:active {
   transform: scale(0.95);
 }
 

@@ -89,7 +89,7 @@
     toggleBtn.setAttribute('aria-label', 'Buka Asisten MaritimBot');
     toggleBtn.title = 'Tanya Asisten AI Maritim (DBpedia Connected)';
     toggleBtn.innerHTML = `
-      <img src="images/logo.jpg" alt="Logo MaritimBot" class="maritim-toggle-logo-img">
+      <img src="images/logo.png" alt="Logo MaritimBot" class="maritim-toggle-logo-img">
       <span class="maritim-toggle-close-icon">
         <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </span>
@@ -107,7 +107,7 @@
       <div class="maritim-chat-header">
         <div class="maritim-chat-brand">
           <div class="maritim-chat-avatar">
-            <img src="images/logo.jpg" alt="Logo MaritimBot" class="maritim-avatar-logo-img">
+            <img src="images/logo.png" alt="Logo MaritimBot" class="maritim-avatar-logo-img">
           </div>
           <div class="maritim-chat-title-group">
             <h4>MaritimBot</h4>
@@ -170,7 +170,7 @@
     if (sender === 'bot') {
       contentHtml += `
         <div class="maritim-msg-author-tag">
-          <img src="images/logo.jpg" alt="Logo" class="maritim-msg-avatar-mini">
+          <img src="images/logo.png" alt="Logo" class="maritim-msg-avatar-mini">
           <span>MaritimBot</span>
         </div>
       `;

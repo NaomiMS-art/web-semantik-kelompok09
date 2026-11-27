@@ -1570,20 +1570,29 @@ function renderPaginationControls(totalPages) {
     </button>
   `;
 
-  // Window pagination [1, 2, 3...]
-  const maxButtons = 5;
-  let startPage = Math.max(1, APP_STATE.currentPage - Math.floor(maxButtons / 2));
-  let endPage = Math.min(totalPages, startPage + maxButtons - 1);
-  if (endPage - startPage < maxButtons - 1) {
-    startPage = Math.max(1, endPage - maxButtons + 1);
+  // Pagination dengan ellipsis agar selalu menampilkan halaman awal & akhir (misal: 1, 2, 3, 4, 5, ..., 15)
+  const cur = APP_STATE.currentPage;
+  const pages = [];
+  if (totalPages <= 7) {
+    for (let p = 1; p <= totalPages; p++) pages.push(p);
+  } else if (cur <= 4) {
+    pages.push(1, 2, 3, 4, 5, '...', totalPages);
+  } else if (cur >= totalPages - 3) {
+    pages.push(1, '...', totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+  } else {
+    pages.push(1, '...', cur - 1, cur, cur + 1, '...', totalPages);
   }
 
-  for (let p = startPage; p <= endPage; p++) {
-    html += `
-      <button type="button" class="page-num-btn ${p === APP_STATE.currentPage ? 'active' : ''}" onclick="changePage(${p})">
-        ${p}
-      </button>
-    `;
+  for (const p of pages) {
+    if (p === '...') {
+      html += `<span class="page-ellipsis" aria-hidden="true">...</span>`;
+    } else {
+      html += `
+        <button type="button" class="page-num-btn ${p === cur ? 'active' : ''}" onclick="changePage(${p})">
+          ${p}
+        </button>
+      `;
+    }
   }
 
   html += `
