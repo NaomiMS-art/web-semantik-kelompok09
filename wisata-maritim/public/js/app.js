@@ -566,6 +566,96 @@ const POPULAR_SEARCH_PRESETS = [
   }
 ];
 
+function parsePriceFilterClient(rawText) {
+  let txt = (rawText || '').trim();
+  if (!txt) return null;
+  const parseMoney = (numStr, unit) => {
+    if (!numStr) return null;
+    let cleaned = String(numStr).trim();
+    const u = (unit || '').toLowerCase();
+    if (u) cleaned = cleaned.replace(',', '.');
+    else cleaned = cleaned.replace(/[.,]/g, '');
+    const n = parseFloat(cleaned);
+    if (Number.isNaN(n)) return null;
+    if (u === 'rb' || u === 'ribu' || u === 'k') return Math.round(n * 1000);
+    if (u === 'jt' || u === 'juta') return Math.round(n * 1000000);
+    return Math.round(n);
+  };
+
+  let constraint = null;
+  const rangeRx = /(?:antara|dari)?\s*(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?\s*(?:-|–|—|sampai|s\/d|hingga|sd|to)\s*(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?/i;
+  const gteRx = /(?:>=|≥|minimal|min|paling sedikit|setidaknya)\s*(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?/i;
+  const gtRx = /(?:>|lebih dari|di ?atas|above|over)\s*(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?/i;
+  const lteRx = /(?:<=|≤|budget|bujet|biaya|maksimal|maks|max)\s*(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?/i;
+  const ltRx = /(?:<|kurang dari|di ?bawah|under|below)\s*(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?/i;
+  const eqRx = /(?:=|==|pas|tepat|seharga)\s*(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?|(?:harga\s*)?(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)\b|(?:harga|rp\.?)\s*(\d[\d.,]{4,})\b|\b(\d{4,})\b/i;
+
+  let m;
+  if ((m = txt.match(rangeRx)) && (m[2] || m[4] || m[1].length >= 4)) {
+    const a = parseMoney(m[1], m[2] || m[4]);
+    const b = parseMoney(m[3], m[4] || m[2]);
+    if (a !== null && b !== null) {
+      constraint = { op: 'between', min: Math.min(a, b), max: Math.max(a, b) };
+      txt = txt.replace(m[0], ' ');
+    }
+  } else if ((m = txt.match(gteRx))) {
+    const v = parseMoney(m[1], m[2]);
+    if (v !== null) { constraint = { op: 'gte', value: v }; txt = txt.replace(m[0], ' '); }
+  } else if ((m = txt.match(gtRx))) {
+    const v = parseMoney(m[1], m[2]);
+    if (v !== null) { constraint = { op: 'gt', value: v }; txt = txt.replace(m[0], ' '); }
+  } else if ((m = txt.match(lteRx))) {
+    const v = parseMoney(m[1], m[2]);
+    if (v !== null) { constraint = { op: 'lte', value: v }; txt = txt.replace(m[0], ' '); }
+  } else if ((m = txt.match(ltRx))) {
+    const v = parseMoney(m[1], m[2]);
+    if (v !== null) { constraint = { op: 'lt', value: v }; txt = txt.replace(m[0], ' '); }
+  } else if ((m = txt.match(eqRx))) {
+    const v = parseMoney(m[1] || m[3] || m[5] || m[6], m[2] || m[4] || null);
+    if (v !== null) { constraint = { op: 'eq', value: v }; txt = txt.replace(m[0], ' '); }
+  } else if (/\bgratis\b|\btanpa biaya\b/i.test(txt)) {
+    constraint = { op: 'eq', value: 0 };
+    txt = txt.replace(/\bgratis\b|\btanpa biaya\b/ig, ' ');
+  }
+
+  const catMap = [
+    { rx: /\b(?:murah|hemat|ekonomis|ramah di kantong|ramah kantong|budget friendly|low budget)\b/i, range: 'di-bawah-100k' },
+    { rx: /\b(?:terjangkau|affordable)\b/i, range: '100k-250k' },
+    { rx: /\b(?:standar|standard|mid[- ]range)\b/i, range: '250k-500k' },
+    { rx: /\b(?:sangat mahal|premium|mewah|luxury|high[- ]end)\b/i, range: 'di-atas-1jt' },
+    { rx: /\b(?:mahal|expensive)\b/i, range: '500k-1jt' }
+  ];
+  const cat = catMap.find(c => c.rx.test(txt));
+  if (cat) txt = txt.replace(new RegExp(cat.rx.source, 'ig'), ' ');
+
+  if (!constraint && !cat) return null;
+  return { constraint, range: cat ? cat.range : null, rest: txt.trim().toLowerCase() };
+}
+
+function matchesPriceFilterClient(d, priceFilter, priceType = 'total') {
+  const total = Number(d.estimasiTotalPerOrang);
+  const tiket = Number(d.hargaTiketMasuk);
+  const akt = Number(d.hargaAktivitasMulai);
+  const targetVal = priceType === 'tiket' ? tiket : total;
+
+  if (priceFilter.range && d.rangeHargaTotal !== priceFilter.range) return false;
+  if (priceFilter.constraint) {
+    const pc = priceFilter.constraint;
+    if (pc.op === 'gt' && !(targetVal > pc.value)) return false;
+    if (pc.op === 'gte' && !(targetVal >= pc.value)) return false;
+    if (pc.op === 'lt' && !(targetVal < pc.value)) return false;
+    if (pc.op === 'lte' && !(targetVal <= pc.value)) return false;
+    if (pc.op === 'between' && !(targetVal >= pc.min && targetVal <= pc.max)) return false;
+    if (pc.op === 'eq' && !(total === pc.value || tiket === pc.value || akt === pc.value)) return false;
+  }
+  if (priceFilter.rest && priceFilter.rest.length >= 2) {
+    const blob = `${d.id} ${d.nama} ${d.lokasi} ${d.provinsi} ${d.wilayah} ${(d.aktivitas || []).join(' ')} ${(d.kuliner || []).map(c => `${c.nama} ${c.menuAndalan}`).join(' ')} ${(d.peralatan || []).map(e => e.nama).join(' ')} ${(d.fasilitas || []).join(' ')}`.toLowerCase();
+    const tokens = priceFilter.rest.split(/\s+/).filter(t => t.length >= 2);
+    if (!tokens.every(t => blob.includes(t))) return false;
+  }
+  return true;
+}
+
 function setupSearchAutocomplete(inputId, dropdownId) {
   const inputEl = document.getElementById(inputId);
   const dropEl = document.getElementById(dropdownId);
@@ -617,7 +707,10 @@ function setupSearchAutocomplete(inputId, dropdownId) {
           else if (normQ.length >= 4 && namaWords.some(w => isSubseq(normQ, w))) score = 55;
           else if (normQ.length >= 4 && (
             (d.lokasi || '').toLowerCase().includes(normQ) ||
-            (d.aktivitas || []).some(a => a.toLowerCase().includes(normQ))
+            (d.aktivitas || []).some(a => a.toLowerCase().includes(normQ)) ||
+            (d.kuliner || []).some(c => `${c.nama} ${c.menuAndalan} ${c.kategori}`.toLowerCase().includes(normQ)) ||
+            (d.peralatan || []).some(e => (e.nama || '').toLowerCase().includes(normQ)) ||
+            (d.fasilitas || []).some(f => f.toLowerCase().includes(normQ))
           )) score = 30;
           return { d, score };
         })
@@ -629,29 +722,47 @@ function setupSearchAutocomplete(inputId, dropdownId) {
           title: d.nama,
           category: d.wilayah,
           icon: "",
-          sub: `${match.destination.lokasi} · Level ${match.destination.level} · ${match.destination.jenisWisata || 'Wisata Bahari'}`
+          sub: `${d.lokasi} · Level ${d.level} · ${d.jenisWisata || 'Wisata Bahari'}`
         }));
 
       const fromDests = scoredDests;
 
-      matches = [...fromPresets, ...fromDests].slice(0, 8);
+      const priceFilter = parsePriceFilterClient(q);
+      if (priceFilter) {
+        const priceFiltered = allDests.filter(d => matchesPriceFilterClient(d, priceFilter, APP_STATE.filters.priceType));
+
+        if (priceFiltered.length > 0) {
+          matches = [
+            {
+              query: q,
+              title: `Filter Harga: ${q}`,
+              category: `${priceFiltered.length} Destinasi`,
+              icon: "",
+              sub: `Klik atau tekan Enter untuk menampilkan semua ${priceFiltered.length} destinasi sesuai harga`
+            },
+            ...priceFiltered.slice(0, 6).map(d => ({
+              query: d.nama,
+              title: d.nama,
+              category: formatRupiah(d.estimasiTotalPerOrang),
+              icon: "",
+              sub: `${d.lokasi} · ${d.wilayah} · Level ${d.level}`
+            }))
+          ];
+        } else {
+          matches = [];
+        }
+      } else {
+        matches = [...fromPresets, ...fromDests].slice(0, 8);
+      }
     }
 
     if (matches.length === 0) {
       dropEl.innerHTML = `
-        <div style="padding:1rem;font-size:0.82rem;color:var(--text-muted);text-align:center">
-          Tidak ada rekomendasi langsung untuk "<strong>${escapeHtml(q)}</strong>".<br>
-          <span style="font-size:0.75rem;color:var(--sea-blue);cursor:pointer" id="btn-force-search">Tekan Enter atau klik Cari untuk pencarian semantik penuh.</span>
+        <div style="padding:1rem;font-size:0.84rem;color:var(--text-muted);text-align:center">
+          Data yang ingin Anda cari tidak ada.
         </div>
       `;
       dropEl.style.display = 'block';
-      const forceBtn = dropEl.querySelector('#btn-force-search');
-      if (forceBtn) {
-        forceBtn.addEventListener('click', () => {
-          applySearchQuery(q);
-          dropEl.style.display = 'none';
-        });
-      }
       return;
     }
 
@@ -812,6 +923,9 @@ function getLocationNameSuggestion(query, locationName) {
 function applySearchQuery(query) {
   APP_STATE.query = query.trim();
   APP_STATE.currentPage = 1;
+  if (/[<>≤≥=]|\d+\s*(rb|ribu|k|jt|juta)\b|\d{4,}/i.test(APP_STATE.query)) {
+    APP_STATE.filters.rangeHarga = '';
+  }
 
   const heroInput = document.getElementById('hero-search-input');
   const explorerInput = document.getElementById('explorer-search-input');
@@ -835,12 +949,25 @@ function initSearchForms() {
   setupSearchAutocomplete('hero-search-input', 'hero-search-suggestions');
   setupSearchAutocomplete('explorer-search-input', 'explorer-search-suggestions');
 
+  let liveSearchTimer = null;
   if (heroInput && explorerInput) {
     heroInput.addEventListener('input', () => {
       explorerInput.value = heroInput.value;
     });
     explorerInput.addEventListener('input', () => {
       heroInput.value = explorerInput.value;
+      clearTimeout(liveSearchTimer);
+      liveSearchTimer = setTimeout(() => {
+        const nextQ = explorerInput.value.trim();
+        if (APP_STATE.query !== nextQ) {
+          APP_STATE.query = nextQ;
+          if (/[<>≤≥=]|\d+\s*(rb|ribu|k|jt|juta)\b|\d{4,}/i.test(APP_STATE.query)) {
+            APP_STATE.filters.rangeHarga = '';
+          }
+          APP_STATE.currentPage = 1;
+          executeSearch();
+        }
+      }, 280);
     });
   }
 
@@ -851,6 +978,7 @@ function initSearchForms() {
       heroInput.value = APP_STATE.query;
       if (heroLevel && heroLevel.value) APP_STATE.filters.level = heroLevel.value;
       if (heroRange && heroRange.value) APP_STATE.filters.rangeHarga = heroRange.value;
+      else if (/[<>≤≥=]|\d+\s*(rb|ribu|k|jt|juta)\b|\d{4,}/i.test(APP_STATE.query)) APP_STATE.filters.rangeHarga = '';
       APP_STATE.currentPage = 1;
 
       // Sync to Explorer input
@@ -870,6 +998,9 @@ function initSearchForms() {
       APP_STATE.query = explorerInput.value.trim();
       explorerInput.value = APP_STATE.query;
       if (heroInput) heroInput.value = APP_STATE.query;
+      if (/[<>≤≥=]|\d+\s*(rb|ribu|k|jt|juta)\b|\d{4,}/i.test(APP_STATE.query)) {
+        APP_STATE.filters.rangeHarga = '';
+      }
       APP_STATE.currentPage = 1;
       executeSearch({ scrollToResults: true });
     });
@@ -1305,8 +1436,18 @@ async function executeSearch({ scrollToResults = false } = {}) {
     const res = await fetch(`/api/search?${params.toString()}`);
     const data = await res.json();
 
-    APP_STATE.results = data.results || [];
-    APP_STATE.totalResults = data.total || 0;
+    let finalResults = data.results || [];
+    const clientPriceFilter = APP_STATE.query ? parsePriceFilterClient(APP_STATE.query) : null;
+    if (clientPriceFilter && clientPriceFilter.constraint) {
+      if (!(data.parsedQuery && data.parsedQuery.priceConstraint) && (APP_STATE.allDestinations || []).length > 0) {
+        finalResults = APP_STATE.allDestinations.filter(d => matchesPriceFilterClient(d, clientPriceFilter, APP_STATE.filters.priceType));
+      } else {
+        finalResults = finalResults.filter(d => matchesPriceFilterClient(d, clientPriceFilter, APP_STATE.filters.priceType));
+      }
+    }
+
+    APP_STATE.results = finalResults;
+    APP_STATE.totalResults = finalResults.length;
     APP_STATE.reasoningSteps = data.reasoningSteps || [];
     APP_STATE.sparqlQuery = data.sparqlQuery || '';
 
@@ -1770,15 +1911,9 @@ function renderDestinationCards(destList, targetGridId = 'destinations-grid', re
     } else {
       grid.innerHTML = `
         <div style="grid-column: 1 / -1; background:var(--bg-surface); border:1px dashed var(--border-subtle); border-radius:var(--radius-lg); padding:3.5rem 1.5rem; text-align:center;">
-          <h4 style="font-family:var(--font-display);font-size:1.25rem;font-weight:800;color:var(--text-main);margin-bottom:0.5rem">
-            Tidak ada destinasi yang cocok
+          <h4 style="font-family:var(--font-display);font-size:1.2rem;font-weight:800;color:var(--text-main);margin:0">
+            Data yang ingin Anda cari tidak ada
           </h4>
-          <p style="color:var(--text-muted);font-size:0.88rem;max-width:500px;margin:0 auto 1.5rem">
-            Coba sesuaikan range harga, hilangkan pilihan peralatan tertentu, atau reset filter Anda.
-          </p>
-          <button type="button" class="btn-search-exec" style="margin:0 auto" onclick="resetAllFilters()">
-            <span>Reset Semua Filter</span>
-          </button>
         </div>
       `;
     }

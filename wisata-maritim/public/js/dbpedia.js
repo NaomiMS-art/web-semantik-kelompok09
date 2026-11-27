@@ -679,7 +679,7 @@ LIMIT 3`;
       },
       {
         id: 'Sejarah & Budaya Bahari',
-        rx: /\b(sejarah|budaya bahari|budaya|benteng|museum|tugu|pura|kapal karam|arkeologi)\b/i,
+        rx: /\b(sejarah bahari|budaya bahari|sejarah|budaya|arkeologi)\b/i,
         icon: '',
         title: 'Sejarah & Budaya Bahari Nusantara',
         desc: 'Menelusuri jejak kejayaan maritim jalur rempah, benteng kolonial tepi laut, pura suci pesisir, hingga situs kapal karam bersejarah Perang Dunia II.',
@@ -829,8 +829,9 @@ LIMIT 3`;
       return { text, dbpediaData, recommendations, suggestions };
     }
 
-    // M. Fallback: Cari dengan API Lokal & DBpedia
-    const searchHits = await queryLocalApi(normMsg || rawMsg);
+    // M. Fallback: Cari dengan API Lokal & DBpedia (pertahankan operator harga jika ada)
+    const hasPriceExpr = /[<>≤≥=]|\d+\s*(rb|ribu|k|jt|juta)\b|\d{4,}/i.test(rawMsg);
+    const searchHits = await queryLocalApi(hasPriceExpr ? rawMsg : (normMsg || rawMsg));
     if (searchHits.length > 0) {
       text = ` **Ditemukan ${searchHits.length} Destinasi Terkait "${rawMsg}":**\nBerikut destinasi bahari pilihan yang cocok untukmu:`;
       recommendations = searchHits;
@@ -849,16 +850,11 @@ LIMIT 3`;
       };
     }
 
-    // Default Fallback
-    text = `Saya mengerti kamu sedang mencari info tentang **"${rawMsg}"** \n\nKamu bisa menanyakan:\n• **Harga**: *"Pantai gratis di Bali"*, *"Wisata di bawah 100rb"*\n• **Peralatan**: *"Peralatan apa saja yang disewakan?"*, *"Sewa alat snorkeling"*\n• **Tingkat Keahlian**: *"Tingkat level diatas pemula"*, *"Tingkat ahli"*\n• **Aktivitas**: *"Aktivitas apa saja yang ada?"*, *"Surfing"*, *"Diving"*\n• **Rekomendasi**: *"Rekomendasi wisata maritim terbaik"*`;
-    suggestions = [
-      'Rekomendasi wisata maritim terbaik',
-      'Tingkat level diatas pemula',
-      'Tingkat ahli',
-      'Aktivitas apa saja yang ada?'
-    ];
+    // Default Fallback: tidak ada hasil yang cocok -> jangan tampilkan info destinasi apa pun
+    text = `Data yang ingin Anda cari tidak ada.`;
+    suggestions = [];
 
-    return { text, dbpediaData, suggestions };
+    return { text, dbpediaData: null, recommendations: [], suggestions };
   }
 
   return {

@@ -97,17 +97,30 @@ function scoreDestinationKeyword(kw, dest) {
   if (!kwNorm) return 0;
 
   const nameScore = scoreTextMatch(kwNorm, dest.nama || '', true);
+  if ((dest.id || '').toLowerCase() === kwNorm) return 120;
   if (nameScore > 0) return nameScore;
 
-  // Untuk kata pendek (2-3 huruf), wajib ada di nama destinasi
-  if (kwNorm.length <= 3) return 0;
+  // Untuk kata pendek (2-3 huruf), wajib ada di nama destinasi atau kode ID
+  if (kwNorm.length <= 3) {
+    if ((dest.id || '').toLowerCase() === kwNorm) return 110;
+    return 0;
+  }
 
-  const locText = `${dest.lokasi || ''} ${dest.kabKota || ''} ${dest.provinsi || ''} ${dest.wilayah || ''}`;
-  const locScore = scoreTextMatch(kwNorm, locText, true);
+  const locText = `${dest.id || ''} ${dest.lokasi || ''} ${dest.kabKota || ''} ${dest.provinsi || ''} ${dest.wilayah || ''}`;
+  const locScore = scoreTextMatch(kwNorm, locText, kwNorm.length >= 5);
   if (locScore > 0) return Math.round(locScore * 0.35);
 
-  const metaText = `${dest.jenisWisata || ''} ${dest.aktivitasStr || ''} ${dest.atraksi || ''} ${dest.fasilitasStr || ''}`;
-  const metaScore = scoreTextMatch(kwNorm, metaText, true);
+  const kulText = (dest.kuliner || [])
+    .map(c => `${c.nama || ''} ${c.kategori || ''} ${c.menuAndalan || ''} ${c.estimasiHarga || ''}`)
+    .join(' ');
+  const kulScore = scoreTextMatch(kwNorm, kulText, false);
+  if (kulScore > 0) return Math.round(kulScore * 0.3);
+
+  const eqText = (dest.peralatan || [])
+    .map(eq => `${eq.nama || ''} ${eq.kategoriAktivitas || ''} ${eq.dapatDisewa ? 'sewa disewa' : 'termasuk tiket'}`)
+    .join(' ');
+  const metaText = `${dest.jenisWisata || ''} ${dest.aktivitasStr || ''} ${dest.atraksi || ''} ${dest.fasilitasStr || ''} ${eqText}`;
+  const metaScore = scoreTextMatch(kwNorm, metaText, false);
   if (metaScore > 0) return Math.round(metaScore * 0.2);
 
   return 0;
@@ -125,6 +138,7 @@ class SemanticSearch {
       aktivitas: [],
       tingkatKeahlian: null,
       maxBudget: null,
+      priceConstraint: null,
       rangeHarga: null,
       peralatan: [],
       wajibSewa: false,
@@ -139,20 +153,66 @@ class SemanticSearch {
     let q = " " + queryStr.toLowerCase() + " ";
     const parsed = { ...defaultParsed };
 
-    // 1. Ekstraksi Budget & Range Harga
-    const budgetRegex = /(?:budget|bujet|biaya|maksimal|maks|≤|<=|di ?bawah|kurang dari|under|harga|rp\.?)\s*(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?|(\d[\d.,]*)\s*(rb|ribu|jt|juta)\b/i;
-    const bMatch = q.match(budgetRegex);
-    if (bMatch) {
-      const numPart = bMatch[1] || bMatch[3];
-      const unitPart = bMatch[2] || bMatch[4];
-      if (unitPart) {
-        parsed.maxBudget = /jt|juta/i.test(unitPart)
-          ? parseFloat(numPart.replace(',', '.')) * 1000000
-          : parseFloat(numPart.replace(',', '.')) * 1000;
-      } else {
-        parsed.maxBudget = parseInt(numPart.replace(/[.,]/g, ''), 10);
+    const parseMoneyVal = (numStr, unitStr) => {
+      if (!numStr) return null;
+      if (unitStr) {
+        const normalized = numStr.replace(',', '.');
+        return /jt|juta/i.test(unitStr)
+          ? Math.round(parseFloat(normalized) * 1000000)
+          : Math.round(parseFloat(normalized) * 1000);
       }
-      q = q.replace(bMatch[0], ' ');
+      return parseInt(numStr.replace(/[.,]/g, ''), 10);
+    };
+
+    // 1. Ekstraksi Budget & Operator Harga (>, >=, <, <=, =, pas, rentang, atau nominal pas)
+    const rangeRegex = /(?:antara\s+)?(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?\s*(?:-|–|s\/d|sampai|hingga|dan)\s*(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?/i;
+    const gtRegex = /(?:>|lebih dari|di ?atas|above|over)\s*(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?/i;
+    const gteRegex = /(?:>=|≥|minimal|min|paling sedikit)\s*(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?/i;
+    const ltRegex = /(?:<|kurang dari|di ?bawah|under|below)\s*(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?/i;
+    const lteRegex = /(?:<=|≤|budget|bujet|biaya|maksimal|maks|max)\s*(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?/i;
+    const eqRegex = /(?:=|==|pas|tepat|seharga)\s*(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)?|(?:harga\s*)?(?:rp\.?\s*)?(\d[\d.,]*)\s*(rb|ribu|k|jt|juta)\b|(?:harga|rp\.?)\s*(\d[\d.,]{4,})\b|\b(\d{4,})\b/i;
+
+    let mRange, mOp;
+    if ((mRange = q.match(rangeRegex)) && (mRange[2] || mRange[4] || mRange[1].length >= 4)) {
+      const minV = parseMoneyVal(mRange[1], mRange[2] || mRange[4]);
+      const maxV = parseMoneyVal(mRange[3], mRange[4] || mRange[2]);
+      if (minV !== null && maxV !== null) {
+        parsed.priceConstraint = { op: 'between', min: Math.min(minV, maxV), max: Math.max(minV, maxV) };
+        q = q.replace(mRange[0], ' ');
+      }
+    } else if ((mOp = q.match(gteRegex))) {
+      const v = parseMoneyVal(mOp[1], mOp[2]);
+      if (v !== null) {
+        parsed.priceConstraint = { op: 'gte', value: v };
+        q = q.replace(mOp[0], ' ');
+      }
+    } else if ((mOp = q.match(gtRegex))) {
+      const v = parseMoneyVal(mOp[1], mOp[2]);
+      if (v !== null) {
+        parsed.priceConstraint = { op: 'gt', value: v };
+        q = q.replace(mOp[0], ' ');
+      }
+    } else if ((mOp = q.match(lteRegex))) {
+      const v = parseMoneyVal(mOp[1], mOp[2]);
+      if (v !== null) {
+        parsed.maxBudget = v;
+        parsed.priceConstraint = { op: 'lte', value: v };
+        q = q.replace(mOp[0], ' ');
+      }
+    } else if ((mOp = q.match(ltRegex))) {
+      const v = parseMoneyVal(mOp[1], mOp[2]);
+      if (v !== null) {
+        parsed.priceConstraint = { op: 'lt', value: v };
+        q = q.replace(mOp[0], ' ');
+      }
+    } else if ((mOp = q.match(eqRegex))) {
+      const numPart = mOp[1] || mOp[3] || mOp[5] || mOp[6];
+      const unitPart = mOp[2] || mOp[4] || null;
+      const v = parseMoneyVal(numPart, unitPart);
+      if (v !== null) {
+        parsed.priceConstraint = { op: 'eq', value: v };
+        q = q.replace(mOp[0], ' ');
+      }
     }
 
     const priceCategories = [
@@ -169,6 +229,7 @@ class SemanticSearch {
 
     if (/gratis|tanpa biaya/i.test(q)) {
       parsed.maxBudget = 0;
+      parsed.priceConstraint = { op: 'eq', value: 0 };
       parsed.rangeHarga = 'di-bawah-100k';
       q = q.replace(/gratis|tanpa biaya/ig, ' ');
     } else if (priceCategory) {
@@ -233,8 +294,8 @@ class SemanticSearch {
       { name: 'Wahana Air', terms: ['wahana air', 'water sports', 'watersport', 'banana boat', 'jet ski', 'jetski', 'parasailing', 'wahana'] },
       { name: 'Satwa Laut', terms: ['satwa laut', 'satwa', 'penyu', 'lumba-lumba', 'lumba', 'dolphin', 'manta', 'hiu paus', 'hiu'] },
       { name: 'Trekking & Panjat', terms: ['trekking & panjat', 'trekking dan panjat', 'panjat tebing', 'trekking', 'hiking', 'panjat'] },
-      { name: 'Sejarah & Budaya Bahari', terms: ['sejarah & budaya bahari', 'sejarah dan budaya bahari', 'sejarah bahari', 'budaya bahari', 'sejarah', 'benteng', 'budaya', 'museum', 'tugu', 'pura', 'kapal karam'] },
-      { name: 'Kuliner Laut', terms: ['kuliner laut', 'makanan laut', 'kuliner', 'seafood', 'ikan bakar', 'kepiting', 'cumi', 'udang'] },
+      { name: 'Sejarah & Budaya Bahari', terms: ['sejarah & budaya bahari', 'sejarah dan budaya bahari', 'sejarah bahari', 'budaya bahari', 'sejarah', 'budaya'] },
+      { name: 'Kuliner Laut', terms: ['kuliner laut', 'makanan laut', 'kuliner'] },
       { name: 'Fotografi & Sunset', terms: ['fotografi & sunset', 'fotografi dan sunset', 'fotografi', 'sunset', 'sunrise', 'senja', 'foto'] },
       { name: 'Camping Pantai', terms: ['camping pantai', 'berkemah pantai', 'camping', 'kemah', 'tenda', 'berkemah'] },
       { name: 'Memancing', terms: ['memancing', 'mancing', 'fishing'] }
@@ -317,8 +378,8 @@ class SemanticSearch {
         });
 
         // Sisa kata kunci bebas (dengan normalisasi leetspeak & typo tolerance)
-        parsed.keywords = q.split(/[^a-zA-Z0-9]+/)
-          .map(k => k.trim())
+        parsed.keywords = q.split(/[^a-zA-Z0-9-]+/)
+          .map(k => k.replace(/^-+|-+$/g, '').trim())
           .filter(k => k.length >= 2 && !STOP_WORDS.has(k) && !STOP_WORDS.has(normalizeTypoLeetspeak(k)));
 
         return parsed;
@@ -541,8 +602,23 @@ class SemanticSearch {
         }
       }
 
-      // 5. Budget Maksimum Numerik
-      if (filters.maxBudget !== null && filters.maxBudget !== undefined) {
+      // 5. Filter Harga Numerik Ketat (>, >=, <, <=, =, rentang, atau maxBudget)
+      const pc = parsed.priceConstraint;
+      if (pc) {
+        const targetVal = filters.priceType === 'tiket' ? d.hargaTiketMasuk : d.estimasiTotalPerOrang;
+        if (pc.op === 'gt' && !(targetVal > pc.value)) return false;
+        if (pc.op === 'gte' && !(targetVal >= pc.value)) return false;
+        if (pc.op === 'lt' && !(targetVal < pc.value)) return false;
+        if (pc.op === 'lte' && !(targetVal <= pc.value)) return false;
+        if (pc.op === 'between' && !(targetVal >= pc.min && targetVal <= pc.max)) return false;
+        if (pc.op === 'eq') {
+          const exactMatch =
+            d.estimasiTotalPerOrang === pc.value ||
+            d.hargaTiketMasuk === pc.value ||
+            (d.hargaAktivitasMulai && d.hargaAktivitasMulai === pc.value);
+          if (!exactMatch) return false;
+        }
+      } else if (filters.maxBudget !== null && filters.maxBudget !== undefined) {
         if (filters.priceType === 'tiket') {
           if (d.hargaTiketMasuk > filters.maxBudget) return false;
         } else {
