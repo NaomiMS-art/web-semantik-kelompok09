@@ -4,20 +4,45 @@ const path = require('path');
 const fs = require('fs');
 
 const SemanticSearch = require('./lib/semantic-search');
-const MaritimeSparqlEngine = require('./lib/sparql-engine');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const FUSEKI_QUERY_URL = process.env.FUSEKI_QUERY_URL || 'http://127.0.0.1:3030/wisata-maritim/query';
+const FUSEKI_DEFAULT_GRAPH_URI = process.env.FUSEKI_DEFAULT_GRAPH_URI || 'http://wisatamaritim.id/graph/wisata-maritim';
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+async function queryFuseki(query) {
+  const endpoint = new URL(FUSEKI_QUERY_URL);
+  endpoint.searchParams.set('default-graph-uri', FUSEKI_DEFAULT_GRAPH_URI);
+
+  const response = await fetch(endpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/sparql-query',
+      Accept: 'application/sparql-results+json'
+    },
+    body: query,
+    signal: AbortSignal.timeout(10000)
+  });
+  const body = await response.text();
+
+  if (!response.ok) {
+    throw new Error(`Fuseki HTTP ${response.status}: ${body}`);
+  }
+
+  return {
+    body,
+    contentType: response.headers.get('content-type') || 'application/sparql-results+json'
+  };
+}
+
 // Load Data Destinasi (Mendukung Dynamic Reload dari file terbaru)
 const dataFile = path.join(__dirname, 'data', 'destinasi.json');
 let destinasiList = [];
 let semanticSearch = null;
-let sparqlEngine = null;
 let lastDataMtime = 0;
 
 function reloadDataIfNeeded() {
@@ -30,7 +55,6 @@ function reloadDataIfNeeded() {
       destinasiList = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
       lastDataMtime = stat.mtimeMs;
       semanticSearch = new SemanticSearch(destinasiList);
-      sparqlEngine = new MaritimeSparqlEngine(destinasiList);
     }
   } catch (err) {
     console.error('[DATA ERROR] Gagal reload destinasi:', err);
@@ -70,13 +94,20 @@ app.get('/api/search', (req, res) => {
 });
 
 // 2. API SPARQL Endpoint (W3C Standard Endpoint)
-const handleSparql = (req, res) => {
-  const query = req.body.query || req.query.query;
+const handleSparql = async (req, res) => {
+  const query = (req.body && req.body.query) || req.query.query;
   if (!query) {
     return res.status(400).json({ error: true, message: 'Parameter "query" SPARQL wajib diisi.' });
   }
-  const result = sparqlEngine.query(query);
-  res.json(result);
+
+  try {
+    const result = await queryFuseki(query);
+    res.set('Content-Type', result.contentType);
+    res.send(result.body);
+  } catch (err) {
+    console.error('[FUSEKI ERROR] Gagal menjalankan query:', err);
+    res.status(502).json({ error: true, message: err.message });
+  }
 };
 
 app.get('/api/sparql', handleSparql);
@@ -245,16 +276,25 @@ app.get('/api/ontology', (req, res) => {
 });
 
 // 6. API Knowledge Base Stats
-app.get('/api/stats', (req, res) => {
-  res.json({
-    totalDestinasi: destinasiList.length,
-    totalTriples: sparqlEngine.triples.length,
-    wilayahCount: 7,
-    aktivitasCount: 12,
-    rangeKategoriCount: 5,
-    sparqlEndpoint: '/api/sparql',
-    ontologyEndpoint: '/api/ontology'
-  });
+app.get('/api/stats', async (req, res) => {
+  try {
+    const result = await queryFuseki('SELECT (COUNT(*) AS ?totalTriples) WHERE { ?s ?p ?o }');
+    const data = JSON.parse(result.body);
+    const totalTriples = Number(data.results.bindings[0].totalTriples.value);
+
+    res.json({
+      totalDestinasi: destinasiList.length,
+      totalTriples,
+      wilayahCount: 7,
+      aktivitasCount: 12,
+      rangeKategoriCount: 5,
+      sparqlEndpoint: '/api/sparql',
+      ontologyEndpoint: '/api/ontology'
+    });
+  } catch (err) {
+    console.error('[FUSEKI ERROR] Gagal mengambil statistik:', err);
+    res.status(502).json({ error: true, message: err.message });
+  }
 });
 
 // 7. Fallback untuk Single Page Application
@@ -269,8 +309,9 @@ if (require.main === module) {
     console.log(`⛵ Mesin Pencari Wisata Maritim (Web Semantik) Berjalan!`);
     console.log(`🌐 URL Aplikasi    : http://localhost:${PORT}`);
     console.log(`⚡ SPARQL Endpoint : http://localhost:${PORT}/api/sparql`);
+    console.log(`🔗 Fuseki Query    : ${FUSEKI_QUERY_URL}`);
+    console.log(`📊 Default Graph   : ${FUSEKI_DEFAULT_GRAPH_URI}`);
     console.log(`📜 Ontologi Turtle : http://localhost:${PORT}/api/ontology`);
-    console.log(`📊 Triples Loaded  : ${sparqlEngine.triples.length} triples`);
     console.log(`=======================================================`);
   });
 }

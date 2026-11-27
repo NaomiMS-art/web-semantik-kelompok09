@@ -429,7 +429,7 @@ LIMIT 3`;
 
     // C. Tanya Web Semantik / Ontologi
     if (/\b(ontologi|web semantik|semantic web|sparql|turtle|rdf|triple)\b/i.test(lc)) {
-      text = ` **Arsitektur Web Semantik Ombak Nusantara:**\n\n• **Ontologi W3C RDF Turtle (\`.ttl\`)**: Memodelkan relasi kelas \`maritim:DestinasiWisata\`, \`maritim:AktivitasBahari\`, \`maritim:Peralatan\`, dan \`maritim:TingkatKeahlian\`.\n• **SPARQL Endpoint**: Menyediakan query reasoning in-memory standar W3C di endpoint \`/api/sparql\`.\n• **Integrasi DBpedia**: Mengambil graf pengetahuan global (*Linked Open Data*) dari endpoint resmi \`https://dbpedia.org/sparql\`.\n• **Faceted Search**: Multi-dimensi berdasarkan range harga Google, status sewa alat, dan level keahlian.`;
+      text = ` **Arsitektur Web Semantik Ombak Nusantara:**\n\n• **Ontologi W3C RDF Turtle (\`.ttl\`)**: Memodelkan relasi kelas \`maritim:DestinasiWisata\`, \`maritim:AktivitasBahari\`, \`maritim:Peralatan\`, dan \`maritim:TingkatKeahlian\`.\n• **SPARQL Endpoint**: Meneruskan query dari \`/api/sparql\` ke Apache Jena Fuseki.\n• **Integrasi DBpedia**: Mengambil graf pengetahuan global (*Linked Open Data*) dari endpoint resmi \`https://dbpedia.org/sparql\`.\n• **Faceted Search**: Multi-dimensi berdasarkan range harga Google, status sewa alat, dan level keahlian.`;
       suggestions = [
         'Rekomendasi wisata maritim terbaik',
         'Tingkat level diatas pemula',

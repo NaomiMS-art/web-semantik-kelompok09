@@ -1,6 +1,6 @@
 # Mesin Pencari Wisata Maritim Indonesia Berbasis Web Semantik
 
-Website mesin pencari wisata maritim Indonesia yang dibangun menggunakan **Node.js**, **Ontologi RDF Turtle (W3C Standard)**, dan **SPARQL In-Memory Query Engine**. Proyek ini dikembangkan untuk tugas mata kuliah **Web Semantik (Kelompok 09)**.
+Website mesin pencari wisata maritim Indonesia yang dibangun menggunakan **Node.js**, **Apache Jena Fuseki**, dan **Ontologi RDF Turtle (W3C Standard)**. Proyek ini dikembangkan untuk tugas mata kuliah **Web Semantik (Kelompok 09)**.
 
 Sistem menghubungkan informasi **harga (range harga Google-style)**, **peralatan & persewaan**, **tingkat keahlian pengguna (skill level)**, **aktivitas bahari**, **fasilitas**, serta **lokasi geografis** menggunakan prinsip Semantic Web.
 
@@ -67,8 +67,8 @@ wisata-maritim/
 │   ├── destinasi.json       # Basis data 200 destinasi maritim terstruktur
 │   └── maritim.ttl          # Ontologi W3C RDF Turtle (Classes, Properties, Triples)
 ├── lib/
-│   ├── semantic-search.js   # NLP query parser, inferensi semantik & faceted search
-│   └── sparql-engine.js     # W3C In-memory SPARQL triplestore execution engine
+│   ├── semantic-search.js   # Rule-based query parser & pencarian berfaset pada data JSON
+│   └── sparql-engine.js     # Engine in-memory lokal untuk tes/eksperimen
 ├── public/                  # Frontend Web App Modern
 │   ├── css/
 │   │   └── style.css        # Desain responsif, Google-style pills, Knowledge Graph UI
@@ -119,12 +119,21 @@ wisata-maritim/
 
 | Metode | Endpoint | Keterangan |
 | :--- | :--- | :--- |
-| `GET` | `/api/search` | Pencarian semantik & Faceted filter terpadu |
-| `POST` / `GET` | `/api/sparql` | W3C SPARQL Endpoint (query runner) |
+| `GET` | `/api/search` | Pencarian semantik & Faceted filter pada data JSON lokal |
+| `POST` / `GET` | `/api/sparql` | Meneruskan query SPARQL ke Apache Jena Fuseki |
 | `GET` | `/api/destinasi/:id` | Detail destinasi, rekomendasi serupa & node Knowledge Graph |
 | `GET` | `/api/facets` | Rekapitulasi count seluruh opsi filter |
 | `GET` | `/api/ontology` | Unduh file ontologi RDF Turtle (`maritim.ttl`) |
 | `GET` | `/api/stats` | Statistik total destinasi dan triple ontologi |
+
+### Koneksi Fuseki
+
+Backend mengirim query ke dataset Fuseki `wisata-maritim` dan menggunakan named graph `http://wisatamaritim.id/graph/wisata-maritim` sebagai default graph. Nilai ini dapat diubah melalui environment variables:
+
+- `FUSEKI_QUERY_URL` (default: `http://127.0.0.1:3030/wisata-maritim/query`)
+- `FUSEKI_DEFAULT_GRAPH_URI` (default: `http://wisatamaritim.id/graph/wisata-maritim`)
+
+Pencarian utama `/api/search` saat ini masih memakai `destinasi.json`; perubahan ini menghubungkan endpoint SPARQL dan statistik ke Fuseki.
 
 ---
 

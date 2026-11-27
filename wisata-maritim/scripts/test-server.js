@@ -44,11 +44,8 @@ const server = app.listen(3001, async () => {
 
     // 6. Test SPARQL Endpoint
     const sparqlQuery = `PREFIX maritim: <http://wisatamaritim.id/ontology#>
-SELECT ?nama ?level ?totalBiaya WHERE {
-  ?dest maritim:namaDestinasi ?nama ;
-        maritim:tingkatKeahlian ?level ;
-        maritim:estimasiTotalBiaya ?totalBiaya .
-  FILTER(?totalBiaya <= 100000)
+SELECT ?nama WHERE {
+  ?dest maritim:namaDestinasi ?nama .
 } LIMIT 5`;
 
     const r6 = await testUrl('/api/sparql', {
@@ -57,16 +54,31 @@ SELECT ?nama ?level ?totalBiaya WHERE {
       body: JSON.stringify({ query: sparqlQuery })
     });
     const data6 = JSON.parse(r6.body);
+    if (r6.status !== 200 || data6.results.bindings.length === 0) {
+      throw new Error('SPARQL query ke Fuseki tidak mengembalikan hasil dari named graph.');
+    }
     console.log(`[PASS] POST /api/sparql : Status ${r6.status}, Bindings count: ${data6.results.bindings.length}`);
 
     // 7. Test Ontology Turtle
     const r7 = await testUrl('/api/ontology');
     console.log(`[PASS] GET /api/ontology : Status ${r7.status}, Type: ${r7.headers['content-type']}, Length: ${r7.body.length}`);
 
-    console.log('\n=== SEMUA 7 TEST INTEGRASI REST API & SPARQL ENGINE BERHASIL 100%! ===');
-    server.close(() => process.exit(0));
+    // 8. Test Fuseki Triple Stats
+    const r8 = await testUrl('/api/stats');
+    const data8 = JSON.parse(r8.body);
+    if (r8.status !== 200 || data8.totalTriples === 0) {
+      throw new Error('Statistik Fuseki tidak mengembalikan jumlah triple.');
+    }
+    console.log(`[PASS] GET /api/stats : Status ${r8.status}, Fuseki triples: ${data8.totalTriples}`);
+
+    console.log('\n=== SEMUA 8 TEST INTEGRASI REST API & FUSEKI BERHASIL 100%! ===');
+    server.close(() => {
+      process.exitCode = 0;
+    });
   } catch (err) {
     console.error('[FAIL]', err);
-    server.close(() => process.exit(1));
+    server.close(() => {
+      process.exitCode = 1;
+    });
   }
 });
