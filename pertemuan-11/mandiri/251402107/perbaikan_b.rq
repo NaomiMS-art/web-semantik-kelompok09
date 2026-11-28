@@ -1,0 +1,9 @@
+# Tujuan: menghasilkan satu ex:nama per orang.
+# Perbaikan: STR() menyeragamkan literal nama
+# sehingga perbedaan tag bahasa tidak menghasilkan duplikasi.
+CONSTRUCT { ?o ex:nama ?nama . }
+WHERE {
+  VALUES ?o { dbr:Christopher_Nolan dbr:Joko_Anwar dbr:Mira_Lesmana }
+  ?o foaf:name|rdfs:label|schema:name ?n .
+  BIND(STR(?n) AS ?nama)
+}
