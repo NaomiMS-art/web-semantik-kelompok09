@@ -1,0 +1,13 @@
+@prefix ex: <http://contoh.id/kampus/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+ex:andi a foaf:Person .
+
+ex:budi a ex:Dosen,
+        foaf:Person .
+
+ex:rina a ex:Dosen,
+        foaf:Person .
+
+ex:sari a foaf:Person .
+

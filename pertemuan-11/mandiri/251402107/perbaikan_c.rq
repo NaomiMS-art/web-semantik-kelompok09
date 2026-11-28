@@ -1,0 +1,7 @@
+# Tujuan: menemukan semua permukiman.
+# Perbaikan: menggunakan jalur rdfs:subClassOf*
+# agar kelas turunan ikut ditemukan.
+CONSTRUCT { ?x a ex:Permukiman . }
+WHERE {
+  ?x a/rdfs:subClassOf* ex:Permukiman .
+}
